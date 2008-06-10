@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  targetNamespace="http://www.cch.kcl.ac.uk/schenker" xmlns="http://www.cch.kcl.ac.uk/schenker" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    
+    <xs:import  namespace="http://www.tei-c.org/ns/1.0" schemaLocation="tei_all.xsd"/>
+    <xs:import namespace="http://www.loc.gov/mods/v3" schemaLocation="mods-3-2-schenker.xsd"/>
+    
+    <!--  *****  An instance of this schema is  (1) a single entry record:  -->
+    <xs:element name="record" type="recordType"/>
+    <!--      or  (2) a collection of entries  -->
+    <xs:element name="recordCollection">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="recordSource" maxOccurs="1"/>
+                <xs:element ref="record" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <!--   *****  End of "instance" definition -->
+    <!-- *****  Definition of a single entry -->
+    
+    <xs:complexType name="recordType">
+        <xs:group ref="recordGroup" maxOccurs="unbounded"/>
+        <xs:attribute name="ID" type="xsd:ID" use="optional"/>
+    </xs:complexType>
+    
+    <!--   *****  End of definition of an entry record.  -->
+    
+    
+        
+    <xs:group name="recordGroup">
+        <xs:sequence>
+            <xs:element  ref="tei:transcription" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="tei:translation" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="tei:notes"  minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:group>
+    
+    
+    <xs:element name="recordSource" >
+        <xs:complexType>
+            <xs:attribute use="required" name="n">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration  value="Diary"/>
+                        <xs:enumeration  value="LessonBook"/>
+                        <xs:enumeration  value="Letter"/>
+                        <xs:enumeration  value="Profile"/>
+                  </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>      
+        
+    </xs:element>
+    
+    
+    <xs:element name="parent">
+        <xs:complexType>
+            <xs:attribute use="required" name="year">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration  value="1914"/>
+                        <xs:enumeration  value="1915"/>
+                        <xs:enumeration  value="1916"/>
+                        <xs:enumeration  value="1917"/>
+                        <xs:enumeration  value="1918"/>
+                        <xs:enumeration  value="1919"/>
+                        <xs:enumeration  value="1920"/>
+                        <xs:enumeration  value="1921"/>
+                     </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>      
+    </xs:element>
+    
+    <xs:element name="milestone">
+               <xs:complexType>
+                   <xs:attribute use="required" name="inParent">
+                       <xs:simpleType>
+                           <xs:restriction base="xs:positiveInteger">
+                               <xs:enumeration  value="834"/>
+                               <xs:enumeration value="835"/>
+                               <xs:enumeration value="836"/>
+                               <xs:enumeration value="837"/>
+                               <xs:enumeration value="837"/>
+                               <xs:enumeration value="838"/>
+                               <xs:enumeration value="839"/>
+                               <xs:enumeration value="840"/>
+                           </xs:restriction>
+                       </xs:simpleType>
+                   </xs:attribute>
+              </xs:complexType>      
+    </xs:element>
+    
+    <xs:element name="position">
+        <xs:complexType>
+            <xs:attribute use="required" name="inPage">
+                <xs:simpleType>
+                    <xs:restriction base="xs:positiveInteger">
+                        <xs:enumeration  value="1"/>
+                        <xs:enumeration value="2"/>
+                        <xs:enumeration value="3"/>
+                        <xs:enumeration value="4"/>
+                        <xs:enumeration value="5"/>
+                        <xs:enumeration value="6"/>
+                        <xs:enumeration value="7"/>
+                        <xs:enumeration value="8"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>      
+    </xs:element>
+
+</xs:schema>
