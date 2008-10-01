@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdo:recordCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker schema/schenker.xsd">
+
+    <!-- 
+        
+        This document includes one test record from the corpus, and demonstrates
+        experimental use of the work-in-progress XML schema for the Schenker Documents Online
+        Project. (as of 6 August)
+        
+        This document represents aspects of thinking about the use of shelfmarks to unambiguously identify
+        records in conjunction with IDs, and the ways IDs are referenced within the translation (as opposed to
+        the way they are identified in the transcription).
+        
+        This record also demonstrates an experimental, different approach to managing footnotes
+        in which the notes are indicated inline within the transcription.
+        
+        Finally, this record demonstrates the use of the milestone tag to indicate sub-entry indicators in 
+        conjunction with the <tei:ab> and <tei:seg> tags.
+        
+        Immediately below, please note the use of collectionDesc to capture information that pertains to all records in this file
+        and the inclusion of a source element that indicates: the content type of the source and a 
+        shelfmark.  In the case of diaries this directly reflects the Riverside shelf mark.  In the case
+        of other materials, this will be specified accordingly.  These shelfmarks were derived from the Finding Aid published
+        by Riverside at: 
+        
+        http://www.oac.cdlib.org/findaid/ark:/13030/tf4j49n9zc
+        
+        And from the document Diary Box-File nos.doc.  The latter has been reformulated into an archival XML format, which
+        is used to create parts of the schema and an HTML inventory, located here:
+        
+        http://curlew.cch.kcl.ac.uk/schenker/ref/content/planning/sdo-inventory.html
+        
+        (Also linked to from the project reference site homepage: http://curlew.cch.kcl.ac.uk/schenker/ref/)
+            
+        The value of shelfmark comes from a controlled list, which you can access by removing the current shelfmark attribute and then adding it again.
+        Upon typing shelfmark=", oXygen should display a drop-down list of shelfmarks.  Select one using your arrow keys, and then hitting your
+        keyboard's 'Enter' key.
+            
+        N.B. The source element replaces the sourceDesc of previous versions. collectionDesc has been renamed from collDesc to improve readability.
+    -->
+
+    <sdo:collectionDesc>
+        <sdo:source>
+            <sdo:diary shelfmark="OJ-02-10"/>
+        </sdo:source>
+        
+        <tei:handNotes>
+            <tei:handNote xml:id="HS" scope="minor">Heinrich Schenker's hand</tei:handNote>
+            <tei:handNote xml:id="JS" scope="major">Jeanette Schenker's hand</tei:handNote>
+        </tei:handNotes>
+        
+        <tei:respStmt xml:id="MT">
+            <tei:resp>Movable Type Automated Conversion</tei:resp>
+            <tei:name >MovableType</tei:name> 
+        </tei:respStmt>
+        
+        <tei:respStmt xml:id="IB">
+            <tei:resp>Transcription, Translation, Commentary, Footnotes, and Summary:</tei:resp>
+            <tei:persName >Ian Bent</tei:persName>
+        </tei:respStmt>
+        
+        <tei:respStmt xml:id="TL">
+            <tei:resp>XML Encoding</tei:resp>
+            <tei:persName >Tamara Lopez</tei:persName>
+        </tei:respStmt>
+                        
+        <tei:revisionDesc>
+            <tei:change when="2008-06-08" who="#MT">MovableType Migration</tei:change>
+            <tei:change when="2008-08-08" who="#TL">Hand encoding to demonstrate schema, fix Movable Type</tei:change>
+         </tei:revisionDesc>
+               
+    </sdo:collectionDesc>
+
+    <!-- This document is a TEI encoding of the following:
+        http://mt.ccnmtl.columbia.edu/schenker/diary/oj_210_p_822_1318.html
+        created to test the SDO encoding model 
+        
+        === Features to be ignored ===
+        
+        * Editorial components: e.g. corr, supplied elements, additions. 
+        * sdo:itemDesc - this is not complete - some metadata has been included to allow for recognition of the item, but this
+        requires additional modelling.  
+        
+        === Please review ===
+        
+        * sdo:record ID - this is a new, controlled list, which you can access by removing the ID attribute and then adding it again.
+        Upon typing ID=", oXygen should display a drop-down list of Ids.  Select one using your arrow keys, and then hitting your
+        keyboard's 'Enter' key.  I don't believe that there should ever be more than 1000 entries in a single XML file; what are your thoughts?
+        
+        * sub-entry IDs - now shorter, but still must be maintained by hand.  If a sub-entry occurs within a paragraph-like block (encoded in <tei:ab>)
+        it should be wrapped within a <tei:seg> tag.  If however the sub-entry  *is* a paragraph-like block, the type="sub-entry" attribute should be
+        directly added to the <tei:ab> tag.  The ID is added to the <tei:seg> or <tei:ab> as appropriate.  Within the translation block, the <tei:ab> or 
+        <tei:seg> are given the corresp attribute, which indicates the ID given in the transcription.
+        
+        * Handling of footnotes in the Transcription and Translation.  This is experimental, but would allow you to specify notes in-line in the transcription, and then
+        indicate the correspondence in the translation.  Numbers that are displayed to users would be automatically generated.  This system
+        will require you to add IDs by hand.  Is this preferable to the previous treatment?  It would not, by the way, affect how the footnotes are rendered.
+        
+        * Indication of the subentry indicator using the milestone tag.  These are to be placed at the point in the text at which they occur.  Symbols that prepend or 
+        append sub-entries should be indicted using the <tei:milestone> tag, with rend attribute values to indicate placement (in-line or block) and symbol (em-dash, asterisk).  
+        The unit attribute should be used to indicate that the symbol denotes a "section". 
+        
+        * Provision method for linking between records, see: <tei:ref target="OJ-15-34/r0003"> below.
+        
+        
+ -->
+
+    <sdo:record ID="r0003">
+        <sdo:itemDesc>
+            <dc:title>[Editor supplied title, e.g. Diary entry by Schenker, dated January 3, 1918]</dc:title>
+            <dc:identifier>[Page Reference]</dc:identifier>
+            <dcterms:created>[Creation date]</dcterms:created>
+            <dcterms:dateSubmitted>[XML encoding date]</dcterms:dateSubmitted>
+            <dc:creator>[Creator of the record]</dc:creator>
+            <dc:description>[A longer description of the Item goes here]</dc:description>
+            <dc:subject>[ The subject goes here ]</dc:subject>
+           
+       </sdo:itemDesc>
+
+        <tei:transcription>
+            <tei:opener rend="inline">
+                <tei:date>3.</tei:date>
+            </tei:opener>
+            <tei:ab>
+                <tei:seg type="sub-entry" xml:id="r0003-se01"><tei:milestone unit="section" rend="in-line em-dash"/>An Zuckerkandl (K.): einige tröstende Worte. </tei:seg>
+                <tei:seg type="sub-entry" xml:id="r0003-se02"><tei:milestone unit="section" rend="in-line em-dash"/>An ihn (2.K.): 
+                    <tei:hi rend="superscript">möglicherweise könnte</tei:hi> die erste durch Angabe einer falschen
+                    Adresse möglicherweise unbestellbar <tei:hi rend="superscript">sein</tei:hi>.
+                        <tei:note xml:id="r0003-fn01" type="editorial" place="foot"> Both postcards
+                        are mentioned in <tei:ref target="OJ-15-34/r0003">OJ 15/34, [3]</tei:ref>, January 14, 1918, and both have by the
+                        arrived end of the letter.</tei:note></tei:seg>
+            </tei:ab>
+        </tei:transcription>
+        <tei:translation>
+            <tei:opener rend="inline">
+                <tei:date><tei:supplied resp="#TE">Jan</tei:supplied>3</tei:date> : </tei:opener>
+            <tei:ab>
+            
+                <tei:seg type="sub-entry" corresp="r0003-se01"><tei:milestone unit="section" rend="in-line em-dash"/>To Zuckerkandl (postcard): a few words of comfort.</tei:seg>
+                <tei:seg type="sub-entry" corresp="r0003-se02"><tei:milestone unit="section" rend="in-line em-dash"/>To him (second postcard): <tei:hi rend="superscript">
+                    possibly</tei:hi> the first one <tei:hi rend="superscript">may be</tei:hi>
+                    possibly undeliverable because an incorrect address given.</tei:seg>
+                <tei:ptr corresp="#r0003-fn01" type="footnote"/>
+            </tei:ab>
+        </tei:translation>
+   </sdo:record>
+ </sdo:recordCollection>

@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdo:recordCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker schema/schenker.xsd">
+
+    <!-- 
+        
+        This document includes three "test" records from the corpus, and demonstrates
+        experimental use of the work-in-progress XML schema for the Schenker Documents Online
+        Project.
+        
+        This document represents aspects of thinking about the use of the TEI as well as exploring
+        some of the complexities of converting the MovableType entries to XML.
+        
+        These records were created by automatically applying markup to the MovableType
+        output, followed by hand-encoding to make the records validate to the in-progress Schenker
+        Schema.
+     -->
+
+    <sdo:recordSource n="Various"/>
+
+    <!-- Note, the use of collDesc to capture information that pertains to all records in this file -->
+
+    <sdo:collDesc>
+        <tei:respStmt>
+            <tei:resp>Test Encoding Model</tei:resp>
+            <tei:name xml:id="TE">Test Encoder</tei:name>
+        </tei:respStmt>
+    </sdo:collDesc>
+
+    <!-- This document is a TEI encoding of the following:
+        http://mt.ccnmtl.columbia.edu/schenker/correspondence/letter/oj_1516_24_91714.html 
+        created for review of the SDO encoding model 
+        
+        === Features to be ignored ===
+        
+        sdo:record ID - this meets the syntactic requirements of XML, but is otherwise arbitrary
+        tei:notes xml:ID - these Ids meet syntactic requirements of XML, but are otherwise arbitrary.
+        sdo:itemDesc - this is not complete - some metadata has been included to allow for recognition of the item, but this
+        requires additional modelling.
+        
+        
+        === Please review ===
+        
+        * Handling of Letter opener, closer, postscript elements
+        * Handling of notes from Transcription and Translation to the notes section.
+        * Editorial components: supplied elements, unclear readings.
+        * Use of Lateinschrift - can you identify these for me in the document?  I suspect some of the 69 quotes
+        are incidents of Lateinschrift - is my assumption correct?
+        
+        * Also please identify any other textual elements that are currently un-remarked in XML that should be. 
+        (These records were semi-automatically created from MT - your review will help me strengthen those algorithms).
+        
+    -->
+
+    <sdo:record ID="e1914-09-07-01">
+
+        <!-- itemDesc is used to capture descriptive metadata about a single record -->
+
+        <sdo:itemDesc>
+
+
+            <dc:title>Handwritten letter from Weisse to Schenker, dated September 17, 1914</dc:title>
+            <dc:description>Weisse returns a clipping and commends Paumgartner, as a pupil Bruno
+                Walter, for his understanding of Schenker's Beethovens Neunte Sinfonie. —He asks if
+                he may come and play his waltzes and songs to Schenker, and expresses concern at the
+                likelihood of his being called up for military service. </dc:description>
+            <dc:creator>Weisse, Hans</dc:creator>
+            <dc:identifier>OJ 15/16, [24] : 9-17-14</dc:identifier>
+            <dcterms:created>09/17/1914 01:00:00 AM</dcterms:created>
+            <dc:format> 2p letter, holograph message and signature</dc:format>
+            <dcterms:rightsHolder>IPR: Heirs of Hans Weisse; Image: University of California,
+                Riverside; Transcription, Translation, Commentary, Footnotes, and Summary: William
+                Drabkin.</dcterms:rightsHolder>
+
+
+        </sdo:itemDesc>
+        <tei:transcription>
+            <tei:opener>
+                <tei:salute> Verehrter, liebster Meister! <tei:ptr target="fn01" n="1"/>
+                </tei:salute>
+            </tei:opener>
+            <tei:p> Mit Dank sende Ihnen anbei den „Heimgarten”-Ausschnitt zurück,<tei:ptr
+                    target="n02" n="2"/> immerhin erfreut, dass Paumgartner<tei:ptr target="n03"
+                    n="3"/> als Walterschüler überhaupt so weit bereits zu verstehen weiss!<tei:ptr
+                    target="n04" n="4"/>
+            </tei:p>
+            <tei:p>Nun eine Bitte! Könnte ich<tei:supplied resp="#TE">,</tei:supplied> wenn Sie neu “beflügelt”
+                    sind<tei:supplied resp="#TE">,</tei:supplied><tei:ptr target="n05" n="5"/> zu Ihnen kommen,
+                um Ihnen die Walzerernte und spärlichen Liedfang dieses Jahres vorzuspielen? Auch
+                hatte ich bezüglich des Monates Oktober eine Bitte, da die Stellung innerhalb des 1.
+                und 20<tei:supplied resp="#TE">.</tei:supplied> auch mich eines Tages über <tei:pb
+                    n="2"/> mein weiteres Schicksal aufklären dürfte. Jedenfalls ist, meiner
+                Auskunft beim Kriegsministerium zufolge, die Situation für mich keine allzugünstige,
+                da es sich wohlgewartet, um eine Landsturmmusterung handelt, bei der die Ärtzte
+                nicht sehr wählerisch zu sein<tei:supplied resp="#TE">,</tei:supplied> den Auftrag
+                haben. </tei:p>
+            <tei:p> Ich erwarte Ihren schriftlichen <tei:unclear reason="reading" resp="#TE">Prüf</tei:unclear>!</tei:p>
+
+            <tei:closer>
+                <tei:salute>Bis dahin in aller Verehrung und Liebe Ihr</tei:salute>
+                <tei:signed>Hans.</tei:signed>
+            </tei:closer>
+            <tei:postscript>
+                <tei:p>Herzlichste Grüsse der lieben gnädigen Frau!</tei:p>
+                <tei:p>Lasen Sie in der neuesten</tei:p>
+                <tei:p>“Musik” die Kritik über Krezschmars Konzertführer??<tei:ptr n="6"
+                        target="n06"/></tei:p>
+            </tei:postscript>
+            <tei:closer>
+                <tei:date>17/IX 14.</tei:date>
+            </tei:closer>
+        </tei:transcription>
+        <tei:translation>
+            <tei:opener>
+                <tei:salute> Honored, most beloved Master,<tei:ptr n="1" target="n01"/></tei:salute>
+            </tei:opener>
+            <tei:p>I am returning the <tei:hi rend="italic">Heimgarten</tei:hi> clipping,<tei:ptr
+                    n="2" target="n02"/> pleased after all that, particularly as a pupil of Walter,
+                    Paumgartner<tei:ptr n="3" target="n03"/> understands so much already!<tei:ptr
+                    n="4" target="n04"/></tei:p>
+            <tei:p> And now a request! Once you have taken possession of the piano, your new musical
+                    ‘wings’,<tei:ptr n="5" target="n05"/> could I come to play you this year’s crop
+                of waltzes and meagre catch of songs? I also had a request concerning the month of
+                October, since the situation regarding my future destiny should be resolved some day
+                between the 1st and the 20th <tei:supplied resp="#TE">of the month</tei:supplied>.
+                    <tei:pb n="2"/> At any rate, according to the information the War Office gave
+                me, my situation is not looking too favourable—it is to be expected that I will have
+                to undergo a Home Guard medical, at which the doctors are instructed not to be too
+                choosey. </tei:p>
+            <tei:p>I look forward to your letter! </tei:p>
+            <tei:closer>
+                <tei:salute>Until then, yours with great respect and love,</tei:salute>
+                <tei:signed>Hans.</tei:signed>
+            </tei:closer>
+            <tei:postscript>
+                <tei:p> Warmest greetings to your dear wife! </tei:p>
+                <tei:p> Did you read the review of Krezschmar’s concert guide in the latest issue of
+                        <!-- This should be replaced with a tag denoting work: TBD --><tei:hi
+                        rend="italic">Die Musik</tei:hi>??<tei:ptr n="6" target="n06"/></tei:p>
+            </tei:postscript>
+            <tei:closer>
+                <tei:date>September 17, 1914</tei:date>
+            </tei:closer>
+        </tei:translation>
+        <tei:notes>
+            <tei:note xml:id="fn01" n="1"> Schenker records in his diary for September 18, 1914:
+                “letter from Weisse again cadging a favor off me” (OJ 1/16, p. 713). </tei:note>
+            <tei:note xml:id="fn02" n="2"> Bernhard Paumgartner, “Heinrich Schenker: Beethovens IX.
+                Symphonie,” <tei:hi rend="italic">Heimgarten</tei:hi>, September 1914, a clipping of
+                which is preserved in Schenker’s scrapbook (OC 2/p. 45). </tei:note>
+            <tei:note xml:id="fn03" n="3"> Bernhard Paumgarner [create profile]. </tei:note>
+            <tei:note xml:id="fn04" n="4"> Click on <tei:ref
+                    target="../../profile/person/walter_bruno.html">Bruno Walter</tei:ref>. </tei:note>
+            <tei:note xml:id="fn05" n="5"> Literally “bewinged” but a pun is intended: Schenker is
+                about to take possession of a new <tei:hi rend="italic">Flügel</tei:hi>, i.e. grand
+                piano (see, e.g., his diary for June 7, 1914: OJ 1/14, p. 589). </tei:note>
+            <tei:note xml:id="fn06" n="6"> Hermann Kretzschmar, <tei:hi rend="italic">Führer durch
+                    den Konzertsaal</tei:hi>, 3 vols (Leipzig: Liebeskind, 1887–90; later edns by
+                Breitkopf &amp; Härtel). Schenker was highly critical of this in <tei:hi
+                    rend="italic">Beethovens Neunte Sinfonie</tei:hi> and elsewhere. </tei:note>
+        </tei:notes>
+
+    </sdo:record>
+
+    <!-- This document is a TEI encoding of the following:
+        http://mt.ccnmtl.columbia.edu/schenker/diary/oj_112_pp_327328_431.html
+        created for review of the SDO encoding model 
+        
+        === Features to be ignored ===
+        
+        sdo:record ID - this meets the syntactic requirements of XML, but is otherwise arbitrary
+        tei:notes xml:ID - these Ids meet syntactic requirements of XML, but are otherwise arbitrary.
+        sdo:itemDesc - this is not complete - some metadata has been included to allow for recognition of the item, but this
+        requires additional modelling.
+        
+        
+        === Please review ===
+        
+        * Handling of notes from Transcription and Translation to the notes section.
+        * Editorial components: corr - in the MT version, the corr follows the undecipherable uncorrected original - but what is the scope of the
+           correction?  One word, two words?  
+        * Supplied text in date: this is mirrored in the translation, but this isn't the policy for the corr in this entry.  Should
+           editorial features be marked in both?
+        * Can you tell me which editorial guideline the [...] corresponds to?  What is this?
+        * Slight change in structure: the use of <opener> to contain date, place, other introductory information, the placement of the main entry
+           in an <ab> tag.  This is an experiment, but may solve some of the complexities of the change in diary structure over time.
+        * Also, please identify any other textual elements that are currently un-remarked in XML that should be. 
+        (These records were semi-automatically created from MT - your review will help me strengthen those algorithms).
+        
+    -->
+
+    <sdo:record ID="e1913-04-03_01">
+        <sdo:itemDesc>
+            <dc:title>Diary entry by Schenker, dated April 3, 1913</dc:title>
+            <dc:creator>Schenker, Heinrich</dc:creator>
+            <dc:language>DE</dc:language>
+            <dc:subject>Schenker, Heinrich; Deutsch, Sofie; Sophie; Schenker, Jeanette; Lie-Liechen;
+                Deutsch, Otto Erich; Groß, Dr.; Wedekink; Schubert</dc:subject>
+            <dc:identifier>OJ 1/12, pp. 327-328</dc:identifier>
+            <dcterms:created>1913-04-03</dcterms:created>
+            <dcterms:dateSubmitted>2006-11-23</dcterms:dateSubmitted>
+            <dcterms:rightsHolder>IPR: in public domain; Image: University of California, Riverside;
+                Transcription, Translation, Commentary, Footnotes, and Summary: Ian
+            Bent.</dcterms:rightsHolder>
+        </sdo:itemDesc>
+
+        <tei:transcription>
+
+            <tei:opener rend="inline">
+                <tei:date> 3. April <tei:supplied resp="#TE">1913</tei:supplied></tei:date>.<tei:ptr
+                    n="1" target="fn1913-04-03_01"/>
+            </tei:opener>
+            <!-- Please interpret this: [...] -->
+            <tei:ab>[...] Abends mit Lie-Liechen<tei:ptr n="2" target="fn1913-04-03_02"/> bei Frau
+                    Deutsch;<tei:ptr n="3" target="fn1913-04-03_03"/> außer Familienmitgliedern noch
+                Herr Otto Erich Deutsch<tei:ptr n="4" target="fn1913-04-03_04"/> u. D<tei:hi
+                    rend="superscript">r.</tei:hi> Groß.<tei:ptr n="5" target="fn1913-04-03_05"/>
+                Ein recht freundlicher Zug der Fr. D. um Lie-Lie ihrer <tei:corr>Familie</tei:corr>
+                    vorzustellen.<tei:ptr n="6" target="fn1913-04-03_06"/> Es wurde über Wedekind
+                gesprochen, Gedichte vorgelesen u. auch musizirt: Schubert, Fantasie u. Rondo
+                    A<tei:hi rend="superscript">dur</tei:hi>.<tei:ptr n="7" target="fn1913-04-03_07"
+                />
+            </tei:ab>
+        </tei:transcription>
+        <tei:translation>
+            <tei:opener>April 3<tei:supplied resp="#TE">, 1913</tei:supplied>.<tei:ptr n="1"
+                    target="fn1913-04-03_01"/></tei:opener>
+            <tei:ab>[...] Evening with Lie-Liechen<tei:ptr n="2" target="fn1913-04-03_02"/> at Mrs.
+                    Deutsch’s<tei:ptr n="3" target="fn1913-04-03_03"/> home; other than family
+                members, there were also Mr. Otto Erich Deutsch<tei:ptr n="4"
+                    target="fn1913-04-03_04"/> and Dr. Groß.<tei:ptr n="5" target="fn1913-04-03_05"
+                /> A really friendly gesture on Mrs. Deutsch’s part to introduce Lie-Liechen to her
+                    family.<tei:ptr n="6" target="fn1913-04-03_06"/> Wedekind was spoken of, poems
+                recited, and music was made: Schubert, fantasy and Rondo in A major.<tei:ptr n="7"
+                    target="fn1913-04-03_07"/>
+            </tei:ab>
+        </tei:translation>
+        <tei:notes>
+
+            <tei:note xml:id="fn1913-04-03_01" n="1"> Mentioned by Federhofer, _Heinrich Schenker
+                nach Tagebüchern ..._ (Hildesheim Olms, 1985), p.97.</tei:note>
+            <tei:note n="2" xml:id="fn1913-04-03_02"> S’s affectionate name for Jeanette Kornfeld,
+                whom S would marry on November 10, 1919.</tei:note>
+            <tei:note n="3" xml:id="fn1913-04-03_03"> Mrs. Sofie Deutsch, a pupil of S’s for more
+                than fifteen years, and a benefactress of his work. She died on January 5, 1917,
+                leaving a legacy, a pension, and funds for stipends to composers in his hands.</tei:note>
+            <tei:note n="4" xml:id="fn1913-04-03_04"> Otto Erich Deutsch
+                <!--todo: create biogfile and link-->.</tei:note>
+            <tei:note n="5" xml:id="fn1913-04-03_05"> Dr. Groß: <!--todo: identify -->.</tei:note>
+            <tei:note n="6" xml:id="fn1913-04-03_06"> S may be alluding to the fact that he and
+                Jeanette were not married (after six years of close acquaintance).</tei:note>
+            <tei:note n="7" xml:id="fn1913-04-03_07"> Most likely the Rondo in A major, D951, for
+                piano four hands. </tei:note>
+        </tei:notes>
+    </sdo:record>
+
+    <!-- This document is a TEI encoding of the following:
+        http://mt.ccnmtl.columbia.edu/schenker/diary/oj_210_p_822_1318.html
+        created to test the SDO encoding model 
+        
+        === Features to be ignored ===
+        
+        sdo:record ID - this meets the syntactic requirements of XML, but is otherwise arbitrary
+        tei:notes xml:ID - these Ids meet syntactic requirements of XML, but are otherwise arbitrary.
+        tei:seg xml:ID - these Ids meet syntactic requirements of XML, but are otherwise arbitrary.
+        sdo:itemDesc - this is not complete - some metadata has been included to allow for recognition of the item, but this
+        requires additional modelling.
+        
+        
+        === Please review ===
+        
+        * Handling of notes from Transcription and Translation to the notes section.
+        * Editorial components: you expand the K. in the translation to postcard, but I'm not sure how this should be
+           marked up, given that you don't expand it in the German..  Superscripts - are these actually additions?  I can't
+           tell from the Movable Type output, and so have left them as <hi> elements.  Please review.
+           
+        * Supplied text in date: this is not in the transcription only in the translation.  Should
+        editorial features be marked in both?
+        * Can you tell me which editorial guideline the [...] corresponds to?  What is this?
+        * Use of the <seg> to mark sub-entries (in-line).  The same principle could be applied to block (paragraph) sub-entries, but 
+           would be used with the <ab> (anonymous block) tag.
+        * Slight change in structure: the use of <opener> to contain date, place, other introductory information, the placement of the main entry
+        in an <ab> tag.  This is an experiment, but may solve some of the complexities of the change in diary structure over time.
+        * Also, please identify any other textual elements that are currently un-remarked in XML that should be. 
+        (These records were semi-automatically created from MT - your review will help me strengthen those algorithms).
+        
+ -->
+
+    <sdo:record ID="e1-3-18-01">
+        <sdo:itemDesc>
+            <dc:identifier> OJ 2/10, p. 822 : 1-3-18</dc:identifier>
+
+            <dc:creator>Schenker, Heinrich</dc:creator>
+            <dc:subject>Schenker, Heinrich; Zuckerkandl, Viktor; Victor; postcards</dc:subject>
+            <dc:title>Diary entry by Schenker, dated January 3, 1918</dc:title>
+
+            <dcterms:created>1918-01-03</dcterms:created>
+            <dcterms:dateSubmitted>2007-03-30</dcterms:dateSubmitted>
+            <dcterms:rightsHolder>IPR: in the public domain; Image: University of California,
+                Riverside; Transcription, Translation, Commentary, Footnotes, and Summary: Ian Bent.</dcterms:rightsHolder>
+
+        </sdo:itemDesc>
+
+
+
+        <tei:transcription>
+
+            <tei:opener rend="inline">
+                <tei:date>3.</tei:date>
+            </tei:opener>
+            <tei:ab> [...] <tei:seg type="sub-entry" rend="em-dash" xml:id="se1-3-18-01-01">An
+                    Zuckerkandl (K.): einige tröstende Worte. </tei:seg><tei:seg type="sub-entry"
+                    rend="em-dash" xml:id="se1-3-18-01-02"> An ihn (2.K.): <tei:hi
+                        rend="superscript">möglicherweise könnte</tei:hi> die erste durch Angabe
+                    einer falschen Adresse möglicherweise unbestellbar <tei:hi rend="superscript"
+                        >sein</tei:hi>.<tei:ptr target="fn1-3-18-01-01" n="1"/></tei:seg>
+            </tei:ab>
+
+        </tei:transcription>
+        <tei:translation>
+            <tei:opener rend="inline">
+                <tei:date><tei:supplied resp="#TE">Jan</tei:supplied>3</tei:date> : </tei:opener>
+            <tei:ab> [...] <tei:seg type="sub-entry" rend="em-dash" corresp="se1-3-18-01-01">To
+                    Zuckerkandl <!-- this isn't expanded in the transcription - how should this be marked up? -->(postcard): a few words of comfort.</tei:seg><tei:seg
+                    type="sub-entry" rend="em-dash" corresp="se1-3-18-01-02">To him (second
+                    postcard): <tei:hi rend="superscript">possibly</tei:hi> the first one <tei:hi
+                        rend="superscript">may be</tei:hi> possibly undeliverable because an
+                    incorrect address given.</tei:seg><tei:ptr target="fn1-3-18-01-01" n="1"/>
+            </tei:ab>
+
+        </tei:translation>
+        <tei:notes>
+
+            <tei:note n="1" xml:id="fn1-3-18-01-01"> Both postcards are mentioned in OJ 15/34, [3],
+                January 14, 1918, and both have by the arrived end of the letter.</tei:note>
+
+        </tei:notes>
+    </sdo:record>
+
+</sdo:recordCollection>

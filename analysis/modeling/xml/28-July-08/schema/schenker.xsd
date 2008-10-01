@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  
+    targetNamespace="http://www.cch.kcl.ac.uk/schenker" 
+    xmlns="http://www.cch.kcl.ac.uk/schenker" 
+    xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0" 
+    xmlns:mods="http://www.loc.gov/mods/v3" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/">
+    
+    <xs:import  namespace="http://www.tei-c.org/ns/1.0" schemaLocation="tei_all.xsd"/>
+    <xs:import  namespace="http://purl.org/dc/elements/1.1/" schemaLocation="dc.xsd"/>
+    <xs:import  namespace="http://purl.org/dc/terms/" schemaLocation="dcterms.xsd"/>
+     
+    <!--  *****  An instance of this schema is  (1) a single entry record:  -->
+    <xs:element name="record" type="recordType"/>
+    <!--      or  (2) a collection of entries  -->
+    <xs:element name="recordCollection">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="recordSource" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="collDesc" minOccurs="0" maxOccurs="1"/>
+               <xs:element ref="record" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <!--   *****  End of "instance" definition -->
+    <!-- *****  Definition of a single entry -->
+    
+    <xs:complexType name="recordType">
+        <xs:group ref="recordGroup" maxOccurs="unbounded"/>
+        <xs:attribute name="ID" type="xsd:ID" use="required"/>
+    </xs:complexType>
+    
+    <!--   *****  End of definition of an entry record.  -->
+      
+        
+    <xs:group name="recordGroup">
+        <xs:sequence>
+            <xs:element ref="itemDesc" minOccurs="1" maxOccurs="1" />
+            <xs:element  ref="tei:transcription" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="tei:translation" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="tei:notes"  minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:group>
+    
+    <xs:element name="collDesc" type="collDescType"/>
+    
+    <xs:complexType name="collDescType">
+        <xs:group ref="collDescGroup" maxOccurs="1"/>
+        <xs:attribute name="ID" type="xsd:ID" use="optional"/>
+    </xs:complexType>
+    
+    
+    <xs:group name="collDescGroup">
+        <xs:sequence>
+            <xs:element ref="tei:respStmt" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="dc:rights" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="dcterms:rightsHolder" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="dc:contributor" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="dc:description" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="dc:language" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="dc:publisher" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="dc:subject" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="dc:title" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="dc:type" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="dcterms:audience" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="dcterms:bibliographicCitation" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="dcterms:created" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="dcterms:dateSubmitted" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="dcterms:isPartOf" minOccurs="0" maxOccurs="unbounded"/>
+            
+            <!-- this creates a conflict with the corresponding element rights in dc: commenting out for now.  <xs:element ref="dcterms:license" minOccurs="0" maxOccurs="unbounded"/>-->
+            <xs:element ref="dcterms:medium" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="dcterms:provenance" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="dcterms:spatial" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="dcterms:temporal" minOccurs="0" maxOccurs="unbounded"/>
+            
+            
+        </xs:sequence>
+    </xs:group>
+    
+    
+    <xs:element name="itemDesc" type="itemDescType"/>
+    
+    <xs:complexType name="itemDescType">
+        <xs:group ref="itemDescGroup" maxOccurs="1"/>
+        <xs:attribute name="ID" type="xsd:ID" use="optional"/>
+    </xs:complexType>
+    
+    
+    <xs:group name="itemDescGroup">
+   
+        <xsd:all>
+            <xs:element ref="tei:respStmt" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="tei:handNotes" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="dc:rights" minOccurs="0" />
+           
+            <xs:element ref="dcterms:rightsHolder" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="dc:creator" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="dc:contributor" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="dc:format" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="dc:description" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="dc:identifier" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="dc:language" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="dc:publisher" minOccurs="0" maxOccurs="1"/>
+             <xs:element ref="dc:subject" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="dc:title" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="dc:type" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="dcterms:audience" minOccurs="0" maxOccurs="1"/>
+            
+            <xs:element ref="dcterms:created" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="dcterms:dateSubmitted" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="dcterms:isPartOf" minOccurs="0" maxOccurs="1"/>
+            
+          <!-- this creates a conflict with the corresponding element rights in dc: commenting out for now.  <xs:element ref="dcterms:license" minOccurs="0" maxOccurs="unbounded"/>-->
+            
+            <xs:element ref="dcterms:provenance" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="dcterms:spatial" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="dcterms:temporal" minOccurs="0" maxOccurs="1"/>
+                        
+      </xsd:all>
+    </xs:group>
+        
+    
+    
+    <xs:element name="recordSource" >
+        <xs:complexType>
+            <xs:attribute use="required" name="n">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration  value="Diary"/>
+                        <xs:enumeration  value="LessonBook"/>
+                        <xs:enumeration  value="Letter"/>
+                        <xs:enumeration  value="Profile"/>
+                        <xs:enumeration value="Various"/>
+                  </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>      
+        
+    </xs:element>
+    
+    
+  
+
+</xs:schema>
