@@ -85,7 +85,7 @@
     
  <xsl:template match="daoloc">
      <xs:enumeration><xsl:attribute name="value"><xsl:value-of select="@id"/></xsl:attribute>
-         <xsd:annotation><xsd:documentation><xsl:apply-templates select="ancestor::did" mode="doco-val"/></xsd:documentation></xsd:annotation>
+         <xsd:annotation><xsd:documentation><xsl:value-of select="."/> <xsl:text> - </xsl:text> (<xsl:text> </xsl:text><xsl:apply-templates select="ancestor::c02/did" mode="doco-val"/><xsl:text> </xsl:text>)</xsd:documentation></xsd:annotation>
      </xs:enumeration>
  </xsl:template>
     
@@ -111,6 +111,8 @@
      
     <xsl:template match="unitdate" mode="doco-val">date: <xsl:value-of select="normalize-space(.)"/><xsl:text> </xsl:text>
     </xsl:template>    
+    
+    <xsl:template match="daoloc" mode="doco-val"/>
 
 
 </xsl:stylesheet>
