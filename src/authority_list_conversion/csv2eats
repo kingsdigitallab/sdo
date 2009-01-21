@@ -16,12 +16,15 @@ use Text::CSV;
 
    $pathToInput = $ARGV[0];
    $fileToWrite = "schenker.xml";
-   $recordCounter = 1;
+   $recordCounter = 3;
    my $csv = Text::CSV->new({ binary => 1 });
    open (CSVSRC, "< $pathToInput") or die "Couldn't open $pathToInput for reading: $!\n";
   
-  $propAssertionIdCounter = 3;
-  $nameIdCounter = 1;
+  $propAssertionIdCounter = 11;
+  $nameIdCounter = 3;
+  $namePartCounter = 2;
+  $entityNoteCounter = 2;
+  
    while (<CSVSRC>) {
    my $line = $_;
 
@@ -30,6 +33,9 @@ use Text::CSV;
         my @columns = $csv->fields();        
         my $name = $columns[0];
         
+        my @notes = ("is a correspondent: $columns[9]","is a pupil: $columns[10]","$columns[11]","$columns[12]","$columns[13]","$columns[14]","$columns[15]","$columns[16]","$columns[17]");
+        my $sizeNotes = @notes;
+
         my @names = ($columns[0],$columns[1],$columns[2],$columns[3],$columns[4],$columns[5],$columns[6],$columns[7],$columns[8]);
         my $sizeNames = @names;
         
@@ -40,6 +46,9 @@ use Text::CSV;
         my $recNumber = sprintf( "%06d", $recordCounter);
     
          my $nameObjects = "";
+         my $noteObjects = "";
+         my $propAssertions = "";
+         
          
        for ($j = 0; $j<$sizeNames; $j++) {
            
@@ -58,8 +67,32 @@ use Text::CSV;
         $nameObjects .= "<field to=\"eats.nametype\" name=\"name_type\" rel=\"ManyToOneRel\">2</field>\n";
         $nameObjects .= "<field to=\"eats.language\" name=\"language\" rel=\"ManyToOneRel\">1</field>\n";
         $nameObjects .= "<field to=\"eats.script\" name=\"script\" rel=\"ManyToOneRel\">1</field>\n";
+        
+        if ($j != 0) {
         $nameObjects .= "<field type=\"CharField\" name=\"display_form\">$currName</field>\n";
+        } else {
+       # $nameObjects .= "<field type=\"CharField\" name=\"display_form\"><None/></field>\n";
+        }
+        
         $nameObjects .= "</object>\n";
+        
+        # Add the sort name from Ian's spreadsheet to the family namepart.
+        if ($j == 0) {
+        $namePartCounter++;
+        my $partId = $namePartCounter;
+        
+         $nameObjects .= "<object pk=\"$partId\" model=\"eats.namepart\">\n";
+         $nameObjects .= "<field to=\"eats.name\" name=\"name\" rel=\"ManyToOneRel\">$objectId</field>\n";
+         $nameObjects .= "<field to=\"eats.nameparttype\" name=\"name_part_type\" rel=\"ManyToOneRel\">1</field>\n";
+         $nameObjects .= "<field to=\"eats.language\" name=\"language\" rel=\"ManyToOneRel\">1</field>\n";
+         $nameObjects .= "<field to=\"eats.script\" name=\"script\" rel=\"ManyToOneRel\">1</field>\n";
+         $nameObjects .= "<field type=\"CharField\" name=\"name_part\">$currName</field>\n</object>\n";
+         
+        
+        }
+         
+         
+       
        
        # Next the search name
        $nameObjects .= "<object pk=\"$objectId\" model=\"eats.searchname\">\n";
@@ -91,7 +124,63 @@ use Text::CSV;
        
        }
        
-        my $propAssertions = "";
+       
+       $entityNoteCounter++;
+       $noteId = $entityNoteCounter;
+        
+        $noteObjects .= "<object pk=\"$noteId\" model=\"eats.entitynote\">";
+         $noteObjects .= "<field type=\"TextField\" name=\"note\">";
+      
+     
+         $correspondent = $columns[9];
+         $correspondent =~ s/^\s*(.*)\s*$/$1/;
+         $pupil = $columns[10];
+         $pupil =~ s/^\s*(.*)\s*$/$1/;
+         $profile = $columns[11];
+         $profile =~ s/^\s*(.*)\s*$/$1/;
+         
+         @roles = ("$columns[12]","$columns[13]","$columns[14]","$columns[15]","$columns[16]","$columns[17]");
+         
+        if ($correspondent ne "") { $noteObjects .= "-is a correspondent-\n"; }
+          
+          if ($pupil ne "") { $noteObjects .= "-is a pupil-\n"; }
+          
+          if ($profile ne "") { $noteObjects .= "-profile exists-\n"; }
+          
+                    
+          for ($k = 0; $k < @roles; $k++) {
+          
+          $thisRole = $roles[$k];
+          $thisRole =~ s/^\s*(.*)\s*$/$1/;
+          
+          next if($thisRole eq "");
+          
+          $noteObjects .= "-$thisRole-";
+           
+          }
+       
+         $noteObjects .="\n</field>";
+         $noteObjects .="<field type=\"BooleanField\" name=\"is_internal\">0</field>\n</object>";
+        
+       
+       $propAssertionIdCounter++;
+       
+       $noteObjects .=  "<object pk=\"$propAssertionIdCounter\" model=\"eats.propertyassertion\">\n";
+        $noteObjects .=  "<field to=\"eats.entity\" name=\"entity\" rel=\"ManyToOneRel\">$recordCounter</field>\n";
+        $noteObjects .=  "<field to=\"eats.authorityrecord\" name=\"authority_record\" rel=\"ManyToOneRel\">$recordCounter</field>\n";
+        $noteObjects .=  "<field type=\"DateField\" name=\"authority_record_checked\"><None/></field>\n";
+        $noteObjects .=  "<field to=\"eats.existence\" name=\"existence\" rel=\"ManyToOneRel\"><None/></field>\n";
+        $noteObjects .= "<field to=\"eats.entitytype\" name=\"entity_type\" rel=\"ManyToOneRel\"><None/></field>\n";
+        $noteObjects .= "<field to=\"eats.name\" name=\"name\" rel=\"ManyToOneRel\"><None/></field>\n";
+        $noteObjects .= "<field to=\"eats.entityrelationship\" name=\"entity_relationship\" rel=\"ManyToOneRel\"><None/></field>\n";
+        $noteObjects .= "<field to=\"eats.namerelationship\" name=\"name_relationship\" rel=\"ManyToOneRel\"><None/></field>\n";
+        $noteObjects .= "<field to=\"eats.entitynote\" name=\"note\" rel=\"ManyToOneRel\">$noteId</field>\n";
+        $noteObjects .= "<field to=\"eats.entityreference\" name=\"reference\" rel=\"ManyToOneRel\"><None/></field>\n";
+        $noteObjects .= "<field to=\"eats.genericproperty\" name=\"generic_property\" rel=\"ManyToOneRel\"><None/></field>\n";
+        $noteObjects .= "<field type=\"BooleanField\" name=\"is_preferred\">True</field>\n";
+        $noteObjects .= "</object>";
+        
+      
             
         for ($i = 0; $i <2; $i++) {
                                     
@@ -156,6 +245,10 @@ print <<END;
             
     <!-- Write the Name Objects for each entity -->
      $nameObjects
+     
+     <!-- Write the Note Objects for each entity -->
+         
+     $noteObjects
             
     <!-- Three property assertions for each entity to be added: one to register the existence, one to register the association of the name, and one to register the entity type -->
 
