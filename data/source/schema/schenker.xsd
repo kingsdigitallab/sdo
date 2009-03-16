@@ -10,11 +10,13 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
     >
     
     <xs:import  namespace="http://www.tei-c.org/ns/1.0" schemaLocation="tei_all.xsd"/>
   <xs:import namespace="http://purl.org/dc/elements/1.1/" schemaLocation="dc.xsd"/>
     <xs:import namespace="http://purl.org/dc/terms/" schemaLocation="dcterms.xsd"/> 
+    <xs:import namespace="http://www.loc.gov/loc.terms/relators/" schemaLocation="marcrel.xsd"/>
     <xs:include schemaLocation="diary-metadata.xsd"/>
     <xs:include schemaLocation="correspondence-metadata.xsd"/>
    <!-- <xs:include schemaLocation="lessonbook-metadata.xsd"/>
@@ -98,11 +100,18 @@
         <xsd:sequence>
          <xs:element ref="dc:title" maxOccurs="1"/>       
                   
-            <!--<xs:element ref="dc:identifier" maxOccurs="1"/>-->
             <xs:element ref="dcterms:created" maxOccurs="1"/>
             <xs:element ref="dcterms:dateSubmitted" minOccurs="1" maxOccurs="1"/>
             <xs:element ref="dc:description" minOccurs="1" maxOccurs="1"/>            
             <xs:element ref="dc:subject" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="dc:format" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="marcrel:CRP" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="marcrel:RCP" minOccurs="0" maxOccurs="unbounded"/>
+            
+             
+            
+                      
+            
             <!--
             <xs:element ref="dcterms:rightsHolder" minOccurs="0" maxOccurs="1"/>
             <xs:element ref="dc:rights" minOccurs="0" />
@@ -129,7 +138,15 @@
       </xsd:sequence>
     </xs:group>
         
-        
+
+   <xsd:simpleType name="marcRel">
+        <xsd:restriction base="xsd:string">
+            
+            <xsd:enumeration value="RCP"><xsd:annotation><xsd:documentation>Recipient</xsd:documentation></xsd:annotation></xsd:enumeration>
+            <xsd:enumeration value="CRP"><xsd:annotation><xsd:documentation>Correspondent</xsd:documentation></xsd:annotation></xsd:enumeration>
+            
+        </xsd:restriction>
+   </xsd:simpleType>
     
     <xsd:simpleType name="recID">
         <xsd:restriction base="xsd:ID">
