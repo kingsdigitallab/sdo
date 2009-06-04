@@ -1,0 +1,208 @@
+                        JWare/AntXtras Foundation
+                    Version 2.0.0b1, Release Mar 2009
+                   -----------------------------------
+
+
+This document contains the major AntXtras version change notes. For the most
+recent information, visit the website at http://antxtras.sourceforge.net/.
+
+------------------------------------------------------------------------------
+This version of AntXtras represents a significant rework of the last 
+release (0.5.2). While the effective behavior of the vast majority of the
+components remains the same, many structural changes (like Java packages)
+are incompatible with the 0.5.x series. Additionally, some lesser-used or 
+test-only components have been either removed or repackaged into optional
+antlibs outside the core antlib; for instance, most of the 'emit' feedback
+components have moved to the standalone Log4Ant project and many of the
+advanced construction components have migrated to other projects. The set
+of changes is long; refer to the changelog report included in the release.
+While all of the beta components have been thoroughly tested, this is NOT
+a 2.0.0 feature-complete release; in particular, some function shortcuts
+and enhancements will be added in the next beta (due two months after the
+initial beta release).
+
+
+=> [INCOMPAT] Changed the distributed jar file names. The new
+   AntXtras distribution includes the jar files shown below: 
+   + jw-antxtras.jar (Most used components like <do>, <capturelogs>)
+   + jw-antxtras-advanced.jar (Less used components like <newtempfile>)
+   + jw-antxtras-antunit.jar  (Test components like <assertlogged>)
+
+   EXAMPLE: Defining a custom AntXtras 2.0.0 classpath:
+
+    <path id="antxtras.path">
+      <fileset dir="${ANTXTRAS_HOME}">
+        <include name="lib/jw-antxtras.jar"/>
+      </fileset>
+    </path>
+
+
+=> [INCOMPAT] Repackaged entire AntXtras distribution under the 
+   org.jwaresoftware.antxtras namespace. Many packages split into smaller
+   more cohesive modules and components renamed to reflect their default
+   antlib component names. See AntXtras antlib.xml files for details.
+   The preferred xmlns prefix is 'oja:' and the preferred xmlns URI is
+   'jware.antxtras'.
+
+   EXAMPLE: Loading AntXtras antlib from a custom classpath (above):
+
+    <project xmlns:oja="jware.antxtras"...>
+      <taskdef uri="jware.antxtras"
+          resource="org/jwaresoftware/antxtras/install/antlib.xml"
+          classpathref="antxtras.path"/>
+
+      <oja:vendorinfo/>
+
+
+=> [INCOMPAT] Removed the following components from AntXtras completely; 
+   source code still available under the 'sources/legacy' directory in 
+   the AntXtras source distribution: <assignimport>, <listdir>,
+   <parentdir>, <install-steprunner>, <step>, <print>, <printer>, 
+   <manageprinters>, <printer-mapping>.
+
+   The following have been moved out of the main AntXtras antlib into 
+   optional antlibs or new projects (AntXtras 0.5.x names used). Now 
+   in jw-antxtras-advanced.jar and jw-antxtras-antunit.jar: <printbundle>,
+   <assertlogged>, <copymessage> <createtask>, <altertask>, <performtask>,
+   <newfile>, <truncatefiles>, <newtempdir>, <newtempfile>, and 
+   <overlaymessages>. Now in Log4Ant: <emitmappings>, <emit>, <emitlogs>,
+   <checkpoint>, <overlay-emitconf>, and <emitconfiguration>.
+
+
+=> [INCOMPAT] The 0.5.x "value URIs" feature is now part of the 2.0.0
+   "Function Shortcuts" (aka 'funcuts') feature. Virtually all of the
+   older classnames have been updated to reflect this new association.
+   For the most part, the function shortcut names have remained the 
+   same as their 0.5.x schemes. Some infrequently used shortcuts have
+   been retired and several new function shortcuts added. See the 
+   function shortcuts antlib for the complete 2.0.0 list of funcuts.
+   See: <JWARESOFTWARE_URL>/antxtras/documents/features/funcuts/
+
+
+=> [INCOMPAT] Both recursive property expansion and function shortcuts 
+   are enabled by default if you use the install antlib. You no longer
+   use the alternate '@()' way of dereferencing nested properties. So,
+   for example, you use "${$basename:${basedir}}" instead of the older
+   forms: "${$basename:@(basdir)}" or "${$property:basedir|$basename:}.
+   Regular nested properties work as expected; for example the value
+   ${conf.${env}} works as you would expect for different values of 
+   ${env}.
+
+
+=> [INCOMPAT] Resource bundle based messages type now actually
+   assumes the incoming resource is *IS* a resource bundle base name 
+   and looks for locale-aware versions FIRST. It still understands
+   path-based resource names, files, and URLs-- as a SECOND choice.
+   To refer to a bundle-based message you need to use the renamed
+   'messageid' attribute on the appropriate component.
+
+   EXAMPLE: Loading locale-aware messages into your Ant space:
+
+    <messagesbundle id="all.messages"
+        resource="staging.messages.deploy-messages"/>
+
+
+=> [INCOMPAT] To refer to a bundle-based message use the 'messageid'
+   attribute name instead of the older 'msgid' (still exists as a
+   synonymn until AntXtras 3.0). Similarly to define an inlined 
+   message use the 'message' parameter instead of the older 'msg' 
+   attribute. This change affects all AntXtras components that accept
+   message ids like the <show>, <assert>, and <stop>.
+
+   EXAMPLES:
+       <show message="Great night for a build!"/>
+
+       <show messageid="info.nightly.build.greeting"/>
+
+       <assert noneset="checkout.failed,update.failed"
+            messageid="errs.scm.failed.refresh"/>
+
+
+=> [INCOMPAT] With the support of recursive property resolution as the
+   default in AntXtras 2.0.0 most function shortcuts now assume their input
+   values are literal values and NOT property names as was the case in the
+   0.5.x series. In particular the following shortcuts now interpret their
+   inputs literally not as property names: $not, $truefalse, and $isdefined.
+   You can still override this default setting using the '?<type>' modifier;
+   for example: '$truefalse:completion.clean?var'.
+
+
+=> [INCOMPAT] Reworked the AntXtras condition and rules framework. Lots of
+   cleanup to make parameters, condition names, function shortcut schemes,
+   etc. consistent-- hence some breakage with old antlibs occured. Most
+   notably (but best to check new antlibs):
+
+        + <isnumeric> is replaced by <isnumber>
+        + <isantversion is="..."> is now <isantversion equal="..."/>
+        + <isfilenotempty> is now just <filenotempty>
+        + <isref> is replaced by <isreference>
+        + <isbool> is replaced by <isboolean>
+        + <isallset>, <isallsettrue> are gone; just use <allset> 
+          and <allsettrue> instead.
+        + <isanyset>, <isanysettrue> are gone; just use <anyset>
+          and <anysettrue> instead.
+
+   **Note: for some of the function shortcuts the "short shortcuts" still
+     exist like '$isdir:' and '$isref:'; however, now the fully qualified
+     names (to match the conditions) are also supported. So, 
+     '$isdirectory:' and '$isreference:' work now in 2.0.0. The intent is
+     that you have to learn just the main condition name and then be able
+     to use it in all the different ways.
+
+
+=> [INCOMPAT] The <printenv> task displays the string friendly version of a
+   reference by default. For example a regular expression will print as the
+   underlying pattern -- not the object reference anymore.
+
+
+=> [INCOMPAT] The <doforeach> (formerly called <foreach>) now only works
+   in a local mode. The 'mode' and 'name' parameters are no longer
+   supported. If you need to create a sub-project use the <callforeach>
+   task instead.
+
+
+=> [INCOMPAT] The <step> taskset has been removed. This functionality is
+   now provided more effectively by standard Ant macrodefs. The required
+   <install-steprunner/> manager task has also been removed as it is not 
+   needed without <step>s.
+
+
+=> [INCOMPAT] If the supplied vendor name is not one of the known AntXtras
+   projects, the <vendorinfo> task now looks for a resource named 
+   '<vendorname>-version.properties' in the component's task path (builtin
+   or specified). The format of the properties file is shown in the sample
+   at: <JWARESOFTWARE_URL>/files/antxtras/sample-version.properties
+
+   EXAMPLES: 
+       <vendorinfo name="antxtras"/>
+
+       <vendorinfo name="log4ant" 
+           classpathref="buildtools.path"/>
+
+       <-- Looks for 'myextensions-version.properties' -->
+       <vendorinfo name="myextensions"/>  
+
+
+=> The <overlay> configuration taskset now supports properties-like
+   data objects like <propertyset> and AntXtra's own <properties> type.
+
+   EXAMPLES:
+       <properties id="_${name}.properties" file="...">
+         <property name="failquick" value="yes"/>
+         <property name="results.d" value="${results.d}/${name}"/>
+       </properties>
+       ...
+       <overlay properties="_${name}.properties">
+         <run-testsuite name="${name}"/>
+       </overlay>
+
+
+=> Enhanced <dowhile> task to allow overlay of additonal properties 
+   holders like propertysets, loaded properties files, etc.
+
+
+=> Enhanced <callinline> to allow it execute any target (including 
+   overridden ones) from an imported project.
+
+
+-SSMC

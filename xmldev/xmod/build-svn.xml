@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="svn-update" name="SVN Update">
+  <property file="svn.properties" />
+
+  <property name="svn.repository.url" value="${svn.repository.url}" />
+  <property name="svn.project.base.path" value="${svn.project.base.path}" />
+  <property name="svn.base.url" value="${svn.repository.url}/${svn.project.base.path}" />
+
+  <property location="${basedir}/tools/svnant-1.0.0/lib" name="svnant.lib.dir" />
+  <property name="svnant.javahl" value="false" />
+
+  <path id="svnant.classpath">
+    <fileset dir="${svnant.lib.dir}">
+      <include name="**/*.jar" />
+    </fileset>
+  </path>
+
+  <!-- loads the svn task -->
+  <taskdef classpathref="svnant.classpath" resource="svntask.properties" />
+
+  <target name="tool-availability">
+    <available classpathref="svnant.classpath" property="available.svnant" resource="svntask.properties" />
+    <echo message="SVN-ANT is available = ${available.svnant}" />
+  </target>
+
+  <target depends="tool-availability" name="svn-update">
+    <fail unless="available.svnant" message="SVN-ANT is not available, cannot perform svn ant tasks." />
+    
+    <property name="destPath" value="${basedir}" />
+    <svn javahl="${svnant.javahl}" password="${svn.password}" username="${svn.username}">
+      <update dir="${basedir}" />
+    </svn>
+  </target>
+</project>

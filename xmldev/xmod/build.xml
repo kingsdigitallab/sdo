@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="prepare" name="xMod">
+  <import file="build-antxtras.xml" />
+  <import file="build-svn.xml" />
+  
+  <!-- properties -->
+  <property location="${basedir}/build" name="build.dir" />
+
+  <property name="assets.dir.name" value="_a" />
+  <property location="${basedir}/${assets.dir.name}" name="assets.dir" />
+  
+  <property name="images.dir.name" value="images" />
+  <property location="${basedir}/${images.dir.name}" name="images.dir" />
+  
+  <property location="${basedir}/src/xml/menu" name="menu.dir" />
+  
+  <property location="${basedir}/src/xml/metadata" name="metadata.dir" />
+  
+  <property location="${basedir}/properties" name="properties.dir" />
+  
+  <property name="schema.dir.name" value="schema" />
+  <property location="${basedir}/${schema.dir.name}" name="schema.dir" />
+  
+  <property location="${basedir}/src/xml/content" name="source.dir" />
+  
+  <fileset dir="${source.dir}" id="source.xml" includes="**/*.xml" />
+  <property name="source.xml.set" refid="source.xml" />
+  
+  <property location="${basedir}/stylesheets" name="style.dir" />
+
+  <target name="prepare">
+    <mkdir dir="${build.dir}" />
+  </target>
+  
+  <target name="prepare-metadata" depends="prepare, svn-update">
+    <xslt in="${properties.dir}/properties.xml" out="${source.dir}/_xinclude.xml" style="${style.dir}/metadata/xinclude.xsl">
+      <factory name="net.sf.saxon.TransformerFactoryImpl" />
+      
+      <param expression="${source.xml.set}" name="fileset" />
+    </xslt>
+    
+    <xslt in="${source.dir}/_xinclude.xml" out="${metadata.dir}/files.xml"
+      style="${style.dir}/metadata/generate-files-metadata.xsl">
+      <factory name="net.sf.saxon.TransformerFactoryImpl">
+        <attribute name="http://saxon.sf.net/feature/xinclude-aware" value="true" />
+      </factory>
+    </xslt>
+    
+    <xslt in="${source.dir}/_xinclude.xml" out="${metadata.dir}/images.xml"
+      style="${style.dir}/metadata/generate-images-metadata.xsl">
+      <factory name="net.sf.saxon.TransformerFactoryImpl">
+        <attribute name="http://saxon.sf.net/feature/xinclude-aware" value="true" />
+      </factory>
+    </xslt>
+    
+    <delete file="${source.dir}/_xinclude.xml" />
+  </target>
+
+  <target name="clean">
+    <delete dir="${build.dir}" />
+  </target>
+</project>
