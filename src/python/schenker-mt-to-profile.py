@@ -15,6 +15,17 @@ mtfile = "/projects/cch/schenker/data/movable-type/schenker_documents_online.txt
 mtentrysep1 = "--------"
 mtentrysep2 = "AUTHOR:"
 
+# categories, after "PRIMARY CATEGORY:", that determine if an entry is a profile
+profileprimcatlist = [
+                      "Company",
+                      "Work",
+                      "Title",
+                      "Person",
+                      "Place",
+                      "Organization",
+                      "Institution"
+                      ]
+
 if __name__ == '__main__':
     # get file object to read MoveableType file
     mtfobj = file(mtfile, "r")
