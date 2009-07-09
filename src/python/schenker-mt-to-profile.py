@@ -14,6 +14,12 @@ mtfile = "/projects/cch/schenker/data/movable-type/schenker_documents_online.txt
 # Start of a new entry is mtentrysep1 followed on a new line by mtentrysep2
 mtentrysep1 = "--------"
 mtentrysep2 = "AUTHOR:"
+mtentrysep = mtentrysep1 + "\n" + mtentrysep2
+
+# Separator between head and body
+headsep1 = "-----"
+headsep2 = "BODY:"
+headsep = headsep1 + "\n" + headsep2
 
 # categories, after "PRIMARY CATEGORY:", that determine if an entry is a profile
 profileprimcatlist = [
@@ -26,17 +32,54 @@ profileprimcatlist = [
                       "Institution"
                       ]
 
+def getListOfEntries(ta):
+    elist = ta.split(mtentrysep)
+    return elist
+
+def getHeadAndBody(t):
+    # print t
+    hblist = t.split(headsep)
+    # print hblist
+    if len(hblist) > 2:
+        head = hblist[0]
+        body = "\n".join(hblist[1:])
+        print "XXX"
+    else:
+        head = hblist[0]
+        body = hblist[1]
+    # print head
+    # print "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    # print body
+    return head, body 
+
+def getHeadDict(h):
+    hdic = {}
+    for hlnum, line in enumerate(h.split("\n")):
+        line = line.strip()
+        if hlnum == 0:
+            hdic["AUTHOR"] = line
+        else:
+            pass
+    return hdic
+
 if __name__ == '__main__':
     # get file object to read MoveableType file
     mtfobj = file(mtfile, "r")
     mtcont = mtfobj.read()
     mtfobj.close()
-    mtlinelist = mtcont.split("\n")
-    print len(mtlinelist)
-    print mtcont.count("\n")
-    for linenum, line in enumerate(mtlinelist):
-        if line == mtentrysep1:
-            lineaftersep = mtlinelist[linenum+1]
-            if lineaftersep.startswith(mtentrysep2):
-                print linenum, line, lineaftersep
+    l = mtcont.split(mtentrysep)
+    entrylist = getListOfEntries(mtcont)
+    print len(entrylist)
+    for entrynum, entry in enumerate(entrylist):
+        head, body = getHeadAndBody(entry)
+        headdic = getHeadDict(head)
+
+#    mtlinelist = mtcont.split("\n")
+#    print len(mtlinelist)
+#    print mtcont.count("\n")
+#    for linenum, line in enumerate(mtlinelist):
+#        if line == mtentrysep1:
+#            lineaftersep = mtlinelist[linenum+1]
+#            if lineaftersep.startswith(mtentrysep2):
+#                print linenum, line, lineaftersep
     print "--== FINISHED ==--"
