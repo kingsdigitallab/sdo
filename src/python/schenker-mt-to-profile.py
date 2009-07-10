@@ -7,9 +7,16 @@ import string
 import re
 import time
 import os, os.path
+from xml.etree import ElementTree as ET
+
 
 # MoveableType data file
 mtfile = "/projects/cch/schenker/data/movable-type/schenker_documents_online.txt"
+outpath = "/projects/cch/schenker/data/profiles"
+logpath = "/projects/cch/schenker/src/python/logs"
+
+# basename (for filename) to use should "BASENAME" header be empty
+dummybasename = "CCHGENERATED"
 
 # Start of a new entry is mtentrysep1 followed on a new line by mtentrysep2
 mtentrysep1 = "--------"
@@ -32,7 +39,77 @@ profileprimcatlist = [
                       "Institution"
                       ]
 
+# dict for frequencies of keys in the header
+# for consistency checking
 hfreqdic = {}
+
+# list that collects basenames (used as output filenames) as we
+# go along
+# collecting the basenames in this list allows us to check if there
+# are duplicates and act accordingly, i. e. add a date/time stamp
+# to make the file name unique 
+basenameslist = [ dummybasename ]
+
+def printUsage():
+    print
+    print "ATTENTION:"
+    print
+    print "      ", os.path.basename(sys.argv[0]), ""
+    print
+    # print "      ", "get help with:"
+    # print "      ", os.path.basename(sys.argv[0]), "-h"
+    # print
+    sys.exit(2)
+
+def getRepfileObject(slp):
+    repfiledir = slp
+    repfilefile = "schenker-MT-to-XML"
+    repfilefile += "-"
+    # repfilefile += time.strftime("%Y-%m-%d-%H-%M", time.localtime())
+    repfilefile += time.strftime("%Y%m%d%H%M", time.localtime())
+    repfilefile += ".LOG"
+    repfilepath = os.path.join(repfiledir, repfilefile)
+    repf = file(repfilepath, "w")
+    return repf
+
+# PrintCF
+# print to console and file
+# 1: filehandle
+# 2: if newline should be added at end
+# 3: string to print
+def printCF(fh, newline, s):
+    if newline == 0:
+        print s,
+        fh.write(s)
+        fh.flush()
+    else:
+        print s
+        fh.write(s + "\n")
+        fh.flush()
+
+def checkDirs():
+    if not os.path.exists(logpath):
+        print
+        print "Log path '%s' does not exist!" % (logpath, )
+        print
+        sys.exit(2)
+    elif not os.path.isdir(logpath):
+        print
+        print "Log path '%s' exists, but is not a directory!" % (logpath, )
+        print
+        sys.exit(2)
+
+    if not os.path.exists(outpath):
+        print
+        print "Output path '%s' does not exist!" % (outpath, )
+        print
+        sys.exit(2)
+    elif not os.path.isdir(outpath):
+        print
+        print "Output path '%s' exists, but is not a directory!" % (outpath, )
+        print
+        sys.exit(2)
+
 
 def insertIntoHeadFreqDict(k):
     if hfreqdic.has_key(k):
@@ -40,10 +117,10 @@ def insertIntoHeadFreqDict(k):
     else:
         hfreqdic[k] = 1
 
-def printHeadKeyStats():
-    print "-" * 50
+def printHeadKeyStats(fh):
+    printCF(fh, 1, "-" * 50)
     for k in hfreqdic.keys():
-        print k, hfreqdic[k]
+        printCF(fh, 1, "%20s : %d" % (k, hfreqdic[k]))
 
 def getListOfEntries(ta):
     elist = ta.split(mtentrysep)
@@ -86,10 +163,57 @@ def getHeadDict(h):
                     insertIntoHeadFreqDict(k)
     return hdic
 
-def processProfile(hdic, bd):
-    print hdic["PRIMARY CATEGORY"]
+def buildXMLSkeleton():
+    # build a tree structure
+    root = ET.Element("TEI")
+    root.set("xmlns", "http://www.tei-c.org/ns/1.0")
+    root.set("xml:id", "p1_1_1_2")
+    root.set("xmlns:xmt", "http://www.cch.kcl.ac.uk/xmod/tei/1.0")
+    
+    teiHeader = ET.SubElement(root, "teiHeader")
+    fileDesc = ET.SubElement(teiHeader, "titleStmt")
+
+    text = ET.SubElement(root, "text")
+    body = ET.SubElement(text, "body")
+    head = ET.SubElement(body, "head")
+    div  = ET.SubElement(body, "div")
+    
+    # title = ET.SubElement(head, "title")
+    # title.text = "Page Title"
+    
+    # body = ET.SubElement(root, "body")
+    # body.set("bgcolor", "#ffffff")
+    
+    # body.text = "Hello, World!"
+    
+    # wrap it in an ElementTree instance, and save as XML
+    # tree = ET.ElementTree(root)
+    # tree.write(logpath + "/" + "page.xhtml")
+    return root
+
+def writeXMLFile(repf, ofp, root):
+    printCF(repf, 1, "writing to file '%s'" % (ofp, ))
+    tree = ET.ElementTree(root)
+    tree.write(ofp)
+
+def processProfile(repf, hdic, bd):
+    xmlroot = buildXMLSkeleton()
+    if not hdic.has_key("BASENAME"):
+        basename = "CCHPROVIDED"
+    else:
+        basename = hdic["BASENAME"]
+    # in case basename is duplicated (i. e. it is in basenameslist)
+    # generate unique basename by adding current date and time
+    if basename in basenameslist:
+        basename += "-" + time.strftime("%Y%m%d%H%M", time.localtime())
+    basenameslist.append(basename)
+    outfilepath = os.path.join(outpath, basename + ".xml")
+    writeXMLFile(repf, outfilepath, xmlroot)
+    # print hdic["PRIMARY CATEGORY"]
 
 if __name__ == '__main__':
+    checkDirs()
+    repf = getRepfileObject(logpath)
     # get file object to read MoveableType file
     mtfobj = file(mtfile, "r")
     mtcont = mtfobj.read()
@@ -100,9 +224,12 @@ if __name__ == '__main__':
     for entrynum, entry in enumerate(entrylist):
         head, body = getHeadAndBody(entry)
         headdic = getHeadDict(head)
-        # print headdic
         if (headdic.has_key("PRIMARY CATEGORY")) and (headdic["PRIMARY CATEGORY"] in profileprimcatlist):
-            processProfile(headdic, body)
+            printCF(repf, 1, "processing entry #%d" % (entrynum, ))
+            processProfile(repf, headdic, body)
     
-    # printHeadKeyStats()
+    printHeadKeyStats(repf)
+    
+    
+    repf.close()
     print "--== FINISHED ==--"
