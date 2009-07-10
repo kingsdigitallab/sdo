@@ -213,9 +213,14 @@ def buildXMLSkeleton():
     change1date = ET.SubElement(change1, "date")
     change1desc = ET.SubElement(change1, "desc")
 
+    # CONSTANTS
+    resp.text = 'published in Movable Type'
     publisher.text = 'Schenker Documents Online in association with the Centre for Computing in the Humanities'
     addrLine1.text = 'http://www.schenkerdocumentsonline.org'
     addrLine2.text = 'http://www.kcl.ac.uk/cch/'
+    psource.text = 'No source: created in electronic format.'
+    pencoding.text = 'Encoding according to the CCH TEI Guidelines'
+    change1desc.text = 'Automatic Conversion from Movable Type'
     
     text = ET.SubElement(root, "text")
     body = ET.SubElement(text, "body")
