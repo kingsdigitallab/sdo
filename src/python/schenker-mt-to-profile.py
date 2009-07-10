@@ -67,9 +67,12 @@ def getHeadDict(h):
                     v = line[colonpos+1:]
                     k = k.strip()
                     v = v.strip()
-                    print k, v
+                    # print k, v
                     hdic[k] = v
     return hdic
+
+def processProfile(hdic, bd):
+    print hdic["PRIMARY CATEGORY"]
 
 if __name__ == '__main__':
     # get file object to read MoveableType file
@@ -82,13 +85,8 @@ if __name__ == '__main__':
     for entrynum, entry in enumerate(entrylist):
         head, body = getHeadAndBody(entry)
         headdic = getHeadDict(head)
-        print headdic
-#    mtlinelist = mtcont.split("\n")
-#    print len(mtlinelist)
-#    print mtcont.count("\n")
-#    for linenum, line in enumerate(mtlinelist):
-#        if line == mtentrysep1:
-#            lineaftersep = mtlinelist[linenum+1]
-#            if lineaftersep.startswith(mtentrysep2):
-#                print linenum, line, lineaftersep
+        # print headdic
+        if (headdic.has_key("PRIMARY CATEGORY")) and (headdic["PRIMARY CATEGORY"] in profileprimcatlist):
+            processProfile(headdic, body)
+
     print "--== FINISHED ==--"
