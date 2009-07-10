@@ -48,6 +48,21 @@ profileprimcatlist = [
                       "Institution"
                       ]
 
+# possible delimiters for headword
+headworddelimsopenlist = [
+                           '<strong>',
+                           '<b>',
+                           '**',
+                           '*'
+                           ]
+
+headworddelimscloselist = [
+                           '</strong>',
+                           '</b>',
+                           '**',
+                           '*'
+                           ]
+
 #####################################
 # END GLOBAL CONSTANTS
 #####################################
@@ -183,9 +198,9 @@ def buildXMLSkeleton():
     root.set("xml:id", "p1_1_1_2")
     root.set("xmlns:xmt", "http://www.cch.kcl.ac.uk/xmod/tei/1.0")
     
-    pi = ET.ProcessingInstruction("oxygen", "xxx")
+    # pi = ET.ProcessingInstruction("oxygen", "xxx")
     # root.append(pi)
-    print ET.tostring(pi)
+    # print ET.tostring(pi)
 
     
     teiHeader = ET.SubElement(root, "teiHeader")
@@ -224,8 +239,8 @@ def buildXMLSkeleton():
     
     text = ET.SubElement(root, "text")
     body = ET.SubElement(text, "body")
-    head = ET.SubElement(body, "head")
-    div  = ET.SubElement(body, "div")
+    bodyhead = ET.SubElement(body, "head")
+    bodydiv  = ET.SubElement(body, "div")
     
     # title = ET.SubElement(head, "title")
     # title.text = "Page Title"
@@ -254,8 +269,31 @@ def writeXMLFile(repf, ofp, root):
     tree = ET.ElementTree(root)
     tree.write(ofpobj)
 
+def getHeadWord(fh, bd):
+    # print ">>>" + bd[:50]
+    bd = bd.strip(string.whitespace)
+    # while bd[0] in string.whitespace:
+    #     bd = bd[1:]
+    print ">>>" + bd[:50]
+    for hwnum, hwdopen in enumerate(headworddelimsopenlist):
+        # print hwdopen
+        if bd.startswith(hwdopen):
+            hwposa = len(hwdopen)
+            hwposb = bd.find(headworddelimscloselist[hwnum], hwposa)
+            print "---", hwdopen
+            hw = bd[hwposa:hwposb]
+            hw = hw.strip(",.:;")
+            print "===", hw 
+            break
+        else:
+            hw = "XXXXX"
+            printCF(fh, 1, "XXXXX")
+    # hw = ""
+    return hw
+
 def processProfile(repf, hdic, bd):
     xmlroot = buildXMLSkeleton()
+    headword = getHeadWord(repf, bd)
     if not hdic.has_key("BASENAME"):
         basename = "CCHPROVIDED"
     else:
