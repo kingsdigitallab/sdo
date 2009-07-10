@@ -32,6 +32,19 @@ profileprimcatlist = [
                       "Institution"
                       ]
 
+hfreqdic = {}
+
+def insertIntoHeadFreqDict(k):
+    if hfreqdic.has_key(k):
+        hfreqdic[k] += 1
+    else:
+        hfreqdic[k] = 1
+
+def printHeadKeyStats():
+    print "-" * 50
+    for k in hfreqdic.keys():
+        print k, hfreqdic[k]
+
 def getListOfEntries(ta):
     elist = ta.split(mtentrysep)
     return elist
@@ -50,7 +63,7 @@ def getHeadAndBody(t):
     # print head
     # print "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     # print body
-    return head, body 
+    return head, body
 
 def getHeadDict(h):
     hdic = {}
@@ -59,6 +72,7 @@ def getHeadDict(h):
         if line != "":
             if hlnum == 0:
                 hdic["AUTHOR"] = line
+                insertIntoHeadFreqDict("AUTHOR")
             else:
                 colonpos = line.find(":")
                 # we want at least one character before the colon
@@ -69,6 +83,7 @@ def getHeadDict(h):
                     v = v.strip()
                     # print k, v
                     hdic[k] = v
+                    insertIntoHeadFreqDict(k)
     return hdic
 
 def processProfile(hdic, bd):
@@ -88,5 +103,6 @@ if __name__ == '__main__':
         # print headdic
         if (headdic.has_key("PRIMARY CATEGORY")) and (headdic["PRIMARY CATEGORY"] in profileprimcatlist):
             processProfile(headdic, body)
-
+    
+    # printHeadKeyStats()
     print "--== FINISHED ==--"
