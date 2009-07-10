@@ -9,11 +9,20 @@ import time
 import os, os.path
 from xml.etree import ElementTree as ET
 
+#####################################
+# GLOBAL CONSTANTS
+#####################################
 
 # MoveableType data file
 mtfile = "/projects/cch/schenker/data/movable-type/schenker_documents_online.txt"
 outpath = "/projects/cch/schenker/data/profiles"
 logpath = "/projects/cch/schenker/src/python/logs"
+
+# declarations at beginning of XML file
+pidic = {
+         "xml" : 'version="1.0"',
+         "oxygen" : 'RNGSchema="../../../../schema/tei/xmod_web.rnc" type="compact"'
+        }
 
 # basename (for filename) to use should "BASENAME" header be empty
 dummybasename = "CCHGENERATED"
@@ -38,6 +47,10 @@ profileprimcatlist = [
                       "Organization",
                       "Institution"
                       ]
+
+#####################################
+# END GLOBAL CONSTANTS
+#####################################
 
 # dict for frequencies of keys in the header
 # for consistency checking
@@ -170,9 +183,40 @@ def buildXMLSkeleton():
     root.set("xml:id", "p1_1_1_2")
     root.set("xmlns:xmt", "http://www.cch.kcl.ac.uk/xmod/tei/1.0")
     
-    teiHeader = ET.SubElement(root, "teiHeader")
-    fileDesc = ET.SubElement(teiHeader, "titleStmt")
+    pi = ET.ProcessingInstruction("oxygen", "xxx")
+    # root.append(pi)
+    print ET.tostring(pi)
 
+    
+    teiHeader = ET.SubElement(root, "teiHeader")
+    fileDesc = ET.SubElement(teiHeader, "fileDesc")
+    titleStmt = ET.SubElement(teiHeader, "titleStmt")
+    title = ET.SubElement(titleStmt, "title")
+    respStmt = ET.SubElement(titleStmt, "respStmt")
+    resp = ET.SubElement(respStmt, "resp")
+    respdate = ET.SubElement(resp, "date")
+    name = ET.SubElement(respStmt, "name")
+    publicationStmt = ET.SubElement(teiHeader, "publicationStmt")
+    publisher = ET.SubElement(publicationStmt, "publisher")
+    address = ET.SubElement(publicationStmt, "address")
+    addrLine1 = ET.SubElement(address, "addrLine")
+    addrLine2 = ET.SubElement(address, "addrLine")
+    notesStmt = ET.SubElement(teiHeader, "notesStmt")
+    note1 = ET.SubElement(notesStmt, "note")
+    note2 = ET.SubElement(notesStmt, "note")
+    sourceDesc = ET.SubElement(teiHeader, "sourceDesc")
+    psource = ET.SubElement(sourceDesc, "p")
+    encodingDesc = ET.SubElement(teiHeader, "encodingDesc")
+    pencoding = ET.SubElement(encodingDesc, "p")
+    revisionDesc = ET.SubElement(teiHeader, "revisionDesc")
+    change1 = ET.SubElement(revisionDesc, "change")
+    change1date = ET.SubElement(change1, "date")
+    change1desc = ET.SubElement(change1, "desc")
+
+    publisher.text = 'Schenker Documents Online in association with the Centre for Computing in the Humanities'
+    addrLine1.text = 'http://www.schenkerdocumentsonline.org'
+    addrLine2.text = 'http://www.kcl.ac.uk/cch/'
+    
     text = ET.SubElement(root, "text")
     body = ET.SubElement(text, "body")
     head = ET.SubElement(body, "head")
@@ -193,8 +237,17 @@ def buildXMLSkeleton():
 
 def writeXMLFile(repf, ofp, root):
     printCF(repf, 1, "writing to file '%s'" % (ofp, ))
+
+    ofpobj = file(ofp, "w")
+
+    # write declarations
+    dec = ET.ProcessingInstruction("xml", pidic["xml"])
+    oxy = ET.ProcessingInstruction("oxygen", pidic["oxygen"])
+    print >> ofpobj, ET.tostring(dec)
+    print >> ofpobj, ET.tostring(oxy)
+    
     tree = ET.ElementTree(root)
-    tree.write(ofp)
+    tree.write(ofpobj)
 
 def processProfile(repf, hdic, bd):
     xmlroot = buildXMLSkeleton()
@@ -225,7 +278,8 @@ if __name__ == '__main__':
         head, body = getHeadAndBody(entry)
         headdic = getHeadDict(head)
         if (headdic.has_key("PRIMARY CATEGORY")) and (headdic["PRIMARY CATEGORY"] in profileprimcatlist):
-            printCF(repf, 1, "processing entry #%d" % (entrynum, ))
+            printCF(repf, 1, "processing entry #%d" % (entrynum
+                                                       , ))
             processProfile(repf, headdic, body)
     
     printHeadKeyStats(repf)
