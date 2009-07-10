@@ -56,10 +56,19 @@ def getHeadDict(h):
     hdic = {}
     for hlnum, line in enumerate(h.split("\n")):
         line = line.strip()
-        if hlnum == 0:
-            hdic["AUTHOR"] = line
-        else:
-            pass
+        if line != "":
+            if hlnum == 0:
+                hdic["AUTHOR"] = line
+            else:
+                colonpos = line.find(":")
+                # we want at least one character before the colon
+                if colonpos > 1:
+                    k = line[:colonpos]
+                    v = line[colonpos+1:]
+                    k = k.strip()
+                    v = v.strip()
+                    print k, v
+                    hdic[k] = v
     return hdic
 
 if __name__ == '__main__':
@@ -73,7 +82,7 @@ if __name__ == '__main__':
     for entrynum, entry in enumerate(entrylist):
         head, body = getHeadAndBody(entry)
         headdic = getHeadDict(head)
-
+        print headdic
 #    mtlinelist = mtcont.split("\n")
 #    print len(mtlinelist)
 #    print mtcont.count("\n")
