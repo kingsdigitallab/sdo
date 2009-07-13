@@ -63,9 +63,12 @@ headworddelimscloselist = [
                            '*'
                            ]
 
-# for analysis: counter for empty headwords
+# for analysis:
+#  counter for empty headwords
 hwcount = 0
 nohwcount = 0
+#  counter for profiles
+profcount = 0
 
 #####################################
 # END GLOBAL CONSTANTS
@@ -153,6 +156,8 @@ def printHeadKeyStats(fh):
     printCF(fh, 1, "-" * 50)
     for k in hfreqdic.keys():
         printCF(fh, 1, "%20s : %d" % (k, hfreqdic[k]))
+    printCF(fh, 1, "")
+    printCF(fh, 1, "No of profiless:       %5d" % (profcount, ))
     printCF(fh, 1, "")
     printCF(fh, 1, "No of headwords:       %5d" % (hwcount, ))
     printCF(fh, 1, "No of empty headwords: %5d" % (nohwcount, ))
@@ -368,6 +373,8 @@ def getHeadWord(fh, bd):
     return hw
 
 def processProfile(repf, hdic, bd):
+    global profcount
+    profcount += 1
     xmlskeldic = buildXMLSkeleton()
     headword = getHeadWord(repf, bd)
     xmlskeldic["title"].text = headword
