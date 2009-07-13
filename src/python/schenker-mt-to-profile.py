@@ -63,6 +63,10 @@ headworddelimscloselist = [
                            '*'
                            ]
 
+# for analysis: counter for empty headwords
+hwcount = 0
+nohwcount = 0
+
 #####################################
 # END GLOBAL CONSTANTS
 #####################################
@@ -149,6 +153,9 @@ def printHeadKeyStats(fh):
     printCF(fh, 1, "-" * 50)
     for k in hfreqdic.keys():
         printCF(fh, 1, "%20s : %d" % (k, hfreqdic[k]))
+    printCF(fh, 1, "")
+    printCF(fh, 1, "No of headwords:       %5d" % (hwcount, ))
+    printCF(fh, 1, "No of empty headwords: %5d" % (nohwcount, ))
 
 def getListOfEntries(ta):
     elist = ta.split(mtentrysep)
@@ -191,7 +198,8 @@ def getHeadDict(h):
                     insertIntoHeadFreqDict(k)
     return hdic
 
-def buildXMLSkeleton():
+def buildXMLSkeletonOld():
+    skeldic = {}
     # build a tree structure
     root = ET.Element("TEI")
     root.set("xmlns", "http://www.tei-c.org/ns/1.0")
@@ -255,6 +263,71 @@ def buildXMLSkeleton():
     # tree.write(logpath + "/" + "page.xhtml")
     return root
 
+def buildXMLSkeleton():
+    skeldic = {}
+    # build a tree structure
+    skeldic["root"] = ET.Element("TEI")
+    skeldic["root"].set("xmlns", "http://www.tei-c.org/ns/1.0")
+    skeldic["root"].set("xml:id", "p1_1_1_2")
+    skeldic["root"].set("xmlns:xmt", "http://www.cch.kcl.ac.uk/xmod/tei/1.0")
+    
+    # pi = ET.ProcessingInstruction("oxygen", "xxx")
+    # root.append(pi)
+    # print ET.tostring(pi)
+
+    
+    skeldic["teiHeader"] = ET.SubElement(skeldic["root"], "teiHeader")
+    skeldic["fileDesc"] = ET.SubElement(skeldic["teiHeader"], "fileDesc")
+    skeldic["titleStmt"] = ET.SubElement(skeldic["teiHeader"], "titleStmt")
+    skeldic["title"] = ET.SubElement(skeldic["titleStmt"], "title")
+    skeldic["respStmt"] = ET.SubElement(skeldic["titleStmt"], "respStmt")
+    skeldic["resp"] = ET.SubElement(skeldic["respStmt"], "resp")
+    skeldic["respdate"] = ET.SubElement(skeldic["resp"], "date")
+    skeldic["name"] = ET.SubElement(skeldic["respStmt"], "name")
+    skeldic["publicationStmt"] = ET.SubElement(skeldic["teiHeader"], "publicationStmt")
+    skeldic["publisher"] = ET.SubElement(skeldic["publicationStmt"], "publisher")
+    skeldic["address"] = ET.SubElement(skeldic["publicationStmt"], "address")
+    skeldic["addrLine1"] = ET.SubElement(skeldic["address"], "addrLine")
+    skeldic["addrLine2"] = ET.SubElement(skeldic["address"], "addrLine")
+    skeldic["notesStmt"] = ET.SubElement(skeldic["teiHeader"], "notesStmt")
+    skeldic["note1"] = ET.SubElement(skeldic["notesStmt"], "note")
+    skeldic["note2"] = ET.SubElement(skeldic["notesStmt"], "note")
+    skeldic["sourceDesc"] = ET.SubElement(skeldic["teiHeader"], "sourceDesc")
+    skeldic["psource"] = ET.SubElement(skeldic["sourceDesc"], "p")
+    skeldic["encodingDesc"] = ET.SubElement(skeldic["teiHeader"], "encodingDesc")
+    skeldic["pencoding"] = ET.SubElement(skeldic["encodingDesc"], "p")
+    skeldic["revisionDesc"] = ET.SubElement(skeldic["teiHeader"], "revisionDesc")
+    skeldic["change1"] = ET.SubElement(skeldic["revisionDesc"], "change")
+    skeldic["change1date"] = ET.SubElement(skeldic["change1"], "date")
+    skeldic["change1desc"] = ET.SubElement(skeldic["change1"], "desc")
+
+    # CONSTANTS
+    skeldic["resp"].text = 'published in Movable Type'
+    skeldic["publisher"].text = 'Schenker Documents Online in association with the Centre for Computing in the Humanities'
+    skeldic["addrLine1"].text = 'http://www.schenkerdocumentsonline.org'
+    skeldic["addrLine2"].text = 'http://www.kcl.ac.uk/cch/'
+    skeldic["psource"].text = 'No source: created in electronic format.'
+    skeldic["pencoding"].text = 'Encoding according to the CCH TEI Guidelines'
+    skeldic["change1desc"].text = 'Automatic Conversion from Movable Type'
+    
+    skeldic["text"] = ET.SubElement(skeldic["root"], "text")
+    skeldic["body"] = ET.SubElement(skeldic["text"], "body")
+    skeldic["bodyhead"] = ET.SubElement(skeldic["body"], "head")
+    skeldic["bodydiv"]  = ET.SubElement(skeldic["body"], "div")
+    
+    # skeldic["title"] = ET.SubElement(head, "title")
+    # skeldic["title"].text = "Page Title"
+    
+    # body = ET.SubElement(skeldic["root"], "body")
+    # body.set("bgcolor", "#ffffff")
+    
+    # body.text = "Hello, World!"
+    
+    # wrap it in an ElementTree instance, and save as XML
+    # tree = ET.ElementTree(skeldic["root"])
+    # tree.write(logpath + "/" + "page.xhtml")
+    return skeldic
+
 def writeXMLFile(repf, ofp, root):
     printCF(repf, 1, "writing to file '%s'" % (ofp, ))
 
@@ -270,6 +343,7 @@ def writeXMLFile(repf, ofp, root):
     tree.write(ofpobj)
 
 def getHeadWord(fh, bd):
+    global hwcount, nohwcount
     # print ">>>" + bd[:50]
     bd = bd.strip(string.whitespace)
     # while bd[0] in string.whitespace:
@@ -283,17 +357,20 @@ def getHeadWord(fh, bd):
             print "---", hwdopen
             hw = bd[hwposa:hwposb]
             hw = hw.strip(",.:;")
-            print "===", hw 
+            print "===", hw
+            hwcount += 1
             break
         else:
             hw = "XXXXX"
             printCF(fh, 1, "XXXXX")
+            nohwcount += 1
     # hw = ""
     return hw
 
 def processProfile(repf, hdic, bd):
-    xmlroot = buildXMLSkeleton()
+    xmlskeldic = buildXMLSkeleton()
     headword = getHeadWord(repf, bd)
+    xmlskeldic["title"].text = headword
     if not hdic.has_key("BASENAME"):
         basename = "CCHPROVIDED"
     else:
@@ -304,7 +381,7 @@ def processProfile(repf, hdic, bd):
         basename += "-" + time.strftime("%Y%m%d%H%M", time.localtime())
     basenameslist.append(basename)
     outfilepath = os.path.join(outpath, basename + ".xml")
-    writeXMLFile(repf, outfilepath, xmlroot)
+    writeXMLFile(repf, outfilepath, xmlskeldic["root"])
     # print hdic["PRIMARY CATEGORY"]
 
 if __name__ == '__main__':
