@@ -367,7 +367,7 @@ def getHeadWord(fh, bd):
             break
         else:
             hw = "XXXXX"
-            printCF(fh, 1, "XXXXX")
+            printCF(fh, 1, "XXXXX" + " " + hwdopen)
             nohwcount += 1
     # hw = ""
     return hw
