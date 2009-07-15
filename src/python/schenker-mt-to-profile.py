@@ -2,6 +2,9 @@
 
 # extract MoveableType profile information and write to TEI XML file
 
+# QUESTIONS:
+# - should resp/date be without time?
+
 import sys
 import string
 import re
@@ -381,6 +384,12 @@ def processProfile(repf, hdic, bd):
     xmlskeldic = buildXMLSkeleton()
     headword = getHeadWord(repf, bd)
     xmlskeldic["title"].text = headword
+    xmlskeldic["respdate"].text = hdic["DATE"]
+    xmlskeldic["name"].text = hdic["AUTHOR"]
+    if hdic.has_key("TAGS"):
+        xmlskeldic["note1"].text = hdic["TAGS"].strip('"')
+        xmlskeldic["note1"].set("type", "MT-tag")
+    
     if not hdic.has_key("BASENAME"):
         basename = "CCHPROVIDED"
     else:
