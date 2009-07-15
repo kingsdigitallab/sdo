@@ -354,9 +354,10 @@ def getHeadWord(fh, bd):
     # while bd[0] in string.whitespace:
     #     bd = bd[1:]
     print ">>>" + bd[:50]
+    hw = ''
     for hwnum, hwdopen in enumerate(headworddelimsopenlist):
         # print hwdopen
-        if bd.startswith(hwdopen):
+        if (hw == '') and (bd.startswith(hwdopen)):
             hwposa = len(hwdopen)
             hwposb = bd.find(headworddelimscloselist[hwnum], hwposa)
             print "---", hwdopen
@@ -364,12 +365,14 @@ def getHeadWord(fh, bd):
             hw = hw.strip(",.:;")
             print "===", hw
             hwcount += 1
-            break
-        else:
-            hw = "XXXXX"
-            printCF(fh, 1, "XXXXX" + " " + hwdopen)
-            nohwcount += 1
-    # hw = ""
+            # break
+        # else:
+    if (hw == ''):
+        # no headword immediately after body tag
+        # 33 cases - either do something in program or fix files by hand
+        hw = "XXXXX"
+        printCF(fh, 1, "XXXXX")
+        nohwcount += 1
     return hw
 
 def processProfile(repf, hdic, bd):
