@@ -3,7 +3,16 @@
 # extract MoveableType profile information and write to TEI XML file
 
 # QUESTIONS:
-# - should resp/date be without time?
+# - should resp/date be without time? format of date
+# - date format for change date
+# - will there be only ever one change date?
+# - how should other body parts ("EXTENDED BODY", etc.) be marked up?
+#   right now they are just paragraphs
+
+# PROBLEMS:
+# - mixed content in body - markup that I inserted by "replace" and not by
+#   using etree's methods is escaped when XML file is written
+#   find a solution!!
 
 import sys
 import string
@@ -40,6 +49,29 @@ headsep1 = "-----"
 headsep2 = "BODY:"
 headsep = headsep1 + "\n" + headsep2
 
+# Separator to start "EXTENDED BODY"
+extbodysep2 = "EXTENDED BODY:"
+extbodysep  = headsep1 + "\n" + extbodysep2
+
+# Separator to start "EXCERPT"
+excbodysep2 = "EXCERPT:"
+excbodysep  = headsep1 + "\n" + excbodysep2
+
+# Separator to start "KEYWORDS"
+kwbodysep2 = "KEYWORDS:"
+kwbodysep  = headsep1 + "\n" + kwbodysep2
+
+bodyheaderslist = [
+                   "BODY:",
+                   "EXTENDED BODY:",
+                   "EXCERPT:",
+                   "KEYWORDS:",
+                   "COMMENT:"
+                   ]
+
+# (?P<name>...)
+# rebody = re.compile(r"""^(?P<rbody>.*)(?P<rextbody>.*)$""")
+
 # categories, after "PRIMARY CATEGORY:", that determine if an entry is a profile
 profileprimcatlist = [
                       "Company",
@@ -65,6 +97,41 @@ headworddelimscloselist = [
                            '**',
                            '*'
                            ]
+
+htmlformatsdic = {
+                  '<strong>'  : '<hi rend="bold">',
+                  '</strong>' : '</hi>',
+                  '<b>'       : '<hi rend="bold">',
+                  '</b>'      : '</hi>',
+                  '<em>'      : '<hi rend="italics">',
+                  '</em>'     : '</hi>',
+                  '<i>'       : '<hi rend="italics">',
+                  '</i>'      : '</hi>'
+                  }
+                  
+wikiformatsdic = {
+                  '**' : ['<hi rend="bold">', '</hi>'],
+                  '*'  : ['<hi rend="bold">', '</hi>'],
+                  '_'  : ['<hi rend="italics">', '</hi>']
+                  }
+
+rewikiformatsdic = {
+                  '**' : [r'\*\*(.+?)\*\*', r'<hi rend="bold">', '</hi>', r'<hi rend="bold">\\1</hi>'],
+                  '*'  : [r'\*(.+?)\*', r'<hi rend="bold">', '</hi>', r'<hi rend="bold">\\1</hi>'],
+                  '_'  : [r'_', r'<hi rend="italics">', '</hi>', r'<hi rend="italics">\\1</hi>']
+                  }
+
+wikiformatslist = [
+                  '**',
+                  '*',
+                  '_'
+                   ]
+
+#rewikiformatslist = [
+#                  '**',
+#                  '*',
+#                  '_'
+#                   ]
 
 # for analysis:
 #  counter for empty headwords
@@ -183,7 +250,64 @@ def getHeadAndBody(t):
     # print head
     # print "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     # print body
+    
     return head, body
+
+def getBodyParts(fh, bd):
+    bodypartsdic = {}
+    bd = "BODY:\n" + bd
+    bdpartslist = bd.split(headsep1)
+    for b in bdpartslist:
+        b = b.strip()
+        for bh in bodyheaderslist:
+            if b.startswith(bh):
+                bp = b[len(bh):]
+                bp = bp.strip()
+                if bodypartsdic.has_key(bh):
+                    bodypartsdic[bh] += "\n" + bp
+                else:
+                    bodypartsdic[bh] = bp
+    return bodypartsdic
+
+def getBodyPartsFind(fh, bd):
+    extbodyopenpos = bd.find(extbodysep)
+    if extbodyopenpos < 0:
+        printCF(fh, 1, "BODYPART: NO EXTENDED BODY")
+        extbody = ""
+    else:
+        extbodystartpos = extbodyopenpos + len(extbodysep)
+    excbodyopenpos = bd.find(excbodysep)
+    if excbodyopenpos < 0:
+        printCF(fh, 1, "BODYPART: NO EXCERPT")
+        excbody = ""
+    else:
+        excbodystartpos = excbodyopenpos + len(excbodysep)
+    kwbodyopenpos = bd.find(kwbodysep)
+    if kwbodyopenpos < 0:
+        printCF(fh, 1, "BODYPART: NO KEYWORDS")
+        kwbody = ""
+    else:
+        kwbodystartpos = kwbodyopenpos + len(kwbodysep)
+    # handle missing headings later (missing "EXTENDED BODY", "EXCERPTF", "KEYWORDS")
+    body = bd[:extbodyopenpos].strip()
+    extbody = bd[extbodystartpos:excbodyopenpos].strip()
+    excbody = bd[excbodystartpos:kwbodyopenpos].strip()
+    kwbody = bd[kwbodystartpos:].strip()
+    bddic = {}
+    bddic["BODY"] = body
+    print "BODYLEN.", len(body)
+    
+    bddic["EXTBODY"] = extbody
+    print "EXTBODYLEN.", len(extbody)
+    
+    bddic["EXCBODY"] = excbody
+    print "EXCBODYLEN.", len(excbody)
+
+    bddic["KWBODY"] = kwbody
+    print "KWBODYLEN.", len(kwbody)
+
+    return bddic
+
 
 def getHeadDict(h):
     hdic = {}
@@ -206,70 +330,6 @@ def getHeadDict(h):
                     insertIntoHeadFreqDict(k)
     return hdic
 
-def buildXMLSkeletonOld():
-    skeldic = {}
-    # build a tree structure
-    root = ET.Element("TEI")
-    root.set("xmlns", "http://www.tei-c.org/ns/1.0")
-    root.set("xml:id", "p1_1_1_2")
-    root.set("xmlns:xmt", "http://www.cch.kcl.ac.uk/xmod/tei/1.0")
-    
-    # pi = ET.ProcessingInstruction("oxygen", "xxx")
-    # root.append(pi)
-    # print ET.tostring(pi)
-
-    
-    teiHeader = ET.SubElement(root, "teiHeader")
-    fileDesc = ET.SubElement(teiHeader, "fileDesc")
-    titleStmt = ET.SubElement(teiHeader, "titleStmt")
-    title = ET.SubElement(titleStmt, "title")
-    respStmt = ET.SubElement(titleStmt, "respStmt")
-    resp = ET.SubElement(respStmt, "resp")
-    respdate = ET.SubElement(resp, "date")
-    name = ET.SubElement(respStmt, "name")
-    publicationStmt = ET.SubElement(teiHeader, "publicationStmt")
-    publisher = ET.SubElement(publicationStmt, "publisher")
-    address = ET.SubElement(publicationStmt, "address")
-    addrLine1 = ET.SubElement(address, "addrLine")
-    addrLine2 = ET.SubElement(address, "addrLine")
-    notesStmt = ET.SubElement(teiHeader, "notesStmt")
-    note1 = ET.SubElement(notesStmt, "note")
-    note2 = ET.SubElement(notesStmt, "note")
-    sourceDesc = ET.SubElement(teiHeader, "sourceDesc")
-    psource = ET.SubElement(sourceDesc, "p")
-    encodingDesc = ET.SubElement(teiHeader, "encodingDesc")
-    pencoding = ET.SubElement(encodingDesc, "p")
-    revisionDesc = ET.SubElement(teiHeader, "revisionDesc")
-    change1 = ET.SubElement(revisionDesc, "change")
-    change1date = ET.SubElement(change1, "date")
-    change1desc = ET.SubElement(change1, "desc")
-
-    # CONSTANTS
-    resp.text = 'published in Movable Type'
-    publisher.text = 'Schenker Documents Online in association with the Centre for Computing in the Humanities'
-    addrLine1.text = 'http://www.schenkerdocumentsonline.org'
-    addrLine2.text = 'http://www.kcl.ac.uk/cch/'
-    psource.text = 'No source: created in electronic format.'
-    pencoding.text = 'Encoding according to the CCH TEI Guidelines'
-    change1desc.text = 'Automatic Conversion from Movable Type'
-    
-    text = ET.SubElement(root, "text")
-    body = ET.SubElement(text, "body")
-    bodyhead = ET.SubElement(body, "head")
-    bodydiv  = ET.SubElement(body, "div")
-    
-    # title = ET.SubElement(head, "title")
-    # title.text = "Page Title"
-    
-    # body = ET.SubElement(root, "body")
-    # body.set("bgcolor", "#ffffff")
-    
-    # body.text = "Hello, World!"
-    
-    # wrap it in an ElementTree instance, and save as XML
-    # tree = ET.ElementTree(root)
-    # tree.write(logpath + "/" + "page.xhtml")
-    return root
 
 def buildXMLSkeleton():
     skeldic = {}
@@ -298,8 +358,8 @@ def buildXMLSkeleton():
     skeldic["addrLine1"] = ET.SubElement(skeldic["address"], "addrLine")
     skeldic["addrLine2"] = ET.SubElement(skeldic["address"], "addrLine")
     skeldic["notesStmt"] = ET.SubElement(skeldic["teiHeader"], "notesStmt")
-    skeldic["note1"] = ET.SubElement(skeldic["notesStmt"], "note")
-    skeldic["note2"] = ET.SubElement(skeldic["notesStmt"], "note")
+    # skeldic["note1"] = ET.SubElement(skeldic["notesStmt"], "note")
+    # skeldic["note2"] = ET.SubElement(skeldic["notesStmt"], "note")
     skeldic["sourceDesc"] = ET.SubElement(skeldic["teiHeader"], "sourceDesc")
     skeldic["psource"] = ET.SubElement(skeldic["sourceDesc"], "p")
     skeldic["encodingDesc"] = ET.SubElement(skeldic["teiHeader"], "encodingDesc")
@@ -356,17 +416,17 @@ def getHeadWord(fh, bd):
     bd = bd.strip(string.whitespace)
     # while bd[0] in string.whitespace:
     #     bd = bd[1:]
-    print ">>>" + bd[:50]
+    # print ">>>" + bd[:50]
     hw = ''
     for hwnum, hwdopen in enumerate(headworddelimsopenlist):
         # print hwdopen
         if (hw == '') and (bd.startswith(hwdopen)):
             hwposa = len(hwdopen)
             hwposb = bd.find(headworddelimscloselist[hwnum], hwposa)
-            print "---", hwdopen
+            # print "---", hwdopen
             hw = bd[hwposa:hwposb]
             hw = hw.strip(",.:;")
-            print "===", hw
+            # print "===", hw
             hwcount += 1
             # break
         # else:
@@ -378,17 +438,99 @@ def getHeadWord(fh, bd):
         nohwcount += 1
     return hw
 
+def convertHtmlFormats(repf, bdic):
+    for k in bdic.keys():
+        for h in htmlformatsdic.keys():
+            bdic[k] = bdic[k].replace(h, htmlformatsdic[h])
+    return bdic
+
+def convertWikiFormats(repf, bdic):
+    for k in bdic.keys():
+
+        # the following does not work, I don't know why yet
+        # for w in wikiformatslist:
+        #     pat = rewikiformatsdic[w][0]
+        #     # repl = rewikiformatsdic[w][1] + r"\\1" + rewikiformatsdic[w][2]
+        #     repl = rewikiformatsdic[w][3]
+        #     bdic[k] = re.sub(pat, repl, bdic[k])
+        #     print pat, repl
+
+        bdic[k] = re.sub(r"\*\*(.+?)\*\*", '<hi rend="bold">\\1</hi>', bdic[k])
+        bdic[k] = re.sub(r"\*(.+?)\*", '<hi rend="bold">\\1</hi>', bdic[k])
+        bdic[k] = re.sub(r"_(.+?)_", '<hi rend="italics">\\1</hi>', bdic[k])
+    return bdic
+
+# not used any more, now handled by processConvertedBody
+def convertParagraphs(repf, bdic):
+    newbodydic = {}
+    for k in bdic.keys():
+        newbodydic[k] = ""
+        parslist = re.split("\n\n+", bdic[k])
+        for par in parslist:
+            par = par.strip()
+            if par == "":
+                newbodypart = "" 
+            else:
+                newbodypart = "<p>" + par + "</p>"
+            newbodydic[k] += newbodypart
+    return newbodydic
+
+def convertHrefLinks(repf, bdic):
+    return bdic
+
+def processTags(repf, hdic, bd, xmldic):
+    taglist = hdic["TAGS"].split(",")
+    for tag in taglist:
+        tag = tag.strip()
+        tag = tag.strip('"')
+        tag = tag.strip()
+        tagnote = ET.SubElement(xmldic["notesStmt"], "note")
+        tagnote.text = tag
+        tagnote.set("type", "MT-tag")
+
+def processPrimaryCategory(repf, hdic, bd, xmldic):
+    tag = hdic["PRIMARY CATEGORY"]
+    tag = tag.strip()
+    tagnote = ET.SubElement(xmldic["notesStmt"], "note")
+    tagnote.text = tag
+    tagnote.set("type", "MT-category")
+    
+def processConversionDate(repf, hdic, bd, xmldic):
+    # tag = time.strftime("%Y%m%d%H%M", time.localtime())
+    tag = time.strftime("%Y%m%d", time.localtime())
+    xmldic["change1date"].text = tag
+
+def processConvertedBody(repf, hdic, bdic, xmldic):
+    for bodytype in bodyheaderslist:
+        if bdic.has_key(bodytype):
+            parslist = re.split("\n\n+", bdic[bodytype])
+            for par in parslist:
+                par = par.strip()
+                if par != "":
+                    parel = ET.SubElement(xmldic["bodydiv"], "p")
+                    parel.text = par
+
 def processProfile(repf, hdic, bd):
     global profcount
     profcount += 1
     xmlskeldic = buildXMLSkeleton()
     headword = getHeadWord(repf, bd)
     xmlskeldic["title"].text = headword
+    xmlskeldic["bodyhead"].text = headword
     xmlskeldic["respdate"].text = hdic["DATE"]
     xmlskeldic["name"].text = hdic["AUTHOR"]
     if hdic.has_key("TAGS"):
-        xmlskeldic["note1"].text = hdic["TAGS"].strip('"')
-        xmlskeldic["note1"].set("type", "MT-tag")
+        processTags(repf, hdic, bd, xmlskeldic)
+    processPrimaryCategory(repf, hdic, bd, xmlskeldic)
+    processConversionDate(repf, hdic, bd, xmlskeldic)
+    bodydic = getBodyParts(repf, bd)
+    bodydic = convertHtmlFormats(repf, bodydic)
+    bodydic = convertWikiFormats(repf, bodydic)
+    bodydic = convertHrefLinks(repf, bodydic)
+    # bodydic = convertParagraphs(repf, bodydic)
+    processConvertedBody(repf, hdic, bodydic, xmlskeldic)
+    # print "-" * 50
+    # print bd
     
     if not hdic.has_key("BASENAME"):
         basename = "CCHPROVIDED"
