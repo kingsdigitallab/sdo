@@ -5,24 +5,27 @@
 # TODO:
 
 # QUESTIONS:
-# - how should other body parts ("EXTENDED BODY", etc.) be marked up?
-#   right now they are just paragraphs
-#   put in comment between paragraphs, i. e.: <!-- EXTENDED BODY -->
+# - how should "<u>" be handled, for the time being I render it as '<hi rend="underline">'
 
 # PROBLEMS:
 # - mixed content in body - markup that I inserted by "replace" and not by
 #   using etree's methods is escaped when XML file is written
 #   find a solution!!
+#   I write etree tree to StringIO object, do a replace on the string, and write to file 
 
 # DONE:
 # - id in TEI element, see comment in sdo-profile-template.xml
 # - should resp/date be without time? format of date. OK
 # - date format for change date: 12/11/2008. OK
 # - will there be only ever one change date? YES
+# - how should other body parts ("EXTENDED BODY", etc.) be marked up?
+#   right now they are just paragraphs
+#   put in comment between paragraphs, i. e.: <!-- EXTENDED BODY -->
 
 
 import sys
 import string
+import StringIO
 import re
 import time
 import os, os.path
@@ -119,12 +122,14 @@ htmlformatsdicORI = {
 htmlformatsdic = {
                   '<strong>'  : '@@ohi rend=@@qbold@@q@@c',
                   '</strong>' : '@@o/hi@@c',
-                  '<b>'       : '@@ohi rend="bold"@@c',
+                  '<b>'       : '@@ohi rend=@@qbold@@q@@c',
                   '</b>'      : '@@o/hi@@c',
-                  '<em>'      : '@@ohi rend="italics"@@c',
+                  '<em>'      : '@@ohi rend=@@qitalics@@q@@c',
                   '</em>'     : '@@o/hi@@c',
-                  '<i>'       : '@@ohi rend="italics"@@c',
-                  '</i>'      : '@@o/hi@@c'
+                  '<i>'       : '@@ohi rend=@@qitalics@@q@@c',
+                  '</i>'      : '@@o/hi@@c',
+                  '<u>'       : '@@ohi rend=@@qunderline@@q@@c',
+                  '</u>'      : '@@o/hi@@c'
                   }
                   
 wikiformatsdic = {
@@ -273,6 +278,9 @@ def getHeadAndBody(t):
 
 def getBodyParts(fh, bd):
     bodypartsdic = {}
+    # some body entries are enclosed in "<p>" tags
+    bd = bd.replace("<p>", "")
+    bd = bd.replace("</p>", "")
     bd = "BODY:\n" + bd
     bdpartslist = bd.split(headsep1)
     for b in bdpartslist:
@@ -415,10 +423,25 @@ def buildXMLSkeleton():
     # tree.write(logpath + "/" + "page.xhtml")
     return skeldic
 
+# UGLY HACK:
+# handling mixed content with etree is teadious
+# hack:
+# all XMl markup chars that I generate directly (by replace in the text for example)
+# uses "@@o" for "<", "@@c" for ">", "@@q" for '""
+# I then write the etree tree to a string (via StringIO)
+# replace the temporary markup characters by their real XML equivalents
+# and finally write the string to a file
+def fixMixedContent(xs):
+    xs = xs.replace("@@o", "<")
+    xs = xs.replace("@@c", ">")
+    xs = xs.replace("@@q", '"')
+    return xs
+
 def writeXMLFile(repf, ofp, root):
     printCF(repf, 1, "writing to file '%s'" % (ofp, ))
 
-    ofpobj = file(ofp, "w")
+    # ofpobj = file(ofp, "w")
+    ofpobj = StringIO.StringIO()
 
     # write declarations
     dec = ET.ProcessingInstruction("xml", pidic["xml"])
@@ -428,15 +451,19 @@ def writeXMLFile(repf, ofp, root):
     
     tree = ET.ElementTree(root)
     tree.write(ofpobj)
+    xmlstr = ofpobj.getvalue()
+    ofpobj.close()
+    xmlstr = fixMixedContent(xmlstr)
+    ofpobj = file(ofp, "w")
+    ofpobj.write(xmlstr)
     ofpobj.close()
 
 def getHeadWord(fh, bd):
     global hwcount, nohwcount
-    # print ">>>" + bd[:50]
+    # some body entries are enclosed in "<p>" tags
+    bd = bd.replace("<p>", "")
+    bd = bd.replace("</p>", "")
     bd = bd.strip(string.whitespace)
-    # while bd[0] in string.whitespace:
-    #     bd = bd[1:]
-    # print ">>>" + bd[:50]
     hw = ''
     for hwnum, hwdopen in enumerate(headworddelimsopenlist):
         # print hwdopen
@@ -485,22 +512,9 @@ def convertWikiFormats(repf, bdic):
         bdic[k] = re.sub(r"_(.+?)_", '@@ohi rend=@@qitalics@@q@@c\\1@@o/hi@@c', bdic[k])
     return bdic
 
-# not used any more, now handled by processConvertedBody
-def convertParagraphs(repf, bdic):
-    newbodydic = {}
-    for k in bdic.keys():
-        newbodydic[k] = ""
-        parslist = re.split("\n\n+", bdic[k])
-        for par in parslist:
-            par = par.strip()
-            if par == "":
-                newbodypart = "" 
-            else:
-                newbodypart = "<p>" + par + "</p>"
-            newbodydic[k] += newbodypart
-    return newbodydic
-
 def convertHrefLinks(repf, bdic):
+    for k in bdic.keys():
+        bdic[k] = re.sub(r"""<a href="(.+?)">(.+?)</a>""", '@@oref@@c\\2@@o!-- MT Link: \\1 --@@c@@o/ref@@c', bdic[k])
     return bdic
 
 def processTags(repf, hdic, bd, xmldic):
@@ -547,9 +561,6 @@ def convertAmericanToEuropeanDate(ds):
     ndate = "/".join([elist[1], elist[0], elist[2]])
     return ndate
 
-def fixMixedContent(bnameslist):
-    pass
-
 def processProfile(repf, hdic, bd):
     global profcount
     profcount += 1
@@ -568,7 +579,6 @@ def processProfile(repf, hdic, bd):
     bodydic = convertHtmlFormats(repf, bodydic)
     bodydic = convertWikiFormats(repf, bodydic)
     bodydic = convertHrefLinks(repf, bodydic)
-    # bodydic = convertParagraphs(repf, bodydic)
     processConvertedBody(repf, hdic, bodydic, xmlskeldic)
     # print "-" * 50
     # print bd
@@ -605,8 +615,7 @@ if __name__ == '__main__':
                                                        , ))
             basenameswrittenlist = processProfile(repf, headdic, body)
     
-    fixMixedContent(basenameslist)
-    
+
     printHeadKeyStats(repf)
     
     
