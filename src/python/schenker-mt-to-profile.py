@@ -2,17 +2,24 @@
 
 # extract MoveableType profile information and write to TEI XML file
 
+# TODO:
+
 # QUESTIONS:
-# - should resp/date be without time? format of date
-# - date format for change date
-# - will there be only ever one change date?
 # - how should other body parts ("EXTENDED BODY", etc.) be marked up?
 #   right now they are just paragraphs
+#   put in comment between paragraphs, i. e.: <!-- EXTENDED BODY -->
 
 # PROBLEMS:
 # - mixed content in body - markup that I inserted by "replace" and not by
 #   using etree's methods is escaped when XML file is written
 #   find a solution!!
+
+# DONE:
+# - id in TEI element, see comment in sdo-profile-template.xml
+# - should resp/date be without time? format of date. OK
+# - date format for change date: 12/11/2008. OK
+# - will there be only ever one change date? YES
+
 
 import sys
 import string
@@ -98,7 +105,7 @@ headworddelimscloselist = [
                            '*'
                            ]
 
-htmlformatsdic = {
+htmlformatsdicORI = {
                   '<strong>'  : '<hi rend="bold">',
                   '</strong>' : '</hi>',
                   '<b>'       : '<hi rend="bold">',
@@ -109,6 +116,17 @@ htmlformatsdic = {
                   '</i>'      : '</hi>'
                   }
                   
+htmlformatsdic = {
+                  '<strong>'  : '@@ohi rend=@@qbold@@q@@c',
+                  '</strong>' : '@@o/hi@@c',
+                  '<b>'       : '@@ohi rend="bold"@@c',
+                  '</b>'      : '@@o/hi@@c',
+                  '<em>'      : '@@ohi rend="italics"@@c',
+                  '</em>'     : '@@o/hi@@c',
+                  '<i>'       : '@@ohi rend="italics"@@c',
+                  '</i>'      : '@@o/hi@@c'
+                  }
+                  
 wikiformatsdic = {
                   '**' : ['<hi rend="bold">', '</hi>'],
                   '*'  : ['<hi rend="bold">', '</hi>'],
@@ -116,9 +134,9 @@ wikiformatsdic = {
                   }
 
 rewikiformatsdic = {
-                  '**' : [r'\*\*(.+?)\*\*', r'<hi rend="bold">', '</hi>', r'<hi rend="bold">\\1</hi>'],
-                  '*'  : [r'\*(.+?)\*', r'<hi rend="bold">', '</hi>', r'<hi rend="bold">\\1</hi>'],
-                  '_'  : [r'_', r'<hi rend="italics">', '</hi>', r'<hi rend="italics">\\1</hi>']
+                  '**' : [r'\*\*(.+?)\*\*', r'<hi rend="bold">', '</hi>', '<hi rend="bold">\\1</hi>'],
+                  '*'  : [r'\*(.+?)\*', r'<hi rend="bold">', '</hi>', '<hi rend="bold">\\1</hi>'],
+                  '_'  : [r'_', r'<hi rend="italics">', '</hi>', '<hi rend="italics">\\1</hi>']
                   }
 
 wikiformatslist = [
@@ -336,7 +354,8 @@ def buildXMLSkeleton():
     # build a tree structure
     skeldic["root"] = ET.Element("TEI")
     skeldic["root"].set("xmlns", "http://www.tei-c.org/ns/1.0")
-    skeldic["root"].set("xml:id", "p1_1_1_2")
+    # xml:id now set later with basename of output file name
+    # skeldic["root"].set("xml:id", "p1_1_1_2")
     skeldic["root"].set("xmlns:xmt", "http://www.cch.kcl.ac.uk/xmod/tei/1.0")
     
     # pi = ET.ProcessingInstruction("oxygen", "xxx")
@@ -409,6 +428,7 @@ def writeXMLFile(repf, ofp, root):
     
     tree = ET.ElementTree(root)
     tree.write(ofpobj)
+    ofpobj.close()
 
 def getHeadWord(fh, bd):
     global hwcount, nohwcount
@@ -453,11 +473,16 @@ def convertWikiFormats(repf, bdic):
         #     # repl = rewikiformatsdic[w][1] + r"\\1" + rewikiformatsdic[w][2]
         #     repl = rewikiformatsdic[w][3]
         #     bdic[k] = re.sub(pat, repl, bdic[k])
+        #     bdic[k] = re.sub(rewikiformatsdic[w][0], rewikiformatsdic[w][3], bdic[k])
         #     print pat, repl
 
-        bdic[k] = re.sub(r"\*\*(.+?)\*\*", '<hi rend="bold">\\1</hi>', bdic[k])
-        bdic[k] = re.sub(r"\*(.+?)\*", '<hi rend="bold">\\1</hi>', bdic[k])
-        bdic[k] = re.sub(r"_(.+?)_", '<hi rend="italics">\\1</hi>', bdic[k])
+        # bdic[k] = re.sub(r"\*\*(.+?)\*\*", '<hi rend="bold">\\1</hi>', bdic[k])
+        # bdic[k] = re.sub(r"\*(.+?)\*", '<hi rend="bold">\\1</hi>', bdic[k])
+        # bdic[k] = re.sub(r"_(.+?)_", '<hi rend="italics">\\1</hi>', bdic[k])
+
+        bdic[k] = re.sub(r"\*\*(.+?)\*\*", '@@ohi rend=@@qbold@@q@@c\\1@@o/hi@@c', bdic[k])
+        bdic[k] = re.sub(r"\*(.+?)\*", '@@ohi rend=@@qbold@@q@@c\\1@@o/hi@@c', bdic[k])
+        bdic[k] = re.sub(r"_(.+?)_", '@@ohi rend=@@qitalics@@q@@c\\1@@o/hi@@c', bdic[k])
     return bdic
 
 # not used any more, now handled by processConvertedBody
@@ -497,18 +522,30 @@ def processPrimaryCategory(repf, hdic, bd, xmldic):
     
 def processConversionDate(repf, hdic, bd, xmldic):
     # tag = time.strftime("%Y%m%d%H%M", time.localtime())
-    tag = time.strftime("%Y%m%d", time.localtime())
+    # tag = time.strftime("%Y%m%d", time.localtime())
+    tag = time.strftime("%d/%m/%Y", time.localtime())
     xmldic["change1date"].text = tag
 
 def processConvertedBody(repf, hdic, bdic, xmldic):
     for bodytype in bodyheaderslist:
         if bdic.has_key(bodytype):
+            # oxy = ET.ProcessingInstruction("oxygen", pidic["oxygen"])
+            # print >> ofpobj, ET.tostring(dec)
+            comm = ET.Comment(bodytype)
+            xmldic["bodydiv"].append(comm)
             parslist = re.split("\n\n+", bdic[bodytype])
             for par in parslist:
                 par = par.strip()
                 if par != "":
                     parel = ET.SubElement(xmldic["bodydiv"], "p")
-                    parel.text = par
+                    # parel.text = par
+                    parel.text = par.decode("utf8")
+
+def convertAmericanToEuropeanDate(ds):
+    dlist = ds.split()
+    elist = dlist[0].split("/")
+    ndate = "/".join([elist[1], elist[0], elist[2]])
+    return ndate
 
 def processProfile(repf, hdic, bd):
     global profcount
@@ -517,7 +554,8 @@ def processProfile(repf, hdic, bd):
     headword = getHeadWord(repf, bd)
     xmlskeldic["title"].text = headword
     xmlskeldic["bodyhead"].text = headword
-    xmlskeldic["respdate"].text = hdic["DATE"]
+    # xmlskeldic["respdate"].text = hdic["DATE"]
+    xmlskeldic["respdate"].text = convertAmericanToEuropeanDate(hdic["DATE"])
     xmlskeldic["name"].text = hdic["AUTHOR"]
     if hdic.has_key("TAGS"):
         processTags(repf, hdic, bd, xmlskeldic)
@@ -540,10 +578,11 @@ def processProfile(repf, hdic, bd):
     # generate unique basename by adding current date and time
     if basename in basenameslist:
         basename += "-" + time.strftime("%Y%m%d%H%M", time.localtime())
+    xmlskeldic["root"].set("xml:id", basename)
     basenameslist.append(basename)
     outfilepath = os.path.join(outpath, basename + ".xml")
     writeXMLFile(repf, outfilepath, xmlskeldic["root"])
-    # print hdic["PRIMARY CATEGORY"]
+    return basenameslist
 
 if __name__ == '__main__':
     checkDirs()
@@ -561,7 +600,7 @@ if __name__ == '__main__':
         if (headdic.has_key("PRIMARY CATEGORY")) and (headdic["PRIMARY CATEGORY"] in profileprimcatlist):
             printCF(repf, 1, "processing entry #%d" % (entrynum
                                                        , ))
-            processProfile(repf, headdic, body)
+            basenameswrittenlist = processProfile(repf, headdic, body)
     
     printHeadKeyStats(repf)
     
