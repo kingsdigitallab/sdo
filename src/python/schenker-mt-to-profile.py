@@ -547,6 +547,9 @@ def convertAmericanToEuropeanDate(ds):
     ndate = "/".join([elist[1], elist[0], elist[2]])
     return ndate
 
+def fixMixedContent(bnameslist):
+    pass
+
 def processProfile(repf, hdic, bd):
     global profcount
     profcount += 1
@@ -601,6 +604,8 @@ if __name__ == '__main__':
             printCF(repf, 1, "processing entry #%d" % (entrynum
                                                        , ))
             basenameswrittenlist = processProfile(repf, headdic, body)
+    
+    fixMixedContent(basenameslist)
     
     printHeadKeyStats(repf)
     
