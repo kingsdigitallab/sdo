@@ -337,7 +337,9 @@
             <ul>
               <xsl:for-each select="tei:item">
                 <li>
-                  <xsl:call-template name="showFigure" />
+                  <xsl:for-each select="tei:figure/tei:graphic">
+                    <xsl:call-template name="showFigure" />
+                  </xsl:for-each>
                 </li>
               </xsl:for-each>
             </ul>
