@@ -15,16 +15,25 @@ var imgPopupClass = "x87";
 
 function collapseContent () {
 // EXAMPLE: addShowHide ('content element class/content element type no. class','trigger class','target class','target open class ','target closed class','trigger open class','trigger closed class');
-//addShowHide('unorderedList/t03','x70','x71','z01','z02','z03','z04');
+addShowHide('unorderedList/t03','x70','x71','z01','z02','z03','z04');
 }
 
 function tabContent (){
-// EXAMPLE: var T=new tabs('content element class/content element type no. class','trigger class','trigger parent class','tab JS active class','tab content div class','trigger active class','trigger inactive class','target open class','target closed class');
-var T=new tabs('tabContent/t01','x30','x31','x32','x33','s03','','z03','z04');
-//Not mandatory, but makes things faster.  Default is *            
+//var T=new tabs('tabContent/t01','x30','x31','x32','x33','s03','','z05','z04');  
+var T=new tabs('tabset1','x30','x31','x32','x33','s03','','z03','z04');
+var T2=new tabs('tabset2','E30','E31','x32','x33','s03','','z03','z04');
+var T3=new tabs('tabset3','F30','F31','x32','x33','s03','','z03','z04');
+
 T.tElem="A";
-//Also optional.  Useful from a speed perspective, and to keep multiple scripts straight
 T.cElem="DIV";
-//T.container=getElementsByClassName(document.body,'div','container1')[0];
 T.init();
+
+T2.tElem="A";
+T2.cElem="DIV";
+T2.init();
+
+
+T3.tElem="A";
+T3.cElem="DIV";
+T3.init();
 }
