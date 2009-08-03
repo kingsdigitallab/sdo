@@ -1,1 +1,1 @@
-tools\ant\bin\ant.bat -f build-static.xml %1 %2 %3 %4 %5 %6 %7 %8 %9
+tools\ant\bin\ant.bat -f buildconf\static\build-static.xml %1 %2 %3 %4 %5 %6 %7 %8 %9
