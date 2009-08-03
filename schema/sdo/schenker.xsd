@@ -1,0 +1,1160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  
+    targetNamespace="http://www.cch.kcl.ac.uk/schenker" 
+    elementFormDefault="qualified"
+    xmlns="http://www.cch.kcl.ac.uk/schenker" 
+    xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0" 
+    
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+    >
+    
+    <xs:import  namespace="http://www.tei-c.org/ns/1.0" schemaLocation="tei_all.xsd"/>
+  <xs:import namespace="http://purl.org/dc/elements/1.1/" schemaLocation="dc.xsd"/>
+    <xs:import namespace="http://purl.org/dc/terms/" schemaLocation="dcterms.xsd"/> 
+    <xs:import namespace="http://www.loc.gov/loc.terms/relators/" schemaLocation="marcrel.xsd"/>
+    <xs:include schemaLocation="diary-metadata.xsd"/>
+    <xs:include schemaLocation="correspondence-metadata.xsd"/>
+   <!-- <xs:include schemaLocation="lessonbook-metadata.xsd"/>
+    
+    <xs:include schemaLocation="ephemera-metadata.xsd"/>-->
+    
+       
+    
+    
+    <!--      or  (2) a collection of entries  -->
+    <xs:element name="recordCollection">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="collectionDesc" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:group ref="collDescGroup" maxOccurs="1"/>
+                    </xs:complexType>
+                </xs:element>
+               <xs:element name="record" maxOccurs="unbounded"  type="recordType">
+                   
+               </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <!--   *****  End of "instance" definition -->
+    <!-- *****  Definition of a single entry -->
+    
+    <xs:complexType name="recordType">
+        <xs:group ref="recordGroup" maxOccurs="unbounded"/>
+        <xs:attribute name="ID" type="recID" use="required">
+            
+        </xs:attribute>
+    </xs:complexType>
+    
+   
+    
+    <!--   *****  End of definition of an entry record.  -->
+      
+        
+    <xs:group name="recordGroup">
+        <xs:sequence>
+            <xs:element name="itemDesc" maxOccurs="1" >
+                <xs:complexType >
+                    <xs:group ref="itemDescGroup" maxOccurs="1"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element  ref="tei:transcription" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="tei:translation" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="tei:notes"  minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:group>
+        
+  
+    
+    <xs:group name="sourceGroup" >
+        <xsd:choice>
+            <xs:element ref="diary" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="correspondence" minOccurs="0" maxOccurs="1"/>
+            <!--<xs:element ref="lessonbook" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="ephemera" minOccurs="0" maxOccurs="1"/> -->
+        </xsd:choice>
+   </xs:group>
+    
+    <xs:group name="collDescGroup">
+           <xs:sequence>
+            <xs:element name="source" maxOccurs="1">
+                <xs:complexType >
+                    <xs:group ref="sourceGroup" maxOccurs="1"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element ref="tei:handNotes" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="tei:respStmt" maxOccurs="unbounded"/>
+            <xs:element ref="tei:revisionDesc" minOccurs="0" maxOccurs="1"/>
+          </xs:sequence>
+    </xs:group>
+        
+    
+    <xs:group name="itemDescGroup">
+   
+        <xsd:sequence>
+         <xs:element ref="dc:title" maxOccurs="1"/>       
+                  
+            <xs:element ref="dcterms:created" maxOccurs="1"/>
+            <xs:element ref="dcterms:dateSubmitted" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="dc:description" minOccurs="1" maxOccurs="1"/>            
+            <xs:element ref="dc:subject" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="dc:format" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="marcrel:correspondent" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="marcrel:recipient" minOccurs="0" maxOccurs="unbounded"/>
+            
+             
+            
+                      
+            
+            <!--
+            <xs:element ref="dcterms:rightsHolder" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="dc:rights" minOccurs="0" />
+            <xs:element ref="dc:contributor" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="dc:format" minOccurs="0" maxOccurs="1"/>
+            
+            
+            <xs:element ref="dc:language" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="dc:publisher" minOccurs="0" maxOccurs="1"/>
+             
+            
+            <xs:element ref="dc:type" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="dcterms:audience" minOccurs="0" maxOccurs="1"/>
+            
+            
+            <xs:element ref="dcterms:isPartOf" minOccurs="0" maxOccurs="1"/>-->
+            
+          <!-- this creates a conflict with the corresponding element rights in dc: commenting out for now.  <xs:element ref="dcterms:license" minOccurs="0" maxOccurs="unbounded"/>-->
+            
+          <!--  <xs:element ref="dcterms:provenance" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="dcterms:spatial" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="dcterms:temporal" minOccurs="0" maxOccurs="1"/>-->
+                        
+      </xsd:sequence>
+    </xs:group>
+        
+
+   <xsd:simpleType name="marcRel">
+        <xsd:restriction base="xsd:string">
+            
+            <xsd:enumeration value="RCP"><xsd:annotation><xsd:documentation>Recipient</xsd:documentation></xsd:annotation></xsd:enumeration>
+            <xsd:enumeration value="CRP"><xsd:annotation><xsd:documentation>Correspondent</xsd:documentation></xsd:annotation></xsd:enumeration>
+            
+        </xsd:restriction>
+   </xsd:simpleType>
+    
+    <xsd:simpleType name="recID">
+        <xsd:restriction base="xsd:ID">
+           
+
+<xsd:enumeration value="r0001"/>
+<xsd:enumeration value="r0002"/>
+<xsd:enumeration value="r0003"/>
+<xsd:enumeration value="r0004"/>
+<xsd:enumeration value="r0005"/>
+<xsd:enumeration value="r0006"/>
+<xsd:enumeration value="r0007"/>
+<xsd:enumeration value="r0008"/>
+<xsd:enumeration value="r0009"/>
+<xsd:enumeration value="r0010"/>
+<xsd:enumeration value="r0011"/>
+<xsd:enumeration value="r0012"/>
+<xsd:enumeration value="r0013"/>
+<xsd:enumeration value="r0014"/>
+<xsd:enumeration value="r0015"/>
+<xsd:enumeration value="r0016"/>
+<xsd:enumeration value="r0017"/>
+<xsd:enumeration value="r0018"/>
+<xsd:enumeration value="r0019"/>
+<xsd:enumeration value="r0020"/>
+<xsd:enumeration value="r0021"/>
+<xsd:enumeration value="r0022"/>
+<xsd:enumeration value="r0023"/>
+<xsd:enumeration value="r0024"/>
+<xsd:enumeration value="r0025"/>
+<xsd:enumeration value="r0026"/>
+<xsd:enumeration value="r0027"/>
+<xsd:enumeration value="r0028"/>
+<xsd:enumeration value="r0029"/>
+<xsd:enumeration value="r0030"/>
+<xsd:enumeration value="r0031"/>
+<xsd:enumeration value="r0032"/>
+<xsd:enumeration value="r0033"/>
+<xsd:enumeration value="r0034"/>
+<xsd:enumeration value="r0035"/>
+<xsd:enumeration value="r0036"/>
+<xsd:enumeration value="r0037"/>
+<xsd:enumeration value="r0038"/>
+<xsd:enumeration value="r0039"/>
+<xsd:enumeration value="r0040"/>
+<xsd:enumeration value="r0041"/>
+<xsd:enumeration value="r0042"/>
+<xsd:enumeration value="r0043"/>
+<xsd:enumeration value="r0044"/>
+<xsd:enumeration value="r0045"/>
+<xsd:enumeration value="r0046"/>
+<xsd:enumeration value="r0047"/>
+<xsd:enumeration value="r0048"/>
+<xsd:enumeration value="r0049"/>
+<xsd:enumeration value="r0050"/>
+<xsd:enumeration value="r0051"/>
+<xsd:enumeration value="r0052"/>
+<xsd:enumeration value="r0053"/>
+<xsd:enumeration value="r0054"/>
+<xsd:enumeration value="r0055"/>
+<xsd:enumeration value="r0056"/>
+<xsd:enumeration value="r0057"/>
+<xsd:enumeration value="r0058"/>
+<xsd:enumeration value="r0059"/>
+<xsd:enumeration value="r0060"/>
+<xsd:enumeration value="r0061"/>
+<xsd:enumeration value="r0062"/>
+<xsd:enumeration value="r0063"/>
+<xsd:enumeration value="r0064"/>
+<xsd:enumeration value="r0065"/>
+<xsd:enumeration value="r0066"/>
+<xsd:enumeration value="r0067"/>
+<xsd:enumeration value="r0068"/>
+<xsd:enumeration value="r0069"/>
+<xsd:enumeration value="r0070"/>
+<xsd:enumeration value="r0071"/>
+<xsd:enumeration value="r0072"/>
+<xsd:enumeration value="r0073"/>
+<xsd:enumeration value="r0074"/>
+<xsd:enumeration value="r0075"/>
+<xsd:enumeration value="r0076"/>
+<xsd:enumeration value="r0077"/>
+<xsd:enumeration value="r0078"/>
+<xsd:enumeration value="r0079"/>
+<xsd:enumeration value="r0080"/>
+<xsd:enumeration value="r0081"/>
+<xsd:enumeration value="r0082"/>
+<xsd:enumeration value="r0083"/>
+<xsd:enumeration value="r0084"/>
+<xsd:enumeration value="r0085"/>
+<xsd:enumeration value="r0086"/>
+<xsd:enumeration value="r0087"/>
+<xsd:enumeration value="r0088"/>
+<xsd:enumeration value="r0089"/>
+<xsd:enumeration value="r0090"/>
+<xsd:enumeration value="r0091"/>
+<xsd:enumeration value="r0092"/>
+<xsd:enumeration value="r0093"/>
+<xsd:enumeration value="r0094"/>
+<xsd:enumeration value="r0095"/>
+<xsd:enumeration value="r0096"/>
+<xsd:enumeration value="r0097"/>
+<xsd:enumeration value="r0098"/>
+<xsd:enumeration value="r0099"/>
+<xsd:enumeration value="r0100"/>
+<xsd:enumeration value="r0101"/>
+<xsd:enumeration value="r0102"/>
+<xsd:enumeration value="r0103"/>
+<xsd:enumeration value="r0104"/>
+<xsd:enumeration value="r0105"/>
+<xsd:enumeration value="r0106"/>
+<xsd:enumeration value="r0107"/>
+<xsd:enumeration value="r0108"/>
+<xsd:enumeration value="r0109"/>
+<xsd:enumeration value="r0110"/>
+<xsd:enumeration value="r0111"/>
+<xsd:enumeration value="r0112"/>
+<xsd:enumeration value="r0113"/>
+<xsd:enumeration value="r0114"/>
+<xsd:enumeration value="r0115"/>
+<xsd:enumeration value="r0116"/>
+<xsd:enumeration value="r0117"/>
+<xsd:enumeration value="r0118"/>
+<xsd:enumeration value="r0119"/>
+<xsd:enumeration value="r0120"/>
+<xsd:enumeration value="r0121"/>
+<xsd:enumeration value="r0122"/>
+<xsd:enumeration value="r0123"/>
+<xsd:enumeration value="r0124"/>
+<xsd:enumeration value="r0125"/>
+<xsd:enumeration value="r0126"/>
+<xsd:enumeration value="r0127"/>
+<xsd:enumeration value="r0128"/>
+<xsd:enumeration value="r0129"/>
+<xsd:enumeration value="r0130"/>
+<xsd:enumeration value="r0131"/>
+<xsd:enumeration value="r0132"/>
+<xsd:enumeration value="r0133"/>
+<xsd:enumeration value="r0134"/>
+<xsd:enumeration value="r0135"/>
+<xsd:enumeration value="r0136"/>
+<xsd:enumeration value="r0137"/>
+<xsd:enumeration value="r0138"/>
+<xsd:enumeration value="r0139"/>
+<xsd:enumeration value="r0140"/>
+<xsd:enumeration value="r0141"/>
+<xsd:enumeration value="r0142"/>
+<xsd:enumeration value="r0143"/>
+<xsd:enumeration value="r0144"/>
+<xsd:enumeration value="r0145"/>
+<xsd:enumeration value="r0146"/>
+<xsd:enumeration value="r0147"/>
+<xsd:enumeration value="r0148"/>
+<xsd:enumeration value="r0149"/>
+<xsd:enumeration value="r0150"/>
+<xsd:enumeration value="r0151"/>
+<xsd:enumeration value="r0152"/>
+<xsd:enumeration value="r0153"/>
+<xsd:enumeration value="r0154"/>
+<xsd:enumeration value="r0155"/>
+<xsd:enumeration value="r0156"/>
+<xsd:enumeration value="r0157"/>
+<xsd:enumeration value="r0158"/>
+<xsd:enumeration value="r0159"/>
+<xsd:enumeration value="r0160"/>
+<xsd:enumeration value="r0161"/>
+<xsd:enumeration value="r0162"/>
+<xsd:enumeration value="r0163"/>
+<xsd:enumeration value="r0164"/>
+<xsd:enumeration value="r0165"/>
+<xsd:enumeration value="r0166"/>
+<xsd:enumeration value="r0167"/>
+<xsd:enumeration value="r0168"/>
+<xsd:enumeration value="r0169"/>
+<xsd:enumeration value="r0170"/>
+<xsd:enumeration value="r0171"/>
+<xsd:enumeration value="r0172"/>
+<xsd:enumeration value="r0173"/>
+<xsd:enumeration value="r0174"/>
+<xsd:enumeration value="r0175"/>
+<xsd:enumeration value="r0176"/>
+<xsd:enumeration value="r0177"/>
+<xsd:enumeration value="r0178"/>
+<xsd:enumeration value="r0179"/>
+<xsd:enumeration value="r0180"/>
+<xsd:enumeration value="r0181"/>
+<xsd:enumeration value="r0182"/>
+<xsd:enumeration value="r0183"/>
+<xsd:enumeration value="r0184"/>
+<xsd:enumeration value="r0185"/>
+<xsd:enumeration value="r0186"/>
+<xsd:enumeration value="r0187"/>
+<xsd:enumeration value="r0188"/>
+<xsd:enumeration value="r0189"/>
+<xsd:enumeration value="r0190"/>
+<xsd:enumeration value="r0191"/>
+<xsd:enumeration value="r0192"/>
+<xsd:enumeration value="r0193"/>
+<xsd:enumeration value="r0194"/>
+<xsd:enumeration value="r0195"/>
+<xsd:enumeration value="r0196"/>
+<xsd:enumeration value="r0197"/>
+<xsd:enumeration value="r0198"/>
+<xsd:enumeration value="r0199"/>
+<xsd:enumeration value="r0200"/>
+<xsd:enumeration value="r0201"/>
+<xsd:enumeration value="r0202"/>
+<xsd:enumeration value="r0203"/>
+<xsd:enumeration value="r0204"/>
+<xsd:enumeration value="r0205"/>
+<xsd:enumeration value="r0206"/>
+<xsd:enumeration value="r0207"/>
+<xsd:enumeration value="r0208"/>
+<xsd:enumeration value="r0209"/>
+<xsd:enumeration value="r0210"/>
+<xsd:enumeration value="r0211"/>
+<xsd:enumeration value="r0212"/>
+<xsd:enumeration value="r0213"/>
+<xsd:enumeration value="r0214"/>
+<xsd:enumeration value="r0215"/>
+<xsd:enumeration value="r0216"/>
+<xsd:enumeration value="r0217"/>
+<xsd:enumeration value="r0218"/>
+<xsd:enumeration value="r0219"/>
+<xsd:enumeration value="r0220"/>
+<xsd:enumeration value="r0221"/>
+<xsd:enumeration value="r0222"/>
+<xsd:enumeration value="r0223"/>
+<xsd:enumeration value="r0224"/>
+<xsd:enumeration value="r0225"/>
+<xsd:enumeration value="r0226"/>
+<xsd:enumeration value="r0227"/>
+<xsd:enumeration value="r0228"/>
+<xsd:enumeration value="r0229"/>
+<xsd:enumeration value="r0230"/>
+<xsd:enumeration value="r0231"/>
+<xsd:enumeration value="r0232"/>
+<xsd:enumeration value="r0233"/>
+<xsd:enumeration value="r0234"/>
+<xsd:enumeration value="r0235"/>
+<xsd:enumeration value="r0236"/>
+<xsd:enumeration value="r0237"/>
+<xsd:enumeration value="r0238"/>
+<xsd:enumeration value="r0239"/>
+<xsd:enumeration value="r0240"/>
+<xsd:enumeration value="r0241"/>
+<xsd:enumeration value="r0242"/>
+<xsd:enumeration value="r0243"/>
+<xsd:enumeration value="r0244"/>
+<xsd:enumeration value="r0245"/>
+<xsd:enumeration value="r0246"/>
+<xsd:enumeration value="r0247"/>
+<xsd:enumeration value="r0248"/>
+<xsd:enumeration value="r0249"/>
+<xsd:enumeration value="r0250"/>
+<xsd:enumeration value="r0251"/>
+<xsd:enumeration value="r0252"/>
+<xsd:enumeration value="r0253"/>
+<xsd:enumeration value="r0254"/>
+<xsd:enumeration value="r0255"/>
+<xsd:enumeration value="r0256"/>
+<xsd:enumeration value="r0257"/>
+<xsd:enumeration value="r0258"/>
+<xsd:enumeration value="r0259"/>
+<xsd:enumeration value="r0260"/>
+<xsd:enumeration value="r0261"/>
+<xsd:enumeration value="r0262"/>
+<xsd:enumeration value="r0263"/>
+<xsd:enumeration value="r0264"/>
+<xsd:enumeration value="r0265"/>
+<xsd:enumeration value="r0266"/>
+<xsd:enumeration value="r0267"/>
+<xsd:enumeration value="r0268"/>
+<xsd:enumeration value="r0269"/>
+<xsd:enumeration value="r0270"/>
+<xsd:enumeration value="r0271"/>
+<xsd:enumeration value="r0272"/>
+<xsd:enumeration value="r0273"/>
+<xsd:enumeration value="r0274"/>
+<xsd:enumeration value="r0275"/>
+<xsd:enumeration value="r0276"/>
+<xsd:enumeration value="r0277"/>
+<xsd:enumeration value="r0278"/>
+<xsd:enumeration value="r0279"/>
+<xsd:enumeration value="r0280"/>
+<xsd:enumeration value="r0281"/>
+<xsd:enumeration value="r0282"/>
+<xsd:enumeration value="r0283"/>
+<xsd:enumeration value="r0284"/>
+<xsd:enumeration value="r0285"/>
+<xsd:enumeration value="r0286"/>
+<xsd:enumeration value="r0287"/>
+<xsd:enumeration value="r0288"/>
+<xsd:enumeration value="r0289"/>
+<xsd:enumeration value="r0290"/>
+<xsd:enumeration value="r0291"/>
+<xsd:enumeration value="r0292"/>
+<xsd:enumeration value="r0293"/>
+<xsd:enumeration value="r0294"/>
+<xsd:enumeration value="r0295"/>
+<xsd:enumeration value="r0296"/>
+<xsd:enumeration value="r0297"/>
+<xsd:enumeration value="r0298"/>
+<xsd:enumeration value="r0299"/>
+<xsd:enumeration value="r0300"/>
+<xsd:enumeration value="r0301"/>
+<xsd:enumeration value="r0302"/>
+<xsd:enumeration value="r0303"/>
+<xsd:enumeration value="r0304"/>
+<xsd:enumeration value="r0305"/>
+<xsd:enumeration value="r0306"/>
+<xsd:enumeration value="r0307"/>
+<xsd:enumeration value="r0308"/>
+<xsd:enumeration value="r0309"/>
+<xsd:enumeration value="r0310"/>
+<xsd:enumeration value="r0311"/>
+<xsd:enumeration value="r0312"/>
+<xsd:enumeration value="r0313"/>
+<xsd:enumeration value="r0314"/>
+<xsd:enumeration value="r0315"/>
+<xsd:enumeration value="r0316"/>
+<xsd:enumeration value="r0317"/>
+<xsd:enumeration value="r0318"/>
+<xsd:enumeration value="r0319"/>
+<xsd:enumeration value="r0320"/>
+<xsd:enumeration value="r0321"/>
+<xsd:enumeration value="r0322"/>
+<xsd:enumeration value="r0323"/>
+<xsd:enumeration value="r0324"/>
+<xsd:enumeration value="r0325"/>
+<xsd:enumeration value="r0326"/>
+<xsd:enumeration value="r0327"/>
+<xsd:enumeration value="r0328"/>
+<xsd:enumeration value="r0329"/>
+<xsd:enumeration value="r0330"/>
+<xsd:enumeration value="r0331"/>
+<xsd:enumeration value="r0332"/>
+<xsd:enumeration value="r0333"/>
+<xsd:enumeration value="r0334"/>
+<xsd:enumeration value="r0335"/>
+<xsd:enumeration value="r0336"/>
+<xsd:enumeration value="r0337"/>
+<xsd:enumeration value="r0338"/>
+<xsd:enumeration value="r0339"/>
+<xsd:enumeration value="r0340"/>
+<xsd:enumeration value="r0341"/>
+<xsd:enumeration value="r0342"/>
+<xsd:enumeration value="r0343"/>
+<xsd:enumeration value="r0344"/>
+<xsd:enumeration value="r0345"/>
+<xsd:enumeration value="r0346"/>
+<xsd:enumeration value="r0347"/>
+<xsd:enumeration value="r0348"/>
+<xsd:enumeration value="r0349"/>
+<xsd:enumeration value="r0350"/>
+<xsd:enumeration value="r0351"/>
+<xsd:enumeration value="r0352"/>
+<xsd:enumeration value="r0353"/>
+<xsd:enumeration value="r0354"/>
+<xsd:enumeration value="r0355"/>
+<xsd:enumeration value="r0356"/>
+<xsd:enumeration value="r0357"/>
+<xsd:enumeration value="r0358"/>
+<xsd:enumeration value="r0359"/>
+<xsd:enumeration value="r0360"/>
+<xsd:enumeration value="r0361"/>
+<xsd:enumeration value="r0362"/>
+<xsd:enumeration value="r0363"/>
+<xsd:enumeration value="r0364"/>
+<xsd:enumeration value="r0365"/>
+<xsd:enumeration value="r0366"/>
+<xsd:enumeration value="r0367"/>
+<xsd:enumeration value="r0368"/>
+<xsd:enumeration value="r0369"/>
+<xsd:enumeration value="r0370"/>
+<xsd:enumeration value="r0371"/>
+<xsd:enumeration value="r0372"/>
+<xsd:enumeration value="r0373"/>
+<xsd:enumeration value="r0374"/>
+<xsd:enumeration value="r0375"/>
+<xsd:enumeration value="r0376"/>
+<xsd:enumeration value="r0377"/>
+<xsd:enumeration value="r0378"/>
+<xsd:enumeration value="r0379"/>
+<xsd:enumeration value="r0380"/>
+<xsd:enumeration value="r0381"/>
+<xsd:enumeration value="r0382"/>
+<xsd:enumeration value="r0383"/>
+<xsd:enumeration value="r0384"/>
+<xsd:enumeration value="r0385"/>
+<xsd:enumeration value="r0386"/>
+<xsd:enumeration value="r0387"/>
+<xsd:enumeration value="r0388"/>
+<xsd:enumeration value="r0389"/>
+<xsd:enumeration value="r0390"/>
+<xsd:enumeration value="r0391"/>
+<xsd:enumeration value="r0392"/>
+<xsd:enumeration value="r0393"/>
+<xsd:enumeration value="r0394"/>
+<xsd:enumeration value="r0395"/>
+<xsd:enumeration value="r0396"/>
+<xsd:enumeration value="r0397"/>
+<xsd:enumeration value="r0398"/>
+<xsd:enumeration value="r0399"/>
+<xsd:enumeration value="r0400"/>
+<xsd:enumeration value="r0401"/>
+<xsd:enumeration value="r0402"/>
+<xsd:enumeration value="r0403"/>
+<xsd:enumeration value="r0404"/>
+<xsd:enumeration value="r0405"/>
+<xsd:enumeration value="r0406"/>
+<xsd:enumeration value="r0407"/>
+<xsd:enumeration value="r0408"/>
+<xsd:enumeration value="r0409"/>
+<xsd:enumeration value="r0410"/>
+<xsd:enumeration value="r0411"/>
+<xsd:enumeration value="r0412"/>
+<xsd:enumeration value="r0413"/>
+<xsd:enumeration value="r0414"/>
+<xsd:enumeration value="r0415"/>
+<xsd:enumeration value="r0416"/>
+<xsd:enumeration value="r0417"/>
+<xsd:enumeration value="r0418"/>
+<xsd:enumeration value="r0419"/>
+<xsd:enumeration value="r0420"/>
+<xsd:enumeration value="r0421"/>
+<xsd:enumeration value="r0422"/>
+<xsd:enumeration value="r0423"/>
+<xsd:enumeration value="r0424"/>
+<xsd:enumeration value="r0425"/>
+<xsd:enumeration value="r0426"/>
+<xsd:enumeration value="r0427"/>
+<xsd:enumeration value="r0428"/>
+<xsd:enumeration value="r0429"/>
+<xsd:enumeration value="r0430"/>
+<xsd:enumeration value="r0431"/>
+<xsd:enumeration value="r0432"/>
+<xsd:enumeration value="r0433"/>
+<xsd:enumeration value="r0434"/>
+<xsd:enumeration value="r0435"/>
+<xsd:enumeration value="r0436"/>
+<xsd:enumeration value="r0437"/>
+<xsd:enumeration value="r0438"/>
+<xsd:enumeration value="r0439"/>
+<xsd:enumeration value="r0440"/>
+<xsd:enumeration value="r0441"/>
+<xsd:enumeration value="r0442"/>
+<xsd:enumeration value="r0443"/>
+<xsd:enumeration value="r0444"/>
+<xsd:enumeration value="r0445"/>
+<xsd:enumeration value="r0446"/>
+<xsd:enumeration value="r0447"/>
+<xsd:enumeration value="r0448"/>
+<xsd:enumeration value="r0449"/>
+<xsd:enumeration value="r0450"/>
+<xsd:enumeration value="r0451"/>
+<xsd:enumeration value="r0452"/>
+<xsd:enumeration value="r0453"/>
+<xsd:enumeration value="r0454"/>
+<xsd:enumeration value="r0455"/>
+<xsd:enumeration value="r0456"/>
+<xsd:enumeration value="r0457"/>
+<xsd:enumeration value="r0458"/>
+<xsd:enumeration value="r0459"/>
+<xsd:enumeration value="r0460"/>
+<xsd:enumeration value="r0461"/>
+<xsd:enumeration value="r0462"/>
+<xsd:enumeration value="r0463"/>
+<xsd:enumeration value="r0464"/>
+<xsd:enumeration value="r0465"/>
+<xsd:enumeration value="r0466"/>
+<xsd:enumeration value="r0467"/>
+<xsd:enumeration value="r0468"/>
+<xsd:enumeration value="r0469"/>
+<xsd:enumeration value="r0470"/>
+<xsd:enumeration value="r0471"/>
+<xsd:enumeration value="r0472"/>
+<xsd:enumeration value="r0473"/>
+<xsd:enumeration value="r0474"/>
+<xsd:enumeration value="r0475"/>
+<xsd:enumeration value="r0476"/>
+<xsd:enumeration value="r0477"/>
+<xsd:enumeration value="r0478"/>
+<xsd:enumeration value="r0479"/>
+<xsd:enumeration value="r0480"/>
+<xsd:enumeration value="r0481"/>
+<xsd:enumeration value="r0482"/>
+<xsd:enumeration value="r0483"/>
+<xsd:enumeration value="r0484"/>
+<xsd:enumeration value="r0485"/>
+<xsd:enumeration value="r0486"/>
+<xsd:enumeration value="r0487"/>
+<xsd:enumeration value="r0488"/>
+<xsd:enumeration value="r0489"/>
+<xsd:enumeration value="r0490"/>
+<xsd:enumeration value="r0491"/>
+<xsd:enumeration value="r0492"/>
+<xsd:enumeration value="r0493"/>
+<xsd:enumeration value="r0494"/>
+<xsd:enumeration value="r0495"/>
+<xsd:enumeration value="r0496"/>
+<xsd:enumeration value="r0497"/>
+<xsd:enumeration value="r0498"/>
+<xsd:enumeration value="r0499"/>
+<xsd:enumeration value="r0500"/>
+<xsd:enumeration value="r0501"/>
+<xsd:enumeration value="r0502"/>
+<xsd:enumeration value="r0503"/>
+<xsd:enumeration value="r0504"/>
+<xsd:enumeration value="r0505"/>
+<xsd:enumeration value="r0506"/>
+<xsd:enumeration value="r0507"/>
+<xsd:enumeration value="r0508"/>
+<xsd:enumeration value="r0509"/>
+<xsd:enumeration value="r0510"/>
+<xsd:enumeration value="r0511"/>
+<xsd:enumeration value="r0512"/>
+<xsd:enumeration value="r0513"/>
+<xsd:enumeration value="r0514"/>
+<xsd:enumeration value="r0515"/>
+<xsd:enumeration value="r0516"/>
+<xsd:enumeration value="r0517"/>
+<xsd:enumeration value="r0518"/>
+<xsd:enumeration value="r0519"/>
+<xsd:enumeration value="r0520"/>
+<xsd:enumeration value="r0521"/>
+<xsd:enumeration value="r0522"/>
+<xsd:enumeration value="r0523"/>
+<xsd:enumeration value="r0524"/>
+<xsd:enumeration value="r0525"/>
+<xsd:enumeration value="r0526"/>
+<xsd:enumeration value="r0527"/>
+<xsd:enumeration value="r0528"/>
+<xsd:enumeration value="r0529"/>
+<xsd:enumeration value="r0530"/>
+<xsd:enumeration value="r0531"/>
+<xsd:enumeration value="r0532"/>
+<xsd:enumeration value="r0533"/>
+<xsd:enumeration value="r0534"/>
+<xsd:enumeration value="r0535"/>
+<xsd:enumeration value="r0536"/>
+<xsd:enumeration value="r0537"/>
+<xsd:enumeration value="r0538"/>
+<xsd:enumeration value="r0539"/>
+<xsd:enumeration value="r0540"/>
+<xsd:enumeration value="r0541"/>
+<xsd:enumeration value="r0542"/>
+<xsd:enumeration value="r0543"/>
+<xsd:enumeration value="r0544"/>
+<xsd:enumeration value="r0545"/>
+<xsd:enumeration value="r0546"/>
+<xsd:enumeration value="r0547"/>
+<xsd:enumeration value="r0548"/>
+<xsd:enumeration value="r0549"/>
+<xsd:enumeration value="r0550"/>
+<xsd:enumeration value="r0551"/>
+<xsd:enumeration value="r0552"/>
+<xsd:enumeration value="r0553"/>
+<xsd:enumeration value="r0554"/>
+<xsd:enumeration value="r0555"/>
+<xsd:enumeration value="r0556"/>
+<xsd:enumeration value="r0557"/>
+<xsd:enumeration value="r0558"/>
+<xsd:enumeration value="r0559"/>
+<xsd:enumeration value="r0560"/>
+<xsd:enumeration value="r0561"/>
+<xsd:enumeration value="r0562"/>
+<xsd:enumeration value="r0563"/>
+<xsd:enumeration value="r0564"/>
+<xsd:enumeration value="r0565"/>
+<xsd:enumeration value="r0566"/>
+<xsd:enumeration value="r0567"/>
+<xsd:enumeration value="r0568"/>
+<xsd:enumeration value="r0569"/>
+<xsd:enumeration value="r0570"/>
+<xsd:enumeration value="r0571"/>
+<xsd:enumeration value="r0572"/>
+<xsd:enumeration value="r0573"/>
+<xsd:enumeration value="r0574"/>
+<xsd:enumeration value="r0575"/>
+<xsd:enumeration value="r0576"/>
+<xsd:enumeration value="r0577"/>
+<xsd:enumeration value="r0578"/>
+<xsd:enumeration value="r0579"/>
+<xsd:enumeration value="r0580"/>
+<xsd:enumeration value="r0581"/>
+<xsd:enumeration value="r0582"/>
+<xsd:enumeration value="r0583"/>
+<xsd:enumeration value="r0584"/>
+<xsd:enumeration value="r0585"/>
+<xsd:enumeration value="r0586"/>
+<xsd:enumeration value="r0587"/>
+<xsd:enumeration value="r0588"/>
+<xsd:enumeration value="r0589"/>
+<xsd:enumeration value="r0590"/>
+<xsd:enumeration value="r0591"/>
+<xsd:enumeration value="r0592"/>
+<xsd:enumeration value="r0593"/>
+<xsd:enumeration value="r0594"/>
+<xsd:enumeration value="r0595"/>
+<xsd:enumeration value="r0596"/>
+<xsd:enumeration value="r0597"/>
+<xsd:enumeration value="r0598"/>
+<xsd:enumeration value="r0599"/>
+<xsd:enumeration value="r0600"/>
+<xsd:enumeration value="r0601"/>
+<xsd:enumeration value="r0602"/>
+<xsd:enumeration value="r0603"/>
+<xsd:enumeration value="r0604"/>
+<xsd:enumeration value="r0605"/>
+<xsd:enumeration value="r0606"/>
+<xsd:enumeration value="r0607"/>
+<xsd:enumeration value="r0608"/>
+<xsd:enumeration value="r0609"/>
+<xsd:enumeration value="r0610"/>
+<xsd:enumeration value="r0611"/>
+<xsd:enumeration value="r0612"/>
+<xsd:enumeration value="r0613"/>
+<xsd:enumeration value="r0614"/>
+<xsd:enumeration value="r0615"/>
+<xsd:enumeration value="r0616"/>
+<xsd:enumeration value="r0617"/>
+<xsd:enumeration value="r0618"/>
+<xsd:enumeration value="r0619"/>
+<xsd:enumeration value="r0620"/>
+<xsd:enumeration value="r0621"/>
+<xsd:enumeration value="r0622"/>
+<xsd:enumeration value="r0623"/>
+<xsd:enumeration value="r0624"/>
+<xsd:enumeration value="r0625"/>
+<xsd:enumeration value="r0626"/>
+<xsd:enumeration value="r0627"/>
+<xsd:enumeration value="r0628"/>
+<xsd:enumeration value="r0629"/>
+<xsd:enumeration value="r0630"/>
+<xsd:enumeration value="r0631"/>
+<xsd:enumeration value="r0632"/>
+<xsd:enumeration value="r0633"/>
+<xsd:enumeration value="r0634"/>
+<xsd:enumeration value="r0635"/>
+<xsd:enumeration value="r0636"/>
+<xsd:enumeration value="r0637"/>
+<xsd:enumeration value="r0638"/>
+<xsd:enumeration value="r0639"/>
+<xsd:enumeration value="r0640"/>
+<xsd:enumeration value="r0641"/>
+<xsd:enumeration value="r0642"/>
+<xsd:enumeration value="r0643"/>
+<xsd:enumeration value="r0644"/>
+<xsd:enumeration value="r0645"/>
+<xsd:enumeration value="r0646"/>
+<xsd:enumeration value="r0647"/>
+<xsd:enumeration value="r0648"/>
+<xsd:enumeration value="r0649"/>
+<xsd:enumeration value="r0650"/>
+<xsd:enumeration value="r0651"/>
+<xsd:enumeration value="r0652"/>
+<xsd:enumeration value="r0653"/>
+<xsd:enumeration value="r0654"/>
+<xsd:enumeration value="r0655"/>
+<xsd:enumeration value="r0656"/>
+<xsd:enumeration value="r0657"/>
+<xsd:enumeration value="r0658"/>
+<xsd:enumeration value="r0659"/>
+<xsd:enumeration value="r0660"/>
+<xsd:enumeration value="r0661"/>
+<xsd:enumeration value="r0662"/>
+<xsd:enumeration value="r0663"/>
+<xsd:enumeration value="r0664"/>
+<xsd:enumeration value="r0665"/>
+<xsd:enumeration value="r0666"/>
+<xsd:enumeration value="r0667"/>
+<xsd:enumeration value="r0668"/>
+<xsd:enumeration value="r0669"/>
+<xsd:enumeration value="r0670"/>
+<xsd:enumeration value="r0671"/>
+<xsd:enumeration value="r0672"/>
+<xsd:enumeration value="r0673"/>
+<xsd:enumeration value="r0674"/>
+<xsd:enumeration value="r0675"/>
+<xsd:enumeration value="r0676"/>
+<xsd:enumeration value="r0677"/>
+<xsd:enumeration value="r0678"/>
+<xsd:enumeration value="r0679"/>
+<xsd:enumeration value="r0680"/>
+<xsd:enumeration value="r0681"/>
+<xsd:enumeration value="r0682"/>
+<xsd:enumeration value="r0683"/>
+<xsd:enumeration value="r0684"/>
+<xsd:enumeration value="r0685"/>
+<xsd:enumeration value="r0686"/>
+<xsd:enumeration value="r0687"/>
+<xsd:enumeration value="r0688"/>
+<xsd:enumeration value="r0689"/>
+<xsd:enumeration value="r0690"/>
+<xsd:enumeration value="r0691"/>
+<xsd:enumeration value="r0692"/>
+<xsd:enumeration value="r0693"/>
+<xsd:enumeration value="r0694"/>
+<xsd:enumeration value="r0695"/>
+<xsd:enumeration value="r0696"/>
+<xsd:enumeration value="r0697"/>
+<xsd:enumeration value="r0698"/>
+<xsd:enumeration value="r0699"/>
+<xsd:enumeration value="r0700"/>
+<xsd:enumeration value="r0701"/>
+<xsd:enumeration value="r0702"/>
+<xsd:enumeration value="r0703"/>
+<xsd:enumeration value="r0704"/>
+<xsd:enumeration value="r0705"/>
+<xsd:enumeration value="r0706"/>
+<xsd:enumeration value="r0707"/>
+<xsd:enumeration value="r0708"/>
+<xsd:enumeration value="r0709"/>
+<xsd:enumeration value="r0710"/>
+<xsd:enumeration value="r0711"/>
+<xsd:enumeration value="r0712"/>
+<xsd:enumeration value="r0713"/>
+<xsd:enumeration value="r0714"/>
+<xsd:enumeration value="r0715"/>
+<xsd:enumeration value="r0716"/>
+<xsd:enumeration value="r0717"/>
+<xsd:enumeration value="r0718"/>
+<xsd:enumeration value="r0719"/>
+<xsd:enumeration value="r0720"/>
+<xsd:enumeration value="r0721"/>
+<xsd:enumeration value="r0722"/>
+<xsd:enumeration value="r0723"/>
+<xsd:enumeration value="r0724"/>
+<xsd:enumeration value="r0725"/>
+<xsd:enumeration value="r0726"/>
+<xsd:enumeration value="r0727"/>
+<xsd:enumeration value="r0728"/>
+<xsd:enumeration value="r0729"/>
+<xsd:enumeration value="r0730"/>
+<xsd:enumeration value="r0731"/>
+<xsd:enumeration value="r0732"/>
+<xsd:enumeration value="r0733"/>
+<xsd:enumeration value="r0734"/>
+<xsd:enumeration value="r0735"/>
+<xsd:enumeration value="r0736"/>
+<xsd:enumeration value="r0737"/>
+<xsd:enumeration value="r0738"/>
+<xsd:enumeration value="r0739"/>
+<xsd:enumeration value="r0740"/>
+<xsd:enumeration value="r0741"/>
+<xsd:enumeration value="r0742"/>
+<xsd:enumeration value="r0743"/>
+<xsd:enumeration value="r0744"/>
+<xsd:enumeration value="r0745"/>
+<xsd:enumeration value="r0746"/>
+<xsd:enumeration value="r0747"/>
+<xsd:enumeration value="r0748"/>
+<xsd:enumeration value="r0749"/>
+<xsd:enumeration value="r0750"/>
+<xsd:enumeration value="r0751"/>
+<xsd:enumeration value="r0752"/>
+<xsd:enumeration value="r0753"/>
+<xsd:enumeration value="r0754"/>
+<xsd:enumeration value="r0755"/>
+<xsd:enumeration value="r0756"/>
+<xsd:enumeration value="r0757"/>
+<xsd:enumeration value="r0758"/>
+<xsd:enumeration value="r0759"/>
+<xsd:enumeration value="r0760"/>
+<xsd:enumeration value="r0761"/>
+<xsd:enumeration value="r0762"/>
+<xsd:enumeration value="r0763"/>
+<xsd:enumeration value="r0764"/>
+<xsd:enumeration value="r0765"/>
+<xsd:enumeration value="r0766"/>
+<xsd:enumeration value="r0767"/>
+<xsd:enumeration value="r0768"/>
+<xsd:enumeration value="r0769"/>
+<xsd:enumeration value="r0770"/>
+<xsd:enumeration value="r0771"/>
+<xsd:enumeration value="r0772"/>
+<xsd:enumeration value="r0773"/>
+<xsd:enumeration value="r0774"/>
+<xsd:enumeration value="r0775"/>
+<xsd:enumeration value="r0776"/>
+<xsd:enumeration value="r0777"/>
+<xsd:enumeration value="r0778"/>
+<xsd:enumeration value="r0779"/>
+<xsd:enumeration value="r0780"/>
+<xsd:enumeration value="r0781"/>
+<xsd:enumeration value="r0782"/>
+<xsd:enumeration value="r0783"/>
+<xsd:enumeration value="r0784"/>
+<xsd:enumeration value="r0785"/>
+<xsd:enumeration value="r0786"/>
+<xsd:enumeration value="r0787"/>
+<xsd:enumeration value="r0788"/>
+<xsd:enumeration value="r0789"/>
+<xsd:enumeration value="r0790"/>
+<xsd:enumeration value="r0791"/>
+<xsd:enumeration value="r0792"/>
+<xsd:enumeration value="r0793"/>
+<xsd:enumeration value="r0794"/>
+<xsd:enumeration value="r0795"/>
+<xsd:enumeration value="r0796"/>
+<xsd:enumeration value="r0797"/>
+<xsd:enumeration value="r0798"/>
+<xsd:enumeration value="r0799"/>
+<xsd:enumeration value="r0800"/>
+<xsd:enumeration value="r0801"/>
+<xsd:enumeration value="r0802"/>
+<xsd:enumeration value="r0803"/>
+<xsd:enumeration value="r0804"/>
+<xsd:enumeration value="r0805"/>
+<xsd:enumeration value="r0806"/>
+<xsd:enumeration value="r0807"/>
+<xsd:enumeration value="r0808"/>
+<xsd:enumeration value="r0809"/>
+<xsd:enumeration value="r0810"/>
+<xsd:enumeration value="r0811"/>
+<xsd:enumeration value="r0812"/>
+<xsd:enumeration value="r0813"/>
+<xsd:enumeration value="r0814"/>
+<xsd:enumeration value="r0815"/>
+<xsd:enumeration value="r0816"/>
+<xsd:enumeration value="r0817"/>
+<xsd:enumeration value="r0818"/>
+<xsd:enumeration value="r0819"/>
+<xsd:enumeration value="r0820"/>
+<xsd:enumeration value="r0821"/>
+<xsd:enumeration value="r0822"/>
+<xsd:enumeration value="r0823"/>
+<xsd:enumeration value="r0824"/>
+<xsd:enumeration value="r0825"/>
+<xsd:enumeration value="r0826"/>
+<xsd:enumeration value="r0827"/>
+<xsd:enumeration value="r0828"/>
+<xsd:enumeration value="r0829"/>
+<xsd:enumeration value="r0830"/>
+<xsd:enumeration value="r0831"/>
+<xsd:enumeration value="r0832"/>
+<xsd:enumeration value="r0833"/>
+<xsd:enumeration value="r0834"/>
+<xsd:enumeration value="r0835"/>
+<xsd:enumeration value="r0836"/>
+<xsd:enumeration value="r0837"/>
+<xsd:enumeration value="r0838"/>
+<xsd:enumeration value="r0839"/>
+<xsd:enumeration value="r0840"/>
+<xsd:enumeration value="r0841"/>
+<xsd:enumeration value="r0842"/>
+<xsd:enumeration value="r0843"/>
+<xsd:enumeration value="r0844"/>
+<xsd:enumeration value="r0845"/>
+<xsd:enumeration value="r0846"/>
+<xsd:enumeration value="r0847"/>
+<xsd:enumeration value="r0848"/>
+<xsd:enumeration value="r0849"/>
+<xsd:enumeration value="r0850"/>
+<xsd:enumeration value="r0851"/>
+<xsd:enumeration value="r0852"/>
+<xsd:enumeration value="r0853"/>
+<xsd:enumeration value="r0854"/>
+<xsd:enumeration value="r0855"/>
+<xsd:enumeration value="r0856"/>
+<xsd:enumeration value="r0857"/>
+<xsd:enumeration value="r0858"/>
+<xsd:enumeration value="r0859"/>
+<xsd:enumeration value="r0860"/>
+<xsd:enumeration value="r0861"/>
+<xsd:enumeration value="r0862"/>
+<xsd:enumeration value="r0863"/>
+<xsd:enumeration value="r0864"/>
+<xsd:enumeration value="r0865"/>
+<xsd:enumeration value="r0866"/>
+<xsd:enumeration value="r0867"/>
+<xsd:enumeration value="r0868"/>
+<xsd:enumeration value="r0869"/>
+<xsd:enumeration value="r0870"/>
+<xsd:enumeration value="r0871"/>
+<xsd:enumeration value="r0872"/>
+<xsd:enumeration value="r0873"/>
+<xsd:enumeration value="r0874"/>
+<xsd:enumeration value="r0875"/>
+<xsd:enumeration value="r0876"/>
+<xsd:enumeration value="r0877"/>
+<xsd:enumeration value="r0878"/>
+<xsd:enumeration value="r0879"/>
+<xsd:enumeration value="r0880"/>
+<xsd:enumeration value="r0881"/>
+<xsd:enumeration value="r0882"/>
+<xsd:enumeration value="r0883"/>
+<xsd:enumeration value="r0884"/>
+<xsd:enumeration value="r0885"/>
+<xsd:enumeration value="r0886"/>
+<xsd:enumeration value="r0887"/>
+<xsd:enumeration value="r0888"/>
+<xsd:enumeration value="r0889"/>
+<xsd:enumeration value="r0890"/>
+<xsd:enumeration value="r0891"/>
+<xsd:enumeration value="r0892"/>
+<xsd:enumeration value="r0893"/>
+<xsd:enumeration value="r0894"/>
+<xsd:enumeration value="r0895"/>
+<xsd:enumeration value="r0896"/>
+<xsd:enumeration value="r0897"/>
+<xsd:enumeration value="r0898"/>
+<xsd:enumeration value="r0899"/>
+<xsd:enumeration value="r0900"/>
+<xsd:enumeration value="r0901"/>
+<xsd:enumeration value="r0902"/>
+<xsd:enumeration value="r0903"/>
+<xsd:enumeration value="r0904"/>
+<xsd:enumeration value="r0905"/>
+<xsd:enumeration value="r0906"/>
+<xsd:enumeration value="r0907"/>
+<xsd:enumeration value="r0908"/>
+<xsd:enumeration value="r0909"/>
+<xsd:enumeration value="r0910"/>
+<xsd:enumeration value="r0911"/>
+<xsd:enumeration value="r0912"/>
+<xsd:enumeration value="r0913"/>
+<xsd:enumeration value="r0914"/>
+<xsd:enumeration value="r0915"/>
+<xsd:enumeration value="r0916"/>
+<xsd:enumeration value="r0917"/>
+<xsd:enumeration value="r0918"/>
+<xsd:enumeration value="r0919"/>
+<xsd:enumeration value="r0920"/>
+<xsd:enumeration value="r0921"/>
+<xsd:enumeration value="r0922"/>
+<xsd:enumeration value="r0923"/>
+<xsd:enumeration value="r0924"/>
+<xsd:enumeration value="r0925"/>
+<xsd:enumeration value="r0926"/>
+<xsd:enumeration value="r0927"/>
+<xsd:enumeration value="r0928"/>
+<xsd:enumeration value="r0929"/>
+<xsd:enumeration value="r0930"/>
+<xsd:enumeration value="r0931"/>
+<xsd:enumeration value="r0932"/>
+<xsd:enumeration value="r0933"/>
+<xsd:enumeration value="r0934"/>
+<xsd:enumeration value="r0935"/>
+<xsd:enumeration value="r0936"/>
+<xsd:enumeration value="r0937"/>
+<xsd:enumeration value="r0938"/>
+<xsd:enumeration value="r0939"/>
+<xsd:enumeration value="r0940"/>
+<xsd:enumeration value="r0941"/>
+<xsd:enumeration value="r0942"/>
+<xsd:enumeration value="r0943"/>
+<xsd:enumeration value="r0944"/>
+<xsd:enumeration value="r0945"/>
+<xsd:enumeration value="r0946"/>
+<xsd:enumeration value="r0947"/>
+<xsd:enumeration value="r0948"/>
+<xsd:enumeration value="r0949"/>
+<xsd:enumeration value="r0950"/>
+<xsd:enumeration value="r0951"/>
+<xsd:enumeration value="r0952"/>
+<xsd:enumeration value="r0953"/>
+<xsd:enumeration value="r0954"/>
+<xsd:enumeration value="r0955"/>
+<xsd:enumeration value="r0956"/>
+<xsd:enumeration value="r0957"/>
+<xsd:enumeration value="r0958"/>
+<xsd:enumeration value="r0959"/>
+<xsd:enumeration value="r0960"/>
+<xsd:enumeration value="r0961"/>
+<xsd:enumeration value="r0962"/>
+<xsd:enumeration value="r0963"/>
+<xsd:enumeration value="r0964"/>
+<xsd:enumeration value="r0965"/>
+<xsd:enumeration value="r0966"/>
+<xsd:enumeration value="r0967"/>
+<xsd:enumeration value="r0968"/>
+<xsd:enumeration value="r0969"/>
+<xsd:enumeration value="r0970"/>
+<xsd:enumeration value="r0971"/>
+<xsd:enumeration value="r0972"/>
+<xsd:enumeration value="r0973"/>
+<xsd:enumeration value="r0974"/>
+<xsd:enumeration value="r0975"/>
+<xsd:enumeration value="r0976"/>
+<xsd:enumeration value="r0977"/>
+<xsd:enumeration value="r0978"/>
+<xsd:enumeration value="r0979"/>
+<xsd:enumeration value="r0980"/>
+<xsd:enumeration value="r0981"/>
+<xsd:enumeration value="r0982"/>
+<xsd:enumeration value="r0983"/>
+<xsd:enumeration value="r0984"/>
+<xsd:enumeration value="r0985"/>
+<xsd:enumeration value="r0986"/>
+<xsd:enumeration value="r0987"/>
+<xsd:enumeration value="r0988"/>
+<xsd:enumeration value="r0989"/>
+<xsd:enumeration value="r0990"/>
+<xsd:enumeration value="r0991"/>
+<xsd:enumeration value="r0992"/>
+<xsd:enumeration value="r0993"/>
+<xsd:enumeration value="r0994"/>
+<xsd:enumeration value="r0995"/>
+<xsd:enumeration value="r0996"/>
+<xsd:enumeration value="r0997"/>
+<xsd:enumeration value="r0998"/>
+<xsd:enumeration value="r0999"/>
+<xsd:enumeration value="r1000"/>
+</xsd:restriction>
+</xsd:simpleType>
+    
+  
+
+</xs:schema>
