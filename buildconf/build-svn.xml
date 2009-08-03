@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="../" default="svn-update" name="SVN Update">
+  <property file="build.properties" />
+
+  <property name="svn.base.url" value="${svn.repository.url}/${svn.project.base.path}" />
+
+  <condition property="svnant.home" value="${basedir}/tools/svnant-1.3.0">
+    <equals arg1="${svn.version}" arg2="1.6"/>
+  </condition>
+  <condition property="svnant.home" value="${basedir}/tools/svnant-1.2.1">
+    <equals arg1="${svn.version}" arg2="1.5"/>
+  </condition>
+  
+  <property location="${svnant.home}/lib" name="svnant.lib.dir" />
+  <property name="svnant.taskdef" value="org/tigris/subversion/svnant/svnantlib.xml" />
+  <property name="svnant.javahl" value="true" />
+
+  <path id="svnant.classpath">
+    <fileset dir="${svnant.lib.dir}">
+      <include name="**/*.jar" />
+    </fileset>
+  </path>
+
+  <!-- loads the svn task -->
+  <taskdef classpathref="svnant.classpath" resource="${svnant.taskdef}" />
+
+  <target name="tool-availability">
+    <available classpathref="svnant.classpath" property="available.svnant" resource="${svnant.taskdef}" />
+    <echo message="SVN-ANT is available = ${available.svnant}" />
+  </target>
+
+  <target depends="tool-availability" name="svn-update">
+    <fail message="SVN-ANT is not available, cannot perform svn ant tasks." unless="available.svnant" />
+
+    <input message="Subversion username:" addproperty="username" />
+    <input message="Subversion password for ${username}:" addproperty="password">
+      <handler classname="org.apache.tools.ant.input.SecureInputHandler" />
+    </input>
+
+    <property name="destPath" value="${basedir}" />
+    <svn javahl="${svnant.javahl}" password="${password}" username="${username}">
+      <update dir="${basedir}" />
+    </svn>
+  </target>
+</project>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="../../" default="prepare-static" name="xMod Static Dependencies">
+  <import file="../../build.xml" />
+  
+  <property location="${build.dir}/static" name="static.build.dir" />
+  <property location="${static.build.dir}/aggregation" name="aggr.build.dir" />
+  <property location="${static.build.dir}/content" name="content.build.dir" />
+
+  <target depends="prepare, prepare-metadata" name="prepare-static">
+    <antcall target="create-properties-xslt" />
+    <antcall target="create-aggregation" />
+    <antcall target="copy-assets" />
+    <antcall target="copy-images" />
+    <antcall target="copy-schema" />
+  </target>
+
+  <target depends="prepare" name="create-properties-xslt">
+    <xslt in="${properties.dir}/properties.xml" out="${style.dir}/properties/properties.xsl"
+      style="${style.dir}/properties/properties-generator.xsl">
+      <factory name="net.sf.saxon.TransformerFactoryImpl" />
+    </xslt>
+  </target>
+
+  <target depends="prepare" name="create-aggregation">
+    <xslt basedir="${source.dir}" destdir="${aggr.build.dir}" extension=".xml" filedirparameter="filedir"
+      filenameparameter="filename" includes="**/*.xml" style="${style.dir}/spec/xinclude.xsl">
+      <factory name="net.sf.saxon.TransformerFactoryImpl" />
+
+      <param expression="${properties.dir}/properties.xml" name="properties" />
+      <param expression="${menu.dir}/main.xml" name="menu" />
+      <param expression="${metadata.dir}/files.xml" name="files" />
+      <param expression="${metadata.dir}/images.xml" name="images" />
+      <param expression="${source.dir}" name="sourcedir" />
+    </xslt>
+  </target>
+
+  <target depends="prepare" name="copy-assets">
+    <copy todir="${static.build.dir}/${assets.dir.name}">
+      <fileset dir="${assets.dir}" />
+    </copy>
+  </target>
+  
+  <target depends="prepare" name="copy-images">
+    <copy todir="${static.build.dir}/${images.dir.name}">
+      <fileset dir="${images.dir}" />
+    </copy>
+  </target>
+  
+  <target depends="prepare" name="copy-schema">
+    <copy todir="${static.build.dir}/${schema.dir.name}">
+      <fileset dir="${schema.dir}" />
+    </copy>
+  </target>
+
+  <target name="delete-aggregation">
+    <delete dir="${aggr.build.dir}" />
+  </target>
+</project>

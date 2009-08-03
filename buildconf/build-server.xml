@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="../" default="dev" name="xMod Server Update">
+  <import file="../build.xml" />
+  
+  <target name="dev">
+    <antcall target="user-credentials" />
+    
+    <scp todir="${username}:${password}@${server.url}:${server.dev.path}">
+      <fileset dir="${server.source.path}">
+        <exclude name="**/WEB-INF/**"/>
+      </fileset>
+    </scp>
+  </target>
+  
+  <target name="user-credentials">
+    <input message="username:" addproperty="username" />
+    <input message="password for ${username}:" addproperty="password">
+      <handler classname="org.apache.tools.ant.input.SecureInputHandler" />
+    </input>
+  </target>
+  
+  <target name="dev-full">
+    <antcall target="user-credentials" />    
+    
+    <scp todir="${username}:${password}@${server.url}:${server.dev.path}">
+      <fileset dir="${server.source.path}" />
+    </scp>
+  </target>
+  
+  <target name="stg">
+    <antcall target="user-credentials" />
+    
+    <scp todir="${username}:${password}@${server.url}:${server.stg.path}">
+      <fileset dir="${server.source.path}">
+        <exclude name="**/WEB-INF/**"/>
+      </fileset>
+    </scp>
+  </target>
+  
+  <target name="stg-full">
+    <antcall target="user-credentials" />
+    
+    <scp todir="${username}:${password}@${server.url}:${server.stg.path}">
+      <fileset dir="${server.source.path}" />
+    </scp>
+  </target>
+  
+  <target name="liv">
+    <antcall target="user-credentials" />
+    
+    <scp todir="${username}:${password}@${server.url}:${server.liv.path}">
+      <fileset dir="${server.source.path}">
+        <exclude name="**/WEB-INF/**"/>
+      </fileset>
+    </scp>
+  </target>
+  
+  <target name="liv-full">
+    <antcall target="user-credentials" />
+    
+    <scp todir="${username}:${password}@${server.url}:${server.liv.path}">
+      <fileset dir="${server.source.path}" />
+    </scp>
+  </target>
+</project>

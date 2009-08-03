@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="../" default="anxtras-availability" name="AntXtras">
+  <property location="${basedir}/tools/antxtras_2.0.0b1/lib" name="antxtras.lib.dir" />
+  <property value="org/jwaresoftware/antxtras/install/antlib.xml" name="antxtras.resource" />
+  
+  <path id="antxtras.classpath">
+    <fileset dir="${antxtras.lib.dir}">
+      <include name="**/*.jar" />
+    </fileset>
+  </path>
+  
+  <!-- loads the AntXtras task -->
+  <taskdef classpathref="antxtras.classpath" resource="${antxtras.resource}" />
+  
+  <target name="antxtras-availability">
+    <available classpathref="antxtras.classpath" property="available.antxtras" resource="${antxtras.resource}" />
+    <echo message="AntXtras is available = ${available.antxtras}" />
+  </target>
+</project>
