@@ -18,6 +18,9 @@
   </target>
 
   <target name="copy-cocoon" depends="prepare">
+    <query name="username" />
+    <query name="password" password="true" />
+    
     <svn javahl="${svnant.javahl}" password="${password}" username="${username}">
       <checkout url="${svn.cocoon.url}" destPath="${cocoon.build.dir}" />
     </svn>

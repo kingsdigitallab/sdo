@@ -6,8 +6,8 @@
                 version="2.0">
    <xsl:variable name="xmp:context-path" select="''"/>
    <xsl:variable name="xmp:assets-path"
-                 select="'/home/tamara/cchsvn/schenker/trunk/xmldev/xmod/build/static/_a'"/>
+                 select="'/home/tamara/cchsvn/schenker/trunk/build/static/_a'"/>
    <xsl:variable name="xmp:images-path"
-                 select="'/home/tamara/cchsvn/schenker/trunk/xmldev/xmod/build/static/images'"/>
+                 select="'/home/tamara/cchsvn/schenker/trunk/                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     build/static/images'"/>
    <xsl:variable name="xmp:menu-label-wrapper" select="''"/>
 </xsl:stylesheet>

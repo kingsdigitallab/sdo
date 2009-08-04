@@ -29,13 +29,11 @@
     <echo message="SVN-ANT is available = ${available.svnant}" />
   </target>
 
-  <target depends="tool-availability" name="svn-update">
+  <target depends="tool-availability" name="svn-update" unless="svn.no.update">
     <fail message="SVN-ANT is not available, cannot perform svn ant tasks." unless="available.svnant" />
 
-    <input message="Subversion username:" addproperty="username" />
-    <input message="Subversion password for ${username}:" addproperty="password">
-      <handler classname="org.apache.tools.ant.input.SecureInputHandler" />
-    </input>
+    <query name="username" />
+    <query name="password" password="true" />
 
     <property name="destPath" value="${basedir}" />
     <svn javahl="${svnant.javahl}" password="${password}" username="${username}">

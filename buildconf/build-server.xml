@@ -13,10 +13,8 @@
   </target>
   
   <target name="user-credentials">
-    <input message="username:" addproperty="username" />
-    <input message="password for ${username}:" addproperty="password">
-      <handler classname="org.apache.tools.ant.input.SecureInputHandler" />
-    </input>
+    <query name="username" />
+    <query name="password" password="true" />
   </target>
   
   <target name="dev-full">

@@ -6,6 +6,8 @@
   <!-- properties -->
   <property location="${basedir}/build" name="build.dir" />
 
+  <property name="svn.update" value="true" />
+
   <property name="assets.dir.name" value="_a" />
   <property location="${basedir}/${assets.dir.name}" name="assets.dir" />
   
@@ -30,9 +32,15 @@
 
   <target name="prepare">
     <mkdir dir="${build.dir}" />
+    
+    <condition property="svn.no.update">
+      <equals arg1="${svn.update}" arg2="false" casesensitive="false" />
+    </condition>
   </target>
   
-  <target name="prepare-metadata" depends="prepare, svn-update">
+  <target name="prepare-metadata" depends="prepare">
+    <antcall target="svn-update" />
+    
     <xslt in="${properties.dir}/properties.xml" out="${source.dir}/_xinclude.xml" style="${style.dir}/metadata/xinclude.xsl">
       <factory name="net.sf.saxon.TransformerFactoryImpl" />
       
