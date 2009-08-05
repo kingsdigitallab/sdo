@@ -337,9 +337,11 @@
             <ul>
               <xsl:for-each select="tei:item">
                 <li>
-                  <xsl:for-each select="tei:figure/tei:graphic">
+                  <a href="{tei:ref/@target}">
+                    <xsl:call-template name="external-link" />
+                  <xsl:for-each select=".//tei:figure/tei:graphic">
                     <xsl:call-template name="showFigure" />
-                  </xsl:for-each>
+                  </xsl:for-each> </a>
                 </li>
               </xsl:for-each>
             </ul>
@@ -1212,7 +1214,8 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
-
+<xsl:template match="tei:figDesc"/>
+  
   <!-- SHOW FIGURE /// REDO IT ///-->
   <xsl:template name="showFigure">
     <!--   Find info for publication images  -->
@@ -1225,16 +1228,16 @@
     <xsl:variable name="img-thm-prefix" select="'thm_'" />
     <!-- path to images -->
     <xsl:variable name="img-path-full" select="concat($img-folder, '/', $img-subpath-full, '/', $img-src)" />
-    <xsl:variable name="img-path-thumb" select="concat($img-folder, '/', $img-subpath-thumb, '/', $img-src)" />
+    <xsl:variable name="img-path-thumb" select="concat($img-folder, '/', $img-subpath-thumb, '/thm_', $img-src)" />
     <!-- Dimensions -->
-    <xsl:variable name="img-width" select="@width" />
-    <xsl:variable name="img-height" select="@height" />
-    <xsl:variable name="img-thm-width" select="@width" />
-    <xsl:variable name="img-thm-height" select="@height" />
-    <xsl:variable name="img-max-height-full" select="@height" />
-    <xsl:variable name="img-max-height-thumb" select="@height" />
+    <xsl:variable name="img-width" select="number(substring-before(@width, 'px'))" />
+    <xsl:variable name="img-height" select="number(substring-before(@height, 'px'))" />
+    <xsl:variable name="img-thm-width" select="number(substring-before(@width, 'px'))" />
+    <xsl:variable name="img-thm-height" select="number(substring-before(@height, 'px'))" />
+    <xsl:variable name="img-max-height-full" select="number(substring-before(@height, 'px'))" />
+    <xsl:variable name="img-max-height-thumb" select="number(substring-before(@height, 'px'))" />
     <!-- Caption or description -->
-    <xsl:variable name="img-cap-desc" select="../figDesc" />
+    <xsl:variable name="img-cap-desc" select="parent::tei:figure/tei:figDesc" />
 
     <!-- Rendition info -->
     <!-- extra width to delimit captions for the inline thumbnails -->
@@ -1357,7 +1360,7 @@
       <!-- Images with renditional information are treated differently, they can be thumbnails, thumbnails with captions or full sized images -->
       <xsl:when test="string(@rend)">
         <xsl:choose>
-          <xsl:when test="@type='thumb'">
+          <xsl:when test="@xmt:type='thumb'">
             <a href="{$img-path-full}">
               <xsl:attribute name="class">
                 <xsl:value-of select="$cap-left-right" />
@@ -1378,7 +1381,7 @@
             </a>
           </xsl:when>
           <!-- Thumbnail with caption inline image -->
-          <xsl:when test="@type='thumb-caption'">
+          <xsl:when test="@xmt:type='thumb-caption'">
             <div class="figure">
               <div class="t{$img-left-right}">
                 <dl style="width: {$img-thm-plus-width}px;">
@@ -1411,6 +1414,18 @@
               </div>
             </div>
           </xsl:when>
+          <xsl:when test="@xmt:type='full'">
+            <xsl:if test="not(preceding-sibling::tei:graphic[@xmt:type='thumb' or @xmt:type='thumb-caption'])">
+              <img class="s{$img-left-right}" src="{$img-path-full}">
+                <!-- @alt info -->
+                <xsl:if test="string($img-cap-desc)">
+                  <xsl:attribute name="alt">
+                    <xsl:value-of select="$img-cap-desc" />
+                  </xsl:attribute>
+                </xsl:if>
+              </img>
+            </xsl:if>
+          </xsl:when>
           <!-- Full size inline image -->
           <xsl:otherwise>
             <img class="s{$img-left-right}" src="{$img-path-full}">
@@ -1426,7 +1441,7 @@
       </xsl:when>
 
       <!-- START Option 3: showing oneoff thumbnail -->
-      <xsl:when test="@type='thumb'">
+      <xsl:when test="@xmt:type='thumb'">
         <!-- Displayed in a div unlike the thumbnails which are inline. -->
         <div class="image">
           <div class="t03">
