@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdo:recordCollection xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
+   xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../schema/schenker.xsd">
+   <!--WSLB-292-->
+   <sdo:collectionDesc>
+      <sdo:source>
+         <!--Select a shelfmark from the controlled list -->
+         <sdo:correspondence shelfmark="WSLB-292"/>
+      </sdo:source>
+      <tei:handNotes>
+         <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+         <tei:handNote xml:id="unknown">Unknown hand</tei:handNote>
+      </tei:handNotes>
+      <tei:respStmt xml:id="IB">
+         <tei:persName>Ian Bent</tei:persName>
+         <tei:resp>Transcription</tei:resp>
+         <tei:resp>Translation</tei:resp>
+         <tei:resp>XML Encoding</tei:resp>
+      </tei:respStmt>
+      <tei:respStmt xml:id="TL">
+         <tei:persName>Tamara Lopez</tei:persName>
+         <tei:resp>XML Encoding Model</tei:resp>
+      </tei:respStmt>
+      <tei:revisionDesc>
+         <tei:change when="2009-03-12" who="#TL">Template Generated</tei:change>
+      </tei:revisionDesc>
+   </sdo:collectionDesc>
+
+   <sdo:record ID="r0001">
+      <!--Use the itemDesc to group information about a single piece of correspondence. 
+                     The itemDesc contains a series of Dublin Core elements. -->
+      <sdo:itemDesc>
+         <dc:title>Handwritten letter from Schenker to Hertzka (UE), dated January 30, 1918</dc:title>
+         <dcterms:created>1918-01-30</dcterms:created>
+         <dcterms:dateSubmitted>2009-03-23</dcterms:dateSubmitted>
+         <dc:description>Schenker complains that Halm's request to receive review copies of others
+            of his works has been ignored by UE, threatens to pay for them himself, and asks to be
+            notified when they are dispatched.</dc:description>
+         <dc:subject>review copies; complimentary copies; Kontrapunkt 1; Counterpoint 1; Bach, C. P.
+            E.; critical edition; Klavierwerke; Keyboard Works; Beitrag zur Ornamentik; Contribution
+            to Ornamentation; Handel; organ concertos; Niloff, Artur; Instrumentations-Tabelle;
+            Instrumentation Table; Chromatic Fantasy and Fugue; price; retail; exchange rate; Mark</dc:subject>
+         <marcrel:correspondent/>
+         <marcrel:recipient><!--Add the key attribute to indicate the recipient of the letter--></marcrel:recipient>
+      </sdo:itemDesc>
+
+      <tei:transcription>
+         <!--Use the opener to contain information occuring at the start of the letter (e.g. the date, the salutation, the address).-->
+         <tei:opener> Sehr geehrter Herr Direktor!<tei:note xml:id="r0001-fn01" type="editorial"
+               place="foot">Writing of this letter is recorded in Schenker's diary at OJ 2/10, p.
+               834 <!--connect--></tei:note>
+         </tei:opener>
+
+         <tei:p>H. Prof. <tei:hi rend="italics">A. Halm</tei:hi> (<tei:hi rend="underline-italics"
+               >Esslingen</tei:hi> u.s.w.), der inzwischen auch noch an anderer Stelle unserer
+               <tei:hi rend="italics">Beeth.</tei:hi>-Ausgabe gedachte, schreibt mir, daß er die
+               „<tei:hi rend="italics">U.E.</tei:hi>“ um die Einsendung meiner <tei:hi
+               rend="underline">übrigen</tei:hi> in ihrem Verlag ersch <tei:subst>
+               <tei:del rend="inline" hand="#HS">ei</tei:del>
+               <tei:add place="inline" hand="#HS">ie</tei:add>
+            </tei:subst> nenen Arbeiten e<tei:supplied resp="#IB" reason="reading"
+            >r</tei:supplied>sucht habe, doch leider bisher ohne Erfolg.<tei:note
+               xml:id="r0001-fn02" type="editorial" place="foot">Halm informs Schenker in his letter
+               of January 20, 1918 (OJ 11/35, 7) that he has requested the items from UE, but met
+               with silence. </tei:note> Ich kann es kaum glauben, daß Herrn <tei:hi rend="italics"
+               >Halm</tei:hi>, gerade ihm, nach einer solchen <tei:unclear reason="illegible"
+               >Paradeleistung</tei:unclear> an Rezension,<tei:note xml:id="r0001-fn03"
+               type="editorial" place="foot">Perhaps August Halm, <tei:title level="a">"Heinrich
+                  Schenker,"</tei:title>
+               <tei:title level="j">
+                  <tei:hi rend="italics">Die Freie Schulgemeinde</tei:hi>
+               </tei:title>, October 1, 1917, preserved in Schenker’s scrapbook, OC 2/p.53 (though
+               it is there described as a "biographical essay," whereas Schenker portrays it as a
+               review of <tei:title>
+                  <tei:hi rend="italics">Die letzten fünf Sonaten von Beethoven</tei:hi>
+               </tei:title>). </tei:note> wie die in Jena gedruckte es ist, andere
+            „Rezensionsexemplare“ verweigert würden. Können Sie sich einen besseren Rezensenten denn
+            überhaupt wählen?</tei:p>
+
+         <tei:p>Sollte dennoch aber wider Erwarten die „<tei:hi rend="italics">U.E.</tei:hi>“ die
+            Exemplare („II,“<tei:note xml:id="r0001-fn04" type="editorial" place="foot">"II" would
+               normally refer to <tei:title level="s">
+                  <tei:hi rend="italics">NMTP</tei:hi>
+               </tei:title>, vol. 2, <tei:title level="m"><tei:hi rend="italics"
+                  >Kontrapunt</tei:hi>, vol. 1</tei:title>, which was published not by UE but by
+               Cotta, who had supplied Halm with copies of <tei:title level="m">
+                  <tei:hi rend="italics">Harmonielehre</tei:hi>
+               </tei:title> and <tei:title level="m"><tei:hi rend="italics">Kontrapunkt</tei:hi>,
+                  vol. 1</tei:title> by July 21, 1917 (OJ 11/35, 9[b]). This item has been heavily
+               double-underlined in crayon, presumably by UE staff, and crossed through. </tei:note>
+            <tei:title><tei:persName>
+                  <tei:hi rend="italics">Em. Bach</tei:hi>
+               </tei:persName> Kr. Ausgabe</tei:title> u. <tei:title level="m">Beitrag zur
+            Orn.</tei:title> (II.Aufl.!), meinetwegen auch den <tei:title>vierhändigen
+            Händel</tei:title> u. <tei:title level="m">Niloff</tei:title> (letze Aufl.!),
+               <tei:title>„chrom. Fantasie“</tei:title><tei:note xml:id="r0001-fn05"
+               type="editorial" place="foot">These items have been heavily sidelined in crayon, and
+               each has been underlined and separately (with the exception of the
+                  <tei:persName>Handel</tei:persName> and <tei:title>Chromatic Fantasy and
+               Fugue</tei:title>) crossed through, presumably by UE staff as they checked each work
+               off.</tei:note>) verweigern, so bin ich bereit, diese Exempare selbst zu bezahlen,
+            doch versteht sich korrekter Weise nach dem ersten <tei:hi rend="underline"
+            >Preis</tei:hi> u. abzüglich <tei:hi rend="italics">Sortimenter</tei:hi>-Prozente, die
+            in diesem Falle unangebracht sind, u. auch nicht nach der Mark-Währung u.s.w., kurz nach <tei:subst>
+               <tei:del rend="inline" hand="#HS">jedem</tei:del>
+               <tei:add place="inline" hand="#HS">jenem</tei:add>
+            </tei:subst> Preis, der auch mir selbst gegenüber eingehalten wurde vor so viel Jahren.
+            Für alle Fälle bitte ich Sie, sehr <tei:pb n="2"/> geehrter H. Direktor, mich von der
+            Absendung zu verständigen, damit ich ein paar Worte der Begleitung an Halm zugleich
+            richten kann. </tei:p>
+
+         <tei:closer> Mit bestem Dank im Voraus <tei:lb/>Ihr ergeb <tei:lb/><tei:signed>
+               <tei:hi rend="italics">H Schenker</tei:hi>
+            </tei:signed>
+            <tei:lb/>0. Jänner 1918 <tei:lb/><tei:lb/>© In the public domain. <tei:lb/>©
+            Transcription Ian D. Bent 2006. </tei:closer>
+      </tei:transcription>
+
+      <tei:translation>
+         <!--Use the opener to contain information occuring at the start of the letter (e.g. the date, the salutation, the address).-->
+         <tei:opener> Dear Director,<tei:ptr corresp="#r0001-fn01" type="footnote"/>
+         </tei:opener>
+
+         <tei:p>Professor August Halm (<tei:hi rend="underline">Esslingen</tei:hi>, etc.), who has
+            made mention of our Beethoven edition in yet another place, has written telling me that
+            he meanwhile asked UE to send him my <tei:hi rend="underline">other</tei:hi> works
+            published by you, but unfortunately without result to date.<tei:ptr
+               corresp="#r0001-fn02" type="footnote"/> I can scarcely believe that Mr. Halm of all
+            people, after such a showcase of a review as he published in Jena,<tei:ptr
+               corresp="#r0001-fn03" type="footnote"/> would be refused other review copies. Does
+            that mean you can actually think of a better reviewer to choose <tei:supplied resp="#IB"
+               reason="clarity">for this</tei:supplied>?</tei:p>
+
+         <tei:p>If however, in spite of this, against all expectation UE should deny <tei:supplied
+               resp="#IB" reason="clarity">him</tei:supplied> the copies (II,<tei:ptr
+               corresp="#r0001-fn04" type="footnote"/>
+            <tei:title><tei:persName>C. P. E. Bach</tei:persName> Critical Edition</tei:title> and
+               <tei:hi rend="italics">Contribution to Ornamentation</tei:hi> (2nd edn!), and as far
+            as I am concerned also the four-hand Handel <tei:supplied resp="#IB" reason="clarity"
+               >organ concerto arrangements</tei:supplied>, Niloff <tei:supplied resp="#IB"
+               reason="clarity">Instrumentation Table</tei:supplied> (2nd edn!), and <tei:hi
+               rend="italics">Chromatic Fantasy and Fugue</tei:hi>,)<tei:ptr corresp="#r0001-fn05"
+               type="footnote"/> then I am prepared to pay for these copies myself, but needless to
+            say in the correct manner according to the <tei:hi rend="underline">original</tei:hi>
+            price and minus the retail mark-up, which is in this case inappropriate, and also not
+            according to the German rate of exchange, etc; in short, at that price which has for so
+            many years been adhered to for my own purchases. In any case, I ask you, my dear <tei:pb
+               n="2"/> Director, to notify me when they are dispatched, so that I can pen a few
+            words to Halm at the same time to accompany them.</tei:p>
+
+
+         <tei:closer> With warmest thanks in advance, <tei:lb/>Yours truly, <tei:lb/><tei:signed>H.
+               Schenker</tei:signed>
+            <tei:lb/>30. Jänner 1918 <tei:lb/><tei:lb/>© Translation Ian D. Bent 2006. </tei:closer>
+      </tei:translation>
+   </sdo:record>
+</sdo:recordCollection>

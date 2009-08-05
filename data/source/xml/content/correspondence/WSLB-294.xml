@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdo:recordCollection xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
+                      xmlns:tei="http://www.tei-c.org/ns/1.0"
+                      xmlns:dc="http://purl.org/dc/elements/1.1/"
+                      xmlns:dcterms="http://purl.org/dc/terms/"
+                      xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../schema/schenker.xsd"><!--WSLB-294--><sdo:collectionDesc>
+      <sdo:source><!--Select a shelfmark from the controlled list --><sdo:correspondence shelfmark="WSLB-294"/>
+      </sdo:source>
+      <!-- Many documents will be in the hand of either Heinrich or Jeanette; add additional notes as needed to indicate
+                     the presence of other hands.--><tei:handNotes>
+         <tei:handNote xml:id="HS" scope="minor">Heinrich Schenker's hand</tei:handNote>
+         <tei:handNote xml:id="JS" scope="major">Jeanette Schenker's hand</tei:handNote>
+         <tei:handNote xml:id="unknown">Unknown hand</tei:handNote>
+      </tei:handNotes>
+      <!-- Add additional or remove unnecessary statements of responsiblity as needed below --><tei:respStmt xml:id="IB">
+         <tei:persName>Ian Bent</tei:persName>
+         <!-- Add additional or remove unnecessary specific responsibility notes.--><tei:resp>Transcription</tei:resp>
+         <tei:resp>XML Encoding</tei:resp>
+         <tei:resp>Translation</tei:resp>
+      </tei:respStmt>
+      <tei:respStmt xml:id="TL">
+         <tei:persName>Tamara Lopez</tei:persName>
+         <tei:resp>XML Encoding Model</tei:resp>
+      </tei:respStmt>
+      <!-- Add additional change elements below to note major changes to the document --><tei:revisionDesc>
+         <tei:change when="2009-03-12" who="#TL">Template Generated</tei:change>
+      </tei:revisionDesc>
+   </sdo:collectionDesc>
+   <sdo:record ID="r0001"><!--Use the itemDesc to group information about a single piece of correspondence. 
+                     The itemDesc contains a series of Dublin Core elements. --><sdo:itemDesc>
+         <dc:title>A Descriptive Title Goes Here</dc:title>
+         <dcterms:created>The Date of Original Creation Goes Here: YYYY-MM-DD</dcterms:created>
+         <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
+         <dc:description>A summary of the contents of the record</dc:description>
+         <dc:subject>A list of subjects</dc:subject>
+         <marcrel:correspondent><!--Add the key attribute to indicate the sender of the letter--></marcrel:correspondent>
+         <marcrel:recipient><!--Add the key attribute to indicate the recipient of the letter--></marcrel:recipient>
+      </sdo:itemDesc>
+      <tei:transcription><!--Use the opener to contain information occuring at the start of the letter (e.g. the date, the salutation, the address).--><tei:opener>
+            <tei:date/>
+         </tei:opener>
+         <tei:p>The German Transcription should be added to paragraphs.</tei:p>
+         <tei:closer><!--Use the closer to contain information occuring at the end of the letter (e.g. signatures, dates).--></tei:closer>
+         <!--Indicate postscript information using a postscript element (as necessary). Text within the postscript may also be grouped into paragraphs.--></tei:transcription>
+      <tei:translation><!--Use the opener to contain information occuring at the start of the letter (e.g. the date, the salutation, the address).--><tei:opener>
+            <tei:date/>
+         </tei:opener>
+         <tei:p>The English translation should be added to paragraphs.</tei:p>
+         <tei:closer><!--Use the closer to contain information occuring at the end of the letter (e.g. signatures, dates).--></tei:closer>
+         <!--Indicate postscript information using a postscript element (as necessary). Text within the postscript may also be grouped into paragraphs.--></tei:translation>
+   </sdo:record>
+</sdo:recordCollection>

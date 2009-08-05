@@ -1,0 +1,20 @@
+<xs:schema xmlns="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dcterms="http://purl.org/dc/terms/">
+  <xs:element name="correspondence">
+    <xs:complexType>
+      <xs:attribute use="required" name="shelfmark">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="OC-52-244"/>
+            <xs:enumeration value="OC-52-245"/>
+            <xs:enumeration value="OC-52-246"/>
+            <xs:enumeration value="OC-52-247"/>
+            <xs:enumeration value="OJ-12-17-6"/>
+            <xs:enumeration value="OJ-12-17-7"/>
+            <xs:enumeration value="OJ-12-17-8"/>
+            <xs:enumeration value="OJ-12-17-9"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
