@@ -33,7 +33,7 @@
 
     <!-- default -->
     <xslt basedir="${aggr.build.dir}" destdir="${content.build.dir}" excludes="doc/**, examples/**" extension=".html"
-      filedirparameter="filedir" filenameparameter="filename" includes="**/*.xml" style="${style.dir}/spec/default.xsl">
+      filedirparameter="filedir" filenameparameter="filename" includes="**/*.xml" style="${style.dir}/spec/site.xsl">
       <factory name="net.sf.saxon.TransformerFactoryImpl">
         <attribute name="http://saxon.sf.net/feature/xinclude-aware" value="true" />
       </factory>
