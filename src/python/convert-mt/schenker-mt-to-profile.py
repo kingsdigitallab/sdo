@@ -36,14 +36,14 @@ from xml.etree import ElementTree as ET
 #####################################
 
 # MoveableType data file
-mtfile = "/projects/cch/schenker/data/movable-type/schenker_documents_online.txt"
-outpath = "/projects/cch/schenker/data/profiles"
-logpath = "/projects/cch/schenker/src/python/logs"
+mtfile = "/home/tamara/cchsvn/schenker/trunk/data/movable-type/schenker_documents_online.txt"
+outpath = "/tmp/profiles"
+logpath = "/tmp/logs"
 
 # declarations at beginning of XML file
 pidic = {
          "xml" : 'version="1.0"',
-         "oxygen" : 'RNGSchema="../../../../schema/tei/xmod_web.rnc" type="compact"'
+         "oxygen" : 'RNGSchema="../../../../../schema/tei/xmod_web.rnc" type="compact"'
         }
 
 # basename (for filename) to use should "BASENAME" header be empty
@@ -113,9 +113,9 @@ htmlformatsdicORI = {
                   '</strong>' : '</hi>',
                   '<b>'       : '<hi rend="bold">',
                   '</b>'      : '</hi>',
-                  '<em>'      : '<hi rend="italics">',
+                  '<em>'      : '<hi rend="italic">',
                   '</em>'     : '</hi>',
-                  '<i>'       : '<hi rend="italics">',
+                  '<i>'       : '<hi rend="italic">',
                   '</i>'      : '</hi>'
                   }
                   
@@ -124,24 +124,24 @@ htmlformatsdic = {
                   '</strong>' : '@@o/hi@@c',
                   '<b>'       : '@@ohi rend=@@qbold@@q@@c',
                   '</b>'      : '@@o/hi@@c',
-                  '<em>'      : '@@ohi rend=@@qitalics@@q@@c',
+                  '<em>'      : '@@ohi rend=@@qitalic@@q@@c',
                   '</em>'     : '@@o/hi@@c',
-                  '<i>'       : '@@ohi rend=@@qitalics@@q@@c',
+                  '<i>'       : '@@ohi rend=@@qitalic@@q@@c',
                   '</i>'      : '@@o/hi@@c',
-                  '<u>'       : '@@ohi rend=@@qunderline@@q@@c',
+                  '<u>'       : '@@ohi rend=@@qitalic@@q@@c',
                   '</u>'      : '@@o/hi@@c'
                   }
                   
 wikiformatsdic = {
                   '**' : ['<hi rend="bold">', '</hi>'],
                   '*'  : ['<hi rend="bold">', '</hi>'],
-                  '_'  : ['<hi rend="italics">', '</hi>']
+                  '_'  : ['<hi rend="italic">', '</hi>']
                   }
 
 rewikiformatsdic = {
                   '**' : [r'\*\*(.+?)\*\*', r'<hi rend="bold">', '</hi>', '<hi rend="bold">\\1</hi>'],
                   '*'  : [r'\*(.+?)\*', r'<hi rend="bold">', '</hi>', '<hi rend="bold">\\1</hi>'],
-                  '_'  : [r'_', r'<hi rend="italics">', '</hi>', '<hi rend="italics">\\1</hi>']
+                  '_'  : [r'_', r'<hi rend="italic">', '</hi>', '<hi rend="italic">\\1</hi>']
                   }
 
 wikiformatslist = [
@@ -238,6 +238,10 @@ def checkDirs():
         print
         sys.exit(2)
 
+def makeCatDirs():
+
+    for c in profileprimcatlist:
+        os.makedirs(os.path.join(outpath, c.lower()))
 
 def insertIntoHeadFreqDict(k):
     if hfreqdic.has_key(k):
@@ -373,21 +377,21 @@ def buildXMLSkeleton():
     
     skeldic["teiHeader"] = ET.SubElement(skeldic["root"], "teiHeader")
     skeldic["fileDesc"] = ET.SubElement(skeldic["teiHeader"], "fileDesc")
-    skeldic["titleStmt"] = ET.SubElement(skeldic["teiHeader"], "titleStmt")
+    skeldic["titleStmt"] = ET.SubElement(skeldic["fileDesc"], "titleStmt")
     skeldic["title"] = ET.SubElement(skeldic["titleStmt"], "title")
     skeldic["respStmt"] = ET.SubElement(skeldic["titleStmt"], "respStmt")
     skeldic["resp"] = ET.SubElement(skeldic["respStmt"], "resp")
     skeldic["respdate"] = ET.SubElement(skeldic["resp"], "date")
     skeldic["name"] = ET.SubElement(skeldic["respStmt"], "name")
-    skeldic["publicationStmt"] = ET.SubElement(skeldic["teiHeader"], "publicationStmt")
+    skeldic["publicationStmt"] = ET.SubElement(skeldic["fileDesc"], "publicationStmt")
     skeldic["publisher"] = ET.SubElement(skeldic["publicationStmt"], "publisher")
     skeldic["address"] = ET.SubElement(skeldic["publicationStmt"], "address")
     skeldic["addrLine1"] = ET.SubElement(skeldic["address"], "addrLine")
     skeldic["addrLine2"] = ET.SubElement(skeldic["address"], "addrLine")
-    skeldic["notesStmt"] = ET.SubElement(skeldic["teiHeader"], "notesStmt")
+    skeldic["notesStmt"] = ET.SubElement(skeldic["fileDesc"], "notesStmt")
     # skeldic["note1"] = ET.SubElement(skeldic["notesStmt"], "note")
     # skeldic["note2"] = ET.SubElement(skeldic["notesStmt"], "note")
-    skeldic["sourceDesc"] = ET.SubElement(skeldic["teiHeader"], "sourceDesc")
+    skeldic["sourceDesc"] = ET.SubElement(skeldic["fileDesc"], "sourceDesc")
     skeldic["psource"] = ET.SubElement(skeldic["sourceDesc"], "p")
     skeldic["encodingDesc"] = ET.SubElement(skeldic["teiHeader"], "encodingDesc")
     skeldic["pencoding"] = ET.SubElement(skeldic["encodingDesc"], "p")
@@ -505,11 +509,11 @@ def convertWikiFormats(repf, bdic):
 
         # bdic[k] = re.sub(r"\*\*(.+?)\*\*", '<hi rend="bold">\\1</hi>', bdic[k])
         # bdic[k] = re.sub(r"\*(.+?)\*", '<hi rend="bold">\\1</hi>', bdic[k])
-        # bdic[k] = re.sub(r"_(.+?)_", '<hi rend="italics">\\1</hi>', bdic[k])
+        # bdic[k] = re.sub(r"_(.+?)_", '<hi rend="italic">\\1</hi>', bdic[k])
 
         bdic[k] = re.sub(r"\*\*(.+?)\*\*", '@@ohi rend=@@qbold@@q@@c\\1@@o/hi@@c', bdic[k])
         bdic[k] = re.sub(r"\*(.+?)\*", '@@ohi rend=@@qbold@@q@@c\\1@@o/hi@@c', bdic[k])
-        bdic[k] = re.sub(r"_(.+?)_", '@@ohi rend=@@qitalics@@q@@c\\1@@o/hi@@c', bdic[k])
+        bdic[k] = re.sub(r"_(.+?)_", '@@ohi rend=@@qitalic@@q@@c\\1@@o/hi@@c', bdic[k])
     return bdic
 
 def convertHrefLinks(repf, bdic):
@@ -587,18 +591,25 @@ def processProfile(repf, hdic, bd):
         basename = "CCHPROVIDED"
     else:
         basename = hdic["BASENAME"]
+
+    if (headdic.has_key("PRIMARY CATEGORY")) and (headdic["PRIMARY CATEGORY"] in profileprimcatlist):
+        outdir = hdic["PRIMARY CATEGORY"].lower()
+    else:
+        outdir = ""
+ 
     # in case basename is duplicated (i. e. it is in basenameslist)
     # generate unique basename by adding current date and time
     if basename in basenameslist:
         basename += "-" + time.strftime("%Y%m%d%H%M", time.localtime())
     xmlskeldic["root"].set("xml:id", basename)
     basenameslist.append(basename)
-    outfilepath = os.path.join(outpath, basename + ".xml")
+    outfilepath = os.path.join(outpath, outdir, basename + ".xml")
     writeXMLFile(repf, outfilepath, xmlskeldic["root"])
     return basenameslist
 
 if __name__ == '__main__':
     checkDirs()
+    makeCatDirs()
     repf = getRepfileObject(logpath)
     # get file object to read MoveableType file
     mtfobj = file(mtfile, "r")
