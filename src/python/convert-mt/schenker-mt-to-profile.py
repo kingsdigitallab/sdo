@@ -26,6 +26,7 @@ import StringIO
 import re
 import time
 import os, os.path
+import shutil
 from xml.etree import ElementTree as ET
 
 #####################################
@@ -237,8 +238,14 @@ def checkDirs():
 
 def makeCatDirs():
 
+    # If it is already there, delete then remake, otherwise, just recreate
     for c in profileprimcatlist:
-        os.makedirs(os.path.join(outpath, c.lower()))
+        if os.path.exists(os.path.join(outpath,c.lower())):
+            shutil.rmtree(os.path.join(outpath, c.lower()))
+            os.makedirs(os.path.join(outpath, c.lower()))
+        else:
+            os.makedirs(os.path.join(outpath, c.lower()))
+             
 
 def insertIntoHeadFreqDict(k):
     if hfreqdic.has_key(k):
