@@ -392,12 +392,14 @@ def buildXMLSkeleton():
     skeldic["address"] = ET.SubElement(skeldic["publicationStmt"], "address")
     skeldic["addrLine1"] = ET.SubElement(skeldic["address"], "addrLine")
     skeldic["addrLine2"] = ET.SubElement(skeldic["address"], "addrLine")
-    skeldic["notesStmt"] = ET.SubElement(skeldic["fileDesc"], "notesStmt")
     # skeldic["note1"] = ET.SubElement(skeldic["notesStmt"], "note")
     # skeldic["note2"] = ET.SubElement(skeldic["notesStmt"], "note")
     skeldic["sourceDesc"] = ET.SubElement(skeldic["fileDesc"], "sourceDesc")
     skeldic["psource"] = ET.SubElement(skeldic["sourceDesc"], "p")
     skeldic["encodingDesc"] = ET.SubElement(skeldic["teiHeader"], "encodingDesc")
+    skeldic["profileDesc"] = ET.SubElement(skeldic["teiHeader"], "profileDesc")
+    skeldic["textClass"] = ET.SubElement(skeldic["profileDesc"], "textClass")
+    skeldic["keywords"] = ET.SubElement(skeldic["textClass"], "keywords")
     skeldic["pencoding"] = ET.SubElement(skeldic["encodingDesc"], "p")
     skeldic["revisionDesc"] = ET.SubElement(skeldic["teiHeader"], "revisionDesc")
     skeldic["change1"] = ET.SubElement(skeldic["revisionDesc"], "change")
@@ -531,16 +533,18 @@ def processTags(repf, hdic, bd, xmldic):
         tag = tag.strip()
         tag = tag.strip('"')
         tag = tag.strip()
-        tagnote = ET.SubElement(xmldic["notesStmt"], "note")
-        tagnote.text = tag
-        tagnote.set("type", "MT-tag")
+        tagterm = ET.SubElement(xmldic["keywords"], "term")
+        tagterm.text = tag
+        xmldic["keywords"].set("scheme", "MT")
+        tagterm.set("subtype", "tag")
 
 def processPrimaryCategory(repf, hdic, bd, xmldic):
     tag = hdic["PRIMARY CATEGORY"]
     tag = tag.strip()
-    tagnote = ET.SubElement(xmldic["notesStmt"], "note")
-    tagnote.text = tag
-    tagnote.set("type", "MT-category")
+    tagterm = ET.SubElement(xmldic["keywords"], "term")
+    tagterm.text = tag
+    xmldic["keywords"].set("scheme", "MT")
+    tagterm.set("subtype", "category")
     
 def processConversionDate(repf, hdic, bd, xmldic):
     # tag = time.strftime("%Y%m%d%H%M", time.localtime())
