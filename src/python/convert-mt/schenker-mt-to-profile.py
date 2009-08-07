@@ -4,9 +4,6 @@
 
 # TODO:
 
-# QUESTIONS:
-# - how should "<u>" be handled, for the time being I render it as '<hi rend="underline">'
-
 # PROBLEMS:
 # - mixed content in body - markup that I inserted by "replace" and not by
 #   using etree's methods is escaped when XML file is written
