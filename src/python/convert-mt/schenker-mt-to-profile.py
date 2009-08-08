@@ -3,14 +3,11 @@
 # extract MoveableType profile information and write to TEI XML file
 
 # TODO:
-# * The headword has mixed content - this is being properly converted to <hi>
-#   in the body, but not when it appears in the titleStmt or in the head for
-#   the entry (knorr_iwan.html).
 # * Perhaps related to this, accented characters appear to be handled differently
 #   in the head, titleStmt and body (see adler_guido.xml)
-# * The tag <small> should be detected and removed - there is no equivalent in
+# - The tag <small> should be detected and removed - there is no equivalent in
 #   the TEI. (see wiener_dr_karl_von.xml, for example)
-# * Similarly, the bq. should be handled - this is to create a blockquote,
+# - Similarly, the bq. should be handled - this is to create a blockquote,
 #   but there is no close tag so it would be difficult to do this reliably.
 #   Is it possible to check for this string and then to comment it out,
 #   e.g. <!-- bq. -->, or is that too risky?
@@ -29,6 +26,9 @@
 # - how should other body parts ("EXTENDED BODY", etc.) be marked up?
 #   right now they are just paragraphs
 #   put in comment between paragraphs, i. e.: <!-- EXTENDED BODY -->
+# - The headword has mixed content - this is being properly converted to <hi>
+#   in the body, but not when it appears in the titleStmt or in the head for
+#   the entry (knorr_iwan.html).
 
 
 import sys
@@ -45,9 +45,14 @@ from xml.etree import ElementTree as ET
 #####################################
 
 # MoveableType data file
-mtfile = "/home/tamara/cchsvn/schenker/trunk/data/movable-type/schenker_documents_online.txt"
-outpath = "/tmp/profiles"
-logpath = "/tmp/logs"
+# TL
+# mtfile = "/home/tamara/cchsvn/schenker/trunk/data/movable-type/schenker_documents_online.txt"
+# outpath = "/tmp/profiles"
+# logpath = "/tmp/logs"
+# GB
+mtfile = "/projects/cch/schenker/data/movable-type/schenker_documents_online.txt"
+outpath = "/xi/schenker/profiles"
+logpath = "/xi/schenker/logs"
 
 # declarations at beginning of XML file
 pidic = {
@@ -504,7 +509,13 @@ def getHeadWord(fh, bd):
         hw = "XXXXX"
         printCF(fh, 1, "XXXXX")
         nohwcount += 1
+    hw = convertHtmlFormatsInHead(hw)
     return hw
+
+def convertHtmlFormatsInHead(w):
+    for h in htmlformatsdic.keys():
+        w = w.replace(h, htmlformatsdic[h])
+    return w
 
 def convertHtmlFormats(repf, bdic):
     for k in bdic.keys():
@@ -644,6 +655,8 @@ if __name__ == '__main__':
             printCF(repf, 1, "processing entry #%d" % (entrynum
                                                        , ))
             basenameswrittenlist = processProfile(repf, headdic, body)
+            # TEST for Ò<small>Ó
+            # print ÔSMALLÕ, body.find(Ò<small>Ó)
     
 
     printHeadKeyStats(repf)
