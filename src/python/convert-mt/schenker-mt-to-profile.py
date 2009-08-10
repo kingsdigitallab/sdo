@@ -30,6 +30,18 @@
 #   in the body, but not when it appears in the titleStmt or in the head for
 #   the entry (knorr_iwan.html).
 
+# PRETTYPRINT:
+# -------------------------------------------
+# from xml.minidom import parseString
+# from xml.etree import ElementTree
+# 
+# def prettyPrint(element):
+#     txt = ElementTree.tostring(element)
+#     print minidom.parseString(txt).toprettyxml()
+# -------------------------------------------
+# xmlpp.py
+# -------------------------------------------
+
 
 import sys
 import string
@@ -655,8 +667,8 @@ if __name__ == '__main__':
             printCF(repf, 1, "processing entry #%d" % (entrynum
                                                        , ))
             basenameswrittenlist = processProfile(repf, headdic, body)
-            # TEST for Ò<small>Ó
-            # print ÔSMALLÕ, body.find(Ò<small>Ó)
+            # TEST for "<small>"
+            # print "SMALL":, body.find("<small>")
     
 
     printHeadKeyStats(repf)
