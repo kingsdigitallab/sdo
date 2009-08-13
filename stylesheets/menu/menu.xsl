@@ -118,7 +118,7 @@
           <xsl:value-of select="$href" />
         </xsl:attribute>
         
-        <xsl:value-of select="@label" />
+        <span><xsl:value-of select="@label" /></span>
       </a>
       
       <xsl:if test="$output-sub-items = true()">
