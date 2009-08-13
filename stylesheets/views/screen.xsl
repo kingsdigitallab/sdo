@@ -18,6 +18,7 @@
     <xsl:call-template name="xmv:body" />
     </html>
   </xsl:template>
+  
   <xsl:template name="xmv:header">
     <head>
     <title><xsl:text>Schenker Documents Online</xsl:text>
@@ -30,6 +31,7 @@
     <xsl:call-template name="xmv:script" />
     </head>
   </xsl:template>
+  
   <xsl:template name="xmv:meta">
     <meta content="text/html; charset=utf-8" http-equiv="content-type" />
     <meta content="xMod 2.0" name="generator" />
@@ -55,14 +57,28 @@
     <meta content="no" http-equiv="imagetoolbar" />
     <meta content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" name="SKYPE_TOOLBAR" />
   </xsl:template>
+  
   <xsl:template name="xmv:css">
+    <link href="{$xmp:assets-path}/c/print.css" media="print" rel="stylesheet" type="text/css" />
     <link href="{$xmp:assets-path}/c/default.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <link href="{$xmp:assets-path}/c/personality.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <xsl:comment>
+      <xsl:text>[if lte IE 6]&gt; &lt;link href="</xsl:text>
+      <xsl:value-of select="$xmp:assets-path" />
+      <xsl:text>/c/compat_MSIE_6_0_lte.css" rel="stylesheet" type="text/css" /&gt;&lt;![endif]</xsl:text>
+    </xsl:comment>
+    <xsl:comment>
+      <xsl:text>[if IE 7]&gt; &lt;link href="</xsl:text>
+      <xsl:value-of select="$xmp:assets-path" />
+      <xsl:text>/c/compat_MSIE_7_0_gte.css" rel="stylesheet" type="text/css" /&gt;&lt;![endif]</xsl:text>
+    </xsl:comment>    
   </xsl:template>
+  
   <xsl:template name="xmv:script">
     <script src="{$xmp:assets-path}/j/jquery-1.3.2.min.js" type="text/javascript">&#160;</script>
     <script src="{$xmp:assets-path}/s/config.js" type="text/javascript">&#160;</script>
   </xsl:template>
+  
   <xsl:template name="xmv:body">
     <body class="v1 r3 rc0" id="xmd">
     <div id="wrapper">
@@ -106,6 +122,7 @@
     </div>
     </body>
   </xsl:template>
+  
   <xsl:template name="xmv:banner">
     <div id="banner">
       <div class="utilLinks">
@@ -130,6 +147,7 @@
       <h1><span>Schenker Documents Online</span></h1>
     </div>
   </xsl:template>
+  
   <xsl:template name="xmv:footer">
     <div id="footer">
       <div class="utilLinks">
