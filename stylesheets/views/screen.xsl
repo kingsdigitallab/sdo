@@ -98,9 +98,9 @@
           <td id="content"><xsl:call-template name="xms:rhcontent" />
             
             <div id="mainContent">
-              <xsl:call-template name="xms:options1" />
+             <!-- <xsl:call-template name="xms:options1" />-->
               
-              <xsl:call-template name="xms:submenu" />
+            <!-- <xsl:call-template name="xms:submenu" />-->
               
               <xsl:call-template name="xms:pagehead" />
               
@@ -110,9 +110,9 @@
               
               <xsl:call-template name="xms:footnotes" />
               
-              <xsl:call-template name="xms:toc2" />
+<!--              <xsl:call-template name="xms:toc2" />-->
               
-              <xsl:call-template name="xms:options2" />
+<!--              <xsl:call-template name="xms:options2" />-->
               
             </div></td>
         </tr>
