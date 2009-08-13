@@ -3,19 +3,36 @@
 <root label="Main Sections" xmlns="http://www.cch.kcl.ac.uk/xmod/menu/1.0">
   <menu href="index.html" label="Home" />
 
-  <menu href="index.html" label="About us" root="about" />
+  <menu label="Project Information" root="about" >
+    <item href="project_aims.html" label="Project Aims" />
+    <item href="contributing_scholars.html" label="Contributing Scholars" />
+    <item href="financial_support.html" label="Financial Support" />
+    <item href="ethical_statement.html" label="Ethical Statement" />
+  </menu>
 
-  <menu href="index.html" label="Documentation" root="doc" />
+<menu label="Background" root="commentary">
+  <item href="project_history.html" label="Project History"/>
+  <item href="bibliography.html" label="Bibliography"/>
+</menu>
+  
+  <menu label="Editorial Guide" root="editorial_guide">
+    <item href="editorial_conventions.html" label="Editorial Conventions"/>
+  </menu>
 
-  <menu href="example01.html" label="Examples" root="examples">
+  <menu label="Texts" root="texts">
+    <item href="diaries.html" label="Diaries"/>
+    <item href="correspondence.html" label="Correspondence"/>
+    <item href="lessonbooks.html" label="Lessonbooks"/>
+  </menu>
+  
+    
+  <menu href="example01.html" label="CCH TEI Examples" root="examples">
     <item href="example02.html" label="Tables and Lists" />
     <item href="example03.html" label="Images and Logos" />
     <item href="example04.html" label="Address" />
     <item href="example05.html" label="Form" />
     <item href="sitemap.html" label="Sitemap" />
   </menu>
-
-  <menu label="Links">
-    <external href="http://www.kcl.ac.uk/cch" label="CCH" />
-  </menu>
+  
+  
 </root>
