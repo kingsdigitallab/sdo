@@ -10,8 +10,8 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   
   <xsl:template name="xmm:menu-top">
-    <div>
-      <ul>
+    <div id="pn">
+      <ul class="pn1">
         <xsl:for-each select="//xmm:root/xmm:menu">
           <xsl:call-template name="xmm:menu-item">
             <xsl:with-param name="output-sub-items" select="false()" />
@@ -35,10 +35,10 @@
   </xsl:template>
   
   <xsl:template name="xmm:format-top-sub">
-    <div class="nvl">
-      <h5>
+    <div id="sn">
+      <h3>
         <xsl:value-of select="@label" />
-      </h5>
+      </h3>
       <ul>
         <xsl:apply-templates />
       </ul>
