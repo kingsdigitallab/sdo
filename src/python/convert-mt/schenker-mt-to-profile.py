@@ -13,12 +13,12 @@
 #   e.g. <!-- bq. -->, or is that too risky?
 
 # PROBLEMS:
+
+# DONE:
 # - mixed content in body - markup that I inserted by "replace" and not by
 #   using etree's methods is escaped when XML file is written
 #   find a solution!!
 #   I write etree tree to StringIO object, do a replace on the string, and write to file 
-
-# DONE:
 # - id in TEI element, see comment in sdo-profile-template.xml
 # - should resp/date be without time? format of date. OK
 # - date format for change date: 12/11/2008. OK
@@ -612,8 +612,8 @@ def processProfile(repf, hdic, bd):
     profcount += 1
     xmlskeldic = buildXMLSkeleton()
     headword = getHeadWord(repf, bd)
-    xmlskeldic["title"].text = headword
-    xmlskeldic["bodyhead"].text = headword
+    xmlskeldic["title"].text = headword.decode("utf8")
+    xmlskeldic["bodyhead"].text = headword.decode("utf8")
     # xmlskeldic["respdate"].text = hdic["DATE"]
     xmlskeldic["respdate"].text = convertAmericanToEuropeanDate(hdic["DATE"])
     xmlskeldic["name"].text = hdic["AUTHOR"]
