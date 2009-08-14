@@ -5,8 +5,11 @@
 # TODO:
 # * Perhaps related to this, accented characters appear to be handled differently
 #   in the head, titleStmt and body (see adler_guido.xml)
+#   I have fixed "title" and "bodyhead", check other possible places, too!!!
+# 
 # - The tag <small> should be detected and removed - there is no equivalent in
 #   the TEI. (see wiener_dr_karl_von.xml, for example)
+# 
 # - Similarly, the bq. should be handled - this is to create a blockquote,
 #   but there is no close tag so it would be difficult to do this reliably.
 #   Is it possible to check for this string and then to comment it out,
