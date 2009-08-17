@@ -491,7 +491,9 @@ def writeXMLFile(repf, ofp, root):
     print >> ofpobj, ET.tostring(oxy)
     
     tree = ET.ElementTree(root)
-    tree.write(ofpobj)
+    # tree.write(ofpobj)
+    # write real UNICODE in etree and not character entities 
+    tree.write(ofpobj, encoding="utf8")
     xmlstr = ofpobj.getvalue()
     ofpobj.close()
     xmlstr = fixMixedContent(xmlstr)
