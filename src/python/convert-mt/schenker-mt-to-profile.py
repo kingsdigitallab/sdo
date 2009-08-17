@@ -3,17 +3,6 @@
 # extract MoveableType profile information and write to TEI XML file
 
 # TODO:
-# * Perhaps related to this, accented characters appear to be handled differently
-#   in the head, titleStmt and body (see adler_guido.xml)
-#   I have fixed "title" and "bodyhead", check other possible places, too!!!
-# 
-# - The tag <small> should be detected and removed - there is no equivalent in
-#   the TEI. (see wiener_dr_karl_von.xml, for example)
-# 
-# - Similarly, the bq. should be handled - this is to create a blockquote,
-#   but there is no close tag so it would be difficult to do this reliably.
-#   Is it possible to check for this string and then to comment it out,
-#   e.g. <!-- bq. -->, or is that too risky?
 
 # PROBLEMS:
 
@@ -32,6 +21,18 @@
 # - The headword has mixed content - this is being properly converted to <hi>
 #   in the body, but not when it appears in the titleStmt or in the head for
 #   the entry (knorr_iwan.html).
+# - Perhaps related to this, accented characters appear to be handled differently
+#   in the head, titleStmt and body (see adler_guido.xml)
+#   I have fixed "title" and "bodyhead", check other possible places, too!!!
+# 
+# - The tag <small> should be detected and removed - there is no equivalent in
+#   the TEI. (see wiener_dr_karl_von.xml, for example)
+#   now represented as <!-- small --> and <!-- /small -->
+# 
+# - Similarly, the bq. should be handled - this is to create a blockquote,
+#   but there is no close tag so it would be difficult to do this reliably.
+#   Is it possible to check for this string and then to comment it out,
+#   e.g. <!-- bq. -->, or is that too risky?
 
 # PRETTYPRINT:
 # -------------------------------------------
@@ -61,13 +62,13 @@ from xml.etree import ElementTree as ET
 
 # MoveableType data file
 # TL
-# mtfile = "/home/tamara/cchsvn/schenker/trunk/data/movable-type/schenker_documents_online.txt"
-# outpath = "/tmp/profiles"
-# logpath = "/tmp/logs"
+mtfile = "/home/tamara/cchsvn/schenker/trunk/data/movable-type/schenker_documents_online.txt"
+outpath = "/tmp/profiles"
+logpath = "/tmp/logs"
 # GB
-mtfile = "/projects/cch/schenker/data/movable-type/schenker_documents_online.txt"
-outpath = "/xi/schenker/profiles"
-logpath = "/xi/schenker/logs"
+# mtfile = "/projects/cch/schenker/data/movable-type/schenker_documents_online.txt"
+# outpath = "/xi/schenker/profiles"
+# logpath = "/xi/schenker/logs"
 
 # declarations at beginning of XML file
 pidic = {
@@ -149,6 +150,9 @@ htmlformatsdicORI = {
                   }
                   
 htmlformatsdic = {
+                  'bq.'       : '@@o!-- bq. --@@c',
+                  '<small>'   : '@@o!-- small --@@c',
+                  '</small>'  : '@@o!-- /small --@@c',
                   '<strong>'  : '@@ohi rend=@@qbold@@q@@c',
                   '</strong>' : '@@o/hi@@c',
                   '<b>'       : '@@ohi rend=@@qbold@@q@@c',
@@ -189,6 +193,7 @@ wikiformatslist = [
 #  counter for empty headwords
 hwcount = 0
 nohwcount = 0
+bqcount = 0
 #  counter for profiles
 profcount = 0
 
@@ -535,9 +540,13 @@ def convertHtmlFormatsInHead(w):
     return w
 
 def convertHtmlFormats(repf, bdic):
+    # for analysis
+    # global bqcount
     for k in bdic.keys():
         for h in htmlformatsdic.keys():
             bdic[k] = bdic[k].replace(h, htmlformatsdic[h])
+            # for analysis
+            # bqcount += bdic[k].count("bq.")
     return bdic
 
 def convertWikiFormats(repf, bdic):
@@ -680,4 +689,6 @@ if __name__ == '__main__':
     
     
     repf.close()
+    # for analysis
+    # print "BQCOUNT:", bqcount
     print "--== FINISHED ==--"
