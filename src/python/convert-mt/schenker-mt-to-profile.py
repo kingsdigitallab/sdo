@@ -151,8 +151,10 @@ htmlformatsdicORI = {
                   
 htmlformatsdic = {
                   'bq.'       : '@@o!-- bq. --@@c',
-                  '<small>'   : '@@o!-- small --@@c',
-                  '</small>'  : '@@o!-- /small --@@c',
+                  '<small>'   : '',
+                  '</small>'  : '',
+                  # '<small>'   : '@@o!-- small --@@c',
+                  # '</small>'  : '@@o!-- /small --@@c',
                   '<strong>'  : '@@ohi rend=@@qbold@@q@@c',
                   '</strong>' : '@@o/hi@@c',
                   '<b>'       : '@@ohi rend=@@qbold@@q@@c',
@@ -492,8 +494,9 @@ def writeXMLFile(repf, ofp, root):
     # write declarations
     dec = ET.ProcessingInstruction("xml", pidic["xml"])
     oxy = ET.ProcessingInstruction("oxygen", pidic["oxygen"])
-    print >> ofpobj, ET.tostring(dec)
-    print >> ofpobj, ET.tostring(oxy)
+    # print >> ofpobj, ET.tostring(dec)
+    # print >> ofpobj, ET.tostring(oxy)
+    oxystr = ET.tostring(oxy)
     
     tree = ET.ElementTree(root)
     # tree.write(ofpobj)
@@ -502,6 +505,11 @@ def writeXMLFile(repf, ofp, root):
     xmlstr = ofpobj.getvalue()
     ofpobj.close()
     xmlstr = fixMixedContent(xmlstr)
+    # I had to resort to this crude method for inserting this processing instruction
+    # giving the option "encoding" in "tree.write" above inserts an XML declaration at
+    # the start of the file, we cannot therefore insert the processing instruction
+    # with etree means between the XML declaration and the root element
+    xmlstr = xmlstr.replace("<TEI", oxystr + "\n" + "<TEI")
     ofpobj = file(ofp, "w")
     ofpobj.write(xmlstr)
     ofpobj.close()
