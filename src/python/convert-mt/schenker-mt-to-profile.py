@@ -421,6 +421,8 @@ def buildXMLSkeleton():
     skeldic["fileDesc"] = ET.SubElement(skeldic["teiHeader"], "fileDesc")
     skeldic["titleStmt"] = ET.SubElement(skeldic["fileDesc"], "titleStmt")
     skeldic["title"] = ET.SubElement(skeldic["titleStmt"], "title")
+    skeldic["filingTitle"] = ET.SubElement(skeldic["titleStmt"], "title")
+    skeldic["filingTitleTerm"] = ET.SubElement(skeldic["filingTitle"], "term")
     skeldic["respStmt"] = ET.SubElement(skeldic["titleStmt"], "respStmt")
     skeldic["resp"] = ET.SubElement(skeldic["respStmt"], "resp")
     skeldic["respdate"] = ET.SubElement(skeldic["resp"], "date")
@@ -438,6 +440,7 @@ def buildXMLSkeleton():
     skeldic["profileDesc"] = ET.SubElement(skeldic["teiHeader"], "profileDesc")
     skeldic["textClass"] = ET.SubElement(skeldic["profileDesc"], "textClass")
     skeldic["keywords"] = ET.SubElement(skeldic["textClass"], "keywords")
+    skeldic["keywordsEats"] = ET.SubElement(skeldic["textClass"], "keywords")
     skeldic["pencoding"] = ET.SubElement(skeldic["encodingDesc"], "p")
     skeldic["revisionDesc"] = ET.SubElement(skeldic["teiHeader"], "revisionDesc")
     skeldic["change1"] = ET.SubElement(skeldic["revisionDesc"], "change")
@@ -483,6 +486,8 @@ def fixMixedContent(xs):
     xs = xs.replace("@@o", "<")
     xs = xs.replace("@@c", ">")
     xs = xs.replace("@@q", '"')
+    xs = xs.replace("@@u", '_') # specifically to preserve underscores in basenames
+
     return xs
 
 def writeXMLFile(repf, ofp, root):
@@ -501,7 +506,7 @@ def writeXMLFile(repf, ofp, root):
     tree = ET.ElementTree(root)
     # tree.write(ofpobj)
     # write real UNICODE in etree and not character entities 
-    tree.write(ofpobj, encoding="utf8")
+    tree.write(ofpobj, encoding="utf-8")
     xmlstr = ofpobj.getvalue()
     ofpobj.close()
     xmlstr = fixMixedContent(xmlstr)
@@ -580,8 +585,14 @@ def convertWikiFormats(repf, bdic):
 
 def convertHrefLinks(repf, bdic):
     for k in bdic.keys():
-        bdic[k] = re.sub(r"""<a href="(.+?)">(.+?)</a>""", '@@oref@@c\\2@@o!-- MT Link: \\1 --@@c@@o/ref@@c', bdic[k])
+        bdic[k] = re.sub(r"""<a href="\.\./\.\./profile/.+?/(.+?).html">(.+?)</a>""", '@@oref cRef=@@q\\1@@q@@c\\2@@o/ref@@c', bdic[k])
+        bdic[k] = re.sub(r"""cRef=@@q(.+?)_(.+?)@@q@@c""", 'cRef=@@q\\1@@u\\2@@q@@c', bdic[k])
+        bdic[k] = re.sub(r"""cRef=@@q(.+?)_(.+?)_(.+?)@@q@@c""", 'cRef=@@q\\1@@u\\2@@u\\3@@q@@c', bdic[k])
+        bdic[k] = re.sub(r"""cRef=@@q(.+?)_(.+?)_(.+?)_(.+?)@@q@@c""", 'cRef=@@q\\1@@u\\2@@u\\3@@u\\4@@q@@c', bdic[k])
+        bdic[k] = re.sub(r"""cRef=@@q(.+?)_(.+?)_(.+?)_(.+?)_(.+?)@@q@@c""", 'cRef=@@q\\1@@u\\2@@u\\3@@u\\4@@u\\5@@q@@c', bdic[k])
+    
     return bdic
+    
 
 def processTags(repf, hdic, bd, xmldic):
     taglist = hdic["TAGS"].split(",")
@@ -602,6 +613,19 @@ def processPrimaryCategory(repf, hdic, bd, xmldic):
     xmldic["keywords"].set("scheme", "MT")
     tagterm.set("subtype", "category")
     
+def processBaseName(repf, hdic, bd, xmldic):
+    tag = hdic["BASENAME"]
+    tag = tag.strip()
+    tagterm = ET.SubElement(xmldic["keywords"], "term")
+    xmldic["keywords"].set("scheme", "MT")
+    tagterm.text = tag
+    tagterm.set("subtype", "basename")
+
+def processEatsStub(repf, hdic, bd, xmldic):
+    tagterm = ET.SubElement(xmldic["keywordsEats"], "term")
+    xmldic["keywordsEats"].set("scheme", "EATS")
+    tagterm.set("key", "nNNNNNNN")
+
 def processConversionDate(repf, hdic, bd, xmldic):
     # tag = time.strftime("%Y%m%d%H%M", time.localtime())
     # tag = time.strftime("%Y%m%d", time.localtime())
@@ -634,7 +658,13 @@ def processProfile(repf, hdic, bd):
     profcount += 1
     xmlskeldic = buildXMLSkeleton()
     headword = getHeadWord(repf, bd)
+    filingTitle= hdic["TITLE"].decode("utf8")
+    filingTitleSortkey = hdic["BASENAME"]
+    
     xmlskeldic["title"].text = headword.decode("utf8")
+    xmlskeldic["filingTitle"].set("type", "file")
+    xmlskeldic["filingTitleTerm"].text = filingTitle
+    xmlskeldic["filingTitleTerm"].set("sortKey", filingTitleSortkey)
     xmlskeldic["bodyhead"].text = headword.decode("utf8")
     # xmlskeldic["respdate"].text = hdic["DATE"]
     xmlskeldic["respdate"].text = convertAmericanToEuropeanDate(hdic["DATE"])
@@ -642,11 +672,13 @@ def processProfile(repf, hdic, bd):
     if hdic.has_key("TAGS"):
         processTags(repf, hdic, bd, xmlskeldic)
     processPrimaryCategory(repf, hdic, bd, xmlskeldic)
+    processBaseName(repf, hdic, bd, xmlskeldic)
+    processEatsStub(repf, hdic, bd, xmlskeldic)
     processConversionDate(repf, hdic, bd, xmlskeldic)
     bodydic = getBodyParts(repf, bd)
-    bodydic = convertHtmlFormats(repf, bodydic)
-    bodydic = convertWikiFormats(repf, bodydic)
+    bodydic = convertHtmlFormats(repf, bodydic)   
     bodydic = convertHrefLinks(repf, bodydic)
+    bodydic = convertWikiFormats(repf, bodydic)
     processConvertedBody(repf, hdic, bodydic, xmlskeldic)
     # print "-" * 50
     # print bd
@@ -656,7 +688,7 @@ def processProfile(repf, hdic, bd):
     else:
         basename = hdic["BASENAME"]
 
-    if (headdic.has_key("PRIMARY CATEGORY")) and (headdic["PRIMARY CATEGORY"] in profileprimcatlist):
+    if (hdic.has_key("PRIMARY CATEGORY")) and (hdic["PRIMARY CATEGORY"] in profileprimcatlist):
         outdir = hdic["PRIMARY CATEGORY"].lower()
     else:
         outdir = ""
