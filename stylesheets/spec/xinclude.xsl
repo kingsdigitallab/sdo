@@ -7,6 +7,7 @@
   <xsl:param name="menu" />
   <xsl:param name="files" />
   <xsl:param name="images" />
+  <xsl:param name="indexes" />
   <xsl:param name="sourcedir" />
   <xsl:param name="filedir" />
   <xsl:param name="filename" />
@@ -16,7 +17,7 @@
       <xi:include href="{$properties}" />
       <xi:include href="{$menu}" />
       <xi:include href="{$files}" />
-      <!--<xi:include href="{$images}" />-->
+      <xi:include href="{$indexes}" />
       <xi:include href="{$sourcedir}/{$filedir}/{$filename}" />
     </aggregation>
   </xsl:template>
