@@ -15,7 +15,20 @@
   </xsl:template>
 
   <xsl:template match="file">
-    <entry xml:id="{tei:TEI/@xml:id}" filename="{replace(tokenize(@path, '/')[last()], '.xml', '.html')}" index="{lower-case(tei:TEI/tei:teiHeader/tei:profileDesc/tei:textClass/tei:keywords[@scheme='MT']/tei:term[@subtype='category'])}"
+    <xsl:variable name="fileName">
+    <xsl:choose>
+     <xsl:when test="contains(@path,'/')"><!--  this is a *ix OS -->
+       <xsl:value-of select="replace(tokenize(@path, '/')[last()], '.xml', '.html')"/>
+     </xsl:when>
+     <xsl:when test="contains(@path,'\')"><!-- this is the *best* designed OS in.the.world.  So clean, so scalable, so in tune with the rest of the planet.  -->
+       <xsl:value-of select="replace(tokenize(@path, '\\')[last()], '.xml', '.html')"/>
+     </xsl:when> 
+      
+    </xsl:choose>
+      </xsl:variable>
+       
+     
+    <entry xml:id="{tei:TEI/@xml:id}" filename="{$fileName}" index="{lower-case(tei:TEI/tei:teiHeader/tei:profileDesc/tei:textClass/tei:keywords[@scheme='MT']/tei:term[@subtype='category'])}"
       title="{tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)]}" 
       filingTitle="{tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type = 'file']/tei:term}"
       sortkey="{tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type = 'file']/tei:term/@sortKey}" 
