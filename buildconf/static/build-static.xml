@@ -3,9 +3,10 @@
   <import file="build-static-depends.xml" />
 
   <target depends="prepare-static" name="static">
+    
     <!-- documentation -->
     <xslt basedir="${aggr.build.dir}" destdir="${content.build.dir}" extension=".html" filedirparameter="filedir"
-      filenameparameter="filename" includes="doc/*.xml" style="${style.dir}/spec/doc.xsl">
+      filenameparameter="filename" includes="examples/doc/*.xml" style="${style.dir}/spec/doc.xsl">
       <factory name="net.sf.saxon.TransformerFactoryImpl">
         <attribute name="http://saxon.sf.net/feature/xinclude-aware" value="true" />
       </factory>
@@ -30,7 +31,22 @@
       
       <param expression="html" name="fileextension" />
     </xslt>
-
+    
+    <!-- profile entries -->
+    <xslt basedir="${aggr.build.dir}" destdir="${content.build.dir}" extension=".html" filedirparameter="filedir"
+      filenameparameter="filename" excludes="profiles/index.xml" includes="profiles/**" style="${style.dir}/spec/profiles/entry.xsl">
+      <factory name="net.sf.saxon.TransformerFactoryImpl">
+        <attribute name="http://saxon.sf.net/feature/xinclude-aware" value="true" />
+      </factory>
+      
+      <outputproperty name="indent" value="yes"/>
+      <outputproperty name="method" value="xhtml"/>
+      <outputproperty name="omit-xml-declaration" value="yes"/>
+      
+      <param expression="html" name="fileextension" />
+    </xslt>
+   
+   
     <!-- default -->
     <xslt basedir="${aggr.build.dir}" destdir="${content.build.dir}" excludes="doc/**, examples/**" extension=".html"
       filedirparameter="filedir" filenameparameter="filename" includes="**/*.xml" style="${style.dir}/spec/site.xsl">
@@ -45,6 +61,61 @@
       <param expression="html" name="fileextension" />
     </xslt>
 
+    <!-- indexes -->
+    
+    <antcall target="profile-index"/>
     <antcall target="delete-aggregation" />
   </target>
+  
+  
+  
+  <target name="profile-index">
+           <antcall target="profile-xslt">
+        <param name="kind" value="place" />
+           </antcall>
+    <antcall target="profile-xslt">
+      <param name="kind" value="company" />
+    </antcall>
+    
+    <antcall target="profile-xslt">
+      <param name="kind" value="person" />
+    </antcall>
+    
+    <antcall target="profile-xslt">
+      <param name="kind" value="institution" />
+    </antcall>
+    
+    <antcall target="profile-xslt">
+      <param name="kind" value="organization" />
+    </antcall>
+    
+    <antcall target="profile-xslt">
+      <param name="kind" value="title" />
+    </antcall>
+    
+    <antcall target="profile-xslt">
+      <param name="kind" value="work" />
+    </antcall>
+    
+  </target>
+  
+  <target  name="profile-xslt">
+    <echo message="Kind is:  ${kind}"/>    
+    <xslt in="${aggr.build.dir}/profiles/profile.xml" out="${content.build.dir}/profiles/${kind}/index.html"
+      style="${style.dir}/spec/profiles/index.xsl">
+      <factory name="net.sf.saxon.TransformerFactoryImpl">
+        <attribute name="http://saxon.sf.net/feature/xinclude-aware" value="true" />
+      </factory>
+      
+      <outputproperty name="indent" value="yes" />
+      <outputproperty name="method" value="xhtml" />
+      <outputproperty name="omit-xml-declaration" value="yes" />
+      <param expression="profiles/${kind}" name="filedir" />
+      <param expression="html" name="fileextension" />
+      <param expression="${kind}.xml" name="filename" />
+      
+    </xslt>
+  </target>
+  
+  
 </project>
