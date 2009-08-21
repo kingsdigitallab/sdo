@@ -1,38 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?oxygen RNGSchema="../../../schema/menu/menu.rng" type="xml"?>
 <root label="Main Sections" xmlns="http://www.cch.kcl.ac.uk/xmod/menu/1.0">
+  
+  
   <menu href="index.html" label="Home" />
 
-  <menu label="Project Information" root="about" >
+  <menu href="project_aims.html" label="Project Information" root="project_information" >
     <item href="project_aims.html" label="Project Aims" />
     <item href="contributing_scholars.html" label="Contributing Scholars" />
     <item href="financial_support.html" label="Financial Support" />
     <item href="ethical_statement.html" label="Ethical Statement" />
   </menu>
 
-<menu label="Background" root="commentary">
-  <item href="project_history.html" label="Project History"/>
-  <item href="bibliography.html" label="Bibliography"/>
+<menu href="project_history.html" label="Background" root="background">
+   <item label="Project History" href="project_history.html"/>
+   <item href="bibliography.html" label="Bibliography"/>
 </menu>
   
-  <menu label="Editorial Guide" root="editorial_guide">
+  <menu href="editorial_conventions.html" label="Editorial Guide" root="editorial_guide">
     <item href="editorial_conventions.html" label="Editorial Conventions"/>
-  </menu>
+    <item href="how_to_cite.html" label="How to Cite"/>    
+    <item href="conditions_of_use.html" label="Conditions of Use"/>    
+ </menu>
 
-  <menu label="Texts" root="texts">
+  <menu href="diaries.html" label="Texts" root="texts">
     <item href="diaries.html" label="Diaries"/>
     <item href="correspondence.html" label="Correspondence"/>
     <item href="lessonbooks.html" label="Lessonbooks"/>
   </menu>
   
+  <menu label="Profiles" href="index.html" root="profiles">
+    <menu label="Person" href="index.html" root="person"/>
+    <menu label="Place" href="index.html" root="place"/>
+    <menu label="Company" href="index.html" root="company"/>
+    <menu label="Institution" href="index.html" root="institution"/>
+    <menu label="Organization" href="index.html" root="organization"/>
+    <menu label="Work" href="index.html" root="work"/>
+    <menu label="Title" href="index.html" root="title"/>
+  </menu>
+  
     
   <menu href="example01.html" label="CCH TEI Examples" root="examples">
+    <item href="example01.html" label="Simple Markup" />
     <item href="example02.html" label="Tables and Lists" />
     <item href="example03.html" label="Images and Logos" />
     <item href="example04.html" label="Address" />
     <item href="example05.html" label="Form" />
-    <item href="sitemap.html" label="Sitemap" />
-  </menu>
+    <menu label="CCH TEI P5 Documentation" href="index.html" root="doc"/>
+ </menu>
   
   
 </root>
