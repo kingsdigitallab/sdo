@@ -110,9 +110,9 @@
               
               <xsl:call-template name="xms:footnotes" />
               
-<!--              <xsl:call-template name="xms:toc2" />-->
+<!--  <xsl:call-template name="xms:toc2" />-->
               
-<!--              <xsl:call-template name="xms:options2" />-->
+<!--  <xsl:call-template name="xms:options2" />-->
               
             </div></td>
         </tr>
@@ -125,22 +125,22 @@
   
   <xsl:template name="xmv:banner">
     <div id="banner">
-      <div class="utilLinks">
+     <!--  <div class="utilLinks">
         <div class="s02">
-          <form action="">
+         <form action="">
             <fieldset>
               <label for="siteSearch">Search</label>
               <input id="siteSearch" type="text" name="siteSearch" class="s01" />
               <button type="submit">Go</button>
             </fieldset>
-          </form>
+          </form> 
         </div>
         <ul>
           <li><a href="#">Browse</a></li>
           <li><a href="#">Help</a></li>
           <li><a href="#">News</a></li>
         </ul>
-      </div>
+      </div>-->
       <div id="decalRight"><span class="printOnly">Collage: images of Schenker</span></div>
       <div id="decalLeft"><span class="printOnly">Collage: images of Schenker</span></div>
       <!-- Heading can be shown as text or replaced with images -->
