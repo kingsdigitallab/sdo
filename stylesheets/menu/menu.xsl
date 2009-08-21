@@ -233,6 +233,15 @@
               </li>
             </xsl:for-each>
           </xsl:when>
+          <!-- The 'Home' Breadcrumb case -->
+          <xsl:otherwise>
+            <li><a><span/></a></li>
+            <li>
+              <span class="s02">
+                <xsl:value-of select="$xmg:title" />
+              </span>
+            </li>
+          </xsl:otherwise>
         </xsl:choose>
       </ul>
     </div>
