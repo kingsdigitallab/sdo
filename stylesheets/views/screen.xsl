@@ -70,8 +70,13 @@
     <xsl:comment>
       <xsl:text>[if IE 7]&gt; &lt;link href="</xsl:text>
       <xsl:value-of select="$xmp:assets-path" />
-      <xsl:text>/c/compat_MSIE_7_0_gte.css" rel="stylesheet" type="text/css" /&gt;&lt;![endif]</xsl:text>
+      <xsl:text>/c/compat_MSIE_7_0.css" rel="stylesheet" type="text/css" /&gt;&lt;![endif]</xsl:text>
     </xsl:comment>    
+    <xsl:comment>
+      <xsl:text>[if IE 8]&gt; &lt;link href="</xsl:text>
+      <xsl:value-of select="$xmp:assets-path" />
+      <xsl:text>/c/compat_MSIE_8_0.css" rel="stylesheet" type="text/css" /&gt;&lt;![endif]</xsl:text>
+    </xsl:comment>     
   </xsl:template>
   
   <xsl:template name="xmv:script">
