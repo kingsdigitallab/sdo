@@ -59,7 +59,7 @@
         <map:transform type="xinclude" />
         <map:transform src="stylesheets/spec/profiles/index.xsl" type="saxon">
           <map:parameter name="filedir" value="profiles/{1}" />
-          <map:parameter name="filename" value="index.xml" />
+          <map:parameter name="filename" value="{1}" />
           <map:parameter name="fileextension" value="html" />
         </map:transform>
         <map:serialize type="xhtml" />
@@ -69,16 +69,16 @@
         <map:aggregate element="aggregation">
           <map:part src="xml/menu/main.xml" />
           <map:part src="xml/properties/properties.xml" />
-          <map:part src="xml/metadata/indexes.xml" />
+          <map:part src="xml/metadata/files.xml" />
           <map:part src="xml/content/profiles/{1}/{2}.xml" /> 
         </map:aggregate>
        
-      <map:transform src="stylesheets/spec/profiles/entry.xsl" type="saxon">
-          <map:parameter name="filedir" value="profiles/{1}/{2}" />
+     <map:transform src="stylesheets/spec/profiles/entry.xsl" type="saxon">
+          <map:parameter name="filedir" value="profiles/{1}" />
           <map:parameter name="filename" value="{2}.xml" />
           <map:parameter name="fileextension" value="html" />
-        </map:transform> 
-        <map:serialize type="xhtml" />
+        </map:transform>
+        <map:serialize type="xml" />
       </map:match>
       
       

@@ -14,16 +14,15 @@
   <xsl:param name="filedir"/>
   <xsl:param name="filename"/>
   <xsl:param name="fileextension"/>
-
-  <xsl:variable name="kind" select="substring-before($filename,'.')"/>
+  
   <xsl:variable name="xmg:title" select="'Index'"/>
   <xsl:variable name="xmg:pathroot" select="$filedir"/>
   <xsl:variable name="xmg:path"
-    select="concat($filedir, '/', substring-before($filename, '.'), '.', $fileextension)"/>
+    select="concat($filedir, '/', $filename, '.', $fileextension)"/>
 
   
   <xsl:variable name="root" select="/"/>
-  <xsl:key name="alpha-profiles" match="//xmi:index/xmi:entry[@index = $kind]"
+  <xsl:key name="alpha-profiles" match="//xmi:index/xmi:entry[@index = $filename]"
     use="upper-case(substring(@sortkey,1,1))"/>
 
   <xsl:template match="/">
@@ -36,7 +35,7 @@
       <div class="t01">
         <h1>
           <xsl:value-of
-            select="concat(upper-case(substring($kind,1,1)), lower-case(substring($kind,2)))"/>
+            select="concat(upper-case(substring($filename,1,1)), lower-case(substring($filename,2)))"/>
         </h1>
       </div>
     </div>
@@ -78,8 +77,7 @@
         </div>
 
 
-        <xsl:for-each-group select="//xmi:index/xmi:entry[contains(@index, $kind)]"
-          group-by="substring(@xml:id,1,1)">
+        <xsl:for-each-group select="//xmi:index/xmi:entry[contains(@index, $filename)]" group-by="substring(@xml:id,1,1)">
           <h3>
             <a name="{upper-case(substring(current-grouping-key(),1))}"/>
             <xsl:value-of select="upper-case(substring(current-grouping-key(),1))"/>

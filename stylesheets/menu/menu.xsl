@@ -233,6 +233,19 @@
               </li>
             </xsl:for-each>
           </xsl:when>
+          <xsl:when test="//xmm:root//*[string(@root)][starts-with($xmg:pathroot, @root)]">
+            <xsl:for-each select="//xmm:root//*[string(@root)][starts-with($xmg:pathroot, @root)]">
+              <xsl:for-each select="ancestor-or-self::*[name() != 'root']">
+                <xsl:call-template name="xmm:breadcrumbs-links" />
+              </xsl:for-each>
+              
+              <li>
+                <span class="s02">
+                  <xsl:value-of select="$xmg:title" />
+                </span>
+              </li>
+            </xsl:for-each>
+          </xsl:when>
           <!-- The 'Home' Breadcrumb case -->
           <xsl:otherwise>
             <li><a><span/></a></li>
