@@ -9,15 +9,15 @@
   <!-- This file overrides TEI P5 templates -->
   
   
-  <xsl:template match="tei:lb">
+  <xsl:template match="tei:lb" priority="1">
     <br/>
   </xsl:template>
   
-  <xsl:template match="tei:author">
+  <xsl:template match="tei:author" priority="1">
     <xsl:apply-templates/>
   </xsl:template>
   
-  <xsl:template match="tei:title">
+  <xsl:template match="tei:title" priority="1">
     
     <xsl:choose>
       <xsl:when test="@level = 'j' or level='m'">
