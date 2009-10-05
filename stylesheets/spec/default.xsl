@@ -63,11 +63,11 @@
         </xsl:if>
 
         <xsl:if
-          test="//tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:author or //tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:editor">
+          test="not(normalize-space(//tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:author) = '') or not(normalize-space(//tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:editor) = '')">
           <p>
-            <xsl:text>(</xsl:text>
+            <xsl:text>(</xsl:text><strong>
             <xsl:apply-templates mode="pagehead"
-              select="//tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/*[self::tei:author or self::tei:editor]" />
+              select="//tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/*[self::tei:author or self::tei:editor]" /></strong>
             <xsl:text>)</xsl:text>
           </p>
         </xsl:if>

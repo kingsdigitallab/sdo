@@ -39,7 +39,7 @@
         </xsl:if>
         
         <xsl:if
-          test="//tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:author or //tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:editor">
+          test="not(normalize-space(//tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:author) = '') or not(normalize-space(//tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:editor) = '')">
           <p>
             <xsl:text>(</xsl:text>
             <xsl:apply-templates mode="pagehead"

@@ -12,6 +12,7 @@
   <xsl:param name="fileextension" />
 
   <xsl:include href="../tei/p5.xsl" />
+  <xsl:include href="sdo-p5.xsl"/>
   
   <xsl:variable name="xmg:title" select="//tei:titleStmt/tei:title[not(@type)]" />
   <xsl:variable name="xmg:pathroot" select="$filedir" />
@@ -24,4 +25,7 @@
   <xsl:template name="xms:content">
     <xsl:apply-templates select="//tei:TEI" />
   </xsl:template>
+  
+ 
+  
 </xsl:stylesheet>

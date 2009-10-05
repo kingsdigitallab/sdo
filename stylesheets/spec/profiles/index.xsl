@@ -76,8 +76,8 @@
           </div>
         </div>
 
-
-        <xsl:for-each-group select="//xmi:index/xmi:entry[contains(@index, $filename)]" group-by="substring(@xml:id,1,1)">
+        <xsl:for-each-group select="//xmi:index/xmi:entry[contains(@index, $filename)]" group-by="substring(@sortkey,1,1)" >
+            <xsl:sort select="@sortkey"/>
           <h3>
             <a name="{upper-case(substring(current-grouping-key(),1))}"/>
             <xsl:value-of select="upper-case(substring(current-grouping-key(),1))"/>
