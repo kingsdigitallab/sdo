@@ -11,7 +11,20 @@
   
   <xsl:template match="tei:lb" priority="1">
     <br/>
+    </xsl:template>
+  
+  
+  <xsl:template match="tei:listBibl" priority="1">
+    <div class="unorderedList">
+     <div class="t01">
+    <ul>
+      <xsl:apply-templates/>
+    </ul>
+    </div>
+    </div>
   </xsl:template>
+  
+  
   
   <xsl:template match="tei:author" priority="1">
     <xsl:apply-templates/>
