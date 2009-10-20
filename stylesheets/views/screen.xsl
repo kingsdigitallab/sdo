@@ -130,22 +130,19 @@
   
   <xsl:template name="xmv:banner">
     <div id="banner">
-     <!--  <div class="utilLinks">
-        <div class="s02">
-         <form action="">
-            <fieldset>
-              <label for="siteSearch">Search</label>
-              <input id="siteSearch" type="text" name="siteSearch" class="s01" />
-              <button type="submit">Go</button>
-            </fieldset>
-          </form> 
-        </div>
+    <!--  <div class="utilLinks">
+        
         <ul>
-          <li><a href="#">Browse</a></li>
-          <li><a href="#">Help</a></li>
-          <li><a href="#">News</a></li>
+         
+          <li>
+            <xsl:call-template name="xmv:dynamic-links">
+            <xsl:with-param name="linkToLabel" select="'help'"/>
+            <xsl:with-param name="linkToFile" select="'help/contact.html'"/>
+          </xsl:call-template></li>
+          
         </ul>
-      </div>-->
+        </div>-->
+     
       <div id="decalRight"><span class="printOnly">Collage: images of Schenker</span></div>
       <div id="decalLeft"><span class="printOnly">Collage: images of Schenker</span></div>
       <!-- Heading can be shown as text or replaced with images -->
@@ -158,19 +155,54 @@
       <div class="utilLinks">
         <div class="s01">
           <ul>
-            <li><xsl:text>&#xa9;</xsl:text><xsl:value-of select="format-date(current-date(), '[Y]')" /></li>
-            <li><xsl:text>Resp:</xsl:text><a href="http://www.kcl.ac.uk/cch">CCH</a></li>
-            <li class="s01"><xsl:text>Powered by</xsl:text><a href="http://www.kcl.ac.uk/cch/xmod/" title="link to the xMod home page"><span>xMod 2.0</span></a></li>
+            <li><xsl:call-template name="xmv:dynamic-links">
+              <xsl:with-param name="linkToLabel" select="'How to Cite'"/>
+              <xsl:with-param name="linkToFile" select="'editorial_guide/how_to_cite.html'"/>
+            </xsl:call-template>
+            </li> 
+            <li>
+              <xsl:call-template name="xmv:dynamic-links">
+                <xsl:with-param name="linkToLabel" select="'Conditions of Use'"/>
+                <xsl:with-param name="linkToFile" select="'editorial_guide/conditions_of_use.html'"/>
+              </xsl:call-template>
+             </li>
+            <li>
+              <xsl:call-template name="xmv:dynamic-links">
+                <xsl:with-param name="linkToLabel" select="'Contact'"/>
+                <xsl:with-param name="linkToFile" select="'help/contact.html'"/>
+              </xsl:call-template>
+            </li>
+           
           </ul>
         </div>
-        <!--div class="s02">
-          <xsl:text>&#xa9;</xsl:text>
-          <strong>
-            <xsl:value-of select="format-date(current-date(), '[Y]')" />
-          </strong>
-          <xsl:text> King's College London, Strand, London WC2R 2LS, England, United Kingdom. Tel +44 (0)20 7836 5454</xsl:text>
-        </div-->
+        <div class="s02">
+          <xsl:text>&#xa9;</xsl:text><xsl:value-of select="format-date(current-date(), '[Y]')" /><xsl:text>, </xsl:text>Schenker Documents Online.
+          <xsl:text>  </xsl:text><xsl:text>In collaboration with the </xsl:text><a href="http://www.kcl.ac.uk/cch">Centre for Computing in the Humanities</a>, King's College London.
+           <xsl:text>  </xsl:text><xsl:text>Powered by </xsl:text><a href="http://www.kcl.ac.uk/cch/xmod/" title="link to the xMod home page"><span>xMod 2.0</span></a>
+         </div>        
       </div>
     </div>
   </xsl:template>
+  
+  
+  <xsl:template name="xmv:dynamic-links">
+    <xsl:param name="linkToLabel"/>
+    <xsl:param name="linkToFile"/>
+    
+      <a title="{$linkToLabel}">
+        <xsl:attribute name="href">
+          <xsl:call-template name="xmm:path-resolver" />
+          <xsl:if test="string($xmp:context-path)">
+            <xsl:value-of select="$xmp:context-path" />
+            <xsl:text>/</xsl:text>
+          </xsl:if>
+         <xsl:value-of select="$linkToFile" />
+        </xsl:attribute>
+        
+        <span>
+          <xsl:value-of select="$linkToLabel" />
+        </span>
+      </a>
+   
+  </xsl:template> 
 </xsl:stylesheet>

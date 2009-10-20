@@ -24,6 +24,7 @@
     <xsl:call-template name="xmv:screen" />
   </xsl:template>
 
+  
   <xsl:template name="xms:submenu">
     <div class="submenu">
       <div class="t01">
@@ -55,7 +56,7 @@
           <xsl:value-of select="$xmg:title" />
         </h1>
 
-        <xsl:if test="//tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type = 'sub']">
+        <xsl:if test="not(normalize-space(//tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type = 'sub']) = '')">
           <h2>
             <xsl:apply-templates mode="pagehead"
               select="//tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type = 'sub']" />

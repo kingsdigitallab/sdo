@@ -15,6 +15,7 @@
   <xsl:param name="fileextension" />
 
   <xsl:include href="../../tei/p5.xsl" />
+  <xsl:include href="../sdo-p5.xsl"/>
   
   <xsl:variable name="xmg:title" select="//tei:titleStmt/tei:title[@type = 'file']" />
   <xsl:variable name="xmg:pathroot" select="$filedir" />

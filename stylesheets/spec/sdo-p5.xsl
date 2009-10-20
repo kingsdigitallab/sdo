@@ -13,6 +13,44 @@
     <br/>
     </xsl:template>
   
+  <xsl:template match="tei:divGen" priority="1">
+  <xsl:if test="@xml:id='contact'">
+           
+        
+        <form action="http://curlew.cch.kcl.ac.uk/cgi-bin/doemail.pl" method="POST" name="sdo_c">
+          <input name="script" type="hidden" value="sdo_c" />
+          <p class="content">
+            Full Name<br/>
+           <input  id="fullname" name="fullname" type="text" />
+          
+           <br/>
+            Institution<br/>
+                      <input  id="institution" name="institution" type="text" />
+           <br/>
+            Email Address<br/>
+                      <input id="email" name="email" type="text" />
+           <br/>
+             
+             Your Comments<br/>
+                  <textarea id="comments" name="comments" rows="6" cols="60">&#160;</textarea>
+              
+             <br/>
+             </p>
+                 <p class="content">
+                   <!--<input type="text" value="" name="subtotal" class="fs" />-->
+                   
+                   <input type="submit" value="Submit" name="B1"  /><xsl:text>  </xsl:text>
+                   <input type="reset" value="Reset" name="B2" />
+                   
+                  </p>
+               
+        
+        </form>
+       
+   
+  </xsl:if>
+  </xsl:template>
+  
   
   <xsl:template match="tei:listBibl" priority="1">
     <div class="unorderedList">
