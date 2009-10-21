@@ -56,22 +56,40 @@
           <xsl:value-of select="$xmg:title" />
         </h1>
 
-        <xsl:if test="not(normalize-space(//tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type = 'sub']) = '')">
+        <xsl:for-each select="//tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type = 'sub']">
+          <xsl:variable name="thisSubTitle" select="."/>
+        <xsl:if test="not(normalize-space($thisSubTitle) = '')">
           <h2>
             <xsl:apply-templates mode="pagehead"
               select="//tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type = 'sub']" />
           </h2>
         </xsl:if>
-
-        <xsl:if
-          test="not(normalize-space(//tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:author) = '') or not(normalize-space(//tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:editor) = '')">
+        </xsl:for-each>
+        
+        <xsl:for-each select="//tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:author">
+          <xsl:variable name="thisAuthor" select="."/>
+        <xsl:if test="not(normalize-space($thisAuthor) = '')">
           <p>
             <xsl:text>(</xsl:text><strong>
-            <xsl:apply-templates mode="pagehead"
-              select="//tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/*[self::tei:author or self::tei:editor]" /></strong>
+            <xsl:apply-templates mode="pagehead" select="." /></strong>
             <xsl:text>)</xsl:text>
           </p>
         </xsl:if>
+        </xsl:for-each>
+         
+        <xsl:for-each select="//tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:editor">
+          <xsl:variable name="thisEditor" select="."/>
+          <xsl:if
+            test="not(normalize-space($thisEditor) = '')">
+           <p>
+              <xsl:text>(</xsl:text><strong>
+                <xsl:apply-templates mode="pagehead"
+                  select="." /></strong>
+              <xsl:text>)</xsl:text>
+            </p>
+          </xsl:if>
+        
+        </xsl:for-each>
       </div>
     </div>
   </xsl:template>

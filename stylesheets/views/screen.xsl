@@ -168,8 +168,8 @@
              </li>
             <li>
               <xsl:call-template name="xmv:dynamic-links">
-                <xsl:with-param name="linkToLabel" select="'Contact'"/>
-                <xsl:with-param name="linkToFile" select="'help/contact.html'"/>
+                <xsl:with-param name="linkToLabel" select="'Comments &amp; Queries'"/>
+                <xsl:with-param name="linkToFile" select="'help/comment.html'"/>
               </xsl:call-template>
             </li>
            
