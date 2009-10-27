@@ -37,7 +37,7 @@
              <br/>
              </p>
                  <p class="content">
-                   <!--<input type="text" value="" name="subtotal" class="fs" />-->
+                   <input type="text" value="" name="subtotal" class="fs" />
                    
                    <input type="submit" value="Submit" name="B1"  /><xsl:text>  </xsl:text>
                    <input type="reset" value="Reset" name="B2" />

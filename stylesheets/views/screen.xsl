@@ -178,7 +178,7 @@
         <div class="s02">
           <xsl:text>&#xa9;</xsl:text><xsl:value-of select="format-date(current-date(), '[Y]')" /><xsl:text>, </xsl:text>Schenker Documents Online.
           <xsl:text>  </xsl:text><xsl:text>In collaboration with the </xsl:text><a href="http://www.kcl.ac.uk/cch">Centre for Computing in the Humanities</a>, King's College London.
-           <xsl:text>  </xsl:text><xsl:text>Powered by </xsl:text><a href="http://www.kcl.ac.uk/cch/xmod/" title="link to the xMod home page"><span>xMod 2.0</span></a>
+          <xsl:text>  </xsl:text><xsl:text>Powered by </xsl:text><a href="http://www.cch.kcl.ac.uk/xmod/" title="link to the xMod home page"><span>xMod 2.0</span></a>
          </div>        
       </div>
     </div>
