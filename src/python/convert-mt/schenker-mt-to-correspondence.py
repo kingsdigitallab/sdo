@@ -3,15 +3,27 @@
 # extract MoveableType correspondence information and write to TEI XML file
 
 # TODO:
+
+# PROBLEMS:
+
+# DONE:
 # - separate records
 # - group files into subfolders. 
 #   For example, given the TITLE: OJ 11/42, [1] : 10-11-92, 
 #   a file should be created with the name OJ-11-42_1.xml. 
 #   It should be saved into this folder tree: OJ/11/42 
+# - Information appearing in the BODY should be placed into a <tei:transcription> block.
+# - Information appearing in the EXTENDED BODY should be placed into a <tei:translation> block. 
+# - If possible, each paragraph (to be detected by parsing the control characters) should be placed into a <tei:p> block. 
+# - Inline Markup
+#    * text surrounded by underscores, with <em>, or with <i> should be converted to <hi rend="italic">
+#    * text surrounded by asterisks, or with <strong> should be converted to <hi rend="bold"> 
+# - Numbered markers appear in the body of the transcription and the translation, e.g. [1], [2], etc. 
+#   The note appears in the EXCERPT: section, usually under a human created label FOOTNOTES: -
+#   Markers in the Transcription and Translation should be converted to <tei:note> and 
+#   <tei:ptr elements respectively, and given an xml:id (or corresp) attribute with the value r0001-fnN 
+#  (where N is the value of the current note marker. The actual note (again, appearing in the excerpt section) should be placed into the body of the note in the transcription. 
 
-# PROBLEMS:
-
-# DONE:
 # - mixed content in body - markup that I inserted by "replace" and not by
 #   using etree's methods is escaped when XML file is written
 #   find a solution!!
@@ -359,7 +371,22 @@ def makeFileDir(title):
 				os.makedirs(os.path.join(outpath,toplevel_dir,secondlevel_dir))
 		else:
 			secondlevel_dir = ""
-	elif title_m.group(3):		
+	elif title_m.group(3):
+		# if the following groups still have , or [ or ] after punctuation being stripped out, throw into basket.
+		g3 = ""
+		g4 = ""
+		g5 = ""
+		if title_m.group(3) : g3 = string.strip(string.strip(title_m.group(3)), string.punctuation) 
+		if title_m.group(4) : g4 = string.strip(string.strip(title_m.group(4)), string.punctuation)
+		if title_m.group(5) : g5 = string.strip(string.strip(title_m.group(5)), string.punctuation)
+		
+		if g3.find(",") != -1 or g3.find("[")  != -1 or g3.find("]") != -1:
+			secondlevel_dir = "basket"
+		elif g4 != None and ( g4.find(",") != -1 or g4.find("[") != -1 or g4.find("]") != -1 ):
+			secondlevel_dir = "basket"
+		elif g5 != None and ( g5.find(",") != -1 or g5.find("[") != -1 or g5.find("]") != -1 ):
+			secondlevel_dir = "basket"
+			
 		if not os.path.exists(os.path.join(outpath,toplevel_dir,secondlevel_dir)):
 				os.makedirs(os.path.join(outpath,toplevel_dir,secondlevel_dir))
 	
@@ -377,6 +404,10 @@ def makeFileDir(title):
 			if not re.compile("\d+-\d+-\d+$").match(g):
 				if i == 0:
 					filename = string.strip(string.strip(g), string.punctuation)
+				elif i == 1 or i == 2:
+					if titleescaped_m.group(i+1).find("[") != -1: 
+						filename = string.join([filename, string.strip(string.strip(g), string.punctuation)], "_")
+					else: filename = string.join([filename, string.strip(string.strip(g), string.punctuation)], "-")
 				else:
 					filename = string.join([filename, string.strip(string.strip(g), string.punctuation)], "_")
 	
@@ -554,13 +585,17 @@ def buildXMLSkeleton():
     skeldic = {}
     #CORRESPONDENCE   
     skeldic["root"] = ET.Element("sdo:record")
+    skeldic["root"].set("xml:id", "r0001")
     skeldic["root"].set("xmlns:sdo", "http://www.cch.kcl.ac.uk/schenker")
     skeldic["root"].set("xmlns:tei", "http://www.tei-c.org/ns/1.0")
     skeldic["root"].set("xmlns:dc", "http://purl.org/dc/elements/1.1/")
     skeldic["root"].set("xmlns:dcterms", "http://purl.org/dc/terms/")
     skeldic["root"].set("xmlns:marcrel", "http://www.loc.gov/loc.terms/relators/")
     skeldic["root"].set("xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance")
-    skeldic["root"].set("xsi:schemaLocation", "http://www.cch.kcl.ac.uk/schenker "+schemalocation) 
+    skeldic["root"].set("xsi:schemaLocation", "http://www.cch.kcl.ac.uk/schenker "+schemalocation)
+
+    skeldic["transcription"] = ET.SubElement(skeldic["root"], "tei:transcription")
+    skeldic["translation"] = ET.SubElement(skeldic["root"], "tei:translation")
     
     # PROFILES
     #~ # build a tree structure
@@ -759,6 +794,14 @@ def convertHrefLinks(repf, bdic):
     
     return bdic
     
+# CORRESPONDENCE
+def convertFootnotes(repf, bdic):
+    # Find footnotes
+    footnotes = re.findall(r"""fn(\d+)\.?(.+?)\n""", bdic["EXCERPT:"])
+    for fn in footnotes:
+	bdic["BODY:"] = re.sub(re.compile('\['+fn[0]+'\]'), '@@otei:note xml:id=@@qr0001-fn'+fn[0]+'@@q@@c'+fn[1]+'@@o/tei:note@@c', bdic["BODY:"])
+	bdic["EXTENDED BODY:"] = re.sub(re.compile('\['+fn[0]+'\]'), '@@otei:ptr target=@@q#r0001-fn'+fn[0]+'@@q/@@c', bdic["EXTENDED BODY:"])	
+    return bdic
 
 def processTags(repf, hdic, bd, xmldic):
     taglist = hdic["TAGS"].split(",")
@@ -803,15 +846,28 @@ def processConvertedBody(repf, hdic, bdic, xmldic):
         if bdic.has_key(bodytype):
             # oxy = ET.ProcessingInstruction("oxygen", pidic["oxygen"])
             # print >> ofpobj, ET.tostring(dec)
-            comm = ET.Comment(bodytype)
-            xmldic["bodydiv"].append(comm)
-            parslist = re.split("\n\n+", bdic[bodytype])
-            for par in parslist:
-                par = par.strip()
-                if par != "":
-                    parel = ET.SubElement(xmldic["bodydiv"], "p")
-                    # parel.text = par
-                    parel.text = par.decode("utf8")
+	    if bodytype == "BODY:":
+		comm = ET.Comment(bodytype)
+		xmldic["transcription"].append(comm)
+	        parslist = re.split("\n\n+", bdic[bodytype])
+	        for par in parslist:
+		    par = par.strip()
+		    if par != "":
+		        parel = ET.SubElement(xmldic["transcription"], "tei:p")
+		        # parel.text = par
+		        parel.text = par.decode("utf8")
+	    elif bodytype == "EXTENDED BODY:":
+		comm = ET.Comment(bodytype)
+		xmldic["translation"].append(comm)
+	        parslist = re.split("\n\n+", bdic[bodytype])
+	        for par in parslist:
+		    par = par.strip()
+		    if par != "":
+		        parel = ET.SubElement(xmldic["translation"], "tei:p")
+		        # parel.text = par
+		        parel.text = par.decode("utf8")
+	    
+		
 
 def convertAmericanToEuropeanDate(ds):
     dlist = ds.split()
@@ -824,6 +880,19 @@ def processCorresp(repf, hdic, bd, outfilepath):
     global correspcount
     correspcount += 1
     xmlskeldic = buildXMLSkeleton()
+    
+    # conversion functions
+    bodydic = getBodyParts(repf, bd)
+    bodydic = convertHtmlFormats(repf, bodydic)   
+    bodydic = convertHrefLinks(repf, bodydic)
+    bodydic = convertWikiFormats(repf, bodydic)
+    bodydic = convertFootnotes(repf, bodydic)
+    
+    
+    # split the processed record
+    processConvertedBody(repf, hdic, bodydic, xmlskeldic)
+    
+    # write out
     writeXMLFile(repf, outfilepath, xmlskeldic["root"])
     
 # PROFILE
