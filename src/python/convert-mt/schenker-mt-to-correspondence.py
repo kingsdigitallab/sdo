@@ -1,8 +1,10 @@
 #!/usr/bin/env python
+# -*- coding: UTF-8 -*-
 
 # extract MoveableType correspondence information and write to TEI XML file
 
 # TODO:
+
 
 # PROBLEMS:
 
@@ -23,6 +25,13 @@
 #   Markers in the Transcription and Translation should be converted to <tei:note> and 
 #   <tei:ptr elements respectively, and given an xml:id (or corresp) attribute with the value r0001-fnN 
 #  (where N is the value of the current note marker. The actual note (again, appearing in the excerpt section) should be placed into the body of the note in the transcription. 
+# - The entire record should be placed within an sdo:recordCollection element, with namespace declarations
+# - An indication of the source type, and the unique shelfmark. For the moment, give each shelfmark as TEST-SHELFMARK1 
+# - A placeholder for handnotes (w/the indicated instructional XML comment) 
+# - Statements of Responsibility
+# - the various copyright statements sprinkled throughout the record should be collated into an XML Comment at the beginning of the record
+# - collate the dcterms:license, dcterms:provenance and dcterms:rightsHolder 
+# - A revisionDesc note
 
 # - mixed content in body - markup that I inserted by "replace" and not by
 #   using etree's methods is escaped when XML file is written
@@ -98,7 +107,7 @@ pidic = {
         }
 
 # CORRESPONDENCE - TBA
-schemalocation = "/home/rviglianti/Projects/schenker/schema/sdo/schenker.xsd"
+schemalocation = "../../../schenker.xsd"
 
 # basename (for filename) to use should "BASENAME" header be empty
 dummybasename = "CCHGENERATED"
@@ -584,8 +593,9 @@ def getHeadDict(h):
 def buildXMLSkeleton():
     skeldic = {}
     #CORRESPONDENCE   
-    skeldic["root"] = ET.Element("sdo:record")
-    skeldic["root"].set("xml:id", "r0001")
+    
+    #root and namespaces
+    skeldic["root"] = ET.Element("sdo:recordCollection")
     skeldic["root"].set("xmlns:sdo", "http://www.cch.kcl.ac.uk/schenker")
     skeldic["root"].set("xmlns:tei", "http://www.tei-c.org/ns/1.0")
     skeldic["root"].set("xmlns:dc", "http://purl.org/dc/elements/1.1/")
@@ -594,8 +604,55 @@ def buildXMLSkeleton():
     skeldic["root"].set("xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance")
     skeldic["root"].set("xsi:schemaLocation", "http://www.cch.kcl.ac.uk/schenker "+schemalocation)
 
-    skeldic["transcription"] = ET.SubElement(skeldic["root"], "tei:transcription")
-    skeldic["translation"] = ET.SubElement(skeldic["root"], "tei:translation")
+    # An indication of the source type, and the unique shelfmark
+    skeldic["source"] = ET.SubElement(skeldic["root"], "sdo:source")
+    skeldic["correspondence"] = ET.SubElement(skeldic["source"], "sdo:correspondence")
+    skeldic["correspondence"].set("shelfmark", "TEST-SHELFMARK1")
+    
+    # A placeholder for handnotes
+    skeldic["handNotes"] = ET.SubElement(skeldic["root"], "tei:handNotes")
+    skeldic["handNote"] = ET.SubElement(skeldic["handNotes"], "tei:handNote")
+    comm_handNote = "Please populate at least one handNote.  Remember to include an xml:id attribute and the scope of the work"
+    skeldic["handNote"].append( ET.Comment(comm_handNote))
+    
+    # Statements of Responsibility
+    comm_respStmt = "Add additional or remove unnecessary statements of responsiblity as needed below"
+    skeldic["root"].append( ET.Comment(comm_respStmt))
+    skeldic["respStmt1"] = ET.SubElement(skeldic["root"], "tei:respStmt")
+    skeldic["respStmt1"].set("xml:id", "IB")
+    skeldic["persName"] = ET.SubElement(skeldic["respStmt1"], "tei:persName")
+    skeldic["persName"].text = "Ian Bent"
+    comm_persName = "Add additional or remove unnecessary specific responsibility notes."
+    skeldic["respStmt1"].append( ET.Comment(comm_persName))
+    skeldic["resp1"] = ET.SubElement(skeldic["respStmt1"], "tei:resp")
+    skeldic["resp1"].text= "Transcription"
+    skeldic["resp2"] = ET.SubElement(skeldic["respStmt1"], "tei:resp")
+    skeldic["resp2"].text = "XML Encoding"
+    skeldic["resp3"] = ET.SubElement(skeldic["respStmt1"], "tei:resp")
+    skeldic["resp3"].text = "Translation"
+    
+    skeldic["respStmt2"] = ET.SubElement(skeldic["root"], "tei:respStmt")
+    skeldic["respStmt2"].set("xml:id", "BOT")
+    skeldic["name"] = ET.SubElement(skeldic["respStmt2"], "tei:name")
+    skeldic["name"].text = "Automated Script"
+    skeldic["name"] = ET.SubElement(skeldic["respStmt2"], "tei:name")
+    skeldic["name"].text = "Conversion from MovableType syntax to TEI"
+    
+    # Revision Desc. Note
+    comm_revisionDesc = "Add additional change elements below to note major changes to the document"
+    skeldic["root"].append( ET.Comment(comm_revisionDesc))
+    skeldic["revisionDesc"] = ET.SubElement(skeldic["root"], "tei:revisionDesc")
+    skeldic["change"] = ET.SubElement(skeldic["revisionDesc"], "tei:change")
+    skeldic["change"].set("when", time.strftime("%Y-%m-%d", time.localtime()) )
+    skeldic["change"].set("who", "#BOT")
+    skeldic["change"].text = "Template Generated"
+
+    # Sections
+    skeldic["record"] = ET.SubElement(skeldic["root"], "sdo:record")
+    skeldic["record"].set("xml:id", "r0001")
+    skeldic["itemDesc"] = ET.SubElement(skeldic["record"], "sdo:itemDesc")
+    skeldic["transcription"] = ET.SubElement(skeldic["record"], "tei:transcription")
+    skeldic["translation"] = ET.SubElement(skeldic["record"], "tei:translation")
     
     # PROFILES
     #~ # build a tree structure
@@ -699,6 +756,8 @@ def writeXMLFile(repf, ofp, root):
     #oxystr = ET.tostring(oxy)
     
     tree = ET.ElementTree(root)
+    
+    
     # tree.write(ofpobj)
     # write real UNICODE in etree and not character entities 
     tree.write(ofpobj, encoding="utf-8")
@@ -709,6 +768,12 @@ def writeXMLFile(repf, ofp, root):
     # giving the option "encoding" in "tree.write" above inserts an XML declaration at
     # the start of the file, we cannot therefore insert the processing instruction
     # with etree means between the XML declaration and the root element
+    
+    
+    ofplist = ofp.split("/")
+    # generate the right number of "../" after "correspondence/". Needs +2 compensate for first element of list "" and filename 
+    levels = ''.join( ["../" for dummy in xrange(len(ofplist)-(ofplist.index("correspondence")+2))] )
+    xmlstr = xmlstr.replace('"http://www.cch.kcl.ac.uk/schenker ', '"http://www.cch.kcl.ac.uk/schenker '+ levels)
     
     # PROFILE
     # xmlstr = xmlstr.replace("<TEI", oxystr + "\n" + "<TEI")
@@ -795,6 +860,141 @@ def convertHrefLinks(repf, bdic):
     return bdic
     
 # CORRESPONDENCE
+def createTopComments(repf, bdic):
+    
+    #dictionary to return
+    topcomments = {}
+    
+    # get copyright info
+    copyright_b = re.findall(r"""(©.+)""", bdic["BODY:"])
+    copyright_eb = re.findall(r"""(©.+)""", bdic["EXTENDED BODY:"])
+    copyright_ex = re.findall(r"""(©.+)""", bdic["EXCERPT:"])
+    copyright = copyright_b+copyright_eb+copyright_ex
+    
+    # escape "--" characters
+    bdic["EXCERPT:"] = re.sub(r"""--""", ' - -', bdic["EXCERPT:"])    
+    
+    # get dcterms elements
+    dcterms_license = re.findall(r"""<dcterms:license>.+?</dcterms:license>""", bdic["EXCERPT:"])
+    dcterms_provenance = re.findall(r"""<dcterms:provenance>.+?</dcterms:provenance>""", bdic["EXCERPT:"])
+    dcterms_rightsHolder = re.findall(r"""<dcterms:rightsHolder>.+?</dcterms:rightsHolder>""", bdic["EXCERPT:"])
+    #replace angle brackets
+    
+    dcterms = dcterms_license+dcterms_provenance+dcterms_rightsHolder
+    
+    #write results to dictionary
+    topcomments["copyright"] = copyright
+    topcomments["dcterms"] = dcterms
+        
+    # get rid of copyright info in body and ext. body	
+    bdic["BODY:"] = re.sub(r"""(©.+)""", '', bdic["BODY:"])
+    bdic["EXTENDED BODY:"] = re.sub(r"""(©.+)""", '', bdic["EXTENDED BODY:"])
+    
+    #return
+    return topcomments, bdic
+    
+# CORRESPONDENCE
+def createItemDescription(repf, hdic, bdic):
+	
+	# escape "--" characters
+	bdic["EXCERPT:"] = re.sub(r"""--""", ' - -', bdic["EXCERPT:"])    
+	
+	itemDescElements = {}
+	
+	# title
+	# With current source, the warning never appears. There is always a match (2009-11-05)
+	dc_title = re.search(r"""<dc:title>(.*?)</dc:title>""", bdic["EXCERPT:"])
+	if dc_title == None:
+		dc_title = re.search(r"""^(.*?)\n""", bdic["BODY:"])
+	if dc_title != None:
+		dc_title = dc_title.group(1)
+	else:
+		dc_title = "@@o!-- Enter title here --@@c"
+		
+	itemDescElements["dc:title"] = dc_title.decode("utf8")
+	
+	# date of creation
+	# With current source, hdic["DATE"] always returns the value (2009-11-05)
+	dc_created = hdic["DATE"]
+	if dc_created == "":
+		dc_created = re.search(r"""<dcterms:created>(.*?)</dcterms:created>""", bdic["EXCERPT:"])
+		if dc_created != None:
+			dc_created = dc_created.group(1)
+		else:
+			dc_created = "@@o!-- Enter date of creation here --@@c"
+	
+	itemDescElements["dcterms:created"] = dc_created.decode("utf8")
+	
+	# date authored
+	# With current source, several missing (2009-11-05)
+	dc_datesub = re.search(r"""<dcterms:dateSubmitted>(.*?)</dcterms:dateSubmitted>""", bdic["EXCERPT:"])
+	if dc_datesub != None:
+		dc_datesub = dc_datesub.group(1)
+	else:
+		dc_datesub = "@@o!-- Enter date of submission here --@@c"
+		
+	itemDescElements["dcterms:dateSubmitted"] = dc_datesub.decode("utf8")
+	
+	# description
+	# With current source, several missing (63) (2009-11-05)
+	dc_desc = re.search(r"""(?s)SUMMARY.*?\n(.*?)(©|-{4,})""", bdic["EXCERPT:"])
+	if dc_desc != None:
+		dc_desc = dc_desc.group(1)
+	else:
+		dc_desc = ""
+		
+	itemDescElements["dc:description"] = dc_desc.decode("utf8")
+	
+	# subjects
+	# With current source, several missing (2009-11-05)
+	dc_subjects = re.search(r"""<dc:subject>(.*?)</dc:subject>""", bdic["EXCERPT:"])
+	if dc_subjects != None:
+		dc_subjects = dc_subjects.group(1)
+	else:
+		dc_subjects = "@@o!-- Enter subjects here --@@c"
+		
+	itemDescElements["dc:subject"] = dc_subjects.decode("utf8")
+	
+	# format
+	# With current source, several missing (34) (2009-11-05)
+	dc_format = re.search(r"""(?:@@ohi.*?@@c)?[Ff]ormat:?(?:@@o/hi@@c)?(.*?)\n""", bdic["EXCERPT:"])
+	if dc_format != None:
+		dc_format = dc_format.group(1)
+	else:
+		dc_format = "@@o!-- Enter format here --@@c"
+		
+	itemDescElements["dc:format"] = dc_format.decode("utf8")
+	
+	# sender
+	sender = re.search(r"""(?:@@ohi.*?@@c)?([Ss]ender( address)?:?)(?:@@o/hi@@c)?(.*?)\n""", bdic["EXCERPT:"])
+	if sender != None:
+		if sender.group(3) != None:
+			sender = sender.group(1)+" "+sender.group(3)
+		else:
+			sender = sender.group(1)
+	else:
+		sender = ""
+		
+	itemDescElements["COMM_sender"] = sender.decode("utf8")
+	
+	# recipient
+	recipient = re.search(r"""(?:@@ohi.*?@@c)?([Rr]ecipient( address)?:?)(?:@@o/hi@@c)?(.*?)\n""", bdic["EXCERPT:"])
+	if recipient != None:
+		if recipient.group(3) != None:
+			recipient = recipient.group(1)+" "+recipient.group(3)
+		else:
+			recipient = recipient.group(1)
+	else:
+		recipient = ""
+		
+	itemDescElements["COMM_recipient"] = recipient.decode("utf8")
+	
+	#return
+	return itemDescElements
+		
+	
+    
+# CORRESPONDENCE
 def convertFootnotes(repf, bdic):
     # Find footnotes
     footnotes = re.findall(r"""fn(\d+)\.?(.+?)\n""", bdic["EXCERPT:"])
@@ -841,7 +1041,10 @@ def processConversionDate(repf, hdic, bd, xmldic):
     tag = time.strftime("%d/%m/%Y", time.localtime())
     xmldic["change1date"].text = tag
 
-def processConvertedBody(repf, hdic, bdic, xmldic):
+def processConvertedBody(repf, hdic, bdic, tc, ide, xmldic):
+
+    # 1. Assign the parts to their elements
+	
     for bodytype in bodyheaderslist:
         if bdic.has_key(bodytype):
             # oxy = ET.ProcessingInstruction("oxygen", pidic["oxygen"])
@@ -867,7 +1070,32 @@ def processConvertedBody(repf, hdic, bdic, xmldic):
 		        # parel.text = par
 		        parel.text = par.decode("utf8")
 	    
-		
+    # 2. Further XML addition and processing
+    
+    # Add dcterms in comment first elemetn in sdo:record
+    dcterms_comm = '\n'+'\n'.join(tc["dcterms"])+'\n'
+    dcterms_comm = dcterms_comm.replace("<", "@@o")
+    dcterms_comm = dcterms_comm.replace(">", "@@c")
+    xmldic["record"].insert(0, ET.Comment(dcterms_comm.decode("utf8")))
+    
+    # Add copyright info in comment before first elemetn in sdo:record
+    copyright_comm = '\n'+'\n'.join(tc["copyright"])+'\n'
+    xmldic["record"].insert(0, ET.Comment(copyright_comm.decode("utf8")))
+    
+    # Add Item Description Elements
+    for key in ide:
+	    if key.startswith("COMM") :
+		    xmldic["itemDesc"].append(ET.Comment(ide[key])) 
+	    else:
+		    tagdesc = ET.SubElement(xmldic["itemDesc"], key)
+		    tagdesc.text = ide[key]
+		    
+    # Add marcrel elements in Item Description
+    xmldic["mr_correspondent"] = ET.SubElement(xmldic["itemDesc"], "marcrel:correspondent")
+    xmldic["mr_correspondent"].append(ET.Comment("Add the key attribute to indicate the sender of the letter")) 
+    xmldic["mr_recipient"] = ET.SubElement(xmldic["itemDesc"], "marcrel:recipient")
+    xmldic["mr_recipient"].append(ET.Comment("Add the key attribute to indicate the recipient of the letter")) 
+
 
 def convertAmericanToEuropeanDate(ds):
     dlist = ds.split()
@@ -887,10 +1115,12 @@ def processCorresp(repf, hdic, bd, outfilepath):
     bodydic = convertHrefLinks(repf, bodydic)
     bodydic = convertWikiFormats(repf, bodydic)
     bodydic = convertFootnotes(repf, bodydic)
+    topComments, bodydic = createTopComments(repf, bodydic)
+    itemDescElements = createItemDescription(repf, hdic, bodydic)
     
     
     # split the processed record
-    processConvertedBody(repf, hdic, bodydic, xmlskeldic)
+    processConvertedBody(repf, hdic, bodydic, topComments, itemDescElements, xmlskeldic)
     
     # write out
     writeXMLFile(repf, outfilepath, xmlskeldic["root"])
