@@ -45,7 +45,7 @@ MEDIA_URL = ''
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = '/media-admin/'
+ADMIN_MEDIA_PREFIX = '/media/'
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'rv4so!%$d5p8cl*trc2)j@907@&6d_=v#+^#zt(k-%m9puchc!'
@@ -69,11 +69,11 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '/home/tamara/rapidsvn/schenker/django/sdo/templates'
+    '/home/tamara/cchsvn/schenker/trunk/src/python/django/sdo/templates'
 )
 
 FIXTURE_DIRS = (
-   '/home/tamara/rapidsvn/schenker/django/sdo/fixtures'
+   '/home/tamara/cchsvn/schenker/trunk/src/python/django/sdo/fixtures'
 )
 
 AUTHENTICATION_BACKENDS = (
