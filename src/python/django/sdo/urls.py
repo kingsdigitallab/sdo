@@ -11,7 +11,9 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Example:
-   (r'^$', index),
+    (r'^$', index),
+    # (r'^graphviz/', include('graphviz.urls')),
+    
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs' 
     # to INSTALLED_APPS to enable admin documentation:
      # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
@@ -19,7 +21,6 @@ urlpatterns = patterns('',
      (r'^admin/report/container/(?P<byContentType>\w+)/$', container),
      (r'^admin/report/repository/$', repository),
      (r'^admin/report/collection/$', collection),
-
 
     # Uncomment the next line to enable the admin:
      (r'^admin/(.*)', admin.site.root),

@@ -112,4 +112,6 @@ INSTALLED_APPS = (
     'django.contrib.databrowse',
     'django.contrib.admindocs',
     'sdo.archives',
+    'django_extensions',
+   
 )
