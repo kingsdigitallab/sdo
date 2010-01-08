@@ -5,7 +5,9 @@
                 exclude-result-prefixes="#all"
                 version="2.0">
    <xsl:variable name="xmp:context-path" select="''"/>
-   <xsl:variable name="xmp:assets-path" select="'http://localhost:8080/sdo/_a'"/>
-   <xsl:variable name="xmp:images-path" select="'http://localhost:8080/sdo/images'"/>
+   <xsl:variable name="xmp:assets-path"
+                 select="'/Users/miele/localfiles/work/cch/schenker/svn/trunk/build/static/_a'"/>
+   <xsl:variable name="xmp:images-path"
+                 select="'/Users/miele/localfiles/work/cch/schenker/svn/trunk/build/static/images'"/>
    <xsl:variable name="xmp:menu-label-wrapper" select="''"/>
 </xsl:stylesheet>
