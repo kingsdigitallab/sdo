@@ -1,54 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sdo:recordCollection xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
-                      xmlns:tei="http://www.tei-c.org/ns/1.0"
-                      xmlns:dc="http://purl.org/dc/elements/1.1/"
-                      xmlns:dcterms="http://purl.org/dc/terms/"
-                      xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
-                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                      xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../schema/schenker.xsd"><!--WSLB-301--><sdo:collectionDesc>
-      <sdo:source><!--Select a shelfmark from the controlled list --><sdo:correspondence shelfmark="WSLB-301"/>
+   xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../schema/schenker.xsd">
+
+   <sdo:collectionDesc>
+      <sdo:source>
+         <sdo:correspondence shelfmark="WSLB-301"/>
       </sdo:source>
-      <!-- Many documents will be in the hand of either Heinrich or Jeanette; add additional notes as needed to indicate
-                     the presence of other hands.--><tei:handNotes>
-         <tei:handNote xml:id="HS" scope="minor">Heinrich Schenker's hand</tei:handNote>
-         <tei:handNote xml:id="JS" scope="major">Jeanette Schenker's hand</tei:handNote>
-         <tei:handNote xml:id="unknown">Unknown hand</tei:handNote>
+      <tei:handNotes>
+         <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+         <tei:handNote xml:id="unk" scope="minor">Hand of unknown UE official</tei:handNote>
       </tei:handNotes>
-      <!-- Add additional or remove unnecessary statements of responsiblity as needed below --><tei:respStmt xml:id="IB">
+
+      <tei:respStmt xml:id="IB">
          <tei:persName>Ian Bent</tei:persName>
-         <!-- Add additional or remove unnecessary specific responsibility notes.--><tei:resp>Transcription</tei:resp>
+         <tei:resp>Transcription, 2009</tei:resp>
+         <tei:resp>Translation, 2009</tei:resp>
+         <tei:resp>Footnotes, 2009</tei:resp>
          <tei:resp>XML Encoding</tei:resp>
-         <tei:resp>Translation</tei:resp>
       </tei:respStmt>
       <tei:respStmt xml:id="TL">
          <tei:persName>Tamara Lopez</tei:persName>
          <tei:resp>XML Encoding Model</tei:resp>
       </tei:respStmt>
-      <!-- Add additional change elements below to note major changes to the document --><tei:revisionDesc>
+      <tei:revisionDesc>
          <tei:change when="2009-03-12" who="#TL">Template Generated</tei:change>
       </tei:revisionDesc>
    </sdo:collectionDesc>
-   <sdo:record ID="r0001"><!--Use the itemDesc to group information about a single piece of correspondence. 
-                     The itemDesc contains a series of Dublin Core elements. --><sdo:itemDesc>
-         <dc:title>A Descriptive Title Goes Here</dc:title>
-         <dcterms:created>The Date of Original Creation Goes Here: YYYY-MM-DD</dcterms:created>
-         <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
-         <dc:description>A summary of the contents of the record</dc:description>
-         <dc:subject>A list of subjects</dc:subject>
-         <marcrel:correspondent><!--Add the key attribute to indicate the sender of the letter--></marcrel:correspondent>
-         <marcrel:recipient><!--Add the key attribute to indicate the recipient of the letter--></marcrel:recipient>
+
+   <sdo:record ID="r0001">
+      <sdo:itemDesc>
+         <dc:title>Handwritten postcard from Schenker to Hertzka (UE), dated December 22, [1918]</dc:title>
+         <dcterms:created>1918-12-22</dcterms:created>
+         <dcterms:dateSubmitted>2009-07-24</dcterms:dateSubmitted>
+         <dc:description>Schenker asks for a copy of his Ninth Symphony monograph to be sent to
+            Bernhard Seidmann. </dc:description>
+         <dc:subject>Schenker, Heinrich; Hertzka, Emil; UE; Beethovens Neunte Sinfonie; Beethoven's
+            Ninth Symphony; monograph; Seidmann, Bernhard </dc:subject>
+         <dc:format>printed postcard, holograph addresses recto, holograph message and signature
+            verso</dc:format>
+         <marcrel:correspondent key="HS"/>
+         <marcrel:recipient key="EH"/>
+         <marcrel:recipient key="UE"/>
       </sdo:itemDesc>
-      <tei:transcription><!--Use the opener to contain information occuring at the start of the letter (e.g. the date, the salutation, the address).--><tei:opener>
-            <tei:date/>
+
+      <tei:transcription>
+         <tei:opener>
+            <tei:milestone unit="folio" n="recto"/>
+            <tei:fw type="envelope">
+               <tei:supplied reason="clarity">Absender:</tei:supplied>
+               <tei:persName n="Heinrich Schenker">
+                  <tei:hi rend="lateinschr">Dr. H Schenker</tei:hi>
+               </tei:persName>
+               <tei:address>
+                  <tei:addrLine>
+                     <tei:hi rend="lateinschr">III., Reisnerstr. 38</tei:hi>
+                  </tei:addrLine>
+               </tei:address>
+               <tei:supplied reason="clarity">An:</tei:supplied> H. <tei:persName n="Emil Hertzka">
+                  <tei:hi rend="lateinschr">Direktor Emil Hertzka</tei:hi>
+               </tei:persName>
+               <tei:address>
+                  <tei:addrLine>
+                     <tei:hi rend="lateinschr">I, Karlsplatz 6</tei:hi>
+                  </tei:addrLine>
+                  <tei:addrLine>&#8222;<tei:orgName n="Universal Edition"><tei:hi rend="lateinschr"
+                     >Universal-Edition</tei:hi></tei:orgName>&#8220;</tei:addrLine>
+               </tei:address>
+               <tei:fw type="postmark">
+                  <tei:supplied reason="clarity">none</tei:supplied>
+               </tei:fw>
+            </tei:fw>
+            <tei:milestone unit="folio" n="verso"/>
+            
+            <tei:salute>Sehr geehrter Herr <tei:persName n="Emil Hertzka">Direktor</tei:persName>! </tei:salute>
+            <tei:note xml:id="r0001-fn01" type="editorial" place="foot">Writing of this letter is
+               not recorded in Schenker's diary. </tei:note>
          </tei:opener>
-         <tei:p>The German Transcription should be added to paragraphs.</tei:p>
-         <tei:closer><!--Use the closer to contain information occuring at the end of the letter (e.g. signatures, dates).--></tei:closer>
-         <!--Indicate postscript information using a postscript element (as necessary). Text within the postscript may also be grouped into paragraphs.--></tei:transcription>
-      <tei:translation><!--Use the opener to contain information occuring at the start of the letter (e.g. the date, the salutation, the address).--><tei:opener>
-            <tei:date/>
+
+         <tei:p>Ich bin schon wieder genötigt, auf <tei:hi rend="underline">meine Rechnung</tei:hi>
+            das <tei:rs type="work" n="Beethovens Neunte Sinfonie">Buch über die &#8222;IX&#8220;</tei:rs> einem Musiker zu
+            widmen. Der Adressät heißt: <tei:persName n="Bernhard Seidmann">
+               <tei:hi rend="lateinschr">
+                  <tei:hi rend="underline">Bernhard</tei:hi> 
+                  <tei:hi rend="underline">Seidmann</tei:hi>
+               </tei:hi>
+            </tei:persName>, <tei:hi rend="lateinschr">Kapellmeister a/ Landestheater</tei:hi> in <tei:placeName>
+               <tei:hi rend="lateinschr underline">Braunschweig</tei:hi>
+            </tei:placeName> (<tei:hi rend="lateinschr"><tei:country>Deutschland</tei:country></tei:hi>). Wollen Sie die Güte
+            haben, das Buch versenden zu lassen, u. mir hierüber einen <tei:hi rend="underline"
+               >Erlagschein</tei:hi> (jenseits von &#8222;MK&#8220; u.s.w. u.s.w., wie in
+            den früheren Fällen) zu senden.<tei:note xml:id="r0001-fn02" type="editorial"
+               place="foot">Schenker records in his diary at OJ 2/12, p. 2025 the payment of 7.80
+               Kronen to UE for the copy to be sent to Seidmann. </tei:note>
+         </tei:p>
+
+         <tei:closer rend="indent-25">
+            <tei:salute>Vielen Dank u. beste Wünsche für Weihnacht u. Neujahr.
+                  <tei:lb/>I<tei:supplied reason="clarity">h</tei:supplied>r sehr ergb</tei:salute>
+            <tei:signed>
+               <tei:hi rend="lateinschr">H Schenker</tei:hi>
+            </tei:signed>
+            <tei:date>22. XII.</tei:date>
+         </tei:closer>
+
+         <tei:note type="editorial">The entire message is crossed through diagonally, and "24/XII.
+            erl. [illeg. initials]" written below</tei:note>
+
+         <tei:closer>© In the public domain. </tei:closer>
+      </tei:transcription>
+
+      <tei:translation>
+         <tei:opener>
+            <tei:milestone unit="folio" n="recto"/>
+            <tei:fw type="envelope"><tei:supplied reason="clarity">From: </tei:supplied>
+               <tei:persName n="Heinrich Schenker">Dr. H Schenker</tei:persName>, 
+               <tei:address>
+                  <tei:addrLine><tei:supplied reason="clarity">Vienna</tei:supplied> III,
+                     Reisnerstraße 38</tei:addrLine>
+               </tei:address>
+               <tei:supplied reason="clarity">To:</tei:supplied>
+               <tei:persName n="Emil Hertzka">Director Emil Hertzka</tei:persName>, 
+               <tei:address>
+                  <tei:addrLine><tei:supplied reason="clarity">Vienna</tei:supplied> I,Karlsplatz 6,</tei:addrLine>
+                  <tei:addrLine><tei:orgName>Universal Edition</tei:orgName></tei:addrLine>
+               </tei:address>
+               <tei:fw type="postmark">
+                  <tei:supplied reason="clarity">none</tei:supplied>
+               </tei:fw></tei:fw>
+            <tei:milestone unit="folio" n="verso"/>
+            
+            <tei:salute>Dear <tei:persName n="Emil Hertzka">Director</tei:persName>,</tei:salute>
+            <tei:ptr corresp="#r0001-fn01" type="footnote"/>
          </tei:opener>
-         <tei:p>The English translation should be added to paragraphs.</tei:p>
-         <tei:closer><!--Use the closer to contain information occuring at the end of the letter (e.g. signatures, dates).--></tei:closer>
-         <!--Indicate postscript information using a postscript element (as necessary). Text within the postscript may also be grouped into paragraphs.--></tei:translation>
+
+         <tei:p>I am compelled yet again to dedicate my <tei:rs type="work" n="Beethovens Neunte Sinfonie">book on the Ninth
+               Symphony</tei:rs>
+            <tei:hi rend="underline">at my expense</tei:hi> to a musician. The recipient's name is:
+               <tei:persName n="Bernhard Seidmann">
+               <tei:hi rend="underline">Bernhard</tei:hi> 
+               <tei:hi rend="underline">Seidmann</tei:hi>
+            </tei:persName>, music director at the Provincial Theater, <tei:placeName>
+               <tei:hi rend="underline">Braunschweig</tei:hi>
+            </tei:placeName> (<tei:country>Germany</tei:country>). Please would you be so kind as to arrange for the book to be
+            sent, and to send me a <tei:hi rend="underline">payment order</tei:hi> for it (exclusive
+            of the Mark, etc., etc., as in previous cases).<tei:ptr corresp="#r0001-fn02"
+               type="footnote"/>
+         </tei:p>
+
+         <tei:closer rend="indent-25">
+            <tei:salute>Many thanks, and best wishes for Christmas and the New Year. <tei:lb/>Yours
+               very truly,</tei:salute>
+            <tei:signed>H. Schenker</tei:signed>
+            <tei:date>December 22</tei:date>
+         </tei:closer>
+         
+         <tei:note type="editorial">The entire message is crossed through diagonally, and "December
+            24: dealt with [illeg. initials]" written below</tei:note>
+      </tei:translation>
+
    </sdo:record>
 </sdo:recordCollection>

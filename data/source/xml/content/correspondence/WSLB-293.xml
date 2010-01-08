@@ -4,20 +4,20 @@
    xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../schema/schenker.xsd">
-   <!--WSLB-293-->
+
    <sdo:collectionDesc>
       <sdo:source>
          <sdo:correspondence shelfmark="WSLB-293"/>
       </sdo:source>
       <tei:handNotes>
-         <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+         <tei:handNote xml:id="HS">Heinrich Schenker's hand</tei:handNote>
       </tei:handNotes>
 
       <tei:respStmt xml:id="IB">
          <tei:persName>Ian Bent</tei:persName>
-         <tei:resp>Transcription</tei:resp>
-         <tei:resp>Translation</tei:resp>
-         <tei:resp>Footnotes</tei:resp>
+         <tei:resp>Transcription, 2006</tei:resp>
+         <tei:resp>Translation, 2006</tei:resp>
+         <tei:resp>Footnotes, 2006</tei:resp>
          <tei:resp>XML Encoding</tei:resp>
       </tei:respStmt>
       <tei:respStmt xml:id="TL">
@@ -32,87 +32,118 @@
 
    <sdo:record ID="r0001">
       <sdo:itemDesc>
-         <dc:title>Handwritten postcard from Schenker to Hertzka (UE), dated February 5, 1918</dc:title>
+         <dc:title>Handwritten postcard from Schenker to UE, dated February 5, 1918</dc:title>
          <dcterms:created>1918-02-05</dcterms:created>
-         <dcterms:dateSubmitted>2009-03-24</dcterms:dateSubmitted>
+         <dcterms:dateSubmitted>2009-07-20</dcterms:dateSubmitted>
          <dc:description>Schenker renews his request of January 30 that review copies be sent to
-            Halm.</dc:description>
+            August Halm.</dc:description>
          <dc:subject>Halm, August; review copies</dc:subject>
-         <marcrel:correspondent><!--Add the key attribute to indicate the sender of the letter--></marcrel:correspondent>
-         <marcrel:recipient><!--Add the key attribute to indicate the recipient of the letter--></marcrel:recipient>
+         <dc:format>printed postcard, holograph addresses recto, holograph message, signature, and
+            date verso</dc:format>
+         <marcrel:correspondent key="HS"/>
+         <marcrel:recipient key="UE"/>
       </sdo:itemDesc>
 
       <tei:transcription>
          <tei:opener>
-            <tei:milestone unit="folio" n="recto"/>
-            <tei:supplied resp="#IB" reason="identity">Absender:</tei:supplied>
-            <tei:hi rend="italics">Dr. Heinrich Schenker</tei:hi>
-            <tei:lb/><tei:hi rend="italics">III., Reisnerstr. 38</tei:hi>
-            <tei:lb/>
-            <tei:lb/>An den <tei:lb/>Verlag <tei:hi rend="deu-dquote">
-               <tei:hi rend="italics">Universal-Edition</tei:hi>
-            </tei:hi>
-            <tei:lb/>I <tei:lb/>Karlsplatz 6 <tei:lb/>
-            <tei:lb/><tei:supplied resp="#IB" reason="clarity">postmark:</tei:supplied> || 3/3 WIEN
-            49 | <tei:unclear>6</tei:unclear>.II.18–3 | * 3<tei:unclear>?</tei:unclear> * ||
-               <tei:supplied resp="#IB">gummed label:</tei:supplied> || R | WIEN 49 / 393 | P. B.
-            3/3 || <tei:pb/>
+            <tei:fw type="envelope">
+               <tei:milestone unit="folio" n="recto"/>
+               <tei:supplied resp="#IB" reason="identity">Absender:</tei:supplied>
+               <tei:persName>
+                  <tei:hi rend="lateinschr">D<tei:hi rend="supralinear">r.</tei:hi> Heinrich
+                     Schenker</tei:hi>
+               </tei:persName>
+               <tei:address>
+                  <tei:addrLine>
+                     <tei:hi rend="lateinschr">III., Reisnerstr. 38</tei:hi>
+                  </tei:addrLine>
+               </tei:address>
+               <tei:lb/>An den <tei:lb/>Verlag &#8222;<tei:orgName n="Universal Edition">
+                  <tei:hi rend="lateinschr">Universal-Edition</tei:hi>
+               </tei:orgName>&#8220; <tei:lb/>
+               <tei:address>
+                  <tei:addrLine>I,</tei:addrLine>
+                  <tei:addrLine>Karlsplatz 6</tei:addrLine>
+               </tei:address>
+               <tei:lb/><tei:fw type="postmark">|| 3/3 WIEN 49 | <tei:gap reason="editorial"
+                  />.II.18–3 | * <tei:unclear reason="legibility">3</tei:unclear> * ||</tei:fw>
+               <tei:lb/><tei:supplied resp="#IB">gummed label:</tei:supplied> || R | WIEN 49 / 393 |
+               P. B. 3/3 || <tei:pb/>
+            </tei:fw>
             <tei:milestone unit="folio" n="verso"/>
             <tei:lb/>
-            <tei:lb/><tei:salute>An die <tei:hi rend="deu-dquote">
-                  <tei:hi rend="underline-italics">Universal-Edition</tei:hi>
-               </tei:hi> Wien, I </tei:salute><tei:note xml:id="r0001-fn01" type="editorial"
-               place="foot">Writing of this postcard is recorded in Schenker's diary at OJ 2/10, p.
-               835:. <!--Connect--></tei:note>
+            
+            <tei:salute>An die &#8222;<tei:orgName n="Universal Edition"><tei:hi rend="lateinschr underline">
+               Universal-Edition</tei:hi></tei:orgName>&#8220;
+            </tei:salute>
+            <!--no line break--><tei:address>
+               <tei:addrLine>Wien, I</tei:addrLine>
+            </tei:address>
+            <tei:note xml:id="r0001-fn01" type="editorial" place="foot">Writing of this postcard is
+               recorded in Schenker's diary at OJ 2/10, p. 835: " An Hertzka (recomm. K.): vermisse
+               Auskunft auf meine am 30. I. an ihn gerichtete Frage bezüglich der
+               Rezensionsexemplare; erbitte umgehend Antwort." (To Hertzka (registered postcard):
+               [I] see no sign of response to my question of January 30 addressed to him regarding
+               review copies; request reply by return.").<!--Replace text with tei:cRef--></tei:note>
          </tei:opener>
 
          <tei:p>Bis heute vermisse ich noch eine Erledigung meiner <tei:hi rend="underline"
                >beruflichen</tei:hi> Anfrage vom 30. 1.<tei:note xml:id="r0001-fn02"
-               type="editorial" place="foot">= WSLB 292. </tei:note> betreffs die
-            „Rezensionsexemplare“ für H. <tei:persName>Prof. <tei:hi rend="italics">A.
-            Halm</tei:hi></tei:persName> in <tei:placeName>Esslingen</tei:placeName>. Ich ersuche
+               type="editorial" place="foot">= WSLB 292. <!--insert cRef--></tei:note> betreffs die
+            &#8222;Rezensionsexemplare&#8220; für H. <tei:persName n="August Halm">Prof. <tei:hi rend="lateinschr">A.
+               Halm</tei:hi></tei:persName> in <tei:placeName>Esslingen</tei:placeName>. Ich ersuche
             dieser noch einmal frdl., mir Ihre Stellungsnahme endlich bekanntzugeben, u. zw.
-            womöglich umgehend. </tei:p>
+            womöglich umgehend. </tei:p> 
 
          <tei:closer>
             <tei:salute>Mit ausgez. Hochachtung</tei:salute>
             <tei:lb/><tei:signed>
-               <tei:hi rend="italics">H Schenker</tei:hi>
+               <tei:hi rend="lateinschr">D<tei:hi rend="supralinear">r.</tei:hi> Heinrich Schenker</tei:hi>
             </tei:signed>
-            <tei:lb/><tei:date>5. II. 1918 </tei:date><tei:lb/>
-            <tei:lb/>© In the public domain. <tei:lb/>© Transcription Ian D. Bent 2006. </tei:closer>
+            <tei:lb/><tei:date>5. II. 1918 </tei:date><tei:lb/></tei:closer>
+            <tei:closer>© In the public domain.</tei:closer>
 
       </tei:transcription>
 
       <tei:translation>
          <tei:opener>
+         <tei:fw type="envelope">
             <tei:milestone unit="folio" n="recto"/>
-            <tei:supplied resp="#IB" reason="identity">Sender:</tei:supplied> Dr. Heinrich Schenker, <tei:lb/>
-            <tei:supplied resp="#IB" reason="clarity">Vienna</tei:supplied> III, Reisnerstraße 38.
-            <tei:lb/>To the: Publishing House Universal Edition, <tei:lb/><tei:supplied resp="#IB"
-               reason="clarity">Vienna</tei:supplied> I, <tei:lb/>Karlsplatz 6.
-               <tei:lb/><tei:lb/><tei:supplied resp="#IB" reason="clarity">postmark:</tei:supplied>
-            || 3/3 WIEN 49 | 6[?].II.18–3 | * 3..[?] * || <tei:lb/><tei:supplied resp="#IB"
-               reason="clarity">label:</tei:supplied> || R | WIEN 49 / 393 | P. B. 3/3 || <tei:pb/>
+               <tei:supplied resp="#IB" reason="identity">Sender:</tei:supplied> Dr.
+                  Heinrich Schenker, 
+            <tei:lb/><tei:address>
+               <tei:addrLine><tei:supplied resp="#IB" reason="clarity">Vienna</tei:supplied> III, Reisnerstraße 38</tei:addrLine>
+            </tei:address>
+            <tei:lb/>
+               To the: Publishing House <tei:orgName>Universal Edition</tei:orgName>,
+                  <tei:lb/>
+            <tei:address><tei:addrLine><tei:supplied resp="#IB" reason="clarity">Vienna</tei:supplied> I,
+                  </tei:addrLine>
+                  <tei:addrLine>Karlsplatz 6</tei:addrLine>
+            </tei:address>
+            <tei:lb/><tei:fw type="postmark">|| 3/3 WIEN 49 | <tei:gap reason="editorial"
+               />.II.18–3 | * <tei:unclear reason="legibility">3</tei:unclear> * ||</tei:fw>
+            <tei:lb/><tei:supplied resp="#IB">gummed label:</tei:supplied> || R | WIEN 49 / 393 | P.
+            B. 3/3 || <tei:pb/>
+         </tei:fw>
             <tei:milestone unit="folio" n="verso"/>
             <tei:lb/>
-            <tei:salute>To Universal Edition, Vienna I.</tei:salute><tei:ptr corresp="#r0001-fn01"
-               type="footnote"/>
+            <tei:salute>To <tei:orgName>Universal Edition</tei:orgName>, 
+               <!--No line break--><tei:address><tei:addrLine>Vienna I.</tei:addrLine></tei:address></tei:salute>
+            <tei:ptr corresp="#r0001-fn01" type="footnote"/>
          </tei:opener>
 
          <tei:p>Up to today, I still see no sign of my <tei:hi rend="underline"
-            >professional</tei:hi> request of January 30<tei:ptr corresp="#r0001-fn01"
-               type="footnote"/> regarding review copies for Professor <tei:persName>August
+            >professional</tei:hi> request of January 30<tei:ptr corresp="#r0001-fn02"
+               type="footnote"/> regarding review copies for <tei:persName n="August Halm">Professor August
             Halm</tei:persName> of <tei:placeName>Esslingen</tei:placeName> having been carried out.
             I put my request once again that you kindly at long last let me know your position on
             this matter, what is more, if possible by return of post.</tei:p>
 
          <tei:closer>
             <tei:salute>With kind regards, </tei:salute><tei:lb/>
-            <tei:signed>H. Schenker</tei:signed>
-            <tei:lb/><tei:date>February 5, 1918</tei:date>
-            <tei:lb/><tei:lb/>© Translation Ian D. Bent 2006. </tei:closer>
-
+            <tei:signed>Dr. Heinrich Schenker</tei:signed>
+            <tei:lb/><tei:date>February 5, 1918</tei:date></tei:closer>
       </tei:translation>
    </sdo:record>
 </sdo:recordCollection>

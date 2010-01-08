@@ -1,54 +1,212 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sdo:recordCollection xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
-                      xmlns:tei="http://www.tei-c.org/ns/1.0"
-                      xmlns:dc="http://purl.org/dc/elements/1.1/"
-                      xmlns:dcterms="http://purl.org/dc/terms/"
-                      xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
-                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                      xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../schema/schenker.xsd"><!--OC-52-559--><sdo:collectionDesc>
-      <sdo:source><!--Select a shelfmark from the controlled list --><sdo:correspondence shelfmark="OC-52-559"/>
+   xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../schema/schenker.xsd">
+   
+   <sdo:collectionDesc>
+      <sdo:source>
+         <sdo:correspondence shelfmark="OC-52-559"/>
       </sdo:source>
-      <!-- Many documents will be in the hand of either Heinrich or Jeanette; add additional notes as needed to indicate
-                     the presence of other hands.--><tei:handNotes>
-         <tei:handNote xml:id="HS" scope="minor">Heinrich Schenker's hand</tei:handNote>
-         <tei:handNote xml:id="JS" scope="major">Jeanette Schenker's hand</tei:handNote>
-         <tei:handNote xml:id="unknown">Unknown hand</tei:handNote>
+
+      <tei:handNotes>
+         <tei:handNote xml:id="EH" scope="minor">Emil Hertzka's hand</tei:handNote>
+         <tei:handNote xml:id="W" scope="major">typist W</tei:handNote>
       </tei:handNotes>
-      <!-- Add additional or remove unnecessary statements of responsiblity as needed below --><tei:respStmt xml:id="IB">
+      <tei:respStmt xml:id="IB">
          <tei:persName>Ian Bent</tei:persName>
-         <!-- Add additional or remove unnecessary specific responsibility notes.--><tei:resp>Transcription</tei:resp>
+         <tei:resp>Transcription, 2009</tei:resp>
+         <tei:resp>Translation, 2009</tei:resp>
+         <tei:resp>Footnotes, 2009</tei:resp>
          <tei:resp>XML Encoding</tei:resp>
-         <tei:resp>Translation</tei:resp>
       </tei:respStmt>
       <tei:respStmt xml:id="TL">
          <tei:persName>Tamara Lopez</tei:persName>
          <tei:resp>XML Encoding Model</tei:resp>
       </tei:respStmt>
-      <!-- Add additional change elements below to note major changes to the document --><tei:revisionDesc>
+      <tei:revisionDesc>
          <tei:change when="2009-03-12" who="#TL">Template Generated</tei:change>
       </tei:revisionDesc>
+
    </sdo:collectionDesc>
-   <sdo:record ID="r0001"><!--Use the itemDesc to group information about a single piece of correspondence. 
-                     The itemDesc contains a series of Dublin Core elements. --><sdo:itemDesc>
-         <dc:title>A Descriptive Title Goes Here</dc:title>
-         <dcterms:created>The Date of Original Creation Goes Here: YYYY-MM-DD</dcterms:created>
-         <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
-         <dc:description>A summary of the contents of the record</dc:description>
-         <dc:subject>A list of subjects</dc:subject>
-         <marcrel:correspondent><!--Add the key attribute to indicate the sender of the letter--></marcrel:correspondent>
-         <marcrel:recipient><!--Add the key attribute to indicate the recipient of the letter--></marcrel:recipient>
+   <sdo:record ID="r0001">
+      <sdo:itemDesc>
+         <dc:title>Typed letter from Hertzka (UE) to Schenker, dated March 5, 1918</dc:title>
+         <dcterms:created>1918-03-05</dcterms:created>
+         <dcterms:dateSubmitted>2009-07-20</dcterms:dateSubmitted>
+         <dc:description>Hertzka will inquire about a review published in Lausanne; has dispatched
+            Schenker's Op. 111 Erläuterungsausgabe to Steglich and encloses invoice and payment
+            order; in light of Brest-Litovsk, he inquires about Kontrapunkt 2 and the Kleine
+            Bibibliothek.</dc:description>
+         <dc:subject>Hertzka, Emil; UE; Schenker, Heinrich; Die letzten fünf Sonaten von Beethoven;
+            The Last Five Sonatas of Beethoven; Lausanne; review; Steglich, Rudolf; Brest-Litovsk;
+            Kontrapunkt2; Kleine Bibliothek; Little Library </dc:subject>
+         <dc:format>2p letter, recto-verso, printed letterhead, typed address, date, and message,
+            holograph signature</dc:format>
+         <marcrel:correspondent key="EH"/>
+         <marcrel:correspondent key="UE"/>
+         <marcrel:recipient key="HS"/>
       </sdo:itemDesc>
-      <tei:transcription><!--Use the opener to contain information occuring at the start of the letter (e.g. the date, the salutation, the address).--><tei:opener>
-            <tei:date/>
+
+      <tei:transcription>
+         <tei:opener><tei:supplied reason="clarity">UE letterhead</tei:supplied>
+            <tei:address>
+               <tei:addrLine>Wien </tei:addrLine>
+               <tei:addrLine>I, Karlsplatz 6</tei:addrLine>
+            </tei:address>
+            <tei:persName>W</tei:persName>
+            <tei:dateline>
+               <tei:placeName n="Vienna">Wien</tei:placeName>
+               <tei:supplied resp="#IB" reason="clarity">typed: </tei:supplied>
+               <tei:date>5. März 1918</tei:date>
+            </tei:dateline> 
+            Wohlgeboren Herrn <tei:persName n="Heinrich Schenker">Prof. Dr. Heinrich
+                  <tei:hi rend="sperr">Schenker</tei:hi></tei:persName>
+            <tei:address>
+               <tei:addrLine>
+                  <tei:hi rend="sperr underline">
+                     <tei:placeName n="Vienna">Wien </tei:placeName>
+                  </tei:hi>
+               </tei:addrLine>
+               <tei:addrLine>Reisnersr. 38</tei:addrLine>
+            </tei:address>
+            <tei:lb/>
+            
+            <tei:salute>Hochgeehrter <tei:persName n="Heinrich Schenker">Herr
+               Professor</tei:persName>!</tei:salute><tei:note xml:id="r0001-fn01" type="editorial"
+               place="foot">Receipt of this letter is recorded in Schenker's diary at OJ 2/10, p.
+               851, March 6: "Von Hertzka (Br.): habe an Steglich op. 111 sofort
+               abgeschickt, von einer Belastung aber absehen wollen, sende Erlagschein nur über
+               meine Reklamation (der Betrag ist wieder so hoch gehalten wie in den früheren Fällen
+               – trotz Berichtigung); erkundigt sich unter dem Eindruck des Friedenschlusses mit
+               Rußland nach dem Stand von II/2 u. der &#8222;kl. Bibliothek&#8220;. ("From
+               Hertzka (letter): has dispatched  <tei:title level="m">Op. 111</tei:title>
+               to Steglich immediately,
+                  want<tei:supplied resp="IB" reason="correct tense">ed</tei:supplied> however to
+               spare me the burden, sends the payment order only because of my recent complaint (the
+               amount has again risen as much as in the earlier cases—despite correction); under the
+               influence of the conclusion of the peace treaty with Russia inquires after the state
+               of play with II/2 and the <tei:title level="m">Little Library</tei:title>.")—
+               Schenker had perhaps complained about the amount of author's discount, and this may
+               be why Hertzka encloses the invoice along with the payment order—indeed Schenker
+               complains in this instance, in his reply, WSLB 296, March 8!
+               <!--Replace quoted text with cRef--></tei:note>
          </tei:opener>
-         <tei:p>The German Transcription should be added to paragraphs.</tei:p>
-         <tei:closer><!--Use the closer to contain information occuring at the end of the letter (e.g. signatures, dates).--></tei:closer>
-         <!--Indicate postscript information using a postscript element (as necessary). Text within the postscript may also be grouped into paragraphs.--></tei:transcription>
-      <tei:translation><!--Use the opener to contain information occuring at the start of the letter (e.g. the date, the salutation, the address).--><tei:opener>
-            <tei:date/>
+
+         <tei:p rend="first">Auf Ihre geschätzte gestrige Karte erlaube ich mir mitzuteilen, dass
+            mir von einer französischen Kritik Ihrer <tei:rs
+               n="Die letzten fünf Sonaten von Beethoven">Beethoven-Ausgaben</tei:rs><tei:note
+               xml:id="r0001-fn02" type="editorial" place="foot">The review appeared in the
+                  <tei:title level="j">Gazette de Lausanne</tei:title>; no copy is apparently
+               preserved in OJ or OC. </tei:note> nichts bekannt ist. Ich schreibe deswegen heute an
+            unseren Vertreter in <tei:placeName>Lausanne</tei:placeName>, vielleicht weiss er etwas
+            und lasse mir in diesem Falle die Kritik schicken. Selbstverständlich erhalten Sie
+            dieselbe dann sogleich. </tei:p>
+
+         <tei:p rend="first">An <tei:persName n="Rudolf Steglich">Dr. Steglich</tei:persName> ist
+            Ihr <tei:rs n="Die letzten fünf Sonaten von Beethoven … op. 111">Opus 111</tei:rs>
+            sofort wunschgemäss expediert worden. Ich wollte von einer Belastung absehen, aber
+            nachdem Sie eine solche neuerlich reklamieren, erlaube ich mir, die Faktura mit
+            Erlagschein beizulagen. </tei:p>
+
+         <tei:p rend="first">Der gestrige definitive Friedensschluss mit Russland<tei:note
+               xml:id="r0001-fn03" type="editorial" place="foot">The peace treaty of Brest Litovsk
+               <!--Insert link to profile-->
+            </tei:note> und die meiner Ansicht nach unausbleibliche Wirkung auf die Gesamt-Situation
+            geben mir Gelegenheit, an Friedens-Dispositionen zu denken und ich benütze daher meine
+            heutigen Zeilen, um Ihnen die zwischen uns des öfteren ventilierte Frage der <tei:rs
+               type="work" n="Die Kleine Bibliothek"><tei:add hand="#EH" place="inline"
+               >&#8222;</tei:add>kleinen <tei:sic>musikalischen</tei:sic> Bibiliothek<tei:add
+                  hand="#EH" place="inline">&#8220;</tei:add></tei:rs><tei:note
+               xml:id="r0001-fn04" type="editorial" place="foot">"kleinen ... Bibliothek": underlined
+               in crayon by Schenker </tei:note> in Erinnerung zu bringen. Ich denke, Sie sind
+            inzwischen mit Ihrer Arbeit für <tei:orgName n="J. G. Cotta"
+               >Cotta</tei:orgName><tei:note xml:id="r0001-fn05" type="editorial" place="foot"
+               >Reference is to the second half-volume of <tei:rs n="Kontrapunkt 2">
+                  <tei:title level="m">Kontrapunkt</tei:title>
+               </tei:rs>. </tei:note> vollständig fertiggeworden und es würde mich herzlich freuen,
+            wenn unsere Sache recht bald in ein definitives Stadium treten könnte. </tei:p>
+
+         <tei:pb n="2"/>
+         <tei:closer rend="indent-30"><tei:salute>Mit den verbindlichsten Empfehlungen <tei:lb/>Ihr in Hochschätzung ergebener</tei:salute>
+               <tei:lb/><tei:signed>Hertzka</tei:signed>
+         </tei:closer>
+         <tei:postscript>
+            <tei:p>1 Faktura</tei:p>
+            <tei:p>1 Erlagschein <tei:note xml:id="r0001-fn06" type="editorial" place="foot">These
+                  documents are not filed with the letter, so were presumably returned.
+            </tei:note></tei:p>
+         </tei:postscript>
+          <tei:closer> © Universal Edition A.G., Wien. </tei:closer>
+       </tei:transcription>
+
+      <tei:translation>
+         <tei:opener>
+            <tei:supplied reason="clarity">UE letterhead</tei:supplied>
+            <tei:address>
+               <tei:addrLine>Vienna </tei:addrLine>
+               <tei:addrLine>I, Karlsplatz 6</tei:addrLine>
+            </tei:address>
+            <tei:persName>W</tei:persName>
+            <tei:dateline>
+               <tei:placeName n="Vienna">Vienna</tei:placeName> 
+               <tei:supplied resp="#IB" reason="clarity">typed: </tei:supplied>
+               <tei:date>March 5, 1918</tei:date>
+            </tei:dateline>
+            <tei:persName n="Heinrich Schenker">Prof. Dr. Heinrich <tei:hi rend="sperr"
+               >Schenker</tei:hi></tei:persName>
+            <tei:address>
+               <tei:addrLine>
+                  <tei:hi rend="sperr underline">
+                        <tei:placeName n="Vienna">Vienna </tei:placeName>
+                   </tei:hi>
+               </tei:addrLine>
+               <tei:addrLine>Reisnerstraße 38</tei:addrLine>
+            </tei:address>
+            <tei:lb/>
+
+            <tei:salute>Dear <tei:persName n="Heinrich Schenker"> Professor</tei:persName>!</tei:salute>
+            <tei:ptr corresp="#r0001-fn01" type="footnote"/>
          </tei:opener>
-         <tei:p>The English translation should be added to paragraphs.</tei:p>
-         <tei:closer><!--Use the closer to contain information occuring at the end of the letter (e.g. signatures, dates).--></tei:closer>
-         <!--Indicate postscript information using a postscript element (as necessary). Text within the postscript may also be grouped into paragraphs.--></tei:translation>
+
+         <tei:p rend="first">In response to your valued postcard of yesterday, I take the liberty of
+            informing you that I know nothing of any French review of your <tei:rs type="work"
+               n="Die letzten fünf Sonaten von Beethoven">Beethoven edition</tei:rs>.<tei:ptr
+               corresp="#r0001-fn02" type="footnote"/> I am accordingly writing today to our
+            representative in <tei:placeName>Lausanne</tei:placeName>; perhaps he knows something
+            and if so can have the review sent to me. Needless to say, you will then receive it
+            forthwith. </tei:p>
+
+         <tei:p rend="first">Your <tei:rs n="Die letzten fünf Sonaten von Beethoven … op. 111">
+               <tei:title level="m">Op.111</tei:title>
+            </tei:rs> has been dispatched to <tei:persName n="Rudolf Steglich">Dr.
+            Steglich</tei:persName> immediately, at your request. I was going to spare you the
+            burden, but since you complained about one such recently I take the liberty of enclosing
+            the invoice with payment order. </tei:p>
+
+         <tei:p rend="first">Yesterday's definitive conclusion of peace with Russia<tei:ptr
+               corresp="#r0001-fn03" type="footnote"/> and the inevitable effect it will, in my
+            opinion, have on the overall situation, afford me the opportunity to think about
+            peace-makings, so accordingly I am taking advantage of these lines of mine today to
+            revive the question of the <tei:rs type="work" n="Die Kleine Bibliothek"><tei:add
+                  hand="#EH" place="inline">"</tei:add>Little <tei:sic>Musical</tei:sic>
+                  Library<tei:add hand="#EH" place="inline">"</tei:add></tei:rs>,<tei:ptr
+               corresp="#r0001-fn04" type="footnote"/> so often broached between us. I believe that
+            in the meanwhile you have finalized your work for <tei:orgName n="J. G. Cotta"
+               >Cotta</tei:orgName>,<tei:ptr corresp="#r0001-fn05" type="footnote"/> and I should be
+            delighted if our plan could swiftly be brought to a definitive stage. </tei:p>
+
+         <tei:pb n="2"/>
+         <tei:closer rend="indent-30"><tei:salute>With warmest regards, <tei:lb/>Yours most sincerely,</tei:salute>
+               <tei:lb/><tei:signed>Hertzka</tei:signed>
+         </tei:closer>
+
+         <tei:postscript>
+            <tei:p>1 invoice</tei:p>
+            <tei:p>1 payment order <tei:ptr corresp="#r0001-fn06" type="footnote"/></tei:p>
+         </tei:postscript>
+      </tei:translation>
+
    </sdo:record>
 </sdo:recordCollection>

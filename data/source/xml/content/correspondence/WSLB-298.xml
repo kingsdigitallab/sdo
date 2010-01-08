@@ -1,54 +1,274 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sdo:recordCollection xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
-                      xmlns:tei="http://www.tei-c.org/ns/1.0"
-                      xmlns:dc="http://purl.org/dc/elements/1.1/"
-                      xmlns:dcterms="http://purl.org/dc/terms/"
-                      xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
-                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                      xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../schema/schenker.xsd"><!--WSLB-298--><sdo:collectionDesc>
-      <sdo:source><!--Select a shelfmark from the controlled list --><sdo:correspondence shelfmark="WSLB-298"/>
+   xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../schema/schenker.xsd">
+
+   <sdo:collectionDesc>
+      <sdo:source>
+         <sdo:correspondence shelfmark="WSLB-298"/>
       </sdo:source>
-      <!-- Many documents will be in the hand of either Heinrich or Jeanette; add additional notes as needed to indicate
-                     the presence of other hands.--><tei:handNotes>
+
+      <tei:handNotes>
          <tei:handNote xml:id="HS" scope="minor">Heinrich Schenker's hand</tei:handNote>
-         <tei:handNote xml:id="JS" scope="major">Jeanette Schenker's hand</tei:handNote>
-         <tei:handNote xml:id="unknown">Unknown hand</tei:handNote>
       </tei:handNotes>
-      <!-- Add additional or remove unnecessary statements of responsiblity as needed below --><tei:respStmt xml:id="IB">
+
+      <tei:respStmt xml:id="IB">
          <tei:persName>Ian Bent</tei:persName>
-         <!-- Add additional or remove unnecessary specific responsibility notes.--><tei:resp>Transcription</tei:resp>
+         <tei:resp>Transcription, 2009</tei:resp>
+         <tei:resp>Translation, 2009</tei:resp>
+         <tei:resp>Footnotes, 2009</tei:resp>
          <tei:resp>XML Encoding</tei:resp>
-         <tei:resp>Translation</tei:resp>
       </tei:respStmt>
       <tei:respStmt xml:id="TL">
          <tei:persName>Tamara Lopez</tei:persName>
          <tei:resp>XML Encoding Model</tei:resp>
       </tei:respStmt>
-      <!-- Add additional change elements below to note major changes to the document --><tei:revisionDesc>
+      <tei:revisionDesc>
          <tei:change when="2009-03-12" who="#TL">Template Generated</tei:change>
       </tei:revisionDesc>
    </sdo:collectionDesc>
-   <sdo:record ID="r0001"><!--Use the itemDesc to group information about a single piece of correspondence. 
-                     The itemDesc contains a series of Dublin Core elements. --><sdo:itemDesc>
-         <dc:title>A Descriptive Title Goes Here</dc:title>
-         <dcterms:created>The Date of Original Creation Goes Here: YYYY-MM-DD</dcterms:created>
-         <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
-         <dc:description>A summary of the contents of the record</dc:description>
-         <dc:subject>A list of subjects</dc:subject>
-         <marcrel:correspondent><!--Add the key attribute to indicate the sender of the letter--></marcrel:correspondent>
-         <marcrel:recipient><!--Add the key attribute to indicate the recipient of the letter--></marcrel:recipient>
+
+   <sdo:record ID="r0001">
+
+      <sdo:itemDesc>
+         <dc:title>Handwritten letter from Schenker to Hertzka (UE), dated April 17, 1918</dc:title>
+         <dcterms:created>1918-04-17</dcterms:created>
+         <dcterms:dateSubmitted>2009-07-21</dcterms:dateSubmitted>
+         <dc:description>Schenker returns the article by Maurice Kufferath and comments on it
+            critically. -- Beethoven did give phrase-markings, thus Schenker advocates inserting
+            fingering but not additional phrase-marks. -- Diatribe against Hans von Bülow's editions
+            and those who have emulated him. </dc:description>
+         <dc:subject>Schenker, Heinrich; Hertzka, Emil; UE; Kufferath, Maurice; Kaiserbrief; Sixtus;
+            Poincaré, Raymond; Beethoven; Bach, J. S.; Fidelio; Rosé, Arnold; Bülow, Hans von </dc:subject>
+         <dc:format/>
+         <marcrel:correspondent key="HS"/>
+         <marcrel:recipient key="EH"/>
+         <marcrel:recipient key="UE"/>
       </sdo:itemDesc>
-      <tei:transcription><!--Use the opener to contain information occuring at the start of the letter (e.g. the date, the salutation, the address).--><tei:opener>
-            <tei:date/>
+
+      <tei:transcription>
+         <tei:opener rend="first">
+            <tei:salute>Sehr geehrter Herr <tei:persName n="Emil Hertzka">Direktor</tei:persName>!</tei:salute>
+            <tei:note xml:id="r0001-fn01" type="editorial" place="foot"> Writing of this letter is
+               recorded at OJ 2/10, p. 877: "An Hertzka (Br.): stelle mit Dank den possierlichen
+               Franzosen zurück; über eine gefälschte Stelle für 'schallende Ohrfeige' 'mit Recht
+               verdiente Ohrfeige'; ein Wort über die Ausgaben: Beethoven sei phrasiert zur Welt
+               gekommen; seine Phrasierung reiche überdies für alle Solisten, Quartett- Konzert- u.
+               Operngesellschaften aus – nur sonderbarerweise nicht für Klavierspieler; das sei aber
+               so gekommen, daß die Verleger, was schließlich verständlich ist, berühmte Pianisten
+               um Fingersätze gebeten haben u. daß diese nun die Gelegenheit wahrgenommen, auch noch
+               ihre Phrasierung auf Beethovens Kosten dreinzugeben. Wenn Bülows Ausgabe so lange
+               vorgehalten hat – trotz falschem Text u. falschen Erläuterungen, wie müßte da erst
+               eine Ausgabe mit richtigem Text u. richtigen Erläuterungen vorhalten. Jenseits von
+               der Notwendigkeit der Verlage Herbstauslagen zu arrangieren – Güte sei ein
+               Modeartikel für sich." ("To Hertzka (letter): return the comical nchman with
+               thanks; about a spurious passage 'rightly deserved cuff on the ears' instead of
+               'reeling cuff on the ears'; a word on the editions: Beethoven came into the world
+               phrased; what is more, his phrasings suffice for all the soloists, quartet, concert
+               and opera societies – though oddly enough not for pianists; this came about because
+               publishers asked famous pianists for fingerings, which is after all understandable,
+               and they then took the opportunity of imposing their phrasings at the expense of
+               Beethoven. If Bülow's edition has served for so long – despite incorrect text and
+               incorrect commentary, how long would an edition with correct text and correct
+               commentary hold out. Beyond the publishers' need to arrange a fall display –
+               benevolence is itself an article of fashion.") </tei:note>
          </tei:opener>
-         <tei:p>The German Transcription should be added to paragraphs.</tei:p>
-         <tei:closer><!--Use the closer to contain information occuring at the end of the letter (e.g. signatures, dates).--></tei:closer>
-         <!--Indicate postscript information using a postscript element (as necessary). Text within the postscript may also be grouped into paragraphs.--></tei:transcription>
-      <tei:translation><!--Use the opener to contain information occuring at the start of the letter (e.g. the date, the salutation, the address).--><tei:opener>
-            <tei:date/>
+
+         <tei:p>Mit bestem Dank stelle ich anbei den possierlichen <tei:persName
+               n="Maurice Kufferath">Franzosen</tei:persName><tei:note xml:id="r0001-fn02"
+               type="editorial" place="foot">See WSLB 295, <!--Insert cRef--> March 3, and OC
+               52/205, <!--Insert cRef--> April 10. </tei:note> zurück. Daß er dort, wo ich außer
+            paar Zeilen Vorworts u. einer Fußnote<tei:note xml:id="r0001-fn03" type="editorial"
+               place="foot">Of <tei:bibl><tei:author>Schenker</tei:author>, <tei:title level="m">Die letzten fünf Sonaten von
+                     Beethoven … op. 111</tei:title> (Vienna: UE, 1915)</tei:bibl>. Schenker
+               understates the case here; he engages in inflammatory polemics in the Foreword, in a
+               long footnote on the sinking of the Lusitania (p. 80), in a still longer footnote
+               about World War I (pp. 83–85), and in several other shorter footnotes, including an
+               attack on <tei:persName>Debussy</tei:persName> (p. 69). The passage alluded to later
+               in this paragraph occurs in paragraph 4 of the footnote on p. 80, of which his
+               wording in this letter is a slight paraphrase: "[…] begriff er [the Anglo-American,
+               i.e. Woodrow Wilson] doch auch die Ohrfeige der Lusitania-Torpedierung nur deshalb,
+               weil sie so schallend war […]" ("he really understood the box around the ears of the
+               torpedoing of the Lusitania only because it was so resounding […]"). Further to that
+               footnote, see <tei:bibl><tei:author>William Pastille</tei:author>, <tei:title level="a">Aesthetic Education:
+                     On the Origins of Schenker's Musical Politics</tei:title>, in <tei:title
+                     level="m">Essays from the Fourth International Schenker Symposium</tei:title>,
+                  ed. <tei:editor>Allen Cadwallader</tei:editor> (Hildesheim: Georg Olms, 2008), pp. 183–95, esp.
+               184–86.</tei:bibl>
+            </tei:note> eine umfangreiche Darstellung des Inhaltes biete, sich nur gerade mit jenen
+            paar Zeilen beschäftigt, kann auch in Deutschland vorkommen u. kommt auch vor. Daß er
+            aber an manchen Stellen mein <tei:hi rend="lateinschr">Original</tei:hi> u. seine
+            Ǘbersetzung anführt, damit nur die Leser an seiner Ehrlichkeit nicht zweifeln, u. doch
+            an einer recht wichtigen Stelle &#8222;<tei:hi rend="underline">schallende</tei:hi>
+            Ohrfeige&#8220; in &#8222;<tei:hi rend="lateinschr">
+               <tei:foreign xml:lang="fre">un soufflet <tei:hi rend="underline"
+                  >légitimement</tei:hi> appliqué</tei:foreign>
+            </tei:hi>&#8220;<tei:note xml:id="r0001-fn04" type="editorial" place="foot">Phrase
+               quoted from Kufferath review. </tei:note>
+            <tei:hi rend="underline">umfälscht</tei:hi>, ist spezifisch französisch u. bestätigt,
+            was ich schrieb, im kleinen nicht minder, wie die soeben enthüllte grobe, plumpe
+            Fälschung des Kaiserbriefes<tei:note xml:id="r0001-fn05" type="editorial" place="foot"
+               >Kaiserbrief: a letter, written by the <tei:persName n="Wilhelm I, Kaiser">Austrian
+                  Emperor Karl I</tei:persName> to the <tei:persName
+                  n="Sixtus Ferdinand of Bourbon-Parma">Prince Ferdinand of
+               Bourbon-Parma</tei:persName>, seeking peace negotiations and offering certain
+               concessions. The letter was exposed in April 1918, and published by <tei:persName
+                  n="Georges Clémenceau">Clémenceau</tei:persName>, leading to the resignation of
+               Karl's foreign minister, <tei:persName n="Czernin">Ottokar Czernin</tei:persName>.
+            </tei:note> (auf dem Wege von <tei:persName n="Sixtus Ferdinand of Bourbon-Parma"
+            >Sixtus</tei:persName> zum <tei:persName n="Raymond Poncaré">
+               <tei:hi rend="lateinschr">Poincaré</tei:hi>
+            </tei:persName>) im Großen. Ja, die Herren Franzosen sind Spezialisten in
+            &#8222;Freiheiten,&#8220; nur sehe man: welche, – in der
+            &#8222;Freiheit&#8220; <tei:del hand="#HS">auf</tei:del> der Fälschung, der
+            Eroberungen des Rheins einer unmenschlichen Gefangenenbehandlung u. <tei:unclear
+               reason="reading">lauter</tei:unclear> solchen<tei:note xml:id="r0001-fn06"
+               type="editorial" place="foot">"u. … solchen": written in the line above after
+               "Rheins," then marked to be transposed to this point. (There is clearly something
+               wrong with this sentence.) </tei:note> anderen Freiheiten mehr. </tei:p>
+
+         <tei:p rend="first">Zur Frage der Ausgaben ein Wort: Sie irren sich, wenn Sie glauben, daß
+               <tei:persName n="Ludwig van Beethoven">
+               <tei:hi rend="lateischr">Beeth.</tei:hi>
+            </tei:persName> so unphrasiert auf die Welt gekommen ist, wie z.B. <tei:persName
+               n="J. S. Bach">
+               <tei:hi rend="lateinschr">Bach S.</tei:hi>
+            </tei:persName> Seine <tei:hi rend="underline">eigene</tei:hi>
+            <tei:rs type="musical-term">Phrasierung</tei:rs> ist so genau, ja so übergenau, daß sie
+            seit den ersten Tagen bis auf die heutigen noch allen Sologeigern, Quartett-, <tei:pb
+               n="2"/> Orchester-, Operngesellschaften (<tei:hi rend="lateinschr"><tei:rs
+                  type="work" n="Beethoven, Fidelio">Fidelio</tei:rs>, Messen etc</tei:hi>)
+            ausgereicht u. Allen Köpfe u. Hände voll zu schaffen gemacht hat! Liegt es nicht also
+            auf der Hand, daß die paar Bearbeiter<tei:note xml:id="r0001-fn07" type="editorial"
+               place="foot">"Bearbeiter": Schenker means editors who "work on" their editions,
+               inserting fingerings, performance instructions, phrase-markings, etc. On this, see OC
+               52/205 : <!--Insert cRef--> April 10, 1918. </tei:note> aus Eitelkeit u. Frechheit sich putzig machen
+            mit ihren &#8222;Phr<tei:hi rend="underline"
+               >i</tei:hi>sierungen,&#8220;<tei:note xml:id="r0001-fn8" type="editorial"
+               place="foot">"Phrisierungen", from "frisieren": literally "hairdressing" or
+               "hair-styling" (from "Friseur", hairdresser), with the implication of fakery.
+               Schenker is deploying a play on words between "Phrisierung" and "Phrasierung."
+            </tei:note> die das volle Gegenteil von <tei:hi rend="lateinschr">Beeth</tei:hi>’schen
+               <tei:rs type="musical-term">Phr<tei:hi rend="underline">a</tei:hi>sierungen</tei:rs>
+            sind? Die Verleger baten zuerst um <tei:rs type="musical-term">Fingersätze</tei:rs> –
+               <tei:hi rend="underline">das</tei:hi> ist verständlich –, der Bearbeiter gab dann
+            noch als <tei:unclear reason="reading">Zuwege</tei:unclear>, eine nicht einmal erbetene,
+            auch <tei:hi rend="underline">seine</tei:hi>
+            <tei:rs type="musical-term">Phrasierung</tei:rs>! Diese niederträchtige Protzerei ließ
+            natürlich den zweiten, dritten Bearbeiter nicht ruhen, u. so phrisieren sie um die
+            Wette, während, wie gesagt, <tei:persName n="Rosé, Arnold">
+               <tei:hi rend="lateinschr">Rosé</tei:hi>
+            </tei:persName>, <tei:hi rend="lateinschr">etc.</tei:hi> noch immer nach der ersten
+            Phrasierung spielen, u. doch wohl auch mit Erfolg. </tei:p>
+
+         <tei:p rend="first">Also <tei:rs type="musical-term">Fingersätze</tei:rs>, ja, – nur aber
+            die <tei:rs type="musical-term"><tei:hi rend="lateinschr"
+            >Original</tei:hi>phrasierung</tei:rs>. </tei:p>
+
+         <tei:p rend="first">Was die Erläuterung anbelangt, ist nur folgendes zu sagen: Wenn bei
+            einer völlig <tei:add hand="#HS" place="interlinear-above">falschen</tei:add>
+            Darstellung die Ausgabe von <tei:persName n="Hans von Bülow">
+               <tei:hi rend="lateinschr">Bülow</tei:hi>
+            </tei:persName> so viele Jahrzehnte vorhielt, vorhält u. noch vorhalten wird, blos wegen
+            der Erläuterungen, die ja auch falsch sind, wie müßte erst vorhalten eine Ausgabe, der
+            Niemand falschen Text u. falsche Erläuterungen vorwerfen könnte?! Was hat ein solches
+            Werk, das gleichsam über den Moden stünde, mit den Bedürfnissen der Verlage nach neuen
+            Herbst-Auslagen zu tun? Gar nichts. Neben <tei:hi rend="lateinschr">Bülow</tei:hi> kamen
+            u. giengen ja <tei:pb n="3"/> so viel Mode-Bearbeiter, – er blieb, trug Geld ein u.
+            trägt <tei:supplied resp="#IB" reason="cutoff">es</tei:supplied> noch. Güte ist ein
+            ewiger Mode-Artikel für sich. — </tei:p>
+
+         <tei:p rend="first">Leider kam der franz. Aufsatz in eine schmutzige Hand<tei:supplied
+               resp="#IB" reason="cutoff">;</tei:supplied> ich brauche nicht erst zu sagen, daß es
+            auch eine reiche Hand ge<tei:supplied resp="#IB" reason="cutoff">wesen</tei:supplied>,
+            so bitte ich um Entschuldigung wegen des Zustandes, in dem <tei:supplied resp="#IB"
+               reason="cutoff">ich</tei:supplied> Ihnen den Aufsatz zurückzustellen genötigt bin. </tei:p>
+
+         <tei:closer rend="indent-50">
+            <tei:salute><tei:gap reason="illegible" extent="2" unit="word"/> bestens dankend u.
+               herzlichst grüßend <tei:lb/>Ihr sehr ergebener</tei:salute>
+            <tei:signed>
+               <tei:hi rend="lateinschr">H Schenker</tei:hi>
+            </tei:signed>
+            <tei:date>17. April 1918</tei:date>
+         </tei:closer>
+         <tei:closer>© In the public domain. </tei:closer>
+      </tei:transcription>
+
+      <tei:translation>
+         <tei:opener rend="first">
+            <tei:salute>Dear <tei:persName n="Emil Hertzka">Director</tei:persName>,</tei:salute>
+            <tei:ptr corresp="#r0001-fn01" type="footnote"/>
          </tei:opener>
-         <tei:p>The English translation should be added to paragraphs.</tei:p>
-         <tei:closer><!--Use the closer to contain information occuring at the end of the letter (e.g. signatures, dates).--></tei:closer>
-         <!--Indicate postscript information using a postscript element (as necessary). Text within the postscript may also be grouped into paragraphs.--></tei:translation>
+
+         <tei:p>Herewith enclosed, I return the ridiculous <tei:persName n="Maurice Kufferath"
+               >Frenchman</tei:persName><tei:ptr corresp="#r0001-fn02" type="footnote"/> with many
+            thanks. Whereas I, aside from a few lines of Foreword and a footnote,<tei:ptr
+               corresp="#r0001-fn03" type="footnote"/> offer a comprehensive presentation of the
+            content, he concerns himself solely with just those few lines. This is something that
+            can happen, and does happen, in Germany, too. But the way that in many places he quotes
+            my original and his translation, such that his readers will not doubt his honesty, and
+            indeed at one really important point renders "<tei:hi rend="underline"
+            >resounding</tei:hi> box around the ears" <tei:hi rend="underline">falsely</tei:hi> as
+            "<tei:foreign xml:lang="fre">un soufflet <tei:hi rend="underline">légitimement</tei:hi> appliqué</tei:foreign>",<tei:ptr
+               corresp="#r0001-fn04" type="footnote"/> is quintessentially French and confirms what
+            I wrote, in small matters no less than in large, cf. the coarse, crude falsification of
+            the Emperor's letter<tei:ptr corresp="#r0001-fn05" type="footnote"/> recently exposed
+            (en route from <tei:persName n="Sixtus Ferdinand of Bourbon-Parma">Sixtus</tei:persName>
+            to <tei:persName n="Raymond Poncaré">Poincaré</tei:persName>). Yes, these French fellows
+            are specialists in "freedoms"; one need only consider, in the "freedom" of
+            falsification, in the conquests of the Rhine, in an inhumane treatment of prisoners, and
+            other such<tei:ptr corresp="#r0001-fn06" type="footnote"/> freedoms. </tei:p>
+
+         <tei:p>A word about the matter of editions: you are mistaken in believing that
+               <tei:persName n="Ludwig van Beethoven">Beethoven</tei:persName> saw the light of day as unphrased as, e.g.,
+               <tei:persName>J. S. Bach</tei:persName>. His <tei:hi rend="underline">own</tei:hi>
+            phrasing is so precise, indeed so super-precise, that from early days up to the present
+            day it has sufficed for all solo violinists, quartet ensembles, <tei:pb n="2"/>
+            orchestral and opera companies (<tei:rs type="work">
+               <tei:title level="m">Fidelio</tei:title>
+            </tei:rs>, masses, etc.) and given everybody plenty to work with creatively. Is it not
+            thus apparent that the few heavy-handed editors,<tei:ptr corresp="#r0001-fn07"
+               type="footnote"/> out of vanity and impertinence, sully themselves with their "window
+               dressing,"<tei:ptr corresp="#r0001-fn08" type="footnote"/> which is in total contrast
+            to Beethoven’s <tei:rs type="musical-term">phrase indications</tei:rs>? At first,
+            publishers asked for <tei:rs type="musical-term">fingerings</tei:rs>—<tei:hi
+               rend="underline">that</tei:hi> is understandable—, then the heavy-handed editor threw
+            in something else that had not been asked for, his <tei:hi rend="underline">own</tei:hi>
+            <tei:rs type="musical-term">phrasing</tei:rs>! This low-minded ostentation naturally
+            forced the hand of the next arranger, and then the next, and so they vied with each
+            other in window-dressing, while, as has been said, <tei:persName n="Arnold Rosé"
+            >Rosé</tei:persName>, etc. continue to play according to the first phrasing, what’s more
+            with great success. </tei:p>
+
+         <tei:p rend="first">So <tei:rs type="musical-term">fingerings</tei:rs>, yes, but only the
+               <tei:rs type="musical-term">original phrase markings</tei:rs></tei:p>
+
+         <tei:p rend="first">On the subject of elucidation, let me say just the following: if with a
+            totally <tei:add hand="#HS" place="interlinear-above">false</tei:add> presentation, the
+            edition of <tei:persName n="Hans von Bülow">von Bülow</tei:persName> has lasted so many
+            decades, still lasts, and will continue to last, solely on account of its elucidations,
+            which themselves are totally false, how long must an edition last that is irreproachable
+            as to its musical text and its elucidations?! What has such a work that is, so to speak,
+            above all fashion, to do with the requirements of publishers for their new autumn window
+            displays? Nothing whatsoever. Alongside von Bülow, <tei:pb n="3"/> so many modish
+            editors came and went; he has outlived them, raked in the shekels, and is still raking
+            them in. Benevolence is itself an eternal article of fashion. — </tei:p>
+
+         <tei:p rend="first">Unfortunately, the French article found its way into dirty hands. I
+            hardly need say that they were wealthy hands, so I ask your forgiveness for the
+            condition in which I am obliged to return the article to you. </tei:p>
+
+         <tei:closer>
+            <tei:salute><tei:gap reason="illegible" extent="2" unit="word"/> with best thanks and
+               most cordial greetings, <tei:lb/>Yours very truly,</tei:salute>
+            <tei:lb/>
+            <tei:signed>H Schenker </tei:signed>
+            <tei:date>17. April 1918</tei:date>
+         </tei:closer>
+      </tei:translation>
+
    </sdo:record>
 </sdo:recordCollection>
