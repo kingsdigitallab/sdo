@@ -7,13 +7,20 @@
   <div >
     <table summary="Collections" width="100%">
       <tr>
-        <th>Name</th><th>Abbreviation</th><th>Description</th><th>Statement</th>
+        <th>Name</th><th>Name Supplied?</th><th>Identifier</th><th>Description</th><th>Statement</th>
       </tr>
        {% for collection in collection_list|dictsort:"name" %}
       <tr>
         <td>{{ collection.name }} ({{collection.repository.name}})</td>
-      {% if collection.abbreviation %}
-        <td>{{ collection.abbreviation }}</td>
+        <td>
+          {% if collection.name_supplied %}
+          yes
+          {%else %}
+          no
+          {%endif%}
+      </td>
+      {% if collection.identifier %}
+        <td>{{ collection.identifier }}</td>
       {% else %}
         <td><span class="errors">n/a</span></td>
       {% endif %}
@@ -36,8 +43,7 @@
       {% endfor %}
       </td>
       
-      
-      
+       
       
       
    

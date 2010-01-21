@@ -127,16 +127,17 @@ def xsd(request, schema_type):
              shelfmark = ""
              description = ""
              
-             # if there is not a collection abbreviation, look for a repository abbreviation, and use it as the first piece of shelfmark info.
+             # if there is not a collection identifier, look for a repository identifier, and use it as the first piece of shelfmark info.
              
-             if  not coll.abbreviation and rep.abbreviation:
-             
-                 shelfmark += rep.abbreviation + "-"
+             if  rep.identifier:
+                 shelfmark += rep.identifier + "-"
+                 
+             #elif rep.rism_identifier:
+               #  shelfmark += rep.identifier + "-"
                                   
+             if coll.identifier:
              
-             elif coll.abbreviation:
-             
-                 shelfmark += coll.abbreviation + "-"
+                 shelfmark += coll.identifier + "-"
                  description += "Collection: " + coll.name
              
              
@@ -157,7 +158,7 @@ def xsd(request, schema_type):
                  
              # unitid
              shelfmark += document.unitid
-             description += " UnitId: " + document.unitid + " (Repository: " + rep.name + ")"
+             description += " Id: " + document.unitid + " (Repository: " + rep.name + ")"
              
              if document.description:
                  description += "Description: " + document.description

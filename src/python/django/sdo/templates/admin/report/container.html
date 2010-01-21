@@ -18,26 +18,42 @@
       {% for collection in collection_list %}
       
         <h2>{{ collection.grouper }}</h2>
+        
+      
+      {% for item in collection.list|dictsort:"box" %}
+                
        
-        {% for item in collection.list|dictsort:"box" %}
+        <h3>Collection Statements</h3>
         
-        <h3> {{item.collection.abbreviation }}  {{ item.box }}  {{item.folder }} </h3>
+        {% if item.collection.collectionstatements_set.select_related %}
         
-        <h4>Description</h4>
-        {% if item.description %}
-        
-        {{ item.description }}
-        
-        {%else%}
-        <table width="50%">
-          <tr><td>
-        <span class="errornote">This container has no description.</span>
-          </td>
+        <hr/>
+        <table summary="Statements" width="90%">
+          
+          {% for statement in item.collection.collectionstatements_set.select_related %}
+          <tr>
+            <td>
+              {{ statement.get_statement_type_display }} : {{ statement.description }}
+            </td>
           </tr>
-         </table>
-        {% endif %}
+          
+          
+          {% endfor %}
+        </table>
+        <hr/>
+        {% else %}
+        <table width="50%">
+          <tr><td> <span class="errornote">There are no statements associated with this collection.</span></td></tr>
+        </table>
         
-        <h4>Statements</h4>
+        {% endif %}
+       
+       
+        <h3> {{item.collection.abbreviation }}  Box: {{ item.box }}  Folder: {{item.folder }} </h3>
+        
+                 
+        
+        <h4>Container Statements</h4>
         {% if item.containerstatements_set.select_related %}
         
         <hr/>
@@ -61,34 +77,57 @@
        
         {% endif %}
         
+        <h4>Container Description</h4>
+        {% if item.description %}
+        
+        {{ item.description }}
+        
+        {%else%}
+        <table width="50%">
+          <tr><td>
+            <span class="errornote">This container has no description.</span>
+          </td>
+          </tr>
+        </table>
+        {% endif %}
+        
+        
         <h4>Documents</h4>
         
         {% if item.document_set.select_related %}
         <table summary="Documents" width="90%">
           <tr>
-            <th>Shelfmark</th><th>Shelfmark Symbol</th><th>Document ID Supplied</th><th>Series</th><th>Document Description</th>
+            <th>Identifiers</th><th>Document ID Supplied</th><th>Series</th><th>Dates</th><th>Document Description</th>
           </tr>
           
           {% for document in item.document_set.select_related %}
           
           <tr>
             <td>
-              {%if item.collection.repository.abbreviation  and not item.collection.abbreviation %}
+              {%if item.collection.repository.identifier %}
               
-              {{item.collection.repository.abbreviation}}
-              {%else %}
+              {{item.collection.repository.identifier}} 
+              {%endif%}
+              {%if item.collection.repository.rism_identifier %}
               
-              {{ item.collection.abbreviation }} 
+              {{item.collection.repository.rism_identifier}} 
+              {%endif%}
+              
+              {%if item.collection.identifier %}
+              
+               {{ item.collection.identifier }}
               {%endif %}
               {% if item.box %} 
-              {{ item.box }} {% endif %}  
-              {% if item.folder %} {{ item.folder }} {% endif %}
-              {% if item.documents_supplied %} [{{ document.unitid }}]   {% else %} {{ document.unitid }}  {% endif %}
+              
+              {{ item.box }}               
+              {% endif %}  
+              {% if item.folder %}  {{ item.folder }} {% endif %}
+              {% if document.id_supplied %} [{{ document.unitid }}]   {% else %} {{ document.unitid }}  {% endif %}
               
             </td>
-            <td>{{item.get_delimiter_display }}</td>
+            
              <td>
-            {% if item.documents_supplied %}
+            {% if document.id_supplied %}
                 yes
             {%else %}
                 no
@@ -100,6 +139,16 @@
             <td><span class="errors">n/a</span></td>
             {% endif %}
             </td>
+            <td>
+            Start: {{ document.coverage_start}} <br/>
+            
+            {% if document.coverage_end %}
+            End:  {{ document.coverage_end}}
+            {% endif %}
+              
+             </td>
+            
+            
             {% if document.description %}
             <td>{{document.description}}</td>
            {% else %}
@@ -107,7 +156,33 @@
            {% endif %}
            
             </tr>
+          <tr>
+            <td colspan="5">
+              <h5>Document Statements</h5>
+              
+              {% if document.documentstatements_set.select_related %}
+              
+              
+              {% for statement in document.documentstatements_set.select_related %}
+              
+              {{ statement.get_statement_type_display }} : {{ statement.description }}<br/>
+              
+              <hr/>    
+              
+              {% endfor %}
+              
+              {% else %}
+              
+              <span class="errormessage">There are no statements associated with this document.</span>
+              
+              {% endif %}
+              
+            </td>
+          
           {% endfor %}
+          
+          
+          
         </table>
         {% else %}
         <table width="50%">

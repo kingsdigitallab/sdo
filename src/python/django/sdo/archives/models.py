@@ -1,9 +1,13 @@
 from django.db import models
+from django import forms
+from django.forms.extras.widgets import SelectDateWidget
+
 
 # Create your models here.
 class Repository(models.Model):
-    name = models.CharField(max_length=200, help_text=u"Enter the current name of the repository")
-    abbreviation = models.CharField(max_length=6,blank=True, help_text=u"Add an abbreviation for this repository, e.g. NYPL")
+    name = models.CharField(unique=True, max_length=400, help_text=u"Enter the current name of the repository")
+    identifier = models.CharField(max_length=10,blank=True, help_text=u"Add an identifier for this repository, e.g. NYPL")
+    rism_identifier = models.CharField(max_length=10,blank=True, help_text=u"Add the RISM identifier for this repository, e.g. US-NYp")
     description = models.TextField(blank=True, help_text=u"As required, enter additional descriptive text about this repository")
      
     class Meta:
@@ -12,14 +16,15 @@ class Repository(models.Model):
     def __unicode__(self):
        phrase = self.name
        
-       if self.abbreviation:
-           phrase += " (" + self.abbreviation + ")"
+       if self.identifier:
+           phrase += " (" + self.identifier + ")"
               
        return  phrase
         
 ADDRESS_TYPES = (
     ('1','Street Address'),
     ('2', 'Postal Address'),
+    ('3', 'Web Address'),
  )
 
 class Address(models.Model):
@@ -47,18 +52,22 @@ STATEMENT_TYPES = (
 class Collection(models.Model):
     repository = models.ForeignKey(Repository)
     name = models.CharField("Name",max_length=200, help_text=u"The name by which this collection is currently known")
-    abbreviation = models.CharField(max_length=6, help_text=u"The code used to refer to this collection in shelfmarks and other identifying information")
+    name_supplied = models.BooleanField("Collection name supplied?", blank=False, help_text=u"Indicate if the collection name is supplied by the Schenker Documents Online project")
+    identifier = models.CharField(max_length=6, blank=True, help_text=u"The code used to refer to this collection in shelfmarks and other identifying information")
     description = models.TextField(blank=True, help_text=u"As required, other descriptive information about this collection")
        
 
     def __unicode__(self):
-        phrase = self.name + " (" + self.abbreviation + ")";
+        phrase =  self.name + ", " + self.repository.name;
         return phrase 
 
+    class Meta:
+        unique_together = ("repository","name")
+        
 class CollectionStatements(models.Model):
     collection_id = models.ForeignKey(Collection)
     statement_type = models.CharField(max_length=1,choices=STATEMENT_TYPES,help_text=u"Indicate the kind of statement being made about this collection")
-    description = models.CharField(max_length=400,help_text=u"Make a statement about the collection")
+    description = models.CharField(max_length=400,blank=False, help_text=u"Make a statement about the collection")
     
     def __unicode__(self):
          phrase = self.get_statement_type_display() + ": " + self.description
@@ -71,6 +80,10 @@ class CollectionStatements(models.Model):
 DELIMITER_TYPES = (
     ('1','Slash ( / )'),
     ('2','Dash ( - )'),
+    ('3','Dot ( . )'),
+    ('4','Space ( )'),
+    ('5','Comma ( ,)'),
+  
     )
     
 
@@ -83,18 +96,24 @@ CONTENT_TYPES = (
 
 class Container(models.Model):
     collection = models.ForeignKey(Collection,help_text=u"Select the collection to which this container belongs; click the green plus sign (+) to add a new repository to the archive")
-    box = models.CharField(max_length=5, blank=True, help_text=u"As required, enter the box identifier for the container")    
-    folder = models.CharField("Folder/File",max_length=5, blank=True, help_text=u"As required, enter the folder identifier for the container") 
-    series = models.CharField(max_length=5, blank=True,help_text=u"As required, enter the series identifier for the container")
-    description = models.TextField(blank=True, help_text=u"As required, other descriptive information about this container")
-    documents_supplied = models.BooleanField("Document IDs supplied by SDO", blank=False, help_text=u"Indicate whether or not document-level IDs are supplied by the Schenker Documents Online project; leaving this unchecked indicates that document IDs are drawn from information maintained by the holding institution")
     content_type = models.CharField("Content Type",max_length=1, choices=CONTENT_TYPES, help_text=u"Indicate the kind of material included in this container.")
-    delimiter = models.CharField("Shelfmark Symbol",max_length=1, choices=DELIMITER_TYPES, help_text=u"Indicate the symbol to be used when composing shelfmarks for this container")
-
-     
-    def __unicode__(self):
-        phrase = self.collection.abbreviation + " " + self.box + " " + self.folder + " " 
+    series = models.CharField(max_length=5, blank=True,help_text=u"As required, enter the series identifier for the container")
+    box = models.CharField(max_length=5, blank=True, help_text=u"As required, enter the box identifier for the container")    
+    folder = models.CharField("Folder",max_length=5, blank=True, help_text=u"As required, enter the folder identifier for the container") 
+    description = models.TextField(blank=True, help_text=u"As required, other descriptive information about this container")
+    
+    def get_collection_full_name(self):
+        phrase = self.collection.name + ", " + self.collection.repository.name 
         return phrase 
+    
+    get_collection_full_name.short_description = "Collection"
+    
+    def __unicode__(self):
+        phrase = self.collection.name + " " + self.box + " " + self.folder 
+        return phrase
+        
+    class Meta:
+        unique_together = ("collection","box","folder")
 
 class ContainerStatements(models.Model):
     container_id = models.ForeignKey(Container)
@@ -111,11 +130,40 @@ class ContainerStatements(models.Model):
 
 class Document(models.Model):
     container = models.ForeignKey(Container)
-    unitid = models.CharField(max_length=10, help_text=u"Alpha-numeric text string that serves as a unique reference point or control number for the described material")    
+    unitid = models.CharField("ID", max_length=10, help_text=u"Alpha-numeric text string that serves as a unique reference point or control number for the digital item representing the physical material")   
+    coverage_start = models.DateField("Start Date", blank=True)
+    coverage_end = models.DateField("End Date", blank=True, null=True)
+    id_supplied = models.BooleanField("Doc ID supplied?", blank=False, help_text=u"Indicate whether or not this id is supplied by the Schenker Documents Online project; leaving this unchecked indicates that the document ID is drawn from information maintained by the holding institution")
     description = models.CharField(max_length=200,blank=True, help_text=u"As required, enter a brief descriptive note about this document")
     
+    def get_container_full_label(self):
+        phrase = self.container.collection.identifier + " " + self.container.box + " " + self.container.folder + " (" + self.container.collection.name + ", " + self.container.collection.repository.name + ")" 
+        return phrase 
+    
+    get_container_full_label.short_description = "Container"
+   
+    def get_container_content_type(self):
+        return self.container.content_type
+    
+    get_container_content_type.short_description = "Content Type"
+        
+    
     def __unicode__(self):
-        phrase = self.container.collection.abbreviation + self.container.box + " " + self.container.folder +  " " + self.unitid
-        return self.unitid
+        phrase = self.unitid
+        return phrase
+    
+    class Meta:
+        unique_together = ("container","unitid")
         
 
+class DocumentStatements(models.Model):
+    document_id = models.ForeignKey(Document)
+    statement_type = models.CharField(max_length=1,choices=STATEMENT_TYPES, help_text=u"Indicate the kind of statement being made about this container")
+    description = models.TextField(help_text=u"Make a statement about this document")    
+    
+    def __unicode__(self):
+         phrase = self.get_statement_type_display() + ": " + self.description
+         return phrase
+    
+    class Meta:
+         verbose_name_plural = "Document Statements"
