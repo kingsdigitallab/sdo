@@ -88,10 +88,10 @@ from xml.etree import ElementTree as ET
 
 # MoveableType data file
 # RV
-mtfile = "/home/rviglianti/Projects/schenker/data/movable-type/schenker_documents_online.txt"
+#mtfile = "/home/rviglianti/Projects/schenker/data/movable-type/schenker_documents_online.txt"
 outpath = "/tmp/correspondence"
 # TL
-# mtfile = "/home/tamara/cchsvn/schenker/trunk/data/movable-type/schenker_documents_online.txt"
+mtfile = "/home/tamara/cchsvn/schenker/trunk/data/movable-type/schenker_documents_online.txt"
 # outpath = "/tmp/profiles"
 logpath = "/tmp/logs"
 # GB
@@ -100,14 +100,12 @@ logpath = "/tmp/logs"
 # logpath = "/xi/schenker/logs"
 
 # declarations at beginning of XML file
-pidic = {
-         "xml" : 'version="1.0"',
-         # PROFILES
-	 #"oxygen" : 'RNGSchema="../../../../../schema/tei/xmod_web.rnc" type="compact"'
+pidic = { "xml" : 'version="1.0"',
+	  "xml-stylesheet" : 'href="../../../css/sdo_oxygen.css" type="text/css"',
         }
 
 # CORRESPONDENCE - TBA
-schemalocation = "../../../schenker.xsd"
+schemalocation = "../../../schema/schenker.xsd"
 
 # basename (for filename) to use should "BASENAME" header be empty
 dummybasename = "CCHGENERATED"
@@ -197,14 +195,14 @@ headworddelimscloselist = [
                            ]
 
 htmlformatsdicORI = {
-                  '<strong>'  : '<hi rend="bold">',
-                  '</strong>' : '</hi>',
-                  '<b>'       : '<hi rend="bold">',
-                  '</b>'      : '</hi>',
-                  '<em>'      : '<hi rend="italic">',
-                  '</em>'     : '</hi>',
-                  '<i>'       : '<hi rend="italic">',
-                  '</i>'      : '</hi>'
+                  '<strong>'  : '<tei:hi rend="bold">',
+                  '</strong>' : '</tei:hi>',
+                  '<b>'       : '<tei:hi rend="bold">',
+                  '</b>'      : '</tei:hi>',
+                  '<em>'      : '<tei:hi rend="italic">',
+                  '</em>'     : '</tei:hi>',
+                  '<i>'       : '<tei:hi rend="italic">',
+                  '</i>'      : '</tei:hi>'
                   }
                   
 htmlformatsdic = {
@@ -213,28 +211,28 @@ htmlformatsdic = {
                   '</small>'  : '',
                   # '<small>'   : '@@o!-- small --@@c',
                   # '</small>'  : '@@o!-- /small --@@c',
-                  '<strong>'  : '@@ohi rend=@@qbold@@q@@c',
-                  '</strong>' : '@@o/hi@@c',
-                  '<b>'       : '@@ohi rend=@@qbold@@q@@c',
-                  '</b>'      : '@@o/hi@@c',
-                  '<em>'      : '@@ohi rend=@@qitalic@@q@@c',
-                  '</em>'     : '@@o/hi@@c',
-                  '<i>'       : '@@ohi rend=@@qitalic@@q@@c',
-                  '</i>'      : '@@o/hi@@c',
-                  '<u>'       : '@@ohi rend=@@qitalic@@q@@c',
-                  '</u>'      : '@@o/hi@@c'
+                  '<strong>'  : '@@otei:hi rend=@@qbold@@q@@c',
+                  '</strong>' : '@@o/tei:hi@@c',
+                  '<b>'       : '@@otei:hi rend=@@qbold@@q@@c',
+                  '</b>'      : '@@o/tei:hi@@c',
+                  '<em>'      : '@@otei:hi rend=@@qitalic@@q@@c',
+                  '</em>'     : '@@o/tei:hi@@c',
+                  '<i>'       : '@@otei:hi rend=@@qitalic@@q@@c',
+                  '</i>'      : '@@o/tei:hi@@c',
+                  '<u>'       : '@@otei:hi rend=@@qitalic@@q@@c',
+                  '</u>'      : '@@o/tei:hi@@c'
                   }
                   
 wikiformatsdic = {
-                  '**' : ['<hi rend="bold">', '</hi>'],
-                  '*'  : ['<hi rend="bold">', '</hi>'],
-                  '_'  : ['<hi rend="italic">', '</hi>']
+                  '**' : ['<tei:hi rend="bold">', '</tei:hi>'],
+                  '*'  : ['<tei:hi rend="bold">', '</tei:hi>'],
+                  '_'  : ['<tei:hi rend="italic">', '</tei:hi>']
                   }
 
 rewikiformatsdic = {
-                  '**' : [r'\*\*(.+?)\*\*', r'<hi rend="bold">', '</hi>', '<hi rend="bold">\\1</hi>'],
-                  '*'  : [r'\*(.+?)\*', r'<hi rend="bold">', '</hi>', '<hi rend="bold">\\1</hi>'],
-                  '_'  : [r'_', r'<hi rend="italic">', '</hi>', '<hi rend="italic">\\1</hi>']
+                  '**' : [r'\*\*(.+?)\*\*', r'<tei:hi rend="bold">', '</tei:hi>', '<tei:hi rend="bold">\\1</tei:hi>'],
+                  '*'  : [r'\*(.+?)\*', r'<tei:hi rend="bold">', '</tei:hi>', '<tei:hi rend="bold">\\1</tei:hi>'],
+                  '_'  : [r'_', r'<tei:hi rend="italic">', '</tei:hi>', '<tei:hi rend="italic">\\1</tei:hi>']
                   }
 
 wikiformatslist = [
@@ -604,21 +602,23 @@ def buildXMLSkeleton():
     skeldic["root"].set("xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance")
     skeldic["root"].set("xsi:schemaLocation", "http://www.cch.kcl.ac.uk/schenker "+schemalocation)
 
+    skeldic["collectionDesc"] = ET.SubElement(skeldic["root"], "sdo:collectionDesc")
     # An indication of the source type, and the unique shelfmark
-    skeldic["source"] = ET.SubElement(skeldic["root"], "sdo:source")
+    skeldic["source"] = ET.SubElement(skeldic["collectionDesc"], "sdo:source")
+    skeldic["source"].append(ET.Comment("MovableType Shelfmark:" + headdic["TITLE"]))
     skeldic["correspondence"] = ET.SubElement(skeldic["source"], "sdo:correspondence")
     skeldic["correspondence"].set("shelfmark", "TEST-SHELFMARK1")
     
     # A placeholder for handnotes
-    skeldic["handNotes"] = ET.SubElement(skeldic["root"], "tei:handNotes")
+    skeldic["handNotes"] = ET.SubElement(skeldic["collectionDesc"], "tei:handNotes")
     skeldic["handNote"] = ET.SubElement(skeldic["handNotes"], "tei:handNote")
     comm_handNote = "Please populate at least one handNote.  Remember to include an xml:id attribute and the scope of the work"
     skeldic["handNote"].append( ET.Comment(comm_handNote))
     
     # Statements of Responsibility
     comm_respStmt = "Add additional or remove unnecessary statements of responsiblity as needed below"
-    skeldic["root"].append( ET.Comment(comm_respStmt))
-    skeldic["respStmt1"] = ET.SubElement(skeldic["root"], "tei:respStmt")
+    skeldic["collectionDesc"].append( ET.Comment(comm_respStmt))
+    skeldic["respStmt1"] = ET.SubElement(skeldic["collectionDesc"], "tei:respStmt")
     skeldic["respStmt1"].set("xml:id", "IB")
     skeldic["persName"] = ET.SubElement(skeldic["respStmt1"], "tei:persName")
     skeldic["persName"].text = "Ian Bent"
@@ -631,17 +631,17 @@ def buildXMLSkeleton():
     skeldic["resp3"] = ET.SubElement(skeldic["respStmt1"], "tei:resp")
     skeldic["resp3"].text = "Translation"
     
-    skeldic["respStmt2"] = ET.SubElement(skeldic["root"], "tei:respStmt")
+    skeldic["respStmt2"] = ET.SubElement(skeldic["collectionDesc"], "tei:respStmt")
     skeldic["respStmt2"].set("xml:id", "BOT")
     skeldic["name"] = ET.SubElement(skeldic["respStmt2"], "tei:name")
     skeldic["name"].text = "Automated Script"
-    skeldic["name"] = ET.SubElement(skeldic["respStmt2"], "tei:name")
+    skeldic["name"] = ET.SubElement(skeldic["respStmt2"], "tei:resp")
     skeldic["name"].text = "Conversion from MovableType syntax to TEI"
     
     # Revision Desc. Note
     comm_revisionDesc = "Add additional change elements below to note major changes to the document"
-    skeldic["root"].append( ET.Comment(comm_revisionDesc))
-    skeldic["revisionDesc"] = ET.SubElement(skeldic["root"], "tei:revisionDesc")
+    skeldic["collectionDesc"].append( ET.Comment(comm_revisionDesc))
+    skeldic["revisionDesc"] = ET.SubElement(skeldic["collectionDesc"], "tei:revisionDesc")
     skeldic["change"] = ET.SubElement(skeldic["revisionDesc"], "tei:change")
     skeldic["change"].set("when", time.strftime("%Y-%m-%d", time.localtime()) )
     skeldic["change"].set("who", "#BOT")
@@ -649,7 +649,7 @@ def buildXMLSkeleton():
 
     # Sections
     skeldic["record"] = ET.SubElement(skeldic["root"], "sdo:record")
-    skeldic["record"].set("xml:id", "r0001")
+    skeldic["record"].set("ID", "r0001")
     skeldic["itemDesc"] = ET.SubElement(skeldic["record"], "sdo:itemDesc")
     skeldic["transcription"] = ET.SubElement(skeldic["record"], "tei:transcription")
     skeldic["translation"] = ET.SubElement(skeldic["record"], "tei:translation")
@@ -748,10 +748,9 @@ def writeXMLFile(repf, ofp, root):
 
     # write declarations
     dec = ET.ProcessingInstruction("xml", pidic["xml"])
-    # PROFILES
-    # oxy = ET.ProcessingInstruction("oxygen", pidic["oxygen"])
-    # print >> ofpobj, ET.tostring(dec)
-    # print >> ofpobj, ET.tostring(oxy)
+    stylesheet = ET.ProcessingInstruction("xml-stylesheet", pidic["xml-stylesheet"])
+    print >> ofpobj, ET.tostring(dec)
+    print >> ofpobj, ET.tostring(stylesheet)
     
     #oxystr = ET.tostring(oxy)
     
@@ -769,12 +768,11 @@ def writeXMLFile(repf, ofp, root):
     # the start of the file, we cannot therefore insert the processing instruction
     # with etree means between the XML declaration and the root element
     
-    
     ofplist = ofp.split("/")
     # generate the right number of "../" after "correspondence/". Needs +2 compensate for first element of list "" and filename 
     levels = ''.join( ["../" for dummy in xrange(len(ofplist)-(ofplist.index("correspondence")+2))] )
     xmlstr = xmlstr.replace('"http://www.cch.kcl.ac.uk/schenker ', '"http://www.cch.kcl.ac.uk/schenker '+ levels)
-    
+    xmlstr = xmlstr.replace('href="', 'href="'+ levels)
     # PROFILE
     # xmlstr = xmlstr.replace("<TEI", oxystr + "\n" + "<TEI")
     if os.path.isfile(ofp):
@@ -844,9 +842,9 @@ def convertWikiFormats(repf, bdic):
         # bdic[k] = re.sub(r"\*(.+?)\*", '<hi rend="bold">\\1</hi>', bdic[k])
         # bdic[k] = re.sub(r"_(.+?)_", '<hi rend="italic">\\1</hi>', bdic[k])
 
-        bdic[k] = re.sub(r"\*\*(.+?)\*\*", '@@ohi rend=@@qbold@@q@@c\\1@@o/hi@@c', bdic[k])
-        bdic[k] = re.sub(r"\*(.+?)\*", '@@ohi rend=@@qbold@@q@@c\\1@@o/hi@@c', bdic[k])
-        bdic[k] = re.sub(r"_(.+?)_", '@@ohi rend=@@qitalic@@q@@c\\1@@o/hi@@c', bdic[k])
+        bdic[k] = re.sub(r"\*\*(.+?)\*\*", '@@otei:hi rend=@@qbold@@q@@c\\1@@o/tei:hi@@c', bdic[k])
+        bdic[k] = re.sub(r"\*(.+?)\*", '@@otei:hi rend=@@qbold@@q@@c\\1@@o/tei:hi@@c', bdic[k])
+        bdic[k] = re.sub(r"_(.+?)_", '@@otei:hi rend=@@qitalic@@q@@c\\1@@o/tei:hi@@c', bdic[k])
     return bdic
 
 def convertHrefLinks(repf, bdic):
@@ -893,6 +891,16 @@ def createTopComments(repf, bdic):
     #return
     return topcomments, bdic
     
+
+# The various dc elements can at times contain mixed content owing to their source in the MT records.
+# This method strips the mixed content so that a greater number of files will validate.
+
+def stripDCMixedContent(toBeStripped):
+    toBeStripped = re.sub(r"""(?:@@otei:hi.*?@@c)""", '', toBeStripped)
+    toBeStripped = re.sub(r"""(?:@@o/tei:hi@@c)""", '', toBeStripped)
+
+    return toBeStripped
+
 # CORRESPONDENCE
 def createItemDescription(repf, hdic, bdic):
 	
@@ -900,6 +908,10 @@ def createItemDescription(repf, hdic, bdic):
 	bdic["EXCERPT:"] = re.sub(r"""--""", ' - -', bdic["EXCERPT:"])    
 	
 	itemDescElements = {}
+
+        # Include a comment with the MovableType tags, if they have been tracked 
+        if hdic.has_key("TAGS"):
+	    itemDescElements["COMM_tags"] = "MT Tags: " + hdic["TAGS"] 
 	
 	# title
 	# With current source, the warning never appears. There is always a match (2009-11-05)
@@ -910,6 +922,8 @@ def createItemDescription(repf, hdic, bdic):
 		dc_title = dc_title.group(1)
 	else:
 		dc_title = "@@o!-- Enter title here --@@c"
+
+        dc_title = stripDCMixedContent(dc_title)
 		
 	itemDescElements["dc:title"] = dc_title.decode("utf8")
 	
@@ -923,7 +937,7 @@ def createItemDescription(repf, hdic, bdic):
 		else:
 			dc_created = "@@o!-- Enter date of creation here --@@c"
 	
-	itemDescElements["dcterms:created"] = dc_created.decode("utf8")
+	itemDescElements["COMM_created"] = "Date Created: " + dc_created.decode("utf8")
 	
 	# date authored
 	# With current source, several missing (2009-11-05)
@@ -942,7 +956,8 @@ def createItemDescription(repf, hdic, bdic):
 		dc_desc = dc_desc.group(1)
 	else:
 		dc_desc = ""
-		
+
+        dc_desc = stripDCMixedContent(dc_desc)		
 	itemDescElements["dc:description"] = dc_desc.decode("utf8")
 	
 	# subjects
@@ -955,41 +970,26 @@ def createItemDescription(repf, hdic, bdic):
 		
 	itemDescElements["dc:subject"] = dc_subjects.decode("utf8")
 	
-	# format
-	# With current source, several missing (34) (2009-11-05)
-	dc_format = re.search(r"""(?:@@ohi.*?@@c)?[Ff]ormat:?(?:@@o/hi@@c)?(.*?)\n""", bdic["EXCERPT:"])
-	if dc_format != None:
-		dc_format = dc_format.group(1)
-	else:
-		dc_format = "@@o!-- Enter format here --@@c"
-		
-	itemDescElements["dc:format"] = dc_format.decode("utf8")
-	
 	# sender
-	sender = re.search(r"""(?:@@ohi.*?@@c)?([Ss]ender( address)?:?)(?:@@o/hi@@c)?(.*?)\n""", bdic["EXCERPT:"])
+	sender = re.search(r"""(?:@@otei:hi.*?@@c)?([Ss]ender( address)?:?)(?:@@o/tei:hi@@c)?(.*?)\n""", bdic["EXCERPT:"])
 	if sender != None:
 		if sender.group(3) != None:
-			sender = sender.group(1)+" "+sender.group(3)
-		else:
-			sender = sender.group(1)
+			sender = sender.group(3)
 	else:
 		sender = ""
 		
-	itemDescElements["COMM_sender"] = sender.decode("utf8")
+	itemDescElements["marcrel:correspondent"] = sender.decode("utf8")
 	
 	# recipient
-	recipient = re.search(r"""(?:@@ohi.*?@@c)?([Rr]ecipient( address)?:?)(?:@@o/hi@@c)?(.*?)\n""", bdic["EXCERPT:"])
+	recipient = re.search(r"""(?:@@otei:hi.*?@@c)?([Rr]ecipient( address)?:?)(?:@@o/tei:hi@@c)?(.*?)\n""", bdic["EXCERPT:"])
 	if recipient != None:
 		if recipient.group(3) != None:
-			recipient = recipient.group(1)+" "+recipient.group(3)
-		else:
-			recipient = recipient.group(1)
+			recipient = recipient.group(3)
 	else:
 		recipient = ""
 		
-	itemDescElements["COMM_recipient"] = recipient.decode("utf8")
+	itemDescElements["marcrel:recipient"] = recipient.decode("utf8")
 	
-	#return
 	return itemDescElements
 		
 	
@@ -1086,15 +1086,24 @@ def processConvertedBody(repf, hdic, bdic, tc, ide, xmldic):
     for key in ide:
 	    if key.startswith("COMM") :
 		    xmldic["itemDesc"].append(ET.Comment(ide[key])) 
-	    else:
-		    tagdesc = ET.SubElement(xmldic["itemDesc"], key)
-		    tagdesc.text = ide[key]
-		    
+  
+    xmldic["dctitle"] = ET.SubElement(xmldic["itemDesc"],"dc:title")
+    xmldic["dctitle"].text = ide["dc:title"] 
+    xmldic["dcdatesubmit"] = ET.SubElement(xmldic["itemDesc"],"dcterms:dateSubmitted")
+    xmldic["dcdatesubmit"].text = ide["dcterms:dateSubmitted"]
+    xmldic["dcdesc"] = ET.SubElement(xmldic["itemDesc"],"dc:description")
+    xmldic["dcdesc"].text = ide["dc:description"]
+    xmldic["dcsubject"] = ET.SubElement(xmldic["itemDesc"],"dc:subject")
+    xmldic["dcsubject"].text = ide["dc:subject"]
     # Add marcrel elements in Item Description
+    xmldic["itemDesc"].append(ET.Comment("Add the EATS key attribute value to indicate the sender of the letter")) 
     xmldic["mr_correspondent"] = ET.SubElement(xmldic["itemDesc"], "marcrel:correspondent")
-    xmldic["mr_correspondent"].append(ET.Comment("Add the key attribute to indicate the sender of the letter")) 
+    xmldic["mr_correspondent"].set("key", "EATS_nNNNNNN")
+    xmldic["mr_correspondent"].text = ide["marcrel:correspondent"] 
+    xmldic["itemDesc"].append(ET.Comment("Add the key attribute to indicate the recipient of the letter")) 
     xmldic["mr_recipient"] = ET.SubElement(xmldic["itemDesc"], "marcrel:recipient")
-    xmldic["mr_recipient"].append(ET.Comment("Add the key attribute to indicate the recipient of the letter")) 
+    xmldic["mr_recipient"].set("key", "EATS_nNNNNNN")
+    xmldic["mr_recipient"].text = ide["marcrel:recipient"] 
 
 
 def convertAmericanToEuropeanDate(ds):
