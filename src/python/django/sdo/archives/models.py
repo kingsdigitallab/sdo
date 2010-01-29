@@ -5,7 +5,7 @@ from django.forms.extras.widgets import SelectDateWidget
 
 # Create your models here.
 class Repository(models.Model):
-    name = models.CharField(unique=True, max_length=400, help_text=u"Enter the current name of the repository")
+    name = models.CharField(unique=True, max_length=255, help_text=u"Enter the current name of the repository")
     identifier = models.CharField(max_length=10,blank=True, help_text=u"Add an identifier for this repository, e.g. NYPL")
     rism_identifier = models.CharField(max_length=10,blank=True, help_text=u"Add the RISM identifier for this repository, e.g. US-NYp")
     description = models.TextField(blank=True, help_text=u"As required, enter additional descriptive text about this repository")

@@ -1208,7 +1208,9 @@ if __name__ == '__main__':
                                                        , ))
             
 	    # CORRESPONDENCE
-	    full_filename = makeFileDir(headdic["TITLE"])
+            if headdic.has_key("TITLE"):
+	        full_filename = makeFileDir(headdic["TITLE"])
+
 	    basenameswrittenlist = processCorresp(repf, headdic, body, full_filename)
 	    
 	    # PROFILE
