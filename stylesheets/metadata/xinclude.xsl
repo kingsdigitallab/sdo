@@ -7,7 +7,7 @@
   
   <xsl:template match="/">
     <fileset xmlns:xi="http://www.w3.org/2001/XInclude">
-      <xsl:for-each select="tokenize($fileset, ';')[. != '_xinclude.xml']">
+      <xsl:for-each select="tokenize($fileset, ':')[not(contains(., '_xinclude.xml'))]">
         <file path="{normalize-space(.)}">
           <xi:include href="{normalize-space(.)}" />
         </file>
