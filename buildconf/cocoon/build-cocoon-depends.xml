@@ -17,12 +17,9 @@
     <antcall target="copy-schema" />
   </target>
 
-  <target name="copy-cocoon" depends="prepare">
-    <query name="username" />
-    <query name="password" password="true" />
-    
-    <svn javahl="${svnant.javahl}" password="${password}" username="${username}">
-      <checkout url="${svn.cocoon.url}" destPath="${cocoon.build.dir}" />
+  <target depends="prepare" name="copy-cocoon">
+    <svn javahl="${svnant.javahl}">
+      <checkout destPath="${cocoon.build.dir}" url="${svn.cocoon.url}" />
     </svn>
     <copy todir="${cocoon.build.dir}">
       <fileset dir="${cocoon.dir}/sitemap" includes="*.xmap" />
@@ -31,50 +28,46 @@
       <fileset dir="${cocoon.dir}/lib" />
     </copy>
   </target>
-  
+
   <target depends="prepare" name="create-properties-xslt">
-    <xslt in="${properties.dir}/properties.xml" out="${style.dir}/properties/properties.xsl"
+    <xslt force="true" in="${properties}" out="${style.dir}/properties/properties.xsl"
       style="${style.dir}/properties/properties-generator.xsl">
       <factory name="net.sf.saxon.TransformerFactoryImpl" />
     </xslt>
-    
+
     <copy todir="${cocoon.build.dir}/stylesheets">
       <fileset dir="${style.dir}" />
     </copy>
   </target>
-  
-  <target name="copy-src" depends="prepare">
+
+  <target depends="prepare" name="copy-src">
     <copy todir="${cocoon.content.build.dir}">
       <fileset dir="${source.dir}" />
     </copy>
   </target>
-  
-  <target name="copy-metadata" depends="prepare">
+
+  <target depends="prepare" name="copy-metadata">
     <copy todir="${cocoon.xml.build.dir}/metadata">
       <fileset dir="${metadata.dir}" />
     </copy>
-    
+
     <copy todir="${cocoon.xml.build.dir}/menu">
       <fileset dir="${menu.dir}" />
     </copy>
-    
-    <copy todir="${cocoon.xml.build.dir}/properties">
-      <fileset dir="${properties.dir}" />
-    </copy>    
   </target>
-  
+
   <target depends="prepare" name="copy-assets">
     <copy todir="${cocoon.build.dir}/${assets.dir.name}">
       <fileset dir="${assets.dir}" />
     </copy>
   </target>
-  
+
   <target depends="prepare" name="copy-images">
     <copy todir="${cocoon.build.dir}/${images.dir.name}">
       <fileset dir="${images.dir}" />
     </copy>
   </target>
-  
+
   <target depends="prepare" name="copy-schema">
     <copy todir="${cocoon.build.dir}/${schema.dir.name}">
       <fileset dir="${schema.dir}" />
