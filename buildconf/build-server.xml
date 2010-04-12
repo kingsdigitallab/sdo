@@ -3,61 +3,62 @@
   <import file="../build.xml" />
   
   <target name="dev">
-    <antcall target="user-credentials" />
+    <query name="username" />
+    <query name="password" password="true" />
     
     <scp todir="${username}:${password}@${server.url}:${server.dev.path}">
-      <fileset dir="${server.source.path}">
+      <fileset dir="${build.dir}/cocoon">
         <exclude name="**/WEB-INF/**"/>
       </fileset>
     </scp>
   </target>
   
-  <target name="user-credentials">
-    <query name="username" />
-    <query name="password" password="true" />
-  </target>
-  
   <target name="dev-full">
-    <antcall target="user-credentials" />    
+    <query name="username" />
+    <query name="password" password="true" />    
     
     <scp todir="${username}:${password}@${server.url}:${server.dev.path}">
-      <fileset dir="${server.source.path}" />
+      <fileset dir="${build.dir}/cocoon" />
     </scp>
   </target>
   
   <target name="stg">
-    <antcall target="user-credentials" />
+    <query name="username" />
+    <query name="password" password="true" />
     
     <scp todir="${username}:${password}@${server.url}:${server.stg.path}">
-      <fileset dir="${server.source.path}">
+      <fileset dir="${build.dir}/cocoon">
         <exclude name="**/WEB-INF/**"/>
       </fileset>
     </scp>
   </target>
   
   <target name="stg-full">
-    <antcall target="user-credentials" />
+    <query name="username" />
+    <query name="password" password="true" />
     
     <scp todir="${username}:${password}@${server.url}:${server.stg.path}">
-      <fileset dir="${server.source.path}" />
+      <fileset dir="${build.dir}/cocoon" />
     </scp>
   </target>
   
   <target name="liv">
-    <antcall target="user-credentials" />
+    <query name="username" />
+    <query name="password" password="true" />
     
     <scp todir="${username}:${password}@${server.url}:${server.liv.path}">
-      <fileset dir="${server.source.path}">
+      <fileset dir="${build.dir}/cocoon">
         <exclude name="**/WEB-INF/**"/>
       </fileset>
     </scp>
   </target>
   
   <target name="liv-full">
-    <antcall target="user-credentials" />
+    <query name="username" />
+    <query name="password" password="true" />
     
     <scp todir="${username}:${password}@${server.url}:${server.liv.path}">
-      <fileset dir="${server.source.path}" />
+      <fileset dir="${build.dir}/cocoon" />
     </scp>
   </target>
 </project>
