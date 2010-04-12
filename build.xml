@@ -99,5 +99,10 @@
 
     <delete file="${source.dir}/_xinclude.xml" />
   </target>
-  <!--<delete file="${source.dir}/_xinclude.xml" />-->
+  
+  <target name="clean">
+    <delete failonerror="false" file="${source.dir}/_xinclude.xml" />
+    <delete failonerror="false" file="${style.dir}/properties/properties.xsl" />
+    <delete dir="${build.dir}" />
+  </target>
 </project>
