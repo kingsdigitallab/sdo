@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="../../../../../../css/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../../../schema/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <!-- MovableType Shelfmark:OJ 15/16, [32] -->
+   <sdo:correspondence shelfmark="TEST-SHELFMARK1"/>
+  </sdo:source>
+  <tei:handNotes>
+   <tei:handNote xml:id="HW" scope="major">Hans Weisse's hand</tei:handNote>
+   <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+  </tei:handNotes>
+  <tei:respStmt xml:id="WD">
+   <tei:persName>William Drabkin</tei:persName>
+   <tei:resp>Transcription, 2008</tei:resp>
+  </tei:respStmt>
+  <tei:respStmt xml:id="AH">
+   <tei:persName>Alison Hiley</tei:persName>
+   <tei:resp>Translation, 2008</tei:resp>
+  </tei:respStmt>
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>XML encoding</tei:resp>
+  </tei:respStmt>
+  <tei:respStmt xml:id="BOT">
+   <tei:name>Automated Script</tei:name>
+   <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+  </tei:respStmt>
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2010-02-08" who="#IB">revision of XML code</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+ <sdo:record ID="r0001">
+  <sdo:itemDesc>
+   <!-- MT Tags: "Weisse ~ H+JSchenker","Weisse ~ HSchenker" -->
+   <dc:title>Handwritten letter from Weisse to Schenker, dated January 2, 1918</dc:title>
+   <dcterms:dateSubmitted>2008-10-15</dcterms:dateSubmitted>
+   <dc:description>Weisse, in a fieldpost letter, writing in Sütterlinschrift, copies out a passage
+    from Goethe quoted in Chamberlain's "Grundlagen des neunzehnten Jahrhunderts," and informs
+    Schenker of his imminent change of address. </dc:description>
+   <dc:subject>Grundlagen des neunzehnten Jahrhunderts; address</dc:subject>
+   <!-- Add the EATS key attribute value to indicate the sender of the letter -->
+   <marcrel:correspondent key="EATS_nNNNNNN">Hans Weisse</marcrel:correspondent>
+   <!-- Add the key attribute to indicate the recipient of the letter -->
+   <marcrel:recipient key="EATS_nNNNNNN">Heinrich Schenker</marcrel:recipient>
+  </sdo:itemDesc>
+
+  <tei:transcription>
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/>
+    <tei:address>
+     <tei:addrLine>Absender:</tei:addrLine>
+     <tei:addrLine>Name: Weisse Lt. sel Ref</tei:addrLine>
+     <tei:addrLine>Adresse: AOK Süd Fp 117/II</tei:addrLine>
+    </tei:address>
+    <tei:address>
+     <tei:addrLine>Feldpost</tei:addrLine>
+     <tei:addrLine>K. u. k. Telegraphen Referr</tei:addrLine>
+     <tei:addrLine>der Kaiserlich deutschen Südarmee</tei:addrLine>
+    </tei:address>
+    <tei:address>
+     <tei:addrLine>Herrn D<tei:hi rend="supralinear">r.</tei:hi> Heinrich Schenker</tei:addrLine>
+     <tei:addrLine>Wien III.</tei:addrLine>
+     <tei:addrLine>Reisnerstrasse 38.</tei:addrLine>
+    </tei:address>
+    <tei:fw type="postmark">|| K.u.K. NAURTFELDPOSTAMT | -2. I. 18 | 117/II ||</tei:fw>
+    <tei:milestone unit="folio" n="verso"/>
+    <tei:salute>Lieber <tei:persName>Meister</tei:persName><!-- Heinrich Schenker -->! </tei:salute>
+   </tei:opener>
+   <tei:p>Bei<tei:note xml:id="r0001-fn1" type="editorial" place="foot"> Receipt of this letter is
+     recorded in Schenker's diary at OJ 2/10, p. 825: January 6, 1918.<!-- XR --> </tei:note> der Lektüre von
+     <tei:persName>Chamberlain</tei:persName><!-- profile -->s
+     <tei:title>"Grundlagen"</tei:title><tei:note xml:id="r0001-fn2" type="editorial" place="foot"
+      ><tei:title rend="m">Die Grundlagen des neunzehnten Jahrhunderts</tei:title> (1899), Houston
+     Stewart Chamberlain's most important writing, which claimed that the Teutonic peoples were of
+     central importance to the development of Western civilization. The work attracted a wide
+     readership in Germany, especially after World War I, and was later used as a scholarly
+     justification of Nazi ideology. Copies of the book were distributed to the German army during
+     the War; this may explain why Weisse is currently reading it.</tei:note> finde ich ein Wort
+     <tei:persName>Goethe</tei:persName>s zitiert, das ich für ihr Werk als sehr passend <tei:hi
+     rend="underline">erachte</tei:hi>. Es heißt: <tei:cit>
+     <tei:q>&#8222;Alles kommt auf das Grundwahre an, dessen Entwicklung sich nicht so leicht in
+      der Spekulation, als in der Praxis zeigt: denn diese ist der Prüfstein des vom Geist
+      Empfangenen.&#8220;.</tei:q>
+    </tei:cit></tei:p>
+   <tei:p>Im übrigen glaube ich dürften Sie, lieber Meister, in allernächster Zeit eine Änderung
+    meiner Adresse erfahren!</tei:p>
+   <tei:closer>
+    <tei:salute>Ich grüße Sie und die liebe gnädige Frau aufs Allerherzlichste und bin in
+      <tei:sic>in</tei:sic> getreuer Erinnerung</tei:salute>
+    <tei:salute rend="indent-10">Ihr dankbarer </tei:salute>
+    <tei:signed rend="indent-20">Hans</tei:signed>
+   </tei:closer>
+   <tei:postscript>
+    <tei:p>2/1 18. Zum neuen Jahre wünsche ich Ihnen nochmals alles Beste!</tei:p>
+   </tei:postscript>
+  </tei:transcription>
+
+  <tei:translation>
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/>
+    <tei:address>
+     <tei:addrLine>From:</tei:addrLine>
+     <tei:addrLine>Name: Weisse Lt. sel Ref</tei:addrLine>
+     <tei:addrLine>Address: AOK South Fieldpost 117/II</tei:addrLine>
+    </tei:address>
+    <tei:address>
+     <tei:addrLine>Fieldpost</tei:addrLine>
+     <tei:addrLine>Imperial and Royal Telegraph Station</tei:addrLine>
+     <tei:addrLine>of the Imperial German Southern Army</tei:addrLine>
+    </tei:address>
+    <tei:address>
+     <tei:addrLine>Dr. Heinrich Schenker,</tei:addrLine>
+     <tei:addrLine>Vienna III,</tei:addrLine>
+     <tei:addrLine>Reisnerstraße 38.</tei:addrLine>
+    </tei:address>
+    <tei:fw type="postmark">|| K.u.K. NAURTFIELDPOSTOFFICE | -2. I. 18 | 117/II ||</tei:fw>
+    <tei:milestone unit="folio" n="verso"/>
+    <tei:salute>Dear <tei:persName>Master</tei:persName><!-- Heinrich Schenker -->, </tei:salute>
+   </tei:opener>
+   <tei:p>On<tei:ptr target="#r0001-fn1" type="footnote"/> reading <tei:persName>Chamberlain</tei:persName>'s <tei:title>
+     <tei:hi rend="italic">Grundlagen</tei:hi>
+   </tei:title><tei:ptr target="#r0001-fn2" type="footnote"/> I came across a quotation from
+    <tei:persName>Goethe</tei:persName> which I <tei:hi rend="underline">deem</tei:hi> very apt
+    where your work is concerned. It reads: <tei:cit>
+     <tei:q>"Fundamental truth is all that matters; its evolution is revealed more readily through
+      practice than speculation, for it is practice which is the touchstone for that which is
+      received by the spirit."</tei:q>
+    </tei:cit></tei:p>
+   <tei:p>Incidentally, dear master, you should, I believe, be learning of my change of address very
+   soon!</tei:p>
+   
+   <tei:closer>
+    <tei:salute>Most cordial greetings to you and to your dear lady, in loyal remembrance, </tei:salute>
+    <tei:salute rend="indent-10">Yours in gratitude, </tei:salute>
+    <tei:signed rend="indent-10">Hans</tei:signed>
+   </tei:closer>
+   
+   <tei:postscript>
+    <tei:p>January 2, 1918. May I wish you once more all the best for the New Year!</tei:p>
+   </tei:postscript>
+  </tei:translation>
+ </sdo:record>
+</sdo:recordCollection>

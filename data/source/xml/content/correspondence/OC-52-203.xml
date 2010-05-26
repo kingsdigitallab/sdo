@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="../../../../../css/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../../schema/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <!-- MovableType Shelfmark:OC 52/203  -->
+   <sdo:correspondence shelfmark="TEST-SHELFMARK1"/>
+  </sdo:source>
+  <tei:handNotes>
+   <tei:handNote xml:id="TPw" scope="minor">typist "W"</tei:handNote>
+   <tei:handNote xml:id="EH" scope="minor">Emil Hertzka's hand</tei:handNote>
+   <tei:handNote xml:id="stamp" scope="minor">stamped UE signature</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>Transcription, 2006</tei:resp>
+   <tei:resp>XML Encoding</tei:resp>
+   <tei:resp>Translation, 2006</tei:resp>
+  </tei:respStmt>
+  <tei:respStmt xml:id="BOT">
+   <tei:name>Automated Script</tei:name>
+   <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2010-02-07" who="#IB">revision of XML code</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <!-- MT Tags: "Hertzka ~ HSchenker","UE ~ H+JSchenker","UE ~ HSchenker" -->
+   <dc:title>Typed letter from Hertzka (UE) to Schenker, dated February 5, 1918</dc:title>
+   <dcterms:dateSubmitted>2006-04-03</dcterms:dateSubmitted>
+   <dc:description>Hertzka acknowledges WSLB 292 and apologizes for late reply; he knows nothing of
+    August Halm's request for review copies of Schenker's other works, but has ordered a complete
+    set to be sent to him. </dc:description>
+   <dc:subject>complimentary copies; review copies; illness</dc:subject>
+   <!-- Add the EATS key attribute value to indicate the sender of the letter -->
+   <marcrel:correspondent key="EATS_nNNNNNN">Universal Edition</marcrel:correspondent>
+   <marcrel:correspondent key="EATS_nNNNNNN">Emil Hertzka</marcrel:correspondent>
+   <!-- Add the key attribute to indicate the recipient of the letter -->
+   <marcrel:recipient key="EATS_nNNNNNN">Heinrich Schenker</marcrel:recipient>
+  </sdo:itemDesc>
+  <tei:transcription>
+
+   <tei:opener>
+
+
+    <tei:address>
+     <tei:addrLine>
+      <tei:supplied reason="format">printed UE letterhead</tei:supplied>
+     </tei:addrLine>
+     <tei:addrLine>Wien I, Karlsplatz 6</tei:addrLine>
+    </tei:address>
+    <tei:byline>
+     <tei:persName type="typist">W</tei:persName>
+    </tei:byline>
+    <tei:dateline rend="indent-40">
+     <tei:placeName>Wien</tei:placeName>
+     <tei:handShift new="#TPw"/>
+     <tei:date when="1918-02-05">5. Februar 1918.</tei:date>
+    </tei:dateline>
+
+    <tei:address>
+     <tei:addrLine rend="indent-10">
+      <tei:persName>Wohlgeboren Herrn Prof. Dr. Heinrich <tei:hi rend="sperr"
+      >Schenker</tei:hi></tei:persName>
+     </tei:addrLine>
+     <tei:addrLine rend="indent-50">
+      <tei:hi rend="underline sperr">Wien</tei:hi>
+     </tei:addrLine>
+    </tei:address>
+
+    <tei:salute>Sehr geehrter Herr <tei:persName>Professor</tei:persName><!-- Heinrich Schenker -->!</tei:salute>
+   </tei:opener>
+
+   <tei:p rend="first">Verzeihen<tei:note xml:id="r0001-fn1" type="editorial" place="foot"> Receipt
+     of this letter is recorded in Schenker's diary at OJ 2/10, p. 836, September 7, 1918: " Von
+     Hertzka (Br.): gibt an, von Halm einen Brief überhaupt nicht erhalten zu haben, u. mir selbst
+     aber die Antwort nur wegen Unwohlseins u. Ueberbürdung schuldig geblieben zu sein; werde
+     selbstverständlich die Rezensionsexemplare abschicken." ("From Hertzka (letter): claims that he
+     has received no letter whatsoever from Halm and owes me a reply only on account of illness and
+     overwork; he will of course dispatch the complimentary
+    copies.")<!-- XR --></tei:note> Sie, wenn ich auf Ihr Schreiben vom 30.
+     Jänner<tei:note xml:id="r0001-fn2" type="editorial" place="foot"> - WSLB 292. In the meantime,
+     Schenker has sent a reminder, WSLB 293, February 5, 1918. </tei:note> erst heute antworte; ich
+    war aber einige Tage unwohl und darnach so ausserordentlich überbürdet, dass ich Vieles
+    zurücklassen musste.</tei:p>
+
+   <tei:p rend="first">Was das Meritorische betrifft, so möchte ich bemerken, dass mir von einem
+    Ersuchen des <tei:persName>Herrn Prof. Halm</tei:persName><!-- profile: August Halm -->, Ihre übrigen
+    Arbeiten kennen zu lernen, nichts bekannt ist.<tei:note xml:id="r0001-fn3" type="editorial"
+     place="foot"> "von einem ... ist." underlined in pencil or crayon by Schenker.</tei:note> Ich
+    habe sofort nach Ihrer Mitteilung die sämtlichen Werke an ihn abgehen lassen und es versteht
+    sich von selbst, dass derartige Propaganda-Exemplare auf unsere Rechnung gehen.</tei:p>
+
+   <tei:closer rend="indent-40">
+    <tei:salute>Ihr vorzüglicher Hochschätzung</tei:salute>
+    <tei:salute rend="indent-10">ergebenst</tei:salute>
+    <tei:signed rend="indent-20"><tei:handShift new="#EH"/>Hertzka</tei:signed>
+    <tei:signed rend="indent-5"><tei:handShift new="#stamp"/>Universal-Edition
+    Actiengesellschaft</tei:signed>
+   </tei:closer>
+  </tei:transcription>
+
+  <tei:translation>
+
+   <tei:opener>
+    <tei:address>
+     <tei:addrLine>
+      <tei:supplied reason="format">printed UE letterhead</tei:supplied>
+     </tei:addrLine>
+     <tei:addrLine>Vienna I, Karlsplatz 6</tei:addrLine>
+    </tei:address>
+    <tei:byline>
+     <tei:persName type="typist">W</tei:persName>
+    </tei:byline>
+    <tei:dateline rend="indent-40">
+     <tei:placeName>Vienna</tei:placeName>
+     <tei:handShift new="#TPw"/>
+     <tei:date when="1918-02-05">February 5, 1918</tei:date>
+    </tei:dateline>
+
+    <tei:address>
+     <tei:addrLine rend="indent-10">
+      <tei:persName>Prof. Heinrich <tei:hi rend="sperr">Schenker</tei:hi>, Esq.,</tei:persName>
+     </tei:addrLine>
+     <tei:addrLine rend="indent-50">
+      <tei:hi rend="underline">Vienna</tei:hi>
+     </tei:addrLine>
+    </tei:address>
+
+    <tei:salute>Dear <tei:persName>Professor</tei:persName><!-- Heinrich Schenker -->,</tei:salute>
+   </tei:opener>
+
+   <tei:p rend="first">Forgive<tei:ptr target="#r0001-fn1" type="footnote"/> me for not having
+    replied to yours of January 30<tei:ptr target="#r0001-fn2" type="footnote"/> until today, but I
+    was unwell for several days and thereafter was faced with such an enormous backlog of work that
+    I had to set a lot of it aside.</tei:p>
+
+   <tei:p rend="first">As concerns the <tei:supplied reason="clarity">substantive
+    matter?</tei:supplied>, I should like to point out that I know nothing of any request by
+     <tei:persName>Professor Halm</tei:persName><!-- profile --> to get to know your other
+     works.<tei:ptr target="#r0001-fn3" type="footnote"/> The moment I got your message I ordered
+    all of your works to be sent off to him; it goes without saying that publicity copies of this
+    sort are charged to our account.</tei:p>
+
+   <tei:closer rend="indent-40">
+    <tei:salute>With kind regards, </tei:salute>
+    <tei:salute rend="indent-10">Yours truly, </tei:salute>
+    <tei:signed rend="indent-20"><tei:handShift new="#EH"/>Hertzka</tei:signed>
+    <tei:signed rend="indent-5"><tei:handShift new="#stamp"/>Universal Edition &amp;
+    Co.</tei:signed>
+   </tei:closer>
+
+
+  </tei:translation>
+ </sdo:record>
+</sdo:recordCollection>
