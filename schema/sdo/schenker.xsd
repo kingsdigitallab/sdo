@@ -13,7 +13,7 @@
     xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
     >
     
-    <xs:import  namespace="http://www.tei-c.org/ns/1.0" schemaLocation="tei_all.xsd"/>
+    <xs:import namespace="http://www.tei-c.org/ns/1.0" schemaLocation="tei_all.xsd"/>
   <xs:import namespace="http://purl.org/dc/elements/1.1/" schemaLocation="dc.xsd"/>
     <xs:import namespace="http://purl.org/dc/terms/" schemaLocation="dcterms.xsd"/> 
     <xs:import namespace="http://www.loc.gov/loc.terms/relators/" schemaLocation="marcrel.xsd"/>
@@ -35,7 +35,7 @@
                         <xs:group ref="collDescGroup" maxOccurs="1"/>
                     </xs:complexType>
                 </xs:element>
-               <xs:element name="record" maxOccurs="unbounded"  type="recordType">
+               <xs:element name="record" maxOccurs="unbounded"  type="recordType"><!-- you can have multiple records in one XML file -->
                    
                </xs:element>
             </xs:sequence>
@@ -64,9 +64,10 @@
                     <xs:group ref="itemDescGroup" maxOccurs="1"/>
                 </xs:complexType>
             </xs:element>
-            <xs:element  ref="tei:transcription" minOccurs="1" maxOccurs="1"/>
-            <xs:element ref="tei:translation" minOccurs="0" maxOccurs="1"/>
-            <xs:element ref="tei:notes"  minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="tei:div" minOccurs="2" maxOccurs="3"/>
+            <!-- one <tei:div type="transcription">
+                 one <tei:div type="translation">
+                 and, optionally, one <tei:div type="notes"> -->
         </xs:sequence>
     </xs:group>
         
