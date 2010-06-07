@@ -14,6 +14,7 @@
   <tei:handNotes>
    <tei:handNote xml:id="HW" scope="sole">Hans Weisse's hand</tei:handNote>
    <tei:handNote xml:id="stamp">stamp</tei:handNote>
+   <tei:handNote xml:id="printed">printed</tei:handNote>
   </tei:handNotes>
 
   <tei:respStmt xml:id="WD">
@@ -55,9 +56,9 @@
    <tei:opener>
     <tei:milestone unit="folio" n="recto"/>
 
-    
-    <tei:byline>Feldpostkarte</tei:byline>
-    <tei:handShift new="#stamp"/><tei:byline>K.u.k. Kmdo d.Telg.Offiziers Feldpostkurses</tei:byline>
+    <tei:handShift new="#stamp"/><tei:fw type="header" place="center">K.u.k. Kmdo d.Telg.Offiziers Feldpostkurses</tei:fw>
+    <tei:fw type="header" place="center"><tei:handShift new="printed"/>Feldpostkarte</tei:fw>
+
 
     <tei:address>
      <tei:addrLine>Absender: <tei:handShift new="#HW"/>Weisse lt. Fp 354</tei:addrLine>
@@ -100,8 +101,10 @@
     <tei:opener>
       <tei:milestone unit="folio" n="recto"/>
 
-    <tei:byline>Imperial-Royal Commando of the Telegraph Officer Course</tei:byline>
-     <tei:handShift new="#stamp"/><tei:byline>Field Postcard</tei:byline>
+     <tei:note type="editorial">printed:</tei:note>
+     <tei:lb/>
+     <tei:fw type="header" place="center"><tei:handShift new="#stamp"/>Imperial-Royal Commando of the Telegraph Officer Course</tei:fw>
+     <tei:fw type="header" place="center"><tei:handShift new="printed"/>Fieldpostcard</tei:fw>
 
      <tei:address>
     <tei:addrLine>From: <tei:handShift new="#HW"/>Lieutenant Weisse Fieldpost 354</tei:addrLine>

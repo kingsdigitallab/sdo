@@ -61,11 +61,10 @@
 
   <tei:div type="transcription">
 
-
+   <tei:div type="part_1">
 
    <tei:opener rend="indent-10">
-    <tei:note type="editorial">in Heinrich Schenker's hand:</tei:note>
-    <tei:lb/>Meine Lieben! </tei:opener>
+    <tei:lb/><tei:handShift new="#HS"/>Meine Lieben! </tei:opener>
 
    <tei:p>Versprochenermaßen<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Writing of
      this letter is recorded in Schenker's diary at OJ 2/10, p. 835, February 5, 1918: " An Wilhelm
@@ -133,11 +132,13 @@
     <tei:salute rend="indent-40">Euer</tei:salute>
     <tei:signed rend="indent-50">Heinrich</tei:signed>
    </tei:closer>
+   </tei:div>
+   
+   <tei:div type="part_2">
 
-   <tei:postscript>
-    <tei:note type="editorial">in Jeanette Kornfeld's hand:</tei:note>
-    <tei:lb/>
-    <tei:p rend="indent-10"><tei:pb n="3"/> Meine Lieben!</tei:p>
+   <tei:opener>
+    <tei:salute rend="indent-10"><tei:pb n="3"/> <tei:handShift new="#JS"/>Meine Lieben!</tei:salute>
+    </tei:opener>
 
     <tei:p>Das Wort „Kino“, das mein theuerer <tei:persName>Heinrich</tei:persName> gebraucht hat,
      ist wirklich die trefflichste, treffendste Bezeichnung für unser Leben. Wir verlassen kaum
@@ -199,28 +200,24 @@
      <tei:persName>Tonerl</tei:persName> im Studium? </tei:p>
 
     <tei:p rend="first">Lasset, bitte, wieder einmal von Euch hören u. seid alle recht herzlich
-     umarmt u. geküßt</tei:p>
-
-    <tei:p rend="indent-60">von Euerer</tei:p>
-
-    <tei:p rend="indent-70">Lie-Lie</tei:p>
-
-    <tei:p>
-     <tei:date when="1918-02-05">5. II. 18</tei:date>
-    </tei:p>
-
-   </tei:postscript>
-
+    umarmt u. geküßt</tei:p>
+    
+    <tei:closer>
+    <tei:salute rend="indent-70">von Euerer</tei:salute>
+    <tei:signed rend="indent-80">Lie-Lie</tei:signed>
+    <tei:date when="1918-02-05">5. II. 18</tei:date>
+    </tei:closer>
+    
+   </tei:div>
   </tei:div>
-
 
 
   <tei:div type="translation">
 
+   <tei:div type="part_1">
 
    <tei:opener rend="indent-10">
-    <tei:note type="editorial">in Heinrich Schenker's hand:</tei:note>
-    <tei:lb/> My dear <tei:supplied reason="identity"
+    <tei:lb/><tei:handShift new="#HS"/>My dear <tei:supplied reason="identity"
      ><tei:persName>Wilhelm</tei:persName><!-- profile: Wilhelm Schenker --> and
      <tei:persName>Dodi</tei:persName><!-- profile: Dodi Schenker --></tei:supplied>, </tei:opener>
 
@@ -267,15 +264,17 @@
 
    <tei:closer>
     <tei:salute rend="indent-30">A thousand kisses and greetings to you all, </tei:salute>
-    <tei:salute rend="indent-40">Your, </tei:salute>
+    <tei:salute rend="indent-40">Your </tei:salute>
     <tei:signed rend="indent-50">Heinrich</tei:signed>
    </tei:closer>
+   </tei:div>
 
-   <tei:postscript>
+  
+    <tei:div type="part_2">
 
-    <tei:p rend="indent-10"><tei:pb n="3"/>My dear
+    <tei:salute rend="indent-10"><tei:pb n="3"/><tei:handShift new="#JS"/>My dear
       <tei:supplied><tei:persName>Wilhelm</tei:persName><!-- profile: Wilhelm Schenker --> and
-       <tei:persName>Dodi</tei:persName><!-- profile: Dodi Schenker --></tei:supplied>, </tei:p>
+       <tei:persName>Dodi</tei:persName><!-- profile: Dodi Schenker --></tei:supplied>, </tei:salute>
 
     <tei:p>The word "farcical" that my dear <tei:persName>Heinrich</tei:persName> has used is really
      the most apt, the most fitting description of our life. We scarcely ever leave our room, and
@@ -331,18 +330,15 @@
      <tei:persName>Tonerl</tei:persName> and his studies?</tei:p>
 
     <tei:p rend="first">Send us news of yourselves again, please. We send you cordial hugs and
-     kisses,</tei:p>
-
-    <tei:p rend="indent-60">From your</tei:p>
-
-    <tei:p rend="indent-70">Lie-Lie</tei:p>
-
-    <tei:p>
-     <tei:date when="1918-02-05">February 5, 1918</tei:date>
-    </tei:p>
-
-   </tei:postscript>
-
+    kisses,</tei:p>
+     
+     <tei:closer>
+      <tei:salute rend="indent-70">From your</tei:salute>
+      <tei:signed rend="indent-80">Lie-Lie</tei:signed>
+      <tei:date when="1918-02-05">February 5, 1918</tei:date>
+     </tei:closer>
+   
+  </tei:div>
   </tei:div>
 
  </sdo:record>

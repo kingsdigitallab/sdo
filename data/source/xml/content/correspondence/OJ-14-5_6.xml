@@ -53,11 +53,15 @@
 
 
   <tei:div type="transcription">
-
+   
+   <tei:div type="part_1">
+    
    <tei:opener>
     <tei:milestone unit="folio" n="recto"/>
 
-    <tei:byline>Feldpostkarte</tei:byline>
+    <tei:note type="editorial">printed:</tei:note>
+    <tei:lb/>
+    <tei:fw type="header" place="center">Feldpostkarte</tei:fw>
 
     <tei:fw type="envelope">
 
@@ -81,7 +85,6 @@
      </tei:address>
 
      <tei:fw type="postmark"> || k. u. k. ETAPPENPOSTAMT | 9. VIII 18 | 346 || </tei:fw>
-
     </tei:fw>
 
     <tei:milestone unit="folio" n="verso"/>
@@ -112,29 +115,40 @@
     <tei:salute>Herzl. Grüsse u. Küsse von deinem</tei:salute>
     <tei:signed rend="indent-40">Moriz</tei:signed>
    </tei:closer>
-
-   <tei:postscript>
-    <tei:p rend="indent-15"><tei:handShift new="#HG"/>Liebster
-     <tei:persName>Onkel</tei:persName><!-- Heinrich Schenker -->!</tei:p>
+   </tei:div>
+     
+     <tei:div type="part_2">
+      <tei:opener>
+    <tei:salute rend="indent-15"><tei:handShift new="#HG"/>Liebster
+     <tei:persName>Onkel</tei:persName><!-- Heinrich Schenker -->!</tei:salute>
+      </tei:opener>
+       
     <tei:p>habe hier beim l. Onkel
      <tei:persName>Mozio</tei:persName><!-- profile: Moriz Schenker --> eine sehr schöne Aufnahme
      gefunden und sehe nur mit Bedauern die Stunde der Abfahrt nahen. </tei:p>
-    <tei:p rend="indent-20">Inzwischen herzlichen Gruß und Kuß — Hans.</tei:p>
-   </tei:postscript>
+      
+      <tei:closer>
+    <tei:salute rend="indent-20">Inzwischen herzlichen Gruß und Kuß </tei:salute>
+       <tei:signed>— Hans.</tei:signed>
+       </tei:closer>
+      </tei:div>
 
   </tei:div>
 
   <tei:div type="translation">
+   
+   <tei:div type="part_1">
 
    <tei:opener>
     <tei:milestone unit="folio" n="recto"/>
 
-    <tei:byline>Feldpostcard</tei:byline>
-
+    <tei:note type="editorial">printed:</tei:note>
+    <tei:lb/>
+    <tei:fw type="header" place="center">Fieldpostcard</tei:fw>
+    
     <tei:fw type="envelope">
 
      <tei:address>
-
       <tei:addrLine><tei:handShift new="#printed"/>From:</tei:addrLine>
       <tei:addrLine><tei:handShift new="#stamp"/>Imp.-Royal V. A. M. SCHENKER, </tei:addrLine>
       <tei:addrLine>Military Administration in Rumania, </tei:addrLine>
@@ -152,7 +166,6 @@
      </tei:address>
 
      <tei:fw type="postmark"> || Imp.-Royal COMMUNCATIONS POST OFFICE | 9. VIII 18 | 346 || </tei:fw>
-
     </tei:fw>
 
     <tei:milestone unit="folio" n="verso"/>
@@ -166,7 +179,6 @@
 
    </tei:opener>
 
-
    <tei:p>Unfortunately,<tei:ptr corresp="#r0001-fn01" type="footnote"/> it was not possible for me
     to speak with you before my return journey here. However, I hope to be back in
      <tei:placeName>Vienna</tei:placeName> again soon, and will then look you up. —
@@ -179,15 +191,26 @@
     <tei:salute>Cordial greetings and kisses from your </tei:salute>
     <tei:signed rend="indent-40">Moriz</tei:signed>
    </tei:closer>
+    
+   </tei:div>
 
-   <tei:postscript>
-    <tei:p rend="indent-15"><tei:handShift new="#HG"/>Dearest
-     <tei:persName>Uncle</tei:persName><!-- Heinrich Schenker -->!</tei:p>
+   <tei:div type="part_2">
+
+   <tei:opener>
+    <tei:salute rend="indent-15"><tei:handShift new="#HG"/>Dearest
+     <tei:persName>Uncle</tei:persName><!-- Heinrich Schenker -->!</tei:salute>
+   </tei:opener>
+    
     <tei:p>I have been given a very warm welcome here at Uncle
      <tei:persName>Mozio</tei:persName><!-- profile: Moriz Schenker -->'s, and see the hour of my
      departure approaching with regret. </tei:p>
-    <tei:p rend="indent-20">In the meantime, cordial greetings and kisses — Hans</tei:p>
-   </tei:postscript>
+    
+    <tei:closer>
+    <tei:salute rend="indent-20">In the meantime, cordial greetings and kisses </tei:salute>
+     <tei:signed>— Hans</tei:signed>
+    </tei:closer>
+    
+   </tei:div>
 
   </tei:div>
  </sdo:record>
