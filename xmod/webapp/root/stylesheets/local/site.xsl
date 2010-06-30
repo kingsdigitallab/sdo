@@ -6,13 +6,19 @@
   xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:import href="default.xsl" />
+  
+  
+  <!-- override the 'false' value of $menutop from default.xsl -->
+  <xsl:param name="menutop" select="'true'" />
 
   <xsl:param name="filedir" />
   <xsl:param name="filename" />
   <xsl:param name="fileextension" />
 
   <xsl:include href="../xmod/tei/p5.xsl" />
-  
+  <xsl:include href="sdo-p5.xsl"/>
+  <xsl:include href="overrides.xsl"/>
+
   <xsl:variable name="xmg:title" select="//tei:titleStmt/tei:title[not(@type)]" />
   <xsl:variable name="xmg:pathroot" select="$filedir" />
   <xsl:variable name="xmg:path" select="concat($filedir, '/', substring-before($filename, '.'), '.', $fileextension)" />

@@ -9,7 +9,7 @@
   xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xmg="http://www.cch.kcl.ac.uk/xmod/global/1.0"
   xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0"
   xmlns:xmv="http://www.cch.kcl.ac.uk/xmod/views/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xmp="http://www.cch.kcl.ac.uk/xmod/properties/1.0">
 
   <xsl:param name="filedir" />
   <xsl:param name="filename" />
@@ -37,7 +37,7 @@
   <xsl:template match="/">
     <xsl:call-template name="xmv:screen" />
   </xsl:template>
-
+  
   <xsl:template name="xms:submenu">
     <div class="submenu">
       <div class="t01">
