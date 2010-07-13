@@ -38,15 +38,15 @@
 © Commentary, Footnotes, Summary Ian Bent 2009.
  -->
   <sdo:itemDesc>
-   <!-- MT Tags: "Hertzka ~ HSchenker","Rothe ~ HSchenker","UE ~ H+JSchenker","UE ~ HSchenker" -->
-   <dc:title>Typed postcard from UE (Roth) to Schenker, dated May 20, 1919</dc:title>
+   <!-- MT Tags: ""Roth ~ HSchenker","UE ~ H+JSchenker","UE ~ HSchenker" -->
+   <dc:title>Typed postcard from Ernst Roth (UE) to Schenker, dated May 20, 1919</dc:title>
    <dcterms:dateSubmitted>2009-05-07</dcterms:dateSubmitted>
    <dc:description>Hertzka is away and expected back in 8-10 days. </dc:description>
    <dc:subject>absence</dc:subject>
-   <!-- Add the EATS key attribute value to indicate the sender of the letter -->
-   <marcrel:correspondent key="EATS_nNNNNNN"> Vienna I, Karlsplatz 6 (Musikverein Building)</marcrel:correspondent>
-   <!-- Add the key attribute to indicate the recipient of the letter -->
-   <marcrel:recipient key="EATS_nNNNNNN"> Vienna III, Reisnerstraße 38</marcrel:recipient>
+
+   <marcrel:correspondent key="EATS_nNNNNNN">Ernst Roth</marcrel:correspondent>
+   <marcrel:correspondent key="EATS_nNNNNNN">UE</marcrel:correspondent>
+   <marcrel:recipient key="EATS_nNNNNNN">Heinrich Schenker</marcrel:recipient>
   </sdo:itemDesc>
 
 
@@ -54,6 +54,8 @@
 
    <tei:opener>
     <tei:milestone unit="folio" n="recto"/>
+    
+    <tei:fw type="envelope">
 
     <tei:address>
      <tei:addrLine><tei:supplied reason="clarity">Absender:</tei:supplied>Universal-Edition
@@ -69,7 +71,9 @@
     </tei:address>
 
     <tei:fw type="postmark">|| 1/1 WIEN 1 | 20.V.19 9 | 4b ||</tei:fw>
+     </tei:fw>
 
+   <tei:lb/>
     <tei:milestone unit="folio" n="verso"/>
 
     <tei:dateline><tei:persName>R/K</tei:persName>
@@ -108,6 +112,8 @@
 
    <tei:opener>
     <tei:milestone unit="folio" n="recto"/>
+    
+    <tei:fw type="envelope">
 
     <tei:address>
      <tei:addrLine><tei:supplied reason="clarity">From:</tei:supplied>Universal Edition &amp;
@@ -123,7 +129,9 @@
     </tei:address>
 
     <tei:fw type="postmark">|| 1/1 VIENNA 1 | 20.V.19 9 | 4b ||</tei:fw>
+     </tei:fw>
 
+   <tei:lb/>
     <tei:milestone unit="folio" n="verso"/>
 
     <tei:dateline><tei:persName>R/K</tei:persName>
