@@ -6,36 +6,40 @@
     xmlns="http://www.cch.kcl.ac.uk/schenker" targetNamespace="http://www.cch.kcl.ac.uk/schenker">
     <xs:element name="correspondence">
         <xs:complexType>
-            <xs:attribute use="required" name="shelfmark">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:enumeration value="OC-52-203"></xs:enumeration>
-                        <xs:enumeration value="OC-52-204"></xs:enumeration>
-                        <xs:enumeration value="OC-52-205"></xs:enumeration>
-                        <xs:enumeration value="OC-52-206"></xs:enumeration>
-                        <xs:enumeration value="OC-52-559"></xs:enumeration>
-                        <xs:enumeration value="OJ-15-15-05"></xs:enumeration>
-                        <xs:enumeration value="OJ-15-15-06"></xs:enumeration>
-                        <xs:enumeration value="OJ-15-16-32"></xs:enumeration>
-                        <xs:enumeration value="OJ-15-16-33"></xs:enumeration>
-                        <xs:enumeration value="OJ-15-16-34"></xs:enumeration>
-                        <xs:enumeration value="OJ-15-16-35"></xs:enumeration>
-                        <xs:enumeration value="OJ-15-16-36"></xs:enumeration>
-                        <xs:enumeration value="OJ-15-16-37"></xs:enumeration>
-                        <xs:enumeration value="TEST-SHELFMARK1"></xs:enumeration>
-                        <xs:enumeration value="WSLB-292"></xs:enumeration>
-                        <xs:enumeration value="WSLB-293"></xs:enumeration>
-                        <xs:enumeration value="WSLB-294"></xs:enumeration>
-                        <xs:enumeration value="WSLB-295"></xs:enumeration>
-                        <xs:enumeration value="WSLB-296"></xs:enumeration>
-                        <xs:enumeration value="WSLB-297"></xs:enumeration>
-                        <xs:enumeration value="WSLB-298"></xs:enumeration>
-                        <xs:enumeration value="WSLB-299"></xs:enumeration>
-                        <xs:enumeration value="WSLB-300"></xs:enumeration>
-                        <xs:enumeration value="WSLB-301"></xs:enumeration>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:attribute>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute use="required" name="sdoID">                    
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="OC-52-203"/>
+                                <xs:enumeration value="OC-52-204"/>
+                                <xs:enumeration value="OC-52-205"/>
+                                <xs:enumeration value="OC-52-206"/>
+                                <xs:enumeration value="OC-52-559"/>
+                                <xs:enumeration value="OJ-15-15-05"/>
+                                <xs:enumeration value="OJ-15-15-06"/>
+                                <xs:enumeration value="OJ-15-16-32"/>
+                                <xs:enumeration value="OJ-15-16-33"/>
+                                <xs:enumeration value="OJ-15-16-34"/>
+                                <xs:enumeration value="OJ-15-16-35"/>
+                                <xs:enumeration value="OJ-15-16-36"/>
+                                <xs:enumeration value="OJ-15-16-37"/>
+                                <xs:enumeration value="TEST-SHELFMARK1"/>
+                                <xs:enumeration value="WSLB-292"/>
+                                <xs:enumeration value="WSLB-293"/>
+                                <xs:enumeration value="WSLB-294"/>
+                                <xs:enumeration value="WSLB-295"/>
+                                <xs:enumeration value="WSLB-296"/>
+                                <xs:enumeration value="WSLB-297"/>
+                                <xs:enumeration value="WSLB-298"/>
+                                <xs:enumeration value="WSLB-299"/>
+                                <xs:enumeration value="WSLB-300"/>
+                                <xs:enumeration value="WSLB-301"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:attribute>
+                </xs:extension>
+            </xs:simpleContent>
         </xs:complexType>
     </xs:element>
 </xs:schema>
