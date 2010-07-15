@@ -98,6 +98,7 @@
     <xs:group name="itemDescGroup">
    
         <xs:sequence>
+            <xs:element ref="dcterms:isPartOf" minOccurs="0" maxOccurs="5"/>
             <xs:element ref="dc:title" maxOccurs="1"/>
             <xs:element ref="dc:type" minOccurs="0" maxOccurs="1"/>  
             <xs:element ref="dcterms:created" minOccurs="1" maxOccurs="1"/> 
@@ -126,7 +127,7 @@
             <xs:element ref="dcterms:audience" minOccurs="0" maxOccurs="1"/>
             
             
-            <xs:element ref="dcterms:isPartOf" minOccurs="0" maxOccurs="1"/>-->
+            -->
             
           <!-- this creates a conflict with the corresponding element rights in dc: commenting out for now.  <xs:element ref="dcterms:license" minOccurs="0" maxOccurs="unbounded"/>-->
             
