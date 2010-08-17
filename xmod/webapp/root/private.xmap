@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<map:sitemap xmlns:map="http://apache.org/cocoon/sitemap/1.0">
+
+  <!-- Project sitemap for private URLs, such as editorial processes
+       like Schematron validation. -->
+
+  <map:pipelines>
+    <map:pipeline>
+      <!-- Present a table of XML documents and the processes that
+           might be applied to them. -->
+      <map:match pattern="xml/index.html">
+        <map:generate src="xml/content" type="directory">
+          <map:parameter name="depth" value="99"/>
+          <map:parameter name="exclude" value="\.svn"/>
+        </map:generate>
+        <map:transform src="stylesheets/local/private/xml-dirs-to-process-list-html.xsl">
+          <map:parameter name="initial_path" value="content/"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+    </map:pipeline>
+
+    <map:pipeline id="local-schematron">
+      <!-- Schematron validation. This is the project-specific
+           interface to xMod's Schematron handling.
+           
+           In the following example, simplified URLs are made
+           available, where the generator supplies the majority of the
+           details.
+           
+           Other matches with fully parameterised patterns can equally
+           map to xMod's internal pipelines for greater control. -->
+      <map:match pattern="xml/schematron/**.html">
+        <map:generate src="cocoon://_internal/schematron/validate/#PROJECT/#ALL/{1}.xml"/>
+        <map:transform src="stylesheets/local/schematron/svrl_to_html.xsl"/>
+        <map:serialize type="xhtml"/>
+      </map:match>
+    </map:pipeline>
+
+    <!-- Pipeline for displaying reports of checking that linked local
+         resource exist. -->
+    <map:pipeline id="local-resource-check">
+      <map:match pattern="xml/resource-check/images/**.html">
+        <map:generate src="cocoon:/xml/resource-check/images/{1}.xml"/>
+        <map:transform src="stylesheets/xmod/resource-check/report-to-html.xsl"/>
+        <map:serialize type="xhtml"/>
+      </map:match>
+    </map:pipeline>
+
+    <!-- Internal pipeline for checking that linked local resources
+         exist - for example, that all of the images referenced in a
+         TEI document are present in the correct place on the
+         filesystem. -->
+    <map:pipeline id="local-internal-resource-check" internal-only="true">
+      <map:match pattern="xml/resource-check/images/**.xml">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://private/xml/resource-check/image-refs/{1}.xml"/>
+          <map:part src="cocoon://private/xml/resource-check/image-files.xml"/>
+        </map:aggregate>
+        <map:transform src="stylesheets/xmod/resource-check/check-missing-resources.xsl"/>
+        <map:serialize type="xml"/>
+      </map:match>
+
+      <!-- Generate a list of image references from the XML
+           documents. This is based on the xMod metadata listing, but
+           allows for the strict list of image references to be
+           expanded to accommodate multiple derivatives (eg,
+           thumbnails) of each image. -->
+      <map:match pattern="xml/resource-check/image-refs/content/**.xml">
+        <map:generate src="cocoon://_internal/metadata/images/{1}.xml"/>
+        <map:transform src="stylesheets/local/private/expand-image-refs.xsl"/>
+        <map:serialize type="xml"/>
+      </map:match>
+
+      <!-- Generate a list of image files from the filesystem. -->
+      <map:match pattern="xml/resource-check/image-files.xml">
+        <map:generate src="images" type="imagedirectory">
+          <map:parameter name="depth" value="99"/>
+          <map:parameter name="exclude" value="\.svn"/>
+        </map:generate>
+        <map:transform src="stylesheets/xmod/resource-check/flatten-dir-list.xsl"/>
+        <map:serialize type="xml"/>
+      </map:match>
+    </map:pipeline>
+  </map:pipelines>
+</map:sitemap>
