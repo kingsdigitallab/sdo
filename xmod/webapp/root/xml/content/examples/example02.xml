@@ -1,0 +1,324 @@
+<?xml version="1.0"?>
+<?oxygen RNGSchema="../../../../schema/tei/xmod_web.rnc" type="compact"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="p1_1"
+    xmlns:xmt="http://www.cch.kcl.ac.uk/xmod/tei/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Example: Tables and Lists</title>
+                <author>Author</author>
+                <respStmt>
+                    <resp>compiled by</resp>
+                    <name>CompilerFirstName CompilerSurname</name>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Centre for Computing in the Humanities, King's College London</publisher>
+                <address>
+        <addrLine>Strand, London WC2R 2LS, England, United Kingdom. Tel:+44 (0) 20 7836 5454</addrLine>
+        <addrLine>http://www.kcl.ac.uk/cch/</addrLine>
+      </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>No source: created in electronic format.</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <p>Encoding according to the CCH TEI Guidelines at http://abc.org</p>
+        </encodingDesc>
+        <revisionDesc>
+            <change>
+                <date>2006-10-18</date>
+
+                <name>ZA</name>
+
+                <desc>changed contents</desc>
+            </change>
+            <change>
+                <date>2003-10-27</date>
+
+                <name>JG</name>
+
+                <desc>changed contents</desc>
+            </change>
+
+        </revisionDesc>
+    </teiHeader>
+
+    <text>
+        <body>
+
+            <head>Body Contents</head>
+            <div>
+                <head>Tables</head>
+                <table xmt:type="thumbnail" rend="img">
+                    <head>Thumbnail Table</head>
+                    <row>
+                        <cell>
+                            
+                                <graphic url="img001"/>
+                            
+                        </cell>
+                        <cell>
+                            
+                                <graphic url="img002"/>
+                            
+                        </cell>
+                        <cell>
+                            
+                                <graphic url="img002"/>
+                            
+                        </cell>
+                        <cell>
+                            
+                                <graphic url="imag004"/>
+                            
+                        </cell>
+                    </row>
+                </table>
+                <table xmt:type="complex">
+                    <head>Complex table</head>
+                    <row>
+                        <cell role="data">1a</cell>
+                        <cell rows="3" role="data">1b</cell>
+                        <cell>1c</cell>
+                        <cell rows="3" role="data">1d</cell>
+                        <cell rows="4">1e</cell>
+                    </row>
+                    <row>
+                        <cell role="data">2a</cell>
+                        <cell rows="3" role="data">2c</cell>
+
+                    </row>
+                    <row>
+                        <cell role="data">3a</cell>
+                    </row>
+                    <row>
+                        <cell role="data" cols="2">4a</cell>
+                        <cell>4d</cell>
+                    </row>
+
+                    <row>
+                        <cell role="data" cols="3">5a</cell>
+                        <cell rows="2" cols="2">5de</cell>
+                    </row>
+
+                    <row>
+                        <cell role="data">6a</cell>
+                        <cell role="data" rows="3" cols="2">6b</cell>
+                    </row>
+                    <row>
+                        <cell role="data">7a</cell>
+                        <cell rows="2" role="data">7d</cell>
+                        <cell>7e</cell>
+                    </row>
+                    <row>
+                        <cell role="data">8a</cell>
+                        <cell>8e</cell>
+                    </row>
+                </table>
+
+                <table>
+                    <head>Basic Table</head>
+                    <row role="label">
+                        <cell role="label">Nutrient</cell>
+                        <cell role="label">Amount</cell>
+                        <cell role="label">Units</cell>
+                        <cell role="label">%RDA</cell>
+                    </row>
+                    <row role="data">
+                        <cell>Calcium</cell>
+                        <cell>67.18</cell>
+                        <cell>mg</cell>
+                        <cell>8</cell>
+                    </row>
+                    <row role="data">
+                        <cell>Calcium</cell>
+                        <cell>67.18</cell>
+                        <cell>mg</cell>
+                        <cell>8</cell>
+                    </row>
+                    <row role="data">
+                        <cell>Calcium</cell>
+                        <cell>67.18</cell>
+                        <cell>mg</cell>
+                        <cell>8</cell>
+                    </row>
+                    <row>
+                        <cell>Folate</cell>
+                        <cell>357.68</cell>
+                        <cell>µg</cell>
+                        <cell>89</cell>
+                    </row>
+                </table>
+                <table>
+                    <head>Basic Table</head>
+                    <row role="label">
+                        <cell role="label">Nutrient</cell>
+                        <cell role="label">Amount</cell>
+                        <cell role="label">Units</cell>
+                        <cell role="label">%RDA</cell>
+                    </row>
+                    <row role="data">
+                        <cell role="label">Calcium</cell>
+                        <cell>67.18</cell>
+                        <cell>mg</cell>
+                        <cell>8</cell>
+                    </row>
+                    <row role="data">
+                        <cell role="label">Calcium</cell>
+                        <cell>67.18</cell>
+                        <cell>mg</cell>
+                        <cell>8</cell>
+                    </row>
+                    <row role="data">
+                        <cell role="label">Calcium</cell>
+                        <cell>67.18</cell>
+                        <cell>mg</cell>
+                        <cell>8</cell>
+                    </row>
+                    <row>
+                        <cell role="label">Folate</cell>
+                        <cell>357.68</cell>
+                        <cell>µg</cell>
+                        <cell>89</cell>
+                    </row>
+                </table>
+            </div>
+            <div>
+                <head>Lists</head>
+                <list type="special">
+                    <head>LinkBiblio</head>
+                    <item>
+                        <label>Title 1</label>
+                        <ptr target="http://abc.org"/>
+                        <ab>Description 1: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                            Donec porta ligula vitae nibh. Sed malesuada erat in justo.</ab>
+                    </item>
+                    <item>
+                        <label>Title 2</label>
+                        <ptr target="http://abc.org"/>
+                        <ab>Description 2: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                            Donec porta ligula vitae nibh. Sed malesuada erat in justo.</ab>
+                    </item>
+                    <item>
+                        <label>Title 3</label>
+                        <ptr target="http://abc.org"/>
+                        <ab>Description 3: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                            Donec porta ligula vitae nibh. Sed malesuada erat in justo.</ab>
+                    </item>
+                    <item>
+                        <label>Title 3</label>
+                        <ptr target="http://abc.org"/>
+                        <ab>Description 3: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                            Donec porta ligula vitae nibh. Sed malesuada erat in justo.</ab>
+                    </item>
+                </list>
+               <list type="special">
+                    <head>Special list</head>
+                    <item>
+                        <label>Title 1</label>
+                        <ab>Subtitle 1</ab>
+                        <ab>itemDesc</ab>
+                        <ab>contactInfo</ab>
+                        <ptr target="http://abc.org"/>
+                    </item>
+                    <item>
+                        <label>Title 2</label>
+                        <ab>Subtitle 2</ab>
+                        <ab>itemDesc</ab>
+                        <ab>contactInfo</ab>
+                        <ptr target="http://abc.org"/>
+                    </item>
+                    <item>
+                        <label>Title 3</label>
+                        <ab>Subtitle 3</ab>
+                        <ab>itemDesc</ab>
+                        <ab>contactInfo</ab>
+                        <ptr target="http://abc.org"/>
+                    </item>
+                    <item>
+                        <label>Title 4</label>
+                        <ab>Subtitle 4</ab>
+                        <ab>itemDesc</ab>
+                        <ab>contactInfo</ab>
+                        <ptr target="http://abc.org"/>
+                    </item>
+                </list>
+                <xmt:uList>
+                    <head>Bulleted list</head>
+                    <item>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</item>
+                    <item>Donec porta ligula vitae nibh.</item>
+                    <item>Sed malesuada erat in justo.</item>
+                </xmt:uList>
+                <xmt:oList rend="arabic">
+                    <head>Ordered list - numbered with Arabic numbers</head>
+                    <item>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</item>
+                    <item>Donec porta ligula vitae nibh.</item>
+                    <item>Sed malesuada erat in justo.</item>
+                </xmt:oList>
+                <xmt:oList rend="lower_case">
+                    <head>Ordered list - numbered with Lower-case letters</head>
+                    <item>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</item>
+                    <item>Donec porta ligula vitae nibh.</item>
+                    <item>Sed malesuada erat in justo.</item>
+                </xmt:oList>
+                <xmt:oList rend="lower_roman">
+                    <head>Ordered list - numbered with Lower-case Roman numbers</head>
+                    <item>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</item>
+                    <item>Donec porta ligula vitae nibh.</item>
+                    <item>Sed malesuada erat in justo.</item>
+                </xmt:oList>
+                <xmt:oList rend="upper_case">
+                    <head>Ordered list - numbered with Upper-case letters</head>
+                    <item>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</item>
+                    <item>Donec porta ligula vitae nibh.</item>
+                    <item>Sed malesuada erat in justo.</item>
+                </xmt:oList>
+                <xmt:oList rend="upper_roman">
+                    <head>Ordered list - numbered with Upper-case Roman numbers</head>
+                    <item>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</item>
+                    <item>Donec porta ligula vitae nibh.</item>
+                    <item>Sed malesuada erat in justo.</item>
+                </xmt:oList>
+
+
+                <xmt:oList rend="upper_roman">
+                    <head>Mixed list</head>
+                    <item>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</item>
+                    <item>Donec porta ligula vitae nibh.</item>
+                    <item>Sed malesuada erat in justo.<xmt:oList rend="lower_roman">
+                            <item>Sed risus odio, imperdiet sit amet, malesuada at, hendrerit sit
+                                amet, pede.</item>
+                            <item>Maecenas dignissim bibendum velit.<xmt:oList rend="upper_case">
+                                    <item>Sed risus odio, imperdiet sit amet, malesuada at,
+                                        hendrerit sit amet, pede.</item>
+                                    <item>Maecenas dignissim bibendum velit.<xmt:oList
+                                            rend="lower_case">
+                                            <item>Sed risus odio, imperdiet sit amet, malesuada at,
+                                                hendrerit sit amet, pede.</item>
+                                            <item>Maecenas dignissim bibendum velit.</item>
+
+                                        </xmt:oList></item>
+
+                                </xmt:oList></item>
+
+                        </xmt:oList></item>
+                    <item>Phasellus ultrices libero non lectus.</item>
+                    <item>In vel nulla a ligula venenatis cursus.</item>
+                    <item>Nam et ipsum.</item>
+                </xmt:oList>
+                <div>
+                    <head>Simple List</head>
+                    <p>Some text, followed by more text and a list. </p>
+                    <xmt:uList>
+                        <item>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,</item>
+                        <item>donec porta ligula vitae nibh,</item>
+                        <item>et sed malesuada erat in justo.</item>
+                    </xmt:uList>
+                </div>
+            </div>
+
+        </body>
+    </text>
+</TEI>
