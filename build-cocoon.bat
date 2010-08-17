@@ -1,1 +1,0 @@
-tools\ant\bin\ant.bat -f buildconf\cocoon\build-cocoon.xml %1 %2 %3 %4 %5 %6 %7 %8 %9
