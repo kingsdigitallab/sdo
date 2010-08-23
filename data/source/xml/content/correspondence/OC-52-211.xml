@@ -7,13 +7,14 @@
  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../schema/schenker.xsd">
  <sdo:collectionDesc>
   <sdo:source>
-   <sdo:correspondence sdoID="TEST-SHELFMARK1">OC 52/211</sdo:correspondence>
+   <sdo:correspondence mfID="103" sdoID="OC-52-211">OC 52/211</sdo:correspondence>
   </sdo:source>
   <tei:handNotes>
    <tei:handNote xml:id="TPdw" scope="major">Typist D/W</tei:handNote>
    <tei:handNote xml:id="EH" scope="minor">Emil Hertzka's hand</tei:handNote>
   </tei:handNotes>
-  <tei:respStmt xml:id="IB"><tei:persName>Ian Bent</tei:persName>
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
    <tei:resp>Transcription, 2009</tei:resp>
    <tei:resp>Translation, 2009</tei:resp>
    <tei:resp>XML Encoding</tei:resp>
@@ -29,10 +30,12 @@
  </sdo:collectionDesc>
  <sdo:record ID="r0001">
   <sdo:itemDesc>
-   <dcterms:isPartOf>Hertzka ~ HSchenker</dcterms:isPartOf><dcterms:isPartOf>UE ~ H+JSchenker</dcterms:isPartOf><dcterms:isPartOf>UE ~ HSchenker</dcterms:isPartOf>
+   <dcterms:isPartOf>Hertzka ~ HSchenker</dcterms:isPartOf>
+   <dcterms:isPartOf>UE ~ H+JSchenker</dcterms:isPartOf>
+   <dcterms:isPartOf>UE ~ HSchenker</dcterms:isPartOf>
    <dc:title>Typed letter from Hertzka (UE) to Schenker, dated November 14, 1919</dc:title>
-<dc:type>ZZZZZ</dc:type>
-<dcterms:created>QQQQQ</dcterms:created>
+   <dc:type>Letter</dc:type>
+   <dcterms:created>QQQQQ</dcterms:created>
    <dcterms:dateSubmitted>2009-06-07</dcterms:dateSubmitted>
    <dc:description>Hertzka will correct the price of Beethovens Neunte Sinfonie and send a copy of
     Die letzten fünf Sonaten von Beethoven ... op. 111 to Dolfi Baudrexel. He hopes that Schenker
@@ -43,15 +46,17 @@
    <marcrel:correspondent key="EATS_nNNNNNN">Universal Edition</marcrel:correspondent>
    <marcrel:recipient key="EATS_nNNNNNN">Heinrich Schenker</marcrel:recipient>
   </sdo:itemDesc>
-  
+
   <tei:div type="transcription">
    <tei:opener>
     <tei:note type="editorial">Ink heavily smudged, illegible in many places</tei:note>
     <tei:lb/>
     <tei:address>
      <tei:note type="editorial">printed letterhead: </tei:note>
-     <tei:lb/><tei:addrLine>Universal-Edition, A.-G. </tei:addrLine><tei:addrLine>Wien I, Karlsplatz
-      6 </tei:addrLine></tei:address>
+     <tei:lb/>
+     <tei:addrLine>Universal-Edition, A.-G. </tei:addrLine>
+     <tei:addrLine>Wien I, Karlsplatz 6 </tei:addrLine>
+    </tei:address>
     <tei:byline><tei:handShift new="#TPdw"/>D/W</tei:byline>
     <tei:dateline rend="indent-60"><tei:placeName>Wien</tei:placeName>, <tei:date when="1919-11-14"
       >14. November 1919.</tei:date>.</tei:dateline>
@@ -79,8 +84,7 @@
      Baudrexel</tei:persName><!-- profile: Dolfi Baudrexel --> ab. <tei:unclear reason="illegible"
      >Jetzt</tei:unclear> erhalten Sie, Erlagschein liegt anbei.</tei:p>
    <tei:p>Ueber die <tei:gap reason="illegible" unit="chars" extent="12"/> Ihrer <tei:gap
-     reason="illegible" unit="chars" extent="8"/> für die <tei:rs type="title"
-    >Universal-Blätter</tei:rs><!-- profile: Musikblätter des Anbruch -->
+     reason="illegible" unit="chars" extent="8"/> für die <tei:rs type="title">Universal-Blätter</tei:rs><!-- profile: Musikblätter des Anbruch -->
     <tei:gap reason="illegible" unit="chars" extent="80"/> hoffe ich, dass <tei:gap
      reason="illegible" unit="chars" extent="10"/> "Mumien" <tei:gap reason="illegible" unit="chars"
      extent="14"/> zu <tei:gap reason="illegible" unit="chars" extent="28"/> wollen Sie ja gutes
@@ -98,8 +102,10 @@
     <tei:lb/>
     <tei:address>
      <tei:note type="editorial">printed letterhead: </tei:note>
-     <tei:lb/><tei:addrLine>Universal Edition &amp; Co., </tei:addrLine><tei:addrLine>Vienna I,
-      Karlsplatz 6 </tei:addrLine></tei:address>
+     <tei:lb/>
+     <tei:addrLine>Universal Edition &amp; Co., </tei:addrLine>
+     <tei:addrLine>Vienna I, Karlsplatz 6 </tei:addrLine>
+    </tei:address>
     <tei:byline><tei:handShift new="#TPdw"/>D/W</tei:byline>
     <tei:dateline rend="indent-60"><tei:placeName>Vienna</tei:placeName>, <tei:date
       when="1919-11-14">November 14, 1919</tei:date></tei:dateline>

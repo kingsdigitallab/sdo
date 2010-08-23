@@ -5,61 +5,77 @@
  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../schema/schenker.xsd">
+ 
  <sdo:collectionDesc>
   <sdo:source>
-   <sdo:correspondence sdoID="TEST-SHELFMARK1">OC 52/923</sdo:correspondence>
+   <sdo:correspondence mfID="109" sdoID="OC-52-593">OC 52/923</sdo:correspondence>
   </sdo:source>
+  
   <tei:handNotes>
    <tei:handNote xml:id="TPdw" scope="major">typist "D/W"</tei:handNote>
    <tei:handNote xml:id="EH" scope="major">Emil Hertzka' hand</tei:handNote>
   </tei:handNotes>
-  <tei:respStmt xml:id="RK-IB"><tei:persName>Robert Kosovsky and Ian Bent</tei:persName>
+  
+  <tei:respStmt xml:id="RK-IB">
+   <tei:persName>Robert Kosovsky and Ian Bent</tei:persName>
    <tei:resp>Transcription, 2009</tei:resp>
   </tei:respStmt>
-  <tei:respStmt xml:id="IB"><tei:persName>Ian Bent</tei:persName>
+  
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
    <tei:resp>Translation, 2009</tei:resp>
    <tei:resp>XML Encoding</tei:resp>
   </tei:respStmt>
+  
   <tei:respStmt xml:id="BOT">
    <tei:name>Automated Script</tei:name>
    <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
   </tei:respStmt>
+  
   <tei:revisionDesc>
    <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
    <tei:change when="2010-05-04" who="#IB">XML code revised</tei:change>
   </tei:revisionDesc>
  </sdo:collectionDesc>
+ 
  <sdo:record ID="r0001">
+  
   <sdo:itemDesc>
-   <!-- Date Created: 06/06/1919 02:33:06 PM -->
-   <dcterms:isPartOf>Hertzka ~ HSchenker</dcterms:isPartOf><dcterms:isPartOf>UE ~ H+JSchenker</dcterms:isPartOf><dcterms:isPartOf>UE ~ HSchenker</dcterms:isPartOf>
+   <dcterms:isPartOf>Hertzka ~ HSchenker</dcterms:isPartOf>
+   <dcterms:isPartOf>UE ~ H+JSchenker</dcterms:isPartOf>
+   <dcterms:isPartOf>UE ~ HSchenker</dcterms:isPartOf>
+   
    <dc:title>Typed letter from Hertzka (UE) to Schenker, dated June 6, 1919</dc:title>
-<dc:type>ZZZZZ</dc:type>
-<dcterms:created>QQQQQ</dcterms:created>
+   <dc:type>Letter</dc:type>
+   <dcterms:created>QQQQQ</dcterms:created>
    <dcterms:dateSubmitted>2009-06-07</dcterms:dateSubmitted>
    <dc:description>Hertzka acknowledges receipt of WSLB 302; he cannot entertain early publication
     of Weisse's work but wishes to get to know it now. — He hopes to have work from Schenker's pen
     as soon as work for Cotta is finished. — He proposes that the Foreword to Die letzten fünf
     Sonaten von Beethoven ... op. 111 be omitted [in an future edition]. </dc:description>
    <dc:subject>Herausgabe; publication; Papierknappheit; paper shortage; Herstellungskosten;
-    production costs; Vorwort; Foreword</dc:subject>
+   production costs; Vorwort; Foreword</dc:subject>
+   
    <marcrel:correspondent key="EATS_nNNNNNN">Emil Hertzka</marcrel:correspondent>
    <marcrel:correspondent key="EATS_nNNNNNN">Universal Edition</marcrel:correspondent>
-   <!-- Add the key attribute to indicate the recipient of the letter -->
    <marcrel:recipient key="EATS_nNNNNNN">Heinrich Schenker</marcrel:recipient>
   </sdo:itemDesc>
+  
+  
   <tei:div type="transcription">
    <tei:opener>
     <tei:note type="editorial">typewriter ink badly smudged</tei:note>
     <tei:lb/>
     <tei:address>
      <tei:note type="editorial">UE printed letterhead</tei:note>
-     <tei:lb/><tei:addrLine>Universal-Edition, A.-G. </tei:addrLine><tei:addrLine>Wien I, Karlsplatz
-      6</tei:addrLine></tei:address>
+     <tei:lb/>
+     <tei:addrLine>Universal-Edition, A.-G. </tei:addrLine>
+     <tei:addrLine>Wien I, Karlsplatz 6</tei:addrLine>
+    </tei:address>
+    
     <tei:byline><tei:handShift new="#TPdw"/>D/W</tei:byline>
     <tei:dateline rend="indent-70"><tei:note type="editorial">printed: </tei:note>Wien
-      <tei:handShift new="#TPdw"/><tei:date when="1919-06-06">6. Juni 1919</tei:date>.
-    </tei:dateline>
+      <tei:handShift new="#TPdw"/><tei:date when="1919-06-06">6. Juni 1919</tei:date>. </tei:dateline>
     <tei:address>
      <tei:addrLine rend="indent-10">Wohlgeboren Herrn Prof. Heinrich <tei:hi rend="sperr"
       >Schenker</tei:hi></tei:addrLine>
@@ -67,6 +83,7 @@
       <tei:hi rend="sperr-underline">Wien</tei:hi>
      </tei:addrLine>
     </tei:address>
+    
     <tei:salute>Sehr geehrter Herr
     <tei:persName>Professor</tei:persName><!-- Heinrich Schenker -->!</tei:salute>
    </tei:opener>
@@ -87,6 +104,7 @@
      1919: there is no diary record of a letter having been written to UE on May 20. </tei:note> vor
     und ich bitte Sie zu entschuldigen, dass ich erst mit einer solchen Verzögerung auf dieselbe
     antworten komme.</tei:p>
+   
    <tei:p>So gerne ich auch infolge Ihrer warmen Empfehlung der Herausgabe der Arbeit
      <tei:persName>Weisse</tei:persName><!-- profile: Hans Weisse -->s nähertreten möchte, so schwer
     dürfte dies im gegenwärtigen Augenblick<tei:note xml:id="r0001-fn3" type="editorial"
@@ -106,13 +124,15 @@
      <tei:persName>Mozart</tei:persName><!-- profile: Mozart -->s und
     <tei:persName>Schubert</tei:persName>s wird auch das überstehen. Für das Umsetzen des
     Nationalgefühls in Geld, habe ich wenig Verständnis. <tei:note type="editorial">Schenker has
-     left-sidelined this paragraph.</tei:note></tei:p>
+    left-sidelined this paragraph.</tei:note></tei:p>
+   
    <tei:closer>
     <tei:salute rend="ident-25">Mit den besten Grüssen</tei:salute>
     <tei:salute rend="indent-50">Ihr in aufrichtiger Hochschätzung</tei:salute>
     <tei:salute rend="75">ergebener</tei:salute>
     <tei:signed rend="ident-80"><tei:handShift new="#EH"/>Hertzka</tei:signed>
    </tei:closer>
+   
    <tei:postscript>
     <tei:p>N.S. Ich nehme an, dass Sie nichts dagegen haben, wenn das Vorwort zur letzterschienenen
      kritischen <tei:rs type="work">Ausgabe der
@@ -122,26 +142,31 @@
       placed a cross against the second line.</tei:note></tei:p>
    </tei:postscript>
   </tei:div>
+  
+  
   <tei:div type="translation">
    <tei:opener>
     <tei:note type="editorial">typewriter ink badly smudged</tei:note>
     <tei:lb/>
     <tei:address>
      <tei:note type="editorial">UE printed letterhead</tei:note>
-     <tei:lb/><tei:addrLine>Universal Edition &amp; Co., </tei:addrLine><tei:addrLine>Vienna I,
-      Karlsplatz 6</tei:addrLine></tei:address>
+     <tei:lb/>
+     <tei:addrLine>Universal Edition &amp; Co., </tei:addrLine>
+     <tei:addrLine>Vienna I, Karlsplatz 6</tei:addrLine>
+    </tei:address>
     <tei:byline><tei:handShift new="#TPdw"/>D/W</tei:byline>
     <tei:dateline rend="indent-70"><tei:note type="editorial">printed: </tei:note>Vienna,
-      <tei:handShift new="#TPdw"/><tei:date when="1919-06-06">June 6, 1919</tei:date>.
-    </tei:dateline>
+      <tei:handShift new="#TPdw"/><tei:date when="1919-06-06">June 6, 1919</tei:date>. </tei:dateline>
     <tei:address>
      <tei:addrLine rend="indent-10">Prof. Heinrich Schenker, Esq., </tei:addrLine>
      <tei:addrLine rend="indent-60">
       <tei:hi rend="underline">Vienna</tei:hi>
      </tei:addrLine>
     </tei:address>
+    
     <tei:salute>Dear <tei:persName>Professor</tei:persName><!-- Heinrich Schenker -->,</tei:salute>
    </tei:opener>
+   
    <tei:p>Back<tei:ptr target="#r0001-fn1" type="footnote"/> in
     <tei:placeName>Vienna</tei:placeName> after a long absence, I have your esteemed letter of May
      20<tei:ptr target="#r0001-fn2" type="footnote"/> before me and ask you to excuse my getting
@@ -165,7 +190,8 @@
     <tei:persName>Mozart</tei:persName><!-- profile: Mozart -->, and
     <tei:persName>Schubert</tei:persName> will survive even that. Of the translation of national
     feeling into money I have little knowledge. <tei:note type="editorial">Schenker has
-     left-sidelined this paragraph.</tei:note></tei:p>
+    left-sidelined this paragraph.</tei:note></tei:p>
+   
    <tei:closer>
     <tei:salute rend="indent-25">With most cordial greetings, </tei:salute>
     <tei:salute rend="indent-50">and with kind regards, </tei:salute>
@@ -173,6 +199,7 @@
     <tei:signed rend="indent-80"><tei:handShift new="#EH"/>Hertzka</tei:signed>
    </tei:closer>
    <tei:postscript>
+    
     <tei:p>P.S. I take it that you will have no objection if the Foreword to the most recently
      appeared critical <tei:rs type="work">edition of the Beethoven
      sonatas</tei:rs><!-- profile: Erläuterungsausgabe, Op. 111 --> is omitted, since it is no

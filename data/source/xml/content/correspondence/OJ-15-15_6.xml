@@ -7,7 +7,7 @@
  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../schema/schenker.xsd">
  <sdo:collectionDesc>
   <sdo:source>
-   <sdo:correspondence sdoID="TEST-SHELFMARK1">OJ 15/15, [6]</sdo:correspondence>
+   <sdo:correspondence mfID="27" sdoID="OJ-15-15_6">OJ 15/15, [6]</sdo:correspondence>
   </sdo:source>
 
 
@@ -38,10 +38,11 @@
  <sdo:record ID="r0001">
 
   <sdo:itemDesc>
-   <dcterms:isPartOf>Weisse ~ H+JSchenker</dcterms:isPartOf><dcterms:isPartOf>Weisse ~ HSchenker</dcterms:isPartOf>
+   <dcterms:isPartOf>Weisse ~ H+JSchenker</dcterms:isPartOf>
+   <dcterms:isPartOf>Weisse ~ HSchenker</dcterms:isPartOf>
    <dc:title>Handwritten postcard from Weisse to Schenker, dated May 27, 1918</dc:title>
-<dc:type>ZZZZZ</dc:type>
-<dcterms:created>QQQQQ</dcterms:created>
+   <dc:type>Postcard</dc:type>
+   <dcterms:created>QQQQQ</dcterms:created>
    <dcterms:dateSubmitted>2009-03-13</dcterms:dateSubmitted>
    <dc:description>Weisse, on three-month leave (June-August 1918) to finish work towards his
     doctoral degree, asks Schenker for tuition in counterpoint and thoroughbass. </dc:description>
@@ -61,7 +62,8 @@
     <tei:note type="editorial">printed:</tei:note>
     <tei:lb/>
     <tei:fw type="header" place="center">Feldpostkarte</tei:fw>
-    <tei:handShift new="#stamp"/><tei:fw type="header" place="center">K.u.k. Kmdo d.Telg.Offiziers Feldpostkurses</tei:fw>
+    <tei:handShift new="#stamp"/>
+    <tei:fw type="header" place="center">K.u.k. Kmdo d.Telg.Offiziers Feldpostkurses</tei:fw>
 
     <tei:address>
      <tei:addrLine>Absender: <tei:handShift new="#HW"/>Weisse lt. Fp 354</tei:addrLine>
@@ -108,7 +110,8 @@
     <tei:note type="editorial">printed:</tei:note>
     <tei:lb/>
     <tei:fw type="header" place="center">Fieldpostcard</tei:fw>
-    <tei:handShift new="#stamp"/><tei:fw type="header" place="center">Imperial-Royal Commando of the Telegraph Officer Course</tei:fw>
+    <tei:handShift new="#stamp"/>
+    <tei:fw type="header" place="center">Imperial-Royal Commando of the Telegraph Officer Course</tei:fw>
 
     <tei:address>
      <tei:addrLine>From: <tei:handShift new="#HW"/>Lieutenant Weisse Fp 354</tei:addrLine>
@@ -131,15 +134,16 @@
     <tei:salute>Dear <tei:persName>master</tei:persName><!-- Heinrich Schenker -->, </tei:salute>
    </tei:opener>
 
-   <tei:p>I<tei:ptr target="#r0001-fn1" type="footnote"/> have just received a three-month furlough, to prepare for
-    my doctoral degree, and I ask you modestly whether, in the month of June, I might have regular
-    lessons with you in order to review counterpoint and thoroughbass. I await your answer.</tei:p>
-   
+   <tei:p>I<tei:ptr target="#r0001-fn1" type="footnote"/> have just received a three-month furlough,
+    to prepare for my doctoral degree, and I ask you modestly whether, in the month of June, I might
+    have regular lessons with you in order to review counterpoint and thoroughbass. I await your
+    answer.</tei:p>
+
    <tei:closer>
     <tei:salute>With most cordial greetings in the Hungarian style, Your faithful </tei:salute>
     <tei:signed rend="indent-50">Hans</tei:signed>
    </tei:closer>
-   
+
   </tei:div>
  </sdo:record>
 </sdo:recordCollection>

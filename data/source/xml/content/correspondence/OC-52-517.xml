@@ -7,7 +7,7 @@
  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../schema/schenker.xsd">
  <sdo:collectionDesc>
   <sdo:source>
-   <sdo:correspondence sdoID="TEST-SHELFMARK1">OC 52/517</sdo:correspondence>
+   <sdo:correspondence mfID="181" sdoID="OC-52-517">OC 52/517</sdo:correspondence>
   </sdo:source>
   <tei:handNotes>
    <tei:handNote xml:id="TPunk" scope="major">unknown typist</tei:handNote>
@@ -35,7 +35,7 @@
    <dcterms:isPartOf>UE ~ HSchenker</dcterms:isPartOf>
    <dc:title>Typed contract from between UE and Schenker for the Kleine Bibliothek, dated July 10,
     1920</dc:title>
-   <dc:type>ZZZZZ</dc:type>
+   <dc:type>Contract</dc:type>
    <dcterms:created>QQQQQ</dcterms:created>
    <dcterms:dateSubmitted>2009-08-14</dcterms:dateSubmitted>
    <dc:description>Contract between UE and Schenker for the Kleine Bibliothek. </dc:description>
@@ -48,8 +48,7 @@
     mark-up; Ausgabe; edition; Tonfolge; succession of tones; Tonwerk; musical composition; Aufsatz;
     article; Musikstück; piece of music; Tantieme; royalty; Umfang; extent; Honorar; honorarium;
     Termin; deadline; Veröffentlichung; publication; Publikation; Manuscript; manuscript; Recht;
-    right; Meinungsäusserung; expression of opinion; Korrekturen; proofs; Urheberrecht;
-    copyright</dc:subject>
+    right; Meinungsäusserung; expression of opinion; Korrekturen; proofs; Urheberrecht; copyright</dc:subject>
 
    <marcrel:correspondent key="EATS_nNNNNNN">Universal Edition</marcrel:correspondent>
    <marcrel:correspondent key="EATS_nNNNNNN">Emil Hertzka</marcrel:correspondent>
@@ -61,14 +60,18 @@
 
    <tei:div type="part_1">
     <tei:opener>
-     <tei:note type="editorial">No U-E letterhead</tei:note><tei:lb/>
-     <tei:dateline rend="indent=50"><tei:placeName>Wien</tei:placeName>
-      <tei:date when="1920-07-10">10. Juli 1920</tei:date></tei:dateline>
+     <tei:note type="editorial">No U-E letterhead</tei:note>
+     <tei:lb/>
+     <tei:dateline rend="indent=50">
+      <tei:placeName>Wien</tei:placeName>
+      <tei:date when="1920-07-10">10. Juli 1920</tei:date>
+     </tei:dateline>
      <tei:address>
       <tei:addrLine rend="indent-10">Herrn Professor Dr. Heinrich <tei:hi rend="sperr"
-        >Schenker</tei:hi>
+       >Schenker</tei:hi>
       </tei:addrLine>
-      <tei:addrLine rend="indent-60"><tei:hi rend="sperr-underline">Wien</tei:hi>
+      <tei:addrLine rend="indent-60">
+       <tei:hi rend="sperr-underline">Wien</tei:hi>
       </tei:addrLine>
      </tei:address>
      <tei:salute>Sehr geehrter Herr Professor!</tei:salute>
@@ -86,11 +89,14 @@
      <tei:body>
       <tei:div>
        <tei:opener>
-        <tei:dateline rend="indent=50"><tei:placeName>Wien</tei:placeName>
-         <tei:date when="1920-04-10">10. April 1920</tei:date></tei:dateline>
+        <tei:dateline rend="indent=50">
+         <tei:placeName>Wien</tei:placeName>
+         <tei:date when="1920-04-10">10. April 1920</tei:date>
+        </tei:dateline>
         <tei:address>
          <tei:addrLine rend="indent-10">An die <tei:hi rend="sperr">Universal-Edition</tei:hi> A.G. </tei:addrLine>
-         <tei:addrLine rend="indent-60"><tei:hi rend="sperr-underline">Wien</tei:hi>
+         <tei:addrLine rend="indent-60">
+          <tei:hi rend="sperr-underline">Wien</tei:hi>
          </tei:addrLine>
         </tei:address>
        </tei:opener>
@@ -103,8 +109,12 @@
 
        <tei:p rend="first">1.) Ich überlasse Ihnen das ausschliessliche und alleinige Verlagsrecht
         sowie das Uebersetzungsrecht der von mir verfassten <tei:cit>
-         <tei:q><tei:rs type="work"><tei:hi rend="sperr-underline">"<tei:title>Kleinen
-             Bibliothek</tei:title>"</tei:hi></tei:rs><!-- profile: Kleine Bibliothek --></tei:q>
+         <tei:q>
+          <tei:rs type="work">
+           <tei:hi rend="sperr-underline">"<tei:title>Kleinen Bibliothek</tei:title>"</tei:hi>
+          </tei:rs>
+          <!-- profile: Kleine Bibliothek -->
+         </tei:q>
         </tei:cit> welche als zwanglose Folge von Zweibogen-Heften gedacht ist, von der höchstens
         zwölf im Jahre<tei:note xml:id="r0001-fn03" type="editorial" place="foot"> "höchstens ...
          Jahre" (maximum ... year): underlined in crayon by Schenker. </tei:note> erscheinen sollen.
@@ -113,7 +123,7 @@
         Themen aus dem Gebiete der Musik zur Erörterung bringen, z.B. die Darstellung von <tei:rs
          type="musical-term">Symphonie</tei:rs>-, <tei:rs type="musical-term">Kammermusik</tei:rs>,
          <tei:rs type="musical-term">Lied</tei:rs>-, <tei:rs type="musical-term"
-         >Klavierwerk</tei:rs>en und zwar sowohl dem Inhalt als auch dem <tei:rs type="musical-term"
+        >Klavierwerk</tei:rs>en und zwar sowohl dem Inhalt als auch dem <tei:rs type="musical-term"
          >Vortrag</tei:rs> nach, Studien über <tei:rs type="musical-term">Vortrag</tei:rs>
         überhaupt, Kritisches und sonst Vermischtes.<tei:note xml:id="r0001-fn04" type="editorial"
          place="foot">"Studien ... Vermischtes" (studies ... miscellanea): wording altered from OC
@@ -174,7 +184,7 @@
        <tei:p rend="first"><tei:pb n="3"/> 5.) Sie verpflichten sich, die von mir rekonstruierte
          <tei:rs type="musical-term">Tonfolge</tei:rs> der von mir herausgegebenen Ausgaben ohne
         meine Zustimmung keiner anderen Ausgabe desselben <tei:rs type="musical-term"
-         >Tonwerk</tei:rs>es zugrunde zu legen. </tei:p>
+        >Tonwerk</tei:rs>es zugrunde zu legen. </tei:p>
 
        <tei:p rend="first">6.) Sollte einer der in der <tei:rs type="work">"<tei:title>Kleinen
           Bibliothek</tei:title><!-- profile: Kleine Biblliothek -->"</tei:rs> enthaltenen Aufsätze
@@ -184,7 +194,7 @@
          welche" (the same ... articles as): text of OC 52/560 adjusted; "dann ... bezahlen" (then
          ... articles): underlined in crayon and left-double-sidelined by Schenker. </tei:note> dem
         Umfang des betreffenden Aufsatzes in der <tei:rs type="work">"<tei:title>Kleinen
-          Bibliothek</tei:title><!-- profile: Kleine Biblliothek -->"</tei:rs> entspricht (z.B. für
+         Bibliothek</tei:title><!-- profile: Kleine Biblliothek -->"</tei:rs> entspricht (z.B. für
         einen Aufsatz, der in der <tei:rs type="work">"<tei:title>Kleinen
          Bibliothek</tei:title><!-- profile: Kleine Biblliothek -->"</tei:rs> acht Seiten umfasst,
         je nach dem Ladenpreis der <tei:rs type="work">"<tei:title>Kleinen
@@ -245,7 +255,7 @@
     <tei:closer>
      <tei:salute rend="indent-65">Hochachtungsvoll</tei:salute>
      <tei:signed rend="indent-60"><tei:handShift new="#stamp"/><tei:note type="editorial"
-       >stamped:</tei:note>Universal-Edition Actiengesellschaft </tei:signed>
+      >stamped:</tei:note>Universal-Edition Actiengesellschaft </tei:signed>
      <tei:signed rend="indent 70"><tei:handShift new="#EH"/>Emil Hertzka</tei:signed>
     </tei:closer>
 
@@ -264,7 +274,8 @@
      <tei:address>
       <tei:addrLine rend="indent-10">Professor Heinrich <tei:hi rend="sperr">Schenker</tei:hi>
       </tei:addrLine>
-      <tei:addrLine rend="indent-60"><tei:hi rend="sperr-underline">Vienna</tei:hi>
+      <tei:addrLine rend="indent-60">
+       <tei:hi rend="sperr-underline">Vienna</tei:hi>
       </tei:addrLine>
      </tei:address>
      <tei:salute>Dear Professor,</tei:salute>
@@ -279,9 +290,10 @@
         <tei:dateline rend="indent=50"><tei:placeName>Vienna</tei:placeName>, <tei:date
           when="1920-04-10">April 10, 1920</tei:date></tei:dateline>
         <tei:address>
-         <tei:addrLine rend="indent-10">To: <tei:hi rend="sperr">Universal Edition</tei:hi> &amp;
-          Co., </tei:addrLine>
-         <tei:addrLine rend="indent-60"><tei:hi rend="sperr-underline">Vienna</tei:hi>
+         <tei:addrLine rend="indent-10">To: <tei:hi rend="sperr">Universal Edition</tei:hi>
+          &amp; Co., </tei:addrLine>
+         <tei:addrLine rend="indent-60">
+          <tei:hi rend="sperr-underline">Vienna</tei:hi>
          </tei:addrLine>
         </tei:address>
        </tei:opener>
@@ -292,8 +304,14 @@
 
        <tei:p rend="first">1.) I relinquish to you the exclusive and sole publishing right as well
         as translation right of the work authored by me, the: <tei:cit>
-         <tei:q><tei:rs type="work"><tei:title level="m"><tei:hi rend="sperr-underline">Little
-             Library</tei:hi></tei:title></tei:rs><!-- profile: Kleine Bibliothek --></tei:q>
+         <tei:q>
+          <tei:rs type="work">
+           <tei:title level="m">
+            <tei:hi rend="sperr-underline">Little Library</tei:hi>
+           </tei:title>
+          </tei:rs>
+          <!-- profile: Kleine Bibliothek -->
+         </tei:q>
         </tei:cit> which is envisioned as a succession of two-gathering issues appearing from time
         to time, of which a maximum of twelve are to appear per year.<tei:ptr corresp="#r0001-fn03"
          type="footnote"/> The <tei:title level="m">Little Library</tei:title> will discuss a
@@ -301,7 +319,7 @@
          type="musical-term">symphonic</tei:rs>
         <tei:supplied reason="clarity">and</tei:supplied>
         <tei:rs type="musical-term">chamber music</tei:rs>, solo <tei:rs type="musical-term"
-         >song</tei:rs>s, <tei:supplied reason="clarity">and</tei:supplied>
+        >song</tei:rs>s, <tei:supplied reason="clarity">and</tei:supplied>
         <tei:rs type="musical-term">keyboard work</tei:rs>s, as regards not only their content but
         also their <tei:rs type="musical-term">performance</tei:rs>, studies of <tei:rs
          type="musical-term">performance</tei:rs> in its own right, critical assessment, and other
@@ -353,7 +371,7 @@
        <tei:p rend="first"><tei:pb n="3"/> 5.) You undertake not to use the <tei:rs
          type="musical-term">succession of tones</tei:rs> reconstructed by me in the editions edited
         by me as a basis for any other edition of the same <tei:rs type="musical-term">musical
-         work</tei:rs> without my consent. </tei:p>
+        work</tei:rs> without my consent. </tei:p>
 
        <tei:p rend="first">6.) Should one of the articles contained in the <tei:title level="m"
          >Little Library</tei:title> be published at a later date in combination with one or more
@@ -375,12 +393,13 @@
        <tei:p rend="first">9.) In view of the fact that by virtue of signing the contract the
         self-evident obligation falls to me not to entrust musicological essays insofar as they fall
         within the scope of the <tei:title level="m">Little Library</tei:title> in size and type
-        (with the exception e.g. of the <tei:rs type="work"><tei:title level="m">Theory of
-          Form</tei:title></tei:rs><!-- profile: Formenlehre --> as a textbook)<tei:ptr
-         corresp="#r0001-fn12" type="footnote"/> to other publishing houses, you undertake the
-        obligation to commit to print and publication immediately<tei:ptr corresp="#r0001-fn13"
-         type="footnote"/> the manuscripts delivered to you for publication, merely in order to
-        prevent the correction of proofs from coinciding with the authoring of new issues.</tei:p>
+        (with the exception e.g. of the <tei:rs type="work">
+         <tei:title level="m">Theory of Form</tei:title>
+        </tei:rs><!-- profile: Formenlehre --> as a textbook)<tei:ptr corresp="#r0001-fn12"
+         type="footnote"/> to other publishing houses, you undertake the obligation to commit to
+        print and publication immediately<tei:ptr corresp="#r0001-fn13" type="footnote"/> the
+        manuscripts delivered to you for publication, merely in order to prevent the correction of
+        proofs from coinciding with the authoring of new issues.</tei:p>
 
        <tei:p rend="first">10.) You commit yourself to acknowledge my right without any limitation
         to free expression of opinion, and <tei:pb n="4"/> in no event to alter or to curtail the
@@ -398,7 +417,7 @@
 
        <tei:closer>
         <tei:note type="editorial">Dr. Heinrich Schenker <tei:hi rend="italic">manu
-         propria</tei:hi></tei:note>
+        propria</tei:hi></tei:note>
        </tei:closer>
       </tei:div>
      </tei:body>
@@ -410,7 +429,7 @@
     <tei:closer>
      <tei:salute rend="indent-65">With kind regards, </tei:salute>
      <tei:signed rend="indent-60"><tei:handShift new="#stamp"/><tei:note type="editorial"
-       >stamped:</tei:note>Universal Edition &amp; Co. </tei:signed>
+      >stamped:</tei:note>Universal Edition &amp; Co. </tei:signed>
      <tei:signed rend="indent 70"><tei:handShift new="#EH"/>Emil Hertzka</tei:signed>
     </tei:closer>
 

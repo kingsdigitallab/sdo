@@ -7,7 +7,7 @@
  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../schema/schenker.xsd">
  <sdo:collectionDesc>
   <sdo:source>
-   <sdo:correspondence sdoID="TEST-SHELFMARK1">OC 52/205</sdo:correspondence>
+   <sdo:correspondence mfID="8" sdoID="OC-52-205">OC 52/205</sdo:correspondence>
   </sdo:source>
 
   <tei:handNotes>
@@ -31,17 +31,19 @@
    <tei:change when="2010-02-07" who="#IB">revision of XML code</tei:change>
   </tei:revisionDesc>
  </sdo:collectionDesc>
- 
+
  <sdo:record ID="r0001">
   <!-- 
 © Commentary, Footnotes, Summary Ian Bent 2009.
  -->
 
   <sdo:itemDesc>
-   <dcterms:isPartOf>Hertzka ~ HSchenker</dcterms:isPartOf><dcterms:isPartOf>UE ~ H+JSchenker</dcterms:isPartOf><dcterms:isPartOf>UE ~ HSchenker</dcterms:isPartOf>
+   <dcterms:isPartOf>Hertzka ~ HSchenker</dcterms:isPartOf>
+   <dcterms:isPartOf>UE ~ H+JSchenker</dcterms:isPartOf>
+   <dcterms:isPartOf>UE ~ HSchenker</dcterms:isPartOf>
    <dc:title>Typed letter from Hertzka (UE) to Schenker, dated April 10, 1918</dc:title>
-<dc:type>ZZZZZ</dc:type>
-<dcterms:created>QQQQQ</dcterms:created>
+   <dc:type>Letter</dc:type>
+   <dcterms:created>QQQQQ</dcterms:created>
    <dcterms:dateSubmitted>2009-03-10</dcterms:dateSubmitted>
    <dc:description>Hertzka returns the Bekker review with thanks, and reflects on Schenker's remarks
     concerning Urtext editions; he encloses the requested copy of the Gazette de Lausanne. </dc:description>
@@ -58,27 +60,33 @@
 
    <tei:opener>
     <tei:address>
-     <tei:addrLine><tei:supplied reason="format">printed UE letterhead</tei:supplied></tei:addrLine>
+     <tei:addrLine>
+      <tei:supplied reason="format">printed UE letterhead</tei:supplied>
+     </tei:addrLine>
      <tei:addrLine>Wien I, Karlsplatz 6</tei:addrLine>
     </tei:address>
-     <tei:byline><tei:persName type="typist">W</tei:persName></tei:byline>
+    <tei:byline>
+     <tei:persName type="typist">W</tei:persName>
+    </tei:byline>
 
     <tei:dateline rend="indent-50">
      <tei:placeName>Wien </tei:placeName>
-     <tei:handShift new="#TPw"/><tei:date when="1918-04-10">10. April 1918.</tei:date>
+     <tei:handShift new="#TPw"/>
+     <tei:date when="1918-04-10">10. April 1918.</tei:date>
     </tei:dateline>
 
     <tei:address>
      <tei:addrLine>
       <tei:persName rend="indent-20">Wohlgeboren Herrn Prof. Dr. Heinrich <tei:hi rend="sperr"
-      >Schenker</tei:hi></tei:persName>
+        >Schenker</tei:hi></tei:persName>
      </tei:addrLine>
      <tei:addrLine rend="indent-50">
       <tei:hi rend="underline sperr">Wien</tei:hi>
      </tei:addrLine>
     </tei:address>
 
-    <tei:salute>Sehr geehrter Herr <tei:persName>Professor</tei:persName><!-- Heinrich Schenker -->!</tei:salute>
+    <tei:salute>Sehr geehrter Herr
+    <tei:persName>Professor</tei:persName><!-- Heinrich Schenker -->!</tei:salute>
    </tei:opener>
 
    <tei:p rend="first">Besten<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
@@ -104,7 +112,8 @@
      doled out." In the end the article turns into an emphatic admonition to be wary of the Germanic
      sophism and the German book. Concerning the purely musical part he only goes so far as to admit
      that the edition would be invaluable if only . . Beyond that he does not go substantively into
-     the commentary.").<!-- XR --> </tei:note> Dank für die Einsendung der Notiz von
+     the commentary.").<!-- XR -->
+    </tei:note> Dank für die Einsendung der Notiz von
      <tei:persName>Bekker</tei:persName><!-- profile -->,<tei:note xml:id="r0001-fn02"
      type="editorial" place="foot">Schenker had sent Hertzka Bekker's review with WSLB 297 : April
      9, 1918. </tei:note> die ich schon vorher mit Interesse gelesen habe. – Ihre Bemerkung, dass
@@ -131,26 +140,28 @@
    <tei:closer rend="indent-20">
     <tei:salute>Mit verbindlichen Grüssen</tei:salute>
     <tei:salute rend="indent-10">Ihr in Verehrung ergebener</tei:salute>
-    <tei:handShift new="#EH"/><tei:signed rend="indent-20">Hertzka</tei:signed>
+    <tei:handShift new="#EH"/>
+    <tei:signed rend="indent-20">Hertzka</tei:signed>
 
    </tei:closer>
 
    <tei:postscript>
-    <tei:p><tei:supplied reason="clarity">added, on a different typewriter:</tei:supplied>* <tei:handShift new="#TPw"/>P.S.
-     Mitfolgend die <tei:title>Gazette de Lausanne</tei:title><tei:note xml:id="r0001-fn5"
-      type="editorial" place="foot">Schenker first asked about this on March 3 :WSLB 295, and this
-      is Hertzka's response. No clipping is preserved in Schenker's papers, but his diary entry (OJ
-      2/10, pp. 873–74 : April 12, 1918) summarizes it: "a political leading article signed by
-       <tei:persName>Maurice Kufferath</tei:persName>, who takes a number of passages from
-       <tei:title level="m">Opus 111</tei:title> as the subject matter of a symptomatic observation.
-      Cites the passages sometimes in translation, sometimes even in both the original and in
-      translation so that no one can suspect him of falsification and yet that is precisely what he
-      does, where instead of referring to a real slap in the face for America he speaks of one
-      "rightly doled out." In the end the article turns into an emphatic admonition to be wary of
-      the Germanic sophism and the German book. Concerning the purely musical part he only goes so
-      far as to admit that the edition would be invaluable if only . . Beyond that he does not go
-      substantively into the commentary." <!-- XR --> </tei:note> die wir uns nach Kenntnisnahme
-     zurückerbitten.</tei:p>
+    <tei:p><tei:supplied reason="clarity">added, on a different typewriter:</tei:supplied>*
+      <tei:handShift new="#TPw"/>P.S. Mitfolgend die <tei:title>Gazette de
+      Lausanne</tei:title><tei:note xml:id="r0001-fn5" type="editorial" place="foot">Schenker first
+      asked about this on March 3 :WSLB 295, and this is Hertzka's response. No clipping is
+      preserved in Schenker's papers, but his diary entry (OJ 2/10, pp. 873–74 : April 12, 1918)
+      summarizes it: "a political leading article signed by <tei:persName>Maurice
+      Kufferath</tei:persName>, who takes a number of passages from <tei:title level="m">Opus
+      111</tei:title> as the subject matter of a symptomatic observation. Cites the passages
+      sometimes in translation, sometimes even in both the original and in translation so that no
+      one can suspect him of falsification and yet that is precisely what he does, where instead of
+      referring to a real slap in the face for America he speaks of one "rightly doled out." In the
+      end the article turns into an emphatic admonition to be wary of the Germanic sophism and the
+      German book. Concerning the purely musical part he only goes so far as to admit that the
+      edition would be invaluable if only . . Beyond that he does not go substantively into the
+      commentary." <!-- XR -->
+     </tei:note> die wir uns nach Kenntnisnahme zurückerbitten.</tei:p>
    </tei:postscript>
   </tei:div>
 
@@ -158,14 +169,19 @@
 
    <tei:opener>
     <tei:address>
-     <tei:addrLine><tei:supplied reason="format">printed UE letterhead</tei:supplied></tei:addrLine>
+     <tei:addrLine>
+      <tei:supplied reason="format">printed UE letterhead</tei:supplied>
+     </tei:addrLine>
      <tei:addrLine>Vienna I, Karlsplatz 6</tei:addrLine>
     </tei:address>
-    <tei:byline><tei:persName type="typist">W</tei:persName></tei:byline>
+    <tei:byline>
+     <tei:persName type="typist">W</tei:persName>
+    </tei:byline>
 
     <tei:dateline rend="indent-50">
      <tei:placeName>Vienna, </tei:placeName>
-     <tei:handShift new="#TPw"/><tei:date when="1918-04-10">April 10, 1918</tei:date>
+     <tei:handShift new="#TPw"/>
+     <tei:date when="1918-04-10">April 10, 1918</tei:date>
     </tei:dateline>
 
     <tei:address>
@@ -177,37 +193,39 @@
      </tei:addrLine>
     </tei:address>
 
-    <tei:salute>Greatly honored <tei:persName>Professor</tei:persName><!-- Heinrich Schenker -->,</tei:salute>
+    <tei:salute>Greatly honored
+    <tei:persName>Professor</tei:persName><!-- Heinrich Schenker -->,</tei:salute>
    </tei:opener>
 
-   <tei:p rend="first"> Many<tei:ptr target="#r0001-fn1" type="footnote"/> thanks for sending the review by
-    <tei:persName>Bekker</tei:persName><!-- profile -->,<tei:ptr target="#r0001-fn2" type="footnote"/> which I had
-    already read with interest. — Your remark that French teachers will have even less idea than the
-    German ones how to begin to make sense of the <tei:term>Urtext editions</tei:term> casts the
-    clearest possible light on the whole difficulty of the matter. Editions with heavy editorial
-    intervention<tei:ptr target="#r0001-fn3" type="footnote"/> are in most cases bad, <tei:term>Urtext
-    editions</tei:term> in most cases unsaleable, least of all at the present time. You really do
-    not believe that a publisher would pay money for <tei:term>performing editions</tei:term> when
-    he could buy <tei:term>Urtext editions</tei:term> every bit as good or better? Nor will the
-    course of action that you yourself suggest, "a straighforward original edition with a few
-    decisive <tei:term>elucidations</tei:term>,"*<tei:ptr target="#r0001-fn4" type="footnote"/> suffice; for, where
-    works for study by pupils are concerned, the average teacher—and everybody knows they are the
-    overwhelming majority—insist on editions with <tei:term>fingering</tei:term>, lots of
-     <tei:term>performance indications</tei:term>, <tei:term>phrase markings</tei:term> and
-    suchlike. </tei:p>
+   <tei:p rend="first"> Many<tei:ptr target="#r0001-fn1" type="footnote"/> thanks for sending the
+    review by <tei:persName>Bekker</tei:persName><!-- profile -->,<tei:ptr target="#r0001-fn2"
+     type="footnote"/> which I had already read with interest. — Your remark that French teachers
+    will have even less idea than the German ones how to begin to make sense of the <tei:term>Urtext
+     editions</tei:term> casts the clearest possible light on the whole difficulty of the matter.
+    Editions with heavy editorial intervention<tei:ptr target="#r0001-fn3" type="footnote"/> are in
+    most cases bad, <tei:term>Urtext editions</tei:term> in most cases unsaleable, least of all at
+    the present time. You really do not believe that a publisher would pay money for
+     <tei:term>performing editions</tei:term> when he could buy <tei:term>Urtext editions</tei:term>
+    every bit as good or better? Nor will the course of action that you yourself suggest, "a
+    straighforward original edition with a few decisive <tei:term>elucidations</tei:term>,"*<tei:ptr
+     target="#r0001-fn4" type="footnote"/> suffice; for, where works for study by pupils are
+    concerned, the average teacher—and everybody knows they are the overwhelming majority—insist on
+    editions with <tei:term>fingering</tei:term>, lots of <tei:term>performance
+    indications</tei:term>, <tei:term>phrase markings</tei:term> and suchlike. </tei:p>
 
    <tei:closer rend="indent-20">
     <tei:salute>With sincere greetings,</tei:salute>
     <tei:salute rend="intend-10">Yours truly, in admiration,</tei:salute>
-    <tei:handShift new="#EH"/><tei:signed rend="indent-20">Hertzka</tei:signed>
+    <tei:handShift new="#EH"/>
+    <tei:signed rend="indent-20">Hertzka</tei:signed>
    </tei:closer>
 
    <tei:postscript>
-    <tei:p><tei:supplied reason="clarity">added, on a different typewriter:</tei:supplied>* <tei:handShift new="#TPw"/>P.S.
-     Enclosed is the <tei:title>
+    <tei:p><tei:supplied reason="clarity">added, on a different typewriter:</tei:supplied>*
+      <tei:handShift new="#TPw"/>P.S. Enclosed is the <tei:title>
       <tei:hi rend="italic">Gazette de Lausanne</tei:hi>
-     </tei:title>;<tei:ptr target="#r0001-fn5" type="footnote"/> which we ask to be returned to us after perusal.
-    </tei:p>
+     </tei:title>;<tei:ptr target="#r0001-fn5" type="footnote"/> which we ask to be returned to us
+     after perusal. </tei:p>
    </tei:postscript>
 
 

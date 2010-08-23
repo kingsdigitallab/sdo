@@ -7,7 +7,7 @@
  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../schema/schenker.xsd">
  <sdo:collectionDesc>
   <sdo:source>
-   <sdo:correspondence sdoID="TEST-SHELFMARK1">OC 52/559</sdo:correspondence>
+   <sdo:correspondence mfID="28" sdoID="OC-52-559">OC 52/559</sdo:correspondence>
   </sdo:source>
 
   <tei:handNotes>
@@ -36,10 +36,12 @@
  <sdo:record ID="r0001">
 
   <sdo:itemDesc>
-   <dcterms:isPartOf>Hertzka ~ HSchenker</dcterms:isPartOf><dcterms:isPartOf>UE ~ H+JSchenker</dcterms:isPartOf><dcterms:isPartOf>UE ~ HSchenker</dcterms:isPartOf>
+   <dcterms:isPartOf>Hertzka ~ HSchenker</dcterms:isPartOf>
+   <dcterms:isPartOf>UE ~ H+JSchenker</dcterms:isPartOf>
+   <dcterms:isPartOf>UE ~ HSchenker</dcterms:isPartOf>
    <dc:title>Typed letter from Hertzka (UE) to Schenker, dated March 5, 1918</dc:title>
-<dc:type>ZZZZZ</dc:type>
-<dcterms:created>QQQQQ</dcterms:created>
+   <dc:type>Letter</dc:type>
+   <dcterms:created>QQQQQ</dcterms:created>
    <dcterms:dateSubmitted>2009-02-27</dcterms:dateSubmitted>
    <dc:description>Hertzka will inquire about a review published in Lausanne; has dispatched Op. 111
     to Steglich and encloses invoice and payment order; in light of Brest-Litovsk, he inquires about
@@ -56,22 +58,25 @@
 
   <tei:div type="transcription">
    <tei:opener>
-   
+
     <tei:address>
      <tei:addrLine>
       <tei:supplied reason="format">printed UE letterhead</tei:supplied>
      </tei:addrLine>
      <tei:addrLine>Wien I, Karlsplatz 6</tei:addrLine>
     </tei:address>
-    <tei:byline><tei:persName type="typist">W</tei:persName></tei:byline>
+    <tei:byline>
+     <tei:persName type="typist">W</tei:persName>
+    </tei:byline>
     <tei:dateline rend="indent-40">
      <tei:placeName>Wien</tei:placeName>
-     <tei:handShift new="#TPw"/><tei:date when="1918-03-05">5. März
-     1918.</tei:date>
+     <tei:handShift new="#TPw"/>
+     <tei:date when="1918-03-05">5. März 1918.</tei:date>
     </tei:dateline>
 
     <tei:address>
-     <tei:addrLine rend="indent-10">Wohlgeboren Herrn Prof. Dr. Heinrich <tei:hi rend="lateinschr">Schenker</tei:hi>
+     <tei:addrLine rend="indent-10">Wohlgeboren Herrn Prof. Dr. Heinrich <tei:hi rend="lateinschr"
+       >Schenker</tei:hi>
      </tei:addrLine>
      <tei:addrLine rend="indent-50">
       <tei:hi rend="underline"><tei:hi rend="sperr">Wien</tei:hi> III. </tei:hi>
@@ -84,21 +89,22 @@
    </tei:opener>
 
 
-   <tei:p rend="first">Auf<tei:note xml:id="r0001-fn1" type="editorial" place="foot"> Receipt of this letter is
-     recorded in Schenker's diary at OJ 2/10, p. 851, March 6: "Von Hertzka (Br.): habe an Steglich
-      <tei:rs type="work">op. 111</tei:rs> sofort abgeschickt, von einer Belastung aber absehen
-     wollen, sende Erlagschein nur über meine Reklamation (der Betrag ist wieder so hoch gehalten
-     wie in den früheren Fällen - trotz Berichtigung); erkundigt sich unter dem Eindruck des
-     Friedenschlusses mit Rußland nach dem Stand von II<tei:hi rend="supralinear">2</tei:hi> u. der
-     „kl. Bibliothek“." ("From Hertzka (letter): has dispatched <tei:rs type="work">
+   <tei:p rend="first">Auf<tei:note xml:id="r0001-fn1" type="editorial" place="foot"> Receipt of
+     this letter is recorded in Schenker's diary at OJ 2/10, p. 851, March 6: "Von Hertzka (Br.):
+     habe an Steglich <tei:rs type="work">op. 111</tei:rs> sofort abgeschickt, von einer Belastung
+     aber absehen wollen, sende Erlagschein nur über meine Reklamation (der Betrag ist wieder so
+     hoch gehalten wie in den früheren Fällen - trotz Berichtigung); erkundigt sich unter dem
+     Eindruck des Friedenschlusses mit Rußland nach dem Stand von II<tei:hi rend="supralinear"
+     >2</tei:hi> u. der „kl. Bibliothek“." ("From Hertzka (letter): has dispatched <tei:rs
+      type="work">
       <tei:title level="m">Op. 111</tei:title>
      </tei:rs> to Steglich immediately, wanting however to spare me the burden, sends the payment
      order only because of my recent complaint (the amount has again risen as much as in the earlier
      cases—despite corrections); under the influence of the conclusion of the peace treaty with
      Russia inquires after the state of play with II/2 and the <tei:title level="m">Little Library</tei:title>
-    <!-- profile: Kleine Bibliothek -->. ")<!-- XR --> -- Schenker had perhaps complained about the amount of
-     author's discount, and this may be why Hertzka encloses the invoice along with the payment
-     order -- indeed Schenker complains in this instance, in his reply, WSLB 296, March 8!
+     <!-- profile: Kleine Bibliothek -->. ")<!-- XR --> -- Schenker had perhaps complained about the
+     amount of author's discount, and this may be why Hertzka encloses the invoice along with the
+     payment order -- indeed Schenker complains in this instance, in his reply, WSLB 296, March 8!
     </tei:note> Ihre geschätzte gestrige Karte<tei:note xml:id="r0001-fn2" type="editorial"
      place="foot">= WSLB 295, March 3, 1918.</tei:note> erlaube ich mir mitzuteilen, dass mir von
     einer fransösischen Kritik Ihrer <tei:rs type="work">
@@ -110,10 +116,11 @@
     Lausanne</tei:placeName>, vielleicht weiss er etwas und lasse mir in diesem Falle die Kritik
     schicken. Selbstverständlich erhalten Sie dieselbe dann sogleich.</tei:p>
 
-   <tei:p rend="first">An <tei:persName>Dr. Steglich</tei:persName><!-- profile: Rudolf Steglich --><tei:note
-     xml:id="r0001-fn4" type="editorial" place="foot">Schenker had requested the sending of a copy
-     of <tei:title level="m">Op. 111</tei:title> to him in WSLB 294, February 23. </tei:note> ist
-    Ihr <tei:rs type="work">
+   <tei:p rend="first">An <tei:persName>Dr.
+     Steglich</tei:persName><!-- profile: Rudolf Steglich --><tei:note xml:id="r0001-fn4"
+     type="editorial" place="foot">Schenker had requested the sending of a copy of <tei:title
+      level="m">Op. 111</tei:title> to him in WSLB 294, February 23. </tei:note> ist Ihr <tei:rs
+     type="work">
      <tei:title>Opus 111</tei:title>
     </tei:rs><!-- profile: Erläuterungsausgabe, op. 111 --> sofort wunschgemäss expediert worden.
     Ich wollte von einer Belastung absehen, aber nachdem Sie eine solche neuerlich reklamieren,
@@ -159,11 +166,13 @@
      </tei:addrLine>
      <tei:addrLine>Vienna I, Karlsplatz 6</tei:addrLine>
     </tei:address>
-    <tei:byline><tei:persName type="typist">W</tei:persName></tei:byline>
+    <tei:byline>
+     <tei:persName type="typist">W</tei:persName>
+    </tei:byline>
     <tei:dateline rend="indent-40">
      <tei:placeName>Vienna, </tei:placeName>
-     <tei:handShift new="#TPw"/><tei:date when="1918-03-05">March 5,
-     1918.</tei:date>
+     <tei:handShift new="#TPw"/>
+     <tei:date when="1918-03-05">March 5, 1918.</tei:date>
     </tei:dateline>
 
     <tei:address>
@@ -178,20 +187,21 @@
 
    </tei:opener>
 
-   <tei:p rend="first">In<tei:ptr target="#r0001-fn1" type="footnote"/> response to your valued postcard of yesterday,<tei:ptr
-    target="#r0001-fn2" type="footnote"/> I take the liberty of informing you that I know nothing of any French
-    review of your <tei:rs type="work">Beethoven
-     edition</tei:rs><!-- profile: Erläuterungsausgabe, op. 111 -->.<tei:ptr target="#r0001-fn3" type="footnote"/> I
-    am accordingly writing today to our representative in <tei:placeName>Lausanne</tei:placeName>;
-    perhaps he knows something and if so can have the review sent to me. Needless to say, you will
-    then receive it forthwith.</tei:p>
+   <tei:p rend="first">In<tei:ptr target="#r0001-fn1" type="footnote"/> response to your valued
+    postcard of yesterday,<tei:ptr target="#r0001-fn2" type="footnote"/> I take the liberty of
+    informing you that I know nothing of any French review of your <tei:rs type="work">Beethoven
+     edition</tei:rs><!-- profile: Erläuterungsausgabe, op. 111 -->.<tei:ptr target="#r0001-fn3"
+     type="footnote"/> I am accordingly writing today to our representative in
+     <tei:placeName>Lausanne</tei:placeName>; perhaps he knows something and if so can have the
+    review sent to me. Needless to say, you will then receive it forthwith.</tei:p>
 
    <tei:p rend="first">Your <tei:rs type="work">
      <tei:title level="m">Op. 111</tei:title>
     </tei:rs><!-- profile: Erläuterungsausgabe, op. 111 --> has been dispatched to <tei:persName>Dr.
-     Steglich</tei:persName><!-- profile: Rudolf Steglich --><tei:ptr target="#r0001-fn4" type="footnote"/>
-    immediately, at your request. I was going to spare you the burden, but since you complained
-    about one such recently I take the liberty of enclosing the invoice with payment order.</tei:p>
+     Steglich</tei:persName><!-- profile: Rudolf Steglich --><tei:ptr target="#r0001-fn4"
+     type="footnote"/> immediately, at your request. I was going to spare you the burden, but since
+    you complained about one such recently I take the liberty of enclosing the invoice with payment
+    order.</tei:p>
 
    <tei:p rend="first">Yesterday's definitive conclusion of peace with <tei:placeName>
      <tei:country>Russia</tei:country>
@@ -200,23 +210,24 @@
     so accordingly I am taking advantage of these lines of mine today to revive the question of the
      <tei:rs type="work">
      <tei:title level="m">Little Musical Library</tei:title>
-     </tei:rs><!-- profile: Kleine Bibliothek -->,<tei:ptr target="#r0001-fn5" type="footnote"/> so often broached
-    between us. I believe that in the meanwhile you have finalized your work for <tei:orgName>Cotta</tei:orgName><!-- profile: J. G. Cotta -->,<tei:ptr
-     target="#r0001-fn6" type="footnote"/> and I should be delighted if our plan could swiftly be brought to a
-     definitive stage.</tei:p>
-   
+    </tei:rs><!-- profile: Kleine Bibliothek -->,<tei:ptr target="#r0001-fn5" type="footnote"/> so
+    often broached between us. I believe that in the meanwhile you have finalized your work for
+     <tei:orgName>Cotta</tei:orgName><!-- profile: J. G. Cotta -->,<tei:ptr target="#r0001-fn6"
+     type="footnote"/> and I should be delighted if our plan could swiftly be brought to a
+    definitive stage.</tei:p>
+
    <tei:closer rend="indent-20">
     <tei:pb n="2"/>
     <tei:salute>With warmest regards, </tei:salute>
     <tei:salute rend="indent-10">Yours most sincerely, </tei:salute>
     <tei:signed rend="indent-20"><tei:handShift new="#EH"/>Hertzka</tei:signed>
    </tei:closer>
-   
+
    <tei:postscript>
     <tei:p>1. Invoice</tei:p>
     <tei:p>2. Payment order</tei:p>
    </tei:postscript>
-   
+
 
   </tei:div>
  </sdo:record>

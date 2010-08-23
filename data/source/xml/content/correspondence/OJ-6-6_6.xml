@@ -7,7 +7,7 @@
  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../schema/schenker.xsd">
  <sdo:collectionDesc>
   <sdo:source>
-   <sdo:correspondence sdoID="TEST-SHELFMARK1">OJ 6/6, [6]</sdo:correspondence>
+   <sdo:correspondence mfID="24" sdoID="OJ-6-6_6">OJ 6/6, [6]</sdo:correspondence>
   </sdo:source>
 
   <tei:handNotes>
@@ -28,7 +28,7 @@
    <tei:name>Automated Script</tei:name>
    <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
   </tei:respStmt>
-  
+
   <tei:revisionDesc>
    <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
    <tei:change when="2010-02-15" who="#IB">XML code revised</tei:change>
@@ -38,10 +38,12 @@
  <sdo:record ID="r0001">
 
   <sdo:itemDesc>
-   <dcterms:isPartOf>ViolinM ~ HSchenker</dcterms:isPartOf><dcterms:isPartOf>ViolinM+V ~ HSchenker</dcterms:isPartOf><dcterms:isPartOf>ViolinM+V+F ~ HSchenker</dcterms:isPartOf>
+   <dcterms:isPartOf>ViolinM ~ HSchenker</dcterms:isPartOf>
+   <dcterms:isPartOf>ViolinM+V ~ HSchenker</dcterms:isPartOf>
+   <dcterms:isPartOf>ViolinM+V+F ~ HSchenker</dcterms:isPartOf>
    <dc:title>Handwritten letter from Schenker to Moriz Violin, dated February 17, 1918</dc:title>
-<dc:type>ZZZZZ</dc:type>
-<dcterms:created>QQQQQ</dcterms:created>
+   <dc:type>Letter</dc:type>
+   <dcterms:created>QQQQQ</dcterms:created>
    <dcterms:dateSubmitted>2009-04-23</dcterms:dateSubmitted>
    <dc:description>Schenker warns Violin to expect a letter from Vrieslander concerning a
     contribution to a Festschrift for Schenker's 50th birthday, and then airs a number of grievances
@@ -58,7 +60,8 @@
   <tei:div type="transcription">
 
    <tei:opener>
-    <tei:salute rend="indent-10"><tei:persName>Fl</tei:persName><!-- profile: Moriz Violin -->!</tei:salute>
+    <tei:salute rend="indent-10"
+    ><tei:persName>Fl</tei:persName><!-- profile: Moriz Violin -->!</tei:salute>
    </tei:opener>
 
    <tei:p>Dein<tei:note xml:id="r0001-fn1" type="editorial" place="foot"> Writing of this letter is
@@ -137,14 +140,15 @@
      „Ja“ gesagt u. für die Anregung sogar gedankt; Mitwirkung von Schülern wäre ihm willkommen."
      ("From Vrieslander (postcard): Hertzka has said 'Yes' and even thanked <tei:supplied
       reason="clarity">him</tei:supplied> for the initiative; contributions by pupils would be
-     welcome to him.").<!-- XR --> </tei:note> daß <tei:hi rend="lateinschr">H.</tei:hi> überraschenderweise: Ja
-    gesagt hat, mit Dank für Anregung u.s.w. In eben dieser Karte erkundigt sich <tei:hi
-     rend="lateinschr">Vr.</tei:hi> auch nach <tei:hi rend="underline">deiner</tei:hi> Adresse, die
-    ich heute selbstverständlich auch zuschicke.<tei:note xml:id="r0001-fn6" type="editorial"
-     place="foot"> This is recorded in Schenker's diary at OJ 2/10, p. 842, February 16, 1918: " An
-     Vrieslander (K.): danke für die auf sich genommene Mühe u. füge die Adressen von Weisse,
-     Violin, Dahms bei." ("To Vrieslander (postcard): I thank him for the effort he has taken upon
-     himself, and enclose the addresses of Weisse, Violin, and Dahms.").<!-- XR --> From this can perhaps be
+     welcome to him.").<!-- XR -->
+    </tei:note> daß <tei:hi rend="lateinschr">H.</tei:hi> überraschenderweise: Ja gesagt hat, mit
+    Dank für Anregung u.s.w. In eben dieser Karte erkundigt sich <tei:hi rend="lateinschr"
+    >Vr.</tei:hi> auch nach <tei:hi rend="underline">deiner</tei:hi> Adresse, die ich heute
+    selbstverständlich auch zuschicke.<tei:note xml:id="r0001-fn6" type="editorial" place="foot">
+     This is recorded in Schenker's diary at OJ 2/10, p. 842, February 16, 1918: " An Vrieslander
+     (K.): danke für die auf sich genommene Mühe u. füge die Adressen von Weisse, Violin, Dahms
+     bei." ("To Vrieslander (postcard): I thank him for the effort he has taken upon himself, and
+     enclose the addresses of Weisse, Violin, and Dahms.").<!-- XR --> From this can perhaps be
      deduced that the present letter was written across February 15-17. </tei:note> Er dürfte also
     auch dich um einen Beitrag angehen, was dich aber nicht hindern darf, nach deiner
     augenblicklichen <tei:hi rend="underline">Möglichkeit allein</tei:hi> den Entschluß zu fassen.
@@ -358,45 +362,47 @@
   <tei:div type="translation">
 
    <tei:opener>
-    <tei:salute rend="indent-10"><tei:persName>Floriz</tei:persName><!-- profile: Moriz Violin -->,</tei:salute>
+    <tei:salute rend="indent-10"
+    ><tei:persName>Floriz</tei:persName><!-- profile: Moriz Violin -->,</tei:salute>
    </tei:opener>
 
 
-   <tei:p>Your<tei:ptr target="#r0001-fn1" type="footnote"/> letter<tei:ptr target="#r0001-fn2" type="footnote"/> surprised me
-    greatly in tone and content. I will, however, maintain my composure and say, point by point,
-    what needs to be said at this moment.</tei:p>
+   <tei:p>Your<tei:ptr target="#r0001-fn1" type="footnote"/> letter<tei:ptr target="#r0001-fn2"
+     type="footnote"/> surprised me greatly in tone and content. I will, however, maintain my
+    composure and say, point by point, what needs to be said at this moment.</tei:p>
 
    <tei:p>First of all: a few days ago, I received from
      <tei:persName>Vrieslander</tei:persName><!-- profile: Otto Vrieslander --><tei:ptr
-      target="#r0001-fn3" type="footnote"/> a <tei:hi rend="underline">copy</tei:hi> of a letter sent simultaneously
-    to <tei:persName>Hertzka</tei:persName><!-- profile: Emil Hertzka --> proposing to him a
-    "Festschrift" for my fiftieth birthday (with picture),<tei:ptr target="#r0001-fn4" type="footnote"/> written by
-    various authors. Yesterday I received the additional information<tei:ptr target="#r0001-fn5" type="footnote"/>
-    that <tei:persName>Hertzka</tei:persName> has, astonishingly, said "Yes," with thanks for having
+     target="#r0001-fn3" type="footnote"/> a <tei:hi rend="underline">copy</tei:hi> of a letter sent
+    simultaneously to <tei:persName>Hertzka</tei:persName><!-- profile: Emil Hertzka --> proposing
+    to him a "Festschrift" for my fiftieth birthday (with picture),<tei:ptr target="#r0001-fn4"
+     type="footnote"/> written by various authors. Yesterday I received the additional
+     information<tei:ptr target="#r0001-fn5" type="footnote"/> that
+    <tei:persName>Hertzka</tei:persName> has, astonishingly, said "Yes," with thanks for having
     taken the initiative, etc. In this very same postcard, <tei:persName>Vrieslander</tei:persName>
     inquires after <tei:hi rend="underline">your</tei:hi> address, which I am of course sending to
-    him today.<tei:ptr target="#r0001-fn6" type="footnote"/> He will thus be approaching you yourself for a
-    contribution, but this need not prevent you from making up your own mind <tei:hi
+    him today.<tei:ptr target="#r0001-fn6" type="footnote"/> He will thus be approaching you
+    yourself for a contribution, but this need not prevent you from making up your own mind <tei:hi
      rend="underline">solely</tei:hi> on the basis of your current <tei:hi rend="underline"
      >commitments</tei:hi>. Since the matter has ensued behind my back, it is not my place to
     pronounce a verdict on it, which can only take the form of due recognition of the effort that
-    has been made on my behalf.<tei:ptr target="#r0001-fn7" type="footnote"/> Between you and me, though, let me
-    say: <tei:persName>Hertzka</tei:persName> would do better to throw the publishing house's money
-    at <tei:rs type="work">
+    has been made on my behalf.<tei:ptr target="#r0001-fn7" type="footnote"/> Between you and me,
+    though, let me say: <tei:persName>Hertzka</tei:persName> would do better to throw the publishing
+    house's money at <tei:rs type="work">
      <tei:title level="m">Op. 101</tei:title>
-    </tei:rs><tei:ptr target="#r0001-fn8" type="footnote"/> to the <tei:hi rend="underline">greater glory of
-      <tei:persName>Beethoven</tei:persName></tei:hi>, and everybody would without question be
-    better served by that -- me too. So just say a quick "No" if that is your inclination.<tei:ptr
-     target="#r0001-fn9" type="footnote"/> And so, now on to your letter.</tei:p>
+    </tei:rs><tei:ptr target="#r0001-fn8" type="footnote"/> to the <tei:hi rend="underline">greater
+     glory of <tei:persName>Beethoven</tei:persName></tei:hi>, and everybody would without question
+    be better served by that -- me too. So just say a quick "No" if that is your
+     inclination.<tei:ptr target="#r0001-fn9" type="footnote"/> And so, now on to your letter.</tei:p>
 
    <tei:p>Not only do I want to maintain my composure while writing, but from the outset I will
     expressly <tei:pb n="2"/> ask you to show <tei:hi rend="underline">me</tei:hi>, <tei:hi
      rend="underline">too</tei:hi>, the "the trust, sympathy, and understanding"<tei:ptr
-      target="#r0001-fn10" type="footnote"/> that I myself, by your own witness, showed <tei:add
+     target="#r0001-fn10" type="footnote"/> that I myself, by your own witness, showed <tei:add
      place="interlinearabove">you</tei:add> without your having first asked it of me.</tei:p>
 
    <tei:p>Likewise, I ask you to grant me the right to the "self-esteem"<tei:ptr
-    target="#r0001-fn11" type="footnote"/> that you invoke for yourself.</tei:p>
+     target="#r0001-fn11" type="footnote"/> that you invoke for yourself.</tei:p>
 
    <tei:p>And so that you may read with composure, I will place the <tei:hi rend="underline"
     >outcome</tei:hi> right up front, in the spirit of friendship, and say: you and your
@@ -423,17 +429,17 @@
      n="3"/> previous time) -- I spoke about it very often to your
     <tei:persName>wife</tei:persName><!-- profile: Valerie Violin --> also, and what's more, under
      <tei:supplied reason="clarity">the date</tei:supplied> November 21 you write:<tei:ptr
-      target="#r0001-fn12" type="footnote"/> "To speak so frankly and openly is something that one can really only do
-    face to face" -- that it is hard for me away from the front line to write to you or others in
-    the field since I cannot come with Boldrio,<tei:ptr target="#r0001-fn13" type="footnote"/> I must be silent
-    about the professional troubles of the two of you <tei:supplied reason="clarity"
-    >and</tei:supplied> must better suppress my joy (joys need to be shared, not just read), etc. 2)
-    that your wife was so kind as to bring the bag to us in the coffee-house was less of a
-    spontaneous act than you evidently suppose; it relates to a letter from me<tei:ptr
-     target="#r0001-fn14" type="footnote"/> in which I explained the reasons why we feared we could not come out at
-    that time. 3) I am pleased to see from your letter that you do not for a moment suspect that, in
-    using the name Glatt<tei:supplied reason="abbreviation">auer</tei:supplied>, I was referring to
-    your relationship to me.</tei:p>
+     target="#r0001-fn12" type="footnote"/> "To speak so frankly and openly is something that one
+    can really only do face to face" -- that it is hard for me away from the front line to write to
+    you or others in the field since I cannot come with Boldrio,<tei:ptr target="#r0001-fn13"
+     type="footnote"/> I must be silent about the professional troubles of the two of you
+     <tei:supplied reason="clarity">and</tei:supplied> must better suppress my joy (joys need to be
+    shared, not just read), etc. 2) that your wife was so kind as to bring the bag to us in the
+    coffee-house was less of a spontaneous act than you evidently suppose; it relates to a letter
+    from me<tei:ptr target="#r0001-fn14" type="footnote"/> in which I explained the reasons why we
+    feared we could not come out at that time. 3) I am pleased to see from your letter that you do
+    not for a moment suspect that, in using the name Glatt<tei:supplied reason="abbreviation"
+    >auer</tei:supplied>, I was referring to your relationship to me.</tei:p>
 
    <tei:p>But what sense would there have been in criticizing your relationship <tei:hi
      rend="underline">to others</tei:hi> under this epithet? Could such a thing constitute the
@@ -493,31 +499,33 @@
     the precedence of <tei:persName>Mrs. Hauser</tei:persName> or that other
     <tei:persName>lady</tei:persName><!-- Frau Popper: no profile yet --> to whom your
      <tei:persName>wife</tei:persName><!-- profile: Valerie Violin --> is obligated -- it is just as
-    I say, and no posturing --, but <tei:hi rend="underline">you yourself</tei:hi>, who on November 21
-    offered the jam <tei:hi rend="underline">spontaneously</tei:hi>, completely out of the blue, know
-    it full well. Then I hear from the two of you about 150-170 kilograms, and you yourself <tei:hi
-     rend="underline">twice</tei:hi> to my face <tei:hi rend="underline">most emphatically</tei:hi>
-    promise me the jam, what's more a <tei:hi rend="underline">direct</tei:hi> delivery at <tei:hi
-     rend="italic">your</tei:hi> suggestion. And now I ask you: is it not disparaging for me,
-    downright improper, when ultimately out of this big opportunity, after your <tei:persName>wife</tei:persName>'s and your
-    promises, all I come away with is <tei:hi rend="underline">one</tei:hi>
-    <tei:hi rend="underline">measly</tei:hi> jar of jam? There was no need for you to say anything at
-    all -- I certainly do not arrogate such rights to myself --, but you did do so (and we do have eyes
-    to see with, ears to hear with,<tei:ptr target="#r0001-fn15" type="footnote"/> as you yourself say), so it was
-    your duty to keep to your word. And then you go and write me a letter in such a tone? Is it time
-    for you to "pay up"? What is it, then?</tei:p>
+    I say, and no posturing --, but <tei:hi rend="underline">you yourself</tei:hi>, who on November
+    21 offered the jam <tei:hi rend="underline">spontaneously</tei:hi>, completely out of the blue,
+    know it full well. Then I hear from the two of you about 150-170 kilograms, and you yourself
+     <tei:hi rend="underline">twice</tei:hi> to my face <tei:hi rend="underline">most
+    emphatically</tei:hi> promise me the jam, what's more a <tei:hi rend="underline">direct</tei:hi>
+    delivery at <tei:hi rend="italic">your</tei:hi> suggestion. And now I ask you: is it not
+    disparaging for me, downright improper, when ultimately out of this big opportunity, after your
+     <tei:persName>wife</tei:persName>'s and your promises, all I come away with is <tei:hi
+     rend="underline">one</tei:hi>
+    <tei:hi rend="underline">measly</tei:hi> jar of jam? There was no need for you to say anything
+    at all -- I certainly do not arrogate such rights to myself --, but you did do so (and we do
+    have eyes to see with, ears to hear with,<tei:ptr target="#r0001-fn15" type="footnote"/> as you
+    yourself say), so it was your duty to keep to your word. And then you go and write me a letter
+    in such a tone? Is it time for you to "pay up"? What is it, then?</tei:p>
 
    <tei:p>The conclusion, thus, is: (see above.) I too must likewise learn to act, and I count on
     forebearance. Let things remain as they were, <tei:pb n="6"/> except that it will make me a
-    little more comfortable as it demands time and <tei:supplied reason="clarity">the right</tei:supplied> conditions. And that you will well
-    appreciate.</tei:p>
+    little more comfortable as it demands time and <tei:supplied reason="clarity">the
+    right</tei:supplied> conditions. And that you will well appreciate.</tei:p>
 
    <tei:p>It goes without saying that I am not prepared to accept any presents whatsoever of this
-    kind in a time such as the present. -- you will surely not violate me with such small items -- all
-    the less since you write: "most were purchased. If <tei:persName>Wally</tei:persName> has many <tei:hi rend="underline"
-    >small</tei:hi> provisions, in her self-denying style of life she has accumulated them during my
-    absence." Unfortunately, I do not know <tei:hi rend="underline">how much</tei:hi> apricot jam there
-    was, or how much the contents of the bag cost -- in exact terms, as we did with <tei:persName>Sophie</tei:persName><!-- profile: Sophie Guttmann -->, too,
+    kind in a time such as the present. -- you will surely not violate me with such small items --
+    all the less since you write: "most were purchased. If <tei:persName>Wally</tei:persName> has
+    many <tei:hi rend="underline">small</tei:hi> provisions, in her self-denying style of life she
+    has accumulated them during my absence." Unfortunately, I do not know <tei:hi rend="underline"
+     >how much</tei:hi> apricot jam there was, or how much the contents of the bag cost -- in exact
+    terms, as we did with <tei:persName>Sophie</tei:persName><!-- profile: Sophie Guttmann -->, too,
     settling matters right away on January 1 -- gave rise to costs. The entire bill will then be
     settled with cordial thanks.</tei:p>
 

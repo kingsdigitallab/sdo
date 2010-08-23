@@ -7,7 +7,7 @@
  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../schema/schenker.xsd">
  <sdo:collectionDesc>
   <sdo:source>
-   <sdo:correspondence sdoID="TEST-SHELFMARK1">[OJ 6/6, [8]</sdo:correspondence>
+   <sdo:correspondence mfID="25" sdoID="OJ-6-6_8">OJ 6/6, [8]</sdo:correspondence>
   </sdo:source>
 
   <tei:handNotes>
@@ -37,10 +37,12 @@
  <sdo:record ID="r0001">
 
   <sdo:itemDesc>
-   <dcterms:isPartOf>ViolinM ~ HSchenker</dcterms:isPartOf><dcterms:isPartOf>ViolinM+V ~ HSchenker</dcterms:isPartOf><dcterms:isPartOf>ViolinM+V+F ~ HSchenker</dcterms:isPartOf>
+   <dcterms:isPartOf>ViolinM ~ HSchenker</dcterms:isPartOf>
+   <dcterms:isPartOf>ViolinM+V ~ HSchenker</dcterms:isPartOf>
+   <dcterms:isPartOf>ViolinM+V+F ~ HSchenker</dcterms:isPartOf>
    <dc:title>Handwritten letter from Schenker to Moriz Violin, dated November 9, 1918</dc:title>
-<dc:type>ZZZZZ</dc:type>
-<dcterms:created>QQQQQ</dcterms:created>
+   <dc:type>Letter</dc:type>
+   <dcterms:created>QQQQQ</dcterms:created>
    <dcterms:dateSubmitted>2009-05-07</dcterms:dateSubmitted>
    <dc:description>Schenker reports news from Russia, Austria, Switzerland, and Poland, and comments
     on the current political situation. </dc:description>
@@ -123,7 +125,7 @@
 
    <tei:closer>
     <tei:salute rend="indent-10">Dir, deiner Frau u. den Kleinen von uns viele </tei:salute>
-     <tei:salute rend="indent-30">Grüße 2 : 4 </tei:salute>
+    <tei:salute rend="indent-30">Grüße 2 : 4 </tei:salute>
     <tei:salute rend="indent-40">dein</tei:salute>
     <tei:signed rend="indent-50">H</tei:signed>
     <tei:date when="1918-11-09">9. XI. 1918</tei:date>
@@ -144,52 +146,58 @@
     <tei:salute><tei:persName>Floriz</tei:persName><!-- profile: Moriz Violin -->, </tei:salute>
    </tei:opener>
 
-   <tei:p>Enclosed<tei:ptr target="#r0001-fn1" type="footnote"/> is the document "under discussion," known as a
-    "purchasing voucher":<tei:ptr target="#r0001-fn2" type="footnote"/> use it as you see fit or, rather, let
-    someone else profit from it. (It says on the slip "valid only to November 9").</tei:p>
+   <tei:p>Enclosed<tei:ptr target="#r0001-fn1" type="footnote"/> is the document "under discussion,"
+    known as a "purchasing voucher":<tei:ptr target="#r0001-fn2" type="footnote"/> use it as you see
+    fit or, rather, let someone else profit from it. (It says on the slip "valid only to November
+    9").</tei:p>
 
-   <tei:p>As I am in the midst <tei:supplied reason="clarity">of reading the news of</tei:supplied> the day, I can report:</tei:p>
+   <tei:p>As I am in the midst <tei:supplied reason="clarity">of reading the news of</tei:supplied>
+    the day, I can report:</tei:p>
 
-   <tei:p>1) In <tei:country>Russia</tei:country>, the workers are already shedding tears, saying things are worse for them now
-    than in times past: "What use is it to them that they own everything, when, etc.?" Naturally,
-    everyone is in exactly the same situation as they were before, and one cannot expect the worker
-    to undertake anything of his own accord, to say nothing of aiming at something even higher,
-    better. The <tei:rs type="title">
+   <tei:p>1) In <tei:country>Russia</tei:country>, the workers are already shedding tears, saying
+    things are worse for them now than in times past: "What use is it to them that they own
+    everything, when, etc.?" Naturally, everyone is in exactly the same situation as they were
+    before, and one cannot expect the worker to undertake anything of his own accord, to say nothing
+    of aiming at something even higher, better. The <tei:rs type="title">
      <tei:title level="j">Arbeiter-Zeitung</tei:title>
     </tei:rs>, which was constantly sending over greetings ("to our brothers," boasted
      <tei:persName>Adler</tei:persName><!-- profile: Viktor Adler --> and
     <tei:persName>Renner</tei:persName><!-- profile: Karl Renner -->, remains silent about the
     catastrophe. . . .<tei:ptr target="#r0001-fn3" type="footnote"/></tei:p>
 
-   <tei:p>2) In <tei:country>Austria</tei:country>, everything is going downhill through sheer "self-penance" -- a genuinely
-    American piece of dynamite.</tei:p>
+   <tei:p>2) In <tei:country>Austria</tei:country>, everything is going downhill through sheer
+    "self-penance" -- a genuinely American piece of dynamite.</tei:p>
 
-   <tei:p>3) In <tei:country>Switzerland</tei:country>, people are already shedding tears now: <tei:country>America</tei:country> has drawn up blacklists
-    and <tei:hi rend="double-underline">compels</tei:hi>
+   <tei:p>3) In <tei:country>Switzerland</tei:country>, people are already shedding tears now:
+     <tei:country>America</tei:country> has drawn up blacklists and <tei:hi rend="double-underline"
+     >compels</tei:hi>
     <tei:supplied reason="clarity">others</tei:supplied> to trade. People there used to be in favor
-    the Entente<tei:ptr target="#r0001-fn4" type="footnote"/> (it struck the right note with them), and feared a
-    German victory. <tei:hi rend="italic">Now they regret</tei:hi> this attitude of yesterday,
-    because <tei:country>Germany</tei:country> always remained competitive, and did so by bearing the dangers and taking the
-    rists, not by using force -- apart from manufacturing things more cheaply!</tei:p>
+    the Entente<tei:ptr target="#r0001-fn4" type="footnote"/> (it struck the right note with them),
+    and feared a German victory. <tei:hi rend="italic">Now they regret</tei:hi> this attitude of
+    yesterday, because <tei:country>Germany</tei:country> always remained competitive, and did so by
+    bearing the dangers and taking the rists, not by using force -- apart from manufacturing things
+    more cheaply!</tei:p>
 
-   <tei:p><tei:pb n="2"/> 4) <tei:country>Poland</tei:country> has set itself up<tei:ptr target="#r0001-fn5" type="footnote"/> in baseness
-    "independently" -- freed from what? Bah! from its ancestors, etc. Soon they, too,
-    <tei:add place="interlinear-above">will</tei:add> shed tears, along with the
-    Hungarians ("own army," "freed from <tei:country>Austria</tei:country>," etc); and a European slave market driven by
-    <tei:country>America</tei:country> (<tei:persName>Wilson's wife</tei:persName><!-- profile: Edith Bolling Gat Wilson -->
-    owned a pawnshop) will be established, open up and only <tei:country>Germany</tei:country> will keep its head because
-    anyone who has a head cannot lose it!</tei:p>
+   <tei:p><tei:pb n="2"/> 4) <tei:country>Poland</tei:country> has set itself up<tei:ptr
+     target="#r0001-fn5" type="footnote"/> in baseness "independently" -- freed from what? Bah! from
+    its ancestors, etc. Soon they, too, <tei:add place="interlinear-above">will</tei:add> shed
+    tears, along with the Hungarians ("own army," "freed from <tei:country>Austria</tei:country>,"
+    etc); and a European slave market driven by <tei:country>America</tei:country>
+     (<tei:persName>Wilson's wife</tei:persName><!-- profile: Edith Bolling Gat Wilson --> owned a
+    pawnshop) will be established, open up and only <tei:country>Germany</tei:country> will keep its
+    head because anyone who has a head cannot lose it!</tei:p>
 
-   <tei:p>A great opportunity was missed, to appoint <tei:country>Germany</tei:country> as protector of Europe and the world!</tei:p>
+   <tei:p>A great opportunity was missed, to appoint <tei:country>Germany</tei:country> as protector
+    of Europe and the world!</tei:p>
 
    <tei:p>Soon, however, people will pay fantastic prices for a <tei:supplied reason="clarity"
-    >German</tei:supplied> Emperor, indeed, for a Junker.<tei:ptr target="#r0001-fn6" type="footnote"/> To me, the
-    worst Emperor and Junker is preferable to the eternally half-witted people, which only destroys
-    itself and others!</tei:p>
+     >German</tei:supplied> Emperor, indeed, for a Junker.<tei:ptr target="#r0001-fn6"
+     type="footnote"/> To me, the worst Emperor and Junker is preferable to the eternally
+    half-witted people, which only destroys itself and others!</tei:p>
 
    <tei:closer>
-    <tei:salute rend="indent-10">From us to you, your wife, and the children, </tei:salute> 
-    <tei:salute rend="indent-30">Best wishes  2:4 </tei:salute>
+    <tei:salute rend="indent-10">From us to you, your wife, and the children, </tei:salute>
+    <tei:salute rend="indent-30">Best wishes 2:4 </tei:salute>
     <tei:salute rend="indent-40">Your </tei:salute>
     <tei:signed rend="indent-50">H</tei:signed>
     <tei:date when="1918-11-09">November 9, 1918</tei:date>
