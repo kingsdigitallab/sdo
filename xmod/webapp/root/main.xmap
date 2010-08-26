@@ -103,6 +103,19 @@
         <map:serialize type="xhtml"/>
       </map:match>
 
+      <map:match pattern="documents/correspondence/index.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.xml"/>
+          <map:part src="cocoon:/internal/documents/indices.xml"/>
+        </map:aggregate>
+        <map:transform src="stylesheets/local/documents/correspondence-index-to-html.xsl">
+          <map:parameter name="filedir" value="documents/correspondence"/>
+          <map:parameter name="filename" value="correspondence"/>
+          <map:parameter name="fileextension" value="html"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+      
       <map:match pattern="profiles/*/index.html">
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
@@ -146,6 +159,24 @@
     </map:pipeline>
 
     <map:pipeline internal-only="false">
+      <map:match pattern="internal/documents/indices.xml">
+        <map:generate src="xml/content/documents" type="directory">
+          <map:parameter name="depth" value="2"/>
+          <map:parameter name="exclude" value="\.svn"/>
+        </map:generate>
+        <map:transform src="stylesheets/local/documents/generate-indices.xsl"/>
+        <map:transform type="xinclude"/>
+        <map:serialize type="xml"/>
+      </map:match>
+      
+      <map:match pattern="internal/documents/index-entry/correspondence/*.xml">
+        <map:generate src="xml/content/documents/correspondence/{1}.xml"/>
+        <map:transform src="stylesheets/local/documents/generate-index-entry.xsl">
+          <map:parameter name="filename" value="{1}.html"/>
+        </map:transform>
+        <map:serialize type="xml"/>
+      </map:match>
+      
       <map:match pattern="internal/profiles/indices.xml">
         <map:generate src="xml/content/profiles" type="directory">
           <map:parameter name="depth" value="2"/>

@@ -11,11 +11,11 @@
   <xsl:param name="filename"/>
   <xsl:param name="fileextension"/>
 
-  <xsl:variable name="xmg:title" select="concat(upper-case(substring($filename, 1, 1)), substring($filename, 2), ' Index')"/>
+  <xsl:variable name="xmg:title"><xsl:text>Mary Poppins moves confidently in the City</xsl:text></xsl:variable>
   <xsl:variable name="root" select="/"/>
 
-  <xsl:key name="alpha-profiles" match="/*/indices/index[@name=$filename]/entry"
-           use="upper-case(substring(@sortkey, 1, 1))"/>
+  <xsl:key name="alpha-tags" match="/*/indices/index[@name=$filename]/entry"
+           use="upper-case(substring(@tag1, 1, 1))"/>
 
   <xsl:template name="xms:content">
     <xsl:variable name="alphabet" as="xs:string"
@@ -27,7 +27,7 @@
             <xsl:for-each select="tokenize($alphabet, ',')">
               <li>
                 <xsl:choose>
-                  <xsl:when test="key('alpha-profiles', ., $root)">
+                  <xsl:when test="key('alpha-tags', ., $root)">
                     <a href="#{.}">
                       <xsl:value-of select="."/>
                     </a>
@@ -44,19 +44,19 @@
         </div>
       </div>
 
-      <xsl:for-each-group select="/*/indices/index[@name=$filename]/entry"
-                          group-by="substring(@sortkey, 1, 1)">
-        <xsl:sort select="@sortkey"/>
+      <xsl:for-each-group select="distinct-values(/*/indices/index[@name=$filename]/entry/@tag1)"
+                          group-by="substring(., 1, 1)">
+        <xsl:sort select="."/>
         <h3>
           <a name="{upper-case(substring(current-grouping-key(), 1))}"/>
           <xsl:value-of select="upper-case(substring(current-grouping-key(), 1))"/>
         </h3>
         <ul>
           <xsl:for-each select="current-group()">
-            <xsl:sort select="@sortkey"/>
+            <xsl:sort select="."/>
             <li>
-              <a href="{@filename}" title="{@title}">
-                <xsl:value-of select="@filing_title"/>
+              <a href="{replace(., '\s', '_')}">
+                <xsl:value-of select="."/>
               </a>
             </li>
           </xsl:for-each>

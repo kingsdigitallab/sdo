@@ -17,7 +17,7 @@
 
   <xsl:template match="dir:file">
     <xsl:variable name="index" select="ancestor::dir:directory[1]/@name"/>
-    <xi:include href="cocoon://internal/profiles/index-entry/{$index}/{@name}"/>
+    <xi:include href="cocoon://internal/documents/index-entry/{$index}/{@name}"/>
   </xsl:template>
 
 </xsl:stylesheet>

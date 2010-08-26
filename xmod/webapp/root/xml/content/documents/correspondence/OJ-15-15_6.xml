@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="../../../css/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="27" sdoID="OJ-15-15_6">OJ 15/15, [6]</sdo:correspondence>
+  </sdo:source>
+
+
+  <tei:handNotes>
+   <tei:handNote xml:id="HW" scope="sole">Hans Weisse's hand</tei:handNote>
+   <tei:handNote xml:id="stamp">stamp</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="WD">
+   <tei:persName>William Drabkin</tei:persName>
+   <tei:resp>Transcription, 2008</tei:resp>
+   <tei:resp>Translation, 2008</tei:resp>
+  </tei:respStmt>
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>XML Encoding</tei:resp>
+  </tei:respStmt>
+  <tei:respStmt xml:id="BOT">
+   <tei:name>Automated Script</tei:name>
+   <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+  </tei:respStmt>
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2010-02-16" who="#IB">XML code revised</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <dcterms:isPartOf>Weisse ~ H+JSchenker</dcterms:isPartOf>
+   <dcterms:isPartOf>Weisse ~ HSchenker</dcterms:isPartOf>
+   <dc:title>Handwritten postcard from Weisse to Schenker, dated May 27, 1918</dc:title>
+   <dc:type>Postcard</dc:type>
+   <dcterms:created>QQQQQ</dcterms:created>
+   <dcterms:dateSubmitted>2009-03-13</dcterms:dateSubmitted>
+   <dc:description>Weisse, on three-month leave (June-August 1918) to finish work towards his
+    doctoral degree, asks Schenker for tuition in counterpoint and thoroughbass. </dc:description>
+   <dc:subject>furlough; leave; doctorate; lessons; Kontrapunkt; counterpoint; Generalbass;
+    thoroughbass</dc:subject>
+   <!-- Add the EATS key attribute value to indicate the sender of the letter -->
+   <marcrel:correspondent key="EATS_nNNNNNN">Hans Weisse</marcrel:correspondent>
+   <!-- Add the key attribute to indicate the recipient of the letter -->
+   <marcrel:recipient key="EATS_nNNNNNN">Heinrich Schenker</marcrel:recipient>
+  </sdo:itemDesc>
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/>
+
+    <tei:note type="editorial">printed:</tei:note>
+    <tei:lb/>
+    <tei:fw type="header" place="center">Feldpostkarte</tei:fw>
+    <tei:handShift new="#stamp"/>
+    <tei:fw type="header" place="center">K.u.k. Kmdo d.Telg.Offiziers Feldpostkurses</tei:fw>
+
+    <tei:address>
+     <tei:addrLine>Absender: <tei:handShift new="#HW"/>Weisse lt. Fp 354</tei:addrLine>
+    </tei:address>
+
+    <tei:address>
+     <tei:addrLine><tei:supplied reason="clarity">An: </tei:supplied>Herrn Dr. Heinrich Schenker </tei:addrLine>
+     <tei:addrLine>Wien III </tei:addrLine>
+     <tei:addrLine>Reisnerstraße 38 </tei:addrLine>
+    </tei:address>
+
+    <tei:fw type="postmark">|| TABORI POSTAHIVATAI | 918 MAJ 28. | * 354 * || </tei:fw>
+
+    <tei:milestone unit="folio" n="verso"/>
+
+    <tei:dateline>
+     <tei:date when="1918-05-27">27/5 18</tei:date>
+    </tei:dateline>
+
+    <tei:salute><tei:persName>Lieber Meister</tei:persName><!-- Heinrich Schenker -->! </tei:salute>
+   </tei:opener>
+
+   <tei:p>Ich<tei:note xml:id="r0001-fn1" type="editorial" place="foot"> Receipt of this postcard is
+     recorded in Schenker's diary at OJ 2/10, p. 896, May 30, 1918: "Von Weisse (K.): komme im Juni
+     zu Urlaub, mochte Stunden nehmen." ("From Weisse (postcard): coming in June on vacation, would
+     like to take lessons. "). <!-- XR --></tei:note> habe nun einen 3 monatigen Kundenurlaub zur
+    Vorbereitung für mein Doktorat bekommen und frage bescheiden bei Ihnen an, ob ich im Monat Juni
+    regelmäßig Stunden nehmen könnte, um Kontrapunkt und Gen-Baß zu wiederholen. Ich stehe Ihrer
+    Antwort in <tei:placeName>Wien</tei:placeName> entgegen, wo ich am 1. Juni eintreffe.</tei:p>
+
+   <tei:closer>
+    <tei:salute>Alles Herzliche ungarischen Ihr getreuer</tei:salute>
+    <tei:signed rend="indent-50">Hans.</tei:signed>
+   </tei:closer>
+
+  </tei:div>
+
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/>
+
+    <tei:note type="editorial">printed:</tei:note>
+    <tei:lb/>
+    <tei:fw type="header" place="center">Fieldpostcard</tei:fw>
+    <tei:handShift new="#stamp"/>
+    <tei:fw type="header" place="center">Imperial-Royal Commando of the Telegraph Officer Course</tei:fw>
+
+    <tei:address>
+     <tei:addrLine>From: <tei:handShift new="#HW"/>Lieutenant Weisse Fp 354</tei:addrLine>
+    </tei:address>
+
+    <tei:address>
+     <tei:addrLine><tei:supplied reason="clarity">To: </tei:supplied>Dr. Heinrich Schenker, </tei:addrLine>
+     <tei:addrLine>Vienna III, </tei:addrLine>
+     <tei:addrLine>Reisnerstraße 38 </tei:addrLine>
+    </tei:address>
+
+    <tei:fw type="postmark">|| TABORI POSTAHIVATAI | 918 MAY 28. | * 354 * || </tei:fw>
+
+    <tei:milestone unit="folio" n="verso"/>
+
+    <tei:dateline>
+     <tei:date when="1918-05-27">May 27, 1918 </tei:date>
+    </tei:dateline>
+
+    <tei:salute>Dear <tei:persName>master</tei:persName><!-- Heinrich Schenker -->, </tei:salute>
+   </tei:opener>
+
+   <tei:p>I<tei:ptr target="#r0001-fn1" type="footnote"/> have just received a three-month furlough,
+    to prepare for my doctoral degree, and I ask you modestly whether, in the month of June, I might
+    have regular lessons with you in order to review counterpoint and thoroughbass. I await your
+    answer.</tei:p>
+
+   <tei:closer>
+    <tei:salute>With most cordial greetings in the Hungarian style, Your faithful </tei:salute>
+    <tei:signed rend="indent-50">Hans</tei:signed>
+   </tei:closer>
+
+  </tei:div>
+ </sdo:record>
+</sdo:recordCollection>
