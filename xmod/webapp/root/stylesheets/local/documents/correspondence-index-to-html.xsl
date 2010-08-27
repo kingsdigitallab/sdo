@@ -11,11 +11,11 @@
   <xsl:param name="filename"/>
   <xsl:param name="fileextension"/>
 
-  <xsl:variable name="xmg:title"><xsl:text>Mary Poppins moves confidently in the City</xsl:text></xsl:variable>
+  <xsl:variable name="xmg:title"><xsl:text>Browse Correspondence By Name</xsl:text></xsl:variable>
   <xsl:variable name="root" select="/"/>
 
-  <xsl:key name="alpha-tags" match="/*/indices/index[@name=$filename]/entry"
-           use="upper-case(substring(@tag1, 1, 1))"/>
+  <xsl:key name="alpha-tags" match="/*/indices/index[@name=$filename]/entry/tag"
+           use="upper-case(substring(., 1, 1))"/>
 
   <xsl:template name="xms:content">
     <xsl:variable name="alphabet" as="xs:string"
@@ -44,7 +44,7 @@
         </div>
       </div>
 
-      <xsl:for-each-group select="distinct-values(/*/indices/index[@name=$filename]/entry/@tag1)"
+      <xsl:for-each-group select="distinct-values(/*/indices/index[@name=$filename]/entry/tag)"
                           group-by="substring(., 1, 1)">
         <xsl:sort select="."/>
         <h3>
@@ -55,7 +55,7 @@
           <xsl:for-each select="current-group()">
             <xsl:sort select="."/>
             <li>
-              <a href="{replace(., '\s', '_')}">
+              <a href="{concat(replace(., '\s', '_'), '.html')}">
                 <xsl:value-of select="."/>
               </a>
             </li>

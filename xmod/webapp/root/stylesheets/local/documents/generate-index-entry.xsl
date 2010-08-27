@@ -7,8 +7,13 @@
     <xsl:template match="/">
         <entry xml:id="{sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]/@sdoID}"
             filename="{$filename}"
-            tag1="{sdo:recordCollection/sdo:record/sdo:itemDesc/dcterms:isPartOf[1]}"
-            date="{sdo:recordCollection/sdo:record/sdo:itemDesc/dcterms:created}"/>
+            date="{sdo:recordCollection/sdo:record/sdo:itemDesc/dcterms:created}">
+            <xsl:for-each select="sdo:recordCollection/sdo:record/sdo:itemDesc/dcterms:isPartOf">
+                <tag>
+                    <xsl:value-of select="."/>
+                </tag>
+            </xsl:for-each>
+        </entry>
     </xsl:template>
 
 </xsl:stylesheet>
