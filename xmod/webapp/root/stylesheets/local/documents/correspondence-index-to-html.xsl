@@ -14,13 +14,13 @@
   <xsl:variable name="xmg:title"><xsl:text>Browse Correspondence By Name</xsl:text></xsl:variable>
   <xsl:variable name="root" select="/"/>
 
-  <xsl:key name="alpha-tags" match="/*/indices/index[@name=$filename]/entry/tag"
+  <xsl:key name="alpha-tags" match="/*/indices/index[@name='correspondence']/entry/tag"
            use="upper-case(substring(., 1, 1))"/>
 
   <xsl:template name="xms:content">
     <xsl:variable name="alphabet" as="xs:string"
                   select="'A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z'"/>
-    <xsl:if test="/*/indices/index[@name=$filename]/entry">
+    <xsl:if test="/*/indices/index[@name='correspondence']/entry">
       <div class="alphaNav">
         <div class="t01">
           <ul>
@@ -44,7 +44,7 @@
         </div>
       </div>
 
-      <xsl:for-each-group select="distinct-values(/*/indices/index[@name=$filename]/entry/tag)"
+      <xsl:for-each-group select="distinct-values(/*/indices/index[@name='correspondence']/entry/tag)"
                           group-by="substring(., 1, 1)">
         <xsl:sort select="."/>
         <h3>
@@ -55,7 +55,7 @@
           <xsl:for-each select="current-group()">
             <xsl:sort select="."/>
             <li>
-              <a href="{concat(replace(., '\s', '_'), '.html')}">
+              <a href="{concat(replace(., '\s', '_'), '.tag.html')}">
                 <xsl:value-of select="."/>
               </a>
             </li>

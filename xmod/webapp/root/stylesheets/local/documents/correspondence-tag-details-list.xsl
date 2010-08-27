@@ -1,5 +1,6 @@
 <xsl:stylesheet version="2.0" xmlns:xmg="http://www.cch.kcl.ac.uk/xmod/global/1.0"
     xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
     <xsl:import href="../default.xsl"/>
@@ -23,7 +24,7 @@
             
             <xsl:for-each select="/*/indices/index[@name=$filename]/entry[child::tag = $expanded_tag]">
                 <xsl:sort select="@date"/>
-                <xi:include href="cocoon://internal/tag/correspondence/FILENAME.html"/>
+                <xi:include href="cocoon://internal/tag/correspondence/{$tag}.html"/>
             </xsl:for-each>
         </ul>
     </xsl:template>
