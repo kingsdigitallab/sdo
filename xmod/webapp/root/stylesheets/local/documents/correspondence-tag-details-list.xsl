@@ -7,10 +7,7 @@
 
     <xsl:param name="menutop" select="'true'"/>
 
-    <xsl:param name="tag"/>
-    <xsl:param name="filedir"/>
-    <xsl:param name="filename"/>
-    <xsl:param name="fileextension"/>
+    <xsl:param name="tag"/><!-- passed in single-string form, eg. Cotta_~_HSchenker, so we expand it below -->
 
     <xsl:variable name="xmg:title">
         <xsl:text>Browse Correspondence By Name</xsl:text>
@@ -22,9 +19,10 @@
         <h2><xsl:value-of select="$expanded_tag"></xsl:value-of></h2>
         <ul>
             
-            <xsl:for-each select="/*/indices/index[@name=$filename]/entry[child::tag = $expanded_tag]">
+            <xsl:for-each select="/*/indices/index[@name='correspondence']/entry[child::tag = $expanded_tag]">
+                <xsl:variable name="XMLFile" select="@xml:id"/>
                 <xsl:sort select="@date"/>
-                <xi:include href="cocoon://internal/tag/correspondence/{$tag}.html"/>
+                <xi:include href="cocoon://internal/tag/correspondence/{$XMLFile}.html"/>
             </xsl:for-each>
         </ul>
     </xsl:template>

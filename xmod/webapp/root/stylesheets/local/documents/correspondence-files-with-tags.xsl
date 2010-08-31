@@ -7,11 +7,11 @@
     <xsl:template match="/">
         <li>
             <h2>
-                <xsl:value-of
+                <a href="{$filename}.html"><xsl:value-of
                     select="sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]"/>
                 <xsl:text> : </xsl:text>
                 <xsl:value-of select="sdo:recordCollection/sdo:record/sdo:itemDesc/dcterms:created"
-                />
+                /></a>
             </h2>
             <p>
                 <xsl:value-of select="sdo:recordCollection/sdo:record/sdo:itemDesc/dc:title"/>
