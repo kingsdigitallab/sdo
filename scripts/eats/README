@@ -1,0 +1,15 @@
+Entity Management in SDO
+
+All of the entities stored in EATS, with only sufficient information
+to disambiguate. Additional profile information is kept in XML files,
+named according to their EATS authority record ID. Information about
+the references to this entity in the collection is stored in a Solr
+index.
+
+When a request is made for an entity page, the information from these
+three sources is merged. The EATS information is not retrieved from
+EATS on each request, however. Instead it is taken from an index file
+(necessary for the profile indices) that is cached for a goodly
+time. This index is a transformed EATSML dump.
+
+
