@@ -1,5 +1,6 @@
 <xsl:stylesheet version="2.0"
                 xmlns:tei="http://www.tei-c.org/ns/1.0"
+                xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:template match="tei:lb">
@@ -64,6 +65,22 @@
         </em>
       </xsl:otherwise>  
     </xsl:choose>
+  </xsl:template>
+  
+  <xsl:template match="tei:note | tei:ptr[@type='footnote']">
+    <sup>
+      <a class="fnLink">
+        <xsl:attribute name="href">
+          <xsl:text>#fn</xsl:text>
+          <xsl:number format="01" from="sdo:recordCollection" level="any"/>
+        </xsl:attribute>
+        <xsl:attribute name="id">
+          <xsl:text>fnLink</xsl:text>
+          <xsl:number format="01" from="sdo:recordCollection" level="any"/>
+        </xsl:attribute>
+        <xsl:number from="sdo:recordCollection" level="any"/>
+      </a>
+    </sup>
   </xsl:template>
 
 </xsl:stylesheet>
