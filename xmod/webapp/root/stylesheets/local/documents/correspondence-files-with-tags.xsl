@@ -10,7 +10,7 @@
                 <a href="{$filename}.html"><xsl:value-of
                     select="sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]"/>
                 <xsl:text> : </xsl:text>
-                <xsl:value-of select="sdo:recordCollection/sdo:record/sdo:itemDesc/dcterms:created"
+                <xsl:value-of select="substring(sdo:recordCollection/sdo:record/sdo:itemDesc/dcterms:created, 1, 10)"
                 /></a>
             </h2>
             <p>

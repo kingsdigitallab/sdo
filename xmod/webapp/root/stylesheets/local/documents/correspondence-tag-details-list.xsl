@@ -2,6 +2,19 @@
     xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0"
     xmlns:xi="http://www.w3.org/2001/XInclude"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    
+    <!-- This stylesheet displays a list of the correspondence items under one tag, sorted chronologically.
+         eg.  Cotta ~ HSchenker
+    
+                   OJ 9/32, [37]: 1918-09-01
+                   Printed and handwritten letter from Cotta to Schenker, dated September 1, 1918
+                   Payment advice note for sales 1917.
+
+                   OJ 12/62, [2] : 1919-09-01T12:00:00
+                   Stenographically handwritten letter from Cotta to Schenker, dated September 1, 1919
+                   [NMTP I and II/1:] Cotta encloses sales report for 1918 and a check for M. 346.92.
+
+    -->
 
     <xsl:import href="../default.xsl"/>
 
