@@ -10,11 +10,10 @@ import sys
 
 from lxml import etree
 
-
 from eatsml.dispatcher import Dispatcher
 
 
-SERVER_URL = 'http://localhost/eats/'
+SERVER_URL = 'http://localhost:8000/'
 USERNAME = 'jamie'
 PASSWORD = 'password'
 
@@ -65,13 +64,11 @@ def process_profile (dispatcher, filename, eats_data, entity_type):
     profile_data = {
         'entity_type': eats_data['entity_types'][entity_type],
         'display_form': '', 'terms of address': '', 'given': '',
-        'family': '', 'language': eats_data['languages'].values()[0],
-        'script': eats_data['scripts'].values()[0],
+        'family': '', 'language': eats_data['languages']['German'],
+        'script': eats_data['scripts']['Latin'],
         }
     name = GET_PROFILE_NAME(profile)[0].text
     name = MULTIPLE_WHITESPACE.sub(' ', name)
-    print name
-    name = name.encode('utf-8')
     if entity_type == 'person':
         try:
             profile_data['family'], profile_data['given'] = name.split(', ')
@@ -105,13 +102,12 @@ def process_profile (dispatcher, filename, eats_data, entity_type):
         message_name = ' '.join([profile_data['given'],
                                  profile_data['family']]).strip()
     message = 'Created new entity "%s" from lookup.' % message_name
-    print etree.tostring(doc)
-    url = dispatcher.import_document(doc, message)
+    url = dispatcher.import_document(doc, message.encode('utf-8'))
     eatsml = dispatcher.get_processed_import(url)
     entity = eatsml.get_entities()[0]
     keys = [record.system_id for record in entity.get_default_authority_records()]
     # Save the profile with a filename of its key.
-    new_filename = join(dirname(filename), keys[0])
+    new_filename = join(dirname(filename), keys[0]) + '.xml'
     new_file = open(new_filename, 'w')
     profile.write(new_file, encoding='utf-8', pretty_print=True, xml_declaration=True)
     new_file.close()
