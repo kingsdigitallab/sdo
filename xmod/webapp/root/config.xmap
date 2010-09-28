@@ -20,7 +20,10 @@
 
   <map:pipelines>
     <map:component-configurations>
-      <global-variables />
+      <global-variables>
+        <!-- SOLR TEST -->
+        <solr>http://localhost:8080/solr-SDO/select/</solr>
+      </global-variables>
     </map:component-configurations>
 
     <!-- Mount sub-sitemaps. -->
