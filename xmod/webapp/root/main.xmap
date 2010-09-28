@@ -107,7 +107,7 @@
       <map:match pattern="documents/correspondence/index.html">
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
-          <map:part src="cocoon:/internal/documents/indices.xml"/>
+          <map:part src="{global:solr}?q=tag%3A*&amp;rows=5000&amp;fl=tag&amp;indent=on"/>
         </map:aggregate>
         <map:transform src="stylesheets/local/documents/correspondence-index-to-html.xsl">
           <map:parameter name="filedir" value="documents/correspondence"/>
@@ -116,27 +116,18 @@
         </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
-
+      
       <map:match pattern="documents/correspondence/*.tag.html">
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
-          <map:part src="cocoon:/internal/documents/indices.xml"/>
+          <map:part src="{global:solr}?q=tag%3A{1}&amp;rows=5000&amp;fl=tag,id,date,title,description,shelfmark&amp;indent=on"/>
         </map:aggregate>
         <map:transform src="stylesheets/local/documents/correspondence-tag-details-list.xsl">
           <map:parameter name="tag" value="{1}"/>
         </map:transform>
-        <map:transform type="xinclude"/>
         <map:serialize type="xhtml"/>
       </map:match>
-
-      <map:match pattern="internal/tag/correspondence/*.html">
-        <map:generate src="xml/content/documents/correspondence/{1}.xml"/>
-        <map:transform src="stylesheets/local/documents/correspondence-files-with-tags.xsl">
-          <map:parameter name="filename" value="{1}"/>
-        </map:transform>
-        <map:serialize type="xhtml"/>
-      </map:match>
-
+          
       <map:match pattern="documents/correspondence/*.html">
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
