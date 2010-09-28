@@ -20,22 +20,35 @@
 
     <xsl:param name="menutop" select="'true'"/>
 
-    <xsl:param name="tag"/><!-- passed in single-string form, eg. Cotta_~_HSchenker, so we expand it below -->
+    <xsl:param name="tag"/><!-- passed in single-string form, eg. Cotta_HSchenker, so we expand it below -->
 
     <xsl:variable name="xmg:title">
         <xsl:text>Browse Correspondence By Name</xsl:text>
     </xsl:variable>
     <xsl:variable name="root" select="/"/>
-    <xsl:variable name="expanded_tag" select="replace($tag, '_', ' ')"/>
+    <xsl:variable name="expanded_tag" select="replace($tag, '_', ' ~ ')"/>
 
     <xsl:template name="xms:content">
         <h2><xsl:value-of select="$expanded_tag"></xsl:value-of></h2>
         <ul>
             
-            <xsl:for-each select="/*/indices/index[@name='correspondence']/entry[child::tag = $expanded_tag]">
-                <xsl:variable name="XMLFile" select="@xml:id"/>
-                <xsl:sort select="@date"/>
-                <xi:include href="cocoon://internal/tag/correspondence/{$XMLFile}.html"/>
+            <xsl:for-each select="//doc">
+                <xsl:sort select="child::arr[@name='date']/child::str[1]"/>
+                <xsl:variable name="filename" select="child::str[@name='id']"/>
+                <li>
+                    <h2>
+                        <a href="{$filename}.html"><xsl:value-of
+                            select="child::str[@name='shelfmark']"/>
+                            <xsl:text> : </xsl:text>
+                            <xsl:value-of select="child::arr[@name='date']/child::str[1]"
+                            /></a>
+                    </h2>
+                    <p>
+                        <xsl:value-of select="child::str[@name='title']"/>
+                        <br/>
+                        <xsl:value-of select="child::str[@name='description']"/>
+                    </p>
+                </li>
             </xsl:for-each>
         </ul>
     </xsl:template>

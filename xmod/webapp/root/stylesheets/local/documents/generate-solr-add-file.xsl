@@ -16,9 +16,15 @@
             <xsl:for-each select="child::file">
                 <xsl:variable name="file" select="document(@name)"/>
                 <doc>
-                    <field name="category">
+                    <field name="doc_class">
                         <xsl:value-of
                             select="local-name($file//sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1])"
+                        />
+                    </field>
+                    
+                    <field name="shelfmark">
+                        <xsl:value-of
+                            select="$file//sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]"
                         />
                     </field>
 
@@ -27,17 +33,29 @@
                             select="$file//sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]/@sdoID"
                         />
                     </field>
+                    
+                    <field name="title">
+                        <xsl:value-of
+                            select="$file//sdo:recordCollection/sdo:record/sdo:itemDesc/dc:title"
+                        />
+                    </field>
+                    
+                    <field name="description">
+                        <xsl:value-of
+                            select="$file//sdo:recordCollection/sdo:record/sdo:itemDesc/dc:description"
+                        />
+                    </field>
 
                     <xsl:for-each
                         select="$file//sdo:recordCollection/sdo:record/sdo:itemDesc/dcterms:created">
                         <field name="date">
-                            <xsl:value-of select="."/>
+                            <xsl:value-of select="substring(., 1, 10)"/>
                         </field>
                     </xsl:for-each>
                     
-                    <xsl:for-each select="sdo:recordCollection/sdo:record/sdo:itemDesc/dcterms:isPartOf">
+                    <xsl:for-each select="$file//sdo:recordCollection/sdo:record/sdo:itemDesc/dcterms:isPartOf">
                         <field name="tag">
-                            <xsl:value-of select="."/>
+                            <xsl:value-of select="replace(., '\s~\s', '_')"/>
                         </field>
                     </xsl:for-each>
 
