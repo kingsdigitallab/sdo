@@ -426,8 +426,13 @@
        when adding a document.
    -->
 
+   <field name="doc_class" type="string" indexed="true" stored="true" required="true" />
+   <field name="shelfmark" type="string" indexed="true" stored="true" />
    <field name="id" type="string" indexed="true" stored="true" required="true" />
+   <field name="title" type="string" indexed="true" stored="true" />
+   <field name="description" type="string" indexed="true" stored="true" />
    <field name="date" multiValued="true" type="string" indexed="true" stored="true" required="true" /> 
+   <field name="tag" multiValued="true" type="string" indexed="true" stored="true" /> 
 
    <!-- Common metadata fields, named specifically to match up with
      SolrCell metadata when parsing rich documents such as Word, PDF.
