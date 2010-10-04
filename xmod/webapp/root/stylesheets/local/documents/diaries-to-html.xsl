@@ -15,11 +15,9 @@
     </xd:doc>
 
     <xsl:param name="menutop" select="'true'"/>
-
-    <xsl:param name="filedir"/>
-    <xsl:param name="filename"/>
-    <xsl:param name="fileextension"/>
-
+    <xsl:param name="date"/>
+    <xsl:variable name="record" select="//sdo:recordCollection/sdo:record[descendant::dcterms:created = $date]"/>
+    
     <xsl:template name="xms:pagehead">
         <div class="pageHeader">
             <div class="t01">
@@ -31,7 +29,7 @@
                         select="//sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]"/>:
                     [date here]</h2>
                 <h3 class="documentDisplay">
-                    <xsl:value-of select="//sdo:recordCollection/sdo:record[1]/sdo:itemDesc/dc:title"/>
+                    <xsl:value-of select="$record/sdo:itemDesc/dc:title"/>
                 </h3>
             </div>
         </div>
@@ -42,11 +40,11 @@
             <tr>
                 <td id="GermanVersion">
                     <!-- German version -->
-                    <xsl:apply-templates select="//sdo:record[1]/tei:div[@type='transcription']"/>
+                    <xsl:apply-templates select="$record/tei:div[@type='transcription']"/>
                 </td>
                 <td id="EnglishVersion">
                     <!-- English version -->
-                    <xsl:apply-templates select="//sdo:record[1]/tei:div[@type='translation']"/>
+                    <xsl:apply-templates select="$record/tei:div[@type='translation']"/>
                 </td>
             </tr>
             <tr>

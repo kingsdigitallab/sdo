@@ -116,18 +116,20 @@
         </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
-      
+
       <map:match pattern="documents/correspondence/*.tag.html">
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
-          <map:part src="{global:solr}?q=tag%3A{1}&amp;rows=5000&amp;fl=tag,id,date,title,description,shelfmark&amp;indent=on"/>
+          <map:part
+            src="{global:solr}?q=tag%3A{1}&amp;rows=5000&amp;fl=tag,fileId,date,title,description,shelfmark&amp;indent=on"
+          />
         </map:aggregate>
         <map:transform src="stylesheets/local/documents/correspondence-tag-details-list.xsl">
           <map:parameter name="tag" value="{1}"/>
         </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
-          
+
       <map:match pattern="documents/correspondence/*.html">
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
@@ -139,41 +141,27 @@
       <!-- End browsing correspondence -->
 
       <!-- Browsing diaries -->
-      <!-- SOLR TEST -->
       <map:match pattern="documents/diaries/index.html">
-        <!-- <map:act type="request"> USE THIS MAP:ACT FORMAT WHEN YOU WANT TO GRAB URL PARAMETERS BY NAME
-          <map:parameter name="parameters" value="true"/>
-          <map:aggregate element="aggregation">
-            <map:part src="cocoon://_internal/menu/main.xml"/>
-            <map:part
-              src="{global:solr}?q={q}&amp;start={s}&amp;rows={r}&amp;fl=id,idno,inArchive,inIntro,page,title,year&amp;indent=on"
-            />
-          </map:aggregate>
-          <map:transform src="stylesheets/spec/search.xsl" type="saxon">
-            <map:parameter name="filedir" value="{../1}"/>
-            <map:parameter name="filename" value="search.xml"/>
-            <map:parameter name="fileextension" value="html"/>
-          </map:transform>
-          </map:act> -->
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
-          <map:part src="{global:solr}?q=date%3A1918*&amp;rows=100&amp;fl=date,id&amp;indent=on"/>
+          <map:part
+            src="{global:solr}?q=date%3A*&amp;fq=kind%3Adiary&amp;rows=5000&amp;fl=date,uniqueId&amp;indent=on"
+          />
         </map:aggregate>
-        <map:transform src="stylesheets/local/documents/diaries-index-to-html.xsl" type="saxon">
-          <map:parameter name="filedir" value="documents/diaries"/>
-          <map:parameter name="filename" value="diaries"/>
-          <map:parameter name="fileextension" value="html"/>
-        </map:transform>
+        <map:transform src="stylesheets/local/documents/diaries-index-to-html.xsl" type="saxon"/>
+
         <map:serialize type="xhtml"/>
       </map:match>
-      
-      <map:match pattern="documents/diaries/*.html">
-        <map:aggregate element="aggregation">
-          <map:part src="cocoon://_internal/menu/main.xml"/>
-          <map:part src="xml/content/documents/diaries/{1}.xml"/>
-        </map:aggregate>
-        <map:transform src="stylesheets/local/documents/diaries-to-html.xsl"/>
-        <map:serialize type="xhtml"/>
+
+      <map:match pattern="documents/diaries/*/*">
+          <map:aggregate element="aggregation">
+            <map:part src="cocoon://_internal/menu/main.xml"/>
+            <map:part src="xml/content/documents/diaries/{1}.xml"/>
+          </map:aggregate>
+          <map:transform src="stylesheets/local/documents/diaries-to-html.xsl">
+            <map:parameter name="date" value="{2}"/>
+          </map:transform>
+          <map:serialize type="xhtml"/>
       </map:match>
       <!-- End browsing diaries -->
 

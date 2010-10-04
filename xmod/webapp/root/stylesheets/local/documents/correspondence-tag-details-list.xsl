@@ -34,7 +34,7 @@
             
             <xsl:for-each select="//doc">
                 <xsl:sort select="child::arr[@name='date']/child::str[1]"/>
-                <xsl:variable name="filename" select="child::str[@name='id']"/>
+                <xsl:variable name="filename" select="child::str[@name='fileId']"/>
                 <li>
                     <h2>
                         <a href="{$filename}.html"><xsl:value-of

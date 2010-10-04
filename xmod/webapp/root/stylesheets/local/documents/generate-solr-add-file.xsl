@@ -15,51 +15,61 @@
         <add xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0">
             <xsl:for-each select="child::file">
                 <xsl:variable name="file" select="document(@name)"/>
-                <doc>
-                    <field name="doc_class">
-                        <xsl:value-of
-                            select="local-name($file//sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1])"
-                        />
-                    </field>
-                    
-                    <field name="shelfmark">
-                        <xsl:value-of
-                            select="$file//sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]"
-                        />
-                    </field>
+                <xsl:for-each select="$file//sdo:record">
+                    <xsl:variable name="fileID"
+                        select="preceding-sibling::sdo:collectionDesc/sdo:source/child::*[1]/@sdoID"/>
+                    <xsl:variable name="recordID" select="@ID"/>
+                    <doc>
+                        <field name="kind"><!-- whether it is correspondence, diary, etc. -->
+                            <xsl:value-of
+                                select="local-name(preceding-sibling::sdo:collectionDesc/sdo:source/child::*[1])"
+                            />
+                        </field>
 
-                    <field name="id">
-                        <xsl:value-of
-                            select="$file//sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]/@sdoID"
-                        />
-                    </field>
-                    
-                    <field name="title">
-                        <xsl:value-of
-                            select="$file//sdo:recordCollection/sdo:record/sdo:itemDesc/dc:title"
-                        />
-                    </field>
-                    
-                    <field name="description">
-                        <xsl:value-of
-                            select="$file//sdo:recordCollection/sdo:record/sdo:itemDesc/dc:description"
-                        />
-                    </field>
+                        <field name="shelfmark">
+                            <xsl:value-of
+                                select="preceding-sibling::sdo:collectionDesc/sdo:source/child::*[1]"
+                            />
+                        </field>
 
-                    <xsl:for-each
-                        select="$file//sdo:recordCollection/sdo:record/sdo:itemDesc/dcterms:created">
+                        <field name="fileId">
+                            <xsl:value-of select="$fileID"/>
+                        </field>
+
+                        <field name="recordId">
+                            <xsl:value-of select="$recordID"/>
+                        </field>
+
+                        <field name="uniqueId"><!-- Solr schema will use this field to uniquely identify records -->
+                            <xsl:value-of select="concat($recordID, '_', $fileID)"/>
+                        </field>
+
+                        <xsl:if
+                            test="local-name(preceding-sibling::sdo:collectionDesc/sdo:source/child::*[1]) = 'correspondence'">
+                            <field name="title">
+                                <xsl:value-of select="child::sdo:itemDesc/dc:title"/>
+                            </field>
+
+                            <field name="description">
+                                <xsl:value-of select="child::sdo:itemDesc/dc:description"/>
+                            </field>
+                        </xsl:if>
+
+
                         <field name="date">
-                            <xsl:value-of select="substring(., 1, 10)"/>
+                            <xsl:value-of
+                                select="substring(child::sdo:itemDesc/dcterms:created, 1, 10)"/>
                         </field>
-                    </xsl:for-each>
-                    
-                    <xsl:for-each select="$file//sdo:recordCollection/sdo:record/sdo:itemDesc/dcterms:isPartOf">
-                        <field name="tag">
-                            <xsl:value-of select="replace(., '\s~\s', '_')"/>
-                        </field>
-                    </xsl:for-each>
 
-                </doc>
+
+                        <xsl:for-each select="child::sdo:itemDesc/dcterms:isPartOf">
+                            <field name="tag">
+                                <xsl:value-of select="replace(., '\s~\s', '_')"/>
+                            </field>
+                        </xsl:for-each>
+
+                    </doc>
+                </xsl:for-each>
             </xsl:for-each>
         </add>
     </xsl:template>

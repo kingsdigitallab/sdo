@@ -7,15 +7,16 @@
         <xd:desc>
             <xd:p><xd:b>Created on:</xd:b> Sep 27, 2010</xd:p>
             <xd:p><xd:b>Author:</xd:b> paulcaton</xd:p>
-            <xd:p/>
+            <xd:p><xd:b>Input:</xd:b> Solr's response to the query
+                "?q=date%3A*&amp;fq=kind%3Adiary&amp;rows=5000&amp;fl=date,uniqueId&amp;indent=on"</xd:p>
+            <xd:p><xd:b>Output:</xd:b> display of years, months, and days for which there are diary
+                entry files</xd:p>
         </xd:desc>
     </xd:doc>
 
     <xsl:param name="menutop" select="'true'"/>
 
-    <xsl:param name="filedir"/>
-    <xsl:param name="filename"/>
-    <xsl:param name="fileextension"/>
+    <xsl:key name="dateValue" match="str[@name='date']" use="."/>
 
     <xsl:variable name="xmg:title">
         <xsl:text>Browse Diaries by Date</xsl:text>
@@ -23,253 +24,58 @@
     <xsl:variable name="root" select="/"/>
 
     <xsl:template name="xms:content">
-        <ul>
-            <li>
-                <a>1896 - 1899</a>
-                <ul>
-                    <li>
-                        <a>1896</a>
+        <!-- group by year -->
+        <xsl:for-each-group select="//str[@name='date']" group-by="substring(.,1,4)">
+
+            <ul>
+                <li>
+                    <a>
+                        <xsl:value-of select="current-grouping-key()"/>
+                        <xsl:text>: </xsl:text>
+                        <xsl:value-of select="count(current-group())"/>
+                    </a>
+                    <!-- group by month -->
+                    <xsl:for-each-group select="current-group()" group-by="substring(.,6,2)">
+
                         <ul>
-                            <li><a>January</a> | <a>February</a> | <a>March</a> | <a>April</a> |
-                                    <a>May</a> | <a>June</a> | <a>July</a> | <a>August</a> |
-                                    <a>September</a> | <a>October</a> | <a>November</a> |
-                                    <a>December</a></li>
+                            <li>
+                                <a>
+                                    <xsl:value-of select="current-grouping-key()"/>
+                                    <xsl:text>: </xsl:text>
+                                    <xsl:value-of select="count(current-group())"/>
+                                </a>
+                                <ul>
+                                    <!-- group by day (usually just one item per day group, but occasionally there are two) -->
+                                    <xsl:for-each-group select="current-group()"
+                                        group-by="substring(.,9,2)">  <xsl:variable name="myVal"
+                                            select="."/> 
+                                        <!-- for 'identifier' variable below, because there are sometimes several diary entries on the same day--> 
+                                        <!--  we must use subsequence() otherwise we'll sometimes be passing a sequence into --> 
+                                        <!-- the substring() function for the 'url' variable, which XSLT won't accept. -->
+                                        <xsl:variable name="identifier"
+                                            select="subsequence(//doc/child::str[text()=$myVal]/following-sibling::str[@name='uniqueId'],1,1)"/>
+                                        <xsl:variable name="url"
+                                            select="concat(substring($identifier,7), '/', $myVal)"/>
+                                        <li>
+                                            <a href="{$url}">
+                                                <xsl:value-of select="current-grouping-key()"/>
+                                                <xsl:if test="count(current-group()) > 1"><xsl:text> </xsl:text>
+                                                  <xsl:value-of select="count(current-group())"
+                                                  /><xsl:text> entries</xsl:text></xsl:if>
+                                            </a>
+                                        </li>
+                                    </xsl:for-each-group>
+
+                                </ul>
+                            </li>
                         </ul>
 
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1897</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1898</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1899</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a>1900 - 1909</a>
-                <ul>
-                    <li>
-                        <a>1900</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1901</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1902</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1902</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1904</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1905</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1906</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1907</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1908</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1909</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a>1910 - 1919</a>
-                <ul>
-                    <li>
-                        <a>1910</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1911</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1912</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1913</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1914</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1915</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1916</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1917</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1918</a>
-                        <ul>
-                            <li><a>January</a> | <a>February</a> | <a>March</a> | <a>April</a> |
-                                <a>May</a> | <a>June</a> | <a>July</a> | <a>August</a> |
-                                <a>September</a> | <a>October</a> | <a>November</a> |
-                                <a>December</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1919</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a>1920 - 1929</a>
-                <ul>
-                    <li>
-                        <a>1920</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1921</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1922</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1923</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1924</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1925</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1926</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1927</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1928</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1929</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a>1930 - 1936</a>
-                <ul>
-                    <li>
-                        <a>1930</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1931</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1932</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1933</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1934</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1935</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a>1936</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+                    </xsl:for-each-group>
+                </li>
+            </ul>
 
+        </xsl:for-each-group>
 
-        <!-- THIS IS THE CODE THAT TRANSFORMS ELEMENTS FROM THE SOLR RESPONSE
-            <xsl:for-each select="//doc">
-                <xsl:variable name="file" select="concat(child::str[@name='id'], '.html')"></xsl:variable>
-                <h3>
-                    <a href="{$file}"><xsl:value-of select="child::arr[@name='date']/child::str[1]"/>
-                    <xsl:text>-</xsl:text>
-                    <xsl:value-of select="child::arr[@name='date']/child::str[position()=last()]"/></a>
-                </h3>
-            </xsl:for-each>
--->
     </xsl:template>
 
 </xsl:stylesheet>
