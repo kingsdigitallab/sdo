@@ -16,17 +16,26 @@
 
     <xsl:param name="menutop" select="'true'"/>
     <xsl:param name="date"/>
-    <xsl:variable name="record" select="//sdo:recordCollection/sdo:record[descendant::dcterms:created = $date]"/>
-    
+    <xsl:variable name="prevDate" select="//prevDate"/>
+    <xsl:variable name="prevFile" select="//prevFile"/>
+    <xsl:variable name="nextDate" select="//nextDate"/>
+    <xsl:variable name="nextFile" select="//nextFile"/>
+    <xsl:variable name="record"
+        select="//sdo:recordCollection/sdo:record[descendant::dcterms:created = $date]"/>
+
     <xsl:template name="xms:pagehead">
         <div class="pageHeader">
             <div class="t01">
                 <h1>
-                    <!-- below will change to use a passed in parameter for the specific tag -->
-                    <xsl:text>[will have all applicable tags, with appropriate NEXT and PREV links] </xsl:text>
+                    <a><xsl:attribute name="href" select="concat($prevFile, '/', $prevDate)"
+                        />prev</a>
+                    <xsl:text> | </xsl:text>
+                    <a><xsl:attribute name="href" select="concat($nextFile, '/', $nextDate)"
+                        />next</a>
+
                 </h1>
                 <h2 class="documentDisplay"><xsl:value-of
-                        select="//sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]"/>:
+                        select="//sdo:recordCollection/sdo:collectionDesc/sdo:source/sdo:diary/@sdoID"/>:
                     [date here]</h2>
                 <h3 class="documentDisplay">
                     <xsl:value-of select="$record/sdo:itemDesc/dc:title"/>
