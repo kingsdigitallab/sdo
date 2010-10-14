@@ -22,7 +22,8 @@ USERNAME = 'jamie'
 PASSWORD = 'password'
 
 # XML namespace.
-XML = 'http://www.w3.org/XML/1998/namespace'
+XML_NAMESPACE = 'http://www.w3.org/XML/1998/namespace'
+XML = '{%s}' % XML_NAMESPACE
 
 
 def main ():
@@ -64,10 +65,13 @@ def get_eats_data (dispatcher):
     return eats_data
 
 def process_entry (dispatcher, eats_data, entity_type, entry, profile_dir):
-    key = create_entity(dispatcher, eats_data, entity_type, entry)
-    if key is not None:
-        filename = rename_profile(profile_dir, entry[-1], key)
-        update_id(filename, key)
+    import_url = create_entity(dispatcher, eats_data, entity_type, entry)
+    profile = entry[-1]
+    if profile:
+        key = get_key(dispatcher, import_url)
+        if key is not None:
+            filename = rename_profile(profile_dir, profile, key)
+            update_id(filename, key)
 
 def create_entity (dispatcher, eats_data, entity_type, entry):
     doc = dispatcher.get_base_document_copy()
@@ -84,10 +88,10 @@ def create_entity (dispatcher, eats_data, entity_type, entry):
     add_names(entity, entry, eats_data, authority_record, entity_type)
     message = 'Created new entity "%s" from CSV authority list.' % entry[2].decode('utf-8')
     url = dispatcher.import_document(doc, message.encode('utf-8'))
-    key = get_key(dispatcher, url)
-    return key
+    return url
     
 def add_names (entity, entry, eats_data, authority_record, entity_type):
+    """Add names to entity from the data in entry."""
     count = 1
     # The first name is the preferred one.
     add_name(entity, entry[2], authority_record, eats_data, True, entity_type,
@@ -132,11 +136,9 @@ def add_name (entity, name, authority_record, eats_data, is_preferred,
 def get_key (dispatcher, url):
     """Return the key (authority record system id) for the new
     entity."""
-    key = None
-    if profile:
-        eatsml = dispatcher.get_processed_import(url)
-        entity = eatsml.get_entities()[0]
-        key = entity.get_default_authority_records()[0].system_id
+    eatsml = dispatcher.get_processed_import(url)
+    entity = eatsml.get_entities()[0]
+    key = entity.get_default_authority_records()[0].system_id
     return key
 
 
