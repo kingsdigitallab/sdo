@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 """Key marked up names in the XML files passed in on the commandline."""
 
@@ -11,7 +12,8 @@ from lxml import etree
 from eatsml.dispatcher import Dispatcher
 
 
-SERVER_URL = 'http://localhost:8000'
+SERVER_URL = 'http://localhost:8000/eats/'
+LOGIN_URL = 'http://localhost:8000/account/login/'
 USERNAME = 'jamie'
 PASSWORD = 'password'
 
@@ -30,7 +32,7 @@ NAME = re.compile(r'^(\[D\S+\s+(?P<name1>[^\]]*)\])|(profile:\s+(?P<name2>.*))$'
 KEY_CACHE = {}
 
 def main ():
-    dispatcher = Dispatcher(SERVER_URL, USERNAME, PASSWORD)
+    dispatcher = Dispatcher(SERVER_URL, LOGIN_URL, USERNAME, PASSWORD)
     dispatcher.login()
     filenames = []
     for arg in sys.argv[1:]:
@@ -72,8 +74,7 @@ def key_element (dispatcher, element):
     # trying to find a matching entity.
     modified = False
     if len(comments) == 1:
-        comment = comments[0].text.strip()
-        name = get_name(comment)
+        name = get_name(comments[0].text)
         if name is None:
             key = None
         elif name in KEY_CACHE:
@@ -104,9 +105,22 @@ def get_key_from_lookup (dispatcher, name):
     return key
 
 def get_name (comment):
-    """Return the entity name from the comment string."""
+    """Return the entity name from the comment string.
+
+    >>> get_name(' profile: Heinrich Schenker ')
+    u'Heinrich Schenker'
+    >>> get_name('Heinrich Schenker')
+    >>> get_name('[DIn]')
+    >>> get_name('[DPe Schenker, Wilhelm]')
+    u'Schenker, Wilhelm'
+    >>> get_name('[DPl Kiev]')
+    u'Kiev'
+    >>> get_name(' profile: Café Vindobona ')
+    u'Caf\xe9 Vindobona'
+    
+    """
     name = None
-    match = NAME.search(comment)
+    match = NAME.search(comment.strip().decode('utf-8'))
     if match is not None:
         name = match.group('name1')
         if name is None:
@@ -115,4 +129,6 @@ def get_name (comment):
 
 
 if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
     main()
