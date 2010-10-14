@@ -16,7 +16,8 @@ DELIMITER = ','
 QUOTE_CHAR = '"'
 
 # EATS server details.
-SERVER_URL = 'http://localhost:8000/'
+SERVER_URL = 'http://localhost:8000/eats/'
+LOGIN_URL = 'http://localhost:8000/accounts/login/'
 USERNAME = 'jamie'
 PASSWORD = 'password'
 
@@ -29,14 +30,17 @@ def main ():
     if not os.path.isdir(profile_dir):
         print '%s does not exist.' % sys.argv[3]
         sys.exit(2)
-    dispatcher = Dispatcher(SERVER_URL, USERNAME, PASSWORD)
+    dispatcher = Dispatcher(SERVER_URL, LOGIN_URL, USERNAME, PASSWORD)
     dispatcher.login()
     eats_data = get_eats_data(dispatcher)
-    csv_reader = csv.reader(open(sys.argv[2], 'b'), delimiter=DELIMITER,
+    csv_reader = csv.reader(open(sys.argv[2], 'rb'), delimiter=DELIMITER,
                             quotechar=QUOTE_CHAR)
     entity_type = sys.argv[1]
+    is_first_line = True
     for entry in csv_reader:
-        process_entry(dispatcher, eats_data, entity_type, entry, profile_dir)
+        if not is_first_line:
+            process_entry(dispatcher, eats_data, entity_type, entry, profile_dir)
+        is_first_line = False
 
 def get_eats_data (dispatcher):
     """Return a dictionary of EATS data to be used in the creation of
@@ -61,8 +65,9 @@ def get_eats_data (dispatcher):
 
 def process_entry (dispatcher, eats_data, entity_type, entry, profile_dir):
     key = create_entity(dispatcher, eats_data, entity_type, entry)
-    filename = rename_profile(profile_dir, entry[-1], key)
-    update_id(filename, key)
+    if key is not None:
+        filename = rename_profile(profile_dir, entry[-1], key)
+        update_id(filename, key)
 
 def create_entity (dispatcher, eats_data, entity_type, entry):
     doc = dispatcher.get_base_document_copy()
@@ -75,9 +80,9 @@ def create_entity (dispatcher, eats_data, entity_type, entry):
         is_preferred=True)
     entity.create_entity_type(
         id='new_entity_type_assertion', authority_record=authority_record,
-        entity_Type=eats_data['entity_types'][entity_type], is_preferred=True)
+        entity_type=eats_data['entity_types'][entity_type], is_preferred=True)
     add_names(entity, entry, eats_data, authority_record, entity_type)
-    message = 'Created new entity "%s" from CSV authority list.' % entry[2]
+    message = 'Created new entity "%s" from CSV authority list.' % entry[2].decode('utf-8')
     url = dispatcher.import_document(doc, message.encode('utf-8'))
     key = get_key(dispatcher, url)
     return key
@@ -97,6 +102,7 @@ def add_names (entity, entry, eats_data, authority_record, entity_type):
 
 def add_name (entity, name, authority_record, eats_data, is_preferred,
               entity_type, count):
+    name = name.decode('utf-8')
     name_type = eats_data['name_type']
     language = eats_data['languages']['German']
     script = eats_data['scripts']['Latin']
@@ -105,34 +111,45 @@ def add_name (entity, name, authority_record, eats_data, is_preferred,
     if entity_type == 'person':
         parts = name.split()
         if len(parts) > 1:
-            name_parts['given'] = parts[:-1].join(' ')
+            name_parts['given'] = ' '.join(parts[:-1])
             name_parts['family'] = parts[-1]
             display_form = ''
     assertion_id = 'new_name_assertion_%d' % count
-    name = entity.create_name(
+    name_obj = entity.create_name(
         assertion_id, authority_record=authority_record, name_type=name_type,
         is_preferred=is_preferred)
-    name.display_form = display_form
-    name.language = language
-    name.script = script
+    name_obj.display_form = display_form
+    name_obj.language = language
+    name_obj.script = script
     for name_part_type, name_part in name_parts.items():
-        name.create_name_part(eats_data['name_part_types'][name_part_type],
-                              name_part)
+        try:
+            name_obj.create_name_part(eats_data['name_part_types'][name_part_type],
+                                      name_part)
+        except Exception, e:
+            print 'Failed creating name part "%s" in %s: %s' % (name_part, name, e)
+            
 
 def get_key (dispatcher, url):
     """Return the key (authority record system id) for the new
     entity."""
-    eatsml = dispatcher.get_processed_import(url)
-    entity = eatsml.get_entities()[0]
-    key = entity.get_default_authority_records()[0].system_id
+    key = None
+    if profile:
+        eatsml = dispatcher.get_processed_import(url)
+        entity = eatsml.get_entities()[0]
+        key = entity.get_default_authority_records()[0].system_id
     return key
-        
+
+
 def rename_profile(profile_dir, profile, key):
     """Rename the profile file to the key specified by the import at
     url. Return the new filename."""
     old_file = os.path.join(profile_dir, '%s.xml' % profile)
     new_file = os.path.join(profile_dir, '%s.xml' % key)
-    os.rename(old_file, new_file)
+    try:
+        os.rename(old_file, new_file)
+    except OSError, e:
+        print 'Failed to rename %s to %s: %s' % (old_file, new_file, e)
+        sys.exit(2)
     return new_file
 
 def update_id (filename, xml_id):
