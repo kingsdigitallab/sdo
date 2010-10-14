@@ -1,4 +1,7 @@
-Entity Management in SDO
+                Entity Management in SDO
+
+
+      Overview
 
 All of the entities stored in EATS, with only sufficient information
 to disambiguate. Additional profile information is kept in XML files,
@@ -13,3 +16,48 @@ EATS on each request, however. Instead it is taken from an index file
 time. This index is a transformed EATSML dump.
 
 
+      Creating initial set of EATS entities
+
+There exists already much information about entities that needs to be
+automatically put into EATS (since to do so by hand would be a lot of
+repetitious work). Happily the information from the profile files has
+been put into Excel spreadsheets by Ian, supplemented by additional
+information, so these spreadsheets serve as the sole source of data
+for the creation of entities in EATS.
+
+The Python script create_entities_from_csv.py creates EATS entities
+from the data in a CSV file generated from one of these
+spreadsheets. It also renames the profile files to the EATS key, and
+changes the root xml:id to the same.
+
+
+      Keying the XML
+
+The source document XML files have some names already marked up as
+names. These need to be keyed, based off the name given in a comment
+either within or immediately following the name element.
+
+The Python script key_entities.py performs this keying task, looking
+up the commented name in EATS and keying the name element if there is
+one and only one match found.
+
+This script should be run after the entities have been created in EATS
+from the CSV files.
+
+
+      Notes
+
+Both scripts use the EATSML Python library that is part of
+EATS. Symlink or copy client/python/banquet/eatsml (from an EATS SVN
+working copy) to this directory to make its contents available.
+
+
+      To do
+
+ * Change create_entities_from_csv.py to use "svn rename" rather than
+   "os.rename" on the profiles, to keep SVN history and avoid mess.
+
+ * Convert all name elements in the TEI that are not "name" or "rs" to
+   "name", for use with the EATS lookup tools (and sanity). If this is
+   done before running the key_entities.py script, that script will
+   need to be updated.
