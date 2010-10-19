@@ -67,12 +67,12 @@ def process_file (filename, dispatcher):
 
 def key_element (dispatcher, element):
     """Find and add the key for the entity marked up in element."""
+    modified = False
     # Extract the name to look up from the immediately following
     # comment, not from the content of the element.
     comments = GET_COMMENTS(element)
     # If there is no comment, or more on than one, don't bother even
     # trying to find a matching entity.
-    modified = False
     if len(comments) == 1:
         name = get_name(comments[0].text)
         if name is None:
