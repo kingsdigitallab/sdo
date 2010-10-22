@@ -3,7 +3,8 @@ file. Rename the associated profile page to match the new entity key,
 and change its root xml:id."""
 
 import csv
-import os
+import os.path
+import subprocess
 import sys
 
 from lxml import etree
@@ -17,7 +18,6 @@ QUOTE_CHAR = '"'
 
 # EATS server details.
 SERVER_URL = 'http://localhost:8000/eats/'
-LOGIN_URL = 'http://localhost:8000/accounts/login/'
 USERNAME = 'jamie'
 PASSWORD = 'password'
 
@@ -31,7 +31,7 @@ def main ():
     if not os.path.isdir(profile_dir):
         print '%s does not exist.' % sys.argv[3]
         sys.exit(2)
-    dispatcher = Dispatcher(SERVER_URL, LOGIN_URL, USERNAME, PASSWORD)
+    dispatcher = Dispatcher(SERVER_URL, USERNAME, PASSWORD)
     dispatcher.login()
     eats_data = get_eats_data(dispatcher)
     csv_reader = csv.reader(open(sys.argv[2], 'rb'), delimiter=DELIMITER,
@@ -170,15 +170,16 @@ def get_key (dispatcher, url):
     key = entity.get_default_authority_records()[0].system_id
     return key
 
-def rename_profile(profile_dir, profile, key):
+def rename_profile (profile_dir, profile, key):
     """Rename the profile file to the key specified by the import at
     url. Return the new filename."""
     old_file = os.path.join(profile_dir, '%s.xml' % profile)
     new_file = os.path.join(profile_dir, '%s.xml' % key)
+    args = ['svn', 'rename', old_file, new_file]
     try:
-        os.rename(old_file, new_file)
-    except OSError, e:
-        print 'Failed to rename %s to %s: %s' % (old_file, new_file, e)
+        subprocess.check_call(args)
+    except Exception, e:
+        print 'Failed to SVN rename %s to %s: %s' % (old_file, new_file, e)
         sys.exit(2)
     return new_file
 
