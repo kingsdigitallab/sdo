@@ -57,3 +57,21 @@ working copy) to this directory to make its contents available.
  * Change create_entities_from_csv.py to use "svn rename" rather than
    "os.rename" on the profiles, to keep SVN history and avoid mess.
 
+ * Add creation of entity relationships to
+   create_entities_from_csv.py. A couple of the files relate two
+   entities (works by, works edited by), and it would be good to do
+   this automatically. However, this requires that the person exist in
+   EATS (so the person CSV must be the first processed), and the
+   column data is not simply a name, it may end in ", ed.", for
+   example, so it will need to be parsed.
+
+ * The works have italics at non-machine-determinable places, and
+   these need to be captured in EATS. Italics aren't captured in the
+   CSV, so they will need to be added by IB after they are in EATS,
+   unfortunately. EATS has no mechanism for marking text, so an ad hoc
+   system will need to be used. Since punctuation does not impinge on
+   EATS' search, and only italics are needed here, perhaps a scheme
+   like "non-italic text <italic text> non-italic text" would work -
+   the display outside of EATS just needs to convert the < to <i> and
+   > to </i> (or whatever). Within EATS, it will just display as
+   literal characters - that shouldn't be a big problem.
