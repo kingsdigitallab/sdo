@@ -40,7 +40,14 @@ def main ():
     is_first_line = True
     for entry in csv_reader:
         if not is_first_line:
-            process_entry(dispatcher, eats_data, entity_type, entry, profile_dir)
+            # Because each CSV file (there is one per entity type) has
+            # its own structure, extract all information from the
+            # entry into variables first, to abstract away the
+            # differences.
+            names = get_names_from_entry(entry, entity_type)
+            profile = get_profile_from_entry(entry, entity_type)
+            process_entry(dispatcher, eats_data, entity_type, names,
+                          profile, profile_dir)
         is_first_line = False
 
 def get_eats_data (dispatcher):
@@ -64,16 +71,37 @@ def get_eats_data (dispatcher):
         eats_data['scripts'][script.name] = script
     return eats_data
 
-def process_entry (dispatcher, eats_data, entity_type, entry, profile_dir):
-    import_url = create_entity(dispatcher, eats_data, entity_type, entry)
-    profile = entry[-1]
+def get_names_from_entry (entry, entity_type):
+    """Return a list of names for the entry. The entity type
+    determines the structure of the CSV file."""
+    names = []
+    if entity_type in ('person', 'work'):
+        names = entry[2:-1]
+    elif entity_type == 'composition':
+        names = entry[3:]
+    return names
+
+def get_profile_from_entry (entry, entity_type):
+    """Return the profile name for the entry. The entity type
+    determines the structure of the CSV file."""
+    profile = ''
+    if entity_type in ('person', 'work'):
+        profile = entry[-1]
+    return profile
+
+def process_entry (dispatcher, eats_data, entity_type, names, profile,
+                   profile_dir):
+    """Process the entry, creating an entity and changing any
+    associated profile."""
+    import_url = create_entity(dispatcher, eats_data, entity_type, names)
     if profile:
         key = get_key(dispatcher, import_url)
         if key is not None:
             filename = rename_profile(profile_dir, profile, key)
             update_id(filename, key)
 
-def create_entity (dispatcher, eats_data, entity_type, entry):
+def create_entity (dispatcher, eats_data, entity_type, names):
+    """Create an entity in EATS."""
     doc = dispatcher.get_base_document_copy()
     authority_record = doc.create_authority_record(
         id='new_authority_record', authority=eats_data['authority'])
@@ -85,27 +113,28 @@ def create_entity (dispatcher, eats_data, entity_type, entry):
     entity.create_entity_type(
         id='new_entity_type_assertion', authority_record=authority_record,
         entity_type=eats_data['entity_types'][entity_type], is_preferred=True)
-    add_names(entity, entry, eats_data, authority_record, entity_type)
-    message = 'Created new entity "%s" from CSV authority list.' % entry[2].decode('utf-8')
+    add_names(entity, names, eats_data, authority_record, entity_type)
+    message = 'Created new entity "%s" from CSV authority list.' \
+        % names[0].decode('utf-8')
     url = dispatcher.import_document(doc, message.encode('utf-8'))
     return url
     
-def add_names (entity, entry, eats_data, authority_record, entity_type):
-    """Add names to entity from the data in entry."""
+def add_names (entity, names, eats_data, authority_record, entity_type):
+    """Add names to entity."""
     count = 1
     # The first name is the preferred one.
-    add_name(entity, entry[2], authority_record, eats_data, True, entity_type,
-             count)
-    count = count + 1
-    for name in entry[3:-1]:
+    is_preferred = True
+    for name in names[1:]:
         name = name.strip()
         if name:
-            add_name(entity, name, authority_record, eats_data, False,
+            add_name(entity, name, authority_record, eats_data, is_preferred,
                      entity_type, count)
+            is_preferred = False
             count = count + 1
 
 def add_name (entity, name, authority_record, eats_data, is_preferred,
               entity_type, count):
+    """Add name to entity."""
     name = name.decode('utf-8')
     name_type = eats_data['name_type']
     language = eats_data['languages']['German']
@@ -127,11 +156,11 @@ def add_name (entity, name, authority_record, eats_data, is_preferred,
     name_obj.script = script
     for name_part_type, name_part in name_parts.items():
         try:
-            name_obj.create_name_part(eats_data['name_part_types'][name_part_type],
-                                      name_part)
+            name_obj.create_name_part(
+                eats_data['name_part_types'][name_part_type], name_part)
         except Exception, e:
-            print 'Failed creating name part "%s" in %s: %s' % (name_part, name, e)
-            
+            print 'Failed creating name part "%s" in %s: %s' \
+                % (name_part, name, e)
 
 def get_key (dispatcher, url):
     """Return the key (authority record system id) for the new
@@ -140,7 +169,6 @@ def get_key (dispatcher, url):
     entity = eatsml.get_entities()[0]
     key = entity.get_default_authority_records()[0].system_id
     return key
-
 
 def rename_profile(profile_dir, profile, key):
     """Rename the profile file to the key specified by the import at
