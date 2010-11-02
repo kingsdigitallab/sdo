@@ -13,7 +13,6 @@ from eatsml.dispatcher import Dispatcher
 
 
 SERVER_URL = 'http://localhost:8000/eats/'
-LOGIN_URL = 'http://localhost:8000/account/login/'
 USERNAME = 'jamie'
 PASSWORD = 'password'
 
@@ -32,7 +31,7 @@ NAME = re.compile(r'^(\[D\S+\s+(?P<name1>[^\]]*)\])|(profile:\s+(?P<name2>.*))$'
 KEY_CACHE = {}
 
 def main ():
-    dispatcher = Dispatcher(SERVER_URL, LOGIN_URL, USERNAME, PASSWORD)
+    dispatcher = Dispatcher(SERVER_URL, USERNAME, PASSWORD)
     dispatcher.login()
     filenames = []
     for arg in sys.argv[1:]:
