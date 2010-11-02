@@ -21,6 +21,11 @@ SERVER_URL = 'http://localhost:8000/eats/'
 USERNAME = 'jamie'
 PASSWORD = 'password'
 
+# EATS data names.
+AUTHORED_BY_REL_TYPE = 'is authored by'
+COMPOSED_BY_REL_TYPE = 'is composed by'
+EDITED_BY_REL_TYPE = 'is edited by'
+
 # XML namespace.
 XML_NAMESPACE = 'http://www.w3.org/XML/1998/namespace'
 XML = '{%s}' % XML_NAMESPACE
@@ -45,9 +50,14 @@ def main ():
             # entry into variables first, to abstract away the
             # differences.
             names = get_names_from_entry(entry, entity_type)
-            profile = get_profile_from_entry(entry, entity_type)
-            process_entry(dispatcher, eats_data, entity_type, names,
-                          profile, profile_dir)
+            if names:
+                profile = get_profile_from_entry(entry, entity_type)
+                relationships = get_entity_relationships_from_entry(
+                    eats_data, entry, entity_type)
+                entry_data = {'names': names, 'profile': profile,
+                              'entity_type': entity_type,
+                              'relationships': relationships}
+                process_entry(dispatcher, eats_data, entry_data, profile_dir)
         is_first_line = False
 
 def get_eats_data (dispatcher):
@@ -69,6 +79,9 @@ def get_eats_data (dispatcher):
     eats_data['scripts'] = {}
     for script in doc.get_scripts():
         eats_data['scripts'][script.name] = script
+    eats_data['relationship_types'] = {}
+    for relationship_type in doc.get_entity_relationship_types():
+        eats_data['relationship_types'][unicode(relationship_type)] = relationship_type
     return eats_data
 
 def get_names_from_entry (entry, entity_type):
@@ -79,7 +92,7 @@ def get_names_from_entry (entry, entity_type):
         names = entry[2:-1]
     elif entity_type == 'composition':
         names = entry[3:]
-    return names
+    return [name for name in names if name]
 
 def get_profile_from_entry (entry, entity_type):
     """Return the profile name for the entry. The entity type
@@ -89,18 +102,40 @@ def get_profile_from_entry (entry, entity_type):
         profile = entry[-1]
     return profile
 
-def process_entry (dispatcher, eats_data, entity_type, names, profile,
-                   profile_dir):
+def get_entity_relationships_from_entry (eats_data, entry, entity_type):
+    """Return a list of relationships for the entry. The entity type
+    determines the structure of the CSV file.
+
+    Each item is a dictionary containing the relationship type and the
+    related entity name.
+    
+    """
+    relationships = []
+    entity = None
+    if entity_type == 'work':
+        entity = 'Heinrich Schenker'
+        rel_type = eats_data['relationship_types'][AUTHORED_BY_REL_TYPE]
+        if entry[2].endswith(', ed.'):
+            rel_type = eats_data['relationship_types'][EDITED_BY_REL_TYPE]
+    elif entity_type == 'composition':
+        entity = entry[2]
+        rel_type = eats_data['relationship_types'][COMPOSED_BY_REL_TYPE]
+    if entity is not None:
+        relationships.append({'name': entity.decode('utf-8'),
+                              'rel_type': rel_type})
+    return relationships
+
+def process_entry (dispatcher, eats_data, entry_data, profile_dir):
     """Process the entry, creating an entity and changing any
     associated profile."""
-    import_url = create_entity(dispatcher, eats_data, entity_type, names)
-    if profile:
+    import_url = create_entity(dispatcher, eats_data, entry_data)
+    if entry_data['profile']:
         key = get_key(dispatcher, import_url)
         if key is not None:
-            filename = rename_profile(profile_dir, profile, key)
+            filename = rename_profile(profile_dir, entry_data['profile'], key)
             update_id(filename, key)
 
-def create_entity (dispatcher, eats_data, entity_type, names):
+def create_entity (dispatcher, eats_data, entry_data):
     """Create an entity in EATS."""
     doc = dispatcher.get_base_document_copy()
     authority_record = doc.create_authority_record(
@@ -110,12 +145,18 @@ def create_entity (dispatcher, eats_data, entity_type, names):
     entity.create_existence(
         id='new_existence_assertion', authority_record=authority_record,
         is_preferred=True)
+    entity_type = entry_data['entity_type']
     entity.create_entity_type(
         id='new_entity_type_assertion', authority_record=authority_record,
         entity_type=eats_data['entity_types'][entity_type], is_preferred=True)
+    names = entry_data['names']
     add_names(entity, names, eats_data, authority_record, entity_type)
+    relationships = entry_data['relationships']
+    add_relationships(dispatcher, doc, entity, relationships, eats_data,
+                      authority_record)
     message = 'Created new entity "%s" from CSV authority list.' \
         % names[0].decode('utf-8')
+    #print etree.tostring(doc, pretty_print=True, encoding='utf-8')
     url = dispatcher.import_document(doc, message.encode('utf-8'))
     return url
     
@@ -124,7 +165,7 @@ def add_names (entity, names, eats_data, authority_record, entity_type):
     count = 1
     # The first name is the preferred one.
     is_preferred = True
-    for name in names[1:]:
+    for name in names:
         name = name.strip()
         if name:
             add_name(entity, name, authority_record, eats_data, is_preferred,
@@ -162,6 +203,37 @@ def add_name (entity, name, authority_record, eats_data, is_preferred,
             print 'Failed creating name part "%s" in %s: %s' \
                 % (name_part, name, e)
 
+def add_relationships (dispatcher, doc, entity, relationships, eats_data,
+                       authority_record):
+    """Create entity relationships for the entity from relationships."""
+    count = 1
+    for relationship in relationships:
+        related_eats_id = get_entity_by_lookup(dispatcher, relationship)
+        if related_eats_id is None:
+            print 'No related entity "%s" found' % relationship['name']
+        else:
+            related_entity = doc.create_entity('related_entity',
+                                               related_eats_id)
+            relationship_type = relationship['rel_type']
+            entity.create_entity_relationship(
+                id='new_entity_relationship-%d' % count,
+                authority_record=authority_record,
+                related_entity=related_entity,
+                relationship_type=relationship_type)
+            count += 1
+
+def get_entity_by_lookup (dispatcher, relationship):
+    """Return the EATS id of the entity in relationship, or None."""
+    eatsml = dispatcher.look_up_name(relationship['name'])
+    matches = eatsml.get_entities()
+    # If there are multiple matches, we're not in a position to chosee
+    # among them, and if there are no matches there's no EATS id at
+    # all.
+    eats_id = None
+    if len(matches) == 1:
+        eats_id = matches[0].eats_id
+    return eats_id
+    
 def get_key (dispatcher, url):
     """Return the key (authority record system id) for the new
     entity."""
