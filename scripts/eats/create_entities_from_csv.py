@@ -26,6 +26,9 @@ AUTHORED_BY_REL_TYPE = 'is authored by'
 COMPOSED_BY_REL_TYPE = 'is composed by'
 EDITED_BY_REL_TYPE = 'is edited by'
 
+# Cache of EATS ids for related entity names.
+LOOKUP_CACHE = {}
+
 # XML namespace.
 XML_NAMESPACE = 'http://www.w3.org/XML/1998/namespace'
 XML = '{%s}' % XML_NAMESPACE
@@ -51,11 +54,14 @@ def main ():
             # differences.
             names = get_names_from_entry(entry, entity_type)
             if names:
+                translated_names = get_translated_names_from_entry(entry,
+                                                                   entity_type)
                 profile = get_profile_from_entry(entry, entity_type)
                 relationships = get_entity_relationships_from_entry(
                     eats_data, entry, entity_type)
                 entry_data = {'names': names, 'profile': profile,
                               'entity_type': entity_type,
+                              'translated_names': translated_names,
                               'relationships': relationships}
                 process_entry(dispatcher, eats_data, entry_data, profile_dir)
         is_first_line = False
@@ -92,6 +98,16 @@ def get_names_from_entry (entry, entity_type):
         names = entry[2:-1]
     elif entity_type == 'composition':
         names = entry[3:]
+    elif entity_type == 'term':
+        names = entry[1:7]
+    return [name.strip() for name in names if name.strip()]
+
+def get_translated_names_from_entry (entry, entity_type):
+    """Return a list of translated names for the entry. The entity
+    type determines the structure of the CSV file."""
+    names = []
+    if entity_type == 'term':
+        names = entry[7:]
     return [name for name in names if name]
 
 def get_profile_from_entry (entry, entity_type):
@@ -151,6 +167,9 @@ def create_entity (dispatcher, eats_data, entry_data):
         entity_type=eats_data['entity_types'][entity_type], is_preferred=True)
     names = entry_data['names']
     add_names(entity, names, eats_data, authority_record, entity_type)
+    translated_names = entry_data['translated_names']
+    add_translated_names(entity, translated_names, eats_data, authority_record,
+                         len(names)+1)
     relationships = entry_data['relationships']
     add_relationships(dispatcher, doc, entity, relationships, eats_data,
                       authority_record)
@@ -165,20 +184,27 @@ def add_names (entity, names, eats_data, authority_record, entity_type):
     count = 1
     # The first name is the preferred one.
     is_preferred = True
+    language = eats_data['languages']['German']
     for name in names:
-        name = name.strip()
-        if name:
-            add_name(entity, name, authority_record, eats_data, is_preferred,
-                     entity_type, count)
-            is_preferred = False
-            count = count + 1
+        add_name(entity, name, language, authority_record, eats_data,
+                 is_preferred, entity_type, count)
+        is_preferred = False
+        count = count + 1
 
-def add_name (entity, name, authority_record, eats_data, is_preferred,
+def add_translated_names (entity, names, eats_data, authority_record, count):
+    """Add translated names to entity."""
+    is_preferred = False
+    language = eats_data['languages']['English']
+    for name in names:
+        add_name(entity, name, language, authority_record, eats_data,
+                 is_preferred, 'term', count)
+        count = count + 1
+            
+def add_name (entity, name, language, authority_record, eats_data, is_preferred,
               entity_type, count):
     """Add name to entity."""
     name = name.decode('utf-8')
     name_type = eats_data['name_type']
-    language = eats_data['languages']['German']
     script = eats_data['scripts']['Latin']
     display_form = name
     name_parts = {}
@@ -224,7 +250,10 @@ def add_relationships (dispatcher, doc, entity, relationships, eats_data,
 
 def get_entity_by_lookup (dispatcher, relationship):
     """Return the EATS id of the entity in relationship, or None."""
-    eatsml = dispatcher.look_up_name(relationship['name'])
+    name = relationship['name']
+    if name in LOOKUP_CACHE:
+        return LOOKUP_CACHE[name]
+    eatsml = dispatcher.look_up_name(name)
     matches = eatsml.get_entities()
     # If there are multiple matches, we're not in a position to chosee
     # among them, and if there are no matches there's no EATS id at
@@ -232,6 +261,7 @@ def get_entity_by_lookup (dispatcher, relationship):
     eats_id = None
     if len(matches) == 1:
         eats_id = matches[0].eats_id
+    LOOKUP_CACHE[name] = eats_id
     return eats_id
     
 def get_key (dispatcher, url):
