@@ -100,6 +100,8 @@ def get_names_from_entry (entry, entity_type):
         names = entry[3:]
     elif entity_type == 'term':
         names = entry[1:7]
+    elif entity_type in ('place', 'organization'):
+        names = entry[0:1]
     return [name.strip() for name in names if name.strip()]
 
 def get_translated_names_from_entry (entry, entity_type):
@@ -114,7 +116,7 @@ def get_profile_from_entry (entry, entity_type):
     """Return the profile name for the entry. The entity type
     determines the structure of the CSV file."""
     profile = ''
-    if entity_type in ('person', 'work'):
+    if entity_type in ('person', 'work', 'organization', 'place'):
         profile = entry[-1]
     return profile
 
