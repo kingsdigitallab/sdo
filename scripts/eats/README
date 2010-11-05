@@ -25,31 +25,50 @@ been put into Excel spreadsheets by Ian, supplemented by additional
 information, so these spreadsheets serve as the sole source of data
 for the creation of entities in EATS.
 
+(The exceptions here are places and organisations, which have profiles
+but no authority list. The Python script generate-csv-from-profiles.py
+generates CSV files from profiles.)
+
 The Python script create_entities_from_csv.py creates EATS entities
 from the data in a CSV file generated from one of these
 spreadsheets. It also renames the profile files to the EATS key, and
 changes the root xml:id to the same.
+
+The whole process can be run using the import-entities.sh shell
+script, which takes no arguments; just run it from this directory and
+it will do all the work.
 
 
       Keying the XML
 
 The source document XML files have some names already marked up as
 names. These need to be keyed, based off the name given in a comment
-either within or immediately following the name element.
+either within or immediately following the name element, or from an n
+attribute giving the spreadsheet id (for compositions and terms).
 
 The Python script key_entities.py performs this keying task, looking
 up the commented name in EATS and keying the name element if there is
 one and only one match found.
 
 This script should be run after the entities have been created in EATS
-from the CSV files.
+from the CSV files. It can be run as many times as desired, and can be
+run after new entities have been added to EATS, since it does not
+create anything in EATS, but only keys names that do not have keys.
 
 
       Notes
 
-Both scripts use the EATSML Python library that is part of
-EATS. Symlink or copy client/python/banquet/eatsml (from an EATS SVN
-working copy) to this directory to make its contents available.
+Both of the Python scripts use the EATSML Python library that is part
+of EATS. Symlink or copy client/python/banquet/eatsml (from an EATS
+SVN working copy) to this directory to make its contents available.
+
+In the case of musical terms and musical compositions, the EATS entity
+created has a name of type "list id" which is the spreadsheets
+ID. This is necessary because those entities are marked up in the TEI
+(and Word documents that will be the basis of future TEI documents)
+with an n attribute specifying this ID. The key_entities.py script
+handles these entities (and removes the n attribute when an entity is
+keyed).
 
 
       To do
