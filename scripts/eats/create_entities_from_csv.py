@@ -59,8 +59,9 @@ def main ():
                 profile = get_profile_from_entry(entry, entity_type)
                 relationships = get_entity_relationships_from_entry(
                     eats_data, entry, entity_type)
+                list_id = get_list_id_from_entry(entry, entity_type)
                 entry_data = {'names': names, 'profile': profile,
-                              'entity_type': entity_type,
+                              'entity_type': entity_type, 'list_id': list_id,
                               'translated_names': translated_names,
                               'relationships': relationships}
                 process_entry(dispatcher, eats_data, entry_data, profile_dir)
@@ -75,7 +76,9 @@ def get_eats_data (dispatcher):
     eats_data['entity_types'] = {}
     for entity_type in doc.get_entity_types():
         eats_data['entity_types'][unicode(entity_type)] = entity_type
-    eats_data['name_type'] = doc.get_name_types()[0]
+    eats_data['name_types'] = {}
+    for name_type in doc.get_name_types():
+        eats_data['name_types'][unicode(name_type)] = name_type
     eats_data['name_part_types'] = {}
     for name_part_type in doc.get_name_part_types():
         eats_data['name_part_types'][name_part_type.text] = name_part_type
@@ -103,6 +106,14 @@ def get_names_from_entry (entry, entity_type):
     elif entity_type in ('place', 'organization'):
         names = entry[0:1]
     return [name.strip() for name in names if name.strip()]
+
+def get_list_id_from_entry (entry, entity_type):
+    """Return a list id for the entry. The entity type determines the
+    structure of the CSV file."""
+    list_id = ''
+    if entity_type in ('composition', 'term'):
+        list_id = entry[0]
+    return list_id
 
 def get_translated_names_from_entry (entry, entity_type):
     """Return a list of translated names for the entry. The entity
@@ -168,10 +179,12 @@ def create_entity (dispatcher, eats_data, entry_data):
         id='new_entity_type_assertion', authority_record=authority_record,
         entity_type=eats_data['entity_types'][entity_type], is_preferred=True)
     names = entry_data['names']
-    add_names(entity, names, eats_data, authority_record, entity_type)
+    count = add_names(entity, names, eats_data, authority_record, entity_type)
     translated_names = entry_data['translated_names']
-    add_translated_names(entity, translated_names, eats_data, authority_record,
-                         len(names)+1)
+    count = add_translated_names(entity, translated_names, eats_data,
+                                 authority_record, count)
+    list_id_name = entry_data['list_id']
+    add_list_id_name(entity, list_id_name, eats_data, authority_record, count)
     relationships = entry_data['relationships']
     add_relationships(dispatcher, doc, entity, relationships, eats_data,
                       authority_record)
@@ -182,7 +195,8 @@ def create_entity (dispatcher, eats_data, entry_data):
     return url
     
 def add_names (entity, names, eats_data, authority_record, entity_type):
-    """Add names to entity."""
+    """Add names to entity and return the total count of how many
+    names have been added so far."""
     count = 1
     # The first name is the preferred one.
     is_preferred = True
@@ -192,21 +206,30 @@ def add_names (entity, names, eats_data, authority_record, entity_type):
                  is_preferred, entity_type, count)
         is_preferred = False
         count = count + 1
+    return count
 
 def add_translated_names (entity, names, eats_data, authority_record, count):
-    """Add translated names to entity."""
+    """Add translated names to entity and return the total count of
+    how many names have been added so far.."""
     is_preferred = False
     language = eats_data['languages']['English']
     for name in names:
         add_name(entity, name, language, authority_record, eats_data,
                  is_preferred, 'term', count)
         count = count + 1
-            
+    return count
+
+def add_list_id_name (entity, name, eats_data, authority_record, count):
+    is_preferred = False
+    language = eats_data['languages']['English']
+    add_name(entity, name, language, authority_record, eats_data, is_preferred,
+             None, count, 'list id')
+
 def add_name (entity, name, language, authority_record, eats_data, is_preferred,
-              entity_type, count):
+              entity_type, count, name_type_ref='regular'):
     """Add name to entity."""
     name = name.decode('utf-8')
-    name_type = eats_data['name_type']
+    name_type = eats_data['name_types'][name_type_ref]
     script = eats_data['scripts']['Latin']
     display_form = name
     name_parts = {}
