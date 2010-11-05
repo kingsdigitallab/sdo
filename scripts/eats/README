@@ -36,7 +36,9 @@ changes the root xml:id to the same.
 
 The whole process can be run using the import-entities.sh shell
 script, which takes no arguments; just run it from this directory and
-it will do all the work.
+it will do all the work. The profile files will have been renamed via
+Subversion and need to be committed once it is clear that the data in
+EATS is good.
 
 
       Keying the XML
@@ -54,6 +56,9 @@ This script should be run after the entities have been created in EATS
 from the CSV files. It can be run as many times as desired, and can be
 run after new entities have been added to EATS, since it does not
 create anything in EATS, but only keys names that do not have keys.
+
+Run this script over all of the XML files in
+xmod/webapp/root/xml/content/documents/ and its subdirectories.
 
 
       Notes
