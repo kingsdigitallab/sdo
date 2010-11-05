@@ -21,16 +21,16 @@
   <map:pipelines>
     <map:component-configurations>
       <global-variables>
-        <!-- SOLR TEST -->
-        <solr>http://localhost:8080/solr-SDO/select/</solr>
-      </global-variables>
+      	<eats-server>http://localhost:8000/</eats-server>
+        <solr-server>http://localhost:9999/solr/</solr-server>
+			</global-variables>
     </map:component-configurations>
 
     <!-- Mount sub-sitemaps. -->
     <map:pipeline>
       <!-- Main project-specific sitemap, matching on the remaining URL space.. -->
       <map:match pattern="**">
-        <map:mount check-reload="yes" src="main.xmap" uri-prefix="" />
+        <map:mount check-reload="yes" src="sitemap/xmod/" uri-prefix="" />
       </map:match>
     </map:pipeline>
   </map:pipelines>
