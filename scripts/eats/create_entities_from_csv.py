@@ -97,8 +97,10 @@ def get_names_from_entry (entry, entity_type):
     """Return a list of names for the entry. The entity type
     determines the structure of the CSV file."""
     names = []
-    if entity_type in ('person', 'work'):
+    if entity_type == 'person':
         names = entry[2:-1]
+    elif entity_type == 'work':
+        names = entry[3:-1]
     elif entity_type == 'composition':
         names = entry[3:]
     elif entity_type == 'term':
