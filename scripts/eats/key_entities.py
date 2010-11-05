@@ -25,6 +25,10 @@ GET_ORGANISATIONS = etree.XPath('//tei:orgName[not(@key)]', namespaces=NSMAP)
 GET_PLACES = etree.XPath('//tei:placeName[not(@key)]', namespaces=NSMAP)
 GET_TITLES = etree.XPath('//tei:rs[@type="title"][not(@key)]', namespaces=NSMAP)
 GET_WORKS = etree.XPath('//tei:rs[@type="work"][not(@key)]', namespaces=NSMAP)
+GET_TERMS = etree.XPath('//tei:rs[@type="musical-term"][not(@key)]',
+                        namespaces=NSMAP)
+GET_COMPOSITIONS = etree.XPath('//tei:rs[@type="musical-composition"][not(@key)]',
+                               namespaces=NSMAP)
 
 NAME = re.compile(r'^(\[D\S+\s+(?P<name1>[^\]]*)\])|(profile:\s+(?P<name2>.*))$')
 
@@ -46,7 +50,10 @@ def process_file (filename, dispatcher):
     places = GET_PLACES(tree)
     titles = GET_TITLES(tree)
     works = GET_WORKS(tree)
-    entities = people + organisations + places + titles + works
+    terms = GET_TERMS(tree)
+    compositions = GET_COMPOSITIONS(tree)
+    entities = people + organisations + places + titles + works + terms + \
+        compositions
     needs_save = False
     for entity in entities:
         try:
@@ -74,17 +81,29 @@ def key_element (dispatcher, element):
     # trying to find a matching entity.
     if len(comments) == 1:
         name = get_name(comments[0].text)
-        if name is None:
-            key = None
-        elif name in KEY_CACHE:
-            key = KEY_CACHE[name]
-        else:
-            key = get_key_from_lookup(dispatcher, name)
-            KEY_CACHE[name] = key
-        if key is not None:
-            element.set('key', key)
-            modified = True
+        modified = set_key(dispatcher, element, name)
+    elif element.get('n'):
+        name = element.get('n')
+        modified = set_key(dispatcher, element, name)
+        if modified:
+            del element.attrib['n']
     return modified
+
+def set_key (dispatcher, element, name):
+    """Set key, looking it up in the cache or in EATS. Return boolean
+    of whether the element has been modified."""
+    modified = False
+    if name is None:
+        key = None
+    elif name in KEY_CACHE:
+        key = KEY_CACHE[name]
+    else:
+        key = get_key_from_lookup(dispatcher, name)
+        KEY_CACHE[name] = key
+    if key is not None:
+        element.set('key', key)
+        modified = True
+    return modified    
 
 def get_key_from_lookup (dispatcher, name):
     """Return the key for the entity with name, or None if there is
@@ -115,7 +134,7 @@ def get_name (comment):
     >>> get_name('[DPl Kiev]')
     u'Kiev'
     >>> get_name(' profile: Café Vindobona ')
-    u'Caf\xe9 Vindobona'
+    u'Café Vindobona'
     
     """
     name = None
