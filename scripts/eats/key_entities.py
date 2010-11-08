@@ -12,9 +12,11 @@ from lxml import etree
 from eatsml.dispatcher import Dispatcher
 
 
-SERVER_URL = 'http://localhost:8000/eats/'
-USERNAME = 'jamie'
-PASSWORD = 'password'
+SERVER_URL = 'http://sdo-data.cch.kcl.ac.uk/eats/'
+USERNAME = 'cchguest'
+PASSWORD = 'guestcch'
+HTTP_USERNAME = ''
+HTTP_PASSWORD = ''
 
 TEI_NAMESPACE = 'http://www.tei-c.org/ns/1.0'
 NSMAP = {'tei': TEI_NAMESPACE}
@@ -35,7 +37,7 @@ NAME = re.compile(r'^(\[D\S+\s+(?P<name1>[^\]]*)\])|(profile:\s+(?P<name2>.*))$'
 KEY_CACHE = {}
 
 def main ():
-    dispatcher = Dispatcher(SERVER_URL, USERNAME, PASSWORD)
+    dispatcher = Dispatcher(SERVER_URL, USERNAME, PASSWORD, HTTP_USERNAME, HTTP_PASSWORD)
     dispatcher.login()
     filenames = []
     for arg in sys.argv[1:]:

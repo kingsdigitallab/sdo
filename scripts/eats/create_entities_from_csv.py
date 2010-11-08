@@ -17,9 +17,11 @@ DELIMITER = ','
 QUOTE_CHAR = '"'
 
 # EATS server details.
-SERVER_URL = 'http://localhost:8000/eats/'
-USERNAME = 'jamie'
-PASSWORD = 'password'
+SERVER_URL = 'http://sdo-data.cch.kcl.ac.uk/eats/'
+USERNAME = 'cchguest'
+PASSWORD = 'guestcch'
+HTTP_USERNAME = ''
+HTTP_PASSWORD = ''
 
 # EATS data names.
 AUTHORED_BY_REL_TYPE = 'is authored by'
@@ -39,7 +41,7 @@ def main ():
     if not os.path.isdir(profile_dir):
         print '%s does not exist.' % sys.argv[3]
         sys.exit(2)
-    dispatcher = Dispatcher(SERVER_URL, USERNAME, PASSWORD)
+    dispatcher = Dispatcher(SERVER_URL, USERNAME, PASSWORD, HTTP_USERNAME, HTTP_PASSWORD)
     dispatcher.login()
     eats_data = get_eats_data(dispatcher)
     csv_reader = csv.reader(open(sys.argv[2], 'rb'), delimiter=DELIMITER,
