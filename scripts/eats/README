@@ -58,8 +58,10 @@ run after new entities have been added to EATS, since it does not
 create anything in EATS, but only keys names that do not have keys.
 
 Run this script over all of the XML files in
-xmod/webapp/root/xml/content/documents/ and its subdirectories.
-
+xmod/webapp/root/xml/content/documents/ and its subdirectories, with
+  python key_entities .../xmod/webapp/root/xml/content/documents/*/*.xml
+and then commit the changed files after a check that names have been
+keyed.
 
       Notes
 
