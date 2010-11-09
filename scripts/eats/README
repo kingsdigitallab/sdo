@@ -87,6 +87,26 @@ keyed).
    adding "http_username" and "http_password" parameters to the
    creation of the dispatcher object.
 
+ + JMV: The db had to be changed to sqlite because the scripts for some
+	 unknown reason didn't work with mysql:
+
+	 - modify settings.py to use sqlite3 as the database type and change
+		 the database name to the full path of the database file.
+	 
+	 - python manage.py syncdb
+	 
+	 - python manage.py loaddata apps/eats/fixtures/eats-data.json
+
+	 - create users and associate their UserProfile with the SDO authority.
+
+	 - run scripts:
+			
+			1 ./import-entities.sh
+			2 check the profiles
+			3 commit changes to the xml
+			4 python key_profiles.py xml/content/documents/*/*.xml
+			5 commit changes to the xml
+
       To do
 
  * One of the works by J. S. Bach was specified in the spreadsheet as
