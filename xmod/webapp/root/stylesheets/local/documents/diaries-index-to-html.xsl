@@ -16,8 +16,6 @@
 
     <xsl:param name="menutop" select="'true'"/>
 
-    <xsl:key name="dateValue" match="str[@name='date']" use="."/>
-
     <xsl:variable name="xmg:title">
         <xsl:text>Browse Diaries by Date</xsl:text>
     </xsl:variable>

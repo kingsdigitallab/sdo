@@ -22,7 +22,8 @@
 
         <ul>
           <!-- Exclude the content directory from the path. -->
-          <xsl:apply-templates select="dir:directory/*" />
+          <!-- ORIG VERSION <xsl:apply-templates select="dir:directory/*" /> -->
+          <xsl:apply-templates select="dir:directory/*[@name='documents']" />
         </ul>
       </body>
     </html>
