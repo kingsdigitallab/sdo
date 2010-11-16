@@ -44,7 +44,7 @@
                             /></a>
                     </h2>
                     <p>
-                        <xsl:value-of select="child::str[@name='title']"/>
+                        <xsl:value-of select="child::str[@name='document-title']"/>
                         <br/>
                         <xsl:value-of select="child::str[@name='description']"/>
                     </p>
