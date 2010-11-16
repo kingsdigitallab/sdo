@@ -117,6 +117,20 @@
         </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
+      
+      <!-- by date, step 1: show a list of all dates for which there is an item of correspondence -->
+      <map:match pattern="documents/correspondence/corr_dates.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.xml"/>
+          <map:part src="cocoon://_internal/solr/query/q=date%3A*&amp;fq=kind%3Acorrespondence&amp;rows=5000&amp;fl=date,uniqueId,tag&amp;indent=on"/>
+        </map:aggregate>
+        <map:transform src="stylesheets/local/documents/corr-dates-list.xsl">
+          <map:parameter name="filedir" value="documents/correspondence"/>
+          <map:parameter name="filename" value="correspondence"/>
+          <map:parameter name="fileextension" value="html"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
 
       <!-- by name, step 2: after user clicks on a 'tag', show summaries of all items that have that tag  -->
       <map:match pattern="documents/correspondence/*.tag.html">
@@ -139,20 +153,6 @@
           <map:part src="xml/content/documents/correspondence/{1}.xml"/>
         </map:aggregate>
         <map:transform src="stylesheets/local/documents/corr-display-letter.xsl"/>
-        <map:serialize type="xhtml"/>
-      </map:match>
-  
-      <!-- by date, step 1: show a list of all dates for which there is an item of correspondence -->
-      <map:match pattern="documents/correspondence/corr_dates.html">
-        <map:aggregate element="aggregation">
-          <map:part src="cocoon://_internal/menu/main.xml"/>
-          <map:part src="cocoon://_internal/solr/query/q=date%3A*&amp;fq=kind%3Acorrespondence&amp;rows=5000&amp;fl=date,fileId,tag&amp;indent=on"/>
-        </map:aggregate>
-        <map:transform src="stylesheets/local/documents/corr-dates-list.xsl">
-          <map:parameter name="filedir" value="documents/correspondence"/>
-          <map:parameter name="filename" value="correspondence"/>
-          <map:parameter name="fileextension" value="html"/>
-        </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
       <!-- End browsing correspondence -->

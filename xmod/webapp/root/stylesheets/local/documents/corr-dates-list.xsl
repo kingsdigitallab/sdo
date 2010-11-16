@@ -40,11 +40,11 @@
                                     <xsl:value-of select="count(current-group())"/>
                                 </a>
                                 <ul>
-                                    <!-- group by day (usually just one item per day group, but occasionally there are two) -->
+                                    <!-- group by day (could be one item per day group, could be several) -->
                                     <xsl:for-each-group select="current-group()"
                                         group-by="substring(.,9,2)">  <xsl:variable name="myVal"
                                             select="."/> 
-                                        <!-- for 'identifier' variable below, because there are sometimes several diary entries on the same day--> 
+                                        <!-- for 'identifier' variable below, because there are sometimes several items on the same day--> 
                                         <!--  we must use subsequence() otherwise we'll sometimes be passing a sequence into --> 
                                         <!-- the substring() function for the 'url' variable, which XSLT won't accept. -->
                                         <xsl:variable name="identifier"
@@ -56,7 +56,7 @@
                                                 <xsl:value-of select="current-grouping-key()"/>
                                                 <xsl:if test="count(current-group()) > 1"><xsl:text> </xsl:text>
                                                     <xsl:value-of select="count(current-group())"
-                                                    /><xsl:text> entries</xsl:text></xsl:if>
+                                                    /><xsl:text> items</xsl:text></xsl:if>
                                             </a>
                                         </li>
                                     </xsl:for-each-group>
