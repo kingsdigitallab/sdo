@@ -63,6 +63,10 @@
           <field name="date">
             <xsl:value-of select="substring(child::sdo:itemDesc/dcterms:created, 1, 10)"/>
           </field>
+          
+          <field name="type">
+            <xsl:value-of select="replace(child::sdo:itemDesc/dc:type, ' ', '_')"/>
+          </field>
 
           <xsl:for-each select="child::sdo:itemDesc/dcterms:isPartOf">
             <field name="tag">
