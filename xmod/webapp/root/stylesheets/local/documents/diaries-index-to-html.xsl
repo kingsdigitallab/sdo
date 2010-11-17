@@ -23,7 +23,8 @@
 
     <xsl:template name="xms:content">
         <!-- group by year -->
-        <xsl:for-each-group select="//str[@name='date']" group-by="substring(.,1,4)">
+        <xsl:for-each-group select="/aggregation/response/result/doc/str[@name='date']" group-by="substring(.,1,4)">
+            <xsl:sort select="current-grouping-key()"/>
 
             <ul>
                 <li>
@@ -34,6 +35,7 @@
                     </a>
                     <!-- group by month -->
                     <xsl:for-each-group select="current-group()" group-by="substring(.,6,2)">
+                        <xsl:sort select="current-grouping-key()"/>
 
                         <ul>
                             <li>
@@ -45,13 +47,14 @@
                                 <ul>
                                     <!-- group by day (usually just one item per day group, but occasionally there are two) -->
                                     <xsl:for-each-group select="current-group()"
-                                        group-by="substring(.,9,2)">  <xsl:variable name="myVal"
+                                        group-by="substring(.,9,2)"> 
+                                        <xsl:sort select="current-grouping-key()"/> <xsl:variable name="myVal"
                                             select="."/> 
                                         <!-- for 'identifier' variable below, because there are sometimes several diary entries on the same day--> 
                                         <!--  we must use subsequence() otherwise we'll sometimes be passing a sequence into --> 
                                         <!-- the substring() function for the 'url' variable, which XSLT won't accept. -->
                                         <xsl:variable name="identifier"
-                                            select="subsequence(//doc/child::str[text()=$myVal]/following-sibling::str[@name='uniqueId'],1,1)"/>
+                                            select="subsequence(/aggregation/response/result/doc/child::str[text()=$myVal]/following-sibling::str[@name='uniqueId'],1,1)"/>
                                         <xsl:variable name="url"
                                             select="concat(substring($identifier,7), '/', $myVal)"/>
                                         <li>
