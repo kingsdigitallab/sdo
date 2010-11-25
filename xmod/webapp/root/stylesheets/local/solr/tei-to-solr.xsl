@@ -115,6 +115,7 @@
 
     </add>
   </xsl:template>
-
+  
+  <!-- Keep this here because we will be implementing it shortly. PC 25/11/2010 -->
   <xsl:template match="tei:*[@key]" mode="entity-mention"> </xsl:template>
 </xsl:stylesheet>
