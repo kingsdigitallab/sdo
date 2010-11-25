@@ -228,7 +228,6 @@
       </map:match>
 
       <map:match pattern="solr/next-prev/*.xml">
-        <!-- NB change the src below to use the solr query pipeline at /sitemap/xmod/sitemap.xmap line 163 -->
         <map:generate
           src="cocoon://_internal/solr/query/q=date%3A*&amp;fq=kind%3Adiary&amp;rows=5000&amp;fl=date,uniqueId&amp;indent=on"/>
         <map:transform src="stylesheets/local/documents/next-prev-links.xsl">
