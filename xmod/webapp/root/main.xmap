@@ -211,17 +211,17 @@
           />
         </map:aggregate>
         <map:transform src="stylesheets/local/documents/diaries-dates-list.xsl" type="saxon"/>
-
         <map:serialize type="xhtml"/>
       </map:match>
 
+      <!-- by date step 2: after user clicks on a particular item, display it-->
       <map:match pattern="documents/diaries/*/*">
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
           <map:part src="cocoon:/solr/next-prev/{2}.xml"/>
           <map:part src="xml/content/documents/diaries/{1}.xml"/>
         </map:aggregate>
-        <map:transform src="stylesheets/local/documents/diaries-to-html.xsl">
+        <map:transform src="stylesheets/local/documents/diaries-item-display.xsl">
           <map:parameter name="date" value="{2}"/>
         </map:transform>
         <map:serialize type="xhtml"/>
