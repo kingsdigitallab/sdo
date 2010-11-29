@@ -56,7 +56,7 @@
                                         <xsl:variable name="identifier"
                                             select="subsequence(/aggregation/response/result/doc/child::str[text()=$myVal]/following-sibling::str[@name='uniqueId'],1,1)"/>
                                         <xsl:variable name="url"
-                                            select="concat(substring($identifier,7), '/', $myVal)"/>
+                                            select="concat('diaries/', substring($identifier,7), '/', $myVal)"/>
                                         <li>
                                             <a href="{$url}">
                                                 <xsl:value-of select="current-grouping-key()"/>

@@ -7,10 +7,6 @@
 
   <xsl:param name="menutop" select="'true'"/>
 
-  <xsl:param name="filedir"/>
-  <xsl:param name="filename"/>
-  <xsl:param name="fileextension"/>
-
   <xsl:variable name="xmg:title"><xsl:text>Browse Correspondence By Name</xsl:text></xsl:variable>
   <xsl:variable name="root" select="/"/>
 
@@ -54,7 +50,7 @@
           <xsl:for-each select="current-group()">
             <xsl:sort select="."/>
             <li>
-              <a href="{concat(., '.tag.html')}">
+              <a href="{concat('correspondence/', ., '.tag.html')}">
                 <xsl:value-of select="replace(., '_', ' ~ ')"/>
               </a>
             </li>

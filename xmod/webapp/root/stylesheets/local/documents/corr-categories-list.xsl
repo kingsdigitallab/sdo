@@ -22,10 +22,11 @@
     <xsl:variable name="root" select="/"/>
 
     <xsl:template name="xms:content">
-        <!-- group by year -->
-        <xsl:for-each-group select="/aggregation/response/result/doc/str[@name='type']" group-by=".">
+        <!-- group by type 
+        <xsl:for-each-group select="/aggregation/response/result/doc/str[@name='type']" group-by="."> -->
+            <xsl:for-each-group select="/aggregation/response/result/doc/str[@name='type']" group-by=".">
             <xsl:sort select="current-grouping-key()"/>
-            <xsl:variable name="url" select="concat(current-grouping-key(), '.category.html')"/>
+            <xsl:variable name="url" select="concat('correspondence/', current-grouping-key(), '.category.html')"/>
             <ul>
                 <a href="{$url}">
                     <xsl:value-of select="replace(current-grouping-key(), '_', ' ')"/>
