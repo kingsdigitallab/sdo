@@ -426,23 +426,24 @@
        when adding a document.
    -->
 
-   <field name="kind" type="string" indexed="true" stored="true" required="true" />
+   <field name="kind" type="string" indexed="true" stored="true" />
    <field name="shelfmark" type="string" indexed="true" stored="true" />
    <field name="fileId" type="string" indexed="true" stored="true" required="true" />
    <field name="recordId" type="string" indexed="true" stored="true" required="true" />
    <field name="uniqueId" type="string" indexed="true" stored="true" required="true" />
    <field name="title" type="string" indexed="true" stored="true" />
    <field name="description" type="string" indexed="true" stored="true" />
-   <field name="date" type="string" indexed="true" stored="true" required="true" />
+   <field name="date" type="string" indexed="true" stored="true" />
    <field name="type" type="string" indexed="true" stored="true" required="false" />  
-   <field name="tag" multiValued="true" type="string" indexed="true" stored="true" /> 
-   <!-- xmod default fields below -->
-   <field indexed="true" multiValued="true" name="document-title" required="true" stored="true" type="text" />
-   <field indexed="true" multiValued="true" name="author" required="true" stored="true" type="text" />
-   <field indexed="true" multiValued="false" name="file" required="true" stored="true" type="string" />
-   <field indexed="false" multiValued="false" name="tei-id" required="true" stored="true" type="string" />
+   <field name="tag" multiValued="true" type="string" indexed="true" stored="true" />
+   <!-- xmod default fields below; for SDO these have all been made required="false" -->
+   <field indexed="true" multiValued="true" name="document-title" required="false" stored="true" type="text" />
+   <field indexed="true" multiValued="true" name="author" required="false" stored="true" type="text" />
+   <field indexed="true" multiValued="false" name="file" required="false" stored="true" type="string" />
+   <field indexed="false" multiValued="false" name="tei-id" required="false" stored="true" type="string" />
    <field indexed="false" multiValued="false" name="section-id" required="false" stored="true" type="string" />
-   <field indexed="true" multiValued="false" name="entity-key" required="false" stored="true" type="string" />
+   <!-- for SDO index we make the entity-key field multiValued="true", where the default is "false" -->
+   <field indexed="true" multiValued="true" name="entity-key" required="false" stored="true" type="string" />
    <field indexed="true" multiValued="false" name="entity-name" required="false" stored="true" type="text" />
    <field indexed="true" multiValued="false" name="eats-entity-name" required="false" stored="true" type="text" /> 
    

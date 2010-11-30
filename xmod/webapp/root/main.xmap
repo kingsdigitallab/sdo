@@ -238,7 +238,7 @@
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
           <map:part
-            src="cocoon://_internal/solr/query/q=date%3A*&amp;fq=kind%3Alessonbook&amp;rows=5000&amp;fl=date,uniqueId&amp;indent=on"
+            src="cocoon://_internal/solr/query/q=date%3A*&amp;fq=kind%3Alessonbook&amp;rows=5000&amp;fl=fileId,uniqueId&amp;indent=on"
           />
         </map:aggregate>
         <map:transform src="stylesheets/local/documents/lb-dates-list.xsl" type="saxon"/>
@@ -246,16 +246,8 @@
       </map:match>
       
       <!-- by pupil, step 1: show alphabetical list of all pupils -->
-      <map:match pattern="documents/lessonbooks_pupils.html">
-        <map:aggregate element="aggregation">
-          <map:part src="cocoon://_internal/menu/main.xml"/>
-          <map:part
-            src="cocoon://_internal/solr/query/q=date%3A*&amp;fq=kind%3Alessonbook&amp;rows=5000&amp;fl=date,uniqueId&amp;indent=on"
-          />
-        </map:aggregate>
-        <map:transform src="stylesheets/local/documents/lb-dates-list.xsl" type="saxon"/>
-        <map:serialize type="xhtml"/>
-      </map:match>
+      
+      
       
       <!-- by date step 2: after user clicks on a particular item, display it
       <map:match pattern="documents/lessonbooks/*/*">

@@ -11,29 +11,35 @@
       <xd:p><xd:b>Created on:</xd:b> Nov 15, 2010</xd:p>
       <xd:p><xd:b>Author:</xd:b> pcaton</xd:p>
       <xd:p>This stylesheet is the local version of the default ../../xmod/solr/tei-to-solr.xsl. It
-        has been heavily customised for SDO and currently overrides practically everything in the default.</xd:p>
+        has been heavily customised for SDO and currently overrides practically everything in the
+        default. Like the default, though, we create one <doc/> that is largely metadata and
+        another <doc/> that has text for word searching.</xd:p>
     </xd:desc>
   </xd:doc>
 
-  <xsl:variable name="document-metadata"> </xsl:variable>
-
-  <xsl:variable name="free-text"> </xsl:variable>
-
   <xsl:template match="/">
     <add>
-      <xsl:for-each select="//sdo:record"> <!-- each individual sdo:record will be a Solr doc -->
+      <!-- each Solr doc is based on a single sdo:record -->
+      <xsl:for-each select="//sdo:record">
+        <!-- $kind refers to whether it is correspondence, diary, etc. -->
+        <xsl:variable name="kind"
+          select="local-name(preceding-sibling::sdo:collectionDesc/sdo:source/child::*[1])"/>
         <xsl:variable name="fileID"
           select="preceding-sibling::sdo:collectionDesc/sdo:source/child::*[1]/@sdoID"/>
+        <xsl:variable name="shelfmark"
+          select="preceding-sibling::sdo:collectionDesc/sdo:source/child::*[1]"/>
         <xsl:variable name="recordID" select="@ID"/>
+        <!-- record IDs are not unique across the whole set, so we bodge up a unique identifier -->
+        <xsl:variable name="uniqueID" select="concat($recordID, '_', $fileID)"/> 
+        
+        <!-- begin the metadata <doc> -->
         <doc>
           <field name="kind">
-            <!-- whether it is correspondence, diary, etc. -->
-            <xsl:value-of
-              select="local-name(preceding-sibling::sdo:collectionDesc/sdo:source/child::*[1])"/>
+            <xsl:value-of select="$kind"/>
           </field>
 
           <field name="shelfmark">
-            <xsl:value-of select="preceding-sibling::sdo:collectionDesc/sdo:source/child::*[1]"/>
+            <xsl:value-of select="$shelfmark"/>
           </field>
 
           <field name="fileId">
@@ -45,12 +51,10 @@
           </field>
 
           <field name="uniqueId">
-            <!-- Solr schema will use this field to uniquely identify records -->
-            <xsl:value-of select="concat($recordID, '_', $fileID)"/>
+            <xsl:value-of select="$uniqueID"/>
           </field>
 
-          <xsl:if
-            test="local-name(preceding-sibling::sdo:collectionDesc/sdo:source/child::*[1]) = 'correspondence'">
+          <xsl:if test="$kind = 'correspondence'">
             <field name="title">
               <xsl:value-of select="child::sdo:itemDesc/dc:title"/>
             </field>
@@ -63,7 +67,7 @@
           <field name="date">
             <xsl:value-of select="substring(child::sdo:itemDesc/dcterms:created, 1, 10)"/>
           </field>
-          
+
           <field name="type">
             <xsl:value-of select="replace(child::sdo:itemDesc/dc:type, ' ', '_')"/>
           </field>
@@ -78,44 +82,20 @@
             <xsl:value-of select="$file-path"/>
           </field>
 
-          <field name="document-title">
-            <xsl:text>NULL</xsl:text>
-          </field>
-
-          <field name="author">
-            <xsl:text>NULL</xsl:text>
-          </field>
-
-          <field name="tei-id">
-            <xsl:text>NULL</xsl:text>
-          </field>
-
-          <field name="section-id">
-            <xsl:text>NULL</xsl:text>
-          </field>
-
-          <field name="entity-key">
-            <xsl:text>NULL</xsl:text>
-          </field>
-
-          <field name="entity-name">
-            <xsl:text>NULL</xsl:text>
-          </field>
-
-          <field name="eats-entity-name">
-            <xsl:text>NULL</xsl:text>
-          </field>
+          <xsl:for-each select="distinct-values(descendant::tei:*[@key]/@key)">
+            <field name="entity-key">
+              <xsl:value-of select="."/>
+            </field>
+          </xsl:for-each>
+          
+          <!-- <field name="content">
+            <xsl:value-of select="normalize-space(child::tei:div)" />
+          </field> -->
 
         </doc>
       </xsl:for-each>
 
-
-
-
-
     </add>
   </xsl:template>
   
-  <!-- Keep this here because we will be implementing it shortly. PC 25/11/2010 -->
-  <xsl:template match="tei:*[@key]" mode="entity-mention"> </xsl:template>
 </xsl:stylesheet>
