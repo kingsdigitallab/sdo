@@ -30,18 +30,17 @@
 
     <xsl:template name="xms:content">
         <h2><xsl:value-of select="$expanded_tag"></xsl:value-of></h2>
-        <ul>
+       <ul>
             
             <xsl:for-each select="/aggregation/response/result/doc">
-                <xsl:sort select="child::arr[@name='date']/child::str[1]"/>
                 <xsl:variable name="filename" select="child::str[@name='fileId']"/>
+                <xsl:sort select="child::str[@name='date']"/>
                 <li>
                     <h2>
-                        <a href="{$filename}.html"><xsl:value-of
+                        <a href="{concat($filename, '/', $tag, '.tag.', child::str[@name='date'])}"><xsl:value-of
                             select="child::str[@name='shelfmark']"/>
                             <xsl:text> : </xsl:text>
-                            <xsl:value-of select="child::arr[@name='date']/child::str[1]"
-                            /></a>
+                            <xsl:value-of select="child::str[@name='date']"/></a>
                     </h2>
                     <p>
                         <xsl:value-of select="child::str[@name='title']"/>

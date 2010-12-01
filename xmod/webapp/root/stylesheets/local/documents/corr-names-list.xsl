@@ -50,7 +50,7 @@
           <xsl:for-each select="current-group()">
             <xsl:sort select="."/>
             <li>
-              <a href="{concat('correspondence/', ., '.tag.html')}">
+              <a href="{concat('correspondence/', ., '.tag')}">
                 <xsl:value-of select="replace(., '_', ' ~ ')"/>
               </a>
             </li>
