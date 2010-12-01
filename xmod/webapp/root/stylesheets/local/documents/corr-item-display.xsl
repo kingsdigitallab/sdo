@@ -7,17 +7,27 @@
     <xsl:import href="../default.xsl"/>
 
     <xsl:param name="menutop" select="'true'"/>
-
-    <xsl:param name="filedir"/>
-    <xsl:param name="filename"/>
-    <xsl:param name="fileextension"/>
+    
+    <xsl:variable name="prevLink" select="//prevLink" />
+    <xsl:variable name="nextLink" select="//nextLink" />
 
     <xsl:template name="xms:pagehead">
         <div class="pageHeader">
             <div class="t01">
                 <h1>
-                    <!-- below will change to use a passed in parameter for the specific tag -->
-                    <xsl:text>[will have all applicable tags, with appropriate NEXT and PREV links] </xsl:text>
+                    <xsl:choose>
+                        <xsl:when test="$prevLink">
+                            <a href="{$prevLink}">prev</a>
+                        </xsl:when>
+                        <xsl:otherwise>prev</xsl:otherwise>
+                    </xsl:choose>
+                    <xsl:text> | </xsl:text>
+                    <xsl:choose>
+                        <xsl:when test="$nextLink">
+                            <a href="{$nextLink}">next</a>
+                        </xsl:when>
+                        <xsl:otherwise>next</xsl:otherwise>
+                    </xsl:choose>
                 </h1>
                 <h2 class="documentDisplay"><xsl:value-of select="//sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]"/>: [date here]</h2>             
                 <h3 class="documentDisplay"><xsl:value-of select="//sdo:recordCollection/sdo:record/sdo:itemDesc/dc:title"/></h3>

@@ -18,7 +18,6 @@
         <xsl:text>Browse Correspondence By Date</xsl:text>
     </xsl:variable>
     <xsl:variable name="root" select="/"/>
-    <!-- <xsl:variable name="expanded_tag" select="replace($tag, '_', ' ~ ')"/> -->
     
     <xsl:template name="xms:content">
         <h2><xsl:value-of select="$date"/></h2>
@@ -29,7 +28,7 @@
                 <xsl:variable name="filename" select="child::str[@name='fileId']"/>
                 <li>
                     <h2>
-                        <a href="{$filename}.html"><xsl:value-of
+                        <a href="{concat($filename, '/', $date, '.date')}"><xsl:value-of
                             select="child::str[@name='shelfmark']"/>
                             <xsl:text> : </xsl:text>
                             <xsl:value-of select="replace(child::arr[@name='tag']/child::str[1], '_', ' ~ ')"
