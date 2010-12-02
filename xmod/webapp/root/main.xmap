@@ -102,55 +102,7 @@
         </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
-
-      <!-- BROWSING CORRESPONDENCE BY DATE-->
-      <!-- step 1: show a list of all dates for which there is an item of correspondence -->
-      <map:match pattern="documents/corr_dates.html">
-        <map:aggregate element="aggregation">
-          <map:part src="cocoon://_internal/menu/main.xml"/>
-          <map:part
-            src="cocoon://_internal/solr/query/q=date%3A*&amp;fq=kind%3Acorrespondence&amp;rows=5000&amp;fl=date,uniqueId,tag&amp;indent=on"
-            label="xml"/>
-        </map:aggregate>
-        <map:transform src="stylesheets/local/documents/corr-dates-list.xsl"> </map:transform>
-        <map:serialize type="xhtml"/>
-      </map:match>
-
-      <!-- corr by date, step 2: after user clicks on a date, show summaries of all items that have that date -->  
-      <map:match pattern="documents/correspondence/*.date.html">
-        <map:aggregate element="aggregation">
-          <map:part src="cocoon://_internal/menu/main.xml"/>
-          <map:part
-            src="cocoon://_internal/solr/query/q=date%3A{1}&amp;fq=kind%3Acorrespondence&amp;rows=5000&amp;fl=tag,fileId,date,title,description,shelfmark&amp;indent=on"
-          />
-        </map:aggregate>
-        <map:transform src="stylesheets/local/documents/corr-date-items.xsl">
-          <map:parameter name="date" value="{1}"/>
-        </map:transform>
-        <map:serialize type="xhtml"/>
-      </map:match>
-
-      <!-- corr by date, step 3: after user clicks on a particular item, display it -->
-      <map:match pattern="documents/correspondence/*/*.date">
-        <map:aggregate element="aggregation">
-          <map:part src="cocoon://_internal/menu/main.xml"/>
-          <map:part src="cocoon:/solr/next-prev/{2}.corr.date.xml"/>
-          <map:part src="xml/content/documents/correspondence/{1}.xml"/>
-        </map:aggregate>
-        <map:transform src="stylesheets/local/documents/corr-item-display.xsl"/>
-        <map:serialize type="xhtml"/>
-      </map:match>
-
-      <map:match pattern="solr/next-prev/*.corr.date.xml">
-        <map:generate
-          src="cocoon://_internal/solr/query/q=date%3A*&amp;fq=kind%3Acorrespondence&amp;rows=5000&amp;fl=date,uniqueId&amp;indent=on"/>
-        <map:transform src="stylesheets/local/documents/corr-next-prev-by-date.xsl">
-          <map:parameter name="date" value="{1}"/>
-        </map:transform>
-        <map:serialize type="xml"/>
-      </map:match>
-      <!-- END BROWSING CORRESPONDENCE BY DATE ************************************************************************** -->
-
+      
       <!-- BROWSING CORRESPONDENCE BY NAME -->
       <!-- by name, step 1: show an alphabetical list of the 'tags' with correspondents' names -->
       <map:match pattern="documents/corr_names.html">
@@ -163,9 +115,10 @@
         <map:transform src="stylesheets/local/documents/corr-names-list.xsl"> </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
-
-      <!-- corr by name, step 2: after user clicks on a 'tag', show summaries of all items that have that tag  -->
-      <map:match pattern="documents/correspondence/*.tag">
+      
+      <!-- corr by name, step 2: after user clicks on a 'tag', show summary of all items that have that tag  -->
+      <!-- <map:match pattern="documents/correspondence/*.tag"> -->
+      <map:match pattern="documents/correspondence/name/summary.*">
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
           <map:part
@@ -177,9 +130,9 @@
         </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
-
+      
       <!-- corr by name, step 3: after user clicks on a particular item, display it -->
-      <map:match pattern="documents/correspondence/*/*.tag.*">
+      <map:match pattern="documents/correspondence/name/*.*.*">
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
           <map:part src="cocoon:/solr/next-prev/{2}.corr.name.{3}"/>
@@ -198,9 +151,58 @@
         <map:serialize type="xml"/>
       </map:match>
       <!-- END BROWSING CORRESPONDENCE BY NAME ************************************************************************** -->
+      
 
+      <!-- BROWSING CORRESPONDENCE BY DATE-->
+      <!-- step 1: show a list of all dates for which there is an item of correspondence -->
+      <map:match pattern="documents/corr_dates.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.xml"/>
+          <map:part
+            src="cocoon://_internal/solr/query/q=date%3A*&amp;fq=kind%3Acorrespondence&amp;rows=5000&amp;fl=date,uniqueId,tag&amp;indent=on"
+            label="xml"/>
+        </map:aggregate>
+        <map:transform src="stylesheets/local/documents/corr-dates-list.xsl"/> 
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <!-- corr by date, step 2: after user clicks on a date, show summary of all items that have that date -->  
+      <map:match pattern="documents/correspondence/date/summary.*">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.xml"/>
+          <map:part
+            src="cocoon://_internal/solr/query/q=date%3A{1}&amp;fq=kind%3Acorrespondence&amp;rows=5000&amp;fl=tag,fileId,date,title,description,shelfmark&amp;indent=on"
+          />
+        </map:aggregate>
+        <map:transform src="stylesheets/local/documents/corr-date-items.xsl">
+          <map:parameter name="date" value="{1}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <!-- corr by date, step 3: after user clicks on a particular item, display it -->
+      <map:match pattern="documents/correspondence/date/*.*">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.xml"/>
+          <map:part src="cocoon:/solr/next-prev/{2}.corr.date.xml"/>
+          <map:part src="xml/content/documents/correspondence/{1}.xml"/>
+        </map:aggregate>
+        <map:transform src="stylesheets/local/documents/corr-item-display.xsl"/>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <map:match pattern="solr/next-prev/*.corr.date.xml">
+        <map:generate
+          src="cocoon://_internal/solr/query/q=date%3A*&amp;fq=kind%3Acorrespondence&amp;rows=5000&amp;fl=date,uniqueId&amp;indent=on"/>
+        <map:transform src="stylesheets/local/documents/corr-next-prev-by-date.xsl">
+          <map:parameter name="date" value="{1}"/>
+        </map:transform>
+        <map:serialize type="xml"/>
+      </map:match>
+      <!-- END BROWSING CORRESPONDENCE BY DATE ************************************************************************** -->
+      
       <!-- BROWSING CORRESPONDENCE BY CATEGORY -->
-      <!-- step 1: show a list of all categories to each of which belongs at least one item of correspondence 
+      <!-- step 1: show a list of all categories to each of which belongs at least one item of correspondence --> 
       <map:match pattern="documents/corr_categories.html">
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
@@ -210,10 +212,10 @@
         </map:aggregate>
         <map:transform src="stylesheets/local/documents/corr-categories-list.xsl"> </map:transform>
         <map:serialize type="xhtml"/>
-      </map:match> -->
+      </map:match>
 
-      <!-- corr by category, step 2: after user clicks on a category, show summaries of all items that belong to that category  
-      <map:match pattern="documents/correspondence/*.category.html">
+      <!-- corr by category, step 2: after user clicks on a category, show summaries of all items that belong to that category -->  
+      <map:match pattern="documents/correspondence/category/summary.*">
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
           <map:part
@@ -224,17 +226,28 @@
           <map:parameter name="type" value="{1}"/>
         </map:transform>
         <map:serialize type="xhtml"/>
-      </map:match> -->
+      </map:match>
 
-      <!-- corr by category, step 3: after user clicks on a particular item, display it
-      <map:match pattern="documents/correspondence/*.html">
+      <!-- corr by category, step 3: after user clicks on a particular item, display it -->
+      <map:match pattern="documents/correspondence/category/*.*.*"><!-- filename.category.date -->
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
+          <map:part src="cocoon:/solr/next-prev/{2}.corr.category.{3}"/>
           <map:part src="xml/content/documents/correspondence/{1}.xml"/>
         </map:aggregate>
         <map:transform src="stylesheets/local/documents/corr-item-display.xsl"/>
         <map:serialize type="xhtml"/>
-      </map:match> -->
+      </map:match>
+      
+      <map:match pattern="solr/next-prev/*.corr.category.*">
+        <map:generate
+          src="cocoon://_internal/solr/query/q=type%3A{1}&amp;fq=kind%3Acorrespondence&amp;rows=5000&amp;fl=date,uniqueId&amp;indent=on"/>
+        <map:transform src="stylesheets/local/documents/corr-next-prev-by-category.xsl">
+          <map:parameter name="type" value="{1}"/>
+          <map:parameter name="date" value="{2}"/>
+        </map:transform>
+        <map:serialize type="xml"/>
+      </map:match>
       <!-- END BROWSING CORRESPONDENCE BY CATEGORY ********************************************************************** -->
 
       <!-- BROWSING DIARIES -->
