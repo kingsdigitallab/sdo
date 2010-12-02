@@ -37,7 +37,7 @@
                 <xsl:sort select="child::str[@name='date']"/>
                 <li>
                     <h2>
-                        <a href="{concat($filename, '/', $tag, '.tag.', child::str[@name='date'])}"><xsl:value-of
+                        <a href="{concat($filename, '.', $tag, '.', child::str[@name='date'])}"><xsl:value-of
                             select="child::str[@name='shelfmark']"/>
                             <xsl:text> : </xsl:text>
                             <xsl:value-of select="child::str[@name='date']"/></a>

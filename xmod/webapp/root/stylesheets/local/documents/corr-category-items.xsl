@@ -33,14 +33,14 @@
         <ul>
             
             <xsl:for-each select="/aggregation/response/result/doc">
-                <xsl:sort select="child::arr[@name='date']/child::str[1]"/>
+                <xsl:sort select="child::str[@name = 'date']"/>
                 <xsl:variable name="filename" select="child::str[@name='fileId']"/>
                 <li>
                     <h2>
-                        <a href="{$filename}.html"><xsl:value-of
+                        <a href="{concat($filename, '.', $type, '.', child::str[@name = 'date'])}"><xsl:value-of
                             select="child::str[@name='shelfmark']"/>
                             <xsl:text> : </xsl:text>
-                            <xsl:value-of select="child::arr[@name='date']/child::str[1]"
+                            <xsl:value-of select="child::str[@name = 'date']"
                             /></a>
                     </h2>
                     <p>
