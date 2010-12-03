@@ -25,7 +25,7 @@
         <!-- group by type -->
             <xsl:for-each-group select="/aggregation/response/result/doc/str[@name='type']" group-by=".">
             <xsl:sort select="current-grouping-key()"/>
-            <xsl:variable name="url" select="concat('correspondence/category/summary.', current-grouping-key())"/>
+            <xsl:variable name="url" select="concat('correspondence/category/summary/', current-grouping-key())"/>
             <ul>
                 <a href="{$url}">
                     <xsl:value-of select="replace(current-grouping-key(), '_', ' ')"/>

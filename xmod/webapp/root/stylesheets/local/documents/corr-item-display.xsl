@@ -16,14 +16,14 @@
             <div class="t01">
                 <h1>
                     <xsl:choose>
-                        <xsl:when test="$prevLink">
+                        <xsl:when test="$prevLink != 'NULL'">
                             <a href="{$prevLink}">prev</a>
                         </xsl:when>
                         <xsl:otherwise>prev</xsl:otherwise>
                     </xsl:choose>
                     <xsl:text> | </xsl:text>
                     <xsl:choose>
-                        <xsl:when test="$nextLink">
+                        <xsl:when test="$nextLink != 'NULL'">
                             <a href="{$nextLink}">next</a>
                         </xsl:when>
                         <xsl:otherwise>next</xsl:otherwise>

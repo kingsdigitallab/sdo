@@ -15,10 +15,9 @@
 
   <xsl:param name="menutop" select="'true'" />
   <xsl:param name="date" />
-  <xsl:variable name="prevDate" select="//prevDate" />
-  <xsl:variable name="prevFile" select="//prevFile" />
-  <xsl:variable name="nextDate" select="//nextDate" />
-  <xsl:variable name="nextFile" select="//nextFile" />
+  
+  <xsl:variable name="prevLink" select="//prevLink" />
+  <xsl:variable name="nextLink" select="//nextLink" />
   <xsl:variable name="record" select="//sdo:recordCollection/sdo:record[descendant::dcterms:created = $date]" />
 
   <xsl:template name="xms:pagehead">
@@ -26,15 +25,15 @@
       <div class="t01">
         <h1>
           <xsl:choose>
-            <xsl:when test="$prevFile and $prevDate">
-              <a href="{concat('../', $prevFile, '/', $prevDate)}">prev</a>
+            <xsl:when test="$prevLink != 'NULL'">
+              <a href="{$prevLink}">prev</a>
             </xsl:when>
             <xsl:otherwise>prev</xsl:otherwise>
           </xsl:choose>
           <xsl:text> | </xsl:text>
           <xsl:choose>
-            <xsl:when test="$nextFile and $nextDate">
-              <a href="{concat('../', $nextFile, '/', $nextDate)}">next</a>
+            <xsl:when test="$nextLink != 'NULL'">
+              <a href="{$nextLink}">next</a>
             </xsl:when>
             <xsl:otherwise>next</xsl:otherwise>
           </xsl:choose>

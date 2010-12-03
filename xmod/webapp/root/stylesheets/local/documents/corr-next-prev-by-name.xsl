@@ -2,7 +2,7 @@
     xmlns:xmg="http://www.cch.kcl.ac.uk/xmod/global/1.0"
     xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    
+
     <xd:doc scope="stylesheet">
         <xd:desc>
             <xd:p><xd:b>Created on:</xd:b> 01 December, 2010</xd:p>
@@ -19,21 +19,20 @@
             </xd:p>
         </xd:desc>
     </xd:doc>
-    
+
     <xsl:param name="file"/>
-    
+    <xsl:param name="tag"/>
+
     <xsl:template match="/">
         <nextprev>
             <xsl:for-each select="//doc">
                 <xsl:variable name="filename" select="child::str[@name='fileId']"/>
                 <xsl:choose>
                     <xsl:when test="$filename = $file">
-                        
-                        <xsl:variable name="prevDate"
-                            select="preceding-sibling::doc[1]/child::str[@name = 'date']"/>
+
                         <xsl:variable name="prevFile"
                             select="preceding-sibling::doc[1]/child::str[@name = 'fileId']"/>
-                        
+
                         <prevLink>
                             <xsl:choose>
                                 <xsl:when test="string($prevFile) = ''">
@@ -41,17 +40,15 @@
                                 </xsl:when>
                                 <xsl:otherwise>
                                     <xsl:value-of
-                                        select="concat('../', $prevDate, '/', $prevFile)"
+                                        select="concat('../', $tag, '/', $prevFile)"
                                     />
                                 </xsl:otherwise>
                             </xsl:choose>
                         </prevLink>
-                        
-                        <xsl:variable name="nextDate"
-                            select="following-sibling::doc[1]/child::str[@name = 'date']"/>
+
                         <xsl:variable name="nextFile"
-                                select="following-sibling::doc[1]/child::str[@name = 'fileId']"/>
-                        
+                            select="following-sibling::doc[1]/child::str[@name = 'fileId']"/>
+
                         <nextLink>
                             <xsl:choose>
                                 <xsl:when test="string($nextFile) = ''">
@@ -59,7 +56,7 @@
                                 </xsl:when>
                                 <xsl:otherwise>
                                     <xsl:value-of
-                                        select="concat('../', $nextDate, '/', $nextFile)"
+                                        select="concat('../', $tag, '/', $nextFile)"
                                     />
                                 </xsl:otherwise>
                             </xsl:choose>

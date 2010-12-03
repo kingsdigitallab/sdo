@@ -37,7 +37,7 @@
                 <xsl:variable name="filename" select="child::str[@name='fileId']"/>
                 <li>
                     <h2>
-                        <a href="{concat($filename, '.', $type, '.', child::str[@name = 'date'])}"><xsl:value-of
+                        <a href="{concat('../', $type, '/', $filename)}"><xsl:value-of
                             select="child::str[@name='shelfmark']"/>
                             <xsl:text> : </xsl:text>
                             <xsl:value-of select="child::str[@name = 'date']"

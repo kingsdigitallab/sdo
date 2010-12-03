@@ -21,31 +21,50 @@
     </xd:doc>
     
     <xsl:param name="type"/>
-    <xsl:param name="date"/>
+    <xsl:param name="file"/>
     
-    <xsl:template match="/response/result/doc[str[@name = 'date'][. = $date]][1]"><!-- match the item currently being displayed -->
+    <xsl:template match="/">
         <nextprev>
-            
-            <xsl:variable name="prevDate"
-                select="preceding-sibling::doc[child::str[@name = 'date'] != $date][1]/str[@name = 'date']"/>
-            
-            <xsl:variable name="prevFile"
-                select="substring(preceding-sibling::doc[child::str[@name = 'date'] != $date][1]/str[@name = 'uniqueId'], 7)"/>
-            
-            <prevLink>
-                <xsl:value-of select="concat('../category/', $prevFile, '.', $type, '.', $prevDate)"/>
-            </prevLink>
-            
-            <xsl:variable name="nextDate"
-                select="following-sibling::doc[child::str[@name = 'date'] != $date][1]/child::str[@name = 'date'][1]"/>
-            
-            <xsl:variable name="nextFile"
-                select="substring(following-sibling::doc[child::str[@name = 'date'] != $date][1]/child::str[@name = 'uniqueId'], 7)"/>
-            
-            <nextLink>
-                <xsl:value-of select="concat('../category/', $nextFile, '.', $type, '.', $nextDate)"/>
-            </nextLink>
-            
+            <xsl:for-each select="//doc">
+                <xsl:variable name="filename" select="child::str[@name='fileId']"/>
+                <xsl:choose>
+                    <xsl:when test="$filename = $file">
+                        
+                        <xsl:variable name="prevFile"
+                            select="preceding-sibling::doc[1]/child::str[@name = 'fileId']"/>
+                        
+                        <prevLink>
+                            <xsl:choose>
+                                <xsl:when test="string($prevFile) = ''">
+                                    <xsl:text>NULL</xsl:text>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:value-of
+                                        select="concat('../', $type, '/', $prevFile)"
+                                    />
+                                </xsl:otherwise>
+                            </xsl:choose>
+                        </prevLink>
+                        
+                        <xsl:variable name="nextFile"
+                            select="following-sibling::doc[1]/child::str[@name = 'fileId']"/>
+                        
+                        <nextLink>
+                            <xsl:choose>
+                                <xsl:when test="string($nextFile) = ''">
+                                    <xsl:text>NULL</xsl:text>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:value-of
+                                        select="concat('../', $type, '/', $nextFile)"
+                                    />
+                                </xsl:otherwise>
+                            </xsl:choose>
+                        </nextLink>
+                    </xsl:when>
+                    <xsl:otherwise/>
+                </xsl:choose>
+            </xsl:for-each>
         </nextprev>
     </xsl:template>
 </xsl:stylesheet>
