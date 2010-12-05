@@ -22,742 +22,1145 @@
          <tei:handNote xml:id="unknown">Unknown hand</tei:handNote>
       </tei:handNotes>
       <!-- Add additional or remove unnecessary statements of responsiblity as needed below -->
-<tei:respStmt xml:id="IB">
-         <tei:persName>Marko Deisinger</tei:persName>
-         <tei:resp>Footnotes</tei:resp>
-      </tei:respStmt>
-      <tei:respStmt xml:id="MD">
-         <tei:persName>Marko Deisinger</tei:persName>
-         <tei:resp>Transcription</tei:resp>
-      </tei:respStmt>
-      <tei:respStmt xml:id="XX">
-         <tei:persName>[Insert Translator's Name Here]</tei:persName>
-         <tei:resp>English Translation</tei:resp>
-      </tei:respStmt>
-      <tei:respStmt xml:id="IJV">
-         <tei:persName>Iby-Jolande Varga</tei:persName>
-         <tei:resp>XML Encoding</tei:resp>
-      </tei:respStmt>
-      <tei:respStmt xml:id="TL">
-         <tei:persName>Tamara Lopez</tei:persName>
-         <tei:resp>XML Encoding Model</tei:resp>
-      </tei:respStmt>
+   <tei:respStmt xml:id="MD">
+      <tei:persName>Marko Deisinger</tei:persName>
+      <tei:resp>Transcription</tei:resp>
+      <tei:resp>Footnotes</tei:resp>
+   </tei:respStmt>
+   <tei:respStmt xml:id="SW">
+      <tei:persName>Scott Witmer</tei:persName>
+      <tei:resp>English Translation</tei:resp>
+   </tei:respStmt>
+   <tei:respStmt xml:id="IJV">
+      <tei:persName>Iby-Jolande Varga</tei:persName>
+      <tei:resp>XML Encoding</tei:resp>
+   </tei:respStmt>
+   <tei:respStmt xml:id="TL">
+      <tei:persName>Tamara Lopez</tei:persName>
+      <tei:resp>XML Encoding Model</tei:resp>
+   </tei:respStmt>
       <!-- Add additional change elements below to note major changes to the document -->
 <tei:revisionDesc>
          <tei:change when="2008-10-17" who="#TL">Template Generated</tei:change>
       </tei:revisionDesc>
-   </sdo:collectionDesc>
+</sdo:collectionDesc>
+   
    <sdo:record ID="r0001">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-01</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-01">1. März 1922</tei:date>. Schön, <tei:measure type="temperature" unit="celsius">+10°</tei:measure>.  
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0001-se01"><tei:milestone unit="section" rend="inline em-dash" /> Früh Spaziergang; Korrektur Synkope.
+               <tei:note xml:id="r0001-fn01" type="editorial" place="foot">Kontrapunkt 2, Part III, chapter 4, pp. 82–116, "Vierte Gattung: Synkope."</tei:note>
+            </tei:seg>  
+            <tei:seg type="subentry" xml:id="r0001-se02"><tei:milestone unit="section" rend="inline em-dash" /> Von U.-E.<!--[DIn]--> (Br. <!--[= OC 52/452[OC-52-452]]-->): Hertzka<!--[DPe Hertzka, Emil]--> schlägt Urlinie-Ausgabe vor; stellt kraft Monopols bedeutende Geldvorteile in Aussicht; die Frühlings-Sonate<!--[mc000450]--> soll facsimiliert werden.</tei:seg>  
+            <tei:seg type="subentry" xml:id="r0001-se03"><tei:milestone unit="section" rend="inline em-dash" /> Nach Tisch Jetty<!--[DPe Bedna&#345;, Jetty]--> mit dem Oberst<!--[DPe Major, Herr]--> zum Schwarzen.</tei:seg>  
+            <tei:seg type="subentry" xml:id="r0001-se04"><tei:milestone unit="section" rend="inline em-dash" /> Nach der Jause in den Park. </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-01">March 1, 1922</tei:date> Nice, <tei:measure type="temperature" unit="celsius">+10°</tei:measure>.  
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab> 
+            <tei:seg type="subentry" corresp="r0001-se01"><tei:milestone unit="section" rend="inline em-dash" /> Early walk; corrections to "Syncope."<tei:ptr corresp="r0001-fn01" type="footnote"/>  </tei:seg>
+            <tei:seg type="subentry" corresp="r0001-se02"><tei:milestone unit="section" rend="inline em-dash" /> From UE<!--[DIn]--> (letter<!--[= OC 52/452[OC-52-452]]-->): Hertzka<!--[DPe Hertzka, Emil]--> proposes Urlinie Edition; holds out the prospect of significant monetary advantages through the monopoly; a facsimile of the "Spring" Sonata<!--[mc000450]--> should be made.  </tei:seg>
+            <tei:seg type="subentry" corresp="r0001-se03"><tei:milestone unit="section" rend="inline em-dash" /> After lunch Jetty<!--[DPe Bedna&#345;, Jetty]--> with the Colonel<!--[DPe Major, Herr]--> for a black coffee.</tei:seg>  
+            <tei:seg type="subentry" corresp="r0001-se04"><tei:milestone unit="section" rend="inline em-dash" /> Into the park after teatime.</tei:seg> 
+         </tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0002">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-02</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-02">2.</tei:date> <tei:measure type="temperature" unit="celsius">+6°</tei:measure>.  
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0002-se01"><tei:milestone unit="section" rend="inline em-dash" /> Mama<!--[DPe Schenker, Julia]--> erscheint im Traum, ein erschütterndes Häuflein von Mensch, küßt mich, überaus freudig über das Wiedersehn [sic] erregt.  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0002-se02"><tei:milestone unit="section" rend="inline em-dash" /> Morgens Spaziergang.</tei:seg>  
+            <tei:seg type="subentry" xml:id="r0002-se03"><tei:milestone unit="section" rend="inline em-dash" /> Frau Pairamall<!--[DPe Pairamall, Evelina]--> mit Pullmann:<!--[DPe Pullmann]--> Händel u. Bach-Sonaten.  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0002-se04"><tei:milestone unit="section" rend="inline em-dash" /> 6–7 Spaziergang mit Lie-Liechen.<!--[DPe]-->  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0002-se05"><tei:milestone unit="section" rend="inline em-dash" /> An Oppel<!--[DPe Oppel, Reinhard]--> (K.): Dank für Gruß; Prof. Glas<!--[DPe Glas, Professor]--> wäre in einem bejammernswerten Zustand gewesen, der mir verboten hat, ihn um einen Vortrag zu bitten; kündige Tonwille<!--[DW]--> 3 u. II2<!--[DW Kontrapunkt 2]--> an.</tei:seg> 
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-02">2</tei:date> <tei:measure type="temperature" unit="celsius">+6°</tei:measure>.  
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0002-se01"><tei:milestone unit="section" rend="inline em-dash" /> Mama<!--[DPe Schenker, Julia]--> appears in a dream, a shattering little heap of a person, kisses me, happily excited to see me again.</tei:seg>  
+            <tei:seg type="subentry" corresp="r0002-se02"><tei:milestone unit="section" rend="inline em-dash" /> For a walk in the morning.</tei:seg>  
+            <tei:seg type="subentry" corresp="r0002-se03"><tei:milestone unit="section" rend="inline em-dash" /> Mrs. Pairamall<!--[DPe Pairamall, Evelina]--> with Pullmann:<!--[DPe Pullmann]--> Handel and Bach sonatas.  </tei:seg>
+            <tei:seg type="subentry" corresp="r0002-se04"><tei:milestone unit="section" rend="inline em-dash" /> 6:00–7:00 for a walk with Lie-Liechen.<!--[DPe]--></tei:seg>  
+            <tei:seg type="subentry" corresp="r0002-se05"><tei:milestone unit="section" rend="inline em-dash" /> To Oppel<!--[DPe Oppel, Reinhard]--> (postcard): thanks for the greetings; Professor Glas<!--[DPe Glas, Professor]--> seemed to be in lamentable condition, which forbade me from asking him for a lecture; give notice of Tonwille<!--[DW]--> 3 and II/2.<!--[DW Kontrapunkt 2]--></tei:seg> 
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0003">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-03</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-03">3.</tei:date> Schöne Sonne.  
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0003-se01"><tei:milestone unit="section" rend="inline em-dash" /> Aus Prag zwei Feuilleton-Exemplare Vrieslanders<!--[DPe Vrieslander, Otto]--> über Chopin, worin auch ich zitiert werde.  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0003-se02"><tei:milestone unit="section" rend="inline em-dash" /> In der Hofbibliothek<!--[DIn Österreichische Nationalbibliothek]--> Handschriften eingesehen: op. 24<!--[mc000450]-->, Fmoll-Quartett<!--[mc000455]--> u. Violin-Konzert<!--[mc000456]-->.  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0003-se03"><tei:milestone unit="section" rend="inline em-dash" /> Mittags Weisse:<!--[DPe Weisse, Hans]--> fragt im Italienischen Konzert<!--[mc000457]--> herum; macht den Vorschlag, Dr. Brünauer<!--[DPe Brünauer, Robert]--> zu einer Angabe für den Klavierkauf zu bewegen.  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0003-se04"><tei:milestone unit="section" rend="inline em-dash" /> Nach der Jause Unterredung mit Dr. Fischmann.<!--[DPe Fischmann, Leo]--></tei:seg>  
+            <tei:seg type="subentry" xml:id="r0003-se05"><tei:milestone unit="section" rend="inline em-dash" /> An Hertzka<!--[DPe Hertzka, Emil]--> (Br.): erbitte Urlinie-Vertrag-Vorschlag, lege Vrieslander<!--[DPe Vrieslander, Otto]-->-Bach nahe.</tei:seg> 
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-03">3</tei:date> Nice sun.  
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0003-se01"><tei:milestone unit="section" rend="inline em-dash" /> Two copies of feuilleton articles from Prague by Vrieslander<!--[DPe Vrieslander, Otto]--> about Chopin, in which I am also quoted.  </tei:seg>
+            <tei:seg type="subentry" corresp="r0003-se02"><tei:milestone unit="section" rend="inline em-dash" /> In the Court Library<!--[DIn Österreichische Nationalbibliothek]--> manuscripts looked at: Op. 24<!--[mc000450]-->, Quartet in F Minor<!--[mc000455]-->, and Violin Concerto<!--[mc000456]-->.  </tei:seg>
+            <tei:seg type="subentry" corresp="r0003-se03"><tei:milestone unit="section" rend="inline em-dash" /> Weisse<!--[DPe Weisse, Hans]--> at midday: asks questions about the Italian Concerto<!--[mc000457]-->; makes the proposal of motivating Dr. Brünauer<!--[DPe Brünauer, Robert]--> to make a deposit for the purchase of a piano.</tei:seg>  
+            <tei:seg type="subentry" corresp="r0003-se04"><tei:milestone unit="section" rend="inline em-dash" /> After teatime, conversation with Dr. Fischmann.<!--[DPe Fischmann, Leo]--></tei:seg>  
+            <tei:seg type="subentry" corresp="r0003-se05"><tei:milestone unit="section" rend="inline em-dash" /> To Hertzka<!--[DPe Hertzka, Emil]--> (letter): ask for Urlinie contract proposal, recommend Vrieslander<!--[DPe Vrieslander, Otto]--> [on] Bach.</tei:seg> 
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0004">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-04</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-04">4.</tei:date> Bedeckt.  
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0004-se01"><tei:milestone unit="section" rend="inline em-dash" /> Kleine Belvedere<!--[DPl]-->-Schleife.  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0004-se02"><tei:milestone unit="section" rend="inline em-dash" /> Hupka<!--[DPe Hupka, Felix]--> zahlt noch immer bloß à 5000 Kronen.</tei:seg>  
+            <tei:seg type="subentry" xml:id="r0004-se03"><tei:milestone unit="section" rend="inline em-dash" /> Nach der Jause zur U.-E.<!--[DIn]--> mit Paket, darin auch der Vrieslander<!--[DPe Vrieslander, Otto]-->-Aufsatz.</tei:seg>  
+            <tei:seg type="subentry" xml:id="r0004-se04"><tei:milestone unit="section" rend="inline em-dash" /> Zu Mozio:<!--[DPe Schenker, Moriz]--> ihn nicht angetroffen; Jankovici<!--[DPe Jankowiczy]--> 200.000 Kronen gegen Bestätigung übergeben. </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-04">4</tei:date> Overcast.  
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0004-se01"><tei:milestone unit="section" rend="inline em-dash" /> Short Belvedere<!--[DPl]--> loop.  </tei:seg>
+            <tei:seg type="subentry" corresp="r0004-se02"><tei:milestone unit="section" rend="inline em-dash" /> Hupka<!--[DPe Hupka, Felix]--> is still only paying 5,000 Kronen per lesson.  </tei:seg>
+            <tei:seg type="subentry" corresp="r0004-se03"><tei:milestone unit="section" rend="inline em-dash" /> After teatime to UE<!--[DIn]--> with package, including the Vrieslander<!--[DPe]--> article.</tei:seg>  
+            <tei:seg type="subentry" corresp="r0004-se04"><tei:milestone unit="section" rend="inline em-dash" /> To Mozio's:<!--[DPe Schenker, Moriz]--> did not meet him there; Jankovici<!--[DPe Jankowiczy]--> given 200,000 Kronen in return for a receipt. </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0005">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-05</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-05">5. Sonntag</tei:date>, schön.  
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0005-se01"><tei:milestone unit="section" rend="inline em-dash" /> Zu Dr. Frimmel,<!--[DPe Frimmel, Theodor]--> nicht zuhause.  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0005-se02"><tei:milestone unit="section" rend="inline em-dash" /> Der Oberst<!--[DPe Major, Herr]--> sagt ab wegen einer häuslichen Scene, wird aber nachmittag kommen.</tei:seg>  
+            <tei:seg type="subentry" xml:id="r0005-se03"><tei:milestone unit="section" rend="inline em-dash" /> Wir gehen in Sonne spazieren, ¾4–5h.  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0005-se04"><tei:milestone unit="section" rend="inline em-dash" /> <tei:pb n="2419"/> Haydn
+               <tei:note xml:id="r0005-fn01" type="editorial" place="foot">"Haydn: Sonate Es-Dur," in: Der Tonwille Heft 3 (1922), 3–21; Eng. transl., I, pp. 99–117.</tei:note>
+               für Tonwille,<!--[DW]--> 3. Heft. </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-05">5 Sunday</tei:date>, nice.  
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0005-se01"><tei:milestone unit="section" rend="inline em-dash" /> To Dr. Frimmel's,<!--[DPe Frimmel, Theodor]--> not at home.</tei:seg>  
+            <tei:seg type="subentry" corresp="r0005-se02"><tei:milestone unit="section" rend="inline em-dash" /> The Major<!--[DPe Major, Herr]--> cancels on account of a domestic scene, but will come in the afternoon.</tei:seg>  
+            <tei:seg type="subentry" corresp="r0005-se03"><tei:milestone unit="section" rend="inline em-dash" /> We go for a walk in the sun, 3:45–5:00.</tei:seg>  
+            <tei:seg type="subentry" corresp="r0005-se04"><tei:milestone unit="section" rend="inline em-dash" /> <tei:pb n="2419"/> Haydn<tei:ptr corresp="r0005-fn01" type="footnote"/> for Tonwille,<!--[DW]--> third issue.</tei:seg> 
+         </tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0006">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-06</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-06">6. III. 22</tei:date> Schön.  
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0006-se01"><tei:milestone unit="section" rend="inline em-dash" /> Von U.-E.<!--[DIn]--> (K. <!--[= OC 52/303[OC-52-303]]-->): der Direktor sei für 14 Tage verreist.</tei:seg>  
+            <tei:seg type="subentry" xml:id="r0006-se02"><tei:milestone unit="section" rend="inline em-dash" /> Nach der Jause zum Flickschneider u. zu Jetty;<!--[DPe Bedna&#345;, Jetty]--> erfahren, daß der alte Herr<!--[DPe Bedna&#345;, Ober-Inspektor]--> sich aus dem Hause entfernt habe. </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-06">March 6, 1922</tei:date> Nice.  
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0006-se01"><tei:milestone unit="section" rend="inline em-dash" /> From UE<!--[DIn]--> (postcard<!--[= OC 52/303[OC-52-303]]-->): the Director is away on a trip for two weeks.</tei:seg>  
+            <tei:seg type="subentry" corresp="r0006-se02"><tei:milestone unit="section" rend="inline em-dash" /> After teatime to the jobbing tailor and to Jetty's;<!--[DPe Bedna&#345;, Jetty]--> we learn that the old man<!--[DPe Bedna&#345;, Ober-Inspektor]--> has left the house.</tei:seg> 
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0007">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-07</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-07">7.</tei:date> Schön.  
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0007-se01"><tei:milestone unit="section" rend="inline em-dash" /> An Vrieslander<!--[DPe Vrieslander, Otto]--> (Br., 8 Seiten!): über Angelegenheit seines Kommentars; Kennzeichnung Hertzkas,<!--[DPe Hertzka, Emil]--> dargestellt an Weisse,<!--[DPe Weisse, Hans]--> op. 109,<!--[DW EA Op. 109]--> II. Aufl., geplanter Händel-Ausgabe, Mondschein-Sonate<!--[DW]--> u. den Em. Bach-Stücken.<!--[DW Klavierwerke von Philipp Emanuel Bach]-->  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0007-se02"><tei:milestone unit="section" rend="inline em-dash" /> Nach der Jause zu Deutsch,<!--[DPe Deutsch, Otto Erich]--> finden das Geschäft geschlossen: Streik!</tei:seg>  
+            <tei:seg type="subentry" xml:id="r0007-se03"><tei:milestone unit="section" rend="inline em-dash" /> Mit Dr. Brünauer<!--[DPe Brünauer, Robert]--> Haydn-Sinfonien gespielt u. bei diesem Anlaß die Gdur-Sonate ihm vorgespielt; überaus ergriffen, ja erschüttert, dankt vom Herzen.</tei:seg> 
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-07">7</tei:date> Nice.  
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0007-se01"><tei:milestone unit="section" rend="inline em-dash" /> To Vrieslander<!--[DPe Vrieslander, Otto]--> (letter, eight pages!): about the situation over his commentary; characterization of Hertzka,<!--[DPe Hertzka, Emil]--> exemplified by Weisse,<!--[DPe Weisse, Hans]--> Op. 109,<!--[DW EA Op. 109]--> second edition, planned Handel edition, "Moonlight" Sonata<!--[DW Mondschein-Sonate]--> and the C. P. E. Bach works.<!--[DW Klavierwerke von Philipp Emanuel Bach]-->  </tei:seg>
+            <tei:seg type="subentry" corresp="r0007-se02"><tei:milestone unit="section" rend="inline em-dash" /> After teatime to Deutsch,<!--[DPe Deutsch, Otto Erich]--> find the store closed: strike!  </tei:seg>
+            <tei:seg type="subentry" corresp="r0007-se03"><tei:milestone unit="section" rend="inline em-dash" /> Played Haydn symphonies with Dr. Brünauer<!--[DPe Brünauer, Robert]--> and took the opportunity to play the Sonata in G Minor for him; very moved, even shaken, thanks me from the heart. </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0008">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-08</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-08">8.</tei:date> Schön.  
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0008-se01"><tei:milestone unit="section" rend="inline em-dash" /> Von U.-E.<!--[DIn]--> (Br.): Literatur zur V.
+               <tei:note xml:id="r0008-fn01" type="editorial" place="foot">"Literatur," in "Beethoven V. Sinfonie (Fortsetzung)," in: Tonwille Heft 5 (1922), 15–31; Eng. transl., vol. I, pp. 185–201.</tei:note>
+               umbrochen.  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0008-se02"><tei:milestone unit="section" rend="inline em-dash" /> Im Archiv<!--[DIn Gesellschaft der Musikfreunde]--> Frau Dr. Kraus<!--[DPe Kraus, Frau Dr.]--> um Verwendung gebeten wegen Vormerkung zum Brahms-Fürtwängler<!--[DPe Fürtwängler, Wilhelm]--> Konzert.</tei:seg>  
+            <tei:seg type="subentry" xml:id="r0008-se03"><tei:milestone unit="section" rend="inline em-dash" /> Neuer Schalter im Arbeitszimmer, ausgeführt von Mizzi Wilmann:<!--[DPe Willmann, Mizzi]--> 900 + 200 Kronen.  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0008-se04"><tei:milestone unit="section" rend="inline em-dash" /> Frau Landesmann<!--[DPe]--> bringt die Schirmchen: 14000 Kronen. </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-08">8</tei:date> Nice.  
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0008-se01"><tei:milestone unit="section" rend="inline em-dash" /> From UE<!--[DIn]--> (letter): "Secondary Literature" section of the "Fifth"<tei:ptr corresp="r0008-fn01" type="footnote"/> in page-proofs.</tei:seg>  
+            <tei:seg type="subentry" corresp="r0008-se02"><tei:milestone unit="section" rend="inline em-dash" /> In the Archive,<!--[DIn Gesellschaft der Musikfreunde]--> Dr. Kraus<!--[DPe Kraus, Frau Dr.]--> asked to help reserve [tickets] to Brahms–Fürtwängler<!--[DPe Fürtwängler, Wilhelm]--> concert.  </tei:seg>
+            <tei:seg type="subentry" corresp="r0008-se03"><tei:milestone unit="section" rend="inline em-dash" /> New switch in study, installed by Mizzi Wilmann:<!--[DPe Wilmann, Mizzi]--> 900 + 200 Kronen.  </tei:seg>
+            <tei:seg type="subentry" corresp="r0008-se04"><tei:milestone unit="section" rend="inline em-dash" /> Mrs. Landesmann<!--[DPe Landesmann, Frau]--> brings the lampshades: 14,000 Kronen.</tei:seg> 
+         </tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0009">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-09</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-09">9. </tei:date>
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0009-se01">An Frau Pairamall<!--[DPe Pairamall, Evelina]--> (K.): das Zusammenspiel erbeten Donnerstag abends oder erst nächsten Mittwoch.  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0009-se02"><tei:milestone unit="section" rend="inline em-dash" /> Weisse<!--[DPe Weisse, Hans]--> kommt[, um] 304.000 Kronen abzuholen; wegen Bambergers<!--[DPe Bamberger, Carl]--> Saumseligkeit habe ich das Geld nicht, er will morgen wiederkommen. </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-09">9 </tei:date>
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0009-se01">To Mrs. Pairamall<!--[DPe Pairamall, Evelina]--> (postcard): the ensemble playing requested on Thursday evening or not until next Wednesday.  </tei:seg>
+            <tei:seg type="subentry" corresp="r0009-se02"><tei:milestone unit="section" rend="inline em-dash" /> Weisse<!--[DPe Weisse, Hans]--> comes to pick up 304,000 Kronen; on account of Bamberger's<!--[DPe Bamberger, Carl]--> laggardliness, I do not have the money, he wants to come back tomorrow.</tei:seg> 
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0010">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-10</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-10">10. </tei:date>
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0010-se01">Karten zum Brahmsfest
+               <tei:note xml:id="r0010-fn01" type="editorial" place="foot">Perhaps celebrating the 25th anniversary of Brahms's death, which fell on April 3, 1921.</tei:note>
+               geholt, erhöht um 50%.  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0010-se02"><tei:milestone unit="section" rend="inline em-dash" /> Weisse<!--[DPe Weisse, Hans]--> kommt wieder; da aber Bamberger<!--[DPe Bamberger, Carl]--> noch immer nicht gezahlt hat, so verspricht er einzuspringen.  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0010-se03"><tei:milestone unit="section" rend="inline em-dash" /> Nach der Jause zu Mozio;<!--[DPe Schenker, Moriz]--> rät von dem Vorhaben zuerst ab, in der Tür aber meint er plötzlich: ich möchte Dir aber nicht im Wege stehn, kannst’s versuchen; das Geld hole Dir morgen um ½9h ab.  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0010-se04"><tei:milestone unit="section" rend="inline em-dash" /> Brünauer<!--[DPe Brünauer, Robert]--> zahlt bloß 5000 Kronen.</tei:seg> 
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-10">10 </tei:date>
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0010-se01">Tickets to Brahms festival<tei:ptr corresp="r0010-fn01" type="footnote"/> picked up, [price] increased by 50%.</tei:seg>  
+            <tei:seg type="subentry" corresp="r0010-se02"><tei:milestone unit="section" rend="inline em-dash" /> Weisse<!--[DPe Weisse, Hans]--> comes back; but since Bamberger<!--[DPe Bamberger, Carl]--> has still not paid, he promises to help out.</tei:seg>  
+            <tei:seg type="subentry" corresp="r0010-se03"><tei:milestone unit="section" rend="inline em-dash" /> After teatime to Mozio's;<!--[DPe Schenker, Moriz]--> advises against the intended plan at first, but at the door suddenly says: but I don't want stand in your way, you can try it; pick up the money tomorrow at 8:30.</tei:seg>  
+            <tei:seg type="subentry" corresp="r0010-se04"><tei:milestone unit="section" rend="inline em-dash" /> Brünauer<!--[DPe Brünauer, Robert]--> pays only 5,000 Kronen.</tei:seg> 
+         </tei:ab><tei:milestone unit="section" rend="inline em-dash" />
+
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0011">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-11</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-11">11. III. 22 </tei:date>
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0011-se01">Früh zu Mozio;<!--[DPe Schenker, Moriz]--> muß bis 9h warten; er stellt die 200000 Kronen zurück u. hat den Mut, Schatzscheine als &#8222;flüssiges Geld&#8220; anzupreisen. Auf meinem Einwurf, daß ich die doch überall kaufen kann, auch ohne Opfer an Zeit u. Geld, meint er ruhig: selbstverständlich kannst Du sie überall haben!  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0011-se02"><tei:milestone unit="section" rend="inline em-dash" /> Von Sophie<!--[DPe Guttmann, Sophie]--> (Br.): Sorge um Ausheirat der Tochter.<!--[DPe Guttmann, Frieda]--></tei:seg>  
+            <tei:seg type="subentry" xml:id="r0011-se03"><tei:milestone unit="section" rend="inline em-dash" /> Weisse<!--[DPe Weisse, Hans]--> nun zum drittenmal: ich übergebe ihm endlich die 304.000 Kronen.</tei:seg> 
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-11">March 11, 1922 </tei:date>
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0011-se01">Early to Mozio's;<!--[DPe Schenker, Moriz]--> have to wait until 9:00; he returns the 200,000 Kronen and has the audacity to pitch securities as "liquid money." In response to my interjection that I can buy them everywhere, without even sacrificing time or money, he replies calmly: of course you can get them everywhere!  </tei:seg>
+            <tei:seg type="subentry" corresp="r0011-se02"><tei:milestone unit="section" rend="inline em-dash" /> From Sophie<!--[DPe Guttmann, Sophie]--> (letter): concern about her daughter's<!--[DPe Guttmann, Frieda]--> marrying away from home.</tei:seg>  
+            <tei:seg type="subentry" corresp="r0011-se03"><tei:milestone unit="section" rend="inline em-dash" /> Weisse<!--[DPe Weisse, Hans]--> for the third time now: I finally turn over the 304,000 Kronen to him.</tei:seg> 
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0012">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-12</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-12">12. Sonntag</tei:date>, sehr schön.  
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0012-se01"><tei:milestone unit="section" rend="inline em-dash" /> An Dr. Kalmus<!--[DPe Kalmus, Alfred]--> (Br.): zu den von der Druckerei als schwere Korrekturen bezeichneten Bogen 11 – ½13
+               <tei:note xml:id="r0012-fn01" type="editorial" place="foot">Of Kontrapunkt 2; it is unclear what Schenker means by "11 – ½13"; perhaps the whole of gathering 11 and the first half of 12, or alternatively 11-12 and the first half of 13.  (Gatherings 11–13 cover pp. 161–208, and the major section "Übergänge zum freien Satz" begins on p. 169.) Since Schenker's letter is not known to survive, it is impossible to clarify.  The diary for April 5 speaks of gathering 13 as a whole.</tei:note>
+               bemerke ich, daß ich die Erfahrungen der letzten drei Jahre nicht ungenutzt habe lassen dürfen.  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0012-se02"><tei:milestone unit="section" rend="inline em-dash" /> An Hans Guttmann<!--[DPe]--> (Br.): habe die Bestätigung erhalten.</tei:seg>  
+            <tei:seg type="subentry" xml:id="r0012-se03"><tei:milestone unit="section" rend="inline em-dash" /> Zu Jetty,<!--[DPe Bedna&#345;, Jetty]--> die allein ist.</tei:seg>  
+            <tei:seg type="subentry" xml:id="r0012-se04"><tei:milestone unit="section" rend="inline em-dash" /> ½5–6¼h Spaziergang im Maria-Josepha-Park<!--[DPl]--> u. Belvedere;<!--[DPl]--> Herrn<!--[DPe Mitrenger, Herr]--> u. Frau Mitrenger<!--[DPe Mitrenger, Frau]--> in Sonntagsaufmachung, langes Gespräch mit ihnen.</tei:seg> 
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-12">12 Sunday</tei:date>, very nice.  
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0012-se01"><tei:milestone unit="section" rend="inline em-dash" /> To Dr. Kalmus<!--[DPe Kalmus, Alfred]--> (letter): regarding the gatherings 11 – 12½<tei:ptr corresp="r0012-fn01" type="footnote"/> that the printer has identified as heavily corrected, I note that I could not let the experiences from the last three years go unused.  </tei:seg>
+            <tei:seg type="subentry" corresp="r0012-se02"><tei:milestone unit="section" rend="inline em-dash" /> To Hans Guttmann<!--[DPe]--> (letter): have received the confirmation.</tei:seg>  
+            <tei:seg type="subentry" corresp="r0012-se03"><tei:milestone unit="section" rend="inline em-dash" /> To Jetty's,<!--[DPe Bedna&#345;, Jetty]--> who is alone.</tei:seg>  
+            <tei:seg type="subentry" corresp="r0012-se04"><tei:milestone unit="section" rend="inline em-dash" /> 4:30–6:15 for a walk in Maria-Josepha-Park<!--[DPl]--> and Belvedere;<!--[DPl]--> Mr.<!--[DPe Mitrenger, Herr]--> and Mrs. Mitrenger<!--[DPe Mitrenger, Frau]--> in their Sunday best, long conversation with them.</tei:seg> 
+         </tei:ab><tei:milestone unit="section" rend="inline em-dash" />
+
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0013">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-13</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-13">13.</tei:date> Schön.  
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0013-se01"><tei:milestone unit="section" rend="inline em-dash" /> Von U.-E.<!--[DIn]--> Tonwille<!--[DW]--> 2 umbrochen.</tei:seg>  
+            <tei:seg type="subentry" xml:id="r0013-se02"><tei:milestone unit="section" rend="inline em-dash" /> Nach Tisch zu Dr. Kalmus<!--[DPe Kalmus, Alfred]--> mit Fahnen u. Brief; dann Siebensterngasse<!--[DPl]--> um eine Hutform; unterwegs Dr. Türkel<!--[DPe Türkel, Siegfried]--> eine Weile gesprochen.</tei:seg> 
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-13">13</tei:date> Nice.  
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0013-se01"><tei:milestone unit="section" rend="inline em-dash" /> From UE<!--[DIn]--> Tonwille<!--[DW]--> 2 in page-proofs.  </tei:seg>
+            <tei:seg type="subentry" corresp="r0013-se02"><tei:milestone unit="section" rend="inline em-dash" /> After lunch to Dr. Kalmus<!--[DPe]--> with galley-proofs and letter; then [to] Siebensterngasse<!--[DPl]--> for a hat mold; talked to Dr. Türkel<!--[DPe Türkel, Siegfried]--> for a while on the way. </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0014">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-14</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-14">14.</tei:date> Schön.  
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0014-se01"><tei:milestone unit="section" rend="inline em-dash" /> Von U.-E.<!--[DIn]--> op. 81a.<!--[DW Gesamtausgabe]--></tei:seg>  
+            <tei:seg type="subentry" xml:id="r0014-se02"><tei:milestone unit="section" rend="inline em-dash" /> Nach der Jause Spaziergang.</tei:seg> 
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-14">14</tei:date> Nice.  
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0014-se01"><tei:milestone unit="section" rend="inline em-dash" /> From UE<!--[DIn]--> Op. 81a.<!--[DW Gesamtausgabe]--></tei:seg>  
+            <tei:seg type="subentry" corresp="r0014-se02"><tei:milestone unit="section" rend="inline em-dash" /> For a walk after teatime. </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0015">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-15</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-15">15.</tei:date> Schön.  
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0015-se01"><tei:milestone unit="section" rend="inline em-dash" /> Im Archiv<!--[DIn Gesellschaft der Musikfreunde]--> Original-Ausgabe op. 81a<!--[mc000075]--> eingesehen, Stendhal<!--[DPe]-->-Haydn u. Kinsky.<!--[DPe Kinsky, Georg]-->  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0015-se02"><tei:milestone unit="section" rend="inline em-dash" /> Fertigstellung des Pakets für die U.-E.;<!--[DIn]--> Brief an Dr. Kalmus:<!--[DPe Kalmus, Alfred]--> Beschwerde über Unordnung in den Klischees zum 2. Heft Tonwille;<!--[DW]--> dringe auf die Handschrift der Appassionata, die sowohl in der Liebhaberausgabe, wie in der meinen zu verwenden sei.  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0015-se03"><tei:milestone unit="section" rend="inline em-dash" /> Von Dahms<!--[DPe Dahms, Walter]--> (Br. <!--[= OJ 10/1, [70][OJ-10-1_70]]-->): sein Buch werde schon kommen; auffällig eine krie- <tei:pb n="2421"/> gerische Wendung: so kanns nicht bleiben.</tei:seg> 
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-15">15</tei:date> Nice.  
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0015-se01"><tei:milestone unit="section" rend="inline em-dash" /> In the Archive,<!--[DIn Gesellschaft der Musikfreunde]--> looked at original edition of Op. 81a<!--[mc000075]-->, Stendhal<!--[DPe]-->–Haydn and Kinsky.<!--[DPe Kinsky, Georg]--></tei:seg>  
+            <tei:seg type="subentry" corresp="r0015-se02"><tei:milestone unit="section" rend="inline em-dash" /> Package for UE<!--[DIn]--> finalized; letter to Dr. Kalmus:<!--[DPe]--> complaint about disorder in the engraved examples for the second issue of Tonwille;<!--[DW]--> press for the manuscript of the "Appassionata," which is to be used in the connoisseur edition as well as in mine.  </tei:seg>
+            <tei:seg type="subentry" corresp="r0015-se03"><tei:milestone unit="section" rend="inline em-dash" /> From Dahms<!--[DPe Dahms, Walter]--> (letter<!--[= OJ 10/1, [70][OJ-10-1_70]]-->): his book will be coming; a belligerent <tei:pb n="2421"/> turn is conspicuous: it can't stay like that. </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0016">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-16</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-16">16. III. </tei:date>
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0016-se01">Bei U.-E.<!--[DIn]--> das Paket früh selbst abgegeben.</tei:seg>  
+            <tei:seg type="subentry" xml:id="r0016-se02"><tei:milestone unit="section" rend="inline em-dash" /> Dr. Violin,<!--[DPe Violin, Eduard]--> 6–8h, schlägt mir Tausch eines Mittenwald<!--[DPl]-->-Cello gegen mein eigenes vor; regt einen Steinwey<!--[DIn Steinway &#38; Sons]-->-Kauf [sic] an; ladet mich zur Untersuchung ein. </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-16">March 16. </tei:date>
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0016-se01">The package delivered personally at UE.<!--[DIn]-->  </tei:seg>
+            <tei:seg type="subentry" corresp="r0016-se02"><tei:milestone unit="section" rend="inline em-dash" /> Dr. Violin,<!--[DPe Violin, Eduard]--> 6:00–8:00, proposes trading a Mittenwald<!--[DPl]--> cello for my own; suggests buying a Steinwey<!--[DIn Steinway &#38; Sons]--> [sic]; invites me to make an examination.</tei:seg> 
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0017">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-17</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-17">17.</tei:date> Schön.  
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0017-se01"><tei:milestone unit="section" rend="inline em-dash" /> ½10h zu Kohn<!--[DIn]--> wegen eines Steinwey<!--[DIn Steinway &#38; Sons]--> [sic]; äußere die Absicht, den Blüthner<!--[DIn Blüthner]--> anzukaufen – er lehnt ab.  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0017-se02"><tei:milestone unit="section" rend="inline em-dash" /> An Violin<!--[DPe Violin, Eduard]--> (Br.): Ergebnis der Unterredung mit Kohn.<!--[DIn]--></tei:seg>  
+            <tei:seg type="subentry" xml:id="r0017-se03"><tei:milestone unit="section" rend="inline em-dash" /> Häusliche Bedrohung durch Heiratspläne des Mädchens.</tei:seg> 
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-17">17</tei:date> Nice.  
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0017-se01"><tei:milestone unit="section" rend="inline em-dash" /> 9:30 to Kohn<!--[DIn]--> regarding a Steinwey<!--[DIn Steinway &#38; Sons]--> [sic]; express the intention to buy the Blüthner<!--[DIn Blüthner]--> – he refuses.  </tei:seg>
+            <tei:seg type="subentry" corresp="r0017-se02"><tei:milestone unit="section" rend="inline em-dash" /> To Violin<!--[DPe Violin, Eduard]--> (letter): result of the conversation with Kohn.<!--[DIn]-->  </tei:seg>
+            <tei:seg type="subentry" corresp="r0017-se03"><tei:milestone unit="section" rend="inline em-dash" /> Domestic threat because of the maid's plans to marry. </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0018">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-18</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-18">18. </tei:date>
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0018-se01">Früh Spaziergang, dann mit Lie-Liechen<!--[DPe]--> Einkaufswege.</tei:seg>  
+            <tei:seg type="subentry" xml:id="r0018-se02"><tei:milestone unit="section" rend="inline em-dash" /> Hupka<!--[DPe Hupka, Felix]--> erwähnt zum erstenmal zweier Konzerte, die er bisher als in suspenso erklärte.  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0018-se03"><tei:milestone unit="section" rend="inline em-dash" /> Nach Tisch zu Jetty<!--[DPe Bedna&#345;, Jetty]--> statt Sonntag; erzählt ihre Erlebnisse in fremden Häusern.  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0018-se04"><tei:milestone unit="section" rend="inline em-dash" /> Zeitung in Ordnung gebracht. </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-18">18 </tei:date>
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0018-se01">For an early walk, then shopping with Lie-Liechen.<!--[DPe]--></tei:seg>  
+            <tei:seg type="subentry" corresp="r0018-se02"><tei:milestone unit="section" rend="inline em-dash" /> Hupka<!--[DPe]--> mentions two concerts for the first time which he had called in suspenso until now.</tei:seg>  
+            <tei:seg type="subentry" corresp="r0018-se03"><tei:milestone unit="section" rend="inline em-dash" /> After lunch to Jetty's<!--[DPe Bedna&#345;, Jetty]--> instead of Sunday; she tells [us] about her experiences in strange homes.</tei:seg>  
+            <tei:seg type="subentry" corresp="r0018-se04"><tei:milestone unit="section" rend="inline em-dash" /> Newspapers put in good order.</tei:seg> 
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0019">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-19</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-19">19. Sonntag</tei:date> – sehr schön.  
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0019-se01"><tei:milestone unit="section" rend="inline em-dash" /> Morgens Spaziergang, nach Tisch mit Lie-Liechen<!--[DPe]--> ½1–½2 im Vorgarten des Belvedere;<!--[DPl]--> dann nochmal nach der Jause. </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-19">19 Sunday</tei:date> – very nice.  
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0019-se01"><tei:milestone unit="section" rend="inline em-dash" /> Morning walk; after lunch with Lie-Liechen<!--[DPe]--> 12:30–1:30 in the front garden of the Belvedere;<!--[DPl]--> then again after teatime. </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0020">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-20</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-20">20.</tei:date> Bedeckt.  
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0020-se01"><tei:milestone unit="section" rend="inline em-dash" /> Von Oppel:<!--[DPe Oppel, Reinhard]--> einige Hefte &#8222;Gewissen&#8220;.<!--[DT Gewissen]--></tei:seg>  
+            <tei:seg type="subentry" xml:id="r0020-se02"><tei:milestone unit="section" rend="inline em-dash" /> Nach der Jause Spaziergang in die Stadt, das Messebild zu betrachten.</tei:seg>  
+            <tei:seg type="subentry" xml:id="r0020-se03"><tei:milestone unit="section" rend="inline em-dash" /> Von Frimmel<!--[DPe Frimmel, Theodor]--> Beethoven, VI. Auflage.
+               <tei:note xml:id="r0020-fn01" type="editorial" place="foot">Frimmel, Ludwig van Beethoven, 6th edn (Berlin: n.d.); the volume was in Schenker's personal library at his death.</tei:note>
+            </tei:seg>
+            <tei:seg type="subentry" xml:id="r0020-se04"><tei:milestone unit="section" rend="inline em-dash" /> Weisse<!--[DPe Weisse, Hans]--> mit Frau<!--[DPe Weisse, Hertha]--> um 6h; zeigt den Brief von Violin,<!--[DPe Violin, Moriz]--> der die Reisekosten als Minimum bezeichnet; erbittet Rat zum Vortrag; laden sie für Sonntag zur Jause ein.  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0020-se05"><tei:milestone unit="section" rend="inline em-dash" /> Dr. Brünauer<!--[DPe Brünauer, Robert]--> kann sich über den Betrug Stendhal<!--[DPe]-->-Rolland<!--[DPe Rolland, Romain]--> gar nicht beruhigen.</tei:seg> 
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-20">20</tei:date> Overcast.  
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0020-se01"><tei:milestone unit="section" rend="inline em-dash" /> From Oppel:<!--[DPe Oppel, Reinhard]--> a few issues of Gewissen.<!--[DT Gewissen]-->  </tei:seg>
+            <tei:seg type="subentry" corresp="r0020-se02"><tei:milestone unit="section" rend="inline em-dash" /> After teatime for a walk into the Inner City to see the how the fair looks.  </tei:seg>
+            <tei:seg type="subentry" corresp="r0020-se03"><tei:milestone unit="section" rend="inline em-dash" /> From Frimmel<!--[DPe Frimmel, Theodor]--> Beethoven, sixth edition.<tei:ptr corresp="r0020-fn01" type="footnote"/></tei:seg>  
+            <tei:seg type="subentry" corresp="r0020-se04"><tei:milestone unit="section" rend="inline em-dash" /> Weisse<!--[DPe Weisse, Hans]--> with his wife<!--[DPe Weisse, Hertha]--> at 6:00; shows a letter from Violin,<!--[DPe Violin, Moriz]--> which calls the travel costs a minimum; asks for advice on lecture; we invite them for teatime on Sunday.</tei:seg>  
+            <tei:seg type="subentry" corresp="r0020-se05"><tei:milestone unit="section" rend="inline em-dash" /> Dr. Brünauer<!--[DPe Brünauer, Robert]--> can't even calm down about the Stendhal<!--[DPe]-->–Rolland<!--[DPe Rolland, Romain]--> deception. </tei:seg>
+         </tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0021">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-21</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-21">21.</tei:date> Bedeckt, kalt; die blaue Stube geheizt.  
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0021-se01"><tei:milestone unit="section" rend="inline em-dash" /> Um 8h vergeblich wegen Dom<!--[DPl Stephansdom]-->konzert-Karten; ersuche Bamberger<!--[DPe Bamberger, Carl]--> um Besorgung.</tei:seg>  
+            <tei:seg type="subentry" xml:id="r0021-se02"><tei:milestone unit="section" rend="inline em-dash" /> Nach der Jause an Dr. Kalmus<!--[DPe Kalmus, Alfred]--> (Br.): urgire Fertigstellung des 2. Heftes Tonwille;<!--[DW]--> wegen Weisses<!--[DPe Weisse, Hans]--> Vortrag.  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0021-se03"><tei:milestone unit="section" rend="inline em-dash" /> Dr. Violin,<!--[DPe Violin, Eduard]--> 6½h, bringt das neue Cello – ohne Kasten.  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0021-se04"><tei:milestone unit="section" rend="inline em-dash" /> Konzert Furtwängler;<!--[DPe Fürtwängler, Wilhelm]--> Haydn: <tei:pb n="2422"/> G-dur-Sinfonie – zu äußerlich, in den wesentlichen Punkten nicht erfaßt; V. Sinfonie<!--[mc000664]-->; großer Abschiedsrummel; nachhause begleitet von Hupka,<!--[DPe]--> Herrn u. Frau Kaposi.<!--[DPe Kaposy, Frau]--></tei:seg> 
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-21">21</tei:date> Overcast, cold; the blue room heated.  
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0021-se01"><tei:milestone unit="section" rend="inline em-dash" /> At 8:00 for naught regarding cathedral<!--[DPl Stephansdom]--> concert tickets; ask Bamberger<!--[DPe Bamberger, Carl]--> to take care of it.  </tei:seg>
+            <tei:seg type="subentry" corresp="r0021-se02"><tei:milestone unit="section" rend="inline em-dash" /> After teatime to Dr. Kalmus<!--[DPe Kalmus, Alfred]--> (letter): urge completion of the second issue of Tonwille;<!--[DW]--> regarding Weisse's<!--[DPe Weisse, Hans]--> lecture.</tei:seg>  
+            <tei:seg type="subentry" corresp="r0021-se03"><tei:milestone unit="section" rend="inline em-dash" /> Dr. Violin,<!--[DPe Violin, Eduard]--> 6:30, brings the new cello – without a case.  </tei:seg>
+            <tei:seg type="subentry" corresp="r0021-se04"><tei:milestone unit="section" rend="inline em-dash" /> Furtwängler<!--[DPe Fürtwängler, Wilhelm]--> concert; Haydn: <tei:pb n="2422"/> Symphony in G Major – too superficial, the important points not grasped; Fifth Symphony<!--[mc000664]-->; big going-away shindig; accompanied home by Hupka,<!--[DPe Hupka, Felix]--> Mr. and Mrs. Kaposi.<!--[DPe Kaposy, Frau]--> </tei:seg>
+         </tei:ab>
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0022">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-22</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-22">22. III. 22</tei:date> Schön.  
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0022-se01"><tei:milestone unit="section" rend="inline em-dash" /> Von Deutsch<!--[DPe Deutsch, Otto Erich]--> (Br.<!--[= OJ 10/3, [29][OJ-10-3_29]]-->): Schwierigkeiten mit Hertzka<!--[DPe Hertzka, Emil]--> verzögern das Erscheinen.</tei:seg>  
+            <tei:seg type="subentry" xml:id="r0022-se02"><tei:milestone unit="section" rend="inline em-dash" /> An die deutsche Bank<!--[DIn Deutsche Bank]--> (Br.): Auftrag: Geldsendung an Zeitung, Pensionsanstalt, Sprachverein.<!--[DIn Deutscher Sprachverein]--></tei:seg> 
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-22">March 22, 1922</tei:date> Nice.  
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0022-se01"><tei:milestone unit="section" rend="inline em-dash" /> From Deutsch<!--[DPe Deutsch, Otto Erich]--> (letter<!--[= OJ 10/3, [29][OJ-10-3_29]]-->): difficulties with Hertzka<!--[DPe Hertzka, Emil]--> are delaying the release.  </tei:seg>
+            <tei:seg type="subentry" corresp="r0022-se02"><tei:milestone unit="section" rend="inline em-dash" /> To the Deutsche Bank<!--[DIn Deutsche Bank]--> (letter): order: money sent to newspaper, pension institution, Language Society.<!--[DIn Deutscher Sprachverein]--> </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0023">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-23</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-23">23.</tei:date> 
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0023-se01">Morgens Sprung ins Freie.</tei:seg>  
+            <tei:seg type="subentry" xml:id="r0023-se02"><tei:milestone unit="section" rend="inline em-dash" /> Nachmittagsstunden verschoben; dann in die Stephanskirche<!--[DPl Stephansdom]--> mit Bamberger<!--[DPe Bamberger, Carl]--> u. Marie;<!--[DPe Schodl, Marie]--> auffallend schön Gallus,<!--[DPe Gallus, Jacobus]--> Cesar Frank<!--[DPe Franck, César]--> [sic] stilwidrig; starke Zugluft; Messeauslagen sehr schön.  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0023-se03"><tei:milestone unit="section" rend="inline em-dash" /> Analyse ergibt 3% Zucker! </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-23">23 </tei:date>
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0023-se01">A quick step outside in the morning.</tei:seg>  
+            <tei:seg type="subentry" corresp="r0023-se02"><tei:milestone unit="section" rend="inline em-dash" /> Afternoon lessons postponed; then into St. Stephen's Cathedral<!--[DPl Stephansdom]--> with Bamberger<!--[DPe Bamberger, Carl]--> and Marie;<!--[DPe Schodl, Marie]--> strikingly beautiful Gallus,<!--[DPe Gallus, Jacobus]--> Cesar Frank<!--[DPe Franck, César]--> [sic] a stylistic faux-pas; strong draft; fair exhibitions very nice.  </tei:seg>
+            <tei:seg type="subentry" corresp="r0023-se03"><tei:milestone unit="section" rend="inline em-dash" /> Analysis results: three percent [blood] sugar!</tei:seg> 
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0024">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-24</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-24">24. </tei:date>
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0024-se01">Von Victor Hammer<!--[DPe]--> (Br.<!--[= OJ 11/35, [5][OJ-11-35_5]]-->): über einen Fingersatz meiner Ausgabe der Chromatischen Phantasie.<!--[DW Chromatische Fantasie]--></tei:seg>  
+            <tei:seg type="subentry" xml:id="r0024-se02"><tei:milestone unit="section" rend="inline em-dash" /> Kohle von Kutschern gekauft: 200 kg á 60 Kronen.  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0024-se03"><tei:milestone unit="section" rend="inline em-dash" /> Zu Fritz<!--[DPe]--> u. Goldscheid:<!--[DPe]--> Diät setzt ein. </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-24">24 </tei:date>
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0024-se01">From Victor Hammer<!--[DPe]--> (letter<!--[= OJ 11/35, [5][OJ-11-35_5]]-->): about a fingering for my edition of the Chromatic Fantasy.<!--[DW Chromatische Fantasie und Fuge]-->  </tei:seg>
+            <tei:seg type="subentry" corresp="r0024-se02"><tei:milestone unit="section" rend="inline em-dash" /> Coal bought from drivers: 200 kilograms at 60 Kronen per kilogram.  </tei:seg>
+            <tei:seg type="subentry" corresp="r0024-se03"><tei:milestone unit="section" rend="inline em-dash" /> To Fritz<!--[DPe]--> and Goldscheid:<!--[DPe]--> diet starts. </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0025">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-25</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-25">25.</tei:date> Schön, Spaziergang.  
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0025-se01"><tei:milestone unit="section" rend="inline em-dash" /> Von U.-E.<!--[DIn]--> (K.<!--[= OC 52/305[OC-52-305]]-->): Hertzka<!--[DPe Hertzka, Emil]--> bittet um Besuch; Frühlingssonate<!--[mc000450]--> sei gesichert, Tonwille<!--[DW]--> schon urgirt.</tei:seg>  
+            <tei:seg type="subentry" xml:id="r0025-se02"><tei:milestone unit="section" rend="inline em-dash" /> An Hertzka<!--[DPe Hertzka, Emil]--> (Br.): werde Dienstag ½5h kommen; melde Erkrankung, die unliebsame Erörterungen ausschließt; besser schriftlich. </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-25">25</tei:date> Nice, for a walk.  
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0025-se01"><tei:milestone unit="section" rend="inline em-dash" /> From UE<!--[DIn]--> (postcard<!--[= OC 52/305[OC-52-305]]-->): Hertzka<!--[DPe Hertzka, Emil]--> asks for a visit; "Spring" Sonata<!--[mc000450]--> is secured, Tonwille<!--[DW]--> has already been urged for.</tei:seg>  
+            <tei:seg type="subentry" corresp="r0025-se02"><tei:milestone unit="section" rend="inline em-dash" /> To Hertzka<!--[DPe Hertzka, Emil]--> (letter): will come on Tuesday at 4:30; report illness that precludes unpleasant discussions; better in writing. </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0026">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-26</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-26">26. Sonntag</tei:date>, schön.  
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0026-se01"><tei:milestone unit="section" rend="inline em-dash" /> Frühspaziergang.  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0026-se02"><tei:milestone unit="section" rend="inline em-dash" /> Mittags Brahmsfeier mit Furtwängler:<!--[DPe Fürtwängler, Wilhelm]--> Tradition sichtlich abgerissen. Schicksalslied<!--[mc000459]-->, Haydn-Variationen<!--[mc000460]-->, IV. Sinfonie<!--[mc000167]-->.  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0026-se03"><tei:milestone unit="section" rend="inline em-dash" /> Weisse<!--[DPe Weisse, Hans]--> mit Frau<!--[DPe Weisse, Hertha]--> ½5–8h; liest die Einleitung zum Vortrag, sehr gut. Syrische Tänze<!--[DW Syrische Tänze]--><!--[mc000669]--> gespielt. </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-26">26 Sunday</tei:date>, nice.  
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0026-se01"><tei:milestone unit="section" rend="inline em-dash" /> For an early walk.</tei:seg>  
+            <tei:seg type="subentry" corresp="r0026-se02"><tei:milestone unit="section" rend="inline em-dash" /> Brahms celebration at midday with Furtwängler:<!--[DPe Fürtwängler, Wilhelm]--> tradition visibly broken. Song of Destiny<!--[mc000459]-->, Haydn Variations<!--[mc000460]-->, Fourth Symphony.<!--[mc000167]--></tei:seg>  
+            <tei:seg type="subentry" corresp="r0026-se03"><tei:milestone unit="section" rend="inline em-dash" /> Weisse<!--[DPe Weisse, Hertha]--> with his wife<!--[DPe Weisse, Hertha]--> 4:30–8:00; reads the introduction to his lecture, very good. Played Syrian Dances.<!--[DW Syrische Tänze]--><!--[mc000669]--> </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0027">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-27</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-27">27.</tei:date> Schön.  
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0027-se01"><tei:milestone unit="section" rend="inline em-dash" /> Zu Fritz.<!--[DPe]-->  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0027-se02"><tei:milestone unit="section" rend="inline em-dash" /> Um 4h Spaziergang u. zu Violin,<!--[DPe Violin, Eduard]--> der die Diät vorschreibt (6–8h dort geblieben). </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-27">27</tei:date> Nice.  
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0027-se01"><tei:milestone unit="section" rend="inline em-dash" /> To Fritz's.<!--[DPe]--></tei:seg>  
+            <tei:seg type="subentry" corresp="r0027-se02"><tei:milestone unit="section" rend="inline em-dash" /> For a walk at 4:00 and to Violin's,<!--[DPe Violin, Eduard]--> who prescribes [a]--> diet (stayed there 6:00–8:00).</tei:seg> 
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0028">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-28</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-28">28.</tei:date> Schön.  
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0028-se01"><tei:milestone unit="section" rend="inline em-dash" /> Beginn der strengsten Diät.</tei:seg>  
+            <tei:seg type="subentry" xml:id="r0028-se02"><tei:milestone unit="section" rend="inline em-dash" /> Von Baudrexel<!--[DPe Baudrexel, Frau]--> (K.): Absage für Mittwoch.</tei:seg>  
+            <tei:seg type="subentry" xml:id="r0028-se03"><tei:milestone unit="section" rend="inline em-dash" /> Von Frau Gutherz<!--[DPe]--> Meldung einer Aufführung von Weisses<!--[DPe Weisse, Hans]--> Musik in Berlin am 6. IV.</tei:seg>  
+            <tei:seg type="subentry" xml:id="r0028-se04"><tei:milestone unit="section" rend="inline em-dash" /> Hertzka<!--[DPe Hertzka, Emil]--> sagt durch <tei:pb n="2423"/> Boten ab; bestimme Samstag ½5h.  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0028-se05"><tei:milestone unit="section" rend="inline em-dash" /> op. 2 No. 2<!--[DW Gesamtausgabe]--> zur Korrektur.</tei:seg>  
+            <tei:seg type="subentry" xml:id="r0028-se06"><tei:milestone unit="section" rend="inline em-dash" /> An Hertzka<!--[DPe Hertzka, Emil]--> (Br.): wünsche für Weisse<!--[DPe Weisse, Hans]--> 500 Abzüge der Urlinie-Tafeln; rege den Druck des Vortrags an u. auch der Kompositionen.</tei:seg> 
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-28">28</tei:date> Nice.  
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0028-se01"><tei:milestone unit="section" rend="inline em-dash" /> Beginning of the strict diet.</tei:seg>  
+            <tei:seg type="subentry" corresp="r0028-se02"><tei:milestone unit="section" rend="inline em-dash" /> From Baudrexel<!--[DPe Baudrexel, Frau]--> (postcard): cancellation for Wednesday.  </tei:seg>
+            <tei:seg type="subentry" corresp="r0028-se03"><tei:milestone unit="section" rend="inline em-dash" /> A report from Mrs. Gutherz<!--[DPe]--> about a performance of Weisse's<!--[DPe Weisse, Hans]--> music in Berlin on April 6.</tei:seg>  
+            <tei:seg type="subentry" corresp="r0028-se04"><tei:milestone unit="section" rend="inline em-dash" /> Hertzka<!--[DPe Hertzka, Emil]--> cancels by <tei:pb n="2423"/> messenger; I set Saturday 4:30.  </tei:seg>
+            <tei:seg type="subentry" corresp="r0028-se05"><tei:milestone unit="section" rend="inline em-dash" /> Op. 2 No. 2<!--[DW Gesamtausgabe]--> for correction of proofs.  </tei:seg>
+            <tei:seg type="subentry" corresp="r0028-se06"><tei:milestone unit="section" rend="inline em-dash" /> To Hertzka<!--[DPe Hertzka, Emil]--> (letter): desire 500 copies of the Urlinie plates for Weisse;<!--[DPe Weisse, Hans]--> propose printing the lecture and also the compositions.</tei:seg> 
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0029">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-29</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-29">29. III. 22</tei:date> Schön, <tei:measure type="temperature" unit="celsius">+1°</tei:measure>.  
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0029-se01"><tei:milestone unit="section" rend="inline em-dash" /> An Dr. Kalmus<!--[DPe Kalmus, Alfred]--> (K.): wegen des Vermischten.
+               <tei:note xml:id="r0029-fn01" type="editorial" place="foot">"Vermischtes," in: Der Tonwille Heft 3 (1922), 26–38; Eng. transl., I, pp. 121–37: deferred from Heft 2.</tei:note>
+            </tei:seg>  
+            <tei:seg type="subentry" xml:id="r0029-se02"><tei:milestone unit="section" rend="inline em-dash" /> Mittags Weisse;<!--[DPe Weisse, Hans]--> mit ihm Spaziergang bis 2h.  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0029-se03"><tei:milestone unit="section" rend="inline em-dash" /> Frau Pairamall,<!--[DPe Pairamall, Evelina]--> Lewin,<!--[DPe]--> Pullmann.<!--[DPe]--> </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-29">March 29, 1922</tei:date> Nice, <tei:measure type="temperature" unit="celsius">+1°</tei:measure>.  
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0029-se01"><tei:milestone unit="section" rend="inline em-dash" /> To Dr. Kalmus<!--[DPe Kalmus, Alfred]--> (postcard): regarding "Miscellanea."<tei:ptr corresp="r0029-fn01" type="footnote"/>  </tei:seg>
+            <tei:seg type="subentry" corresp="r0029-se02"><tei:milestone unit="section" rend="inline em-dash" /> Weisse<!--[DPe Weisse, Hans]--> at midday; for a walk with him until 2:00.  </tei:seg>
+            <tei:seg type="subentry" corresp="r0029-se03"><tei:milestone unit="section" rend="inline em-dash" /> Mrs. Pairamall,<!--[DPe Pairamall, Evelina]--> Lewin,<!--[DPe]--> Pullmann.<!--[DPe]--> </tei:seg>
+         </tei:ab><tei:milestone unit="section" rend="inline em-dash" />
+
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0030">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-30</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-30">30.</tei:date> Schön.  
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0030-se01"><tei:milestone unit="section" rend="inline em-dash" /> Von U.-E.<!--[DIn]--> op. 10 No. 1<!--[DW Gesamtausgabe]--> zur Korrektur.</tei:seg>  
+            <tei:seg type="subentry" xml:id="r0030-se02"><tei:milestone unit="section" rend="inline em-dash" /> Bad, dann Spaziergang.</tei:seg>  
+            <tei:seg type="subentry" xml:id="r0030-se03"><tei:milestone unit="section" rend="inline em-dash" /> ½3–3h wieder Spaziergang.</tei:seg>  
+            <tei:seg type="subentry" xml:id="r0030-se04"><tei:milestone unit="section" rend="inline em-dash" /> Von Sophie<!--[DPe Guttmann, Sophie]--> durch Horowitz<!--[DPe Horowitz, Herr]--> Kuchen u. Handarbeit. </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-30">30</tei:date> Nice.  
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0030-se01"><tei:milestone unit="section" rend="inline em-dash" /> From UE<!--[DIn]--> Op. 10 No. 1<!--[DW Gesamtausgabe]--> for correction of proofs.  </tei:seg>
+            <tei:seg type="subentry" corresp="r0030-se02"><tei:milestone unit="section" rend="inline em-dash" /> Bath, then for a walk.  </tei:seg>
+            <tei:seg type="subentry" corresp="r0030-se03"><tei:milestone unit="section" rend="inline em-dash" /> 2:30–3:00 for a walk again.</tei:seg>  
+            <tei:seg type="subentry" corresp="r0030-se04"><tei:milestone unit="section" rend="inline em-dash" /> From Sophie<!--[DPe Guttmann, Sophie]--> via Horowitz<!--[DPe Horowitz, Herr]--> cake and needlework. </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
    </sdo:record>
+   
    <sdo:record ID="r0031">
 <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
 <sdo:itemDesc>
          <dc:title>Diary entry by Schenker March, 1922</dc:title>
-         <dcterms:created>1922-03-[DD]</dcterms:created>
+         <dcterms:created>1922-03-31</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here: YYYY-MM-DD</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
+            
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-31">31.</tei:date> Schön.  
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" xml:id="r0031-se01"><tei:milestone unit="section" rend="inline em-dash" /> Zu Fritz.<!--[DPe]--></tei:seg>  
+            <tei:seg type="subentry" xml:id="r0031-se02"><tei:milestone unit="section" rend="inline em-dash" /> Von Vrieslander:<!--[DPe Vrieslander, Otto]--> Ph. Em. Bach, Drei-Masken-Verlag.<!--[DIn]-->  </tei:seg>
+            <tei:seg type="subentry" xml:id="r0031-se03"><tei:milestone unit="section" rend="inline em-dash" /> An U.-E.<!--[DIn]--> Korrekturen von op. 2 No. 2<!--[DW Gesamtausgabe]--> u. Brief: teile mit, daß ich wegen Arzt u. Stunden verhindert bin. </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1922-03-13">31</tei:date> Nice.  
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>
+            <tei:seg type="subentry" corresp="r0031-se01"><tei:milestone unit="section" rend="inline em-dash" /> To Fritz.<!--[DPe]--></tei:seg>  
+            <tei:seg type="subentry" corresp="r0031-se02"><tei:milestone unit="section" rend="inline em-dash" /> From Vrieslander:<!--[DPe Vrieslander, Otto]--> C. P. E. Bach, Drei Masken Verlag.<!--[DIn]-->  </tei:seg>
+            <tei:seg type="subentry" corresp="r0031-se03"><tei:milestone unit="section" rend="inline em-dash" /> To UE<!--[DIn]--> proofs for Op. 2 No. 2<!--[DW Gesamtausgabe]--> and letter: inform [them] that I am not able to come on account of my doctor and lessons. </tei:seg>
+</tei:ab><tei:milestone unit="section" rend="inline em-dash" />
       </tei:div>
+      
    </sdo:record>
+   
 </sdo:recordCollection>
