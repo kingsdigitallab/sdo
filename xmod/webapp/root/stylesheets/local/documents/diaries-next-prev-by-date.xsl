@@ -20,54 +20,59 @@
   </xd:doc>
 
   <xsl:param name="date"/>
+  <!-- will be in form yyyy-mm-dd -->
   <xsl:param name="file"/>
-  
+
   <xsl:template match="/">
     <nextprev>
       <xsl:for-each select="//doc">
-        <xsl:variable name="filename" select="child::str[@name='fileId']"/>
         <xsl:choose>
-          <xsl:when test="$filename = $file">
-            
-            <xsl:variable name="prevDate"
-              select="preceding-sibling::doc[1]/child::str[@name = 'date']"/>
-            <xsl:variable name="prevFile"
-              select="preceding-sibling::doc[1]/child::str[@name = 'fileId']"/>
-            
-            <prevLink>
-              <xsl:choose>
-                <xsl:when test="string($prevFile) = ''">
-                  <xsl:text>NULL</xsl:text>
-                </xsl:when>
-                <xsl:otherwise>
-                  <xsl:value-of
-                    select="concat('../', $prevDate, '/', $prevFile)"
-                  />
-                </xsl:otherwise>
-              </xsl:choose>
-            </prevLink>
-            
-            <xsl:variable name="nextDate"
-              select="following-sibling::doc[1]/child::str[@name = 'date']"/>
-            <xsl:variable name="nextFile"
-              select="following-sibling::doc[1]/child::str[@name = 'fileId']"/>
-            
-            <nextLink>
-              <xsl:choose>
-                <xsl:when test="string($nextFile) = ''">
-                  <xsl:text>NULL</xsl:text>
-                </xsl:when>
-                <xsl:otherwise>
-                  <xsl:value-of
-                    select="concat('../', $nextDate, '/', $nextFile)"
-                  />
-                </xsl:otherwise>
-              </xsl:choose>
-            </nextLink>
+          <!-- test to match the //doc immediately preceding the first //doc with the passed-in date -->
+          <xsl:when test="child::str[@name = 'date'][. != $date] and following-sibling::doc[1]/child::str[@name = 'date'][. = $date]">
+            <xsl:call-template name="prev"/>
           </xsl:when>
-          <xsl:otherwise/>
+          <!-- test to match the last //doc with the passed-in date -->
+          <xsl:when test="child::str[@name = 'date'][. = $date] and last()">
+            <xsl:call-template name="next"/>
+          </xsl:when>
+          <xsl:otherwise><!-- do nothing --></xsl:otherwise>
         </xsl:choose>
       </xsl:for-each>
     </nextprev>
   </xsl:template>
+
+  <xsl:template name="prev">
+    <xsl:variable name="prevDate" select="child::str[@name = 'date']"/>
+    <xsl:variable name="prevFile" select="child::str[@name = 'fileId']"/>
+
+    <prevLink>
+      <xsl:choose>
+        <xsl:when test="string($prevFile) = ''">
+          <xsl:text>NULL</xsl:text>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="concat('../', $prevDate, '/', $prevFile)"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </prevLink>
+  </xsl:template>
+
+  <xsl:template name="next">
+    <xsl:variable name="nextDate" select="following-sibling::doc[1]/child::str[@name = 'date']"/>
+    <xsl:variable name="nextFile" select="following-sibling::doc[1]/child::str[@name = 'fileId']"/>
+
+    <nextLink>
+      <xsl:choose>
+        <xsl:when test="string($nextFile) = ''">
+          <xsl:text>NULL</xsl:text>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="concat('../', $nextDate, '/', $nextFile)"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </nextLink>
+  </xsl:template>
+
+
+
 </xsl:stylesheet>

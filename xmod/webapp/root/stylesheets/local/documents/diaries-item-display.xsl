@@ -18,7 +18,7 @@
   
   <xsl:variable name="prevLink" select="//prevLink" />
   <xsl:variable name="nextLink" select="//nextLink" />
-  <xsl:variable name="record" select="//sdo:recordCollection/sdo:record[descendant::dcterms:created = $date]" />
+  <xsl:variable name="record" select="//sdo:recordCollection/sdo:record[substring(descendant::dcterms:created, 1, 10) = $date]" />
 
   <xsl:template name="xms:pagehead">
     <div class="pageHeader">
