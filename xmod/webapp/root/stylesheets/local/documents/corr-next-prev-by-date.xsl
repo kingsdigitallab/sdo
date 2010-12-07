@@ -7,8 +7,7 @@
         <xd:desc>
             <xd:p><xd:b>Created on:</xd:b> 01 December, 2010</xd:p>
             <xd:p><xd:b>Author:</xd:b> paulcaton</xd:p>
-            <xd:p><xd:b>Input:</xd:b> Solr's response to the query
-                "?q=date%3A*&amp;fq=kind%3Acorrespondence&amp;rows=5000&amp;fl=date,uniqueId&amp;indent=on"</xd:p>
+            <xd:p><xd:b>Input:</xd:b> Solr's response to the query</xd:p>
             <xd:p>
                 <xd:b>Output: an XML file to be aggregated into the transformation that displays an
                     item of correspondence. This file gives elements that contain information needed
@@ -30,7 +29,7 @@
                     <xsl:when test="$filename = $file">
                         
                         <xsl:variable name="prevDate"
-                            select="preceding-sibling::doc[1]/child::str[@name = 'date']"/>
+                            select="preceding-sibling::doc[1]/child::str[@name = 'dateShort']"/>
                         <xsl:variable name="prevFile"
                             select="preceding-sibling::doc[1]/child::str[@name = 'fileId']"/>
                         
@@ -48,7 +47,7 @@
                         </prevLink>
                         
                         <xsl:variable name="nextDate"
-                            select="following-sibling::doc[1]/child::str[@name = 'date']"/>
+                            select="following-sibling::doc[1]/child::str[@name = 'dateShort']"/>
                         <xsl:variable name="nextFile"
                                 select="following-sibling::doc[1]/child::str[@name = 'fileId']"/>
                         

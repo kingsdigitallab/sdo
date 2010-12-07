@@ -433,9 +433,11 @@
    <field name="uniqueId" type="string" indexed="true" stored="true" required="true" />
    <field name="title" type="string" indexed="true" stored="true" />
    <field name="description" type="string" indexed="true" stored="true" />
-   <field name="date" type="string" indexed="true" stored="true" />
+   <field name="dateFull" type="date" indexed="true" stored="true" />
+   <field name="dateShort" type="string" indexed="true" stored="true" />
    <field name="type" type="string" indexed="true" stored="true" required="false" />  
-   <field name="tag" multiValued="true" type="string" indexed="true" stored="true" />
+   <field name="tag" multiValued="true" type="string" indexed="true" stored="true" />  
+   <field name="pupil" type="string" indexed="true" stored="true" />
    <!-- xmod default fields below; for SDO these have all been made required="false" -->
    <field indexed="true" multiValued="true" name="document-title" required="false" stored="true" type="text" />
    <field indexed="true" multiValued="true" name="author" required="false" stored="true" type="text" />
@@ -550,7 +552,7 @@
    <!-- copy name to alphaNameSort, a field designed for sorting by name -->
    <!-- <copyField source="name" dest="alphaNameSort"/> -->
   
-  <copyField dest="text" source="date" />
+  <copyField dest="text" source="dateShort" />
  
 
  <!-- Similarity is the scoring routine for each document vs. a query.

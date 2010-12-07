@@ -28,11 +28,11 @@
       <xsl:for-each select="//doc">
         <xsl:choose>
           <!-- test to match the //doc immediately preceding the first //doc with the passed-in date -->
-          <xsl:when test="child::str[@name = 'date'][. != $date] and following-sibling::doc[1]/child::str[@name = 'date'][. = $date]">
+          <xsl:when test="child::str[@name = 'dateShort'][. != $date] and following-sibling::doc[1]/child::str[@name = 'dateShort'][. = $date]">
             <xsl:call-template name="prev"/>
           </xsl:when>
           <!-- test to match the last //doc with the passed-in date -->
-          <xsl:when test="child::str[@name = 'date'][. = $date] and last()">
+          <xsl:when test="child::str[@name = 'dateShort'][. = $date] and last()">
             <xsl:call-template name="next"/>
           </xsl:when>
           <xsl:otherwise><!-- do nothing --></xsl:otherwise>
@@ -42,7 +42,7 @@
   </xsl:template>
 
   <xsl:template name="prev">
-    <xsl:variable name="prevDate" select="child::str[@name = 'date']"/>
+    <xsl:variable name="prevDate" select="child::str[@name = 'dateShort']"/>
     <xsl:variable name="prevFile" select="child::str[@name = 'fileId']"/>
 
     <prevLink>
@@ -58,7 +58,7 @@
   </xsl:template>
 
   <xsl:template name="next">
-    <xsl:variable name="nextDate" select="following-sibling::doc[1]/child::str[@name = 'date']"/>
+    <xsl:variable name="nextDate" select="following-sibling::doc[1]/child::str[@name = 'dateShort']"/>
     <xsl:variable name="nextFile" select="following-sibling::doc[1]/child::str[@name = 'fileId']"/>
 
     <nextLink>

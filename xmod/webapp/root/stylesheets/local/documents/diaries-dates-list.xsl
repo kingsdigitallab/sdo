@@ -23,7 +23,7 @@
 
     <xsl:template name="xms:content">
         <!-- group by year -->
-        <xsl:for-each-group select="/aggregation/response/result/doc/str[@name='date']" group-by="substring(.,1,4)">
+        <xsl:for-each-group select="/aggregation/response/result/doc/str[@name='dateShort']" group-by="substring(.,1,4)">
             <xsl:sort select="current-grouping-key()"/>
 
             <ul>

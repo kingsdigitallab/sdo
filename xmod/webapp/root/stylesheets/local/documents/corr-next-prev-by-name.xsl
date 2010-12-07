@@ -7,8 +7,7 @@
         <xd:desc>
             <xd:p><xd:b>Created on:</xd:b> 01 December, 2010</xd:p>
             <xd:p><xd:b>Author:</xd:b> paulcaton</xd:p>
-            <xd:p><xd:b>Input:</xd:b> Solr's response to the query
-                "?q=date%3A*&amp;fq=kind%3Acorrespondence&amp;rows=5000&amp;fl=date,uniqueId&amp;indent=on"</xd:p>
+            <xd:p><xd:b>Input:</xd:b> Solr's response to the query</xd:p>
             <xd:p>
                 <xd:b>Output: an XML file to be aggregated into the transformation that displays an
                     item of correspondence. This file gives elements that contain information needed
@@ -39,9 +38,7 @@
                                     <xsl:text>NULL</xsl:text>
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <xsl:value-of
-                                        select="concat('../', $tag, '/', $prevFile)"
-                                    />
+                                    <xsl:value-of select="concat('../', $tag, '/', $prevFile)"/>
                                 </xsl:otherwise>
                             </xsl:choose>
                         </prevLink>
@@ -55,9 +52,7 @@
                                     <xsl:text>NULL</xsl:text>
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <xsl:value-of
-                                        select="concat('../', $tag, '/', $nextFile)"
-                                    />
+                                    <xsl:value-of select="concat('../', $tag, '/', $nextFile)"/>
                                 </xsl:otherwise>
                             </xsl:choose>
                         </nextLink>

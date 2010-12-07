@@ -12,8 +12,8 @@
       <xd:p><xd:b>Author:</xd:b> pcaton</xd:p>
       <xd:p>This stylesheet is the local version of the default ../../xmod/solr/tei-to-solr.xsl. It
         has been heavily customised for SDO and currently overrides practically everything in the
-        default. Like the default, though, we create one <doc/> that is largely metadata and
-        another <doc/> that has text for word searching.</xd:p>
+        default. Like the default, though, we create one <doc/> that is largely metadata and another
+        <doc/> that has text for word searching.</xd:p>
     </xd:desc>
   </xd:doc>
 
@@ -30,8 +30,8 @@
           select="preceding-sibling::sdo:collectionDesc/sdo:source/child::*[1]"/>
         <xsl:variable name="recordID" select="@ID"/>
         <!-- record IDs are not unique across the whole set, so we bodge up a unique identifier -->
-        <xsl:variable name="uniqueID" select="concat($recordID, '_', $fileID)"/> 
-        
+        <xsl:variable name="uniqueID" select="concat($recordID, '_', $fileID)"/>
+
         <!-- begin the metadata <doc> -->
         <doc>
           <field name="kind">
@@ -55,18 +55,33 @@
           </field>
 
           <xsl:if test="$kind = 'correspondence'">
-            <field name="title">
-              <xsl:value-of select="child::sdo:itemDesc/dc:title"/>
-            </field>
-
             <field name="description">
               <xsl:value-of select="child::sdo:itemDesc/dc:description"/>
             </field>
           </xsl:if>
 
-          <field name="date">
-            <xsl:value-of select="substring(child::sdo:itemDesc/dcterms:created, 1, 10)"/>
-          </field>
+          <xsl:if test="$kind != 'diary'">
+            <field name="title">
+              <xsl:value-of select="child::sdo:itemDesc/dc:title"/>
+            </field>
+          </xsl:if>
+
+          <xsl:if test="$kind = 'lessonbook'">
+            <field name="pupil">
+              <xsl:value-of select="substring-before(child::sdo:itemDesc/dc:title, ':')"/>
+            </field>
+          </xsl:if>
+
+          <xsl:if test="substring(child::sdo:itemDesc/dcterms:created, 9, 4) != '[DD]'">
+            <!-- in full W3C format Solr requires:  yyyy-mm-ddT12:00:00Z -->
+            <field name="dateFull">
+              <xsl:value-of select="child::sdo:itemDesc/dcterms:created"/>
+            </field>
+            <!-- as a handy string:   yyyy-mm-dd -->
+            <field name="dateShort">
+              <xsl:value-of select="substring(child::sdo:itemDesc/dcterms:created, 1, 10)"/>
+            </field>
+          </xsl:if>
 
           <field name="type">
             <xsl:value-of select="replace(child::sdo:itemDesc/dc:type, ' ', '_')"/>
@@ -87,7 +102,7 @@
               <xsl:value-of select="."/>
             </field>
           </xsl:for-each>
-          
+
           <!-- <field name="content">
             <xsl:value-of select="normalize-space(child::tei:div)" />
           </field> -->
@@ -97,5 +112,5 @@
 
     </add>
   </xsl:template>
-  
+
 </xsl:stylesheet>

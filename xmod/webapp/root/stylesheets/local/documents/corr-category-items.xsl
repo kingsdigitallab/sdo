@@ -33,7 +33,7 @@
         <ul>
             
             <xsl:for-each select="/aggregation/response/result/doc">
-                <xsl:sort select="child::str[@name = 'date']"/>
+                <!-- <xsl:sort select="child::str[@name = 'date']"/> -->
                 <xsl:variable name="filename" select="child::str[@name='fileId']"/>
                 <li>
                     <h2>
