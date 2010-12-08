@@ -12,7 +12,7 @@ import os
 from lxml import etree
 
 # xpath expression to select the title from the XML document
-TITLE_XPATH = 'normalize-space(string(/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@*)]))'
+TITLE_XPATH = 'normalize-space(string(/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type = "file"]/tei:term/@sortKey))'
 
 #
 def main():
