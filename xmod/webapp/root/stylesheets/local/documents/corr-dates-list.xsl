@@ -58,7 +58,7 @@
                                         <!-- <xsl:variable name="url"
                                             select="concat(substring($identifier,7), '/', $myVal)"/> -->
                                         <xsl:variable name="url"
-                                            select="concat('correspondence/date/summary/', $myVal)"/>
+                                            select="concat('../correspondence/dates/summary/', $myVal)"/>
                                         <li>
                                             <a href="{$url}">
                                                 <xsl:value-of select="current-grouping-key()"/>

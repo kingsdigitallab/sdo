@@ -5,25 +5,26 @@
     <xsl:import href="../default.xsl"/>
     <xd:doc scope="stylesheet">
         <xd:desc>
-            <xd:p><xd:b>Created on:</xd:b> Sep 27, 2010</xd:p>
+            <xd:p><xd:b>Created on:</xd:b> 17 November, 2010</xd:p>
             <xd:p><xd:b>Author:</xd:b> paulcaton</xd:p>
             <xd:p><xd:b>Input:</xd:b> Solr's response to the query
-                "?q=date%3A*&amp;fq=kind%3Adiary&amp;rows=5000&amp;fl=date,uniqueId&amp;indent=on"</xd:p>
-            <xd:p><xd:b>Output:</xd:b> display of years, months, and days for which there are diary
-                entry files</xd:p>
+                "q=date%3A*&amp;fq=kind%3Acorrespondence&amp;rows=5000&amp;fl=date,uniqueId,tag&amp;indent=on"</xd:p>
+            <xd:p><xd:b>Output:</xd:b> display of years, months, and days for which there are
+                correspondence items</xd:p>
         </xd:desc>
     </xd:doc>
 
     <xsl:param name="menutop" select="'true'"/>
 
     <xsl:variable name="xmg:title">
-        <xsl:text>Browse Diaries by Date</xsl:text>
+        <xsl:text>Browse Correspondence by Date</xsl:text>
     </xsl:variable>
     <xsl:variable name="root" select="/"/>
 
     <xsl:template name="xms:content">
         <!-- group by year -->
-        <xsl:for-each-group select="/aggregation/response/result/doc/str[@name='dateShort']" group-by="substring(.,1,4)">
+        <xsl:for-each-group select="/aggregation/response/result/doc/str[@name='dateShort']"
+            group-by="substring(.,1,4)">
             <xsl:sort select="current-grouping-key()"/>
 
             <ul>
@@ -45,24 +46,25 @@
                                     <xsl:value-of select="count(current-group())"/>
                                 </a>
                                 <ul>
-                                    <!-- group by day (usually just one item per day group, but occasionally there are two) -->
+                                    <!-- group by day (sometimes just one item per day group, sometimes more) -->
                                     <xsl:for-each-group select="current-group()"
-                                        group-by="substring(.,9,2)"> 
-                                        <xsl:sort select="current-grouping-key()"/> <xsl:variable name="myVal"
-                                            select="."/> 
-                                        <!-- for 'identifier' variable below, because there are sometimes several diary entries on the same day--> 
-                                        <!--  we must use subsequence() otherwise we'll sometimes be passing a sequence into --> 
-                                        <!-- the substring() function for the 'url' variable, which XSLT won't accept. -->
+                                        group-by="substring(.,9,2)">  <xsl:sort
+                                            select="current-grouping-key()"/>
+                                        <xsl:variable name="myVal" select="."/> 
+                                        <!-- for 'identifier' variable below, because there are sometimes several items on the same day--> 
+                                        <!--  we must use subsequence() otherwise we'll sometimes be passing a sequence into -->  <!-- the substring() function for the 'url' variable, which XSLT won't accept. -->
                                         <xsl:variable name="identifier"
-                                            select="subsequence(/aggregation/response/result/doc/child::str[text()=$myVal]/following-sibling::str[@name='uniqueId'],1,1)"/>
+                                            select="subsequence(//doc/child::str[text()=$myVal]/following-sibling::str[@name='uniqueId'],1,1)"/>
+                                        <!-- <xsl:variable name="url"
+                                            select="concat(substring($identifier,7), '/', $myVal)"/> -->
                                         <xsl:variable name="url"
-                                            select="concat('../diaries/dates/', $myVal, '/', substring($identifier,7))"/>
+                                            select="concat('../cd/dates/summary/', $myVal)"/>
                                         <li>
                                             <a href="{$url}">
                                                 <xsl:value-of select="current-grouping-key()"/>
                                                 <xsl:if test="count(current-group()) > 1"><xsl:text> </xsl:text>
                                                   <xsl:value-of select="count(current-group())"
-                                                  /><xsl:text> entries</xsl:text></xsl:if>
+                                                  /><xsl:text> items</xsl:text></xsl:if>
                                             </a>
                                         </li>
                                     </xsl:for-each-group>
