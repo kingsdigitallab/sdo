@@ -301,22 +301,25 @@
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
           <map:part
-            src="cocoon://_internal/solr/query/q=dateFull%3A*&amp;fq=kind%3Acorrespondence%20AND%20kind%3Adiary&amp;rows=5000&amp;fl=dateShort,uniqueId,tag&amp;indent=on"
+            src="cocoon://_internal/solr/query/q=dateFull%3A*&amp;fq=kind%3Acorrespondence%20OR%20kind%3Adiary&amp;rows=5000&amp;fl=dateShort,uniqueId,tag&amp;indent=on"
             label="xml"/>
+          <!-- <map:part
+            src="cocoon://_internal/solr/query/q=dateFull%3A*&amp;fq=kind%3A(%2Bcorrespondence%20%2Bdiary)&amp;rows=5000&amp;fl=dateShort,uniqueId,tag&amp;indent=on"
+            label="xml"/> -->
         </map:aggregate>
         <map:transform src="stylesheets/local/documents/cd-dates-list.xsl"/>
         <map:serialize type="xhtml"/>
       </map:match>
       
       <!-- corr by date, step 2: after user clicks on a date, show summary of all items that have that date -->
-      <map:match pattern="documents/correspondence/dates/summary/*">
+      <map:match pattern="documents/cd/dates/summary/*">
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
           <map:part
-            src="cocoon://_internal/solr/query/q=dateShort%3A{1}&amp;fq=kind%3Acorrespondence%20AND%20&amp;rows=5000&amp;fl=tag,fileId,dateShort,dateFull,title,description,shelfmark&amp;sort=dateFull%20asc&amp;indent=on"
+            src="cocoon://_internal/solr/query/q=dateShort%3A{1}&amp;fq=kind%3Acorrespondence%20OR%20kind%3Adiary&amp;rows=5000&amp;fl=tag,fileId,dateShort,dateFull,title,description,shelfmark,kind&amp;sort=dateFull%20asc&amp;indent=on"
           />
         </map:aggregate>
-        <map:transform src="stylesheets/local/documents/corr-date-summary.xsl">
+        <map:transform src="stylesheets/local/documents/cd-date-summary.xsl">
           <map:parameter name="date" value="{1}"/>
         </map:transform>
         <map:serialize type="xhtml"/>
