@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
-<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
  <sdo:collectionDesc>
   <sdo:source>
    <sdo:correspondence mfID="50" sdoID="DLA-69.930-4">DLA 69.930/4</sdo:correspondence>
@@ -22,7 +26,7 @@
 
   <tei:respStmt xml:id="IB">
    <tei:persName>Ian Bent</tei:persName>
-   <tei:resp>XML Encoding</tei:resp>
+   <tei:resp>XML Encoding, 2010</tei:resp>
   </tei:respStmt>
 
   <tei:respStmt xml:id="BOT">
@@ -41,8 +45,8 @@
   <sdo:itemDesc>
    <dcterms:isPartOf>Halm ~ HSchenker</dcterms:isPartOf>
    <dc:title>Handwritten letter from Schenker to Halm, dated December 9, 1918</dc:title>
-<dc:type>Letter</dc:type>
-<dcterms:created>1918-12-09T12:00:00Z</dcterms:created>
+   <dc:type>Letter</dc:type>
+   <dcterms:created>1918-12-09T12:00:00Z</dcterms:created>
    <dcterms:dateSubmitted>2006-05-13</dcterms:dateSubmitted>
    <dc:description>Schenker recounts to Halm how Sofie Deutsch had set up a trust for needy artists,
     leaving Schenker to identify beneficiaries. Schenker offers to transfer 1,600 Kroner to him from
@@ -60,62 +64,70 @@
 
    <tei:opener>
     <tei:salute rend="indent-10">Sehr geehrter <tei:persName key="entity-000326">Herr
-     Halm</tei:persName><!-- profile: August Halm -->!</tei:salute>
+      Halm</tei:persName>!</tei:salute>
    </tei:opener>
 
    <tei:p>Vor<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Writing of this letter is
      recorded in Schenker's diary at OJ 2/12, p. 2019, December 8, 1918: "An Halm (recomm. Br.):
      frage wegen des Stipendiums an, dessen Geschichte ich kurz erzähle, zum Beschluß
      Wagner-Marx-Parallele." ("To Halm (registered letter"): I ask about the stipend, the story of
-     which I briefly recount; at the end, Wagner-Marx parallel.").<!-- XR --> </tei:note> zwei Jahren ist eine
-     <tei:persName key="entity-000165">Schülerin</tei:persName><!-- profile: Sofie Deutsch --> von mir verstorben, eine
-    ältere Dame, die etwa 16 Jahre hindurch meinen Unterricht genoß. Sie hinterließ ein <tei:hi rend="lateinschr">Testament</tei:hi>, in dem sie einen Verein zum Haupterben einsetzte, daneben
-    aber auch 2 Stipendien für Künstler errichtete, über die zu verfügen sie ausschließlich mir
-    allein auftrug. Wäre die musikalische Gegenwart nicht so trostlos, welche Freude müßte es da
-     einem<tei:note xml:id="r0001-fn2" type="editorial" place="foot"> "einem“: i.e. Schenker, using
-     the impersonal pronoun to refer to himself.</tei:note> bereiten, vom Vertrauen der Erblasserin
-    getragen, überall dort beizuspringen, wo Hindernisse (Verleger!) diesen oder jenen Plan lähmen!
-    So aber hatte ich wenig Neigung, das schöne Amt mich zu nehmen, wie ich auch in einem anderen
-    Falle es abgelehnt habe, mit unserem Musikhistoriker <tei:persName key="entity-000003">
+     which I briefly recount; at the end, Wagner-Marx parallel.").<!-- XR -->
+    </tei:note> zwei Jahren ist eine <tei:persName key="entity-000165">Schülerin</tei:persName> von
+    mir verstorben, eine ältere Dame, die etwa 16 Jahre hindurch meinen Unterricht genoß. Sie
+    hinterließ ein <tei:hi rend="lateinschr">Testament</tei:hi>, in dem sie einen Verein zum
+    Haupterben einsetzte, daneben aber auch 2 Stipendien für Künstler errichtete, über die zu
+    verfügen sie ausschließlich mir allein auftrug. Wäre die musikalische Gegenwart nicht so
+    trostlos, welche Freude müßte es da einem<tei:note xml:id="r0001-fn2" type="editorial"
+     place="foot"> "einem“: i.e. Schenker, using the impersonal pronoun to refer to
+     himself.</tei:note> bereiten, vom Vertrauen der Erblasserin getragen, überall dort
+    beizuspringen, wo Hindernisse (Verleger!) diesen oder jenen Plan lähmen! So aber hatte ich wenig
+    Neigung, das schöne Amt mich zu nehmen, wie ich auch in einem anderen Falle es abgelehnt habe,
+    mit unserem Musikhistoriker <tei:persName key="entity-000003">
      <tei:hi rend="lateinschr">Prof. Guido Adler</tei:hi>
-    </tei:persName><!-- profile: Guido Adler --> das <tei:hi rend="lateinschr">Jury-Amt</tei:hi> zu
-     teilen.<tei:note xml:id="r0001-fn3" type="editorial" place="foot"> The Rothschild Artists’
-     Foundation had written to Schenker on December 3, 1916, inviting him to join its panel of jury
-     members along with Guido Adler and Alfred Grünfeld (OJ 12/26, [2]). Schenker declined. The
-     President of the Jewish Community wrote to Schenker regretting his decision (Federhofer,
-      <tei:title level="m">Heinrich Schenker nach Tagebüchern und Briefen ...</tei:title>, p.54,
-     n.8).</tei:note> Doch gelang es dem <tei:persName key="entity-000590">Bruder der
-    Erblasserin</tei:persName><!-- profile: Fritz Mendl --> sowie dem Testaments<tei:hi rend="lateinschr">executor</tei:hi> mich zumindest zu einem Versuch zu überreden. Ich faßte nun
-    dies Künstler ins Auge u. harrte der ersten Gelder der Verlassenschaft<tei:note xml:id="r0001-fn4" type="editorial" place="foot">
-     <tei:hi rend="italic">Verlassenschaft</tei:hi>: Austrian for <tei:hi rend="italic">Hinterlassenschaft</tei:hi>.</tei:note>, um zur Tat zu schreiten. Da kamen aber allerhand
+    </tei:persName> das <tei:hi rend="lateinschr">Jury-Amt</tei:hi> zu teilen.<tei:note
+     xml:id="r0001-fn3" type="editorial" place="foot"> The Rothschild Artists’ Foundation had
+     written to Schenker on December 3, 1916, inviting him to join its panel of jury members along
+     with Guido Adler and Alfred Grünfeld (OJ 12/26, [2]). Schenker declined. The President of the
+     Jewish Community wrote to Schenker regretting his decision (Federhofer, <tei:title level="m"
+      >Heinrich Schenker nach Tagebüchern und Briefen ...</tei:title>, p.54, n.8).</tei:note> Doch
+    gelang es dem <tei:persName key="entity-000590">Bruder der Erblasserin</tei:persName> sowie dem
+     Testaments<tei:hi rend="lateinschr">executor</tei:hi> mich zumindest zu einem Versuch zu
+    überreden. Ich faßte nun dies Künstler ins Auge u. harrte der ersten Gelder der
+     Verlassenschaft<tei:note xml:id="r0001-fn4" type="editorial" place="foot">
+     <tei:hi rend="italic">Verlassenschaft</tei:hi>: Austrian for <tei:hi rend="italic"
+      >Hinterlassenschaft</tei:hi>.</tei:note>, um zur Tat zu schreiten. Da kamen aber allerhand
     (mir fremd gebliebene) Verwicklungen in die Verlassenschaftsabhandlung, die bewirkten, daß diese
-    noch bis zur Stunde das Gericht beschäftigt, u. daß auch die Stiftung der Stipendien <tei:pb n="2"/> überhaupt ganz ins Wasser gefallen. Obzwar der
-    <tei:persName key="entity-000590">Bruder</tei:persName><!-- profile: Fritz Mendl --> der <tei:persName>verstorbenen
-     Dame</tei:persName><!-- profile: Sofie Mendl --> einer der reichsten Großindustriellen
-     <tei:country>Österreich</tei:country>s ist, fiel es ihm dennoch nicht ein, die Konsequenz aus
-    seiner ersten Geltung zu ziehen.<tei:note xml:id="r0001-fn5" type="editorial" place="foot"> The
-     translation of this last clause is admittedly interpretive; its literal meaning is more like:
-     "it still did not occur to him [i.e. Mendl] to draw the consequence from his initial
-     importance." </tei:note> Glücklicherweise hat mich eine andere reiche
-    <tei:persName key="entity-000201">Schülerin</tei:persName><!-- profile: Angi Elias -->, die zu mir nun über 18 Jahre
-    kommt, in die Lage versetzt, mir selbst Wort zu halten in jenen <tei:gap reason="illegible"/>
-    Fällen, die ich im Auge hatte.</tei:p>
+    noch bis zur Stunde das Gericht beschäftigt, u. daß auch die Stiftung der Stipendien <tei:pb
+     n="2"/> überhaupt ganz ins Wasser gefallen. Obzwar der <tei:persName key="entity-000590"
+     >Bruder</tei:persName> der <tei:persName key="entity-000165">verstorbenen Dame</tei:persName>
+    einer der reichsten Großindustriellen <tei:placeName key="entity-002506"
+      ><tei:country>Österreich</tei:country></tei:placeName>s ist, fiel es ihm dennoch nicht ein,
+    die Konsequenz aus seiner ersten Geltung zu ziehen.<tei:note xml:id="r0001-fn5" type="editorial"
+     place="foot"> The translation of this last clause is admittedly interpretive; its literal
+     meaning is more like: "it still did not occur to him [i.e. Mendl] to draw the consequence from
+     his initial importance." </tei:note> Glücklicherweise hat mich eine andere reiche <tei:persName
+     key="entity-000201">Schülerin</tei:persName>, die zu mir nun über 18 Jahre kommt, in die Lage
+    versetzt, mir selbst Wort zu halten in jenen <tei:gap reason="illegible"/> Fällen, die ich im
+    Auge hatte.</tei:p>
 
-   <tei:p>Am 5. Januar als am Todestage der
-    <tei:persName key="entity-000165">Erblasserin</tei:persName><!-- profile: Sofie Deutsch --> soll der Betrag zur
-    Auszahlung kommen. Und da frage ich Sie nun, ob es Ihnen angenehm wäre, wenn ich <tei:add place="interlinear-above">Ihnen</tei:add> um diese Zeit den Betrag von 1600 Kronen für Ihre
-    Zwecke überweisen würde? Im Vorjahre hat das noch über 1000 Mk. ausgemacht; ob bei dem niedrigen
-    Kurse der Kronen auch heuer<tei:note xml:id="r0001-fn6" type="editorial" place="foot"> „heuer“:
-     South German and Austria usage.</tei:note> derselbe Betrag in Mk. sich ergeben wird, weiß ich
-    nicht.</tei:p>
+   <tei:p>Am 5. Januar als am Todestage der <tei:persName key="entity-000165"
+     >Erblasserin</tei:persName> soll der Betrag zur Auszahlung kommen. Und da frage ich Sie nun, ob
+    es Ihnen angenehm wäre, wenn ich <tei:add place="interlinear-above">Ihnen</tei:add> um diese
+    Zeit den Betrag von 1600 Kronen für Ihre Zwecke überweisen würde? Im Vorjahre hat das noch über
+    1000 Mk. ausgemacht; ob bei dem niedrigen Kurse der Kronen auch heuer<tei:note
+     xml:id="r0001-fn6" type="editorial" place="foot"> „heuer“: South German and Austria
+     usage.</tei:note> derselbe Betrag in Mk. sich ergeben wird, weiß ich nicht.</tei:p>
 
    <tei:p>Indem ich Sie um Ihre frdl. Zustimmung bitte, erbitte ich zugleich Auskunft, auf welche
-    Weise ich Ihnen die Summe zukommen lassen könnte. Haben Sie vielleicht hier in <tei:placeName>
+    Weise ich Ihnen die Summe zukommen lassen könnte. Haben Sie vielleicht hier in <tei:placeName
+     key="entity-002484">
      <tei:hi rend="lateinschr">Wien</tei:hi>
     </tei:placeName> einen Vertrauensmann? Wenn nicht, würde ich den Versuch machen, durch eine Bank
-    die <tei:hi rend="underline">Erlaubnis</tei:hi> (eine solche ist nämlich <tei:hi rend="underline">unter</tei:hi>
+    die <tei:hi rend="underline">Erlaubnis</tei:hi> (eine solche ist nämlich <tei:hi
+     rend="underline">unter</tei:hi>
     <tei:hi rend="underline">allen</tei:hi>
-    <tei:hi rend="underline">Umständen</tei:hi> nötig) von der maßgebenden Stelle zu erlangen.</tei:p>
+    <tei:hi rend="underline">Umständen</tei:hi> nötig) von der maßgebenden Stelle zu
+    erlangen.</tei:p>
 
    <tei:p>Ich frage, wie Sie sehen, schon heute an, um, Ihre Zustimmung vorausgesetzt, sobald als
     möglich die Sache in Angriff zu nehmen. Der Sicherheit halber bitte ich Sie auch Ihre Antwort an
@@ -123,10 +135,13 @@
 
    <tei:p>Sind Sie in Ihren Arbeiten doch die Verhältnisse sehr gehemmt, oder gewinnen Sie Oberhand
     über die unsäglich traurige Verwirrung in politischen Dingen, die meines Erachtens, wie die
-    musikalische auf <tei:persName>R. Wagner</tei:persName><!-- Richard Wagner -->, lediglich auf
-     <tei:persName key="entity-000578">K. Marx</tei:persName><!-- profile: Karl Marx --> zurückzuführen ist?<tei:note xml:id="r0001-fn7" type="editorial" place="foot"> This paragraph is quoted in Federhofer,
+    musikalische auf <tei:persName key="entity-000924">R. Wagner</tei:persName>, lediglich auf
+     <tei:persName key="entity-000578">K. Marx</tei:persName> zurückzuführen ist?<tei:note
+     xml:id="r0001-fn7" type="editorial" place="foot"> This paragraph is quoted in Federhofer,
       <tei:title level="m">Heinrich Schenker nach Tagebüchern und Briefen ...</tei:title>, p.139,
-     saying. Schenker's antipathy to Wagner, latent in <tei:title level="m">Harmonielehre</tei:title> (1906), emerged clearly first in the unpublished <tei:title level="m">Über den Niedergang der Kompositionskunst</tei:title> (c. 1906-09), and his critique
+     saying. Schenker's antipathy to Wagner, latent in <tei:title level="m"
+      >Harmonielehre</tei:title> (1906), emerged clearly first in the unpublished <tei:title
+      level="m">Über den Niedergang der Kompositionskunst</tei:title> (c. 1906-09), and his critique
      of Wagner continued in his <tei:title level="m">Beethovens Neunte Sinfonie</tei:title> and
       <tei:title level="j">Der Tonwille</tei:title>; Wagner is brought into conjunction with Marx in
      the latter: "In shattering the Urlinie and destroying musical truth, Wagner readied a fate for
@@ -155,52 +170,57 @@
 
    <tei:opener>
     <tei:salute rend="indent-10">Dear <tei:persName key="entity-000326">Mr.
-     Halm</tei:persName><!-- profile: August Halm -->,</tei:salute>
+     Halm</tei:persName>,</tei:salute>
    </tei:opener>
 
 
-   <tei:p>Two<tei:ptr corresp="#r0001-fn01" type="footnote"/> years ago a <tei:persName key="entity-000165">female
-     student</tei:persName><!-- profile: Sofie Deutsch --> of mine died, an older women who had the
+   <tei:p>Two<tei:ptr corresp="#r0001-fn01" type="footnote"/> years ago a <tei:persName
+     key="entity-000165">female student</tei:persName> of mine died, an older women who had the
     benefit of my instruction for sixteen years. She left a will in which she designated an
     association as primary beneficiary, as well as established two stipends for artists, the
     disposition of which she assigned exclusively to me. If the present circumstances in music were
-    not so hopeless, what happiness it would have to bring for someone,<tei:ptr target="#r0001-fn2" type="footnote"/> supported by the trust of the deceased, to jump to aid wherever obstacles
+    not so hopeless, what happiness it would have to bring for someone,<tei:ptr target="#r0001-fn2"
+     type="footnote"/> supported by the trust of the deceased, to jump to aid wherever obstacles
     (publishers!) foil this or that plan! However, I had little desire to take on the pleasant duty,
-    just as in another case I declined to share jury duty with our music historian,
-     <tei:persName key="entity-000003">Professor Guido Adler</tei:persName><!-- profile: Guido Adler -->.<tei:ptr target="#r0001-fn3" type="footnote"/> But the <tei:persName key="entity-000590">brother of the
-    deceased</tei:persName><!-- profile: Fritz Mendl --> and the executor of the will succeeded at
-    least in coaxing me into a trial. I had some artists in mind and awaited the first distribution
-    of money<tei:ptr target="#r0001-fn4" type="footnote"/> from the bequest in order to take action.
-    However, all manner of complications (external to me) came up in the handling of the bequest,
-    such that it still occupies the court up to this moment, and such that the endowment of the
-    stipends <tei:pb n="2"/> has fallen through altogether. Even though the
-    <tei:persName key="entity-000590">brother</tei:persName><!-- profile: Fritz Mendl --> of the <tei:persName key="entity-000165">deceased
-     woman</tei:persName><!-- profile: Sofie Deutsch --> is one of
-    <tei:country>Austria</tei:country>’s richest big industrialists, it nevertheless did not occur
-    to him to take advantage of his high rank in society.<tei:ptr target="#r0001-fn5" type="footnote"/> Fortunately, another rich <tei:persName key="entity-000201">female
-    student</tei:persName><!-- profile: Angi Elias -->, who has been coming to me for over eighteen
+    just as in another case I declined to share jury duty with our music historian, <tei:persName
+     key="entity-000003">Professor Guido Adler</tei:persName>.<tei:ptr target="#r0001-fn3"
+     type="footnote"/> But the <tei:persName key="entity-000590">brother</tei:persName> of the
+     <tei:persName key="entity-000165"> deceased woman</tei:persName> and the executor of the will
+    succeeded at least in coaxing me into a trial. I had some artists in mind and awaited the first
+    distribution of money<tei:ptr target="#r0001-fn4" type="footnote"/> from the bequest in order to
+    take action. However, all manner of complications (external to me) came up in the handling of
+    the bequest, such that it still occupies the court up to this moment, and such that the
+    endowment of the stipends <tei:pb n="2"/> has fallen through altogether. Even though the
+     <tei:persName key="entity-000590">brother</tei:persName> of the <tei:persName
+     key="entity-000165">deceased woman</tei:persName> is one of <tei:placeName key="entity-002506"
+      ><tei:country>Austria</tei:country></tei:placeName>’s richest big industrialists, it
+    nevertheless did not occur to him to take advantage of his high rank in society.<tei:ptr
+     target="#r0001-fn5" type="footnote"/> Fortunately, another rich <tei:persName
+     key="entity-000201">female student</tei:persName>, who has been coming to me for over eighteen
     years, has put me in the position of keeping my word in those cases that I had in mind.</tei:p>
 
-   <tei:p>On January 5, as the death date of the
-    <tei:persName key="entity-000165">deceased</tei:persName><!-- profile: Sofie Deutsch -->, the amount is to be paid
-    out. I therefore ask you whether it would be agreeable if around that time I were to transfer
-    the sum of 1,600 Kronen <tei:add place="interlinear-above">to you</tei:add> for your purposes?
-    Last year, that still amounted to over 1,000 Marks. With the low exchange rate of Kronen, I do
-    not know whether this year<tei:ptr corresp="#r0001-fn06" type="footnote"/> the same amount in
-    Marks would result.</tei:p>
+   <tei:p>On January 5, as the death date of the <tei:persName key="entity-000165"
+     >deceased</tei:persName>, the amount is to be paid out. I therefore ask you whether it would be
+    agreeable if around that time I were to transfer the sum of 1,600 Kronen <tei:add
+     place="interlinear-above">to you</tei:add> for your purposes? Last year, that still amounted to
+    over 1,000 Marks. With the low exchange rate of Kronen, I do not know whether this year<tei:ptr
+     corresp="#r0001-fn06" type="footnote"/> the same amount in Marks would result.</tei:p>
 
    <tei:p>In asking for your friendly consent, I also request information as to what manner I could
-    convey the sum to you. Do you perhaps have a representative here in
-    <tei:placeName>Vienna</tei:placeName>? If not, I would make an attempt to secure <tei:hi rend="underline">permission</tei:hi> from the regulatory agency (such is of course necessary
+    convey the sum to you. Do you perhaps have a representative here in <tei:placeName
+     key="entity-002484">Vienna</tei:placeName>? If not, I would make an attempt to secure <tei:hi
+     rend="underline">permission</tei:hi> from the regulatory agency (such is of course necessary
      <tei:hi rend="underline">in all circumstances</tei:hi>).</tei:p>
 
    <tei:p>As you see, assuming your consent, I am inquiring today in order to undertake the matter
-    as soon as possible. To be safe, I ask that you send your reply to me <tei:pb n="3"/> by <tei:hi rend="underline">registered mail</tei:hi>.</tei:p>
+    as soon as possible. To be safe, I ask that you send your reply to me <tei:pb n="3"/> by <tei:hi
+     rend="underline">registered mail</tei:hi>.</tei:p>
 
    <tei:p>Are the circumstances of your activities very constrained, or are you getting the upper
     hand on the untold woeful confusion in political matters, which in my opinion is to be traced
-    solely to <tei:persName>Karl Marx</tei:persName><!-- profile -->, just as the musical confusion
-    is to be traced to <tei:persName>Richard Wagner</tei:persName>.<tei:ptr target="#r0001-fn7" type="footnote"/></tei:p>
+    solely to <tei:persName key="entity-000578">Karl Marx</tei:persName>, just as the musical
+    confusion is to be traced to <tei:persName key="entity-000924">Richard
+     Wagner</tei:persName>.<tei:ptr target="#r0001-fn7" type="footnote"/></tei:p>
 
    <tei:closer>
     <tei:salute rend="indent-40">With cordial greetings, </tei:salute>
