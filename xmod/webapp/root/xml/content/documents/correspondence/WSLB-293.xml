@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
-<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
  <sdo:collectionDesc>
   <sdo:source>
    <sdo:correspondence mfID="39" sdoID="WSLB-293">WSLB 293</sdo:correspondence>
@@ -13,8 +17,9 @@
   <tei:respStmt xml:id="IB">
    <tei:persName>Ian Bent</tei:persName>
    <tei:resp>Transcription, 2006</tei:resp>
-   <tei:resp>XML Encoding</tei:resp>
    <tei:resp>Translation, 2006</tei:resp>
+   <tei:resp>XML Encoding, 2010</tei:resp>
+
   </tei:respStmt>
   <tei:respStmt xml:id="BOT">
    <tei:name>Automated Script</tei:name>
@@ -37,8 +42,10 @@
    <dc:type>Postcard</dc:type>
    <dcterms:created>1918-02-05T12:00:00Z</dcterms:created>
    <dcterms:dateSubmitted>2006-05-01</dcterms:dateSubmitted>
-   <dc:description>Schenker renews his request of January 30 that review copies be sent to Halm.</dc:description>
+   <dc:description>Schenker renews his request of January 30 that review copies be sent to
+    Halm.</dc:description>
    <dc:subject>review copies</dc:subject>
+
    <!-- Add the EATS key attribute value to indicate the sender of the letter -->
    <marcrel:correspondent key="EATS_nNNNNNN">Heinrich Schenker</marcrel:correspondent>
    <!-- Add the key attribute to indicate the recipient of the letter -->
@@ -51,9 +58,7 @@
 
    <tei:opener>
     <tei:milestone unit="folio" n="recto"/>
-
     <tei:fw type="envelope">
-
      <tei:address>
       <tei:addrLine>
        <tei:supplied reason="clarity">Absender: </tei:supplied>
@@ -63,24 +68,20 @@
        <tei:hi rend="lateinschr">III., Reisnerstr. 38</tei:hi>
       </tei:addrLine>
      </tei:address>
-
      <tei:address>
-      <tei:addrLine><tei:supplied reason="clarity">An: </tei:supplied> den Verlag „<tei:hi rend="lateinschr">Universal-Edition</tei:hi>“ </tei:addrLine>
+      <tei:addrLine><tei:supplied reason="clarity">An: </tei:supplied> den Verlag „<tei:hi
+        rend="lateinschr">Universal-Edition</tei:hi>“ </tei:addrLine>
       <tei:addrLine>I </tei:addrLine>
       <tei:addrLine>Karlsplatz 6 </tei:addrLine>
      </tei:address>
-
      <tei:fw type="postmark">|| 3/3 WIEN 49 | 6. II.18-3 | * 3. * ||</tei:fw>
      <tei:lb/>
      <tei:fw type="label">|| R | WIEN 49 / 393 | P. B. 3/3 ||</tei:fw>
-
      <tei:milestone unit="folio" n="verso"/>
-
     </tei:fw>
-
-    <tei:salute>An die „<tei:orgName>
+    <tei:salute>An die „<tei:orgName key="entity-002408">
       <tei:hi rend="lateinschr-underline">Universal-Edition </tei:hi>
-     </tei:orgName><!-- profile: Universal Edition -->“ Wien, I</tei:salute>
+     </tei:orgName>“ Wien, I</tei:salute>
    </tei:opener>
 
    <tei:p>Bis<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Writing of this postcard is
@@ -89,10 +90,12 @@
      umgehend Antwort." (To Hertzka (registered postcard): [I] see no sign of response to my
      question of January 30 addressed to him regarding review copies; request reply by
      return.").<!-- XR -->
-    </tei:note> heute vermisse ich noch eine Erledigung meiner <tei:hi rend="underline">beruflichen</tei:hi> Anfrage vom 30. 1.<tei:note xml:id="r0001-fn02" type="editorial" place="foot">= WSLB 292 </tei:note> betreffs die „Rezensions-exemplare“ für <tei:persName key="entity-000326">H.
-     Prof. <tei:hi rend="lateinschr">A. Halm</tei:hi></tei:persName><!-- profile: August Halm --> in
-     <tei:placeName>Esslingen</tei:placeName>. Ich ersuche dieser noch einmal frdl., mir Ihre
-    Stellungsnahme endlich bekanntzugeben, u. zw. womöglich umgehend.</tei:p>
+    </tei:note> heute vermisse ich noch eine Erledigung meiner <tei:hi rend="underline"
+     >beruflichen</tei:hi> Anfrage vom 30. 1.<tei:note xml:id="r0001-fn02" type="editorial"
+     place="foot">= WSLB 292 </tei:note> betreffs die „Rezensions-exemplare“ für H. Prof.
+     <tei:persName key="entity-000326"><tei:hi rend="lateinschr">A. Halm</tei:hi></tei:persName> in
+     <tei:placeName key="entity-002523">Esslingen</tei:placeName>. Ich ersuche dieser noch einmal
+    frdl., mir Ihre Stellungsnahme endlich bekanntzugeben, u. zw. womöglich umgehend.</tei:p>
 
    <tei:closer>
     <tei:salute rend="indent-40">Mit ausgez. Hochachtung </tei:salute>
@@ -110,41 +113,36 @@
 
    <tei:opener>
     <tei:milestone unit="folio" n="recto"/>
-
     <tei:fw type="envelope">
-
      <tei:address>
       <tei:addrLine>
        <tei:supplied reason="clarity">From: </tei:supplied>Dr. Heinrich Schenker, </tei:addrLine>
       <tei:addrLine><tei:supplied reason="location">Vienna </tei:supplied>III, Reisnerstraße 38
       </tei:addrLine>
      </tei:address>
-
      <tei:address>
       <tei:addrLine><tei:supplied reason="clarity">To: </tei:supplied> the Publishing House
        Universal Edition, </tei:addrLine>
       <tei:addrLine><tei:supplied reason="location">Vienna </tei:supplied>I </tei:addrLine>
       <tei:addrLine>Karlsplatz 6 </tei:addrLine>
      </tei:address>
-
      <tei:fw type="postmark">|| 3/3 VIENNA 49 | 6. II.18-3 | * 3.. * ||</tei:fw>
      <tei:lb/>
      <tei:fw type="label">|| R | VIENNA 49 / 393 | P. B. 3/3 ||</tei:fw>
-
      <tei:milestone unit="folio" n="verso"/>
-
     </tei:fw>
-
-    <tei:salute>To <tei:orgName>
-      <tei:hi rend="underline">Universal Edition </tei:hi>
-     </tei:orgName><!-- profile: Universal Edition -->, Vienna I </tei:salute>
+    <tei:salute>To <tei:orgName key="entity-002408"><tei:hi rend="underline">Universal Edition
+      </tei:hi>
+     </tei:orgName>, Vienna I </tei:salute>
    </tei:opener>
 
    <tei:p>Up<tei:ptr corresp="#r0001-fn01" type="footnote"/> to today, I still see no sign of my
-     <tei:hi rend="underline">professional</tei:hi> request of January 30<tei:ptr corresp="#r0001-fn02" type="footnote"/> regarding review copies for <tei:persName>Professor
-     August Halm</tei:persName><!-- profile --> of <tei:placeName>Esslingen</tei:placeName> having
-    been carried out. I put my request once again that you kindly at long last let me know your
-    position on this matter, what is more, if possible by return of post.</tei:p>
+     <tei:hi rend="underline">professional</tei:hi> request of January 30<tei:ptr
+     corresp="#r0001-fn02" type="footnote"/> regarding review copies for Professor <tei:persName
+     key="entity-000326">August Halm</tei:persName> of <tei:placeName key="entity-002523"
+     >Esslingen</tei:placeName> having been carried out. I put my request once again that you kindly
+    at long last let me know your position on this matter, what is more, if possible by return of
+    post.</tei:p>
 
    <tei:closer>
     <tei:salute rend="indent-40">With kind regards, </tei:salute>
