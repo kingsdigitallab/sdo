@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
-<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
  <sdo:collectionDesc>
   <sdo:source>
    <sdo:correspondence mfID="18" sdoID="OJ-8-3_56">OJ 8/3, [56]</sdo:correspondence>
@@ -14,12 +18,12 @@
   <tei:respStmt xml:id="IB-WD">
    <tei:persName>Ian Bent and William Drabkin</tei:persName>
    <tei:resp>Transcription, 2009</tei:resp>
-   <tei:resp>XML Encoding</tei:resp>
    <tei:resp>Translation, 2009</tei:resp>
   </tei:respStmt>
+
   <tei:respStmt xml:id="IB">
    <tei:persName>Ian Bent</tei:persName>
-   <tei:resp>XML Encoding</tei:resp>
+   <tei:resp>XML Encoding, 2010</tei:resp>
   </tei:respStmt>
   <tei:respStmt xml:id="BOT">
    <tei:name>Automated Script</tei:name>
@@ -45,6 +49,7 @@
     and lays down a "no presents" rule; reports Halm's difficulties in obtaining copies of
     Schenker's works from UE. </dc:description>
    <dc:subject>Marmelade; jam; Kaffeehaus; coffee-house; complimentary copies</dc:subject>
+
    <!-- Add the EATS key attribute value to indicate the sender of the letter -->
    <marcrel:correspondent key="EATS_nNNNNNN">Heinrich Schenker</marcrel:correspondent>
    <!-- Add the key attribute to indicate the recipient of the letter -->
@@ -56,11 +61,8 @@
 
    <tei:opener>
     <tei:milestone unit="folio" n="recto"/>
-
     <tei:supplied reason="format">all in a decorative rule-frame</tei:supplied>
-
     <tei:fw type="envelope">
-
      <tei:address>
       <tei:addrLine>
        <tei:supplied reason="clarity">Absender: </tei:supplied>
@@ -68,27 +70,23 @@
       </tei:addrLine>
       <tei:addrLine>Wien, III., Reisnerstr. 38</tei:addrLine>
      </tei:address>
-
      <tei:address>
-      <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied> H. Fähnrich <tei:hi rend="lateinschr">Violin Moriz</tei:hi></tei:addrLine>
+      <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied> H. Fähnrich <tei:hi
+        rend="lateinschr">Violin Moriz</tei:hi></tei:addrLine>
       <tei:addrLine>
        <tei:hi rend="lateinschr">Marburg</tei:hi><tei:supplied>continued in pencil: </tei:supplied>
        a/d Drau </tei:addrLine>
       <tei:addrLine>f.H.6,</tei:addrLine>
       <tei:addrLine>ArtillerieKaserne</tei:addrLine>
      </tei:address>
-
      <tei:fw type="postmark">|| 10 WIEN 77 | 6. I. 18-3 | * 5b * ||</tei:fw>
     </tei:fw>
-
     <tei:lb/>
     <tei:supplied reason="clarity">for continuation of <tei:hi rend="italic">recto</tei:hi>, see
      below</tei:supplied>
     <tei:lb/>
     <tei:milestone unit="folio" n="verso"/>
-
-
-    <tei:salute><tei:persName key="entity-000913">Fl</tei:persName><!-- profile: Moriz Violin -->! </tei:salute>
+    <tei:salute><tei:persName key="entity-000913">Fl</tei:persName>! </tei:salute>
    </tei:opener>
 
    <tei:p>Schade,<tei:note xml:id="r0001-fn1" type="editorial" place="foot"> Writing of this
@@ -100,37 +98,39 @@
      accepting presents from people with an income of less than 16,000 Kronen, since, thank God, I
      still have very far to go to Mittelmann and Glattauer; I take the opportunity of begging him
      not to forget us. ").<!-- XR -->
-    </tei:note> daß es nicht so gieng, wie wir es hofften! Indessen sandte uns <tei:persName key="entity-000914">deine
-     Frau</tei:persName><!-- profile: Valerie Violin --> 2 große Gl., die gerade zur rechten Zeit
+    </tei:note> daß es nicht so gieng, wie wir es hofften! Indessen sandte uns <tei:persName
+     key="entity-000914">deine Frau</tei:persName> 2 große Gl., die gerade zur rechten Zeit
     erschienen. Nun aber wußte sie gar nicht anzugeben, wie viel das erste Gl. kostet, weshalb ich
     mich direkt an dich wende. Schreibe mir also - wenigstens ein Thema - was 2 gr. + 1 kl. kosten,
     u. zw. sogleich, allsogleich, ja noch schneller. Schon war es mir überaus peinlich, daß
     sozusagen aus <tei:hi rend="underline">technischen Gründen</tei:hi> nicht möglich war, den
     Gegenwert für einen schönen Tascheninhalt darzubringen, den uns <tei:persName>deine
-    Frau</tei:persName> ins Cafëhaus Anfang des Monates<tei:note xml:id="r0001-fn2" type="editorial" place="foot"> This incident is recorded in Schenker's diary for January 1, 1918 (OJ 2/10, p.
-     822): " Frau Wally kommt ins Caféhaus u. bringt: Aepfel, Slivowitz, Tee, Zucker, Hirse,
-     Fleckeln, Zunge" ("Wally comes to the coffee-house and brings apples, slivovitz, tea, sugar,
-     pasta, rolls, tongue").<!-- XR -->
+     Frau</tei:persName> ins Cafëhaus Anfang des Monates<tei:note xml:id="r0001-fn2"
+     type="editorial" place="foot"> This incident is recorded in Schenker's diary for January 1,
+     1918 (OJ 2/10, p. 822): " Frau Wally kommt ins Caféhaus u. bringt: Aepfel, Slivowitz, Tee,
+     Zucker, Hirse, Fleckeln, Zunge" ("Wally comes to the coffee-house and brings apples, slivovitz,
+     tea, sugar, pasta, rolls, tongue").<!-- XR -->
     </tei:note> selbst mitschleppte, aber ich begreife, daß sie für etwas, das ihr selbst geschenkt
     wurde, nichts annehmen wollte. Diesmal liegt die Sache anders, u. da halte ich an meinem Grunden
     satz fest: „Keine Geschenke unter 16.000 Kr. Rente!" Hab' ich nicht recht? Gott sei Dank, hab'
-    ich doch noch sehr weit zu einem <tei:persName>
+    ich doch noch sehr weit zu einem <tei:persName key="entity-000599">
      <tei:hi rend="lateinschr">Mittelmann</tei:hi>
-    </tei:persName><!-- profile --> oder <tei:persName>
+    </tei:persName> oder <tei:persName key="entity-000290">
      <tei:hi rend="lateinschr">Glattauer</tei:hi>
-    </tei:persName><!-- profile -->, d.h. es fehlen uns nur die gewissen <tei:hi rend="lateinschr">Fangarme</tei:hi>,<tei:note xml:id="r0001-fn3" type="editorial" place="foot"> "Fangarme"
+    </tei:persName>, d.h. es fehlen uns nur die gewissen <tei:hi rend="lateinschr"
+     >Fangarme</tei:hi>,<tei:note xml:id="r0001-fn3" type="editorial" place="foot"> "Fangarme"
      (tentacles: presumably an allusion to the black market, in which Mittelmann is known to have
      been involved. </tei:note> um die Dinge zu erhaschen, aber bezahlen könnten wir sie schon. Also
     heraus mit den paar Kronen.</tei:p>
 
-   <tei:p>Noch eine Kleinigkeit: <tei:persName>
+   <tei:p>Noch eine Kleinigkeit: <tei:persName key="entity-000326">
      <tei:hi rend="lateinschr">Halm</tei:hi>
-    </tei:persName><!-- profile --><tei:note xml:id="r0001-fn4" type="editorial" place="foot"> .
-     This is Schenker's reaction to the postscript of a letter of January 20, 1918 from Halm (OJ
-     11/35, 7). </tei:note> schrieb mir, daß er von <tei:persName>
+    </tei:persName><tei:note xml:id="r0001-fn4" type="editorial" place="foot"> . This is Schenker's
+     reaction to the postscript of a letter of January 20, 1918 from Halm (OJ 11/35, 7). </tei:note>
+    schrieb mir, daß er von <tei:persName key="entity-000356">
      <tei:hi rend="lateinschr">Hertzka</tei:hi>
-    </tei:persName><!-- profile --> meine übrigen Arbeiten als „Rezensionsexemplare“ nicht erreichen
-    kann! Was sagst du dazu? Ich <tei:milestone unit="folio" n="recto"/> drohte nun heute
+    </tei:persName> meine übrigen Arbeiten als „Rezensionsexemplare“ nicht erreichen kann! Was sagst
+    du dazu? Ich <tei:milestone unit="folio" n="recto"/> drohte nun heute
      <tei:persName>H.</tei:persName>,<tei:note xml:id="r0001-fn5" type="editorial" place="foot"> =
      WSLB 292, January 30, 1918 (reported in Schenker's diary at OJ 2/10, p. 834, January
      30.<!-- XR -->
@@ -157,44 +157,38 @@
 
    <tei:opener>
     <tei:milestone unit="folio" n="recto"/>
-
     <tei:supplied reason="format">all in a decorative rule-frame</tei:supplied>
-
     <tei:fw type="envelope">
-
      <tei:address>
       <tei:addrLine>
        <tei:supplied reason="clarity">From: </tei:supplied> Dr. Heinrich Schenker, </tei:addrLine>
       <tei:addrLine>Vienna III, Reisnerstraße 38</tei:addrLine>
      </tei:address>
-
      <tei:address>
-      <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied> Sub-Lieutenant Violin Moriz</tei:addrLine>
-      <tei:addrLine> Marburg <tei:supplied>continued in pencil: </tei:supplied> on the Drau</tei:addrLine>
+      <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied> Sub-Lieutenant Violin
+       Moriz</tei:addrLine>
+      <tei:addrLine> Marburg <tei:supplied>continued in pencil: </tei:supplied> on the
+       Drau</tei:addrLine>
       <tei:addrLine>f.H.6,</tei:addrLine>
       <tei:addrLine>Artillery Barracks</tei:addrLine>
      </tei:address>
-
      <tei:fw type="postmark">|| 10 VIENNA 77 | 6. I. 18-3 | * 5b * ||</tei:fw>
     </tei:fw>
-
     <tei:lb/>
     <tei:supplied reason="clarity">for continuation of <tei:hi rend="italic">recto</tei:hi>, see
      below</tei:supplied>
-
     <tei:lb/>
     <tei:milestone unit="folio" n="verso"/>
-
-
-    <tei:salute><tei:persName key="entity-000913">Floriz</tei:persName><!-- profile: Moriz Violin -->,</tei:salute>
+    <tei:salute><tei:persName key="entity-000913">Floriz</tei:persName>,</tei:salute>
    </tei:opener>
 
 
    <tei:p>A<tei:ptr target="#r0001-fn1" type="footnote"/> pity that it did not work out as we were
-    hoping! In the meantime, your <tei:persName key="entity-000914">wife</tei:persName><!-- profile: Valerie Violin -->
-    sent us two large jars, which appeared at just the right moment. However, she was quite unable
-    to tell me how much the first jar cost, which is why I am turning to you directly. So write
-    telling me - at least one topic - what two large and one small <tei:supplied reason="clarity">jars</tei:supplied> cost, and do it right away, immediately, in fact even faster. I found it
+    hoping! In the meantime, your <tei:persName key="entity-000914">wife</tei:persName> sent us two
+    large jars, which appeared at just the right moment. However, she was quite unable to tell me
+    how much the first jar cost, which is why I am turning to you directly. So write telling me - at
+    least one topic - what two large and one small <tei:supplied reason="clarity"
+     >jars</tei:supplied> cost, and do it right away, immediately, in fact even faster. I found it
     embarrassing that, for <tei:hi rend="underline">technical reasons</tei:hi>, so to speak, it was
     not possible to offer the equivalent value of the lovely contents of the bag, which your
      <tei:persName>wife</tei:persName> went to the trouble of personally bringing to us at the
@@ -202,16 +196,18 @@
     can appreciate that she did not want to take anything for something that she herself had
     received as a present. It is another matter this time, and I hold fast to my principle: "No
     presents from anyone with an income of less than 16,000 Kroner!" Am I not right? Thank God, I am
-    still a long way from resorting to a <tei:persName>Mittelmann</tei:persName><!-- profile --> or
-     <tei:persName>Glattauer</tei:persName><!-- profile -->, which is to say, we lack only certain
-     tentacles<tei:ptr target="#r0001-fn3" type="footnote"/> to catch hold of things, but we can
-    afford to pay for them. So it is time for me to pay up!</tei:p>
+    still a long way from resorting to a <tei:persName key="entity-000599">Mittelmann</tei:persName>
+    or <tei:persName key="entity-000290">Glattauer</tei:persName>, which is to say, we lack only
+    certain tentacles<tei:ptr target="#r0001-fn3" type="footnote"/> to catch hold of things, but we
+    can afford to pay for them. So it is time for me to pay up!</tei:p>
 
-   <tei:p>One other trivial matter: <tei:persName>Halm</tei:persName><!-- profile --><tei:ptr target="#r0001-fn4" type="footnote"/> wrote telling me that he is unable to obtain my other
-    publications from <tei:persName>Hertzka</tei:persName><!-- profile --> as "review copies." What
-    do you say to this? I <tei:milestone unit="folio" n="recto"/> threatened
-    <tei:persName>Hertzka</tei:persName> today<tei:ptr target="#r0001-fn5" type="footnote"/> that I
-    would pay him for them myself, but only at the old price, discounted by etc.<tei:ptr target="#r0001-fn6" type="footnote"/> Now I am curious <tei:supplied reason="clarity">about his
+   <tei:p>One other trivial matter: <tei:persName key="entity-000326">Halm</tei:persName><tei:ptr
+     target="#r0001-fn4" type="footnote"/> wrote telling me that he is unable to obtain my other
+    publications from <tei:persName key="entity-000356">Hertzka</tei:persName> as "review copies."
+    What do you say to this? I <tei:milestone unit="folio" n="recto"/> threatened
+     <tei:persName>Hertzka</tei:persName> today<tei:ptr target="#r0001-fn5" type="footnote"/> that I
+    would pay him for them myself, but only at the old price, discounted by etc.<tei:ptr
+     target="#r0001-fn6" type="footnote"/> Now I am curious <tei:supplied reason="clarity">about his
      reply</tei:supplied>. How hard we have to battle! But if by any chance you should come up with
     a plan that might ease everyone's pain, then do think of us, too. Any ideas? </tei:p>
 
