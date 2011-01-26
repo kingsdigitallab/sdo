@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
-<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
  <sdo:collectionDesc>
   <sdo:source>
    <sdo:correspondence mfID="100" sdoID="WSLB-306">WSLB 306</sdo:correspondence>
@@ -14,7 +18,7 @@
    <tei:persName>Ian Bent</tei:persName>
    <tei:resp>Transcription, 2009</tei:resp>
    <tei:resp>Translation, 2009</tei:resp>
-   <tei:resp>XML Encoding</tei:resp>
+   <tei:resp>XML Encoding, 2010</tei:resp>
   </tei:respStmt>
 
  </sdo:collectionDesc>
@@ -31,10 +35,10 @@
    <dcterms:dateSubmitted>2010-05-05</dcterms:dateSubmitted>
    <dc:description>Schenker requests a copy of his Ninth Symphony monograph, stipulating conditions;
     he will decide shortly whether to resume work for UE. </dc:description>
-   <dc:subject>Beethovens Neunte Sinfonie; Beethoven's Ninth Symphony; Monographie; monograph</dc:subject>
-   <!-- Add the EATS key attribute value to indicate the sender of the letter -->
+   <dc:subject>Beethovens Neunte Sinfonie; Beethoven's Ninth Symphony; Monographie;
+    monograph</dc:subject>
+
    <marcrel:correspondent key="EATS_nNNNNNN">Heinrich Schenker</marcrel:correspondent>
-   <!-- Add the key attribute to indicate the recipient of the letter -->
    <marcrel:recipient key="EATS_nNNNNNN">Universal Edition</marcrel:recipient>
    <marcrel:recipient key="EATS_nNNNNNN">Emil Hertzka</marcrel:recipient>
   </sdo:itemDesc>
@@ -44,9 +48,7 @@
 
    <tei:opener>
     <tei:milestone unit="folio" n="recto"/>
-
     <tei:fw type="envelope">
-
      <tei:address>
       <tei:addrLine>
        <tei:supplied reason="clarity">Absender: </tei:supplied>
@@ -56,26 +58,22 @@
        <tei:hi rend="lateinschr">III., Reisnerstr. 38</tei:hi>
       </tei:addrLine>
      </tei:address>
-
      <tei:address>
-      <tei:addrLine><tei:supplied reason="clarity">An: </tei:supplied> H. Direktor <tei:hi rend="lateinschr">Emil Hertzka</tei:hi>
+      <tei:addrLine><tei:supplied reason="clarity">An: </tei:supplied> H. Direktor <tei:hi
+        rend="lateinschr">Emil Hertzka</tei:hi>
       </tei:addrLine>
       <tei:addrLine>
        <tei:hi rend="lateinschr">I, Karlsplatz 6</tei:hi>
       </tei:addrLine>
       <tei:addrLine>„ <tei:hi rend="lateinschr">Universal-Edition</tei:hi>“</tei:addrLine>
      </tei:address>
-
      <tei:fw type="postmark">|| 3/3 WIEN <tei:gap reason="illegible" unit="chars" extent="2"/> |
        <tei:gap reason="illegible" unit="chars" extent="2"/>. XI. 19 IX | * R * || </tei:fw>
-
      <tei:lb/>
      <tei:milestone unit="folio" n="verso"/>
-
     </tei:fw>
-
-    <tei:salute>Sehr geehrter Herr
-     <tei:persName key="entity-000356">Direktor</tei:persName><!-- profile: Emil Hertzka -->! </tei:salute>
+    <tei:salute>Sehr geehrter Herr <tei:persName key="entity-000356">Direktor</tei:persName>!
+    </tei:salute>
    </tei:opener>
 
    <tei:p>Wollen<tei:note xml:id="r0001-fn01" type="editorial" place="foot">The writing of this
@@ -86,20 +84,22 @@
      Hertzka (postcard): I request the Ninth Symphony on suitable conditions, presage the resumption
      of my work, which I make conditional upon a certain fact that will have to be decided in the
      next few weeks.")<!-- XR -->. "* R *" in the postmark indicates that the postcard was sent
-     express by pneumatic post (Rohrpost). </tei:note> Sie die Freundlichkeit haben, mir auf <tei:hi rend="underline">meiner</tei:hi> Rechnung ein Exemplar der <tei:rs type="work" key="entity-001731">„IX
-      Sinf"-<tei:hi rend="lateinschr">Monographie</tei:hi></tei:rs><!-- profile: Beethovens Neunte Sinfonie --> schicken zu lassen,
-    u.zw. wie in all den Fällen von früher selbstverständlich jenseits von MK-Währung, Zuschlag,
-     <tei:hi rend="lateinschr">etc. etc</tei:hi>, wie es sich eben gegenüber dem Autor von 1912
-    ziemt. (Der damit zu beschenkende ist ein armer Musiker.<tei:note xml:id="r0001-fn02" type="editorial" place="foot">Presentation of the copy is recorded in Schenker's diary at OJ
+     express by pneumatic post (Rohrpost). </tei:note> Sie die Freundlichkeit haben, mir auf <tei:hi
+     rend="underline">meiner</tei:hi> Rechnung ein Exemplar der <tei:rs type="work"
+     key="entity-001731">„IX Sinf“-<tei:hi rend="lateinschr">Monographie</tei:hi></tei:rs> schicken
+    zu lassen, u.zw. wie in all den Fällen von früher selbstverständlich jenseits von MK-Währung,
+    Zuschlag, <tei:hi rend="lateinschr">etc. etc</tei:hi>, wie es sich eben gegenüber dem Autor von
+    1912 ziemt. (Der damit zu beschenkende ist ein armer Musiker.<tei:note xml:id="r0001-fn02"
+     type="editorial" place="foot">Presentation of the copy is recorded in Schenker's diary at OJ
      3/1, p. 2176, November 10, 1919: "Nun zu Jetty, wo wir die Jause nehmen u. die Bekanntschaft
      eines Landsmanns von Lie-Liechen machen. Ludwig übergebe ich die „IX", vom alten Herrn erhalte
      ich eine Pracht-Havana-Zigarre." ("Now to Jetty, where we have tea and make the acquaintance of
      a fellow-countryman of Lie-Liechen. I hand over the <tei:title level="m">Ninth
-     Symphony</tei:title> to Ludwig; I receive from the old gentleman a Pracht-Havana
+      Symphony</tei:title> to Ludwig; I receive from the old gentleman a Pracht-Havana
      cigar.").<!-- XR --> The recipient was thus <tei:ref cRef="bednai_ludwig">Ludwig
-     Bednař</tei:ref>. </tei:note> – In den allernächsten Wochen wird sich,- soviel will ich gerne
+      Bednař</tei:ref>. </tei:note> – In den allernächsten Wochen wird sich,- soviel will ich gerne
     schon jetzt verraten, aber vorläufig nicht mehr – entscheide, wann ich wieder die Arbeit für die
-     „<tei:orgName>U.E.</tei:orgName><!-- profile: Universal Edition -->" aufnehme. </tei:p>
+     „<tei:orgName key="entity-002408">U.E.</tei:orgName>“ aufnehme. </tei:p>
 
    <tei:closer>
     <tei:salute rend="indent-10">Besten Dank im Voraus </tei:salute>
@@ -117,50 +117,42 @@
 
    <tei:opener>
     <tei:milestone unit="folio" n="recto"/>
-
     <tei:fw type="envelope">
-
      <tei:address>
       <tei:addrLine>
        <tei:supplied reason="clarity">From: </tei:supplied>Dr. H. Schenker, </tei:addrLine>
       <tei:addrLine><tei:supplied reason="location">Vienna </tei:supplied>III, Reisnerstraße 38
       </tei:addrLine>
      </tei:address>
-
      <tei:address>
       <tei:addrLine><tei:supplied reason="clarity">To: </tei:supplied>Director Emil Hertzka, </tei:addrLine>
       <tei:addrLine><tei:supplied reason="location">Vienna </tei:supplied>I, Karlsplatz 6, </tei:addrLine>
       <tei:addrLine>Universal Edition </tei:addrLine>
      </tei:address>
-
      <tei:fw type="postmark">|| 3/3 VIENNA <tei:gap reason="illegible" unit="chars" extent="2"/> |
        <tei:gap reason="illegible" unit="chars" extent="2"/>. XI. 19 IX | * R * || </tei:fw>
-
      <tei:lb/>
      <tei:milestone unit="folio" n="verso"/>
-
     </tei:fw>
-
-    <tei:salute>Dear <tei:persName key="entity-000356">Director</tei:persName><!-- profile: Emil Hertzka -->!
-    </tei:salute>
+    <tei:salute>Dear <tei:persName key="entity-000356">Director</tei:persName>! </tei:salute>
    </tei:opener>
 
    <tei:p>Would<tei:ptr corresp="#r0001-fn01" type="footnote"/> you be so kind as to have a copy of
     my <tei:rs type="work" key="entity-001731"><tei:title level="m">Ninth Symphony</tei:title>
-    monograph</tei:rs><!-- profile: Beethovens Neunte Sinfonie --> sent to me, charged to <tei:hi rend="underline">my</tei:hi> account, , viz. as always in the past, needless to say,
-     <tei:unclear reason="uncertain meaning">exclusive of</tei:unclear> the Mark currency,
-    surcharge, etc., etc., as is suitable even for its author of 1912. (The person to whom I am
-    giving it is an impecunious musician.<tei:ptr corresp="#r0001-fn02" type="footnote"/> In the
-    next few weeks will be decided – this much I will gladly now divulge, but for the time being no
-    more – when I shall resume work for
-    <tei:orgName>UE</tei:orgName><!-- profile: Universal Edition -->. </tei:p>
+     monograph</tei:rs> sent to me, charged to <tei:hi rend="underline">my</tei:hi> account, , viz.
+    as always in the past, needless to say, <tei:unclear reason="meaning">exclusive of</tei:unclear>
+    the Mark currency, surcharge, etc., etc., as is suitable even for its author of 1912. (The
+    person to whom I am giving it is an impecunious musician.<tei:ptr corresp="#r0001-fn02"
+     type="footnote"/> In the next few weeks will be decided – this much I will gladly now divulge,
+    but for the time being no more – when I shall resume work for <tei:orgName key="entity-002408"
+     >UE</tei:orgName>. </tei:p>
 
    <tei:closer>
     <tei:salute rend="indent-10">With many thanks in advance, </tei:salute>
     <tei:salute rend="indent-60">Yours truly, </tei:salute>
     <tei:signed rend="indent-65">H. Schenker</tei:signed>
     <tei:date when="1919-11-02"> November <tei:supplied reason="cutoff">2</tei:supplied>,
-    1919</tei:date>
+     1919</tei:date>
    </tei:closer>
 
   </tei:div>
