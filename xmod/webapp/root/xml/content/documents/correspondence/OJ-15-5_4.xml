@@ -18,7 +18,7 @@
    <tei:persName>Ian Bent</tei:persName>
    <tei:resp>Transcription, 2010</tei:resp>
    <tei:resp>Translation, 2010</tei:resp>
-   <tei:resp>XML Encoding</tei:resp>
+   <tei:resp>XML Encoding, 2010</tei:resp>
   </tei:respStmt>
 
  </sdo:collectionDesc>
@@ -40,9 +40,8 @@
     Geheimmittel; secret formula; Vortrag; performance; Analyse; analysis; Tonkunst; music; Genie;
     genius; Exemplar; copy; Schubertschrift; writing on Schubert; Manuskript; manuscript; Buch;
     book; </dc:subject>
-   <!-- Add the EATS key attribute value to indicate the sender of the letter -->
+
    <marcrel:correspondent key="EATS_nNNNNNN">Eberhard von Waechter</marcrel:correspondent>
-   <!-- Add the key attribute to indicate the recipient of the letter -->
    <marcrel:recipient key="EATS_nNNNNNN">Heinrich Schenker</marcrel:recipient>
   </sdo:itemDesc>
 
@@ -58,8 +57,8 @@
     <tei:dateline>
      <tei:date when="1919-10-01">am 1/X. 1919</tei:date>
     </tei:dateline>
-    <tei:salute rend="indent-10">Sehr geehrter Herr
-     <tei:persName>Doktor</tei:persName><!-- Heinrich Schenker -->!</tei:salute>
+    <tei:salute rend="indent-10">Sehr geehrter Herr <tei:persName key="entity-000632"
+      >Doktor</tei:persName>!</tei:salute>
    </tei:opener>
 
    <tei:p>Sie<tei:note xml:id="r0001-fn01" type="editorial" place="foot"> Receipt of this letter is
@@ -67,40 +66,45 @@
      unter anderem um Aufsätze für den „Merker“ über den Vortrag." ("From Wächter (letter): asks,
      among other things, for articles about performance for <tei:title level="j">Der
       Merker</tei:title>.").<!-- XR -->
-    </tei:note> werden aus dem Ihre Person betreffenden Passus meines Artikels <tei:title>„die
-     Kunstwerdung des Tongebildes“</tei:title> im 15. Sept Heft <tei:rs type="journal">des
-     „Merker“</tei:rs><!-- profile: Der Merker --><tei:note xml:id="r0001-fn02" type="editorial"
-     place="foot"><tei:title level="a">Die Kunstwerdung des Tongebildes,</tei:title>
+    </tei:note> werden aus dem Ihre Person betreffenden Passus meines Artikels „<tei:title>die
+     Kunstwerdung des Tongebildes</tei:title>“ im 15. Sept Heft des „<tei:rs key="entity-002550"
+     type="journal"> Merker</tei:rs>“<tei:note xml:id="r0001-fn02" type="editorial" place="foot"
+      ><tei:title level="a">Die Kunstwerdung des Tongebildes,</tei:title>
      <tei:title level="j">Der Merker</tei:title>, September 15, 1919, pp. 621-25, a copy of which is
      preserved in Schenker's scrapbook at OJ 2/p. 56. </tei:note> von der Hoffnung, die ich auf Sie
     setze, bereits Kenntnis haben. — </tei:p>
 
-   <tei:p>Es würde mich nun sehr freuen, wollten Sie mir einen Aufsatz für <tei:rs type="journal"
-     >den Merker</tei:rs><!-- profile: Der Merker --> gönnen, in dem den <tei:pb n="2"/>
-    Geheimmittel für den richtigen <tei:rs type="musical-term">Vortrag</tei:rs> der Meisterwerke
-    genannt werden. — </tei:p>
+   <tei:p>Es würde mich nun sehr freuen, wollten Sie mir einen Aufsatz für den <tei:rs
+     key="entity-002550" type="journal">Merker</tei:rs> gönnen, in dem den <tei:pb n="2"/>
+    Geheimmittel für den richtigen <tei:rs key="entity-002225" type="term">Vortrag</tei:rs> der
+    Meisterwerke genannt werden. — </tei:p>
 
    <tei:p><tei:hi rend="underline">Ich</tei:hi> selbst weiß nur soviel, daß die richtige <tei:rs
-     type="musical-term">Analyse</tei:rs> Vortragsdirektion gibt, so daß man dem Reproduzierenden
-    sagen darf: Von hier an beginne <tei:hi rend="underline">dein</tei:hi> Gefühl! Ob aber nicht der
-    wahrhaft persönliche Ausdruck z.B. der <tei:rs type="musical-composition">pathétique</tei:rs> an
-    dem Tage unwiderbringlich verloren war, als <tei:persName>Beethoven</tei:persName> diese Sonate
-    selbst zum letzenmal gespielt? Eine Tradition des Beethovenvortrages haben wir nicht. Wie also
-    lässt sich da auf richtigen <tei:pb n="3"/> Vortrag jemals hoffen? </tei:p>
+     key="entity-001771" type="term">Analyse</tei:rs>
+    <tei:rs key="entity-002225" type="term">Vortrag</tei:rs>sdirektion gibt, so daß man dem
+    Reproduzierenden sagen darf: Von hier an beginne <tei:hi rend="underline">dein</tei:hi> Gefühl!
+    Ob aber nicht der wahrhaft persönliche Ausdruck z.B. der <tei:rs key="entity-001211"
+     type="composition">pathétique</tei:rs> an dem Tage unwiderbringlich verloren war, als
+     <tei:persName key="entity-000055">Beethoven</tei:persName> diese Sonate selbst zum letzenmal
+    gespielt? Eine Tradition des <tei:persName>Beethoven</tei:persName><tei:rs key="entity-002225"
+     type="term">vortrag</tei:rs>es haben wir nicht. Wie also lässt sich da auf richtigen <tei:pb
+     n="3"/> Vortrag jemals hoffen? </tei:p>
 
-   <tei:p>Und die Wundermacht der Analyse! Sie verlangen zu viel! Ihre analytischkritische Begabung
-    ist eine so phenomenale Erscheinung wie im Reiche der schaffenden <tei:rs type="musical-term"
-     >Tonkunst</tei:rs> das Genie der klassischen Meister! — Und die Rolle eines Hüters der Tonkunst
-    usurpierend erlaube ich mir die Frage: Warum haben Sie von Ihrer genialen Erkenntniskraft nur so
-    kargen Gebrauch gemacht? Warum nur die letzten 5 Sonaten? Warum nicht alle? — </tei:p>
+   <tei:p>Und die Wundermacht der <tei:rs key="entity-001771">Analyse</tei:rs>! Sie verlangen zu
+    viel! Ihre analytischkritische Begabung ist eine so phenomenale Erscheinung wie im Reiche der
+    schaffenden <tei:rs key="entity-002168" type="term">Tonkunst</tei:rs> das Genie der klassischen
+    Meister! — Und die Rolle eines Hüters der Tonkunst usurpierend erlaube ich mir die Frage: Warum
+    haben Sie von Ihrer genialen Erkenntniskraft nur so kargen Gebrauch gemacht? Warum nur <tei:rs
+     type="work" key="entity-001733"><tei:title>die letzten 5 Sonaten</tei:title></tei:rs>? Warum
+    nicht alle? — </tei:p>
 
-   <tei:p>Auf Ihre Kritik mei- <tei:pb n="4"/> ner Schubertschrift bin ich sehr gespannt, und bitte
-    Sie nur: Ja keine Milde! <tei:hi rend="underline">Ich kenne, wo es um die Kunst geht, keine
-     Empfindlichkeit!</tei:hi>
+   <tei:p>Auf Ihre Kritik mei- <tei:pb n="4"/> ner <tei:persName key="entity-000803"
+     >Schubert</tei:persName>schrift bin ich sehr gespannt, und bitte Sie nur: Ja keine Milde!
+     <tei:hi rend="underline">Ich kenne, wo es um die Kunst geht, keine Empfindlichkeit!</tei:hi>
    </tei:p>
 
    <tei:p>Sehr gerne hätte ich Ihnen stückweise das Manusskript meines neuesten Buches
-     <tei:title>„die Musikkritik der Gegenwart“</tei:title> zur gef. Begutachtung übersandt. Darf
+     „<tei:title>die Musikkritik der Gegenwart</tei:title>“ zur gef. Begutachtung übersandt. Darf
      ich?<tei:note xml:id="r0001-fn03" type="editorial" place="foot">The writing of Schenker's
      reply, although not known to survive, is recorded in his diary at OJ 3/1, p. 2158, October 9,
      1919: "An Wächter (Br.): lade ihn zu mir ein, um die Angelegenheit rascher auszutragen." ("To
@@ -129,39 +133,42 @@
     <tei:dateline>
      <tei:date when="1919-10-01">October 1, 1919</tei:date>
     </tei:dateline>
-    <tei:salute rend="indent-10">Dear <tei:persName>Dr.
-      <tei:supplied>Schenker</tei:supplied></tei:persName><!-- Heinrich Schenker -->!</tei:salute>
+    <tei:salute rend="indent-10">Dear <tei:persName key="entity-000632">Dr.
+       <tei:supplied>Schenker</tei:supplied></tei:persName>!</tei:salute>
    </tei:opener>
 
    <tei:p>You<tei:ptr corresp="#r0001-fn01" type="footnote"/> will already be aware, from the
     passage concerning yourself in my article <tei:title level="a">The Artistic Formation of Tonal
-     Structure</tei:title> in the September 15 issue of <tei:title level="j">Der
-     Merker</tei:title><tei:ptr corresp="#r0001-fn02" type="footnote"/> of the store that I set by
-    you. — </tei:p>
+     Structure</tei:title> in the September 15 issue of <tei:rs key="entity-002550" type="journal"
+      ><tei:title level="j">Der Merker</tei:title></tei:rs><tei:ptr corresp="#r0001-fn02"
+     type="footnote"/> of the store that I set by you. — </tei:p>
 
    <tei:p>It would be a great pleasure for me now if you would be willing to grace me with an
-    article for <tei:title level="j">Der Merker</tei:title> in which the <tei:pb n="2"/> secret
-    remedy for the correct <tei:rs type="musical-term">performance</tei:rs> of the masterworks is
-    divulged. </tei:p>
+    article for <tei:rs key="entity-002550" type="journal"><tei:title level="j">Der
+      Merker</tei:title></tei:rs> in which the <tei:pb n="2"/> secret remedy for the correct <tei:rs
+     key="entity-002225" type="term">performance</tei:rs> of the masterworks is divulged. </tei:p>
 
-   <tei:p><tei:hi rend="underline">I myself</tei:hi> know that correct <tei:rs type="musical-term"
-     >analysis</tei:rs> gives direction to performance only up to a certain point, beyond which one
-    may say to the performer: from here on <tei:hi rend="underline">your</tei:hi> feelings begin!
-    But is it not the case that the truly personal expression of, for example, the <tei:rs
-     type="musical-composition">"Pathétique" Sonata</tei:rs> was irretrievably lost the day that
-     <tei:persName>Beethoven</tei:persName> himself played this sonata for the last time? We do not
-    possess a tradition of Beethoven performance. How then can we ever hope to find the correct
-     <tei:pb n="3"/> performance? </tei:p>
+   <tei:p><tei:hi rend="underline">I myself</tei:hi> know that correct <tei:rs key="entity-001771"
+     type="term">analysis</tei:rs> gives direction to performance only up to a certain point, beyond
+    which one may say to the performer: from here on <tei:hi rend="underline">your</tei:hi> feelings
+    begin! But is it not the case that the truly personal expression of, for example, the <tei:rs
+     key="entity-001211" type="composition">"Pathétique" Sonata</tei:rs> was irretrievably lost the
+    day that <tei:persName key="entity-000055">Beethoven</tei:persName> himself played this sonata
+    for the last time? We do not possess a tradition of <tei:persName>Beethoven</tei:persName>
+    <tei:rs type="term" key="entity-002225">performance</tei:rs>. How then can we ever hope to find
+    the correct <tei:pb n="3"/> performance? </tei:p>
 
-   <tei:p>And the wondrous power of analysis! You ask too much! Your analytical-critical prowess is
-    as remarkable a phenomenon as the genius of the classical masters in the realm of <tei:rs
-     type="musical-term">composition</tei:rs> itself! — And usurping the role of a protector of the
-    art of music, I take the liberty of posing the question: Why have you made such meager use of
-    your genius-imbued powers of perception? Why only the last five sonatas? Why not all of them? — </tei:p>
+   <tei:p>And the wondrous power of <tei:rs key="entity-001771" type="term">analysis</tei:rs>! You
+    ask too much! Your analytical-critical prowess is as remarkable a phenomenon as the genius of
+    the classical masters in the realm of <tei:rs key="entity-002168" type="term"
+     >composition</tei:rs> itself! — And usurping the role of a protector of the art of music, I
+    take the liberty of posing the question: Why have you made such meager use of your genius-imbued
+    powers of perception? Why only <tei:rs key="entity-001733" type="work">the last five
+     sonatas</tei:rs>? Why not all of them? — </tei:p>
 
-   <tei:p>I look forward most eagerly to your critique of my <tei:pb n="4"/> piece on
-     <tei:persName>Schubert</tei:persName>. All I ask is: not a shred of clemency! Where art is
-    concerned, <tei:hi rend="underline">I know no sensitivity to feelings!</tei:hi>
+   <tei:p>I look forward most eagerly to your critique of my <tei:pb n="4"/> piece on <tei:persName
+     key="entity-000803">Schubert</tei:persName>. All I ask is: not a shred of clemency! Where art
+    is concerned, <tei:hi rend="underline">I know no sensitivity to feelings!</tei:hi>
    </tei:p>
 
    <tei:p>I should very much have liked to send you the manuscript of my latest book, <tei:title
