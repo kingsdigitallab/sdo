@@ -28,14 +28,49 @@
 
     <xsl:template name="corrItems">
         <h3>Items of correspondence</h3>
+        <xsl:choose>
+            <xsl:when
+                test="/aggregation/response/result/doc[child::str[@name='kind']='correspondence']">
+                <ul>
+                    <xsl:for-each
+                        select="/aggregation/response/result/doc[child::str[@name='kind']='correspondence']">
+                        <xsl:sort select="child::arr[@name='tag']/child::str[1]"/>
+                        <xsl:variable name="filename" select="child::str[@name='fileId']"/>
+                        <li>
+                            <h2>
+                                <a href="{concat('/documents/correspondence/dates/', $date, '/', $filename)}">
+                                    <xsl:value-of select="child::str[@name='shelfmark']"/>
+                                    <xsl:text> : </xsl:text>
+                                    <xsl:value-of
+                                        select="replace(child::arr[@name='tag']/child::str[1], '_', ' ~ ')"
+                                    />
+                                </a>
+                            </h2>
+                            <p>
+                                <xsl:value-of select="child::str[@name='document-title']"/>
+                                <br/>
+                                <xsl:value-of select="child::str[@name='description']"/>
+                            </p>
+                        </li>
+                    </xsl:for-each>
+                </ul>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:text>[none]</xsl:text>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+
+    <xsl:template name="diaryEntries">
+        <h3>Diary entries</h3>
         <ul>
-            <xsl:for-each select="/aggregation/response/result/doc[child::str[@name='kind']='correspondence']">
-                <xsl:sort select="child::arr[@name='tag']/child::str[1]"/>
+            <xsl:for-each
+                select="/aggregation/response/result/doc[child::str[@name='kind']='diary']">
                 <xsl:variable name="filename" select="child::str[@name='fileId']"/>
                 <li>
                     <h2>
-                        <a href="{concat('../', $date, '/', $filename)}">
-                            <xsl:value-of select="child::str[@name='shelfmark']"/>
+                        <a href="{concat('/documents/diaries/dates/', $date, '/', $filename)}">
+                            <xsl:value-of select="child::str[@name='dateShort']"/>
                             <xsl:text> : </xsl:text>
                             <xsl:value-of
                                 select="replace(child::arr[@name='tag']/child::str[1], '_', ' ~ ')"
@@ -51,30 +86,6 @@
             </xsl:for-each>
         </ul>
     </xsl:template>
-    
-    <xsl:template name="diaryEntries">
-        <h3>Diary entries</h3>
-        <ul>
-            <xsl:for-each select="/aggregation/response/result/doc[child::str[@name='kind']='diary']">
-                <xsl:variable name="filename" select="child::str[@name='fileId']"/>
-                <li>
-                    <h2>
-                        <a href="{concat('../', $date, '/', $filename)}">
-                            <xsl:value-of select="child::str[@name='dateShort']"/>
-                            <xsl:text> : </xsl:text>
-                            <xsl:value-of
-                                select="replace(child::arr[@name='tag']/child::str[1], '_', ' ~ ')"
-                            />
-                        </a>
-                    </h2>
-                    <p>
-                        <xsl:value-of select="child::str[@name='document-title']"/>
-                        <br/>
-                        <xsl:value-of select="child::str[@name='description']"/>
-                    </p>
-                </li>
-            </xsl:for-each>
-        </ul></xsl:template>
 
 
 </xsl:stylesheet>
