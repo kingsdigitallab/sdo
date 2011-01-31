@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
-<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
  <sdo:collectionDesc>
   <sdo:source>
    <sdo:correspondence mfID="79" sdoID="OJ-15-5_6">OJ 15/5, [6]</sdo:correspondence>
@@ -24,9 +28,10 @@
 
   <sdo:itemDesc>
    <dcterms:isPartOf>Waechter ~ HSchenker</dcterms:isPartOf>
-   <dc:title>Handwritten letter from Eberhard von Waechter to Schenker, dated October 19, 1919</dc:title>
-<dc:type>Letter</dc:type>
-<dcterms:created>1919-10-19T12:00:00Z</dcterms:created>
+   <dc:title>Handwritten letter from Eberhard von Waechter to Schenker, dated October 19,
+    1919</dc:title>
+   <dc:type>Letter</dc:type>
+   <dcterms:created>1919-10-19T12:00:00Z</dcterms:created>
    <dcterms:dateSubmitted>2010-04-10</dcterms:dateSubmitted>
    <dc:description>Waechter understands Schenker's wish not to pre-publish his Art of Performance in
     article form, and hopes that Schenker will provide a universal solution to the performance
@@ -36,10 +41,10 @@
    <dc:subject>Vortrag; performance; Leitung; editorship; Einschaltung; selection; Prinzip;
     principle; Kritik; review; Skandal; scandal; Totschweigen; total silence; Erlösung; redemption;
     Lösung; solution; Problem; problem; Freiheit; freedom; Rhythmus; rhythm; psychologisch;
-    psychological; Selbstinterpretation; self-interpretation; Klassiker; classical master</dc:subject>
-   <!-- Add the EATS key attribute value to indicate the sender of the letter -->
+    psychological; Selbstinterpretation; self-interpretation; Klassiker; classical
+    master</dc:subject>
+
    <marcrel:correspondent key="EATS_nNNNNNN">Eberhard von Waechter</marcrel:correspondent>
-   <!-- Add the key attribute to indicate the recipient of the letter -->
    <marcrel:recipient key="EATS_nNNNNNN">Heinrich Schenker</marcrel:recipient>
   </sdo:itemDesc>
 
@@ -48,15 +53,14 @@
 
    <tei:opener>
     <tei:handShift new="unk"/>
-
     <tei:address rend="indent-40">
      <tei:addrLine>Hennersdorf bei Wien</tei:addrLine>
     </tei:address>
     <tei:dateline rend="indent-40">
      <tei:date when="1919-10-19">am 19/X 1919</tei:date>
     </tei:dateline>
-
-    <tei:salute rend="indent-10">Sehr geehrter Herr <tei:persName>D<tei:hi rend="supralinear">r</tei:hi></tei:persName><!-- Heinrich Schenker -->!</tei:salute>
+    <tei:salute rend="indent-10">Sehr geehrter Herr <tei:persName key="entity-000632">D<tei:hi
+       rend="supralinear">r</tei:hi></tei:persName>!</tei:salute>
    </tei:opener>
 
    <tei:p>Das<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this letter is
@@ -67,31 +71,38 @@
      erscheinen." ("From Dr. Wächter (letter): understands and accepts my position; is curious to
      read Weisse's articles, because I recommend them, but notes that <tei:title level="j">Der
       Merker</tei:title> is not in a position to pay for the articles; an article by Halm about my
-      <tei:title level="m">Theory of Harmony</tei:title> and <tei:title level="m">Counterpoint</tei:title> will be printed in November or December.").<!-- XR -->
+      <tei:title level="m">Theory of Harmony</tei:title> and <tei:title level="m"
+      >Counterpoint</tei:title> will be printed in November or December.").<!-- XR -->
     </tei:note> Missverständnis ist also aufgeklärt, und begreife ich vollkommen, daß Sie Ihren
-    Traktat <tei:rs type="work" key="entity-001757">
-     <tei:title>„die Kunst des Vortrages“</tei:title>
-    </tei:rs><!-- profile: Kunst des Vortrags --> nicht in Einzelaufsätze für <tei:rs type="journal">
-     <tei:title>den Merker</tei:title>
-    </tei:rs><!-- profile: Der Merker --> zerpflücken wollen. – </tei:p>
+    Traktat „<tei:rs type="work" key="entity-001757">
+     <tei:title>die Kunst des Vortrages</tei:title>
+    </tei:rs>“ nicht in Einzelaufsätze für den <tei:rs key="entity-002550" type="journal">
+     <tei:title>Merker</tei:title>
+    </tei:rs> zerpflücken wollen. – </tei:p>
 
-   <tei:p>Die Leitung <tei:title>des Merker</tei:title> besorgen <tei:persName>Richard
-    Stöhr</tei:persName><!-- profile: Richard Stöhr --> und <tei:persName key="entity-000076">Julius
-    Bittner</tei:persName><!-- profile: Julius Bittner -->. Ich bin bloß Mitarbeiter, habe aber
-    einen gewissen Einfluß auf Einschaltung von Artikeln, so daß ich für <tei:persName key="entity-000951">D<tei:hi rend="supralinear">r</tei:hi> Hans Weisse</tei:persName><!-- profile: Hans Weisse -->s
-    Arbeiten gerne eintrete, wenn sie einigermassen in <tei:pb n="2"/> die Prinzipien passen, welche
-    die jetzige Leitung befolgen zu müssen, glaubt. – </tei:p>
+   <tei:p>Die Leitung des <tei:rs key="entity-002550" type="journal"
+     ><tei:title>Merker</tei:title></tei:rs> besorgen <tei:persName key="entity-000864">Richard
+     Stöhr</tei:persName> und <tei:persName key="entity-000076">Julius Bittner</tei:persName>. Ich
+    bin bloß Mitarbeiter, habe aber einen gewissen Einfluß auf Einschaltung von Artikeln, so daß ich
+    für D<tei:hi rend="supralinear">r</tei:hi>
+    <tei:persName key="entity-000951">Hans Weisse</tei:persName>s Arbeiten gerne eintrete, wenn sie
+    einigermassen in <tei:pb n="2"/> die Prinzipien passen, welche die jetzige Leitung befolgen zu
+    müssen, glaubt. – </tei:p>
 
-   <tei:p>Allerdings müsste ich Herrn <tei:persName>D<tei:hi rend="supralinear">r</tei:hi>
-    Weisse</tei:persName> bitten, unentgeltlich zu schreiben, da <tei:title>der Merker</tei:title>
+   <tei:p>Allerdings müsste ich Herrn D<tei:hi rend="supralinear">r</tei:hi>
+    <tei:persName key="entity-000951">Weisse</tei:persName> bitten, unentgeltlich zu schreiben, da
+     <tei:rs key="entity-002550" type="journal"><tei:title>der Merker</tei:title></tei:rs>
     finanziell schwer zu kämpfen hat. Ich bitte ihn, mir Arbeiten zu schicken, die mich deshalb
-    interessieren, weil Herr Doktor sie mir empfehlen. – </tei:p>
+    interessieren, weil Herr <tei:persName key="entity-000632">Doktor</tei:persName> sie mir
+    empfehlen. – </tei:p>
 
    <tei:p>Nach langem Mühen, ist es mir gelungen von <tei:persName key="entity-000326">August
-    Halm</tei:persName><!-- profile: August Halm --> Kritiken Ihrer <tei:rs type="work">Harmonielehre</tei:rs> und <tei:rs type="work">Kontrapunktes
-    I</tei:rs><!-- profile: Kontrapunkt 1 --> zu erhalten, die im November oder Dezember im
-     <tei:title>Merker</tei:title> erscheinen.<tei:note xml:id="r0001-fn02" type="editorial" place="foot"><tei:title level="a">Heinrich Schenkers 'Neue Musikalische Theorien und
-      Phantasien',</tei:title>
+     Halm</tei:persName> Kritiken Ihrer <tei:rs key="entity-001724" type="work"
+     >Harmonielehre</tei:rs> und <tei:rs key="entity-001726" type="work">Kontrapunktes I</tei:rs> zu
+    erhalten, die im November oder Dezember im <tei:rs key="entity-002550" type="journal"
+      ><tei:title>Merker</tei:title></tei:rs> erscheinen.<tei:note xml:id="r0001-fn02"
+     type="editorial" place="foot"><tei:title level="a">Heinrich Schenkers 'Neue Musikalische
+      Theorien und Phantasien',</tei:title>
      <tei:title level="j">Der Merker</tei:title> xi, 414-17 (Sept 1, 1920), 505-07 (Nov 1920),
      copies of which are preserved in Schenker's scrapbook at OC 2/p. 55. </tei:note> Trotz
     Widerspruches in vielen Punkten werden Sie damit zufrieden sein. – </tei:p>
@@ -103,18 +114,21 @@
     nun leider doch nicht senden, weil mich drei Verleger um Zustellung für Ende Oktober derart
     bedrängen, daß ich keine Zeitversäumnis mehr riskieren darf. – </tei:p>
 
-   <tei:p>Auf Ihre <tei:rs type="work">
-     <tei:title>„Kunst des Vortrages“</tei:title>
-    </tei:rs> bin ich begierig wie Amfortas<tei:note xml:id="r0001-fn03" type="editorial" place="foot">Amfortas: principal character in Wagner's <tei:title level="m">Parsifal</tei:title>. </tei:note> auf die Erlösung. Wenn Ihnen die allgemeingültige Lösung
-    dieses Problems gelänge!! Aber in <tei:rs type="work">op.
-    109</tei:rs><!-- profile: Erläuterungsausgabe, Op. 109 --> propagieren Sie Freiheit des <tei:rs type="musical-term">Rhythmus</tei:rs>, und in einer Fussnote wird
-    <tei:persName>Brahms</tei:persName> ge- <tei:pb n="4"/> lobt, der doch offenkundig dem Prinzip
-    der psychologisch korrekten Wiedergabe huldigte. Ich fürchte, daß durch die verlorene Tradition
-    der Selbstinterpretation der Klassiker zu viel verloren ist, um eine allgemeingültige Kunst des
-    Vortrages zu dekretieren<tei:supplied reason="syntax">.</tei:supplied> Doch hoffe ich – trotzdem
-    – </tei:p>
+   <tei:p>Auf Ihre „<tei:rs key="entity-001757" type="work">
+     <tei:title>Kunst des Vortrages</tei:title>
+    </tei:rs>“ bin ich begierig wie Amfortas<tei:note xml:id="r0001-fn03" type="editorial"
+     place="foot">Amfortas: principal character in Wagner's <tei:title level="m"
+      >Parsifal</tei:title>. </tei:note> auf die Erlösung. Wenn Ihnen die allgemeingültige Lösung
+    dieses Problems gelänge!! Aber in <tei:rs key="entity-001734" type="work">op. 109</tei:rs>
+    propagieren Sie Freiheit des <tei:rs key="entity-002066" type="term">Rhythmus</tei:rs>, und in
+    einer Fussnote wird <tei:persName key="entity-000094">Brahms</tei:persName> ge- <tei:pb n="4"/>
+    lobt, der doch offenkundig dem Prinzip der psychologisch korrekten Wiedergabe huldigte. Ich
+    fürchte, daß durch die verlorene Tradition der Selbstinterpretation der Klassiker zu viel
+    verloren ist, um eine allgemeingültige Kunst des Vortrages zu dekretieren<tei:supplied
+     reason="syntax">.</tei:supplied> Doch hoffe ich – trotzdem – </tei:p>
 
-   <tei:p>Sobald ich in <tei:placeName>Wien</tei:placeName> bin, suche ich Sie <tei:hi rend="underline">bestimmt</tei:hi> auf. Also auf nächstesmal und </tei:p>
+   <tei:p>Sobald ich in <tei:placeName key="entity-002484">Wien</tei:placeName> bin, suche ich Sie
+     <tei:hi rend="underline">bestimmt</tei:hi> auf. Also auf nächstesmal und </tei:p>
 
    <tei:closer>
     <tei:salute rend="indent-15">beste Empfehlungen</tei:salute>
@@ -134,42 +148,48 @@
 
    <tei:opener>
     <tei:handShift new="unk"/>
-
-    <tei:address rend="indent-40"><tei:addrLine>Hennersdorf nr. Vienna</tei:addrLine></tei:address>
+    <tei:address rend="indent-40">
+     <tei:addrLine>Hennersdorf nr. Vienna</tei:addrLine>
+    </tei:address>
     <tei:dateline rend="indent-40">
      <tei:date when="1919-10-19">October 19, 1919</tei:date>
     </tei:dateline>
-
-    <tei:salute rend="indent-10">Dear <tei:persName>Dr. <tei:supplied reason="identity">Schenker</tei:supplied></tei:persName><!-- Heinrich Schenker -->!</tei:salute>
+    <tei:salute rend="indent-10">Dear Dr. <tei:persName key="entity-000632"><tei:supplied
+       reason="identity">Schenker</tei:supplied></tei:persName>!</tei:salute>
    </tei:opener>
 
    <tei:p>Thus<tei:ptr corresp="#r0001-fn01" type="footnote"/> is the misunderstanding cleared up,
-    and I perfectly understand that you do not want to pull your treatise <tei:rs type="work" key="entity-001757">
+    and I perfectly understand that you do not want to pull your treatise <tei:rs type="work"
+     key="entity-001757">
      <tei:title level="m">The Art of Performance</tei:title>
-    </tei:rs><!-- profile: Kunst des Vortrags --> to pieces as single articles for <tei:rs type="journal">
+    </tei:rs> to pieces as single articles for <tei:rs key="entity-002550" type="journal">
      <tei:title level="j">Der Merker</tei:title>
-    </tei:rs><!-- profile: Der Merker -->. – </tei:p>
+    </tei:rs>. – </tei:p>
 
-   <tei:p><tei:persName>Richard Stöhr</tei:persName><!-- profile: Richard Stöhr --> and
-     <tei:persName key="entity-000076">Julius Bittner</tei:persName><!-- profile: julius Bittner --> take care of the
-    editorship of <tei:title level="j">Der Merker</tei:title>. I am merely a contributor, but I have
-    a certain influence over the selection of articles, so that I will gladly intercede for
-     <tei:persName key="entity-000951">Dr. Hans Weisse</tei:persName><!-- profile: Hans Weisse -->'s articles if they
-    conform reasonably well with <tei:pb n="2"/> the principles that the current editorship believes
-    it right to follow. </tei:p>
+   <tei:p><tei:persName key="entity-000864">Richard Stöhr</tei:persName> and <tei:persName
+     key="entity-000076">Julius Bittner</tei:persName> take care of the editorship of <tei:rs
+     key="entity-002550" type="journal"><tei:title level="j">Der Merker</tei:title></tei:rs>. I am
+    merely a contributor, but I have a certain influence over the selection of articles, so that I
+    will gladly intercede for Dr. <tei:persName key="entity-000951">Hans Weisse</tei:persName>'s
+    articles if they conform reasonably well with <tei:pb n="2"/> the principles that the current
+    editorship believes it right to follow. </tei:p>
 
-   <tei:p>However, I must ask <tei:persName>Dr. Weisse</tei:persName> to write for no money because
-     <tei:title level="j">Der Merker</tei:title> is finding it a severe struggle financially. I ask
-    him to send me pieces of work that interest me because you, Dr. <tei:supplied reason="identity">Schenker</tei:supplied>, recommend them to me. </tei:p>
+   <tei:p>However, I must ask Dr. <tei:persName key="entity-000951">Weisse</tei:persName> to write
+    for no money because <tei:rs key="entity-002550" type="journal"><tei:title level="j">Der
+      Merker</tei:title></tei:rs> is finding it a severe struggle financially. I ask him to send me
+    pieces of work that interest me because you, Dr. <tei:persName key="entity-000632"><tei:supplied
+      reason="identity">Schenker</tei:supplied></tei:persName>, recommend them to me. </tei:p>
 
-   <tei:p>After a prolonged effort, I have succeeded in procuring from <tei:persName key="entity-000326">August
-    Halm</tei:persName><!-- profile: August Halm --> reviews of your <tei:rs type="work">
+   <tei:p>After a prolonged effort, I have succeeded in procuring from <tei:persName
+     key="entity-000326">August Halm</tei:persName> reviews of your <tei:rs key="entity-001724"
+     type="work">
      <tei:title level="m">Theory of Harmony</tei:title>
-    </tei:rs> and <tei:rs type="work">
+    </tei:rs> and <tei:rs key="entity-001726" type="work">
      <tei:title level="m">Counterpoint 1</tei:title>
-    </tei:rs><!-- profile: Kontrapunkt 1 -->, which will appear in the November or December issues
-    of <tei:title level="j">Der Merker</tei:title>.<tei:ptr corresp="#r0001-fn02" type="footnote"/>
-    Despite contradiction at many points, you will be content with them. – </tei:p>
+    </tei:rs>, which will appear in the November or December issues of <tei:rs key="entity-002550"
+     type="journal"><tei:title level="j">Der Merker</tei:title></tei:rs>.<tei:ptr
+     corresp="#r0001-fn02" type="footnote"/> Despite contradiction at many points, you will be
+    content with them. – </tei:p>
 
    <tei:p>I am truly delighted that <tei:pb n="3"/> I have succeeded finally in breaking the
     scandalous total silence over your works. – </tei:p>
@@ -178,19 +198,21 @@
      Criticism of the Present Day</tei:title>, because three publishers are pressing me so hard for
     delivery by the end of October that I cannot risk any loss of time. – </tei:p>
 
-   <tei:p>I am as eager for your <tei:rs type="work">
+   <tei:p>I am as eager for your <tei:rs key="entity-001757" type="work">
      <tei:title level="m">Art of Performance</tei:title>
     </tei:rs> as Amfortas was for redemption.<tei:ptr corresp="#r0001-fn03" type="footnote"/> If
     only you can successfully provide the universally valid solution to this problem!! But in
-     <tei:rs type="work">
+     <tei:rs key="entity-001734" type="work">
      <tei:title level="m">Op. 109</tei:title>
-    </tei:rs><!-- profile: Erläuterungsausgabe, Op. 109 --> you advocate freedom of <tei:rs type="musical-term">rhythm</tei:rs>, and in a footnote <tei:persName>Brahms</tei:persName> is
-     <tei:pb n="4"/> praised for having overtly paid tribute to the principle of the psychologically
-    correct rendition. I fear that through the lost tradition of self-interpretation by the
-    Classical masters too much has been lost for a universally valid art of performance to be
-    decreed. But I hope, in spite of that . . . </tei:p>
+    </tei:rs> you advocate freedom of <tei:rs key="entity-002066" type="term">rhythm</tei:rs>, and
+    in a footnote <tei:persName key="entity-000094">Brahms</tei:persName> is <tei:pb n="4"/> praised
+    for having overtly paid tribute to the principle of the psychologically correct rendition. I
+    fear that through the lost tradition of self-interpretation by the Classical masters too much
+    has been lost for a universally valid art of performance to be decreed. But I hope, in spite of
+    that . . . </tei:p>
 
-   <tei:p>As soon as I am in <tei:placeName>Vienna</tei:placeName>, I will <tei:hi rend="underline">definitely</tei:hi> look you up. So to the next occasion, and </tei:p>
+   <tei:p>As soon as I am in <tei:placeName key="entity-002484">Vienna</tei:placeName>, I will
+     <tei:hi rend="underline">definitely</tei:hi> look you up. So to the next occasion, and </tei:p>
 
    <tei:closer>
     <tei:salute rend="indent-15">with my best regards, </tei:salute>
