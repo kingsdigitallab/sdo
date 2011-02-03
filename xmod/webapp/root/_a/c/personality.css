@@ -1,6 +1,7 @@
 /*	personality.css
  *	xMod Custom Site Personality Style Sheet
  *	xMod Version: 1.3 
+ *  Last Updated: 03/02/2011
  */
 
  
@@ -16,7 +17,7 @@ body#xmd { background: #ffffff; font: 100% Verdana, Arial, Helvetica, sans-serif
 td#content{background:#fff url(../i/content_bg.png) left top repeat-x;padding:14px 30px 20px 00px;vertical-align:top;}
 td#content div {background: transparent;}
 /*body.th1 td#content div {background: transparent;background: url(../i/bg.jpg) 0 150px  no-repeat;}*/
-td#content div  div {background:none}
+td#content div div {background:none; margin: 0 0 0 2em;}
 #mainContent { min-height: 436px; padding-top: 12px;background: transparent; }
 
 
@@ -133,7 +134,7 @@ c9dae3 mid light blue
 #footer .utilLinks .s01  ul li a{color:#618954;text-decoration:none;  }
 #footer .utilLinks .s01  ul li a:hover{color:#5f6daa;text-decoration:underline;}
 #footer .utilLinks .s01  ul li.s01 a span {  visibility: hidden; }
-#footer .utilLinks .s01  ul li.s01 a{  padding: 3px 5px 3px 3px; width: 60px; height: 20px;  }
+#footer .utilLinks .s01  ul li.s01 a{  padding: 3px 35px 3px 3px; width: 60px; height: 20px;  }
 #footer .utilLinks .s01  ul li.s01 a:hover { text-decoration: none; }
 #footer .utilLinks .s02  a { color: #618954; border-bottom: 1px dotted #c2c2ae; text-decoration: none; }
 #footer .utilLinks .s02  a:hover { color: #5f6daa; border-bottom: 1px solid #c2c2ae; }
@@ -182,7 +183,7 @@ c9dae3 mid light blue
 */
 
 #mainContent p {font-size: 70%; line-height: 1.5em; margin: 0 0 0.8em 0; padding: 0;}
-#mainContent sup  { vertical-align:text-top; font-size: 90%; font-weight: bold; line-height: 70%;  }
+#mainContent sup  { vertical-align:text-top; font-size: 70%; font-weight: bold; line-height: 70%;  }
 #mainContent ol { list-style: decimal; }
 #mainContent ul	{ margin: 0 0 0.8em 0; padding: 0; }
 #mainContent ol li {list-style: decimal; padding:0}
@@ -266,7 +267,14 @@ c9dae3 mid light blue
 /* JUMP NAVIGATION */
 /* BACK TO TOP */
 /* BOX */
+
+
+
+
 /* FOOTNOTES */
+
+#mainContent a.fnLink:link, #mainContent a.fnLink:visited, #mainContent a.fnLink:active {text-decoration: none; border: 0 none;}
+
 /* OPTIONS / SUBMENU */
 #mainContent .options .t01  {background: none; border: 0px none; padding: 0 0 0.8em 0px; margin: 0;}
 /* TOC */
@@ -275,6 +283,11 @@ c9dae3 mid light blue
 /* TABLES */
 #mainContent .docDisplayGandE {width: 100%;}
 #mainContent #EnglishVersion #GermanVersion {width: 50%;}
+
+#mainContent td#EnglishVersion, #mainContent td#GermanVersion {font-family: palatino, georgia, sans-serif; line-height: 1.3em;}
+#mainContent td#EnglishVersion p, #mainContent td#GermanVersion p {font-size: 95%;}
+
+
 /* INDEX: DOCUMENT */
 /* INDEX: KEYWORD */
 /* INDEX: KEYWORD */
@@ -297,7 +310,15 @@ c9dae3 mid light blue
 /* IMAGE: BLOCK */
 /* IMAGE: MAP */
 /* LOGO MATRIX */
+
+
+#mainContent .logoMatrix .t01 {border: 0 none; margin: 50px 0 0 0; background: url(../i/fs.r1.png) no-repeat scroll 50% 0 #fff; overflow: hidden; padding: 10px 0; position:relative; }
+#mainContent .logoMatrix .t01 ul {float: left; left: 50%; position: relative; padding: 20px 0;}
+#mainContent .logoMatrix .t01 ul li {float: left; position: relative; right: 50%; margin: 0 5px 0 0;}
+
 #mainContent .logoMatrix .t01 ul li a {margin: 0 20px 0 0; border: none; background:none }
+
+
 /* THUMBNAIL IMAGE GRID */
 /* FORMS */
 /*#mainContent form label { font-weight: normal; width: auto; text-align: left; padding: 0;}*/
