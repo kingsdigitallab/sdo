@@ -10,8 +10,8 @@
   <xsl:output omit-xml-declaration="yes" />
 
   <xsl:template match="tei:name[@orig_element]">
-    <xsl:element name="tei:{@orig_element}">
-      <xsl:apply-templates select="@*|node()" />
+    <xsl:element name="{@orig_element}" namespace="http://www.tei-c.org/ns/1.0">
+      <xsl:apply-templates select="@*|node()"/>
     </xsl:element>
   </xsl:template>
 

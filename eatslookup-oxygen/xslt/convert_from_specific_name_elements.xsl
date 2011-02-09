@@ -41,16 +41,14 @@
   </xsl:template>
   
   <xsl:template match="tei:rs">
-    <xsl:call-template name="make-name">
-      <xsl:with-param name="type" select="@type"/>
-    </xsl:call-template>
+    <xsl:call-template name="make-name"/>
   </xsl:template>
 
   <xsl:template name="make-name">
     <xsl:param name="type"/>
     
     <tei:name orig_element="{local-name()}">
-      <xsl:if test="not(@type)">
+      <xsl:if test="not(@type) and $type">
         <xsl:attribute name="type">
           <xsl:value-of select="$type"/>
         </xsl:attribute>
