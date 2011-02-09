@@ -7,7 +7,7 @@
 
   <xsl:param name="menutop" select="'true'"/>
 
-  <xsl:variable name="xmg:title"><xsl:text>Browse Correspondence By Name</xsl:text></xsl:variable>
+  <xsl:variable name="xmg:title"><xsl:text>Browse Correspondence By Correspondent</xsl:text></xsl:variable>
   <xsl:variable name="root" select="/"/>
 
   <xsl:key name="alpha-tags" match="//arr[@name='tag']/str"

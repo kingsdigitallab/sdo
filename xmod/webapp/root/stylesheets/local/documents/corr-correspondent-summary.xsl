@@ -23,7 +23,7 @@
     <xsl:param name="tag"/><!-- passed in single-string form, eg. Cotta_HSchenker, so we expand it below -->
 
     <xsl:variable name="xmg:title">
-        <xsl:text>Browse Correspondence By Name</xsl:text>
+        <xsl:text>Browse Correspondence By Correspondent</xsl:text>
     </xsl:variable>
     <xsl:variable name="root" select="/"/>
     <xsl:variable name="expanded_tag" select="replace($tag, '_', ' ~ ')"/>
