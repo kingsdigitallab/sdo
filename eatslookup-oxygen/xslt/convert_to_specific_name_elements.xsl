@@ -28,6 +28,7 @@
         <xsl:when test="@type = 'place'">placeName</xsl:when>
         <xsl:when test="@type = 'organisation'">orgName</xsl:when>
         <xsl:when test="@type = 'organization'">orgName</xsl:when>
+        <xsl:when test="@type = 'journal'">rs</xsl:when>
         <xsl:otherwise>
           <xsl:value-of select="local-name()" />
         </xsl:otherwise>
@@ -37,7 +38,7 @@
     <xsl:element name="{$element-name}" namespace="http://www.tei-c.org/ns/1.0">
       <xsl:apply-templates select="@*[not(name() = 'type')]" />
 
-      <xsl:if test="$element-name = local-name()">
+      <xsl:if test="$element-name = local-name() or $element-name = 'rs'">
         <xsl:copy-of select="@type" />
       </xsl:if>
       
