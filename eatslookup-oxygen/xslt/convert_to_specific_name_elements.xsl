@@ -28,7 +28,10 @@
         <xsl:when test="@type = 'place'">placeName</xsl:when>
         <xsl:when test="@type = 'organisation'">orgName</xsl:when>
         <xsl:when test="@type = 'organization'">orgName</xsl:when>
+        <xsl:when test="@type = 'composition'">rs</xsl:when>
         <xsl:when test="@type = 'journal'">rs</xsl:when>
+        <xsl:when test="@type = 'term'">rs</xsl:when>
+        <xsl:when test="@type = 'work'">rs</xsl:when>
         <xsl:otherwise>
           <xsl:value-of select="local-name()" />
         </xsl:otherwise>
