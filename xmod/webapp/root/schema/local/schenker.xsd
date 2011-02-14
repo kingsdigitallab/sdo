@@ -20,6 +20,7 @@
     <xs:include schemaLocation="diary-metadata.xsd"/>
     <xs:include schemaLocation="correspondence-metadata.xsd"/>
     <xs:include schemaLocation="lessonbook-metadata.xsd"/>
+    <xs:include schemaLocation="other-metadata.xsd"/>
     
        
     <xs:element name="recordCollection">
@@ -72,7 +73,7 @@
             <xs:element ref="diary" minOccurs="0" maxOccurs="1"/>
             <xs:element ref="correspondence" minOccurs="0" maxOccurs="1"/>
             <xs:element ref="lessonbook" minOccurs="0" maxOccurs="1"/>
-            <!-- <xs:element ref="ephemera" minOccurs="0" maxOccurs="1"/> -->
+            <xs:element ref="other" minOccurs="0" maxOccurs="1"/>
         </xs:choice>
    </xs:group>
     
