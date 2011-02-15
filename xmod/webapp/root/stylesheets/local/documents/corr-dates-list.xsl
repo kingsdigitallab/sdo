@@ -22,33 +22,36 @@
     <xsl:variable name="root" select="/"/>
 
     <xsl:template name="xms:content">
-        <div class="resourceList">
-            <div class="t03">
-                <h4><a href="#" title="#" class="g3 a01">Show all data</a></h4>
+      <div id="side">
+               
         <!-- group by year -->
         <xsl:for-each-group select="/aggregation/response/result/doc/str[@name='dateShort']"
             group-by="substring(.,1,4)">
             <xsl:sort select="current-grouping-key()"/>
 
-            <ul>
-                <li>
+            <ul id="acc3" class="accordion">
+                <li class="s7">
                     <a>
+                        <span>
                         <xsl:value-of select="current-grouping-key()"/>
                         <xsl:text>: </xsl:text>
                         <xsl:value-of select="count(current-group())"/>
+                        </span>
                     </a>
                     <!-- group by month -->
                     <xsl:for-each-group select="current-group()" group-by="substring(.,6,2)">
                         <xsl:sort select="current-grouping-key()"/>
 
                         <ul>
-                            <li>
+                            <li class="s7">
                                 <a>
+                                    <span>
                                     <xsl:value-of select="current-grouping-key()"/>
                                     <xsl:text>: </xsl:text>
                                     <xsl:value-of select="count(current-group())"/>
+                                    </span>
                                 </a>
-                                <ul>
+                                <ul id="date">
                                     <!-- group by day (sometimes just one item per day group, sometimes more) -->
                                     <xsl:for-each-group select="current-group()"
                                         group-by="substring(.,9,2)">  <xsl:sort
@@ -64,10 +67,12 @@
                                             select="concat('../correspondence/dates/summary/', $myVal)"/>
                                         <li>
                                             <a href="{$url}">
+                                                <span>
                                                 <xsl:value-of select="current-grouping-key()"/>
                                                 <xsl:if test="count(current-group()) > 1"><xsl:text> </xsl:text>
                                                   <xsl:value-of select="count(current-group())"
                                                   /><xsl:text> items</xsl:text></xsl:if>
+                                                </span>
                                             </a>
                                         </li>
                                     </xsl:for-each-group>
@@ -81,8 +86,7 @@
             </ul>
 
         </xsl:for-each-group>
-            </div>
-            </div>
+      </div>
     </xsl:template>
 
 </xsl:stylesheet>
