@@ -1,62 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
-  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
-  xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:xmg="http://www.cch.kcl.ac.uk/xmod/global/1.0"
-  xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
+  xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
+  xmlns:xmg="http://www.cch.kcl.ac.uk/xmod/global/1.0"
+  xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-  <xsl:import href="../default.xsl" />
+  <xsl:import href="../default.xsl"/>
   <xd:doc scope="stylesheet">
     <xd:desc>
       <xd:p><xd:b>Created on:</xd:b> Sep 27, 2010</xd:p>
       <xd:p><xd:b>Author:</xd:b> paulcaton</xd:p>
-      <xd:p />
+      <xd:p/>
     </xd:desc>
   </xd:doc>
 
-  <xsl:param name="menutop" select="'true'" />
-  <xsl:param name="date" />
-  
-  <xsl:variable name="prevLink" select="//prevLink" />
-  <xsl:variable name="nextLink" select="//nextLink" />
-  <xsl:variable name="record" select="//sdo:recordCollection/sdo:record[substring(descendant::dcterms:created, 1, 10) = $date]" />
+  <xsl:param name="menutop" select="'true'"/>
+  <xsl:param name="date"/>
+
+  <xsl:variable name="prevLink" select="//prevLink"/>
+  <xsl:variable name="nextLink" select="//nextLink"/>
+  <xsl:variable name="record"
+    select="//sdo:recordCollection/sdo:record[substring(descendant::dcterms:created, 1, 10) = $date]"/>
+
 
   <xsl:template name="xms:pagehead">
     <div class="pageHeader">
       <div class="t01">
         <h1>
-          <xsl:choose>
-            <xsl:when test="$prevLink != 'NULL'">
-              <a href="{$prevLink}">prev</a>
-            </xsl:when>
-            <xsl:otherwise>prev</xsl:otherwise>
-          </xsl:choose>
-          <xsl:text> | </xsl:text>
-          <xsl:choose>
-            <xsl:when test="$nextLink != 'NULL'">
-              <a href="{$nextLink}">next</a>
-            </xsl:when>
-            <xsl:otherwise>next</xsl:otherwise>
-          </xsl:choose>
+          <xsl:value-of select="$record/sdo:itemDesc/dc:title"/>
         </h1>
-        <h2 class="documentDisplay"><xsl:value-of
-            select="//sdo:recordCollection/sdo:collectionDesc/sdo:source/sdo:diary/@sdoID" />: [date here]</h2>
-        <h3 class="documentDisplay">
-          <xsl:value-of select="$record/sdo:itemDesc/dc:title" />
-        </h3>
+        <div class="options">
+          <ul>
+            <li class="info">
+              <xsl:value-of
+                select="//sdo:recordCollection/sdo:collectionDesc/sdo:source/sdo:diary/@sdoID"/>
+            </li>
+            <li>
+              <xsl:choose>
+                <xsl:when test="$prevLink != 'NULL'">
+                  <a class="s02" href="{$prevLink}">Prev Document</a>
+                </xsl:when>
+                <xsl:otherwise>
+                  <span>Prev Document</span>
+                </xsl:otherwise>
+              </xsl:choose>
+            </li>
+            <li>
+              <xsl:choose>
+                <xsl:when test="$nextLink != 'NULL'">
+                  <a href="{$nextLink}">Next Document</a>
+                </xsl:when>
+                <xsl:otherwise>
+                  <span>Next Document</span>
+                </xsl:otherwise>
+              </xsl:choose>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </xsl:template>
-
+  
   <xsl:template name="xms:content">
     <table class="docDisplayGandE">
       <tr>
         <td id="GermanVersion">
           <!-- German version -->
-          <xsl:apply-templates select="$record/tei:div[@type='transcription']" />
+          <xsl:apply-templates select="$record/tei:div[@type='transcription']"/>
         </td>
         <td id="EnglishVersion">
           <!-- English version -->
-          <xsl:apply-templates select="$record/tei:div[@type='translation']" />
+          <xsl:apply-templates select="$record/tei:div[@type='translation']"/>
         </td>
       </tr>
       <tr>
@@ -64,8 +79,7 @@
           <div>
             <h3>Footnotes</h3>
             <xsl:for-each select="//tei:note[@place='foot']">
-              <xsl:variable name="noteNum"
-                select="substring(substring-after(@xml:id, '-'), 3, 2)"/>
+              <xsl:variable name="noteNum" select="substring(substring-after(@xml:id, '-'), 3, 2)"/>
               <p>
                 <xsl:attribute name="id" select="concat('fn', $noteNum)"/>
                 <sup>
@@ -91,7 +105,7 @@
   <!-- TEMPLATES SPECIFIC TO CORRESPONDENCE DISPLAY -->
   <xsl:template match="tei:opener | tei:closer">
     <p>
-      <xsl:apply-templates />
+      <xsl:apply-templates/>
     </p>
   </xsl:template>
 
@@ -100,9 +114,9 @@
   </xsl:template>
 
   <xsl:template match="tei:dateline">
-    <xsl:apply-templates />
+    <xsl:apply-templates/>
   </xsl:template>
-  
+
   <xsl:template match="tei:note">
     <xsl:choose>
       <xsl:when test="@place='foot'">
@@ -125,7 +139,7 @@
                 <xsl:value-of select="$fnNum"/>
               </xsl:otherwise>
             </xsl:choose>
-            
+
           </a>
         </sup>
       </xsl:when>
@@ -136,11 +150,11 @@
   <xsl:template match="tei:pb">
     <xsl:if test="@n > 1">
       <xsl:text> {</xsl:text>
-      <xsl:value-of select="@n" />
+      <xsl:value-of select="@n"/>
       <xsl:text>} </xsl:text>
     </xsl:if>
   </xsl:template>
-  
+
   <xsl:template match="tei:ptr">
     <xsl:variable name="ptrNum" select="substring(substring-after(@corresp, '-'), 3, 2)"/>
     <sup>
@@ -177,19 +191,19 @@
   </xsl:template>
 
   <xsl:template match="tei:salute">
-    <br />
+    <br/>
     <xsl:if test="parent::tei:opener">
-      <br />
+      <br/>
     </xsl:if>
-    <xsl:apply-templates />
+    <xsl:apply-templates/>
   </xsl:template>
 
   <xsl:template match="tei:signed">
-    <br />
+    <br/>
     <xsl:text>[</xsl:text>
     <em>signed:</em>
     <xsl:text>] </xsl:text>
-    <xsl:apply-templates />
+    <xsl:apply-templates/>
   </xsl:template>
 
 </xsl:stylesheet>
