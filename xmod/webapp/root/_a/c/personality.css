@@ -17,7 +17,7 @@ body#xmd { background: #ffffff; font: 100% Verdana, Arial, Helvetica, sans-serif
 td#content{background:#fff url(../i/content_bg.png) left top repeat-x;padding:14px 30px 20px 00px;vertical-align:top;}
 td#content div {background: transparent;}
 /*body.th1 td#content div {background: transparent;background: url(../i/bg.jpg) 0 150px  no-repeat;}*/
-td#content div div {background:none; margin: 0 0 0 2em;}
+td#content div div {background:none; margin: 0;}
 #mainContent { min-height: 436px; padding-top: 12px;background: transparent; }
 
 
@@ -54,8 +54,21 @@ td#content div div {background:none; margin: 0 0 0 2em;}
 #breadcrumb a:hover span {border-bottom: 1px solid #578ea7;}
 #breadcrumb .utilLinks { display: none; }
 
+/* COLLAPSE  ACCORDION */
 
 
+#mainContent .accordion {margin: 0; padding:0;}
+#mainContent .accordion li.s7 {background: none; line-height: 1.65em;}
+#mainContent .accordion li.s7 a {border: 0 none; font-weight: 700; background: url(../i/plus_on.png)no-repeat scroll 0 3px transparent; width: 110px; font-size: 105%;}
+#mainContent .accordion li.s7 a:active {text-decoration: none; color: #5a889e;}
+#mainContent .accordion li.s7 a:hover { background: url(../i/min_off.png)no-repeat scroll 0 3px transparent;}
+#mainContent .accordion a.trigger.open {background: url(../i/min_off.png)no-repeat scroll 0 3px transparent;}
+#mainContent .accordion li.s7 a span {padding-left: 15px; cursor:pointer}
+#mainContent .accordion li.s7 a:hover span {color: #5a889e; text-decoration: underline;}
+
+#mainContent #date {margin:0; padding: 0; background: #f5fafc;}
+#mainContent #date li {background: none; line-height: 0.4em; padding:0;}
+#mainContent #date li a {background: none; font-size: 110%; height: 10px; width: 38px;}
 
 /* BREADCRUMB UTILITY LINKS */
 /* SIDENAV */
@@ -217,7 +230,7 @@ c9dae3 mid light blue
 #mainContent span.u {text-decoration:underline}
 
 /* PAGE HEADER */ 
-#mainContent .pageHeader .t01 { position: relative; background: /*url(../i/h1_accent.png) bottom left no-repeat; */ transparent; padding-bottom: 0px; margin: 0 0 10px 0; }
+#mainContent .pageHeader .t01 { position: relative; background: /*url(../i/h1_accent.png) bottom left no-repeat; */ transparent; padding-bottom: 0px; margin: 0 0 20px 0; }
 #mainContent .pageHeader .t01 h1 {  color: #0d5b80; font-size: 140%; font-weight: normal;  font-family:  Arial, Helvetica, sans-serif; letter-spacing: -0.03em; border-bottom: 3px solid #edf4f7; margin: 0;}
 #mainContent .pageHeader .t01 h2 {color:#4b85a1;padding: 3px 0}
 #mainContent .pageHeader .t01 h2.documentDisplay {color:black;padding: 3px 0} /* for display of shelfmark: date at head of document */
