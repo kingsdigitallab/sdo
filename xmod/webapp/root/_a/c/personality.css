@@ -1,7 +1,7 @@
 /*	personality.css
  *	xMod Custom Site Personality Style Sheet
  *	xMod Version: 1.3 
- *  Last Updated: 14/02/2011
+ *  Last Updated: 15/02/2011
  */
 
  
@@ -63,7 +63,7 @@ td#content div div {background:none; margin: 0;}
 #mainContent .accordion li.s7 a:active {text-decoration: none; color: #5a889e;}
 #mainContent .accordion li.s7 a:hover { background: url(../i/min_off.png)no-repeat scroll 0 3px transparent;}
 #mainContent .accordion a.trigger.open {background: url(../i/min_off.png)no-repeat scroll 0 3px transparent;}
-#mainContent .accordion li.s7 a span {padding-left: 15px; cursor:pointer}
+#mainContent .accordion li.s7 a span {padding-left: 15px; cursor:pointer; display:block;}
 #mainContent .accordion li.s7 a:hover span {color: #5a889e; text-decoration: underline;}
 
 #mainContent #date {margin:0; padding: 0; background: #f5fafc;}
@@ -195,8 +195,12 @@ c9dae3 mid light blue
 1d555f
 */
 
+/* FOOTER */
+
+#mainContent .footnotes p {line-height:0; margin: 0; padding: 0;}
+
 #mainContent p {font-size: 70%; line-height: 1.5em; margin: 0 0 0.8em 0; padding: 0;}
-#mainContent sup  { vertical-align:text-top; font-size: 70%; font-weight: bold; line-height: 70%;  }
+#mainContent sup  { vertical-align:text-top; font-size: 75%; font-weight: bold; position: relative; top: 5px;  }
 #mainContent ol { list-style: decimal; }
 #mainContent ul	{ margin: 0 0 0.8em 0; padding: 0; }
 #mainContent ol li {list-style: decimal; padding:0}
@@ -231,7 +235,7 @@ c9dae3 mid light blue
 
 /* PAGE HEADER */ 
 #mainContent .pageHeader .t01 { position: relative; background: /*url(../i/h1_accent.png) bottom left no-repeat; */ transparent; padding-bottom: 0px; margin: 0 0 20px 0; }
-#mainContent .pageHeader .t01 h1 {  color: #0d5b80; font-size: 140%; font-weight: normal;  font-family:  Arial, Helvetica, sans-serif; letter-spacing: -0.03em; border-bottom: 3px solid #edf4f7; margin: 0;}
+#mainContent .pageHeader .t01 h1 {  color: #0d5b80; font-size: 130%; font-weight: normal;  font-family:  Arial, Helvetica, sans-serif; letter-spacing: -0.03em; border-bottom: 3px solid #edf4f7; margin: 0;}
 #mainContent .pageHeader .t01 h2 {color:#4b85a1;padding: 3px 0}
 #mainContent .pageHeader .t01 h2.documentDisplay {color:black;padding: 3px 0} /* for display of shelfmark: date at head of document */
 #mainContent .pageHeader .t01 h3.documentDisplay {color:black;padding: 3px 0} /* for display of description at head of document */
@@ -290,6 +294,17 @@ c9dae3 mid light blue
 
 /* OPTIONS / SUBMENU */
 #mainContent .options .t01  {background: none; border: 0px none; padding: 0 0 0.8em 0px; margin: 0;}
+
+#mainContent .options ul {padding: 10px 0 15px 0;}
+#mainContent .options ul li.info {color: #0D5B80; font-size: 90%; padding: 0; float: left;}
+#mainContent .options ul li {float: right; font-size: 70%;}
+#mainContent .options ul li a {background: #c6d3dd; padding: 4px;}
+#mainContent .options ul li a:hover {color: #fff; background:#607484 }
+#mainContent .options ul li span {background: none; color:#a8adb0; }
+
+
+
+
 /* TOC */
 /* RESOURCE LISTS */
 /* BIBLIOGRAPHICAL LISTS */
@@ -297,8 +312,10 @@ c9dae3 mid light blue
 #mainContent .docDisplayGandE {width: 100%;}
 #mainContent #EnglishVersion #GermanVersion {width: 50%;}
 
-#mainContent td#EnglishVersion, #mainContent td#GermanVersion {font-family: palatino, georgia, sans-serif; line-height: 1.3em;}
-#mainContent td#EnglishVersion p, #mainContent td#GermanVersion p {font-size: 95%;}
+#mainContent td#EnglishVersion, #mainContent td#GermanVersion {font-family: palatino, georgia, sans-serif; line-height: 1.3em; text-align: justify;}
+#mainContent td#EnglishVersion p, #mainContent td#GermanVersion p {font-size: 90%;}
+
+#mainContent td#GermanVersion {padding-right: 30px;}
 
 
 /* INDEX: DOCUMENT */

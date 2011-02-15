@@ -17,28 +17,29 @@
                     <xsl:value-of select="//sdo:recordCollection/sdo:record/sdo:itemDesc/dc:title"/>
                 </h1>
                 <div class="options">
-                    <ul>
+                    <ul class="s4">
                         <li class="info">
                             <xsl:value-of
                                 select="//sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]"
                             />
                         </li>
+                        <li><xsl:choose>
+                            <xsl:when test="$nextLink != 'NULL'">
+                                <a href="{$nextLink}">Next Document ›</a>
+                            </xsl:when>
+                            <xsl:otherwise><span>Next Document</span></xsl:otherwise>
+                        </xsl:choose></li>
                         <li>
                             <xsl:choose>
                                 <xsl:when test="$prevLink != 'NULL'">
-                                    <a class="s02" href="{$prevLink}">Prev Document</a>
+                                    <a class="s02" href="{$prevLink}">‹ Prev Document</a>
                                 </xsl:when>
                                 <xsl:otherwise>
                                     <span>Prev Document</span>
                                 </xsl:otherwise>
                             </xsl:choose>
                         </li>
-                        <li><xsl:choose>
-                            <xsl:when test="$nextLink != 'NULL'">
-                                <a href="{$nextLink}">Next Document</a>
-                            </xsl:when>
-                            <xsl:otherwise><span>Next Document</span></xsl:otherwise>
-                        </xsl:choose></li>
+                        
                     </ul>
                 </div>
             </div>
