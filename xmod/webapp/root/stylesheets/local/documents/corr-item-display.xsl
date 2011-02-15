@@ -25,17 +25,17 @@
                         </li>
                         <li><xsl:choose>
                             <xsl:when test="$nextLink != 'NULL'">
-                                <a href="{$nextLink}">Next Document ›</a>
+                                <a href="{$nextLink}">Next ›</a>
                             </xsl:when>
                             <xsl:otherwise><span>Next Document</span></xsl:otherwise>
                         </xsl:choose></li>
                         <li>
                             <xsl:choose>
                                 <xsl:when test="$prevLink != 'NULL'">
-                                    <a class="s02" href="{$prevLink}">‹ Prev Document</a>
+                                    <a class="s02" href="{$prevLink}">‹ Prev</a>
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <span>Prev Document</span>
+                                    <span>Prev</span>
                                 </xsl:otherwise>
                             </xsl:choose>
                         </li>
@@ -62,7 +62,7 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <div>
+                    <div class="ft">
                         <h3>Footnotes</h3>
                         <xsl:for-each select="//tei:note[@place='foot']">
                             <xsl:variable name="noteNum"

@@ -23,12 +23,13 @@
 
     <xsl:template name="xms:content">
         <div id="side">
+            <ul id="acc3" class="accordion">
         <!-- group by year -->
         <xsl:for-each-group select="/aggregation/response/result/doc/str[@name='dateShort']"
             group-by="substring(.,1,4)">
             <xsl:sort select="current-grouping-key()"/>
 
-            <ul id="acc3" class="accordion">
+          
                 <li class="s7">
                     <a>
                         <span>
@@ -82,9 +83,10 @@
 
                     </xsl:for-each-group>
                 </li>
-            </ul>
-
+         
         </xsl:for-each-group>
+            </ul>
+            
         </div>
     </xsl:template>
 
