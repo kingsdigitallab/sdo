@@ -58,7 +58,8 @@
                                             select="current-grouping-key()"/>
                                         <xsl:variable name="myVal" select="."/> 
                                         <!-- for 'identifier' variable below, because there are sometimes several items on the same day--> 
-                                        <!--  we must use subsequence() otherwise we'll sometimes be passing a sequence into -->  <!-- the substring() function for the 'url' variable, which XSLT won't accept. -->
+                                        <!--  we must use subsequence() otherwise we'll sometimes be passing a sequence into --> 
+                                        <!-- the substring() function for the 'url' variable, which XSLT won't accept. -->
                                         <xsl:variable name="identifier"
                                             select="subsequence(//doc/child::str[text()=$myVal]/following-sibling::str[@name='uniqueId'],1,1)"/>
                                         <!-- <xsl:variable name="url"
