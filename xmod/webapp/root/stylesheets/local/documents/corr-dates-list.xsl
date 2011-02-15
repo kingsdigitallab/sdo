@@ -22,6 +22,9 @@
     <xsl:variable name="root" select="/"/>
 
     <xsl:template name="xms:content">
+        <div class="resourceList">
+            <div class="t03">
+                <h4><a href="#" title="#" class="g3 a01">Show all data</a></h4>
         <!-- group by year -->
         <xsl:for-each-group select="/aggregation/response/result/doc/str[@name='dateShort']"
             group-by="substring(.,1,4)">
@@ -78,7 +81,8 @@
             </ul>
 
         </xsl:for-each-group>
-
+            </div>
+            </div>
     </xsl:template>
 
 </xsl:stylesheet>

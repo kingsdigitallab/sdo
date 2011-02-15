@@ -145,8 +145,10 @@
   </xsl:template>
   
   <xsl:template name="xmv:script">
-    <script src="{$xmp:assets-path}/j/jquery-1.3.2.min.js" type="text/javascript">&#160;</script>
-    <script src="{$xmp:assets-path}/s/config.js" type="text/javascript">&#160;</script>
+    <script src="{$xmp:assets-path}/s/jquery-1.5.min.js" type="text/javascript">&#160;</script>
+    <script src="{$xmp:assets-path}/s/jquery.easing.js" type="text/javascript">&#160;</script>
+    <script src="{$xmp:assets-path}/s/jquery.collapse.js" type="text/javascript">&#160;</script>
+   
   </xsl:template>
   
   <xsl:template name="xmv:body">

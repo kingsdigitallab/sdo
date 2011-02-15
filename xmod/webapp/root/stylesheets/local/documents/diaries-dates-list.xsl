@@ -22,17 +22,22 @@
     <xsl:variable name="root" select="/"/>
 
     <xsl:template name="xms:content">
+        
         <!-- group by year -->
         <xsl:for-each-group select="/aggregation/response/result/doc/str[@name='dateShort']" group-by="substring(.,1,4)">
             <xsl:sort select="current-grouping-key()"/>
 
-            <ul>
+            <ul id="collapser">
                 <li>
                     <a>
                         <xsl:value-of select="current-grouping-key()"/>
                         <xsl:text>: </xsl:text>
                         <xsl:value-of select="count(current-group())"/>
+                       
                     </a>
+            
+                  
+                      
                     <!-- group by month -->
                     <xsl:for-each-group select="current-group()" group-by="substring(.,6,2)">
                         <xsl:sort select="current-grouping-key()"/>
@@ -43,7 +48,9 @@
                                     <xsl:value-of select="current-grouping-key()"/>
                                     <xsl:text>: </xsl:text>
                                     <xsl:value-of select="count(current-group())"/>
+                                    
                                 </a>
+                               
                                 <ul>
                                     <!-- group by day (usually just one item per day group, but occasionally there are two) -->
                                     <xsl:for-each-group select="current-group()"
@@ -76,7 +83,7 @@
             </ul>
 
         </xsl:for-each-group>
-
+            
     </xsl:template>
 
 </xsl:stylesheet>
