@@ -27,6 +27,7 @@
             <xsl:sort select="current-grouping-key()"/>
             <xsl:variable name="url" select="concat('../correspondence/categories/summary/', current-grouping-key())"/>
             <ul>
+                <li>
                 <a href="{$url}">
                     <xsl:value-of select="replace(current-grouping-key(), '_', ' ')"/>
                     <xsl:text>: </xsl:text>
@@ -40,6 +41,7 @@
                         </xsl:otherwise>
                     </xsl:choose>
                 </a>
+                </li>
             </ul>
 
         </xsl:for-each-group>
