@@ -433,14 +433,28 @@
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
           <map:part
-            src="cocoon://_internal/solr/query/q=dateShort%3A*&amp;fq=kind%3Adiary&amp;rows=5000&amp;fl=dateShort,uniqueId&amp;indent=on"
+            src="cocoon://_internal/solr/query/q=dateShort%3A*&amp;fq=kind%3Aother&amp;rows=5000&amp;fl=dateShort,uniqueId&amp;indent=on"
           />
         </map:aggregate>
         <map:transform src="stylesheets/local/documents/other-dates-list.xsl" type="saxon"/>
         <map:serialize type="xhtml"/>
       </map:match>
       
-      <!-- other material by date step 2: after user clicks on a particular item, display it-->
+      <!-- other material by date, step 2: after user clicks on a date, show summary of all items that have that date -->
+      <map:match pattern="documents/other/dates/summary/*">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.xml"/>
+          <map:part
+            src="cocoon://_internal/solr/query/q=dateShort%3A{1}&amp;fq=kind%3Aother&amp;rows=5000&amp;fl=tag,fileId,dateShort,dateFull,title,description,shelfmark&amp;sort=dateFull%20asc&amp;indent=on"
+          />
+        </map:aggregate>
+        <map:transform src="stylesheets/local/documents/other-date-summary.xsl">
+          <map:parameter name="date" value="{1}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+      
+      <!-- other material by date step 3: after user clicks on a particular item, display it-->
       <map:match pattern="documents/other/dates/*/*">
         <!-- */* = YYYY-MM-DD/filename -->
         <map:aggregate element="aggregation">
@@ -457,14 +471,14 @@
       <map:match pattern="solr/next-prev/other/dates/*/*">
         <!-- */* = YYYY-MM-DD/filename -->
         <map:generate
-          src="cocoon://_internal/solr/query/q=dateShort%3A*&amp;fq=kind%3Adiary&amp;rows=5000&amp;fl=dateFull,dateShort,fileId&amp;sort=dateFull%20asc&amp;indent=on"/>
+          src="cocoon://_internal/solr/query/q=dateShort%3A*&amp;fq=kind%3Aother&amp;rows=5000&amp;fl=dateFull,dateShort,fileId&amp;sort=dateFull%20asc&amp;indent=on"/>
         <map:transform src="stylesheets/local/documents/other-next-prev-by-date.xsl">
           <map:parameter name="date" value="{1}"/>
           <map:parameter name="file" value="{2}"/>
         </map:transform>
         <map:serialize type="xml"/>
       </map:match>
-      <!-- END BROWSING OTHER MATERIAL -->
+      <!-- END BROWSING OTHER MATERIAL BY DATE ***************************************************************************** -->
 
 
       <map:match pattern="profiles/*/index.html">
