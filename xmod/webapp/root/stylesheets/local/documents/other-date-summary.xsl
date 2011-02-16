@@ -29,10 +29,7 @@
                 <li>
                     <h2>
                         <a href="{concat('../', $date, '/', $filename)}"><xsl:value-of
-                            select="child::str[@name='shelfmark']"/>
-                            <xsl:text> : </xsl:text>
-                            <xsl:value-of select="replace(child::arr[@name='tag']/child::str[1], '_', ' ~ ')"
-                            /></a>
+                            select="child::str[@name='shelfmark']"/></a>
                     </h2>
                     <p>
                         <xsl:value-of select="child::str[@name='document-title']"/>
