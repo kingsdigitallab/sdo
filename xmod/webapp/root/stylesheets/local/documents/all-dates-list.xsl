@@ -3,26 +3,38 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
     
     <xsl:import href="../default.xsl"/>
+    
     <xd:doc scope="stylesheet">
         <xd:desc>
-            <xd:p><xd:b>Created on:</xd:b> 15 February, 2011</xd:p>
+            <xd:p><xd:b>Created on:</xd:b> 17 February, 2011</xd:p>
             <xd:p><xd:b>Author:</xd:b> paulcaton</xd:p>
-            <xd:p><xd:b>Input:</xd:b> Solr's response to the query
-                "q=date%3A*&amp;fq=kind%3Aother&amp;rows=5000&amp;fl=date,uniqueId,tag&amp;indent=on"</xd:p>
-            <xd:p><xd:b>Output:</xd:b> display of years, months, and days for which there are "other material" items</xd:p>
+            <xd:p>
+                <xd:b>Input:</xd:b>
+            </xd:p>
         </xd:desc>
     </xd:doc>
     
-    <xsl:param name="menutop" select="'true'"/>
+    <xsl:param name="menutop" select="'true'"/>    
+    <xsl:param name="pattern"/>
     
-    <xsl:variable name="xmg:title">
-        <xsl:text>Browse Other Materials by Date</xsl:text>
+    <xsl:variable name="heading_string">
+        <xsl:choose>
+            <xsl:when test="$pattern = 'cd'"><xsl:text>Correspondence and Diaries</xsl:text></xsl:when>
+            <xsl:when test="$pattern = 'correspondence'"><xsl:text>Correspoop</xsl:text></xsl:when>
+            <xsl:when test="$pattern = 'diaries'"><xsl:text>Diaries</xsl:text></xsl:when>
+            <xsl:when test="$pattern = 'lb'"><xsl:text>Lessonbooks</xsl:text></xsl:when>
+            <xsl:when test="$pattern = 'other'"><xsl:text>Other Materials</xsl:text></xsl:when>
+        </xsl:choose>       
     </xsl:variable>
+    
+    <xsl:variable name="xmg:title" select="concat('Browse ', $heading_string, ' by Date')"/>
+    
     <xsl:variable name="root" select="/"/>
+    
     
     <xsl:template name="xms:content">
         <div id="side">
-            <ul id="acc3" class="accordion">   
+            <ul id="acc3" class="accordion">
                 <!-- group by year -->
                 <xsl:for-each-group select="/aggregation/response/result/doc/str[@name='dateShort']"
                     group-by="substring(.,1,4)">
@@ -53,18 +65,17 @@
                                     <ul id="date">
                                         <!-- group by day (sometimes just one item per day group, sometimes more) -->
                                         <xsl:for-each-group select="current-group()"
-                                            group-by="substring(.,9,2)">  <xsl:sort
+                                            group-by="substring(.,9,2)"> <xsl:sort
                                                 select="current-grouping-key()"/>
                                             <xsl:variable name="myVal" select="."/> 
                                             <!-- for 'identifier' variable below, because there are sometimes several items on the same day--> 
-                                            <!--  we must use subsequence() otherwise we'll sometimes be passing a sequence into --> 
-                                            <!-- the substring() function for the 'url' variable, which XSLT won't accept. -->
+                                            <!--  we must use subsequence() otherwise we'll sometimes be passing a sequence into -->  <!-- the substring() function for the 'url' variable, which XSLT won't accept. -->
                                             <xsl:variable name="identifier"
                                                 select="subsequence(//doc/child::str[text()=$myVal]/following-sibling::str[@name='uniqueId'],1,1)"/>
                                             <!-- <xsl:variable name="url"
                                                 select="concat(substring($identifier,7), '/', $myVal)"/> -->
                                             <xsl:variable name="url"
-                                                select="concat('../other/dates/summary/', $myVal)"/>
+                                                select="concat('../', $pattern, '/dates/summary/', $myVal)"/>
                                             <li>
                                                 <a href="{$url}">
                                                     <span>
@@ -84,9 +95,9 @@
                         </xsl:for-each-group>
                     </li>
                     
-                    
                 </xsl:for-each-group>
             </ul>
+            
         </div>
     </xsl:template>
     
