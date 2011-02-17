@@ -164,7 +164,9 @@
             src="cocoon://_internal/solr/query/q=dateFull%3A*&amp;fq=kind%3Acorrespondence&amp;rows=5000&amp;fl=dateShort,uniqueId,tag&amp;indent=on"
             label="xml"/>
         </map:aggregate>
-        <map:transform src="stylesheets/local/documents/corr-dates-list.xsl"/>
+        <map:transform src="stylesheets/local/documents/all-dates-list.xsl">
+          <map:parameter name="pattern" value="correspondence"/>
+        </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
 
@@ -264,7 +266,9 @@
             src="cocoon://_internal/solr/query/q=dateShort%3A*&amp;fq=kind%3Adiary&amp;rows=5000&amp;fl=dateShort,uniqueId&amp;indent=on"
           />
         </map:aggregate>
-        <map:transform src="stylesheets/local/documents/diaries-dates-list.xsl" type="saxon"/>
+        <map:transform src="stylesheets/local/documents/all-dates-list.xsl">
+          <map:parameter name="pattern" value="diaries"/>
+        </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
 
@@ -307,7 +311,9 @@
             src="cocoon://_internal/solr/query/q=dateFull%3A*&amp;fq=kind%3A(%2Bcorrespondence%20%2Bdiary)&amp;rows=5000&amp;fl=dateShort,uniqueId,tag&amp;indent=on"
             label="xml"/> -->
         </map:aggregate>
-        <map:transform src="stylesheets/local/documents/cd-dates-list.xsl"/>
+        <map:transform src="stylesheets/local/documents/all-dates-list.xsl">
+          <map:parameter name="pattern" value="cd"/>
+        </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
       
@@ -436,7 +442,9 @@
             src="cocoon://_internal/solr/query/q=dateShort%3A*&amp;fq=kind%3Aother&amp;rows=5000&amp;fl=dateShort,uniqueId&amp;indent=on"
           />
         </map:aggregate>
-        <map:transform src="stylesheets/local/documents/other-dates-list.xsl" type="saxon"/>
+        <map:transform src="stylesheets/local/documents/all-dates-list.xsl">
+          <map:parameter name="pattern" value="other"/>
+        </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
       

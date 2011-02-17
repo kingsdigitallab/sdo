@@ -20,9 +20,9 @@
     <xsl:variable name="heading_string">
         <xsl:choose>
             <xsl:when test="$pattern = 'cd'"><xsl:text>Correspondence and Diaries</xsl:text></xsl:when>
-            <xsl:when test="$pattern = 'correspondence'"><xsl:text>Correspoop</xsl:text></xsl:when>
+            <xsl:when test="$pattern = 'correspondence'"><xsl:text>Correspondence</xsl:text></xsl:when>
             <xsl:when test="$pattern = 'diaries'"><xsl:text>Diaries</xsl:text></xsl:when>
-            <xsl:when test="$pattern = 'lb'"><xsl:text>Lessonbooks</xsl:text></xsl:when>
+            <xsl:when test="$pattern = 'lb'"><xsl:text>Lessonbooks</xsl:text></xsl:when><!-- But Nb. no lb browse by date yet -->
             <xsl:when test="$pattern = 'other'"><xsl:text>Other Materials</xsl:text></xsl:when>
         </xsl:choose>       
     </xsl:variable>
