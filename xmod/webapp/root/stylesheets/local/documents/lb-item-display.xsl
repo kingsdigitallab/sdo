@@ -71,8 +71,26 @@
             <tr>
                 <td colspan="2">
                     <div class="ft">
-                    <p>[commentary]</p>
-                    <p>[footnotes]</p>
+                        <h3>Footnotes</h3>
+                        <xsl:for-each select="//tei:note[@place='foot']">
+                            <xsl:variable name="noteNum"
+                                select="substring(substring-after(@xml:id, '-'), 3, 2)"/>
+                            <p>
+                                <xsl:attribute name="id" select="concat('fn', $noteNum)"/>
+                                <sup>
+                                    <xsl:choose>
+                                        <xsl:when test="starts-with($noteNum, '0')">
+                                            <xsl:value-of select="substring($noteNum, 2, 1)"/>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:value-of select="$noteNum"/>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </sup>
+                                <xsl:text> </xsl:text>
+                                <xsl:value-of select="."/>
+                            </p>
+                        </xsl:for-each>
                     </div>
                 </td>
             </tr>
@@ -93,6 +111,35 @@
     <xsl:template match="tei:dateline">
         <xsl:apply-templates/>
     </xsl:template>
+    
+    <xsl:template match="tei:note">
+        <xsl:choose>
+            <xsl:when test="@place='foot'">
+                <xsl:variable name="fnNum" select="substring(substring-after(@xml:id, '-'), 3, 2)"/>
+                <sup>
+                    <a class="fnLink">
+                        <xsl:attribute name="href">
+                            <xsl:text>#fn</xsl:text>
+                            <xsl:value-of select="$fnNum"/>
+                        </xsl:attribute>
+                        <xsl:attribute name="id">
+                            <xsl:text>fnLink</xsl:text>
+                            <xsl:value-of select="$fnNum"/>
+                        </xsl:attribute>
+                        <xsl:choose>
+                            <xsl:when test="starts-with($fnNum, '0')">
+                                <xsl:value-of select="substring($fnNum, 2, 1)"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of select="$fnNum"/>
+                            </xsl:otherwise>
+                        </xsl:choose>                        
+                    </a>
+                </sup>
+            </xsl:when>
+            <xsl:otherwise> </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
 
     <xsl:template match="tei:pb">
         <xsl:if test="@n > 1">
@@ -100,6 +147,41 @@
             <xsl:value-of select="@n"/>
             <xsl:text>} </xsl:text>
         </xsl:if>
+    </xsl:template>
+    
+    <xsl:template match="tei:ptr">
+        <xsl:variable name="ptrNum" select="substring(substring-after(@corresp, '-'), 3, 2)"/>
+        <sup>
+            <a>
+                <xsl:attribute name="href">
+                    <xsl:text>#fn</xsl:text>
+                    <xsl:value-of select="$ptrNum"/>
+                </xsl:attribute>
+                <xsl:choose>
+                    <xsl:when test="starts-with(@corresp, 'http://')">
+                        <xsl:call-template name="external-link"/>
+                    </xsl:when>
+                    <xsl:when test="starts-with(@corresp, '#')">
+                        <xsl:attribute name="title">
+                            <xsl:text>Link internal to this page</xsl:text>
+                        </xsl:attribute>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:attribute name="title">
+                            <xsl:text>Encoding error: @corresp does not start with 'http://' and not internal link</xsl:text>
+                        </xsl:attribute>
+                    </xsl:otherwise>
+                </xsl:choose>
+                <xsl:choose>
+                    <xsl:when test="starts-with($ptrNum, '0')">
+                        <xsl:value-of select="substring($ptrNum, 2, 1)"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="$ptrNum"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </a>
+        </sup>
     </xsl:template>
 
     <xsl:template match="tei:salute">
