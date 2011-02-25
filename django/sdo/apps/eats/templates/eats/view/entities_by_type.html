@@ -1,0 +1,16 @@
+{% load eats_user_customise %}
+{% load eats_display_shortcuts %}
+
+<h3>{{ entity_type }} entities ({{ entity_count }})</h3>
+<ul>
+  {% for entity in entities %}
+   {% eats_user_wrap entity get_single_name single_name %}
+    <li>
+      <span>{{ single_name }}</span> 
+      <a href="{{ entity.get_absolute_url }}">View</a>
+      {% if user.is_authenticated %}
+        <a href="{% url eats.views.edit.edit_model_object "entity", entity.id %}">Edit</a>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

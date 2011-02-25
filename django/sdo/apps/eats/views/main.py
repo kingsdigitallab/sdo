@@ -291,3 +291,20 @@ def get_primary_authority_records (request):
     return object_list(request, results, template_name='eats/primary_authority_records.xml',
                        allow_empty=True, mimetype='text/xml')    
 
+def entity_types(request):
+    """View to display a list of all the entity types."""
+    entity_types = EntityTypeList.objects.all()
+    context_data = {'entity_types': entity_types}
+    return render_to_response('eats/view/entity_types.html', context_data,
+                              context_instance=RequestContext(request)) 
+
+def entities_by_type(request, entity_type_id):
+    """View to display a list of all the entities of a given types."""
+    entity_type = EntityTypeList.objects.filter(pk = entity_type_id)[0].entity_type
+    entities = Entity.objects.filter(assertions__entity_type__entity_type = entity_type_id)
+    context_data = {'entities': entities,
+                    'entity_count': entities.count(),
+                    'entity_type': entity_type}
+    return render_to_response('eats/view/entities_by_type.html', context_data,
+                              context_instance=RequestContext(request)) 
+

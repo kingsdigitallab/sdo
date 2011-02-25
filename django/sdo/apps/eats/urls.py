@@ -10,6 +10,8 @@ urlpatterns = patterns(
     (r'^(?P<entity_id>\d+)/eac/(?P<authority_record_id>\d+)/', 'display_entity_eac'),
     (r'^search/$', 'search'), # Human usable search
     (r'^lookup/$', 'lookup'), # Machine usable search, used by clients
+    (r'^entities/types/$', 'entity_types'),
+    (r'^entities/(?P<entity_type_id>\d+)/$', 'entities_by_type'),
     (r'^get_names/$', 'get_names'),
     (r'^get_primary_authority_records/$', 'get_primary_authority_records'),
 )
