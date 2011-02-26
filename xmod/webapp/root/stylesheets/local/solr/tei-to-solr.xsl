@@ -12,10 +12,13 @@
       <xd:p><xd:b>Author:</xd:b> pcaton</xd:p>
       <xd:p>This stylesheet is the local version of the default ../../xmod/solr/tei-to-solr.xsl. It
         has been heavily customised for SDO and currently overrides practically everything in the
-        default. Like the default, though, we create one <doc/> that is largely metadata and another
-        <doc/> that has text for word searching.</xd:p>
+        default.</xd:p>
     </xd:desc>
   </xd:doc>
+
+  <xsl:variable name="free-text">
+    <xsl:apply-templates mode="free-text" select="//tei:div[not(ancestor::tei:div)]" />
+  </xsl:variable>
 
   <xsl:template match="/">
     <add>
@@ -103,10 +106,9 @@
             </field>
           </xsl:for-each>
 
-          <!-- <field name="content">
-            <xsl:value-of select="normalize-space(child::tei:div)" />
-          </field> -->
-
+          <field name="text">
+            <xsl:value-of select="normalize-space($free-text)" />
+          </field>
         </doc>
       </xsl:for-each>
 
