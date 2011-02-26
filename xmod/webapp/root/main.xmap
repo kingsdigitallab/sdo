@@ -103,6 +103,19 @@
         <map:serialize type="xhtml"/>
       </map:match>
 
+      <!-- Search interface. -->
+      <map:match pattern="search/">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.xml"/>
+        </map:aggregate>
+        <map:transform src="stylesheets/local/solr/query-params-to-solr-xinclude.xsl">
+          <map:parameter name="keyword" value="{request-param:kw}"/>
+        </map:transform>
+        <map:transform type="xinclude"/>
+        <map:transform src="stylesheets/local/search-to-html.xsl"/>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
       <!-- BROWSING CORRESPONDENCE BY CORRESPONDENT -->
       <!-- by name, step 1: show an alphabetical list of the 'tags' with correspondents' names -->
       <map:match pattern="documents/correspondence/correspondents">
