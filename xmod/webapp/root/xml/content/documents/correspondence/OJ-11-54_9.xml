@@ -11,13 +11,14 @@
 
   <tei:handNotes>
    <tei:handNote xml:id="AvH" scope="major">Anthony van Hoboken's hand</tei:handNote>
+   <tei:handNote xml:id="unk" scope="minor">unknown hand</tei:handNote>
    <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
   </tei:handNotes>
 
   <tei:respStmt xml:id="JR">
    <tei:persName>John Rothgeb</tei:persName>
    <tei:resp>Transcription, 2008</tei:resp>
-   <tei:resp>Translation, 2008, 2011</tei:resp>
+   <tei:resp>Translation, 2008</tei:resp>
   </tei:respStmt>
 
   <tei:respStmt xml:id="IB">
@@ -27,7 +28,7 @@
 
   <tei:revisionDesc>
    <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
-   <tei:change when="2011-02-21" who="#IB">revision of XML code</tei:change>
+   <tei:change when="2011-03-01" who="#IB">revision of XML code</tei:change>
   </tei:revisionDesc>
  </sdo:collectionDesc>
 
@@ -36,12 +37,12 @@
   <sdo:itemDesc>
    <dcterms:isPartOf>Hoboken ~ HSchenker</dcterms:isPartOf>
    <dcterms:isPartOf>Hoboken ~ H+JSchenker</dcterms:isPartOf>
-   <dc:title>Handwritten postcard from van Hoboken to Schenker, dated December 2, 1926</dc:title>
+   <dc:title>Handwritten postcard from van Hoboken to Schenker, dated December 2, 1926 </dc:title>
    <dc:type>Postcard</dc:type>
    <dcterms:created>1926-12-02T12:00:00Z</dcterms:created>
    <dcterms:dateSubmitted>2008-01-23</dcterms:dateSubmitted>
-   <dc:description>Hoboken cannot attend December 3d lesson.</dc:description>
-   <dc:subject>Stunde; lesson; Kisten; crates</dc:subject>
+   <dc:description>Hoboken cannot attend December 3 lesson. </dc:description>
+   <dc:subject>Stunde; lesson; Kisten; crate; Zollbeschau; customs inspection</dc:subject>
 
    <marcrel:correspondent key="EATS_nNNNNNN">Anthony van Hoboken</marcrel:correspondent>
    <marcrel:recipient key="EATS_nNNNNNN">Heinrich Schenker</marcrel:recipient>
@@ -56,17 +57,20 @@
     <tei:fw type="envelope">
      <tei:note type="authorial"><tei:handShift new="#AvH"/>Durch <tei:hi rend="double-underline"
        >Eilboten</tei:hi></tei:note><tei:lb/>
+     <tei:note type="editorial">written in crayon in an unknown hand:</tei:note><tei:handShift
+      new="#unk"/>128<tei:lb/>
      <tei:address>
-      <tei:addrLine><tei:supplied reason="clarity">An: </tei:supplied> Herrn Dr. Heinrich
-       Schenker</tei:addrLine>
-      <tei:addrLine>Wien III</tei:addrLine>
-      <tei:addrLine>Keilgasse 8<tei:hi rend="supralinear">II</tei:hi></tei:addrLine>
+      <tei:addrLine><tei:supplied reason="clarity">An: </tei:supplied><tei:handShift new="#AvH"
+       />Herrn D<tei:hi rend="supralinear">r.</tei:hi> Heinrich Schenker</tei:addrLine>
+      <tei:addrLine rend="indent-15">Wien III</tei:addrLine>
+      <tei:addrLine rend="indent-10">Keilgasse 8<tei:hi rend="supralinear"
+       >II</tei:hi></tei:addrLine>
      </tei:address>
-     <tei:fw type="postmark">||TA.3 WIEN 128 | 2. XII. 26 <tei:gap reason="illegible"/> | * R/a *
+     <tei:fw type="postmark">||TA.3 WIEN 128 | 2. XII. 26 <tei:gap reason="illegible"/> | * R /a*
       ||</tei:fw><tei:lb/>
-     <tei:note type="editorial">other two postmarks illegible</tei:note>
+     <tei:note type="editorial">other two postmarks illegible</tei:note><tei:lb/>
      <tei:milestone unit="folio" n="verso"/><tei:lb/>
-     <tei:note type="editorial">printed letterhead:</tei:note>
+     <tei:note type="editorial">printed letterhead:</tei:note><tei:lb/>
      <tei:address>
       <tei:addrLine><tei:persName><tei:handShift new="printed"/>A. VAN
        HOBOKEN</tei:persName></tei:addrLine>
@@ -76,15 +80,16 @@
      </tei:address>
      <tei:date when="1926-12-02" rend="ident-70"><tei:handShift new="#AvH"/>2. XII. 26.</tei:date>
     </tei:fw>
-    <tei:salute rend="indent-10">Sehr verehrter Herr Professor,</tei:salute>
+    <tei:salute rend="indent-10">Sehr verehrter Herr <tei:persName key="entity-000632"
+      >Professor</tei:persName>,</tei:salute>
    </tei:opener>
 
 
    <tei:p rend="first">Zu<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this
      postcard is not recorded in Schenker's diary. "R/a" in the postmark indicates that this item
-     was sent by pneumatic mail (Rohrpost).</tei:note> meinem lebhaften Bedauern kann ich morgen
+     was sent by pneumatic post ("Rohrpost"). </tei:note> meinem lebhaften Bedauern kann ich morgen
     nicht zur Stunde kommen.<tei:note xml:id="r0001-fn02" type="editorial" place="foot">Accordingly,
-     Schenker's Lessonbook 1926/27 has no entry for December 3; the surrounding lessons were
+     Schenker's lessonbook 1926/27 has no entry for December 3; the surrounding lessons were
      November 30 and December 7. Hoboken's lessons seem to have begun at 4 p.m. at this period.
     </tei:note> Es sind hier die Kisten aus <tei:placeName key="entity-002534"
       ><tei:country>Japan</tei:country></tei:placeName> angekommen und findet <tei:sic>der</tei:sic>
@@ -92,7 +97,7 @@
      >Van Hoboken wants to point out the accommodation by the customs officials; customs inspections
      are normally conducted only at the customs office. </tei:note> Da nun die Herren heute nicht
     fertig geworden sind, kommen sie morgen um 3 Uhr wieder und werde ich dann wohl kaum noch Zeit
-    finden, zu Ihnen zu kommen.</tei:p>
+    finden, zu Ihnen zu kommen. </tei:p>
 
    <tei:closer>
     <tei:salute rend="indent-20">Mit besten Grüssen</tei:salute>
@@ -111,36 +116,41 @@
     <tei:fw type="envelope">
      <tei:note type="authorial"><tei:handShift new="#AvH"/>By <tei:hi rend="double-underline"
        >Express Mail</tei:hi></tei:note><tei:lb/>
+     <tei:note type="editorial">written in crayon in an unknown hand:</tei:note><tei:handShift
+      new="#unk"/>128<tei:lb/>
      <tei:address>
-      <tei:addrLine><tei:supplied reason="clarity">To: </tei:supplied> Dr. Heinrich
-       Schenker,</tei:addrLine>
-      <tei:addrLine>Vienna III,</tei:addrLine>
-      <tei:addrLine>Keilgasse 8<tei:hi rend="supralinear">II</tei:hi></tei:addrLine>
+      <tei:addrLine><tei:supplied reason="clarity">To: </tei:supplied><tei:handShift new="#AvH"/>Dr.
+       Heinrich Schenker</tei:addrLine>
+      <tei:addrLine rend="indent-15">Vienna III</tei:addrLine>
+      <tei:addrLine rend="indent-10">Keilgasse 8<tei:hi rend="supralinear"
+       >II</tei:hi></tei:addrLine>
      </tei:address>
-     <tei:fw type="postmark">||TA.3 VIENNA 128 | 2. XII. 26 <tei:gap reason="illegible"/> | * R/a *
+     <tei:fw type="postmark">||TA.3 VIENNA 128 | 2. XII. 26 <tei:gap reason="illegible"/> | * R /a*
       ||</tei:fw><tei:lb/>
-     <tei:note type="editorial">other two postmarks illegible</tei:note>
+     <tei:note type="editorial">other two postmarks illegible</tei:note><tei:lb/>
      <tei:milestone unit="folio" n="verso"/><tei:lb/>
-     <tei:note type="editorial">printed letterhead:</tei:note>
+     <tei:note type="editorial">printed letterhead:</tei:note><tei:lb/>
      <tei:address>
       <tei:addrLine><tei:persName><tei:handShift new="printed"/>A. VAN
        HOBOKEN</tei:persName></tei:addrLine>
-      <tei:addrLine rend="indent-75">VIENNA IV</tei:addrLine>
+      <tei:addrLine rend="indent-75">VIENNA IV,</tei:addrLine>
       <tei:addrLine rend="indent-70">WIEDNER HAUPTSTRASSE 63</tei:addrLine>
       <tei:addrLine rend="indent-75">TEL. 58-403</tei:addrLine>
      </tei:address>
      <tei:date when="1926-12-02" rend="ident-70"><tei:handShift new="#AvH"/>December 2,
-      1926.</tei:date>
+      1926</tei:date>
     </tei:fw>
-    <tei:salute rend="indent-10">Greatly revered Professor,</tei:salute>
+    <tei:salute rend="indent-10">Highly revered <tei:persName key="entity-000632"
+      >Professor</tei:persName>,</tei:salute>
    </tei:opener>
+
 
    <tei:p rend="first">To<tei:ptr corresp="#r0001-fn01" type="footnote"/> my deep regret I cannot
     come to the lesson tomorrow.<tei:ptr corresp="#r0001-fn02" type="footnote"/> The crates from
      <tei:placeName key="entity-002534"><tei:country>Japan</tei:country></tei:placeName> have
     arrived and the customs inspection is under way here at my house.<tei:ptr corresp="#r0001-fn03"
      type="footnote"/> Since the gentlemen did not finish today, they are coming again tomorrow at
-    3:00, and I will then surely not have time to come to you. </tei:p>
+    3:00, and I will then surely not have time to come to you.</tei:p>
 
    <tei:closer>
     <tei:salute rend="indent-20">With best greetings,</tei:salute>
