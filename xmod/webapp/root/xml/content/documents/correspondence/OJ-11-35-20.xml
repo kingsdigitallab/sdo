@@ -4,7 +4,7 @@
  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
-<!-- DB: All done, except: resolve issue regarding country names as adjectives (see comments later in document), and this could also do with a quick proofread. -->
+
  <sdo:collectionDesc>
   <sdo:source>
    <sdo:correspondence mfID="279" sdoID="OJ-11-35-20">OJ 11/35, 20</sdo:correspondence>
@@ -28,7 +28,7 @@
 
   <tei:revisionDesc>
    <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
-   <tei:change when="2011-02-01" who="#DB">XML code created</tei:change>
+   <tei:change when="2011-03-04" who="#DB">XML code created</tei:change>
   </tei:revisionDesc>
  </sdo:collectionDesc>
 
@@ -64,14 +64,13 @@
         Briefen</tei:title>, 143-146</tei:bibl>.</tei:note> denke ich an Sie, wenn ich wieder einmal
      etwas aus <tei:placeName key="entity-002484">Wien</tei:placeName> lese (aber nicht nur dann),
      u. mache mir Gedanken darüber, wie es Ihnen gehen mag. Aber wenn ich dann die Portosätze auf
-      <tei:placeName key="entity-002506"><tei:country>österreich</tei:country></tei:placeName>ischen
-     Briefen sehe, denke ich wieder, daß man niemand zu einem irgendwie vermeidbaren Brief
-     veranlassen soll. (Was ja auch bei uns zutrifft). Es freut mich sehr, daß ich ein neues Heft
-     bei Ihnen anmelden kann: Von 3 <tei:rs key="entity-002613" type="composition">Suiten für Geige,
-      Cello u. Klavier</tei:rs> werden zwei zusammen in einem Heft erscheinen, das Sie sofort nach
-     Erscheinen von mir erhalten sollen; ich habe den Verleger schon gebeten, dies zu besorgen. Ich
-     hoffe, Sie werden es vor <tei:date when="1922-12-25">Weihnachten</tei:date> noch erhalten. Die
-     Fahnen sind definitive korrigiert.</tei:p>
+     österreichischen Briefen sehe, denke ich wieder, daß man niemand zu einem irgendwie
+     vermeidbaren Brief veranlassen soll. (Was ja auch bei uns zutrifft). Es freut mich sehr, daß
+     ich ein neues Heft bei Ihnen anmelden kann: Von 3 <tei:rs key="entity-002613"
+      type="composition">Suiten für Geige, Cello u. Klavier</tei:rs> werden zwei zusammen in einem
+     Heft erscheinen, das Sie sofort nach Erscheinen von mir erhalten sollen; ich habe den Verleger
+     schon gebeten, dies zu besorgen. Ich hoffe, Sie werden es vor <tei:date when="1922-12-25"
+      >Weihnachten</tei:date> noch erhalten. Die Fahnen sind definitive korrigiert.</tei:p>
    </tei:div>
 
    <tei:div>
@@ -83,8 +82,8 @@
       II</tei:title></tei:rs>; ich danke Ihnen herzlich für Ihre wertvollen Gaben. Je mehr ich mir
      bewußt bin, wie wenig planvoll mein Arbeiten im ganzen, (ich meine nicht im einzelnen Stück)
      gewesen ist, desto mehr bewundere ich die Kraft der großen Konzeption, u. in der Ausführung,
-     der langen, höchst aktiven Geduld, von der Ihre einzelnen Werke, auch abgesehen von i<tei:del
-      rend="overstrike">I</tei:del>hrem großen Einzelwert, Zeugnis geben. Ich will mich ja damit
+     der langen, höchst aktiven Geduld, von der Ihre einzelnen Werke, auch abgesehen von <tei:subst><tei:add>i</tei:add><tei:del
+      rend="overstrike">I</tei:del></tei:subst>hrem großen Einzelwert, Zeugnis geben. Ich will mich ja damit
      nicht <tei:pb n="2"/> deshalb tadeln oder es herabsetzen, daß ich zumeist eben den Zufall
      gepackt habe, u. Sie dürfen gewiß nicht denken, daß ich etwa in falscher Bescheidenheit einen
      Trost oder ein Lob ernten möchte; ich bin im grund nicht unzufrieden mit dem Gang meiner
@@ -104,48 +103,43 @@
     <tei:p>Um der Wahrheit willen <tei:del rend="overstrike">de</tei:del> muß ich Ihnen sagen, daß
      mir Ihre Angriffe auf <tei:placeName key="entity-002586"
       ><tei:country>England</tei:country></tei:placeName> u. Konsorten u. Ihre Verherrlichung der
-      <tei:placeName key="entity-002482"><tei:country>Deutschen</tei:country></tei:placeName> leid
-     sind. Zum ersteren: ich finde es unrecht, daß man von Seiten unserer frühen Feinde (die zum
-     teil in schnöder Weise die Feindschaft forgsetzen, gewiß!) uns als Volk für die zweifellos von
-     unserer Regierung begangenen <tei:pb n="3"/>
-     <tei:supplied reason="clarity">Fehler</tei:supplied><tei:note xml:id="r0001-fn02"
+     Deutschen leid sind. Zum ersteren: ich finde es unrecht, daß man von Seiten unserer frühen
+     Feinde (die zum teil in schnöder Weise die Feindschaft forgsetzen, gewiß!) uns als Volk für die
+     zweifellos von unserer Regierung begangenen <tei:pb n="3"/>
+     <tei:supplied reason="clarity" resp="#HFe">Fehler</tei:supplied><tei:note xml:id="r0001-fn02"
       type="editorial" place="foot"><tei:bibl>Federhofer, <tei:title level="m">Heinrich Schenker:
         Nach Tagebüchern und Briefen</tei:title>, 144</tei:bibl>, inserts the word "Fehler" to make
       sense of the sentence. The word does not appear in the letter.</tei:note> bestrafen wollte u.
      vollends, daß man zum teil damit kein Ende finden will. Umgekehrt ist es dann auch nicht recht,
-     wenn wir jetzt die <tei:placeName key="entity-002520"
-      ><tei:country>französische</tei:country></tei:placeName> Regierung (ich nenne sie als den
-     derzeitigen Hauptfeind) als das <tei:placeName key="entity-002520"
-       ><tei:country>französische</tei:country></tei:placeName>
-     <tei:hi rend="underline">Volk</tei:hi> ansieht. Irgendwann und irgendwo muß man mit dem
-     Völkerhaß aufhören, u. wenn das für die Besiegten u. tatsächlich Betrogenen viel schwerer ist
-     als es für die Sieger sein sollte, so wollen wir, indem wir trotzdem damit anfangen, unsere
-     bessere Qualität beweisen. Und wir wurden und werden ja auch von eigener Seite her belogen oder
-     getäuscht. Lese ich einmal bei <tei:persName key="entity-000333">Harden</tei:persName> (den ich
-     gewiß nicht gern mag (übrigens erfreute ich mich an zwei Besprechungen von Ihnen, über
-      <tei:persName key="entity-000833">Smetena</tei:persName> u. <tei:sic><tei:placeName
-       key="entity-002592"><tei:country>italjen</tei:country></tei:placeName>ische</tei:sic>
-     Opernaufführungen in alten <tei:rs key="entity-002566" type="journal">Zukunft</tei:rs>-Nummern,
-     die mir ein Kollege zu lesen gab)) etwa eine Rede von <tei:hi rend="lateinschr"><tei:persName
-       key="entity-000101">Briand</tei:persName></tei:hi><tei:note xml:id="r0001-fn03"
-      type="editorial" place="foot">Aristide Briand (<tei:date from="1862" to="1932"
-       >1862-1932</tei:date>) served eleven times as the premiere of France, and won the Nobel Peace
-      Prize in <tei:date when="1926">1926</tei:date>, shared with <tei:persName key="entity-000873">Gustav Stresemann</tei:persName>.</tei:note> im
-     Wortlaut: wie anders, wie viel besonnener, mäßiger, gebildeter klingt sie als die Auszüge u.
-     Berichte in den Tageszeitungen vermuten lassen! Kurz, wenn man nicht den ganzen Tag
-     verschiedenste, namentlich auch ausländische Zeitungen lesen kann, so weiß man ja viel zu
-     wenig, <tei:subst>
+     wenn wir jetzt die französische Regierung (ich nenne sie als den derzeitigen Hauptfeind) als
+     das französische <tei:hi rend="underline">Volk</tei:hi> ansieht. Irgendwann und irgendwo muß
+     man mit dem Völkerhaß aufhören, u. wenn das für die Besiegten u. tatsächlich Betrogenen viel
+     schwerer ist als es für die Sieger sein sollte, so wollen wir, indem wir trotzdem damit
+     anfangen, unsere bessere Qualität beweisen. Und wir wurden und werden ja auch von eigener Seite
+     her belogen oder getäuscht. Lese ich einmal bei <tei:persName key="entity-000333"
+      >Harden</tei:persName> (den ich gewiß nicht gern mag (übrigens erfreute ich mich an zwei
+     Besprechungen von Ihnen, über <tei:persName key="entity-000833">Smetena</tei:persName> u.
+      <tei:sic>italjenische</tei:sic> Opernaufführungen in alten <tei:rs key="entity-002566"
+      type="journal">Zukunft</tei:rs>-Nummern, die mir ein Kollege zu lesen gab)) etwa eine Rede von
+      <tei:hi rend="lateinschr"><tei:persName key="entity-000101"
+      >Briand</tei:persName></tei:hi><tei:note xml:id="r0001-fn03" type="editorial" place="foot"
+      >Aristide Briand (<tei:date from="1862" to="1932">1862-1932</tei:date>) served eleven times as
+      the premiere of France, and won the Nobel Peace Prize in <tei:date when="1926"
+      >1926</tei:date>, shared with <tei:persName key="entity-000873">Gustav
+       Stresemann</tei:persName>.</tei:note> im Wortlaut: wie anders, wie viel besonnener, mäßiger,
+     gebildeter klingt sie als die Auszüge u. Berichte in den Tageszeitungen vermuten lassen! Kurz,
+     wenn man nicht den ganzen Tag verschiedenste, namentlich auch ausländische Zeitungen lesen
+     kann, so weiß man ja viel zu wenig, <tei:subst>
       <tei:del rend="overstrike">ein</tei:del>
       <tei:add place="interlinear-above">als daß man</tei:add>
      </tei:subst>ein für das Urteil grundlegendes Bild <tei:del rend="overstrike">zu</tei:del> haben
-     könnte. Zum zweiten: ich schätze zwar den Geist u. die Leistungen<tei:note xml:id="r0001-fn04"
-      type="editorial" place="foot">"u. die Leistungen" ("and the accomplishments"): words indicated
-      by Halm to be moved to this point from immediately before "aber" ("but").</tei:note>
-     <tei:placeName key="entity-002520"><tei:country>französischer</tei:country></tei:placeName>
-     Kunst viel mehr als Sie, will aber nicht bestreiten u. glaube es sogar, daß <tei:pb n="4"/> die
-     deutsche Musik obenan ist. Das <tei:hi rend="underline">kann</tei:hi> einen Vorrang der
-     <!-- no country adjectives added from this point on --> Deutschen bedeuten, es kann aber auch
-     sein, daß es auf Kosten der andern geschieht, wenn ein Genie in <tei:placeName
+     könnte. Zum zweiten: ich schätze zwar den Geist <tei:add place="inline">u. die
+      Leistungen</tei:add><tei:note xml:id="r0001-fn04" type="editorial" place="foot">"u. die
+      Leistungen" ("and the accomplishments"): words indicated by Halm to be moved to this point
+      from immediately before "aber" ("but").</tei:note> französischer Kunst viel mehr als Sie, will
+     aber nicht bestreiten u. glaube es sogar, daß <tei:pb n="4"/> die deutsche Musik obenan ist.
+     Das <tei:hi rend="underline">kann</tei:hi> einen Vorrang der Deutschen bedeuten, es kann aber
+     auch sein, daß es auf Kosten der andern geschieht, wenn ein Genie in <tei:placeName
       key="entity-002482"><tei:country>Deutschland</tei:country></tei:placeName> entsteht. So
      scheint es mir, wenn ich an die Russen denke, die mir als Volk musikalischer vorkommen als wie
      die Deutschen, die aber weniger hoch kommen, was ihre Genies anbetrifft. Bei uns große
@@ -169,11 +163,11 @@
      mit den späten Sonaten <tei:persName key="entity-000055">Beethoven</tei:persName>s <tei:rs
       key="entity-001201" type="composition">Adur</tei:rs> (auch <tei:rs key="entity-001203"
       type="composition">As dur</tei:rs>), die mich eben einfach (gefühlsmäßig) nicht ganz
-     überzeugen. Der <tei:hi rend="underline">Typus</tei:hi> der Beethovenschen <tei:rs
-      key="entity-001883" type="term">Fuge</tei:rs> steht mir sehr hoch; ihn erfüllt hat
-      <tei:persName>Beethoven</tei:persName>, wie ich meine, nur in der <tei:rs key="entity-001205"
-      type="composition">Hammerklaviersonate</tei:rs>, in der <tei:rs key="entity-001187"
-      type="composition">großen B dur Fuge</tei:rs>
+     überzeugen. Der <tei:hi rend="underline">Typus</tei:hi> der <tei:persName key="entity-000055"
+      >Beethoven</tei:persName>schen <tei:rs key="entity-001883" type="term">Fuge</tei:rs> steht mir
+     sehr hoch; ihn erfüllt hat <tei:persName>Beethoven</tei:persName>, wie ich meine, nur in der
+      <tei:rs key="entity-001205" type="composition">Hammerklaviersonate</tei:rs>, in der <tei:rs
+      key="entity-001187" type="composition">großen B dur Fuge</tei:rs>
      <tei:pb n="5"/> für Streichquartett, u. wahrscheinlich in dem Finale der späten <tei:rs
       key="entity-002617" type="composition">D dur-Sonate für Cello u. Klavier</tei:rs>. Sicher
      haben Sie mir gerade auch in solchen Stücken, die mir innerlich fremd sind, die Augen für viele
@@ -237,14 +231,13 @@
    <tei:div>
     <tei:p>I<tei:ptr corresp="#r0001-fn01" type="footnote"/> think of you often when I read
      something from <tei:placeName key="entity-002484">Vienna</tei:placeName> (but not only then),
-     and worry about how you might be doing. But when I then look at the postage on <tei:placeName
-      key="entity-002506"><tei:country>Austria</tei:country></tei:placeName>n letters, I think that
-     one should not prompt anyone to an avoidable letter. (Which of course also applies to us). I am
-     very happy that I can announce a new volume: of three <tei:rs key="entity-002613"
-      type="composition">suites for violin, cello and piano</tei:rs> two will appear together in one
-     volume, which you should receive from me immediately after publication. I have already asked
-     the publisher to take care of this. I hope you will receive it before <tei:date
-      when="1922-12-25">Christmas</tei:date>. The galley-proofs have been definitively
+     and worry about how you might be doing. But when I then look at the postage on Austrian
+     letters, I think that one should not prompt anyone to an avoidable letter. (Which of course
+     also applies to us). I am very happy that I can announce a new volume: of three <tei:rs
+      key="entity-002613" type="composition">suites for violin, cello and piano</tei:rs> two will
+     appear together in one volume, which you should receive from me immediately after publication.
+     I have already asked the publisher to take care of this. I hope you will receive it before
+      <tei:date when="1922-12-25">Christmas</tei:date>. The galley-proofs have been definitively
      corrected.</tei:p>
    </tei:div>
 
@@ -268,8 +261,6 @@
      stupidity, perhaps also publishers' malice, you can certainly be sure that with your output you
      afford that exemplary and invigorating perspective to an uncommonly high degree.</tei:p>
 
-    <!-- here -->
-
     <tei:p rend="first">Our yellow <tei:rs type="journal" key="entity-002488">community school
       volumes</tei:rs> are ceasing. I hope to offer one review (short, somewhat summarily, as it
      will work no other way) in the farewell issue, which however is not all together
@@ -283,30 +274,25 @@
      people for the undisputed <tei:pb n="3"/>
      <tei:supplied reason="clarity">errors</tei:supplied><tei:ptr corresp="#r0001-fn02"
       type="footnote"/> committed by our government, and moreover that there is to some extent no
-     end to it. Conversely, it is also not right when we now view the <tei:placeName
-      key="entity-002520"><tei:country>French</tei:country></tei:placeName> government (I name it as
-     the main enemy at the time) as the <tei:placeName key="entity-002520"
-       ><tei:country>French</tei:country></tei:placeName>
-     <tei:hi rend="underline">people</tei:hi>. At some point, somewhere, people have to stop this
-     ethnic hate. And if that should be much more difficult for the conquered and actually betrayed
-     than for the conquerors, then we prove our better quality by starting nevertheless. And we were
-     and are lied to or misled from our own side. When I read in <tei:persName key="entity-000333"
-      >Harden</tei:persName> (whom I certainly do not like (I was pleased, by the way, by two
-     reviews of yours, on <tei:persName key="entity-000833">Smetena</tei:persName> and
-      <tei:placeName key="entity-002592"><tei:country>Italian</tei:country></tei:placeName> opera
-     performances in past issues of <tei:hi rend="italic"><tei:rs key="entity-002566" type="journal"
-       >Die Zukunft</tei:rs></tei:hi> that a colleague gave me to read)), a speech by <tei:persName
-      key="entity-000101">Briand</tei:persName><tei:ptr corresp="#r0001-fn03" type="footnote"/> in
-     original wording: how different, how much more level-headed, more moderate, more educated it
-     sounds than the excerpts and reports in daily newspapers allow to surmise. In short, if one
-     cannot read the most diverse newspapers all day, especially foreign ones, we know far too
-     little to have a fundamental picture for judgment.
-     <!-- no country adjectives added from this point on --> Second, I do value the spirit and the
-      accomplishments<tei:ptr corresp="#r0001-fn04" type="footnote"/> of <tei:placeName
-      key="entity-002520"><tei:country>French</tei:country></tei:placeName> art far more than you,
-     but do not dispute, and even believe, that <tei:pb n="4"/> German music is on top. That can
-     mean pre-eminence for German music, but it can also be that it comes at the expense of other
-     music when a genius arises in <tei:placeName key="entity-002482"
+     end to it. Conversely, it is also not right when we now view the French government (I name it
+     as the main enemy at the time) as the French <tei:hi rend="underline">people</tei:hi>. At some
+     point, somewhere, people have to stop this ethnic hate. And if that should be much more
+     difficult for the conquered and actually betrayed than for the conquerors, then we prove our
+     better quality by starting nevertheless. And we were and are lied to or misled from our own
+     side. When I read in <tei:persName key="entity-000333">Harden</tei:persName> (whom I certainly
+     do not like (I was pleased, by the way, by two reviews of yours, on <tei:persName
+      key="entity-000833">Smetena</tei:persName> and Italian opera performances in past issues of
+      <tei:hi rend="italic"><tei:rs key="entity-002566" type="journal">Die Zukunft</tei:rs></tei:hi>
+     that a colleague gave me to read)), a speech by <tei:persName key="entity-000101"
+      >Briand</tei:persName><tei:ptr corresp="#r0001-fn03" type="footnote"/> in original wording:
+     how different, how much more level-headed, more moderate, more educated it sounds than the
+     excerpts and reports in daily newspapers allow to surmise. In short, if one cannot read the
+     most diverse newspapers all day, especially foreign ones, we know far too little to have a
+     fundamental picture for judgment. Second, I do value the spirit and the accomplishments<tei:ptr
+      corresp="#r0001-fn04" type="footnote"/> of French art far more than you, but do not dispute,
+     and even believe, that <tei:pb n="4"/> German music is on top. That <tei:hi rend="underline"
+      >can</tei:hi> mean pre-eminence for German music, but it can also be that it comes at the
+     expense of other music when a genius arises in <tei:placeName key="entity-002482"
        ><tei:country>Germany</tei:country></tei:placeName>. So it seems to me, when I think of the
      Russians, who as a folk appear to me more musical than the Germans, but who do not rise as high
      with respect to their geniuses. In our case, grand elevations from the lowland (which of course
@@ -327,11 +313,12 @@
       key="entity-000055">Beethoven</tei:persName> sonatas in <tei:rs key="entity-001201"
       type="composition">A major</tei:rs> (also <tei:rs key="entity-001203" type="composition"
       >A-flat major</tei:rs>), which just simply do not fully convince me (according to feeling).
-     The <tei:hi rend="underline">type</tei:hi> of Beethoven <tei:rs key="entity-001883" type="term"
-      >fugue</tei:rs> ranks very high for me. <tei:persName>Beethoven</tei:persName> fulfilled it,
-     as I think, only in the <tei:rs key="entity-001205" type="composition">Hammerklavier
-      sonata</tei:rs>, in the <tei:rs key="entity-001187" type="composition">great B-flat-major
-      fugue</tei:rs>
+     The <tei:hi rend="underline">type</tei:hi> of <tei:persName key="entity-000055"
+      >Beethoven</tei:persName>
+     <tei:rs key="entity-001883" type="term">fugue</tei:rs> ranks very high for me.
+      <tei:persName>Beethoven</tei:persName> fulfilled it, as I think, only in the <tei:rs
+      key="entity-001205" type="composition">Hammerklavier sonata</tei:rs>, in the <tei:rs
+      key="entity-001187" type="composition">great B-flat-major fugue</tei:rs>
      <tei:pb n="5"/> for string quartet, and probably in the finale of the late <tei:rs
       key="entity-002617" type="composition">D-major sonata for cello and piano</tei:rs>. Certainly,
      you have opened my eyes to many good features precisely in those pieces that are internally
