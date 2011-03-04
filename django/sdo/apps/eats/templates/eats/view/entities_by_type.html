@@ -6,6 +6,7 @@
   {% for entity in entities %}
    {% eats_user_wrap entity get_single_name single_name %}
     <li>
+      <span>({{ entity.id }}) </span>
       <span>{{ single_name }}</span> 
       <a href="{{ entity.get_absolute_url }}">View</a>
       {% if user.is_authenticated %}
