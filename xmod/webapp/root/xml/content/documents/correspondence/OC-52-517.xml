@@ -1,10 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
-<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
- xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
- xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+<?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?><sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
  <sdo:collectionDesc>
   <sdo:source>
    <sdo:correspondence mfID="181" sdoID="OC-52-517">OC 52/517</sdo:correspondence>
@@ -30,9 +25,9 @@
 
  <sdo:record ID="r0001">
   <sdo:itemDesc>
-   <dcterms:isPartOf>Hertzka ~ HSchenker</dcterms:isPartOf>
-   <dcterms:isPartOf>UE ~ H+JSchenker</dcterms:isPartOf>
-   <dcterms:isPartOf>UE ~ HSchenker</dcterms:isPartOf>
+   <dcterms:isPartOf><tei:rs type="correspondence" key="entity-002700">Hertzka ~ HSchenker</tei:rs></dcterms:isPartOf>
+   <dcterms:isPartOf><tei:rs type="correspondence" key="entity-002701">UE ~ H+JSchenker</tei:rs></dcterms:isPartOf>
+   <dcterms:isPartOf><tei:rs type="correspondence" key="entity-002702">UE ~ HSchenker</tei:rs></dcterms:isPartOf>
    <dc:title>Typed contract from between UE and Schenker for the Kleine Bibliothek, dated July 10,
     1920</dc:title>
    <dc:type>Contract</dc:type>
@@ -68,15 +63,13 @@
       <tei:date when="1920-07-10">10. Juli 1920</tei:date>
      </tei:dateline>
      <tei:address>
-      <tei:addrLine rend="indent-10">Herrn Professor Dr. Heinrich <tei:hi rend="sperr"
-        >Schenker</tei:hi>
+      <tei:addrLine rend="indent-10">Herrn Professor Dr. Heinrich <tei:hi rend="sperr">Schenker</tei:hi>
       </tei:addrLine>
       <tei:addrLine rend="indent-60">
        <tei:hi rend="sperr-underline">Wien</tei:hi>
       </tei:addrLine>
      </tei:address>
-     <tei:salute>Sehr geehrter Herr <tei:persName key="entity-000632"
-      >Professor</tei:persName>!</tei:salute>
+     <tei:salute>Sehr geehrter Herr <tei:persName key="entity-000632">Professor</tei:persName>!</tei:salute>
     </tei:opener>
 
     <tei:p rend="first">Wir<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
@@ -119,24 +112,16 @@
          Jahre" (maximum ... year): underlined in crayon by Schenker. </tei:note> erscheinen sollen.
         Die "<tei:rs type="work" key="entity-001758"><tei:title>Kleine
          Bibliothek</tei:title></tei:rs>" wird verschiedene Themen aus dem Gebiete der Musik zur
-        Erörterung bringen, z.B. die Darstellung von <tei:rs type="term" key="entity-002128"
-         >Symphonie</tei:rs>-, <tei:rs type="term" key="entity-001942">Kammermusik</tei:rs>,
-        <tei:rs type="term" key="entity-001969">Lied</tei:rs>-, <tei:rs type="term" key="entity-001947"
-         >Klavierwerk</tei:rs>en und zwar sowohl dem Inhalt als auch dem <tei:rs type="term"
-         key="entity-002225">Vortrag</tei:rs> nach, Studien über <tei:rs type="term"
-         key="entity-002225">Vortrag</tei:rs> überhaupt, Kritisches und sonst Vermischtes.<tei:note
-         xml:id="r0001-fn04" type="editorial" place="foot">"Studien ... Vermischtes" (studies ...
+        Erörterung bringen, z.B. die Darstellung von <tei:rs type="term" key="entity-002128">Symphonie</tei:rs>-, <tei:rs type="term" key="entity-001942">Kammermusik</tei:rs>,
+        <tei:rs type="term" key="entity-001969">Lied</tei:rs>-, <tei:rs type="term" key="entity-001947">Klavierwerk</tei:rs>en und zwar sowohl dem Inhalt als auch dem <tei:rs type="term" key="entity-002225">Vortrag</tei:rs> nach, Studien über <tei:rs type="term" key="entity-002225">Vortrag</tei:rs> überhaupt, Kritisches und sonst Vermischtes.<tei:note xml:id="r0001-fn04" type="editorial" place="foot">"Studien ... Vermischtes" (studies ...
          miscellanea): wording altered from OC 52/560. </tei:note> Es wird von vorne herein darauf
         gesehen werden, dass die Darstellung aus den einzelnen Stoffen ihre Abrundung derart
         erfahre, dass z.B. <tei:rs type="term" key="entity-002128">Symphonie</tei:rs>n,
-         <tei:rs type="term" key="entity-002500">Sonate</tei:rs>n, von <tei:persName
-         key="entity-000055">Beethoven</tei:persName>, <tei:persName key="entity-000094"
-         >Brahms</tei:persName>, <tei:rs type="term" key="entity-001865">Etüde</tei:rs>n von
+         <tei:rs type="term" key="entity-002500">Sonate</tei:rs>n, von <tei:persName key="entity-000055">Beethoven</tei:persName>, <tei:persName key="entity-000094">Brahms</tei:persName>, <tei:rs type="term" key="entity-001865">Etüde</tei:rs>n von
          <tei:persName key="entity-000129">Chopin</tei:persName> und dgl. auch selbständig und nach
         Möglichkeit auch vollständig herausgegeben werden können. </tei:p>
 
-       <tei:p rend="first">2.) Die Auflage der ersten vier Hefte der "<tei:rs type="work"
-         key="entity-001758"><tei:title>Kleinen Bibliothek</tei:title></tei:rs>" soll je 2000
+       <tei:p rend="first">2.) Die Auflage der ersten vier Hefte der "<tei:rs type="work" key="entity-001758"><tei:title>Kleinen Bibliothek</tei:title></tei:rs>" soll je 2000
         Exemplare umfassen.<tei:note xml:id="r0001-fn05" type="editorial" place="foot">"ersten vier
          Hefte" (first four issues) and "2000": underlined in crayon by Schenker. </tei:note> Auf
         Grund der Erfahrungen mit diesen Heften dann die folgenden Auflagen fest- <tei:pb n="2"/>
@@ -145,31 +130,21 @@
         werden. Sollte innerhalb dieser Frist die Neuauflage nicht erschienen sein und ich mit einem
         rekommandierten Schreiben auf dieses Versäumnis unter Hinweis auf die vertragsmässige
         Verpflichtung aufmerksam machen, so bin ich innerhalb weiterer drei Monate nach Ablauf der
-        Frist berechtigt, die weiteren Heften der "<tei:rs type="work" key="entity-001758"
-          ><tei:title>Kleinen Bibliothek</tei:title></tei:rs>" anderweitig<tei:note
-         xml:id="r0001-fn06" type="editorial" place="foot"> "weiteren ... anderweitig" (further ...
+        Frist berechtigt, die weiteren Heften der "<tei:rs type="work" key="entity-001758"><tei:title>Kleinen Bibliothek</tei:title></tei:rs>" anderweitig<tei:note xml:id="r0001-fn06" type="editorial" place="foot"> "weiteren ... anderweitig" (further ...
          means): wording altered from OC 52/560. </tei:note> erscheinen zu lassen.</tei:p>
 
-       <tei:p rend="first">3.) Der Ladenpreis eines Zweibogen-Heftes der "<tei:rs type="work"
-         key="entity-001758"><tei:title>Kleinen Bibliothek</tei:title></tei:rs>" wird
+       <tei:p rend="first">3.) Der Ladenpreis eines Zweibogen-Heftes der "<tei:rs type="work" key="entity-001758"><tei:title>Kleinen Bibliothek</tei:title></tei:rs>" wird
         einschliesslich Teuerungszuschlag mit zwei bis vier Mark festgesetzt. Eine Aenderung dieses
         Preises soll nur im Einverständnis stattfinden. </tei:p>
 
        <tei:p rend="first">4.) Ich erhalte als Honorar vom Ladenpreis einschliesslich des
         Teuerungszuschlages, jedoch ohne Berücksichtigung des Sortimenterzuschlages von Verkäufen
-        nach <tei:placeName key="entity-002482"
-         ><tei:country>Deutschland</tei:country></tei:placeName>, <tei:placeName key="entity-002506"
-          ><tei:country>Oesterreich</tei:country></tei:placeName> und Sukzessionsstaaten<tei:note
-         xml:id="r0001-fn07" type="editorial" place="foot">Sukzessionsstaaten (succession states):
+        nach <tei:placeName key="entity-002482"><tei:country>Deutschland</tei:country></tei:placeName>, <tei:placeName key="entity-002506"><tei:country>Oesterreich</tei:country></tei:placeName> und Sukzessionsstaaten<tei:note xml:id="r0001-fn07" type="editorial" place="foot">Sukzessionsstaaten (succession states):
          i. e. the states after the dissolution of the Austria-Hungary monarchy under the Treaty of
          St. Germain of 1919, including Poland, Czechoslovakia, Rumania, the constitutent states of
          Yugoslavia, and perhaps Italy. </tei:note> und den übrigen Ländern mit gleichwertigen
-        Valuten 20% i. W. zwanzig Prozent,<tei:note xml:id="r0001-fn08" type="editorial"
-         place="foot">"20% ... Prozent" (20 ...%"): underlined in crayon by Schenker. </tei:note>
-        von Verkäufen in das Ausland gegen fremde Valuten (z.B. <tei:placeName key="entity-002507"
-          ><tei:country>Schweiz</tei:country></tei:placeName>, <tei:placeName key="entity-002508"
-          ><tei:country>Holland</tei:country></tei:placeName>, <tei:placeName key="entity-002510"
-          ><tei:country>Amerika</tei:country></tei:placeName>, etc.) 30% i.W. dreissig Prozent des
+        Valuten 20% i. W. zwanzig Prozent,<tei:note xml:id="r0001-fn08" type="editorial" place="foot">"20% ... Prozent" (20 ...%"): underlined in crayon by Schenker. </tei:note>
+        von Verkäufen in das Ausland gegen fremde Valuten (z.B. <tei:placeName key="entity-002507"><tei:country>Schweiz</tei:country></tei:placeName>, <tei:placeName key="entity-002508"><tei:country>Holland</tei:country></tei:placeName>, <tei:placeName key="entity-002510"><tei:country>Amerika</tei:country></tei:placeName>, etc.) 30% i.W. dreissig Prozent des
         deutschen Ladenpreises eines jeden verkauften und bezahlten Exemplares der gehefteten
          Ausgabe.<tei:note xml:id="r0001-fn09" type="editorial" place="foot">"Verkäufen ... Ausgabe"
          (sales to Germany ... paid for): interpolated in place of "eine Tantieme von 20% i. W.
@@ -186,21 +161,17 @@
 
        <tei:p rend="first"><tei:pb n="3"/> 5.) Sie verpflichten sich, die von mir rekonstruierte
          <tei:rs type="term" key="entity-002162">Tonfolge</tei:rs> der von mir
-        herausgegebenen Ausgaben ohne meine Zustimmung keiner anderen Ausgabe desselben <tei:rs
-         type="term" key="entity-002172">Tonwerk</tei:rs>es zugrunde zu legen. </tei:p>
+        herausgegebenen Ausgaben ohne meine Zustimmung keiner anderen Ausgabe desselben <tei:rs type="term" key="entity-002172">Tonwerk</tei:rs>es zugrunde zu legen. </tei:p>
 
-       <tei:p rend="first">6.) Sollte einer der in der "<tei:rs type="work" key="entity-001758"
-          ><tei:title>Kleinen Bibliothek</tei:title></tei:rs>" enthaltenen Aufsätze im späteren
+       <tei:p rend="first">6.) Sollte einer der in der "<tei:rs type="work" key="entity-001758"><tei:title>Kleinen Bibliothek</tei:title></tei:rs>" enthaltenen Aufsätze im späteren
         Verlaufe in Verbindung mit einem oder mehreren Musikstücken, die auf den Aufsatz Bezug
         haben, zur Veröffentlichung gelangen, dann ist für diese Aufsätze die gleiche Tantieme zu
         bezahlen, welche<tei:note xml:id="r0001-fn10" type="editorial" place="foot">"diese ...
          welche" (the same ... articles as): text of OC 52/560 adjusted; "dann ... bezahlen" (then
          ... articles): underlined in crayon and left-double-sidelined by Schenker. </tei:note> dem
-        Umfang des betreffenden Aufsatzes in der "<tei:rs type="work" key="entity-001758"
-          ><tei:title>Kleinen Bibliothek</tei:title></tei:rs>" entspricht (z.B. für einen Aufsatz,
+        Umfang des betreffenden Aufsatzes in der "<tei:rs type="work" key="entity-001758"><tei:title>Kleinen Bibliothek</tei:title></tei:rs>" entspricht (z.B. für einen Aufsatz,
         der in der "<tei:rs type="work" key="entity-001758"><tei:title>Kleinen
-          Bibliothek</tei:title></tei:rs>" acht Seiten umfasst, je nach dem Ladenpreis der "<tei:rs
-         type="work" key="entity-001758"><tei:title>Kleinen Bibliothek</tei:title></tei:rs>" zehn
+          Bibliothek</tei:title></tei:rs>" acht Seiten umfasst, je nach dem Ladenpreis der "<tei:rs type="work" key="entity-001758"><tei:title>Kleinen Bibliothek</tei:title></tei:rs>" zehn
         bis zwanzig Pfennige). </tei:p>
 
        <tei:p rend="first">7.) Die Abrechnung über die verkauften Exemplare hat halbjährig in den
@@ -216,14 +187,12 @@
 
        <tei:p rend="first">9.) Mit Rücksicht darauf, dass mir durch Abschluss des Vertrages die
         selbstverständliche Verpflichtung erwächst, anderen Verlagen musikwissenschaftliche
-        Abhandlungen, sofern sie nach Umfang und Art in den Rahmen der "<tei:rs type="work"
-         key="entity-001758"><tei:title>Kleinen Bibliothek</tei:title></tei:rs>" fallen (ausgenommen
+        Abhandlungen, sofern sie nach Umfang und Art in den Rahmen der "<tei:rs type="work" key="entity-001758"><tei:title>Kleinen Bibliothek</tei:title></tei:rs>" fallen (ausgenommen
         z.B. also die "<tei:rs type="work" key="entity-001756">Formenlehre</tei:rs>" als
          Lehrbuch)<tei:note xml:id="r0001-fn12" type="editorial" place="foot">"sofern ... Lehrbuch)"
          (insofar ... textbook)): interpolated into the OC 52/560 text. </tei:note> nicht zu
         übergeben, übernehmen Sie die Verpflichtung, die Ihnen zur Veröffentlichung übergebenen
-        Manuskripte unverzüglich zum Druck und zur Publikation zu bringen,<tei:note
-         xml:id="r0001-fn13" type="editorial" place="foot">"unverzüglich ... bringen" (to print ...
+        Manuskripte unverzüglich zum Druck und zur Publikation zu bringen,<tei:note xml:id="r0001-fn13" type="editorial" place="foot">"unverzüglich ... bringen" (to print ...
          imediately): underlined in crayon by Schenker, and the whole clause left-sidelined.
         </tei:note> schon um zu verhüten, dass die Korrekturen mit der Abfassung neuer Hefte
         kollidieren. </tei:p>
@@ -232,8 +201,7 @@
         jede Einschränkung gelten zu lassen und <tei:pb n="4"/> den Wortlauf der Werke irgendwelchen
         Rücksichten zuliebe ohne meine Zustimmung in keinem Falle zu ändern oder zu kürzen. </tei:p>
 
-       <tei:p rend="first">11.) Diese Abmachung gilt für die Dauer von zehn Jahren<tei:note
-         xml:id="r0001-fn14" type="editorial" place="foot"> "von zehn Jahren" (of ten years):
+       <tei:p rend="first">11.) Diese Abmachung gilt für die Dauer von zehn Jahren<tei:note xml:id="r0001-fn14" type="editorial" place="foot"> "von zehn Jahren" (of ten years):
          underlined in crayon by Schenker. </tei:note> und verlängert sich nach diesem Termin
         automatisch, wenn sie nicht von irgendeinem der beiden Teile halbjärhlich aufgekündigt wird
         und selbstverständlich sind die in der Abmachung vorgesehenen Anteile mir für die ganze
@@ -255,8 +223,7 @@
 
     <tei:closer>
      <tei:salute rend="indent-65">Hochachtungsvoll</tei:salute>
-     <tei:signed rend="indent-60"><tei:handShift new="#stamp"/><tei:note type="editorial"
-       >stamped:</tei:note>Universal-Edition Actiengesellschaft </tei:signed>
+     <tei:signed rend="indent-60"><tei:handShift new="#stamp"/><tei:note type="editorial">stamped:</tei:note>Universal-Edition Actiengesellschaft </tei:signed>
      <tei:signed rend="indent 70"><tei:handShift new="#EH"/>Emil Hertzka</tei:signed>
     </tei:closer>
 
@@ -270,8 +237,7 @@
 
    <tei:div type="part_1">
     <tei:opener>
-     <tei:dateline rend="indent=50"><tei:placeName>Vienna</tei:placeName>, <tei:date
-       when="1920-07-10">July 10, 1920</tei:date></tei:dateline>
+     <tei:dateline rend="indent=50"><tei:placeName>Vienna</tei:placeName>, <tei:date when="1920-07-10">July 10, 1920</tei:date></tei:dateline>
      <tei:address>
       <tei:addrLine rend="indent-10">Professor Heinrich <tei:hi rend="sperr">Schenker</tei:hi>
       </tei:addrLine>
@@ -289,8 +255,7 @@
      <tei:body>
       <tei:div>
        <tei:opener>
-        <tei:dateline rend="indent=50"><tei:placeName>Vienna</tei:placeName>, <tei:date
-          when="1920-04-10">April 10, 1920</tei:date></tei:dateline>
+        <tei:dateline rend="indent=50"><tei:placeName>Vienna</tei:placeName>, <tei:date when="1920-04-10">April 10, 1920</tei:date></tei:dateline>
         <tei:address>
          <tei:addrLine rend="indent-10">To: <tei:hi rend="sperr">Universal Edition</tei:hi> &amp;
           Co., </tei:addrLine>
@@ -314,56 +279,37 @@
           </tei:rs>
          </tei:q>
         </tei:cit> which is envisioned as a succession of two-gathering issues appearing from time
-        to time, of which a maximum of twelve are to appear per year.<tei:ptr corresp="#r0001-fn03"
-         type="footnote"/> The <tei:rs type="work" key="entity-001758"><tei:title level="m">Little
+        to time, of which a maximum of twelve are to appear per year.<tei:ptr corresp="#r0001-fn03" type="footnote"/> The <tei:rs type="work" key="entity-001758"><tei:title level="m">Little
           Library</tei:title></tei:rs> will discuss a variety of topics in the realm of music, e.g.
         the presentation of <tei:rs type="term" key="entity-002496">symphonic</tei:rs>
         <tei:supplied reason="clarity">and</tei:supplied>
-        <tei:rs type="term" key="entity-001942">chamber music</tei:rs>, solo <tei:rs
-         type="term" key="entity-001969">song</tei:rs>s, <tei:supplied reason="clarity"
-         >and</tei:supplied>
+        <tei:rs type="term" key="entity-001942">chamber music</tei:rs>, solo <tei:rs type="term" key="entity-001969">song</tei:rs>s, <tei:supplied reason="clarity">and</tei:supplied>
         <tei:rs type="term" key="entity-001947">keyboard work</tei:rs>s, as regards not only
-        their content but also their <tei:rs type="term" key="entity-002225"
-         >performance</tei:rs>, studies of <tei:rs type="term" key="entity-002225"
-         >performance</tei:rs> in its own right, critical assessment, and other miscellanea.<tei:ptr
-         corresp="#r0001-fn04" type="footnote"/> It will from the outset take great care that the
+        their content but also their <tei:rs type="term" key="entity-002225">performance</tei:rs>, studies of <tei:rs type="term" key="entity-002225">performance</tei:rs> in its own right, critical assessment, and other miscellanea.<tei:ptr corresp="#r0001-fn04" type="footnote"/> It will from the outset take great care that the
         presentation proceed from the separate components through to their fully rounded form, in
-        such a way that for example <tei:rs type="term" key="entity-002128"
-         >symphonies</tei:rs>
+        such a way that for example <tei:rs type="term" key="entity-002128">symphonies</tei:rs>
         <tei:supplied reason="clarity">and</tei:supplied>
-        <tei:rs type="term" key="entity-002500">sonata</tei:rs>s by <tei:persName
-         key="entity-000055">Beethoven</tei:persName>
+        <tei:rs type="term" key="entity-002500">sonata</tei:rs>s by <tei:persName key="entity-000055">Beethoven</tei:persName>
         <tei:supplied reason="clarity">and</tei:supplied>
-        <tei:persName key="entity-000094">Brahms</tei:persName>, <tei:rs type="term"
-         key="entity-001865">etude</tei:rs>s by <tei:persName key="entity-000129"
-         >Chopin</tei:persName> and suchlike, can be given not only separately but where possible
+        <tei:persName key="entity-000094">Brahms</tei:persName>, <tei:rs type="term" key="entity-001865">etude</tei:rs>s by <tei:persName key="entity-000129">Chopin</tei:persName> and suchlike, can be given not only separately but where possible
         also in their entirety. </tei:p>
 
-       <tei:p rend="first">2.) The edition of the first four issues of the <tei:rs type="work"
-         key="entity-001758"><tei:title level="m">Little Library</tei:title></tei:rs> shall comprise
-        2,000 copies.<tei:ptr corresp="#r0001-fn05" type="footnote"/> The editions <tei:supplied
-         reason="clarity">of the</tei:supplied> subsequent <tei:supplied reason="clarity"
-         >issues</tei:supplied> shall then be determined on the basis of experience with these
+       <tei:p rend="first">2.) The edition of the first four issues of the <tei:rs type="work" key="entity-001758"><tei:title level="m">Little Library</tei:title></tei:rs> shall comprise
+        2,000 copies.<tei:ptr corresp="#r0001-fn05" type="footnote"/> The editions <tei:supplied reason="clarity">of the</tei:supplied> subsequent <tei:supplied reason="clarity">issues</tei:supplied> shall then be determined on the basis of experience with these
         issues. <tei:pb n="2"/> As soon as an edition is exhausted, a new edition is to be set in
         motion, and should in the event of an unaltered reprint be produced within ten months. If
         the new edition has not been published within this time limit and I have drawn attention to
         this omission with a registered letter referring to the contractual obligation, then I am
-        entitled to arrange for the publication of further issues of the <tei:rs type="work"
-         key="entity-001758"><tei:title level="m">Little Library</tei:title></tei:rs> by some other
+        entitled to arrange for the publication of further issues of the <tei:rs type="work" key="entity-001758"><tei:title level="m">Little Library</tei:title></tei:rs> by some other
          means<tei:ptr corresp="#r0001-fn06" type="footnote"/> within the three months subsequent to
         expiry of the time limit. </tei:p>
 
-       <tei:p rend="first">3.) The retail price of a two-gathering issue of the <tei:rs type="work"
-         key="entity-001758"><tei:title level="m">Little Library</tei:title></tei:rs> inclusive of
+       <tei:p rend="first">3.) The retail price of a two-gathering issue of the <tei:rs type="work" key="entity-001758"><tei:title level="m">Little Library</tei:title></tei:rs> inclusive of
         inflationary increase shall be set between two and four Marks. Any increase in this price
         should take place only with consent. </tei:p>
 
        <tei:p rend="first">4.) As honorarium, I am to receive, inclusive of the inflationary
-        increase, but without regard for the retail mark-up, 20 (twenty) %<tei:ptr
-         corresp="#r0001-fn08" type="footnote"/> of the sales to <tei:placeName key="entity-002482"
-          ><tei:country>Germany</tei:country></tei:placeName>, <tei:placeName key="entity-002506"
-          ><tei:country>Austria</tei:country></tei:placeName> and succession states<tei:ptr
-         corresp="#r0001-fn07" type="footnote"/> and the other provinces with equal-value
+        increase, but without regard for the retail mark-up, 20 (twenty) %<tei:ptr corresp="#r0001-fn08" type="footnote"/> of the sales to <tei:placeName key="entity-002482"><tei:country>Germany</tei:country></tei:placeName>, <tei:placeName key="entity-002506"><tei:country>Austria</tei:country></tei:placeName> and succession states<tei:ptr corresp="#r0001-fn07" type="footnote"/> and the other provinces with equal-value
         currencies, 30 (thirty) % of sales in foreign countries against foreign currencies (e.g.
          <tei:placeName key="entity-002507"><tei:country>Switzerland</tei:country></tei:placeName>,
          <tei:placeName key="entity-002508"><tei:country>Holland</tei:country></tei:placeName>,
@@ -378,21 +324,15 @@
         the event of the said translation being carried by you yourself 10 (ten) % of each copy sold
         and paid for. </tei:p>
 
-       <tei:p rend="first"><tei:pb n="3"/> 5.) You undertake not to use the <tei:rs
-         type="term" key="entity-002162">succession of tones</tei:rs> reconstructed by me in
-        the editions edited by me as a basis for any other edition of the same <tei:rs
-         type="term" key="entity-002172">musical work</tei:rs> without my consent. </tei:p>
+       <tei:p rend="first"><tei:pb n="3"/> 5.) You undertake not to use the <tei:rs type="term" key="entity-002162">succession of tones</tei:rs> reconstructed by me in
+        the editions edited by me as a basis for any other edition of the same <tei:rs type="term" key="entity-002172">musical work</tei:rs> without my consent. </tei:p>
 
-       <tei:p rend="first">6.) Should one of the articles contained in the <tei:rs type="work"
-         key="entity-001758"><tei:title level="m">Little Library</tei:title></tei:rs> be published
+       <tei:p rend="first">6.) Should one of the articles contained in the <tei:rs type="work" key="entity-001758"><tei:title level="m">Little Library</tei:title></tei:rs> be published
         at a later date in combination with one or more pieces of music that relate to the article,
-        then the same royalty is to be paid for these articles as<tei:ptr corresp="#r0001-fn10"
-         type="footnote"/> that which corresponds to the size of the article in question in the
+        then the same royalty is to be paid for these articles as<tei:ptr corresp="#r0001-fn10" type="footnote"/> that which corresponds to the size of the article in question in the
          <tei:rs type="work" key="entity-001758"><tei:title level="m">Little
-         Library</tei:title></tei:rs> (e.g. for an article that in the <tei:rs type="work"
-         key="entity-001758"><tei:title level="m">Little Library</tei:title></tei:rs> comprises
-        eight pages, according to the retail price of the <tei:rs type="work" key="entity-001758"
-          ><tei:title level="m">Little Library</tei:title></tei:rs> 10-20 Pfennigs). </tei:p>
+         Library</tei:title></tei:rs> (e.g. for an article that in the <tei:rs type="work" key="entity-001758"><tei:title level="m">Little Library</tei:title></tei:rs> comprises
+        eight pages, according to the retail price of the <tei:rs type="work" key="entity-001758"><tei:title level="m">Little Library</tei:title></tei:rs> 10-20 Pfennigs). </tei:p>
 
        <tei:p rend="first">7.) The statement of account for copies sold has to be rendered
         half-yearly in the months of January and July, and and the honoraria due to me are to be
@@ -405,12 +345,10 @@
        <tei:p rend="first">9.) In view of the fact that by virtue of signing the contract the
         self-evident obligation falls to me not to entrust musicological essays insofar as they fall
         within the scope of the <tei:rs type="work" key="entity-001758"><tei:title level="m">Little
-          Library</tei:title></tei:rs> in size and type (with the exception e.g. of the <tei:rs
-         type="work" key="entity-001756">
+          Library</tei:title></tei:rs> in size and type (with the exception e.g. of the <tei:rs type="work" key="entity-001756">
          <tei:title level="m">Theory of Form</tei:title>
         </tei:rs> as a textbook)<tei:ptr corresp="#r0001-fn12" type="footnote"/> to other publishing
-        houses, you undertake the obligation to commit to print and publication immediately<tei:ptr
-         corresp="#r0001-fn13" type="footnote"/> the manuscripts delivered to you for publication,
+        houses, you undertake the obligation to commit to print and publication immediately<tei:ptr corresp="#r0001-fn13" type="footnote"/> the manuscripts delivered to you for publication,
         merely in order to prevent the correction of proofs from coinciding with the authoring of
         new issues.</tei:p>
 
@@ -441,8 +379,7 @@
 
     <tei:closer>
      <tei:salute rend="indent-65">With kind regards, </tei:salute>
-     <tei:signed rend="indent-60"><tei:handShift new="#stamp"/><tei:note type="editorial"
-       >stamped:</tei:note>Universal Edition &amp; Co. </tei:signed>
+     <tei:signed rend="indent-60"><tei:handShift new="#stamp"/><tei:note type="editorial">stamped:</tei:note>Universal Edition &amp; Co. </tei:signed>
      <tei:signed rend="indent 70"><tei:handShift new="#EH"/>Emil Hertzka</tei:signed>
     </tei:closer>
 

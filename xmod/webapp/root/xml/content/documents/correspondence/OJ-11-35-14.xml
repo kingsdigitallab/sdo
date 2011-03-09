@@ -1,9 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
-<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
- xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
- xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?><sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
  <sdo:collectionDesc>
   <sdo:source>
    <sdo:correspondence mfID="265" sdoID="OJ-11-35-14">OJ 11/35, 14</sdo:correspondence>
@@ -33,7 +29,7 @@
 
  <sdo:record ID="r0001">
   <sdo:itemDesc>
-   <dcterms:isPartOf>Halm ~ HSchenker</dcterms:isPartOf>
+   <dcterms:isPartOf><tei:rs type="correspondence" key="entity-002698">Halm ~ HSchenker</tei:rs></dcterms:isPartOf>
    <dc:title>Handwritten letter from Halm to Schenker, dated January 5, 1920</dc:title>
    <dc:type>Letter</dc:type>
    <dcterms:created>1920-01-05T12:00:00Z</dcterms:created>
@@ -53,8 +49,7 @@
   <tei:div type="transcription">
    <tei:opener>
     <tei:date when="1920-01-05" rend="indent-80">5.I.20.</tei:date>
-    <tei:salute>Sehr geehrter Herr <tei:persName key="entity-000632"
-     >Professor</tei:persName>!</tei:salute>
+    <tei:salute>Sehr geehrter Herr <tei:persName key="entity-000632">Professor</tei:persName>!</tei:salute>
    </tei:opener>
 
    <tei:p>Ich<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this letter is
@@ -64,8 +59,7 @@
      dringen." ("From Halm (registered letter): original contract from Georg Müller, etc.; full of
      friendly words and compassion; recommends against a one-time payment and suggests I should
      definitely urge for a percentage of sales."). </tei:note> wollte, ich könnte Ihnen mehr u.
-    besser raten als es nach meinem geringen Wissen, im folgenden geschieht.<tei:note
-     xml:id="r0001-fn02" type="editorial" place="foot">Schenker's letter is not known to survive,
+    besser raten als es nach meinem geringen Wissen, im folgenden geschieht.<tei:note xml:id="r0001-fn02" type="editorial" place="foot">Schenker's letter is not known to survive,
      but its writing is recorded in Schenker's diary at OJ 3/1, p. 2198, December 28, 1919: "An Halm
      (Br.): frage an, ob er nicht aus seiner Erfahrung heraus mir mit Rat in Sachen der „Kleinen
      Bibliothek“ beistehen könnte." ("To Halm (letter): inquire whether he couldn't support me with
@@ -74,15 +68,12 @@
     Prozente, die ja auch für eine Auflage od. mehr als eine vorausgezahlt werden können, oder jedes
     Jahr abgerechnet.<tei:note xml:id="r0001-fn03" type="editorial" place="foot">This is the
      arrangement Schenker has with J. G. Cotta Verlag, but not generally with UE. </tei:note> Am
-    besten sende ich Ihnen zwei Verlagsverträge,<tei:note xml:id="r0001-fn04" type="editorial"
-     place="foot">These do not survive with this letter, so presumably Schenker returned them to
+    besten sende ich Ihnen zwei Verlagsverträge,<tei:note xml:id="r0001-fn04" type="editorial" place="foot">These do not survive with this letter, so presumably Schenker returned them to
      Halm as requested. </tei:note> die aber Ihrem Verlag nicht zu zeigen u. vertraulich zu
     behandeln bitte, d.h. Sie können <tei:hi rend="double-underline">ohne Namensnennung</tei:hi>
     natürlich den Inhalt Ihrem Verlag angeben. Nur bitte ich, die Formulare mir nach Kenntnisnahme
-    bzw. nachdem Sie sich die für Sie etwa wichtigen Punkte daraus notiert haben, <tei:hi
-     rend="underline">bald</tei:hi> wieder u. in <tei:hi rend="underline">Eingeschriebenem
-     Brief</tei:hi>, zurückzusenden. Unter uns gesagt: Die Abrechnung vom <tei:orgName
-     key="entity-002410">Gg. Müller Verlag</tei:orgName> mußte ich mir schon mehrere Jahre
+    bzw. nachdem Sie sich die für Sie etwa wichtigen Punkte daraus notiert haben, <tei:hi rend="underline">bald</tei:hi> wieder u. in <tei:hi rend="underline">Eingeschriebenem
+     Brief</tei:hi>, zurückzusenden. Unter uns gesagt: Die Abrechnung vom <tei:orgName key="entity-002410">Gg. Müller Verlag</tei:orgName> mußte ich mir schon mehrere Jahre
     gerichtlich erzwingen, sowohl auch diesmal, d.h. er hat mir eine Anzahlung von 300 M. ohne
     Schwierigkeit auf meinen Wunsch geleistet, aber die Abrechnung bummelt er so gut er kann in die
      Länge.<tei:note xml:id="r0001-fn05" type="editorial" place="foot">Halms inserts an emdash at
@@ -94,17 +85,13 @@
     Einnahme, bei Mißerfolg, entsprechend wenig oder nichts erhält, auch daß man, wenn das Schicksal
     einem das Leben zu früh abschneidet, selbst wenig von seinen Arbeiten einnimmt u. eigentlich
     blos die Wartezeit auf den Erfolg, nicht aber diesen selbst auskostet. Ich selbst bin aber stets
-    mehr für Prozente als für einmalige Abfindung gewesen.<tei:note xml:id="r0001-fn06"
-     type="editorial" place="foot">Halms inserts an emdash at this point and runs on without
+    mehr für Prozente als für einmalige Abfindung gewesen.<tei:note xml:id="r0001-fn06" type="editorial" place="foot">Halms inserts an emdash at this point and runs on without
      paragraph break. </tei:note>
    </tei:p>
 
-   <tei:p>Bei meiner ersten Arbeit, der kleinen <tei:title>Harmonielehre</tei:title>,<tei:note
-     xml:id="r0001-fn07" type="editorial" place="foot">Halm, <tei:title level="m"
-      >Harmonielehre</tei:title> (Leipzig: G.J. Göschen’sche Verlagshandlung, 1900). </tei:note> der
+   <tei:p>Bei meiner ersten Arbeit, der kleinen <tei:title>Harmonielehre</tei:title>,<tei:note xml:id="r0001-fn07" type="editorial" place="foot">Halm, <tei:title level="m">Harmonielehre</tei:title> (Leipzig: G.J. Göschen’sche Verlagshandlung, 1900). </tei:note> der
     Sammlung <tei:orgName key="entity-002487">Göschen</tei:orgName>, habe ich mich leider mit
-    einmaliger Hono- <tei:pb n="2"/> -rierung betölpeln lassen. Als ich mit <tei:orgName
-     key="entity-002410">Gg. Müller</tei:orgName> abschloß, sagte mir ein mir bekannter u.
+    einmaliger Hono- <tei:pb n="2"/> -rierung betölpeln lassen. Als ich mit <tei:orgName key="entity-002410">Gg. Müller</tei:orgName> abschloß, sagte mir ein mir bekannter u.
     befreundeter Verleger (der beinahe ein Buch von mir herausgegeben hätte, falls nicht Müller es
     genommen hätte) 15% vom Ladenpreis seien nicht schlecht; mehr hätte er mir auch nicht geben
     können u. sie entsprechen etwa de<tei:subst>
@@ -120,8 +107,7 @@
 
    <tei:p>Meine Musik habe ich aus eigener oder meiner Freunde Tasche, abgesehen von dem von Ihnen
     vermittelten Stipendium, drucken lassen, wobei ich aber natürlich nicht gut fahre. Dies gibt
-    also keine Verlage für unsere Erwägung, desgleichen nicht die Zeitschrift, “<tei:name
-     key="entity-002488" type="journal"><tei:title>Die Freie Schulgemeinde</tei:title></tei:name>,”
+    also keine Verlage für unsere Erwägung, desgleichen nicht die Zeitschrift, “<tei:name key="entity-002488" type="journal"><tei:title>Die Freie Schulgemeinde</tei:title></tei:name>,”
     die <tei:persName><tei:persName key="entity-000167">Eugen
      Diederichs</tei:persName></tei:persName> verlegt, u. die in erster Linie für die Mitglieder des
     Bundes für <tei:orgName key="entity-002459">Fr. Schulgemeinde</tei:orgName> bestimmt ist u. sich
@@ -153,17 +139,14 @@
    </tei:opener>
 
    <tei:p>I<tei:ptr corresp="#r0001-fn01" type="footnote"/> wish I could advise you more and better
-    than is the case in the following, based on my slight knowledge.<tei:ptr corresp="#r0001-fn02"
-     type="footnote"/> I consider continuous proceeds better, that is, a contract for a percentage,
-    which could be paid in advance for one or more editions, or settled each year.<tei:ptr
-     corresp="#r0001-fn03" type="footnote"/> The best is for me to send you two publishers’
+    than is the case in the following, based on my slight knowledge.<tei:ptr corresp="#r0001-fn02" type="footnote"/> I consider continuous proceeds better, that is, a contract for a percentage,
+    which could be paid in advance for one or more editions, or settled each year.<tei:ptr corresp="#r0001-fn03" type="footnote"/> The best is for me to send you two publishers’
      contracts,<tei:ptr corresp="#r0001-fn04" type="footnote"/> which I ask you not to show to your
     publisher and to handle confidentially, i.e., you may of course show the content to your
     publisher <tei:hi rend="underline">anonymously</tei:hi>. I ask only that you send the forms back
     to me <tei:hi rend="underline">soon</tei:hi> and by <tei:hi rend="double-underline">registered
      mail</tei:hi> after you have taken note, that is after you have noted down points that are
-    important for you. Between us: I had to legally force the settlement with <tei:orgName
-     key="entity-002410">Georg Müller Press</tei:orgName> for several years, even this time, i.e.,
+    important for you. Between us: I had to legally force the settlement with <tei:orgName key="entity-002410">Georg Müller Press</tei:orgName> for several years, even this time, i.e.,
     he paid me an advance of 300 Marks without difficulty at my request, but he dawdles on the
     settlement as long as he can.<tei:ptr corresp="#r0001-fn05" type="footnote"/>
    </tei:p>
@@ -172,13 +155,11 @@
     with the author. With a percentage of the proceeds, we have to figure that, in case of failure,
     we get correspondingly little or nothing, and also, if fate cuts our life too short, that we
     reap little from our labors and merely savor the wait for the success, but not the success
-    itself. I have been more in favor of a percentage than for a one-time settlement.<tei:ptr
-     corresp="#r0001-fn06" type="footnote"/>
+    itself. I have been more in favor of a percentage than for a one-time settlement.<tei:ptr corresp="#r0001-fn06" type="footnote"/>
    </tei:p>
 
    <tei:p>In the case of my first work, the little <tei:title level="m">Manual of
-     Harmony</tei:title>,<tei:ptr corresp="#r0001-fn07" type="footnote"/> in the <tei:orgName
-     key="entity-002487">Göschen</tei:orgName> series, I unfortunately let myself <tei:pb n="2"/> be
+     Harmony</tei:title>,<tei:ptr corresp="#r0001-fn07" type="footnote"/> in the <tei:orgName key="entity-002487">Göschen</tei:orgName> series, I unfortunately let myself <tei:pb n="2"/> be
     fooled into a one-time royalty. When I settled with <tei:orgName key="entity-002410">Georg
      Müller</tei:orgName>, a publisher and friend of mine (who almost published a book of mine if
     Müller had not taken it) told me that 15% of the store price was not bad; he would not have been
@@ -186,21 +167,17 @@
     profit. But that will probably apply only to the first edition, for which the typesetting has to
     be taken into account. Maybe spread it over the next 1,000 – in any case for later editions,
     perhaps the third thousand, secure for yourself an increase, around 20%. Or try at first for
-    more (however, I do not know how far one can go here).<tei:ptr corresp="#r0001-fn08"
-     type="footnote"/>
+    more (however, I do not know how far one can go here).<tei:ptr corresp="#r0001-fn08" type="footnote"/>
    </tei:p>
 
    <tei:p>I have paid for printing my music out of my own pocket, or that of my friends – apart from
     the stipend that you arranged – by which I naturally do not fare well. No publisher grants that
-    for our consideration, nor the periodical <tei:name key="entity-002488" type="journal"
-      ><tei:title level="j">Die Freie Schulgemeinde</tei:title></tei:name>, which <tei:persName
-     key="entity-000167">Eugen Diederichs</tei:persName> publishes, and which is primarily intended
+    for our consideration, nor the periodical <tei:name key="entity-002488" type="journal"><tei:title level="j">Die Freie Schulgemeinde</tei:title></tei:name>, which <tei:persName key="entity-000167">Eugen Diederichs</tei:persName> publishes, and which is primarily intended
     for the members of the Federation for <tei:orgName key="entity-002459">Free School
      Communities</tei:orgName>, and must sustain itself through membership dues; we do the authorial
     and editorial work involved without honorarium. Therefore I can hardly tell you anything useful
     from my experience. – For <tei:gap reason="original_unclear" unit="chars" extent="6"/> sales,
-    secure at least half the price for yourself. Regarding §3 of the contract with <tei:orgName
-     key="entity-002410">Georg Müller</tei:orgName>: the publishers are always keen to coax such
+    secure at least half the price for yourself. Regarding §3 of the contract with <tei:orgName key="entity-002410">Georg Müller</tei:orgName>: the publishers are always keen to coax such
     things out of us <tei:add place="interlinear-above">for undetermined duration</tei:add>. I did
     not agree to that and, instead of declining entirely, specified six years, because I did not
     plan to write a book in that time anyway (actually, I do not want to write another one at all).

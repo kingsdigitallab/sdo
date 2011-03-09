@@ -1,9 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
-<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
- xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
- xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?><sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
  <sdo:collectionDesc>
   <sdo:source>
    <sdo:correspondence mfID="56" sdoID="OJ-11-35-10">OJ 11/35, 10</sdo:correspondence>
@@ -39,7 +35,7 @@
  <sdo:record ID="r0001">
 
   <sdo:itemDesc>
-   <dcterms:isPartOf>Halm ~ HSchenker</dcterms:isPartOf>
+   <dcterms:isPartOf><tei:rs type="correspondence" key="entity-002698">Halm ~ HSchenker</tei:rs></dcterms:isPartOf>
    <dc:title>Handwritten letter from Halm to Schenker, dated December 14, 1918</dc:title>
    <dc:type>Letter</dc:type>
    <dcterms:created>1918-12-14T12:00:00Z</dcterms:created>
@@ -58,8 +54,7 @@
   <tei:div type="transcription">
 
    <tei:opener>
-    <tei:dateline rend="indent-30"><tei:handShift new="#AHa"
-      /><tei:placeName>Eßlingen</tei:placeName>, <tei:date when="1918-12-14">14.12.18</tei:date>
+    <tei:dateline rend="indent-30"><tei:handShift new="#AHa"/><tei:placeName>Eßlingen</tei:placeName>, <tei:date when="1918-12-14">14.12.18</tei:date>
     </tei:dateline>
     <tei:lb/>
     <tei:address rend="indent-70">
@@ -68,20 +63,17 @@
      <tei:addrLine>Panorama 11</tei:addrLine>
     </tei:address>
     <tei:lb/>
-    <tei:salute><tei:handShift new="#AHa"/>Sehr geehrter Herr <tei:persName key="entity-000632"
-      >Professor</tei:persName>!</tei:salute>
+    <tei:salute><tei:handShift new="#AHa"/>Sehr geehrter Herr <tei:persName key="entity-000632">Professor</tei:persName>!</tei:salute>
    </tei:opener>
 
 
    <tei:p>Ich<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this letter is
      recorded in Schenker's diary at OJ 2/12, p. 2023, December 19, 1918: "Von Halm (recomm. Br):
      vielleicht ließe sich, wenn die Bewilligung nicht zu erreichen wäre, der zweite Teil der
-     Klavierübungen in Wien drucken?" ("From Halm (registered letter): Book II of the <tei:title
-      level="m">Klavierübungen</tei:title> might be printed in Vienna, if permission is not
+     Klavierübungen in Wien drucken?" ("From Halm (registered letter): Book II of the <tei:title level="m">Klavierübungen</tei:title> might be printed in Vienna, if permission is not
      obtainable.").<!-- XR -->
     </tei:note> muß mich wieder, von dem Zeitmangel bedrängt, kurz fassen: Also, die Hilfe durch das
-    Stipendium ist mir sehr willkommen.<tei:note xml:id="r0001-fn2" type="editorial" place="foot"
-     >Schenker sent Halm 856 Marks, the stipend emanating from a bequest left by Sofie Deutsch in
+    Stipendium ist mir sehr willkommen.<tei:note xml:id="r0001-fn2" type="editorial" place="foot">Schenker sent Halm 856 Marks, the stipend emanating from a bequest left by Sofie Deutsch in
      Schenker's discretion and offered to Halm in DLA 69.930/4, December 9, 1918. </tei:note> Der
     Kurs der Kronen u. Mark kenne ich nicht u. er kann sich jeden Tag ändern. Einen Vertrauensmann
     geschäftlicher Natur habe ich in <tei:placeName key="entity-002484">Wien</tei:placeName> nicht.
@@ -91,12 +83,10 @@
 
    <tei:p>Haben Sie eigentlich diese Sachen (<tei:title>Kammermusik I</tei:title>, dann für
     Streichorchester: <tei:title>C moll-Konzert</tei:title>;<tei:title> Prälud. u. Fuge C
-     moll</tei:title>, ein gleiches in F moll) erhalten? Ich vermute, daß entweder die <tei:pb n="2"
-    /> (durch m. <tei:orgName key="entity-002522">Verlag G.A. Zumsteeg</tei:orgName> in
+     moll</tei:title>, ein gleiches in F moll) erhalten? Ich vermute, daß entweder die <tei:pb n="2"/> (durch m. <tei:orgName key="entity-002522">Verlag G.A. Zumsteeg</tei:orgName> in
      <tei:placeName key="entity-002317">Stuttgart</tei:placeName> besorgte) Sendung, oder ein Brief
     von Ihnen verloren gegangen ist.<tei:note xml:id="r0001-fn4" type="editorial" place="foot"> Halm
-     writes continuously at this point, using em-dash as separator. <tei:title level="m"
-      >Kammermusik</tei:title>, vol. 1, containing Prelude and Fugue in Eb major and in F minor for
+     writes continuously at this point, using em-dash as separator. <tei:title level="m">Kammermusik</tei:title>, vol. 1, containing Prelude and Fugue in Eb major and in F minor for
      string quartet, and Little Suite in G minor for string trio, was published by Zwissler
      (Wolfenbüttel-Stuttgart, 1916). The C-minor Concerto for string orchestra was published by
      Bärenreiter (Kassel, 1915). Further, Prelude and Fugue in F minor for string orchestra
@@ -122,8 +112,7 @@
   <tei:div type="translation">
 
    <tei:opener>
-    <tei:dateline rend="indent-30"><tei:handShift new="#AHa"
-      /><tei:placeName>Eßlingen</tei:placeName>, <tei:date when="1918-12-14">December 14,
+    <tei:dateline rend="indent-30"><tei:handShift new="#AHa"/><tei:placeName>Eßlingen</tei:placeName>, <tei:date when="1918-12-14">December 14,
       1918</tei:date>
     </tei:dateline>
     <tei:lb/>
@@ -134,17 +123,13 @@
       11</tei:addrLine>
     </tei:address>
     <tei:lb/>
-    <tei:salute><tei:handShift new="#AHa"/>Dear <tei:persName key="entity-000632"
-      >Professor</tei:persName>, </tei:salute>
+    <tei:salute><tei:handShift new="#AHa"/>Dear <tei:persName key="entity-000632">Professor</tei:persName>, </tei:salute>
    </tei:opener>
 
    <tei:p>Again,<tei:ptr corresp="#r0001-fn01" type="footnote"/> beset by lack of time, I must be
-    brief. The assistance of the stipend is very welcome.<tei:ptr corresp="#r0001-fn02"
-     type="footnote"/> I do not know the exchange rate between Kronen and Marks, and it can change
-    daily. I do not have a trusted business collaborator in <tei:placeName key="entity-002484"
-     >Vienna</tei:placeName>. Maybe it would be best if I had a composition engraved and printed
-    directly in Vienna—perhaps a second volume of chamber music.<tei:ptr corresp="#r0001-fn03"
-     type="footnote"/></tei:p>
+    brief. The assistance of the stipend is very welcome.<tei:ptr corresp="#r0001-fn02" type="footnote"/> I do not know the exchange rate between Kronen and Marks, and it can change
+    daily. I do not have a trusted business collaborator in <tei:placeName key="entity-002484">Vienna</tei:placeName>. Maybe it would be best if I had a composition engraved and printed
+    directly in Vienna—perhaps a second volume of chamber music.<tei:ptr corresp="#r0001-fn03" type="footnote"/></tei:p>
 
    <tei:p>Have you actually received those things (<tei:title>Chamber Music I</tei:title>, then for
     string orchestra: <tei:title>C-minor Concerto</tei:title>, <tei:title>Prelude and Fugue in C

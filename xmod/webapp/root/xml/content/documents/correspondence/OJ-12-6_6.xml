@@ -1,9 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
-<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
- xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
- xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?><sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
  <sdo:collectionDesc>
   <sdo:source>
    <sdo:correspondence mfID="291" sdoID="OJ-12-6_6">OJ 12/6, [6]</sdo:correspondence>
@@ -30,8 +26,8 @@
  <sdo:record ID="r0001">
 
   <sdo:itemDesc>
-   <dcterms:isPartOf>Jonas ~ HSchenker</dcterms:isPartOf>
-   <dcterms:isPartOf>Jonas ~ H+JSchenker</dcterms:isPartOf>
+   <dcterms:isPartOf><tei:rs type="correspondence" key="entity-002714">Jonas ~ HSchenker</tei:rs></dcterms:isPartOf>
+   <dcterms:isPartOf><tei:rs type="correspondence" key="entity-002713">Jonas ~ H+JSchenker</tei:rs></dcterms:isPartOf>
    <dc:title>Handwritten letter from Jonas to Schenker, dated December 5, [1930]</dc:title>
    <dc:type>Letter</dc:type>
    <dcterms:created>1930-12-05T12:00:00Z</dcterms:created>
@@ -51,8 +47,7 @@
 
    <tei:opener>
     <tei:dateline rend="ident-80"><tei:date when="1930-12-05">5. XII</tei:date></tei:dateline>
-    <tei:salute>Sehr verehrter Herr <tei:persName key="entity-000632"
-     >Doktor</tei:persName>!</tei:salute>
+    <tei:salute>Sehr verehrter Herr <tei:persName key="entity-000632">Doktor</tei:persName>!</tei:salute>
    </tei:opener>
 
    <tei:p>Für<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this letter is
@@ -73,16 +68,12 @@
     meiner Angelegenheiten hier<tei:note xml:id="r0001-fn03" type="editorial" place="foot">comma
      written after "hier," then deleted. </tei:note> Bericht zu erstatten. </tei:p>
 
-   <tei:p>Vielleicht interessiert es Sie schon heute zu hören, daß der Kreis um <tei:persName
-     key="entity-000226">Edwin Fischer</tei:persName> sich sehr für <tei:persName
-     key="entity-000632">Schenker</tei:persName> interessiert, daß der beste Schüler
-     <tei:persName>Conrad Hansen</tei:persName>,<tei:note xml:id="r0001-fn04" type="editorial"
-     place="foot">Conrad Hansen (1906–2002): widely known pianist and important piano pedagogue;
+   <tei:p>Vielleicht interessiert es Sie schon heute zu hören, daß der Kreis um <tei:persName key="entity-000226">Edwin Fischer</tei:persName> sich sehr für <tei:persName key="entity-000632">Schenker</tei:persName> interessiert, daß der beste Schüler
+     <tei:persName>Conrad Hansen</tei:persName>,<tei:note xml:id="r0001-fn04" type="editorial" place="foot">Conrad Hansen (1906–2002): widely known pianist and important piano pedagogue;
      conducted a master class 1932–44 at the Stern Conservatory in Berlin; after 1945, at the
      Musikakademie in Detmold. </tei:note> mit dem ich mich fast angefreundet habe, die
      <tei:persName key="entity-000055">Beeth.</tei:persName> Sonaten nur in Ihren Ausgaben spielt
-    und spielen läßt, und im Übrigen (über Ihre Anregung) nur die <tei:rs key="entity-002612"
-     type="term">Urtext Ausgabe</tei:rs>n propagiert (freilich damit hier eine "Insel" bildet). </tei:p>
+    und spielen läßt, und im Übrigen (über Ihre Anregung) nur die <tei:rs key="entity-002612" type="term">Urtext Ausgabe</tei:rs>n propagiert (freilich damit hier eine "Insel" bildet). </tei:p>
 
    <tei:closer>
     <tei:salute rend="indent-20">Also nochmals meinen innigsten Dank und ergebensten
@@ -112,9 +103,7 @@
     progress of my affairs here.<tei:ptr corresp="#r0001-fn03" type="footnote"/>
    </tei:p>
 
-   <tei:p>It may perhaps interest you even today to hear that the circle around <tei:persName
-     key="entity-000226">Edwin Fischer</tei:persName> is very interested in <tei:persName
-     key="entity-000632">Schenker</tei:persName>, that the best student, <tei:persName>Conrad
+   <tei:p>It may perhaps interest you even today to hear that the circle around <tei:persName key="entity-000226">Edwin Fischer</tei:persName> is very interested in <tei:persName key="entity-000632">Schenker</tei:persName>, that the best student, <tei:persName>Conrad
      Hansen</tei:persName>,<tei:ptr corresp="#r0001-fn04" type="footnote"/> whom I have nearly
     befriended, plays the <tei:persName key="entity-000055">Beethoven</tei:persName> sonatas and has
     them played only in your editions, and moreover promotes (at your instigation) only the

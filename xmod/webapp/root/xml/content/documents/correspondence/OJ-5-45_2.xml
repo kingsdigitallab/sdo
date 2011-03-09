@@ -1,10 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
-<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
- xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
- xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+<?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?><sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
  <sdo:collectionDesc>
   <sdo:source>
    <sdo:correspondence mfID="83" sdoID="OJ-5-45_2">OJ 5/45, [2]</sdo:correspondence>
@@ -30,7 +25,7 @@
  <sdo:record ID="r0001">
 
   <sdo:itemDesc>
-   <dcterms:isPartOf>Weisse ~ HSchenker</dcterms:isPartOf>
+   <dcterms:isPartOf><tei:rs type="correspondence" key="entity-002715">Weisse ~ HSchenker</tei:rs></dcterms:isPartOf>
    <dc:title>Handwritten postcard from Schenker to Weisse, dated January 8, 1919</dc:title>
    <dc:type>Postcard</dc:type>
    <dcterms:created>1919-01-08T12:00:00Z</dcterms:created>
@@ -60,8 +55,7 @@
       </tei:addrLine>
      </tei:address>
      <tei:address>
-      <tei:addrLine><tei:supplied reason="clarity">An: </tei:supplied>H. <tei:hi rend="lateinschr"
-        >Hans Weisse</tei:hi></tei:addrLine>
+      <tei:addrLine><tei:supplied reason="clarity">An: </tei:supplied>H. <tei:hi rend="lateinschr">Hans Weisse</tei:hi></tei:addrLine>
       <tei:addrLine>
        <tei:hi rend="lateinschr">VI. Linke Wienzeile 36</tei:hi>
       </tei:addrLine>
@@ -81,16 +75,14 @@
      fact to his attention").<!-- XR -->
     </tei:note> öffne ich bei Tisch das Couvert u. finde blos <tei:hi rend="underline">330</tei:hi>
     für 360, wovon ich Ihnen sofort auch Mitteillung mache. Im Monat November fand ich im Couvert
-    einen geringeren Betrag, aber Sie kamen auch später. Ist's Irrtum von Ihnen heute?<tei:note
-     xml:id="r0001-fn02" type="editorial" place="foot">Weisse's response is recorded in Schenker's
+    einen geringeren Betrag, aber Sie kamen auch später. Ist's Irrtum von Ihnen heute?<tei:note xml:id="r0001-fn02" type="editorial" place="foot">Weisse's response is recorded in Schenker's
      diary at OJ 2/12, p. 2030, January 9, 1919: "Weisse trägt 30 Kronen nach u. stellt es als
      Irrtum hin." ("Weisse adds 30 Kronen and claims it was an error").<!-- XR -->
     </tei:note> Oder? Vergessen Sie nicht, daß <tei:unclear reason="reading">
      <tei:hi rend="underline">mit</tei:hi>
     </tei:unclear>
     <tei:hi rend="underline">allen</tei:hi>
-    <tei:hi rend="underline">Feiertagen</tei:hi> die Pauschalisirung dem Schüler nicht <tei:gap
-     reason="reading" unit="chars" extent="5"/> Vorteile zuwendet, wie Sie es leicht dem Kalendar
+    <tei:hi rend="underline">Feiertagen</tei:hi> die Pauschalisirung dem Schüler nicht <tei:gap reason="reading" unit="chars" extent="5"/> Vorteile zuwendet, wie Sie es leicht dem Kalendar
     nachrechnen können. <tei:note type="editorial" place="inline">cued from lower margin:
     </tei:note>Z.B. Im <tei:hi rend="underline">Juni</tei:hi> haben Sie noch immer 12 Stunden, trotz
     der 2 Feiertage, so auch im Februar.<tei:note type="editorial">end cue</tei:note>
@@ -132,16 +124,13 @@
 
 
    <tei:p>I have<tei:ptr corresp="#r0001-fn01" type="footnote"/> just opened the envelope at lunch
-    and find only <tei:hi rend="underline">330</tei:hi> rather than 360 <tei:supplied
-     reason="clarity">Kronen</tei:supplied>, of which I am informing you immediately. In the month
+    and find only <tei:hi rend="underline">330</tei:hi> rather than 360 <tei:supplied reason="clarity">Kronen</tei:supplied>, of which I am informing you immediately. In the month
     of November I found a smaller sum of money in the envelope, but you came later. Is this an error
     on your part today?<tei:ptr corresp="#r0001-fn02" type="footnote"/> Or what? Do not forget that
      <tei:hi rend="underline">with all the holidays</tei:hi> the lump-sum method of payment bestows
     not <tei:unclear reason="original_unclear">inconsiderable</tei:unclear> advantages upon the
-    pupil, as you can easily calculate from the calendar. <tei:note type="editorial" place="inline"
-     >cued from lower margin: </tei:note>E.g. in <tei:hi rend="underline">June</tei:hi> you still
-    have twelve lessons despite the two holidays; the same holds for February.<tei:note
-     type="editorial">end cue</tei:note>
+    pupil, as you can easily calculate from the calendar. <tei:note type="editorial" place="inline">cued from lower margin: </tei:note>E.g. in <tei:hi rend="underline">June</tei:hi> you still
+    have twelve lessons despite the two holidays; the same holds for February.<tei:note type="editorial">end cue</tei:note>
    </tei:p>
 
    <tei:closer>
