@@ -1,28 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
-  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
-  xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
-  xmlns:xmg="http://www.cch.kcl.ac.uk/xmod/global/1.0"
-  xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet version="2.0"
+                xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
+                xmlns:tei="http://www.tei-c.org/ns/1.0"
+                xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0"
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:import href="../default.xsl"/>
-  <xd:doc scope="stylesheet">
-    <xd:desc>
-      <xd:p><xd:b>Created on:</xd:b> Sep 27, 2010</xd:p>
-      <xd:p><xd:b>Author:</xd:b> paulcaton</xd:p>
-      <xd:p/>
-    </xd:desc>
-  </xd:doc>
 
-  <xsl:param name="menutop" select="'true'"/>
-  <xsl:param name="date"/>
-
-  <xsl:variable name="prevLink" select="//prevLink"/>
-  <xsl:variable name="nextLink" select="//nextLink"/>
-  <xsl:variable name="record"
-    select="//sdo:recordCollection/sdo:record[substring(descendant::dcterms:created, 1, 10) = $date]"/>
-
+  <xsl:variable name="record" select="/aggregation/sdo:recordCollection/sdo:record[1]"/>
 
   <xsl:template name="xms:pagehead">
     <div class="pageHeader">
@@ -30,48 +16,32 @@
         <h1>
           <xsl:value-of select="$record/sdo:itemDesc/dc:title"/>
         </h1>
-        <div class="options">
-          <ul class="s4">
-            <li class="info">
-              <xsl:value-of
-                select="//sdo:recordCollection/sdo:collectionDesc/sdo:source/sdo:diary/@sdoID"/>
-            </li>
-            <li>
-              <xsl:choose>
-                <xsl:when test="$nextLink != 'NULL'">
-                  <a href="{$nextLink}">Next ›</a>
-                </xsl:when>
-                <xsl:otherwise>
-                  <span>Next</span>
-                </xsl:otherwise>
-              </xsl:choose>
-            </li>
-            <li>
-              <xsl:choose>
-                <xsl:when test="$prevLink != 'NULL'">
-                  <a class="s02" href="{$prevLink}">‹ Prev</a>
-                </xsl:when>
-                <xsl:otherwise>
-                  <span>Prev</span>
-                </xsl:otherwise>
-              </xsl:choose>
-            </li>
-            
-          </ul>
+        <div>
+          <p>
+            <xsl:value-of select="/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]"/>
+          </p>
+
+          <h2>Browse by</h2>
+
+          <xsl:variable name="fileId" select="/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/*[1]/@sdoID"/>
+
+          <xsl:call-template name="browsing-nav">
+            <xsl:with-param name="current-item" select="/aggregation/response/result/doc[str[@name='fileId']=$fileId]"/>
+          </xsl:call-template>
         </div>
       </div>
     </div>
   </xsl:template>
-  
+
   <xsl:template name="xms:content">
     <table class="docDisplayGandE">
       <tr>
         <td id="GermanVersion">
-          <!-- German version -->
+          <!-- German version. -->
           <xsl:apply-templates select="$record/tei:div[@type='transcription']"/>
         </td>
         <td id="EnglishVersion">
-          <!-- English version -->
+          <!-- English version. -->
           <xsl:apply-templates select="$record/tei:div[@type='translation']"/>
         </td>
       </tr>
@@ -79,8 +49,9 @@
         <td colspan="2">
           <div class="ft">
             <h3>Footnotes</h3>
-            <xsl:for-each select="$record//tei:note[@place='foot']">
-              <xsl:variable name="noteNum" select="substring(substring-after(@xml:id, '-'), 3, 2)"/>
+            <xsl:for-each select="$record/tei:note[@place='foot']">
+              <xsl:variable name="noteNum"
+                            select="substring(substring-after(@xml:id, '-'), 3, 2)"/>
               <p>
                 <xsl:attribute name="id" select="concat('fn', $noteNum)"/>
                 <sup>
@@ -103,25 +74,54 @@
     </table>
   </xsl:template>
 
-  <!-- TEMPLATES SPECIFIC TO CORRESPONDENCE DISPLAY -->
+  <xsl:template match="doc" mode="browse-by-date">
+    <xsl:call-template name="browse-for-type">
+      <xsl:with-param name="type" select="'Date'"/>
+      <xsl:with-param name="previous" select="preceding-sibling::doc[1]"/>
+      <xsl:with-param name="next" select="following-sibling::doc[1]"/>
+    </xsl:call-template>
+  </xsl:template>
+
+  <xsl:template name="browse-for-type">
+    <xsl:param name="type"/>
+    <xsl:param name="previous"/>
+    <xsl:param name="next"/>
+    <li>
+      <xsl:value-of select="$type"/>
+      <xsl:text>: </xsl:text>
+      <xsl:choose>
+        <xsl:when test="$previous">
+          <a href="{$previous/str[@name='fileId']}.html">Previous</a>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:text>Previous</xsl:text>
+        </xsl:otherwise>
+      </xsl:choose>
+      <xsl:text> and </xsl:text>
+      <xsl:choose>
+        <xsl:when test="$next">
+          <a href="{$next/str[@name='fileId']}.html">Next</a>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:text>Next</xsl:text>
+        </xsl:otherwise>
+      </xsl:choose>
+    </li>
+  </xsl:template>
+
   <xsl:template match="tei:opener | tei:closer">
     <p>
       <xsl:apply-templates/>
     </p>
   </xsl:template>
 
-  <xsl:template match="tei:fw[@type='envelope']">
-    <!-- do nothing -->
-  </xsl:template>
-
-  <xsl:template match="tei:dateline">
-    <xsl:apply-templates/>
-  </xsl:template>
+  <xsl:template match="tei:fw[@type='envelope']"/>
 
   <xsl:template match="tei:note">
     <xsl:choose>
       <xsl:when test="@place='foot'">
-        <xsl:variable name="fnNum" select="substring(substring-after(@xml:id, '-'), 3, 2)"/>
+        <xsl:variable name="fnNum"
+                      select="substring(substring-after(@xml:id, '-'), 3, 2)"/>
         <sup>
           <a class="fnLink">
             <xsl:attribute name="href">
@@ -140,16 +140,17 @@
                 <xsl:value-of select="$fnNum"/>
               </xsl:otherwise>
             </xsl:choose>
-
           </a>
         </sup>
       </xsl:when>
-      <xsl:otherwise> </xsl:otherwise>
+      <xsl:otherwise>
+        <xsl:text> </xsl:text>
+      </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
 
   <xsl:template match="tei:pb">
-    <xsl:if test="@n > 1">
+    <xsl:if test="number(@n) > 1">
       <xsl:text> {</xsl:text>
       <xsl:value-of select="@n"/>
       <xsl:text>} </xsl:text>
@@ -157,7 +158,8 @@
   </xsl:template>
 
   <xsl:template match="tei:ptr">
-    <xsl:variable name="ptrNum" select="substring(substring-after(@corresp, '-'), 3, 2)"/>
+    <xsl:variable name="ptrNum"
+                  select="substring(substring-after(@corresp, '-'), 3, 2)"/>
     <sup>
       <a>
         <xsl:attribute name="href">
