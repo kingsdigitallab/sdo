@@ -48,8 +48,26 @@
   </xsl:template>
 
   <xsl:template match="result/doc">
+    <xsl:variable name="kind" select="str[@name='kind']"/>
     <li>
-      <xsl:value-of select="str[@name='title']"/>
+      <a>
+        <xsl:attribute name="href">
+          <xsl:text>../documents/</xsl:text>
+          <xsl:value-of select="$kind"/>
+          <xsl:text>/</xsl:text>
+          <xsl:value-of select="str[@name='fileId']"/>
+          <xsl:if test="$kind = 'diaries' or $kind = 'lessonbooks'">
+            <xsl:text>/</xsl:text>
+            <xsl:value-of select="str[@name='dateShort']"/>
+          </xsl:if>
+          <xsl:text>.html</xsl:text>
+        </xsl:attribute>
+        <xsl:value-of select="str[@name='title']"/>
+        <xsl:if test="$kind = 'diaries'">
+          <xsl:text>Diary entry for </xsl:text>
+          <xsl:value-of select="str[@name='dateShort']"/>
+        </xsl:if>
+      </a>
     </li>
   </xsl:template>
 
