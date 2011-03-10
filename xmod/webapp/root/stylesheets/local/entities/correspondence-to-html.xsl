@@ -6,11 +6,13 @@
 
   <xsl:import href="../default.xsl"/>
 
+  <xsl:param name="entity"/>
+
   <xsl:variable name="xmg:title">
     <!-- We should really be aggregating a search for the EATS entity
          data, and getting the title from there, rather than using
          text that comes from a random TEI document. -->
-    <xsl:value-of select="substring-after(/aggregation/response/result/doc[1]/arr[@name='correspondence']/str, ' ')"/>
+    <xsl:value-of select="substring-after(/aggregation/response/result/doc[1]/arr[@name='correspondence']/str[substring-before(., ' ') = $entity], ' ')"/>
   </xsl:variable>
 
   <xsl:template name="xms:content">
