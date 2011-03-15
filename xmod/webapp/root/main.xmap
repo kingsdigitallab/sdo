@@ -233,21 +233,45 @@
     <map:pipeline>
       <!-- Dates. -->
       <map:match pattern="profiles/date/*.html">
-        <map:aggregate element="aggregation">
-          <map:part src="cocoon://_internal/menu/main.xml"/>
-          <map:part src="cocoon://_internal/solr/query/q=dateShort%3A{1}&amp;rows=5000"/>
-        </map:aggregate>
+        <map:select type="resource-exists">
+          <map:when test="xml/content/profile/date/{1}.xml">
+            <map:aggregate element="aggregation">
+              <map:part src="cocoon://_internal/menu/main.xml"/>
+              <map:part src="cocoon://_internal/solr/query/q=dateShort%3A{1}&amp;rows=5000"/>
+              <map:part src="xml/content/profile/date/{1}.xml"/>
+            </map:aggregate>
+          </map:when>
+          <map:otherwise>
+            <map:aggregate element="aggregation">
+              <map:part src="cocoon://_internal/menu/main.xml"/>
+              <map:part src="cocoon://_internal/solr/query/q=dateShort%3A{1}&amp;rows=5000"/>
+            </map:aggregate>
+          </map:otherwise>
+        </map:select>
         <map:transform src="stylesheets/local/entities/date-to-html.xsl"/>
         <map:serialize type="xhtml"/>
       </map:match>
 
       <!-- Correspondences. -->
       <map:match pattern="profiles/correspondence/*.html">
-        <map:aggregate element="aggregation">
-          <map:part src="cocoon://_internal/menu/main.xml"/>
-          <map:part src="cocoon://_internal/solr/query/q=correspondence%3A{1}*&amp;rows=5000"/>
-        </map:aggregate>
-        <map:transform src="stylesheets/local/entities/correspondence-to-html.xsl"/>
+        <map:select type="resource-exists">
+          <map:when test="xml/content/profile/correspondence/{1}.xml">
+            <map:aggregate element="aggregation">
+              <map:part src="cocoon://_internal/menu/main.xml"/>
+              <map:part src="cocoon://_internal/solr/query/q=correspondence%3A{1}*&amp;rows=5000"/>
+              <map:part src="xml/content/profile/correspondence/{1}.xml"/>
+            </map:aggregate>
+          </map:when>
+          <map:otherwise>
+            <map:aggregate element="aggregation">
+              <map:part src="cocoon://_internal/menu/main.xml"/>
+              <map:part src="cocoon://_internal/solr/query/q=correspondence%3A{1}*&amp;rows=5000"/>
+            </map:aggregate>
+          </map:otherwise>
+        </map:select>
+        <map:transform src="stylesheets/local/entities/correspondence-to-html.xsl">
+          <map:parameter name="entity" value="{1}"/>
+        </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
 
@@ -265,11 +289,21 @@
       </map:match>
 
       <map:match pattern="profiles/*/*.html">
-        <map:aggregate element="aggregation">
-          <map:part src="cocoon://_internal/menu/main.xml"/>
-          <map:part src="cocoon://_internal/metadata/files.xml"/>
-          <map:part src="xml/content/profiles/{1}/{2}.xml"/>
-        </map:aggregate>
+        <map:select type="resource-exists">
+          <map:when test="xml/content/profiles/{1}/{2}.xml">
+            <map:aggregate element="aggregation">
+              <map:part src="cocoon://_internal/menu/main.xml"/>
+              <map:part src="cocoon://_internal/metadata/files.xml"/>
+              <map:part src="xml/content/profiles/{1}/{2}.xml"/>
+            </map:aggregate>
+          </map:when>
+          <map:otherwise>
+            <map:aggregate element="aggregation">
+              <map:part src="cocoon://_internal/menu/main.xml"/>
+              <map:part src="cocoon://_internal/metadata/files.xml"/>
+            </map:aggregate>
+          </map:otherwise>
+        </map:select>
         <map:transform src="stylesheets/local/profiles/profile-to-html.xsl">
           <map:parameter name="filedir" value="profiles/{1}"/>
           <map:parameter name="filename" value="{2}.xml"/>
