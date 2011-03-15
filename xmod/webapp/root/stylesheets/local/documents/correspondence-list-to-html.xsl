@@ -22,7 +22,7 @@
               <xsl:value-of select="current-grouping-key()"/>
               <xsl:text>.html</xsl:text>
             </xsl:attribute>
-            <xsl:value-of select="replace(substring-after(., ' '), '_', ' ')"/>
+            <xsl:value-of select="replace(substring-after(., ' '), '_', ' ~ ')"/>
           </a>
           <xsl:call-template name="add-item-count"/>
         </li>
