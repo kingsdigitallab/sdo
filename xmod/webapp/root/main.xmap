@@ -258,20 +258,41 @@
           <map:when test="xml/content/profile/correspondence/{1}.xml">
             <map:aggregate element="aggregation">
               <map:part src="cocoon://_internal/menu/main.xml"/>
-              <map:part src="cocoon://_internal/solr/query/q=correspondence%3A{1}*&amp;rows=5000"/>
+              <map:part src="cocoon://_internal/solr/query/q=correspondence%3A{1}*&amp;rows=5000&amp;sort=dateFull%20asc"/>
               <map:part src="xml/content/profile/correspondence/{1}.xml"/>
             </map:aggregate>
           </map:when>
           <map:otherwise>
             <map:aggregate element="aggregation">
               <map:part src="cocoon://_internal/menu/main.xml"/>
-              <map:part src="cocoon://_internal/solr/query/q=correspondence%3A{1}*&amp;rows=5000"/>
+              <map:part src="cocoon://_internal/solr/query/q=correspondence%3A{1}*&amp;rows=5000&amp;sort=dateFull%20asc"/>
             </map:aggregate>
           </map:otherwise>
         </map:select>
         <map:transform src="stylesheets/local/entities/correspondence-to-html.xsl">
           <map:parameter name="entity" value="{1}"/>
         </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <!-- Correspondence item types. -->
+      <map:match pattern="profiles/correspondence-types/*.html">
+        <map:select type="resource-exists">
+          <map:when test="xml/content/profile/correspondence-type/{1}.xml">
+            <map:aggregate element="aggregation">
+              <map:part src="cocoon://_internal/menu/main.xml"/>
+              <map:part src="cocoon://_internal/solr/query/q=type%3A{1}*&amp;rows=5000&amp;sort=dateFull%20asc"/>
+              <map:part src="xml/content/profile/correspondence-type/{1}.xml"/>
+            </map:aggregate>
+          </map:when>
+          <map:otherwise>
+            <map:aggregate element="aggregation">
+              <map:part src="cocoon://_internal/menu/main.xml"/>
+              <map:part src="cocoon://_internal/solr/query/q=type%3A{1}*&amp;rows=5000&amp;sort=dateFull%20asc"/>
+            </map:aggregate>
+          </map:otherwise>
+        </map:select>
+        <map:transform src="stylesheets/local/entities/correspondence-type-to-html.xsl"/>
         <map:serialize type="xhtml"/>
       </map:match>
 

@@ -102,7 +102,9 @@
 
           <xsl:if test="$kind = 'lessonbook'">
             <field name="pupil">
-              <xsl:value-of select="substring-before(sdo:itemDesc/dc:title, ':')"/>
+              <xsl:value-of select="sdo:itemDesc/tei:rs[@role='pupil']/@key"/>
+              <xsl:text> </xsl:text>
+              <xsl:value-of select="sdo:itemDesc/tei:rs[@role='pupil']"/>
             </field>
           </xsl:if>
 
@@ -118,12 +120,14 @@
           </xsl:if>
 
           <field name="type">
-            <xsl:value-of select="replace(sdo:itemDesc/dc:type, ' ', '_')"/>
+            <xsl:value-of select="sdo:itemDesc/tei:rs[@role='corr-item-type']/@key"/>
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="sdo:itemDesc/tei:rs[@role='corr-item-type']"/>
           </field>
 
-          <xsl:for-each select="sdo:itemDesc/dcterms:isPartOf">
+          <xsl:for-each select="sdo:itemDesc/tei:rs[@role='correspondence']">
             <field name="correspondence">
-              <xsl:value-of select="tei:rs/@key"/>
+              <xsl:value-of select="@key"/>
               <xsl:text> </xsl:text>
               <xsl:value-of select="replace(., '\s~\s', '_')"/>
             </field>

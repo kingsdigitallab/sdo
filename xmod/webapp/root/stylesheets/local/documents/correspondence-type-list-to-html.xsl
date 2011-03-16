@@ -12,15 +12,17 @@
 
   <xsl:template name="xms:content">
     <!-- Group by item type. -->
-    <xsl:for-each-group select="/aggregation/response/result/doc/str[@name='type']" group-by=".">
-      <xsl:sort select="current-grouping-key()"/>
+    <xsl:for-each-group select="/aggregation/response/result/doc/str[@name='type']" group-by="substring-before(., ' ')">
+      <xsl:sort select="substring-after(current-grouping-key(), ' ')"/>
       <ul>
         <li>
           <a>
             <xsl:attribute name="href">
               <xsl:text>../../profiles/correspondence-types/</xsl:text>
+              <xsl:value-of select="current-grouping-key()"/>
+              <xsl:text>.html</xsl:text>
             </xsl:attribute>
-            <xsl:value-of select="replace(current-grouping-key(), '_', ' ')"/>
+            <xsl:value-of select="substring-after(., ' ')"/>
           </a>
           <xsl:call-template name="add-item-count"/>
         </li>
