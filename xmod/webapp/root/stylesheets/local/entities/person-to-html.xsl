@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="2.0"
+                xmlns:tei="http://www.tei-c.org/ns/1.0"
                 xmlns:xmg="http://www.cch.kcl.ac.uk/xmod/global/1.0"
                 xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:import href="../profiles/profile-to-html.xsl"/>
 
-  <xsl:variable name="date" select="substring-after(/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='q'], ':')"/>
-
   <xsl:variable name="xmg:title">
-    <xsl:value-of select="$date"/>
   </xsl:variable>
 
   <xsl:variable name="correspondence" select="/aggregation/response/result/doc[str[@name='kind']='correspondence']"/>
@@ -22,7 +20,7 @@
     <div>
       <xsl:choose>
         <xsl:when test="/aggregation/response/result/doc">
-          <p>Documents associated with this date:</p>
+          <p>Documents associated with this person:</p>
 
           <ul>
             <xsl:if test="$correspondence">
@@ -30,6 +28,9 @@
             </xsl:if>
             <xsl:if test="$diaries">
               <li><a href="#diaries">Diaries</a></li>
+            </xsl:if>
+            <xsl:if test="$lessonbooks">
+              <li><a href="#lessonbooks">Lessonbooks</a></li>
             </xsl:if>
           </ul>
           <xsl:call-template name="make-section">

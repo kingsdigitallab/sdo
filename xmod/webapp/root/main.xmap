@@ -231,6 +231,21 @@
 
     <!-- Entity display. -->
     <map:pipeline>
+      <!-- Indices of entities that have a profile XML file (ie, this
+           is not all entities!). -->
+      <map:match pattern="profiles/*/index.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.xml"/>
+          <map:part src="cocoon:/internal/profiles/indices.xml"/>
+        </map:aggregate>
+        <map:transform src="stylesheets/local/profiles/index-to-html.xsl">
+          <map:parameter name="filedir" value="profiles/{1}"/>
+          <map:parameter name="filename" value="{1}"/>
+          <map:parameter name="fileextension" value="html"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
       <!-- Dates. -->
       <map:match pattern="profiles/date/*.html">
         <map:select type="resource-exists">
@@ -296,16 +311,26 @@
         <map:serialize type="xhtml"/>
       </map:match>
 
-      <map:match pattern="profiles/*/index.html">
-        <map:aggregate element="aggregation">
-          <map:part src="cocoon://_internal/menu/main.xml"/>
-          <map:part src="cocoon:/internal/profiles/indices.xml"/>
-        </map:aggregate>
-        <map:transform src="stylesheets/local/profiles/index-to-html.xsl">
-          <map:parameter name="filedir" value="profiles/{1}"/>
-          <map:parameter name="filename" value="{1}"/>
-          <map:parameter name="fileextension" value="html"/>
-        </map:transform>
+      <!-- People. -->
+      <map:match pattern="profiles/person/*.html">
+        <map:select type="resource-exists">
+          <map:when test="xml/content/profiles/person/{1}.xml">
+            <map:aggregate element="aggregation">
+              <map:part src="cocoon://_internal/menu/main.xml"/>
+              <map:part src="cocoon://_internal/metadata/files.xml"/>
+              <map:part src="cocoon://_internal/solr/query/q=pupil%3A{1}*%20correspondent%3A{1}*%20recipient%3A{1}*&amp;rows=5000&amp;sort=dateFull%20asc"/>
+              <map:part src="xml/content/profiles/person/{1}.xml"/>
+            </map:aggregate>
+          </map:when>
+          <map:otherwise>
+            <map:aggregate element="aggregation">
+              <map:part src="cocoon://_internal/menu/main.xml"/>
+              <map:part src="cocoon://_internal/metadata/files.xml"/>
+              <map:part src="cocoon://_internal/solr/query/q=pupil%3A{1}*%20correspondent%3A{1}*%20recipient%3A{1}*&amp;rows=5000&amp;sort=dateFull%20asc"/>
+            </map:aggregate>
+          </map:otherwise>
+        </map:select>
+        <map:transform src="stylesheets/local/entities/person-to-html.xsl"/>
         <map:serialize type="xhtml"/>
       </map:match>
 
