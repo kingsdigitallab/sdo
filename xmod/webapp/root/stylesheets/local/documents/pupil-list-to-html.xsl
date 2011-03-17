@@ -41,7 +41,7 @@
     </div>
 
     <xsl:for-each-group select="distinct-values(/aggregation/response/result/doc/str[@name='pupil'])" group-by="substring(substring-after(., ' '), 1, 1)">
-      <xsl:sort select="."/>
+      <xsl:sort select="substring-after(., ' ')"/>
       <xsl:variable name="initial"
                     select="upper-case(substring(current-grouping-key(), 1))"/>
       <h3 id="{$initial}">
@@ -52,8 +52,13 @@
         <xsl:for-each select="current-group()">
           <xsl:sort select="."/>
           <li>
-            <a href="{concat('../../profiles/person/', ., '#lessonbooks')}">
-              <xsl:value-of select="."/>
+            <a>
+              <xsl:attribute name="href">
+                <xsl:text>../../profiles/person/</xsl:text>
+                <xsl:value-of select="substring-before(., ' ')"/>
+                <xsl:text>.html#lessonbooks</xsl:text>
+              </xsl:attribute>
+              <xsl:value-of select="substring-after(., ' ')"/>
             </a>
           </li>
         </xsl:for-each>
