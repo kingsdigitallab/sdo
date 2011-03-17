@@ -249,11 +249,11 @@
       <!-- Dates. -->
       <map:match pattern="profiles/date/*.html">
         <map:select type="resource-exists">
-          <map:when test="xml/content/profile/date/{1}.xml">
+          <map:when test="xml/content/profiles/date/{1}.xml">
             <map:aggregate element="aggregation">
               <map:part src="cocoon://_internal/menu/main.xml"/>
               <map:part src="cocoon://_internal/solr/query/q=dateShort%3A{1}&amp;rows=5000"/>
-              <map:part src="xml/content/profile/date/{1}.xml"/>
+              <map:part src="xml/content/profiles/date/{1}.xml"/>
             </map:aggregate>
           </map:when>
           <map:otherwise>
@@ -270,11 +270,11 @@
       <!-- Correspondences. -->
       <map:match pattern="profiles/correspondence/*.html">
         <map:select type="resource-exists">
-          <map:when test="xml/content/profile/correspondence/{1}.xml">
+          <map:when test="xml/content/profiles/correspondence/{1}.xml">
             <map:aggregate element="aggregation">
               <map:part src="cocoon://_internal/menu/main.xml"/>
               <map:part src="cocoon://_internal/solr/query/q=correspondence%3A{1}*&amp;rows=5000&amp;sort=dateFull%20asc"/>
-              <map:part src="xml/content/profile/correspondence/{1}.xml"/>
+              <map:part src="xml/content/profiles/correspondence/{1}.xml"/>
             </map:aggregate>
           </map:when>
           <map:otherwise>
@@ -293,11 +293,11 @@
       <!-- Correspondence item types. -->
       <map:match pattern="profiles/correspondence-types/*.html">
         <map:select type="resource-exists">
-          <map:when test="xml/content/profile/correspondence-type/{1}.xml">
+          <map:when test="xml/content/profiles/correspondence-type/{1}.xml">
             <map:aggregate element="aggregation">
               <map:part src="cocoon://_internal/menu/main.xml"/>
               <map:part src="cocoon://_internal/solr/query/q=type%3A{1}*&amp;rows=5000&amp;sort=dateFull%20asc"/>
-              <map:part src="xml/content/profile/correspondence-type/{1}.xml"/>
+              <map:part src="xml/content/profiles/correspondence-type/{1}.xml"/>
             </map:aggregate>
           </map:when>
           <map:otherwise>
