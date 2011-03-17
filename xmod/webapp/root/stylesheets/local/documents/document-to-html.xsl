@@ -49,7 +49,7 @@
         <td colspan="2">
           <div class="ft">
             <h3>Footnotes</h3>
-            <xsl:for-each select="$record/tei:note[@place='foot']">
+            <xsl:for-each select="$record//tei:note[@place='foot']">
               <xsl:variable name="noteNum"
                             select="substring(substring-after(@xml:id, '-'), 3, 2)"/>
               <p>
