@@ -21,10 +21,6 @@
     </xd:desc>
   </xd:doc>
 
-  <xsl:variable name="free-text">
-    <xsl:apply-templates mode="free-text" select="//tei:div[not(ancestor::tei:div)]" />
-  </xsl:variable>
-
   <xsl:template match="/">
     <add>
       <!-- each Solr doc is based on a single sdo:record -->
@@ -144,6 +140,10 @@
           </xsl:for-each>
 
           <field name="text">
+            <xsl:variable name="free-text">
+              <xsl:apply-templates mode="free-text" select="tei:div" />
+            </xsl:variable>
+
             <xsl:value-of select="normalize-space($free-text)" />
           </field>
         </doc>
