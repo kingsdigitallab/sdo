@@ -36,11 +36,13 @@
         <xsl:choose>
           <xsl:when test=". = $current-page">
             <xsl:value-of select="."/>
+            <xsl:text> </xsl:text>
           </xsl:when>
           <xsl:otherwise>
             <a href="?kw={$kw}&amp;p={.}">
               <xsl:value-of select="."/>
             </a>
+            <xsl:text> </xsl:text>
           </xsl:otherwise>
         </xsl:choose>
       </xsl:for-each>
