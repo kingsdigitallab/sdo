@@ -3,10 +3,13 @@
                 xmlns:dc="http://purl.org/dc/elements/1.1/"
                 xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
                 xmlns:tei="http://www.tei-c.org/ns/1.0"
+                xmlns:xmg="http://www.cch.kcl.ac.uk/xmod/global/1.0"
                 xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:import href="../default.xsl"/>
+
+  <xsl:param name="filedir" select="'documents/'"/>
 
   <xsl:variable name="record" select="/aggregation/sdo:recordCollection/sdo:record[1]"/>
 
@@ -91,7 +94,7 @@
       <xsl:text>: </xsl:text>
       <xsl:choose>
         <xsl:when test="$previous">
-          <a href="{$previous/str[@name='fileId']}.html">Previous</a>
+          <a href="{concat($xmg:pathroot, $previous/str[@name='url'])}">Previous</a>
         </xsl:when>
         <xsl:otherwise>
           <xsl:text>Previous</xsl:text>
@@ -100,7 +103,7 @@
       <xsl:text> and </xsl:text>
       <xsl:choose>
         <xsl:when test="$next">
-          <a href="{$next/str[@name='fileId']}.html">Next</a>
+          <a href="{concat($xmg:pathroot, $next/str[@name='url'])}">Next</a>
         </xsl:when>
         <xsl:otherwise>
           <xsl:text>Next</xsl:text>

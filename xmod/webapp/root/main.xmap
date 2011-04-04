@@ -206,17 +206,17 @@
         </map:select>
       </map:match>
 
-      <!-- Display a single dated entry within a diary or lessonbook. -->
+      <!-- Display a single entry within a diary or lessonbook. -->
       <map:match pattern="documents/*/*/*.html">
         <map:select type="resource-exists">
           <map:when test="xml/content/documents/{1}/{2}.xml">
-            <map:aggregate element="aggregation">
+            <map:aggregate element="aggregation" label="content">
               <map:part src="cocoon://_internal/menu/main.xml"/>
               <map:part src="cocoon://_internal/solr/query/q=kind%3A{1}&amp;rows=5000&amp;sort=dateFull%20asc"/>
               <map:part src="xml/content/documents/{1}/{2}.xml"/>
             </map:aggregate>
-            <map:transform src="stylesheets/local/documents/{1}-at-date-to-html.xsl">
-              <map:parameter name="date" value="{3}"/>
+            <map:transform src="stylesheets/local/documents/{1}-entry-to-html.xsl">
+              <map:parameter name="recordId" value="{3}"/>
             </map:transform>
             <map:serialize type="xhtml"/>
           </map:when>

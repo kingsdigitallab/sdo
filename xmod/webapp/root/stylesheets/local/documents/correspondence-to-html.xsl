@@ -17,7 +17,7 @@
         * by correspondent (author)
         * by recipient
         * by item type
-        * by correspondence (combination of correspondent and recipipent)
+        * by correspondence
 
     -->
     <xsl:param name="current-item"/>

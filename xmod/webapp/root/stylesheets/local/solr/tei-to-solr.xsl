@@ -23,49 +23,62 @@
 
   <xsl:template match="/">
     <add>
+      <xsl:variable name="fileId" select="/sdo:recordCollection/sdo:collectionDesc/sdo:source/*[1]/@sdoID"/>
+
       <!-- each Solr doc is based on a single sdo:record -->
       <xsl:for-each select="//sdo:record">
         <!-- $kind refers to whether it is correspondence, diary, etc. -->
-        <xsl:variable name="kind" select="local-name(preceding-sibling::sdo:collectionDesc/sdo:source/*[1])"/>
-        <xsl:variable name="fileID" select="preceding-sibling::sdo:collectionDesc/sdo:source/*[1]/@sdoID"/>
-        <xsl:variable name="shelfmark" select="preceding-sibling::sdo:collectionDesc/sdo:source/*[1]"/>
-        <xsl:variable name="recordID" select="@ID"/>
-        <!-- record IDs are not unique across the whole set, so we bodge up a unique identifier -->
-        <xsl:variable name="uniqueID" select="concat($recordID, '_', $fileID)"/>
+        <xsl:variable name="source" select="local-name(preceding-sibling::sdo:collectionDesc/sdo:source/*[1])"/>
+        <xsl:variable name="kind">
+          <xsl:choose>
+            <xsl:when test="$source = 'diary'">
+              <xsl:text>diaries</xsl:text>
+            </xsl:when>
+            <xsl:when test="$source = 'lessonbook'">
+              <xsl:text>lessonbooks</xsl:text>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:value-of select="$source"/>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:variable>
+        <xsl:variable name="recordId" select="@ID"/>
 
         <!-- begin the metadata <doc> -->
         <doc>
           <field name="kind">
-            <xsl:choose>
-              <xsl:when test="$kind = 'other'">
-                <xsl:text>other</xsl:text>
-              </xsl:when>
-              <xsl:when test="$kind = 'diary'">
-                <xsl:text>diaries</xsl:text>
-              </xsl:when>
-              <xsl:when test="$kind = 'lessonbook'">
-                <xsl:text>lessonbooks</xsl:text>
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:value-of select="$kind"/>
-              </xsl:otherwise>
-            </xsl:choose>
+            <xsl:value-of select="$kind"/>
           </field>
 
           <field name="shelfmark">
-            <xsl:value-of select="$shelfmark"/>
+            <xsl:value-of select="preceding-sibling::sdo:collectionDesc/sdo:source/*[1]"/>
           </field>
 
           <field name="fileId">
-            <xsl:value-of select="$fileID"/>
+            <xsl:value-of select="$fileId"/>
           </field>
 
           <field name="recordId">
-            <xsl:value-of select="$recordID"/>
+            <xsl:value-of select="$recordId"/>
           </field>
 
-          <field name="uniqueId">
-            <xsl:value-of select="$uniqueID"/>
+          <field name="url">
+            <!-- The partial URL for the resource this is a record
+                 for, to be concatenated with the xmg:pathroot in the
+                 display XSLT. -->
+            <xsl:value-of select="$kind"/>
+            <xsl:text>/</xsl:text>
+            <xsl:value-of select="$fileId"/>
+            <xsl:if test="$kind = 'lessonbooks' or $kind = 'diaries'">
+              <xsl:text>/</xsl:text>
+              <xsl:value-of select="$recordId"/>
+            </xsl:if>
+            <!-- It would be nicer to leave the extension out, to
+                 allow more easily for different rendering
+                 options. However, since there's likely only to ever
+                 be HTML, this saves repeating adding the same
+                 extension everywhere when rendering a document. -->
+            <xsl:text>.html</xsl:text>
           </field>
 
           <xsl:if test="$kind = 'correspondence'">
@@ -90,13 +103,13 @@
             </xsl:for-each>
           </xsl:if>
 
-          <xsl:if test="$kind != 'diary'">
+          <xsl:if test="$kind != 'diaries'">
             <field name="title">
               <xsl:value-of select="sdo:itemDesc/dc:title"/>
             </field>
           </xsl:if>
 
-          <xsl:if test="$kind = 'lessonbook'">
+          <xsl:if test="$kind = 'lessonbooks'">
             <field name="pupil">
               <xsl:value-of select="sdo:itemDesc/tei:rs[@role='pupil']/@key"/>
               <xsl:text> </xsl:text>
@@ -105,11 +118,11 @@
           </xsl:if>
 
           <xsl:if test="substring(sdo:itemDesc/dcterms:created, 9, 4) != '[DD]'">
-            <!-- in full W3C format Solr requires:  yyyy-mm-ddT12:00:00Z -->
+            <!-- in full W3C format Solr requires: yyyy-mm-ddT12:00:00Z -->
             <field name="dateFull">
               <xsl:value-of select="sdo:itemDesc/dcterms:created"/>
             </field>
-            <!-- as a handy string:   yyyy-mm-dd -->
+            <!-- as a handy string: yyyy-mm-dd -->
             <field name="dateShort">
               <xsl:value-of select="substring(sdo:itemDesc/dcterms:created, 1, 10)"/>
             </field>

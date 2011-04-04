@@ -1,6 +1,7 @@
 <xsl:stylesheet version="2.0"
                 xmlns:tei="http://www.tei-c.org/ns/1.0"
                 xmlns:xmg="http://www.cch.kcl.ac.uk/xmod/global/1.0"
+                xmlns:xmp="http://www.cch.kcl.ac.uk/xmod/properties/1.0"
                 xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
@@ -67,18 +68,7 @@
   <xsl:template match="doc">
     <li>
       <p>
-        <a>
-          <xsl:attribute name="href">
-            <xsl:text>../../documents/</xsl:text>
-            <xsl:value-of select="str[@name='kind']"/>
-            <xsl:text>/</xsl:text>
-            <xsl:value-of select="str[@name='fileId']"/>
-            <xsl:if test="str[@name='kind']='diaries'">
-              <xsl:text>/</xsl:text>
-              <xsl:value-of select="str[@name='dateShort']"/>
-            </xsl:if>
-            <xsl:text>.html</xsl:text>
-          </xsl:attribute>
+        <a href="{$xmp:context-path}/documents/{str[@name='url']}">
           <xsl:choose>
             <xsl:when test="str[@name='title']">
               <xsl:value-of select="str[@name='title']"/>

@@ -32,6 +32,12 @@
             <xsl:if test="$diaries">
               <li><a href="#diaries">Diaries</a></li>
             </xsl:if>
+            <xsl:if test="$lessonbooks">
+              <li><a href="#lessonbooks">Lessonbooks</a></li>
+            </xsl:if>
+            <xsl:if test="$other">
+              <li><a href="#other">Other material</a></li>
+            </xsl:if>
           </ul>
           <xsl:call-template name="make-section">
             <xsl:with-param name="name" select="'Correspondence'"/>

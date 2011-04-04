@@ -34,26 +34,4 @@
     </div>
   </xsl:template>
 
-  <xsl:template match="doc">
-    <li>
-      <p>
-        <a>
-          <xsl:attribute name="href">
-            <xsl:text>../../documents/</xsl:text>
-            <xsl:value-of select="str[@name='kind']"/>
-            <xsl:text>/</xsl:text>
-            <xsl:value-of select="str[@name='fileId']"/>
-            <xsl:text>.html</xsl:text>
-          </xsl:attribute>
-          <xsl:value-of select="str[@name='title']"/>
-        </a>
-      </p>
-      <xsl:if test="str[@name='description']">
-        <p>
-          <xsl:value-of select="str[@name='description']"/>
-        </p>
-      </xsl:if>
-    </li>
-  </xsl:template>
-
 </xsl:stylesheet>
