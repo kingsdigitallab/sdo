@@ -3,6 +3,7 @@
                 xmlns:xmg="http://www.cch.kcl.ac.uk/xmod/global/1.0"
                 xmlns:xmp="http://www.cch.kcl.ac.uk/xmod/properties/1.0"
                 xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0"
+                xmlns:xs="http://www.w3.org/2001/XMLSchema"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:import href="../default.xsl"/>
@@ -74,7 +75,8 @@
               <xsl:value-of select="str[@name='title']"/>
             </xsl:when>
             <xsl:otherwise>
-              <xsl:text>Entry</xsl:text>
+              <xsl:text>Diary entry by Schenker for </xsl:text>
+              <xsl:value-of select="format-date(xs:date($date), '[D] [MNn] [Y]')"/>
             </xsl:otherwise>
           </xsl:choose>
         </a>

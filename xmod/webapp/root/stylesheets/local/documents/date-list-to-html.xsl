@@ -13,7 +13,7 @@
     <xsl:text>Browse </xsl:text>
     <xsl:choose>
       <xsl:when test="$type = 'cd'">
-        <xsl:text>Correspondnece and Diaries</xsl:text>
+        <xsl:text>Correspondence and Diaries</xsl:text>
       </xsl:when>
       <xsl:otherwise>
         <xsl:value-of select="upper-case(substring($type, 1, 1))"/>

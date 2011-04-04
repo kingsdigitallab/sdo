@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet exclude-result-prefixes="#all" version="2.0"
-                xmlns:dc="http://purl.org/dc/elements/1.1/"
-                xmlns:dcterms="http://purl.org/dc/terms/"
-                xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
-                xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
-                xmlns:tei="http://www.tei-c.org/ns/1.0"
-                xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
-                xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:import href="../../xmod/solr/tei-to-solr.xsl"/>
 
@@ -23,12 +20,14 @@
 
   <xsl:template match="/">
     <add>
-      <xsl:variable name="fileId" select="/sdo:recordCollection/sdo:collectionDesc/sdo:source/*[1]/@sdoID"/>
+      <xsl:variable name="fileId"
+        select="/sdo:recordCollection/sdo:collectionDesc/sdo:source/*[1]/@sdoID"/>
 
       <!-- each Solr doc is based on a single sdo:record -->
       <xsl:for-each select="//sdo:record">
         <!-- $kind refers to whether it is correspondence, diary, etc. -->
-        <xsl:variable name="source" select="local-name(preceding-sibling::sdo:collectionDesc/sdo:source/*[1])"/>
+        <xsl:variable name="source"
+          select="local-name(preceding-sibling::sdo:collectionDesc/sdo:source/*[1])"/>
         <xsl:variable name="kind">
           <xsl:choose>
             <xsl:when test="$source = 'diary'">
@@ -109,6 +108,7 @@
             </field>
           </xsl:if>
 
+
           <xsl:if test="$kind = 'lessonbooks'">
             <field name="pupil">
               <xsl:value-of select="sdo:itemDesc/tei:rs[@role='pupil']/@key"/>
@@ -154,10 +154,10 @@
 
           <field name="text">
             <xsl:variable name="free-text">
-              <xsl:apply-templates mode="free-text" select="tei:div" />
+              <xsl:apply-templates mode="free-text" select="tei:div"/>
             </xsl:variable>
 
-            <xsl:value-of select="normalize-space($free-text)" />
+            <xsl:value-of select="normalize-space($free-text)"/>
           </field>
         </doc>
       </xsl:for-each>
