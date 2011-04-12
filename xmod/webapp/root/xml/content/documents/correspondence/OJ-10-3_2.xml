@@ -4,7 +4,6 @@
  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
- <!-- This has a cross reference after signature to OJ 10/3, [1], so check it works. Put additional cross reference into fn 1 once diaries are online. -->
  <sdo:collectionDesc>
   <sdo:source>
    <sdo:correspondence mfID="364" sdoID="OJ-10-3_2">OJ 10/3, [2]</sdo:correspondence>
@@ -38,9 +37,12 @@
  <sdo:record ID="r0001">
 
   <sdo:itemDesc>
-   <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~ H+JSchenker</tei:rs>
-   <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~ HSchenker</tei:rs>
-   <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~ H+JSchenker</tei:rs>
+   <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+    H+JSchenker</tei:rs>
+   <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+    HSchenker</tei:rs>
+   <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+    H+JSchenker</tei:rs>
    <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
    <dc:title>Typewritten letter from Otto Erich Deutsch to Schenker, dated September 8,
     1913</dc:title>
@@ -63,7 +65,7 @@
      <tei:addrLine><tei:note type="editorial">printed:</tei:note> OTTO ERICH DEUTSCH</tei:addrLine>
     </tei:address>
     <tei:dateline rend="indent-55"><tei:handShift new="#TPunk"/><tei:placeName>Wien</tei:placeName>,
-      <tei:date when="1913-09-08">8. Sepetmber 1913.</tei:date></tei:dateline>
+      <tei:date when="1913-09-08">8. September 1913.</tei:date></tei:dateline>
     <tei:salute rend="indent-35">Sehr geehrter Herr <tei:persName key="entity-000632"
       >Doktor</tei:persName>!</tei:salute>
    </tei:opener>
@@ -71,18 +73,18 @@
    <tei:p rend="first">In<tei:note xml:id="r0001-fn1" type="editorial" place="foot">Receipt of this
      letter is not reported in Schenker's diary. The Schenkers returned to Vienna from vacation on
      September 10, so if Deutsch sent it to his vacation address, it may have taken time to reach
-     him. <!-- XR -->His reply is recorded at OJ 1/13, p. 425(b), September 23, 1913: "Antwort an Otto Erich
-     Deutsch mit einem Seitenhiebe nach seinem Mitarbeiter Scheibler." ("Reply to Otto Erich Deutsch
-     with a passing shot at his collaborator Scheibler.").<!-- XR --></tei:note> meiner üppigen Korrespondenz
-    mit meinem 65jährigen Mitarbeiter Dr. <tei:persName key="entity-000764">Ludwig
-     Scheibler</tei:persName> in <tei:placeName key="entity-002603">Bonn</tei:placeName>
-     (<tei:placeName key="entity-002764">Annabergstrasse 19</tei:placeName>) ist natürlich auch von
-    Ihnen die Rede gewesen. Ich erlaube mir, Ihnen auf seinen Wunsch eine Stelle mitzuteilen
-     (<tei:ref cRef="OJ-10-3_1:r0001">Beilage</tei:ref>),<tei:note xml:id="r0001-fn2"
-     type="editorial" place="foot">The enclosure is preserved as <tei:ref cRef="OJ-10-3_1:r0001">OJ
-      10/3, [1]</tei:ref>.</tei:note> die Sie vielleicht interessiert, und aus der Sie trotz des
-    rauhen <tei:persName key="entity-000764">Scheibler</tei:persName>-Tones und trotz der unsanften
-    Klaue des Schreibers das für Sie etwa Interessante si<tei:subst>
+     him. <!-- XR -->His reply is recorded at OJ 1/13, p. 425(b), September 23, 1913: "Antwort an
+     Otto Erich Deutsch mit einem Seitenhiebe nach seinem Mitarbeiter Scheibler." ("Reply to Otto
+     Erich Deutsch with a passing shot at his collaborator Scheibler.").<!-- XR --></tei:note>
+    meiner üppigen Korrespondenz mit meinem 65jährigen Mitarbeiter Dr. <tei:persName
+     key="entity-000764">Ludwig Scheibler</tei:persName> in <tei:placeName key="entity-002603"
+     >Bonn</tei:placeName> (<tei:placeName key="entity-002764">Annabergstrasse 19</tei:placeName>)
+    ist natürlich auch von Ihnen die Rede gewesen. Ich erlaube mir, Ihnen auf seinen Wunsch eine
+    Stelle mitzuteilen (<tei:ref cRef="OJ-10-3_1:r0001">Beilage</tei:ref>),<tei:note
+     xml:id="r0001-fn2" type="editorial" place="foot">The enclosure is preserved as <tei:ref
+      cRef="OJ-10-3_1:r0001">OJ 10/3, [1]</tei:ref>.</tei:note> die Sie vielleicht interessiert, und
+    aus der Sie trotz des rauhen <tei:persName key="entity-000764">Scheibler</tei:persName>-Tones
+    und trotz der unsanften Klaue des Schreibers das für Sie etwa Interessante si<tei:subst>
      <tei:del rend="overwirtten">v</tei:del>
      <tei:add place="superimposed">c</tei:add>
     </tei:subst>her heraushören oder -lesen werden.- Wenn Sie heimkommen, neugestärkt wie ich hoffe,
@@ -102,7 +104,8 @@
 
    <tei:closer>
     <tei:salute>Mit den besten Grüssen Ihr ergebener</tei:salute>
-    <tei:signed rend="indent-75"><tei:handShift new="#OED"/>Deutsch</tei:signed>
+    <tei:signed rend="indent-75"><tei:handShift new="#OED"/><tei:persName key="entity-000164"
+      >Deutsch</tei:persName></tei:signed>
    </tei:closer>
 
    <tei:note type="editorial">Enclosure: <tei:ref cRef="OJ-10-3_1:r0001">OJ 10/3,
@@ -131,7 +134,7 @@
      (<tei:ref cRef="OJ-10-3_1:r0001">enclosed</tei:ref>)<tei:ptr corresp="#r0001-fn02"
      type="footnote"/> that may interest you, from which you surely will, despite <tei:persName
      key="entity-000764">Scheibler</tei:persName>'s rough tone, and despite the writer's harsh
-    scrawl, detect, or rather read, something that will be of possible interest to you. -- When you
+    scrawl, detect, or rather read, something that will be of possible interest to you. – When you
     return home, reinvigorated, I hope, I, with weary step, will probably just have left summery
      <tei:placeName key="entity-002484">Vienna</tei:placeName>, which in summer turned so
     beautifully autumnal,<tei:ptr corresp="#r0001-fn03" type="footnote"/> in order finally after
@@ -143,7 +146,8 @@
 
    <tei:closer>
     <tei:salute>With warmest greetings, yours truly,</tei:salute>
-    <tei:signed rend="indent-75"><tei:handShift new="#OED"/>Deutsch</tei:signed>
+    <tei:signed rend="indent-75"><tei:handShift new="#OED"/><tei:persName key="entity-000164"
+      >Deutsch</tei:persName></tei:signed>
    </tei:closer>
 
    <tei:note type="editorial">Enclosure: <tei:ref cRef="OJ-10-3_1:r0001">OJ 10/3,
