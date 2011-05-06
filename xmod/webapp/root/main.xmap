@@ -136,6 +136,17 @@
       </map:match>
 
       <!-- Browse by date. -->
+      <map:match pattern="documents/dates/date.html">
+            <map:aggregate element="aggregation">
+              <map:part src="cocoon://_internal/menu/main.xml"/>
+              <map:part src="cocoon://_internal/solr/query/q=kind%3A*&amp;rows=5000&amp;sort=dateFull%20asc&amp;fl=dateShort,fileId"/>
+            </map:aggregate>
+            <map:transform src="stylesheets/local/documents/date-list-to-html.xsl">
+              <map:parameter name="type" value="all"/>
+            </map:transform>
+            <map:serialize type="xhtml"/>
+      </map:match>
+      
       <map:match pattern="documents/*/date.html">
         <map:select type="resource-exists">
           <map:when test="xml/content/documents/{1}">

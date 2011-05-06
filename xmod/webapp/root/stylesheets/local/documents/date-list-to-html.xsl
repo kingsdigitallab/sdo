@@ -11,15 +11,8 @@
 
   <xsl:variable name="xmg:title">
     <xsl:text>Browse </xsl:text>
-    <xsl:choose>
-      <xsl:when test="$type = 'cd'">
-        <xsl:text>Correspondence and Diaries</xsl:text>
-      </xsl:when>
-      <xsl:otherwise>
         <xsl:value-of select="upper-case(substring($type, 1, 1))"/>
         <xsl:value-of select="substring($type, 2)"/>
-      </xsl:otherwise>
-    </xsl:choose>
     <xsl:text> by Date</xsl:text>
   </xsl:variable>
 
