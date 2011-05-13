@@ -1,10 +1,8 @@
-<xsl:stylesheet version="2.0"
-                xmlns:tei="http://www.tei-c.org/ns/1.0"
-                xmlns:xmg="http://www.cch.kcl.ac.uk/xmod/global/1.0"
-                xmlns:xmp="http://www.cch.kcl.ac.uk/xmod/properties/1.0"
-                xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0"
-                xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="2.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xmg="http://www.cch.kcl.ac.uk/xmod/global/1.0"
+  xmlns:xmp="http://www.cch.kcl.ac.uk/xmod/properties/1.0"
+  xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:import href="../default.xsl"/>
 
@@ -20,22 +18,25 @@
         <h1>
           <xsl:choose>
             <xsl:when test="/*/tei:TEI">
-              <xsl:value-of select="/*/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)]" />
+              <xsl:value-of
+                select="/*/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)]"/>
             </xsl:when>
             <xsl:otherwise>
               <xsl:value-of select="$xmg:title"/>
             </xsl:otherwise>
           </xsl:choose>
         </h1>
-        
+
         <xsl:if test="/*/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type = 'sub']">
           <h2>
             <xsl:apply-templates mode="pagehead"
-                                 select="/*/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type = 'sub']" />
+              select="/*/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type = 'sub']"
+            />
           </h2>
         </xsl:if>
-        
-        <xsl:variable name="authors-and-editors" select="/*/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:*[self::tei:author or self::tei:editor]"/>
+
+        <xsl:variable name="authors-and-editors"
+          select="/*/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:*[self::tei:author or self::tei:editor]"/>
         <xsl:if test="$authors-and-editors">
           <p>
             <xsl:text>(</xsl:text>
@@ -58,7 +59,7 @@
         <h2>
           <xsl:value-of select="$name"/>
         </h2>
-              
+
         <ul>
           <xsl:apply-templates select="$docs"/>
         </ul>
@@ -70,15 +71,19 @@
     <li>
       <p>
         <a href="{$xmp:context-path}/documents/{str[@name='url']}">
-          <xsl:choose>
-            <xsl:when test="str[@name='title']">
-              <xsl:value-of select="str[@name='title']"/>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:text>Diary entry by Schenker for </xsl:text>
-              <xsl:value-of select="format-date(xs:date($date), '[D] [MNn] [Y]')"/>
-            </xsl:otherwise>
-          </xsl:choose>
+          <xsl:value-of select="str[@name='fileId']"/>
+          <xsl:text> </xsl:text>
+          <strong>
+            <xsl:choose>
+              <xsl:when test="str[@name='title']">
+                <xsl:value-of select="str[@name='title']"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:text>Diary entry by Schenker for </xsl:text>
+                <xsl:value-of select="format-date(xs:date($date), '[D] [MNn] [Y]')"/>
+              </xsl:otherwise>
+            </xsl:choose>
+          </strong>
         </a>
       </p>
       <xsl:if test="str[@name='description']">
