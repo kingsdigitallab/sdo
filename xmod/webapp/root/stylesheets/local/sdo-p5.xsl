@@ -6,6 +6,11 @@
 
  <!-- NOW OVERRIDE DEFAULTS FROM p5.xsl OR SUPPLY TEMPLATES IT DOESN'T HAVE -->
 
+
+ <xsl:template match="tei:ab">
+  <xsl:apply-templates/>
+ </xsl:template>
+
  <xsl:template match="tei:address">
   <xsl:apply-templates/>
   <xsl:if test="following-sibling::tei:address">
@@ -22,9 +27,18 @@
   <xsl:apply-templates/>
  </xsl:template>
 
- <xsl:template match="tei:closer | tei:opener">
-  <xsl:apply-templates/>
- </xsl:template>
+ <!-- <xsl:template match="tei:closer">
+  <xsl:choose>
+   <xsl:when test="starts-with(parent::tei:div/@type, 'trans')">
+    <div id="closer">
+     <xsl:apply-templates/>
+    </div>
+   </xsl:when>
+   <xsl:otherwise>
+    <xsl:apply-templates/>
+   </xsl:otherwise>
+  </xsl:choose>
+ </xsl:template> -->
 
  <xsl:template match="tei:del">
   <xsl:if test="@rend = 'overstrike'">
@@ -45,19 +59,21 @@
    </xsl:when>
    <!-- match 'transcription' and 'translation' divs in a primary document -->
    <xsl:when test="parent::sdo:record">
-    <xsl:if test="child::tei:opener">
-     <div id="opener">
-      <xsl:apply-templates select="tei:opener"/>
-     </div>
-    </xsl:if>
-    <div>
-     <xsl:apply-templates select="tei:p"/>
-    </div>
-    <xsl:if test="child::tei:closer">
-     <div id="closer">
-      <xsl:apply-templates select="tei:closer"/>
-     </div>
-    </xsl:if>
+    <xsl:choose>
+     <xsl:when test="child::tei:opener">
+      <div id="opener">
+       <xsl:apply-templates select="child::tei:opener"/>
+      </div>
+      <div>
+       <xsl:apply-templates select="child::tei:opener/following-sibling::tei:*[not(self::tei:closer)]"/>
+      </div>
+      <xsl:if test="child::tei:closer">
+       <div id="closer">
+        <xsl:apply-templates select="tei:closer"/>
+       </div>
+      </xsl:if>
+     </xsl:when>
+    </xsl:choose>
    </xsl:when>
    <!--   Default  -->
    <xsl:otherwise>
@@ -181,6 +197,19 @@
    </xsl:otherwise>
   </xsl:choose>
  </xsl:template>
+
+ <!-- <xsl:template match="tei:opener">
+  <xsl:choose>
+   <xsl:when test="starts-with(parent::tei:div/@type, 'trans')">
+    <div id="opener">
+     <xsl:apply-templates/>
+    </div>
+   </xsl:when>
+   <xsl:otherwise>
+    <xsl:apply-templates/>
+   </xsl:otherwise>
+  </xsl:choose>
+ </xsl:template> -->
 
  <xsl:template match="tei:pb">
   <xsl:if test="number(@n) > 1">
