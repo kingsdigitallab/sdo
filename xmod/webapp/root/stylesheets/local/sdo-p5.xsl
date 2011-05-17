@@ -27,19 +27,6 @@
   <xsl:apply-templates/>
  </xsl:template>
 
- <!-- <xsl:template match="tei:closer">
-  <xsl:choose>
-   <xsl:when test="starts-with(parent::tei:div/@type, 'trans')">
-    <div id="closer">
-     <xsl:apply-templates/>
-    </div>
-   </xsl:when>
-   <xsl:otherwise>
-    <xsl:apply-templates/>
-   </xsl:otherwise>
-  </xsl:choose>
- </xsl:template> -->
-
  <xsl:template match="tei:del">
   <xsl:if test="@rend = 'overstrike'">
    <span class="poppins">
@@ -65,7 +52,8 @@
        <xsl:apply-templates select="child::tei:opener"/>
       </div>
       <div>
-       <xsl:apply-templates select="child::tei:opener/following-sibling::tei:*[not(self::tei:closer)]"/>
+       <xsl:apply-templates
+        select="child::tei:opener/following-sibling::tei:*[not(self::tei:closer)]"/>
       </div>
       <xsl:if test="child::tei:closer">
        <div id="closer">
@@ -73,6 +61,17 @@
        </div>
       </xsl:if>
      </xsl:when>
+     <xsl:otherwise>
+      <div>
+       <xsl:apply-templates
+        select="child::tei:*[not(self::tei:closer)]"/>
+      </div>
+      <xsl:if test="child::tei:closer">
+       <div id="closer">
+        <xsl:apply-templates select="tei:closer"/>
+       </div>
+      </xsl:if>
+     </xsl:otherwise>
     </xsl:choose>
    </xsl:when>
    <!--   Default  -->
@@ -197,19 +196,6 @@
    </xsl:otherwise>
   </xsl:choose>
  </xsl:template>
-
- <!-- <xsl:template match="tei:opener">
-  <xsl:choose>
-   <xsl:when test="starts-with(parent::tei:div/@type, 'trans')">
-    <div id="opener">
-     <xsl:apply-templates/>
-    </div>
-   </xsl:when>
-   <xsl:otherwise>
-    <xsl:apply-templates/>
-   </xsl:otherwise>
-  </xsl:choose>
- </xsl:template> -->
 
  <xsl:template match="tei:pb">
   <xsl:if test="number(@n) > 1">
