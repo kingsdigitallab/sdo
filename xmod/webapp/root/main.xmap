@@ -298,6 +298,7 @@
             <map:aggregate element="aggregation">
               <map:part src="cocoon://_internal/menu/main.xml" />
               <map:part src="cocoon://_internal/solr/query/q=dateShort%3A{1}&amp;rows=5000" />
+              <map:part element="dates" src="cocoon://_internal/solr/query/q=dateShort%3A*&amp;rows=5000&amp;fl=dateShort&amp;sort=dateShort%20asc" />
               <map:part src="xml/content/profiles/date/{1}.xml" />
             </map:aggregate>
           </map:when>
@@ -305,6 +306,7 @@
             <map:aggregate element="aggregation">
               <map:part src="cocoon://_internal/menu/main.xml" />
               <map:part src="cocoon://_internal/solr/query/q=dateShort%3A{1}&amp;rows=5000" />
+              <map:part element="dates" src="cocoon://_internal/solr/query/q=dateShort%3A*&amp;rows=5000&amp;fl=dateShort&amp;sort=dateShort%20asc" />
             </map:aggregate>
           </map:otherwise>
         </map:select>
