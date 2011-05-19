@@ -4,6 +4,7 @@ urlpatterns = patterns(
     'archives.views.main',
     (r'^$', 'index'),
     (r'^dates/$', 'dates'),
+    (r'^document/(?P<id>\d+)$', 'document')
 )
 
 urlpatterns += patterns(
