@@ -113,7 +113,11 @@
           <map:parameter name="page" value="{request-param:p}" />
         </map:transform>
         <map:transform type="xinclude" />
-        <map:transform src="stylesheets/local/search-to-html.xsl" />
+        <map:transform src="stylesheets/local/search-to-html.xsl">
+          <map:parameter name="filedir" value="search" />
+          <map:parameter name="filename" value="" />
+          <map:parameter name="fileextension" value="" />
+        </map:transform>
         <map:serialize type="xhtml" />
       </map:match>
     </map:pipeline>
@@ -144,6 +148,9 @@
            />
         </map:aggregate>
         <map:transform src="stylesheets/local/documents/date-list-to-html.xsl">
+          <map:parameter name="filedir" value="documents/dates" />
+          <map:parameter name="filename" value="date.xml" />
+          <map:parameter name="fileextension" value="html" />
           <map:parameter name="type" value="all" />
         </map:transform>
         <map:serialize type="xhtml" />
@@ -159,6 +166,9 @@
                />
             </map:aggregate>
             <map:transform src="stylesheets/local/documents/date-list-to-html.xsl">
+              <map:parameter name="filedir" value="documents/{1}" />
+              <map:parameter name="filename" value="date.xml" />
+              <map:parameter name="fileextension" value="html" />
               <map:parameter name="type" value="{1}" />
             </map:transform>
             <map:serialize type="xhtml" />
@@ -177,7 +187,11 @@
           <map:part src="cocoon://_internal/menu/main.xml" />
           <map:part src="cocoon://_internal/solr/query/q=kind%3Acorrespondence&amp;rows=5000&amp;fl=type,fileId" />
         </map:aggregate>
-        <map:transform src="stylesheets/local/documents/correspondence-type-list-to-html.xsl" />
+        <map:transform src="stylesheets/local/documents/correspondence-type-list-to-html.xsl">
+          <map:parameter name="filedir" value="documents/correspondence" />
+          <map:parameter name="filename" value="type.xml" />
+          <map:parameter name="fileextension" value="html" />
+        </map:transform>
         <map:serialize type="xhtml" />
       </map:match>
 
@@ -187,7 +201,11 @@
           <map:part src="cocoon://_internal/menu/main.xml" />
           <map:part src="cocoon://_internal/solr/query/q=kind%3Acorrespondence&amp;rows=5000&amp;fl=correspondence" />
         </map:aggregate>
-        <map:transform src="stylesheets/local/documents/correspondence-list-to-html.xsl" />
+        <map:transform src="stylesheets/local/documents/correspondence-list-to-html.xsl">
+          <map:parameter name="filedir" value="documents/correspondence" />
+          <map:parameter name="filename" value="correspondence.xml" />
+          <map:parameter name="fileextension" value="html" />
+        </map:transform>
         <map:serialize type="xhtml" />
       </map:match>
 
@@ -197,7 +215,11 @@
           <map:part src="cocoon://_internal/menu/main.xml" />
           <map:part src="cocoon://_internal/solr/query/q=pupil%3A*&amp;rows=5000&amp;fl=pupil" />
         </map:aggregate>
-        <map:transform src="stylesheets/local/documents/pupil-list-to-html.xsl" />
+        <map:transform src="stylesheets/local/documents/pupil-list-to-html.xsl">
+          <map:parameter name="filedir" value="documents/lessonbooks" />
+          <map:parameter name="filename" value="pupil.xml" />
+          <map:parameter name="fileextension" value="html" />
+        </map:transform>
         <map:serialize type="xhtml" />
       </map:match>
 
@@ -236,6 +258,9 @@
               <map:part src="xml/content/documents/{1}/{2}.xml" />
             </map:aggregate>
             <map:transform src="stylesheets/local/documents/{1}-entry-to-html.xsl">
+              <map:parameter name="filedir" value="documents/{1}/{2}" />
+              <map:parameter name="filename" value="{3}.xml" />
+              <map:parameter name="fileextension" value="html" />
               <map:parameter name="recordId" value="{3}" />
             </map:transform>
             <map:serialize type="xhtml" />
@@ -260,7 +285,7 @@
         </map:aggregate>
         <map:transform src="stylesheets/local/profiles/index-to-html.xsl">
           <map:parameter name="filedir" value="profiles/{1}" />
-          <map:parameter name="filename" value="{1}" />
+          <map:parameter name="filename" value="index.xml" />
           <map:parameter name="fileextension" value="html" />
         </map:transform>
         <map:serialize type="xhtml" />
@@ -283,7 +308,11 @@
             </map:aggregate>
           </map:otherwise>
         </map:select>
-        <map:transform src="stylesheets/local/entities/date-to-html.xsl" />
+        <map:transform src="stylesheets/local/entities/date-to-html.xsl">
+          <map:parameter name="filedir" value="profiles/date/" />
+          <map:parameter name="filename" value="{1}.xml" />
+          <map:parameter name="fileextension" value="html" />
+        </map:transform>
         <map:serialize type="xhtml" />
       </map:match>
 
@@ -307,6 +336,9 @@
           </map:otherwise>
         </map:select>
         <map:transform src="stylesheets/local/entities/correspondence-to-html.xsl">
+          <map:parameter name="filedir" value="profiles/correspondence" />
+          <map:parameter name="filename" value="{1}.xml" />
+          <map:parameter name="fileextension" value="html" />
           <map:parameter name="entity" value="{1}" />
         </map:transform>
         <map:serialize type="xhtml" />
@@ -329,7 +361,11 @@
             </map:aggregate>
           </map:otherwise>
         </map:select>
-        <map:transform src="stylesheets/local/entities/correspondence-type-to-html.xsl" />
+        <map:transform src="stylesheets/local/entities/correspondence-type-to-html.xsl">
+          <map:parameter name="filedir" value="profiles/correspondence-types" />
+          <map:parameter name="filename" value="{1}.xml" />
+          <map:parameter name="fileextension" value="html" />
+        </map:transform>
         <map:serialize type="xhtml" />
       </map:match>
 
@@ -355,7 +391,11 @@
             </map:aggregate>
           </map:otherwise>
         </map:select>
-        <map:transform src="stylesheets/local/entities/person-to-html.xsl" />
+        <map:transform src="stylesheets/local/entities/person-to-html.xsl">
+          <map:parameter name="filedir" value="profiles/person" />
+          <map:parameter name="filename" value="{1}.xml" />
+          <map:parameter name="fileextension" value="html" />
+        </map:transform>
         <map:serialize type="xhtml" />
       </map:match>
 
