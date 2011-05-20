@@ -29,7 +29,34 @@
     <h2>Results for <i><xsl:value-of select="lst/lst[@name='params']/str[@name='q']" /></i></h2>
 
     <ul>
-      <xsl:apply-templates select="result/doc" />
+      <xsl:for-each select="result/doc">
+        <xsl:variable name="hl-pos" select="position()" />
+        <xsl:variable name="kind" select="str[@name='kind']" />
+        
+        <li>
+          <a>
+            <xsl:attribute name="href">
+              <xsl:text>../documents/</xsl:text>
+              <xsl:value-of select="str[@name = 'url']" />
+            </xsl:attribute>
+            <xsl:value-of select="str[@name='title']" />
+            <xsl:if test="$kind = 'diaries'">
+              <xsl:text>Diary entry for </xsl:text>
+              <xsl:value-of select="str[@name='dateShort']" />
+            </xsl:if>
+          </a>
+          
+          <xsl:for-each select="../../lst[@name = 'highlighting']/lst[$hl-pos]">
+            <p>
+              <xsl:text>... </xsl:text>
+              <xsl:call-template name="unescape-highlight">
+                <xsl:with-param name="text" select="arr/str" />
+              </xsl:call-template>
+              <xsl:text> ...</xsl:text>
+            </p>
+          </xsl:for-each>
+        </li>
+      </xsl:for-each>
     </ul>
 
     <p>Pages: <xsl:for-each select="1 to $total-pages">
@@ -49,21 +76,32 @@
     </p>
   </xsl:template>
 
-  <xsl:template match="result/doc">
-    <xsl:variable name="kind" select="str[@name='kind']" />
-    <li>
-      <a>
-        <xsl:attribute name="href">
-          <xsl:text>../documents/</xsl:text>
-          <xsl:value-of select="str[@name = 'url']" />
-        </xsl:attribute>
-        <xsl:value-of select="str[@name='title']" />
-        <xsl:if test="$kind = 'diaries'">
-          <xsl:text>Diary entry for </xsl:text>
-          <xsl:value-of select="str[@name='dateShort']" />
-        </xsl:if>
-      </a>
-    </li>
-  </xsl:template>
+  <xsl:template name="unescape-highlight">
+    <xsl:param name="text" select="''" />
 
+    <xsl:variable name="gt" select="'&gt;'" />
+    <xsl:variable name="open-tag" select="'&lt;'" />
+    <xsl:variable name="close-tag" select="'&lt;/'" />
+    <xsl:variable name="pre-hl" select="substring-before($text, $open-tag)" />
+
+    <xsl:choose>
+      <xsl:when test="$pre-hl or starts-with($text, $open-tag)">
+        <xsl:value-of select="$pre-hl" />
+        <b>
+          <xsl:value-of select="substring-after(substring-before($text, $close-tag), $gt)" />
+        </b>
+
+        <xsl:variable name="remainder" select="substring-after(substring-after($text, $gt), $gt)" />
+
+        <xsl:if test="$remainder">
+          <xsl:call-template name="unescape-highlight">
+            <xsl:with-param name="text" select="$remainder" />
+          </xsl:call-template>
+        </xsl:if>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="$text" />
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
 </xsl:stylesheet>
