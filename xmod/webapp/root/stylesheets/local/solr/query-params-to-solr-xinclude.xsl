@@ -34,6 +34,6 @@
 
   <xsl:template name="escape-parameter">
     <xsl:param name="param" />
-    <xsl:value-of select="translate($param, ';&amp;*^#@!()', '')" />
+    <xsl:value-of select="encode-for-uri(translate($param, ';&amp;*^#@!()', ''))" />
   </xsl:template>
 </xsl:stylesheet>
