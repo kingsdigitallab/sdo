@@ -85,6 +85,14 @@
                     <xsl:value-of select="." />
                   </dd>
                 </xsl:for-each>
+                <xsl:for-each select="container/statements/statement[@type != current()/statements/statement/@type]">
+                  <dt>
+                    <xsl:value-of select="@type" />
+                  </dt>
+                  <dd>
+                    <xsl:value-of select="." />
+                  </dd>
+                </xsl:for-each>
               </dl>
             </div>
           </td>
