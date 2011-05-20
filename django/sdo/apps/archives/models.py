@@ -114,7 +114,7 @@ class Container(models.Model):
         unique_together = ("collection", "box", "folder")
 
 class ContainerStatements(models.Model):
-    container_id = models.ForeignKey(Container)
+    container_id = models.ForeignKey(Container, related_name='container_statements')
     statement_type = models.CharField(max_length=1, choices=STATEMENT_TYPES, help_text=u"Indicate the kind of statement being made about this container")
     description = models.TextField(help_text=u"Make a statement about this container")    
     
