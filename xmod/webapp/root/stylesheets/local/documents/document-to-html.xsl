@@ -118,7 +118,7 @@
       <xsl:text>: </xsl:text>
       <xsl:choose>
         <xsl:when test="$previous">
-          <a href="{concat($xmg:pathroot, $previous/str[@name='url'])}">Previous</a>
+          <a href="{concat($xmg:pathroot, '/../', $previous/str[@name='url'])}">Previous</a>
         </xsl:when>
         <xsl:otherwise>
           <xsl:text>Previous</xsl:text>
@@ -127,7 +127,7 @@
       <xsl:text> and </xsl:text>
       <xsl:choose>
         <xsl:when test="$next">
-          <a href="{concat($xmg:pathroot, $next/str[@name='url'])}">Next</a>
+          <a href="{concat($xmg:pathroot, '/../', $next/str[@name='url'])}">Next</a>
         </xsl:when>
         <xsl:otherwise>
           <xsl:text>Next</xsl:text>
