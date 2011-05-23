@@ -3,12 +3,25 @@
 
 
  <xsl:import href="../xmod/tei/p5.xsl"/>
+ 
+ <xsl:strip-space elements="tei:subst"/>
 
  <!-- NOW OVERRIDE DEFAULTS FROM p5.xsl OR SUPPLY TEMPLATES IT DOESN'T HAVE -->
 
 
  <xsl:template match="tei:ab">
   <xsl:apply-templates/>
+ </xsl:template>
+
+ <xsl:template match="tei:add">
+  <xsl:choose>
+   <xsl:when test="@place = 'superimposed'">
+    <xsl:apply-templates/>
+   </xsl:when>
+   <xsl:otherwise>
+    <xsl:apply-templates/>
+   </xsl:otherwise>
+  </xsl:choose>
  </xsl:template>
 
  <xsl:template match="tei:address">
@@ -28,11 +41,19 @@
  </xsl:template>
 
  <xsl:template match="tei:del">
-  <xsl:if test="@rend = 'overstrike'">
-   <span class="poppins">
+  <xsl:choose>
+   <xsl:when test="@rend = 'overstrike'">
     <xsl:apply-templates/>
-   </span>
-  </xsl:if>
+   </xsl:when>
+   <xsl:when test="@rend = 'overwritten'">
+    <span class="erased2">
+     <xsl:apply-templates/>
+    </span>
+   </xsl:when>
+   <xsl:otherwise>
+    <xsl:apply-templates/>
+   </xsl:otherwise>
+  </xsl:choose>
  </xsl:template>
 
  <xsl:template match="tei:div">
@@ -63,8 +84,7 @@
      </xsl:when>
      <xsl:otherwise>
       <div>
-       <xsl:apply-templates
-        select="child::tei:*[not(self::tei:closer)]"/>
+       <xsl:apply-templates select="child::tei:*[not(self::tei:closer)]"/>
       </div>
       <xsl:if test="child::tei:closer">
        <div id="closer">
@@ -186,7 +206,9 @@
      </xsl:when>
      <xsl:otherwise>
       <span class="editorial">
+       <xsl:text>[</xsl:text>
        <xsl:apply-templates/>
+       <xsl:text>]</xsl:text>
       </span>
      </xsl:otherwise>
     </xsl:choose>
@@ -270,7 +292,9 @@
  </xsl:template>
 
  <xsl:template match="tei:subst">
-  <xsl:apply-templates/>
+  <span onmouseout="show(this)" onmouseover="show(this)" class="erased">
+   <xsl:apply-templates/>
+  </span>
  </xsl:template>
 
  <xsl:template match="tei:supplied">
