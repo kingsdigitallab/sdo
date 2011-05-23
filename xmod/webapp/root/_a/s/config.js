@@ -22,3 +22,12 @@ $(function() {
     });
   $("html").removeClass("js");
 });
+
+
+function show(a) {
+    if (a.childNodes[0].style.display == "inline") {
+        a.childNodes[0].style.display = "none"
+    } else {
+        a.childNodes[0].style.display = "inline"
+    }
+}
