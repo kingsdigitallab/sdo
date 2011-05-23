@@ -1,7 +1,7 @@
 /*	personality.css
  *	xMod Custom Site Personality Style Sheet
  *	xMod Version: 1.3 
- *  Last Updated: 14/04/2011
+ *  Last Updated: 23/05/2011
  */
 
  
@@ -60,17 +60,22 @@ td#content div div {background:none; margin: 0;}
 
 #mainContent .accordion {margin: 0; padding:0;}
 #mainContent .accordion li.s7 {background: none; line-height: 1.65em;}
-#mainContent .accordion li.s7 a {border: 0 none; font-weight: 700; background: url(../i/plus_on.png)no-repeat scroll 0 2px transparent; width: auto; font-size: 105%;}
+#mainContent .accordion li.s7 a {border: 0 none; font-weight: 700; background: url(../i/plus_on.png)no-repeat scroll 0 3px transparent; width: auto; font-size: 105%;}
 #mainContent .accordion li.s7 a:active {text-decoration: none; color: #5a889e;}
-#mainContent .accordion li.s7 a:hover { background: url(../i/min_off.png)no-repeat scroll 0 2px transparent;}
-#mainContent .accordion a.trigger.open {background: url(../i/min_off.png)no-repeat scroll 0 2px transparent;}
+#mainContent .accordion li.s7 a:hover { background: url(../i/min_off.png)no-repeat scroll 0 3px transparent;}
+#mainContent .accordion a.trigger.open {background: url(../i/min_off.png)no-repeat scroll 0 3px transparent;}
 #mainContent .accordion a.trigger {display: block}
 #mainContent .accordion li.s7 a span {padding-left: 15px; cursor:pointer; display:block;}
 #mainContent .accordion li.s7 a:hover span {color: #5a889e; text-decoration: underline;}
 
-#mainContent #date {margin:0; padding: 0; background: #f5fafc;}
-#mainContent #date li {background: none; line-height: 0.4em; padding:0;}
-#mainContent #date li a {background: none; font-size: 110%; height: 10px; width: auto;}
+#mainContent #date {margin:0; padding: 3px 0 3px 0; background: #f5fafc;}
+#mainContent #date li {background: none; margin: 5px 0 5px 0; padding:0;}
+#mainContent #date li a {background: none; font-size: 110%; }
+
+/* REPLACEMENT */
+
+ #mainContent span.erased {background: #c1cabd; border: 0 none; position: relative; cursor: pointer}
+ #mainContent span.erased2 {background: #ddd; border: 0 none; position:absolute; text-indent: 0; top:-2px;}
 
 
 
@@ -111,6 +116,8 @@ td#content div div {background:none; margin: 0;}
 
 #sidenav li li,#sidenav ul ul{margin:0;}
 #sidenav ul{list-style-type:none;padding:0;margin: 0;border-top: 1px solid #edf4f7;}
+
+
 
 
 /* TOPNAV */
@@ -319,7 +326,7 @@ c9dae3 mid light blue
 #mainContent #EnglishVersion #GermanVersion {width: 50%;}
 
 #mainContent td#EnglishVersion, #mainContent td#GermanVersion {font-family: palatino, georgia, sans-serif; line-height: 1.3em; text-align: justify; font-size: 90%}
-#mainContent td#EnglishVersion p, #mainContent td#GermanVersion p {font-size: 90%;}
+#mainContent td#EnglishVersion p, #mainContent td#GermanVersion p, #mainContent #opener, #mainContent #closer {font-size: 90%;}
 
 #mainContent td#GermanVersion {padding-right: 30px; display: block}
 
@@ -328,6 +335,10 @@ c9dae3 mid light blue
 #mainContent .table .t01 table, #mainContent .table .t01 {background: none; border: 0 none;}
 #mainContent .table .t01 table td {font-family: palatino, georgia, sans-serif; font-size: 90%; color: #333;}
 #mainContent .table .t01 table tr {border: 1px solid red}
+
+
+#mainContent span.editorial {color: #5d804f; font-size:85%; }
+
 
 
 /* INDEX: DOCUMENT */
