@@ -15,10 +15,18 @@
 
   <xsl:template name="xms:content">
     <div>
+      
+      <h2>Full text search of German original and English translation</h2>
+      <p>About searching:</p>
+      <ul>
+        <li>searches are case-insensitive - <strong>bakery</strong> finds <strong>bakery</strong> and <strong>Bakery</strong></li>
+        <li>searches find closely related words - <strong>bakery</strong> finds <strong>bakery</strong> and <strong>bakeries</strong></li>
+        <li>use quote marks to find words together - <strong>"railway station"</strong> finds just <strong>railway station</strong></li>
+      </ul>
       <form action="" method="get">
         <p>
-          <label>Search: <input name="kw" size="12" type="text" value="{$kw}" /></label>
-          <input type="submit" />
+          <label>Enter search string here:<input name="kw" size="12" type="text" value="{$kw}" /></label>
+          <br/><input type="submit" />
         </p>
       </form>
       <xsl:apply-templates select="/*/response" />
