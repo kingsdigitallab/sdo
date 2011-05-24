@@ -285,7 +285,7 @@
         </map:aggregate>
         <map:transform src="stylesheets/local/profiles/index-to-html.xsl">
           <map:parameter name="filedir" value="profiles/{1}" />
-          <map:parameter name="filename" value="index.xml" />
+          <map:parameter name="filename" value="{1}" />
           <map:parameter name="fileextension" value="html" />
         </map:transform>
         <map:serialize type="xhtml" />
