@@ -3,7 +3,7 @@
 
 
  <xsl:import href="../xmod/tei/p5.xsl"/>
- 
+
  <xsl:strip-space elements="tei:subst"/>
 
  <!-- NOW OVERRIDE DEFAULTS FROM p5.xsl OR SUPPLY TEMPLATES IT DOESN'T HAVE -->
@@ -15,6 +15,11 @@
 
  <xsl:template match="tei:add">
   <xsl:choose>
+   <xsl:when test="@place = 'inline'">
+    <span class="inline-addition">
+     <xsl:apply-templates/>
+    </span>
+   </xsl:when>
    <xsl:when test="@place = 'superimposed'">
     <xsl:apply-templates/>
    </xsl:when>
@@ -43,7 +48,9 @@
  <xsl:template match="tei:del">
   <xsl:choose>
    <xsl:when test="@rend = 'overstrike'">
-    <xsl:apply-templates/>
+    <span class="inline-deletion">
+     <xsl:apply-templates/>
+    </span>
    </xsl:when>
    <xsl:when test="@rend = 'overwritten'">
     <span class="erased2">
@@ -292,9 +299,16 @@
  </xsl:template>
 
  <xsl:template match="tei:subst">
-  <span onmouseout="show(this)" onmouseover="show(this)" class="erased">
-   <xsl:apply-templates/>
-  </span>
+  <xsl:choose>
+   <xsl:when test="child::tei:del[@rend='overwritten']">
+    <span onmouseout="show(this)" onmouseover="show(this)" class="erased">
+     <xsl:apply-templates/>
+    </span>
+   </xsl:when>
+   <xsl:otherwise>
+    <xsl:apply-templates/>
+   </xsl:otherwise>
+  </xsl:choose>
  </xsl:template>
 
  <xsl:template match="tei:supplied">
