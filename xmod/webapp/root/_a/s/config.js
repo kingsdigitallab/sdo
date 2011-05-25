@@ -20,10 +20,27 @@ $(function() {
       next: "div", 
       initShow : "div.shown"
     });
+    
+
+    
+    
+ /*  $(".erased").mouseover(function()
+  {
+  
+  $(".erased").children().show();
+  
+  }).mouseout(function() {
+      $(".erased").children().hide();
+});*/
+
+    
   $("html").removeClass("js");
 });
 
-
-function show(a){
-    $(a).$(.erased2).toggle();
+    function show(a) {
+if (a.childNodes[0].style.display == "inline") {
+a.childNodes[0].style.display = "none"
+} else {
+a.childNodes[0].style.display = "inline"
+}
 }
