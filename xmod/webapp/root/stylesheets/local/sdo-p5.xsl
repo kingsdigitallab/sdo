@@ -53,7 +53,7 @@
     </span>
    </xsl:when>
    <xsl:when test="@rend = 'overwritten'">
-    <span class="erased2">
+    <span class="erased2" style="display:none;">
      <xsl:apply-templates/>
     </span>
    </xsl:when>
@@ -301,7 +301,7 @@
  <xsl:template match="tei:subst">
   <xsl:choose>
    <xsl:when test="child::tei:del[@rend='overwritten']">
-    <span onmouseout="show(this)" onmouseover="show(this)" class="erased">
+    <span class="erased" onmouseover="show(this)" onmouseout="show(this)">
      <xsl:apply-templates/>
     </span>
    </xsl:when>
