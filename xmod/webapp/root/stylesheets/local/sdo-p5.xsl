@@ -313,7 +313,9 @@
 
  <xsl:template match="tei:supplied">
   <span class="editorial">
+   <xsl:text>[</xsl:text>
    <xsl:apply-templates/>
+   <xsl:text>] </xsl:text>
   </span>
  </xsl:template>
 
