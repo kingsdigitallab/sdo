@@ -48,7 +48,8 @@
                 select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt[contains(., 'Transcription')]/tei:persName"
               />, <xsl:value-of
                 select="substring-after(/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt/tei:resp[contains(., 'Transcription')], ',')"
-              /> </p>
+              />
+            </p>
           </div>
         </td>
         <td id="EnglishVersion">
@@ -59,35 +60,38 @@
                 select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt[contains(., 'Translation')]/tei:persName"
               />, <xsl:value-of
                 select="substring-after(/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt/tei:resp[contains(., 'Translation')], ',')"
-              /> </p>
+              />
+            </p>
           </div>
         </td>
       </tr>
-      <tr>
-        <td colspan="2">
-          <div class="ft">
-            <h3>Footnotes</h3>
-            <xsl:for-each select="$record//tei:note[@place='foot']">
-              <xsl:variable name="noteNum" select="substring(substring-after(@xml:id, '-'), 3, 2)"/>
-              <p>
-                <xsl:attribute name="id" select="concat('fn', $noteNum)"/>
-                <sup>
-                  <xsl:choose>
-                    <xsl:when test="starts-with($noteNum, '0')">
-                      <xsl:value-of select="substring($noteNum, 2, 1)"/>
-                    </xsl:when>
-                    <xsl:otherwise>
-                      <xsl:value-of select="$noteNum"/>
-                    </xsl:otherwise>
-                  </xsl:choose>
-                </sup>
-                <xsl:text> </xsl:text>
-                <xsl:value-of select="."/>
-              </p>
-            </xsl:for-each>
-          </div>
-        </td>
-      </tr>
+      <xsl:if test="$record//tei:note[@place='foot']">
+        <tr>
+          <td colspan="2">
+            <div class="ft">
+              <h3>Footnotes</h3>
+              <xsl:for-each select="$record//tei:note[@place='foot']">
+                <xsl:variable name="noteNum" select="substring(substring-after(@xml:id, '-'), 3, 2)"/>
+                <p>
+                  <xsl:attribute name="id" select="concat('fn', $noteNum)"/>
+                  <sup>
+                    <xsl:choose>
+                      <xsl:when test="starts-with($noteNum, '0')">
+                        <xsl:value-of select="substring($noteNum, 2, 1)"/>
+                      </xsl:when>
+                      <xsl:otherwise>
+                        <xsl:value-of select="$noteNum"/>
+                      </xsl:otherwise>
+                    </xsl:choose>
+                  </sup>
+                  <xsl:text> </xsl:text>
+                  <xsl:value-of select="."/>
+                </p>
+              </xsl:for-each>
+            </div>
+          </td>
+        </tr>
+      </xsl:if>
       <xsl:for-each select="/aggregation/commentary/doc[statements/statement]">
         <tr>
           <td colspan="2">
