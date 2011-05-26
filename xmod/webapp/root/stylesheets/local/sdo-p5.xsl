@@ -20,6 +20,11 @@
      <xsl:apply-templates/>
     </span>
    </xsl:when>
+   <xsl:when test="@place = 'interlinear-above'">
+    <span class="interlinear-addition">
+     <xsl:apply-templates/>
+    </span>
+   </xsl:when>
    <xsl:when test="@place = 'superimposed'">
     <xsl:apply-templates/>
    </xsl:when>
@@ -166,6 +171,64 @@
    </xsl:when>
    <xsl:otherwise>
     <xsl:apply-templates/>
+   </xsl:otherwise>
+  </xsl:choose>
+ </xsl:template>
+
+ <xsl:template match="tei:gap">
+  <span class="editorial">
+   <xsl:text>[illegible]</xsl:text>
+  </span>
+ </xsl:template>
+
+
+ <xsl:template match="tei:hi">
+  <xsl:choose>
+   <!-- ITALICS -->
+   <xsl:when test="@rend='italic'">
+    <em>
+     <xsl:apply-templates/>
+    </em>
+   </xsl:when>
+   <!-- BOLD -->
+   <xsl:when test="@rend='bold'">
+    <strong>
+     <xsl:apply-templates/>
+    </strong>
+   </xsl:when>
+   <!-- BOLD AND ITALICS -->
+   <xsl:when test="@rend='bolditalic'">
+    <strong>
+     <em>
+      <xsl:apply-templates/>
+     </em>
+    </strong>
+   </xsl:when>
+   <xsl:when test="@rend='sup'">
+    <sup>
+     <xsl:apply-templates/>
+    </sup>
+   </xsl:when>
+   <xsl:when test="@rend='sub'">
+    <sub>
+     <xsl:apply-templates/>
+    </sub>
+   </xsl:when>
+   <xsl:when test="@rend='supralinear'">
+    <sup>
+     <xsl:apply-templates/>
+    </sup>
+   </xsl:when>
+   <xsl:when test="@rend='underline'">
+    <span class="underline">
+     <xsl:apply-templates/>
+    </span>
+   </xsl:when>
+   <!-- CURRENT DEFAULT: italics -->
+   <xsl:otherwise>
+    <em>
+     <xsl:apply-templates/>
+    </em>
    </xsl:otherwise>
   </xsl:choose>
  </xsl:template>
