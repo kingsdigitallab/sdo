@@ -13,15 +13,7 @@
 
   <xsl:template name="xms:pagehead">
     <div class="pageHeader">
-      <div class="t01">
-        <h1>
-          <xsl:value-of select="$record/sdo:itemDesc/dc:title"/>
-        </h1>
         <div>
-          <p>
-            <xsl:value-of
-              select="/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]"/>
-          </p>
 
           <h2>Browse by</h2>
 
@@ -33,6 +25,11 @@
               select="/aggregation/response/result/doc[str[@name='fileId']=$fileId]"/>
           </xsl:call-template>
         </div>
+      <div class="t01">
+          <h1>
+            <xsl:if test="/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]"><xsl:value-of
+              select="/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]"/><xsl:text> - </xsl:text></xsl:if><xsl:value-of select="$record/sdo:itemDesc/dc:title"/>
+          </h1>
       </div>
     </div>
   </xsl:template>
