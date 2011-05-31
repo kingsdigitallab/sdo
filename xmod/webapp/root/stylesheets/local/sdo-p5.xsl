@@ -58,7 +58,7 @@
     </span>
    </xsl:when>
    <xsl:when test="@rend = 'overwritten'">
-    <span class="erased2" style="display:none;">
+   <span class="erased2">
      <xsl:apply-templates/>
     </span>
    </xsl:when>
