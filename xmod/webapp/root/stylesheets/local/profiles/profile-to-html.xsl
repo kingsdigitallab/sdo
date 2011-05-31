@@ -71,7 +71,7 @@
     <li>
       <p>
         <a href="{$xmp:context-path}/documents/{str[@name='url']}">
-          <xsl:value-of select="str[@name='fileId']"/>
+          <xsl:value-of select="str[@name='shelfmark']"/>
           <xsl:text> </xsl:text>
           <strong>
             <xsl:choose>
@@ -80,7 +80,7 @@
               </xsl:when>
               <xsl:otherwise>
                 <xsl:text>Diary entry by Schenker for </xsl:text>
-                <xsl:value-of select="format-date(xs:date($date), '[D] [MNn] [Y]')"/>
+                <xsl:value-of select="format-date(xs:date(str[@name='dateShort']), '[D] [MNn] [Y]')"/>
               </xsl:otherwise>
             </xsl:choose>
           </strong>
