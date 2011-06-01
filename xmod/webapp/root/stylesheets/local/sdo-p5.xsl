@@ -29,9 +29,7 @@
      <xsl:apply-templates/>
     </span>
    </xsl:when>
-   <xsl:when test="@place = 'superimposed'">
-    <xsl:apply-templates/>
-   </xsl:when>
+   <xsl:when test="@place = 'superimposed'"/><!-- template for tei:subst handles this -->
    <xsl:otherwise>
     <xsl:apply-templates/>
    </xsl:otherwise>
@@ -61,11 +59,7 @@
      <xsl:apply-templates/>
     </span>
    </xsl:when>
-   <xsl:when test="@rend = 'overwritten'">
-   <span class="erased2">
-     <xsl:apply-templates/>
-    </span>
-   </xsl:when>
+   <xsl:when test="@rend = 'overwritten'"/><!-- template for tei:subst handles this -->
    <xsl:otherwise>
     <xsl:apply-templates/>
    </xsl:otherwise>
@@ -488,9 +482,7 @@
  <xsl:template match="tei:subst">
   <xsl:choose>
    <xsl:when test="child::tei:del[@rend='overwritten']">
-    <span class="erased" onmouseover="show(this)" onmouseout="show(this)">
-     <xsl:apply-templates/>
-    </span>
+    <span class="erased" onmouseover="show(this)" onmouseout="show(this)"><span class="erased2"><xsl:value-of select="child::tei:del[@rend='overwritten']"/></span><xsl:value-of select="child::tei:add[@place='superimposed']"/></span>
    </xsl:when>
    <xsl:otherwise>
     <xsl:apply-templates/>
