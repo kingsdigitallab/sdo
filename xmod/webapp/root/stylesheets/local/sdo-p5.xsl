@@ -481,8 +481,15 @@
 
  <xsl:template match="tei:subst">
   <xsl:choose>
+<<<<<<< .mine
+<xsl:when test="child::tei:del[@rend='overwritten']">
+<span class="erased" onmouseover="show(this)" onmouseout="show(this)">
+     <xsl:apply-templates/>
+    </span>
+=======
    <xsl:when test="child::tei:del[@rend='overwritten']">
     <span class="erased" onmouseover="show(this)" onmouseout="show(this)"><span class="erased2"><xsl:value-of select="child::tei:del[@rend='overwritten']"/></span><xsl:value-of select="child::tei:add[@place='superimposed']"/></span>
+>>>>>>> .r1438
    </xsl:when>
    <xsl:otherwise>
     <xsl:apply-templates/>
