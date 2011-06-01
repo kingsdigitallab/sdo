@@ -21,18 +21,6 @@ $(function() {
       initShow : "div.shown"
     });
     
-
-    
-    
- /*  $(".erased").mouseover(function()
-  {
-  
-  $(".erased").children().show();
-  
-  }).mouseout(function() {
-      $(".erased").children().hide();
-});*/
-
     
   $("html").removeClass("js");
 });
@@ -44,3 +32,4 @@ a.childNodes[0].style.display = "none"
 a.childNodes[0].style.display = "inline"
 }
 }
+
