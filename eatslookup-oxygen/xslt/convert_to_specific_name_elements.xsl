@@ -24,10 +24,10 @@
   <xsl:template match="tei:name[not(@orig_element)][@type]">
     <xsl:variable name="element-name">
       <xsl:choose>
-        <xsl:when test="@type = 'person'">persName</xsl:when>
-        <xsl:when test="@type = 'place'">placeName</xsl:when>
-        <xsl:when test="@type = 'organisation'">orgName</xsl:when>
-        <xsl:when test="@type = 'organization'">orgName</xsl:when>
+        <xsl:when test="@type = 'person'">rs</xsl:when>
+        <xsl:when test="@type = 'place'">rs</xsl:when>
+        <xsl:when test="@type = 'organisation'">rs</xsl:when>
+        <xsl:when test="@type = 'organization'">rs</xsl:when>
         <xsl:when test="@type = 'composition'">rs</xsl:when>
         <xsl:when test="@type = 'journal'">rs</xsl:when>
         <xsl:when test="@type = 'term'">rs</xsl:when>

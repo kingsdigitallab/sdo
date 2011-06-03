@@ -15,30 +15,6 @@
        entity type. -->
 
   <xsl:output omit-xml-declaration="yes"/>
-
-  <xsl:template match="tei:geogName">
-    <xsl:call-template name="make-name">
-      <xsl:with-param name="type" select="'geographic'"/>
-    </xsl:call-template>
-  </xsl:template>
-
-  <xsl:template match="tei:orgName">
-    <xsl:call-template name="make-name">
-      <xsl:with-param name="type" select="'organisation'"/>
-    </xsl:call-template>
-  </xsl:template>
-
-  <xsl:template match="tei:persName">
-    <xsl:call-template name="make-name">
-      <xsl:with-param name="type" select="'person'"/>
-    </xsl:call-template>
-  </xsl:template>
-
-  <xsl:template match="tei:placeName">
-    <xsl:call-template name="make-name">
-      <xsl:with-param name="type" select="'place'"/>
-    </xsl:call-template>
-  </xsl:template>
   
   <xsl:template match="tei:rs">
     <xsl:call-template name="make-name"/>
