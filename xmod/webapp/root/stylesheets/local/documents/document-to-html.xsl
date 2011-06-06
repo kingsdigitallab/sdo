@@ -43,37 +43,99 @@
   </xsl:template>
 
   <xsl:template name="xms:content">
+    <div class="tabs">
+
+      <ul class="tabNavigation">
+        <li>
+          <a href="#facingtexts">German and English</a>
+        </li>
+        <li>
+          <a href="#german">German only</a>
+        </li>
+        <li>
+          <a href="#english">English only</a>
+        </li>
+      </ul>
+
+      <div id="facingtexts">
+        <h2>German and English</h2>
+        <table class="docDisplayGandE">
+          <tr>
+            <td id="GermanVersion">
+              <!-- German version. -->
+              <xsl:apply-templates select="$record/tei:div[@type='transcription']"/>
+              <div id="transcCopyright">
+                <p>&#x00A9; Transcription <xsl:value-of
+                    select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt[contains(., 'Transcription')]/tei:persName"
+                      /><xsl:choose><xsl:when
+                      test="contains(/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt/tei:resp[contains(., 'Transcription')], ',')"
+                      >, <xsl:value-of
+                        select="substring-after(/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt/tei:resp[contains(., 'Transcription')], ',')"
+                      /></xsl:when><xsl:otherwise>.</xsl:otherwise></xsl:choose>
+                </p>
+              </div>
+            </td>
+            <td id="EnglishVersion">
+              <!-- English version. -->
+              <xsl:apply-templates select="$record/tei:div[@type='translation']"/>
+              <div id="translCopyright">
+                <p>&#x00A9; Translation <xsl:value-of
+                    select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt[contains(., 'Translation')]/tei:persName"
+                      /><xsl:choose><xsl:when
+                      test="contains(/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt/tei:resp[contains(., 'Translation')], ',')"
+                      >, <xsl:value-of
+                        select="substring-after(/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt/tei:resp[contains(., 'Translation')], ',')"
+                      /></xsl:when><xsl:otherwise>.</xsl:otherwise></xsl:choose>
+                </p>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="german">
+        <h2>German only</h2>
+        <table class="docDisplayGandE">
+          <tr>
+            <td id="GermanVersion">
+              <!-- German version. -->
+              <xsl:apply-templates select="$record/tei:div[@type='transcription']"/>
+              <div id="transcCopyright">
+                <p>&#x00A9; Transcription <xsl:value-of
+                    select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt[contains(., 'Transcription')]/tei:persName"
+                      /><xsl:choose><xsl:when
+                      test="contains(/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt/tei:resp[contains(., 'Transcription')], ',')"
+                      >, <xsl:value-of
+                        select="substring-after(/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt/tei:resp[contains(., 'Transcription')], ',')"
+                      /></xsl:when><xsl:otherwise>.</xsl:otherwise></xsl:choose>
+                </p>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="english">
+        <h2>English only</h2>
+        <table class="docDisplayGandE">
+          <tr>
+            <td id="EnglishVersion">
+              <!-- English version. -->
+              <xsl:apply-templates select="$record/tei:div[@type='translation']"/>
+              <div id="translCopyright">
+                <p>&#x00A9; Translation <xsl:value-of
+                    select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt[contains(., 'Translation')]/tei:persName"
+                      /><xsl:choose><xsl:when
+                      test="contains(/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt/tei:resp[contains(., 'Translation')], ',')"
+                      >, <xsl:value-of
+                        select="substring-after(/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt/tei:resp[contains(., 'Translation')], ',')"
+                      /></xsl:when><xsl:otherwise>.</xsl:otherwise></xsl:choose>
+                </p>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
     <table class="docDisplayGandE">
-      <tr>
-        <td id="GermanVersion">
-          <!-- German version. -->
-          <xsl:apply-templates select="$record/tei:div[@type='transcription']"/>
-          <div id="transcCopyright">
-            <p>&#x00A9; Transcription <xsl:value-of
-                select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt[contains(., 'Transcription')]/tei:persName"
-                  /><xsl:choose><xsl:when
-                  test="contains(/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt/tei:resp[contains(., 'Transcription')], ',')"
-                  >, <xsl:value-of
-                    select="substring-after(/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt/tei:resp[contains(., 'Transcription')], ',')"
-                  /></xsl:when><xsl:otherwise>.</xsl:otherwise></xsl:choose>
-            </p>
-          </div>
-        </td>
-        <td id="EnglishVersion">
-          <!-- English version. -->
-          <xsl:apply-templates select="$record/tei:div[@type='translation']"/>
-          <div id="translCopyright">
-            <p>&#x00A9; Translation <xsl:value-of
-                select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt[contains(., 'Translation')]/tei:persName"
-                  /><xsl:choose><xsl:when
-                  test="contains(/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt/tei:resp[contains(., 'Translation')], ',')"
-                  >, <xsl:value-of
-                    select="substring-after(/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt/tei:resp[contains(., 'Translation')], ',')"
-                  /></xsl:when><xsl:otherwise>.</xsl:otherwise></xsl:choose>
-            </p>
-          </div>
-        </td>
-      </tr>
       <xsl:if test="$record//tei:note[@place='foot']">
         <tr>
           <td colspan="2">
