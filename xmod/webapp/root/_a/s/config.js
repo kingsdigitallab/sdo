@@ -1,6 +1,21 @@
 // xMod 1.3 JS Library: Configuration
 // This file can be edited 
 
+ $("document").ready( function() {
+    $(function () {
+            var tabContainers = $('div.tabs > div');
+            tabContainers.hide().filter(':first').show();
+            
+            $('div.tabs ul.tabNavigation a').click(function () {
+            tabContainers.hide();
+            tabContainers.filter(this.hash).show();
+            $('div.tabs ul.tabNavigation a').removeClass('selected');
+            $(this).addClass('selected');
+            return false;
+            }).filter(':first').click();
+            });
+   });
+
 
 $("html").addClass("js");
 $.fn.accordion.defaults.container = false; 
