@@ -1,20 +1,19 @@
 <xsl:stylesheet version="2.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
- xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" 
-  xmlns:xmm="http://www.cch.kcl.ac.uk/xmod/menu/1.0"
-  xmlns:xmmf="http://www.cch.kcl.ac.uk/xmod/metadata/files/1.0"
-  xmlns:xmp="http://www.cch.kcl.ac.uk/xmod/properties/1.0"
-  xmlns:xmt="http://www.cch.kcl.ac.uk/xmod/tei/1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:xmm="http://www.cch.kcl.ac.uk/xmod/menu/1.0"
+ xmlns:xmmf="http://www.cch.kcl.ac.uk/xmod/metadata/files/1.0"
+ xmlns:xmp="http://www.cch.kcl.ac.uk/xmod/properties/1.0"
+ xmlns:xmt="http://www.cch.kcl.ac.uk/xmod/tei/1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 
  <xsl:import href="../xmod/tei/p5.xsl"/>
-
- <xsl:strip-space elements="tei:subst"/>
 
  <!-- NOW OVERRIDE DEFAULTS FROM p5.xsl OR SUPPLY TEMPLATES IT DOESN'T HAVE -->
 
 
  <xsl:template match="tei:ab">
-  <xsl:apply-templates/>
+  <p>
+   <xsl:apply-templates/>
+  </p>
  </xsl:template>
 
  <xsl:template match="tei:add">
@@ -29,7 +28,8 @@
      <xsl:apply-templates/>
     </span>
    </xsl:when>
-   <xsl:when test="@place = 'superimposed'"/><!-- template for tei:subst handles this -->
+   <xsl:when test="@place = 'superimposed'"/>
+   <!-- template for tei:subst handles this -->
    <xsl:otherwise>
     <xsl:apply-templates/>
    </xsl:otherwise>
@@ -59,7 +59,8 @@
      <xsl:apply-templates/>
     </span>
    </xsl:when>
-   <xsl:when test="@rend = 'overwritten'"/><!-- template for tei:subst handles this -->
+   <xsl:when test="@rend = 'overwritten'"/>
+   <!-- template for tei:subst handles this -->
    <xsl:otherwise>
     <xsl:apply-templates/>
    </xsl:otherwise>
@@ -231,8 +232,20 @@
   </xsl:choose>
  </xsl:template>
 
+ <xsl:template match="tei:item">
+  <li>
+   <xsl:apply-templates/>
+  </li>
+ </xsl:template>
+
  <xsl:template match="tei:lb">
   <br/>
+ </xsl:template>
+
+ <xsl:template match="tei:list">
+  <ul>
+   <xsl:apply-templates/>
+  </ul>
  </xsl:template>
 
  <xsl:template match="tei:listBibl">
@@ -340,126 +353,126 @@
    <xsl:otherwise><!-- do nothing --></xsl:otherwise>
   </xsl:choose>
  </xsl:template>
- 
- 
-  <xsl:template match="tei:ref">
+
+
+ <xsl:template match="tei:ref">
+  <xsl:choose>
+   <xsl:when test="@type  = 'external' or @rend = 'external'">
+    <a href="{@target}">
+     <xsl:call-template name="external-link"/>
+     <xsl:apply-templates/>
+    </a>
+   </xsl:when>
+   <xsl:when test="@cRef">
     <xsl:choose>
-      <xsl:when test="@type  = 'external' or @rend = 'external'">
-        <a href="{@target}">
-          <xsl:call-template name="external-link"/>
-          <xsl:apply-templates/>
-        </a>
-      </xsl:when>
-      <xsl:when test="@cRef">
-        <xsl:choose>
-          <xsl:when test="contains(@cRef, '#')">
-            <xsl:variable name="file" select="substring-before(@cRef, '#')"/>
-            <xsl:variable name="title" select="//xmmf:file[@xml:id = $file]/@title"/>
-            <xsl:variable name="path" select="//xmmf:file[@xml:id = $file]/@path"/>
-            <xsl:variable name="anchor" select="substring-after(@cRef, '#')"/>
-            <a title="Link internal to this page">
-              <xsl:attribute name="href">
-                <xsl:if test="string($file)">
-                  <xsl:value-of select="$path"/>
-                </xsl:if>
-                <xsl:text>#</xsl:text>
-                <xsl:value-of select="$anchor"/>
-              </xsl:attribute>
-              <xsl:call-template name="internal-link">
-                <xsl:with-param name="title" select="$title"/>
-              </xsl:call-template>
-              <xsl:apply-templates/>
-            </a>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:variable name="file" select="@cRef"/>
-            <xsl:variable name="title" select="//xmmf:file[@xml:id = $file]/@title"/>
-            <xsl:variable name="path" select="//xmmf:file[@xml:id = $file]/@path"/>
-            <a>
-              <xsl:call-template name="internal-link">
-                <xsl:with-param name="title" select="$title"/>
-              </xsl:call-template>
-              <xsl:attribute name="href">
-                <xsl:value-of select="$xmp:context-path"/>
-                <xsl:text>/</xsl:text>
-                <xsl:value-of select="$path"/>
-              </xsl:attribute>
-              <xsl:apply-templates/>
-            </a>
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:when>
-      <xsl:when test="@target">
-        <a>
-          <xsl:attribute name="href">
-            <xsl:if test="starts-with(@target, '/')">
-              <xsl:value-of select="$xmp:context-path"/>
-            </xsl:if>
-            <!-- This is well dodgy. -->
-            <xsl:value-of select="@target"/>
-          </xsl:attribute>
-          <xsl:apply-templates/>
-        </a>
-      </xsl:when>
+     <xsl:when test="contains(@cRef, '#')">
+      <xsl:variable name="file" select="substring-before(@cRef, '#')"/>
+      <xsl:variable name="title" select="//xmmf:file[@xml:id = $file]/@title"/>
+      <xsl:variable name="path" select="//xmmf:file[@xml:id = $file]/@path"/>
+      <xsl:variable name="anchor" select="substring-after(@cRef, '#')"/>
+      <a title="Link internal to this page">
+       <xsl:attribute name="href">
+        <xsl:if test="string($file)">
+         <xsl:value-of select="$path"/>
+        </xsl:if>
+        <xsl:text>#</xsl:text>
+        <xsl:value-of select="$anchor"/>
+       </xsl:attribute>
+       <xsl:call-template name="internal-link">
+        <xsl:with-param name="title" select="$title"/>
+       </xsl:call-template>
+       <xsl:apply-templates/>
+      </a>
+     </xsl:when>
+     <xsl:otherwise>
+      <xsl:variable name="file" select="@cRef"/>
+      <xsl:variable name="title" select="//xmmf:file[@xml:id = $file]/@title"/>
+      <xsl:variable name="path" select="//xmmf:file[@xml:id = $file]/@path"/>
+      <a>
+       <xsl:call-template name="internal-link">
+        <xsl:with-param name="title" select="$title"/>
+       </xsl:call-template>
+       <xsl:attribute name="href">
+        <xsl:value-of select="$xmp:context-path"/>
+        <xsl:text>/</xsl:text>
+        <xsl:value-of select="$path"/>
+       </xsl:attribute>
+       <xsl:apply-templates/>
+      </a>
+     </xsl:otherwise>
     </xsl:choose>
-  </xsl:template>
-  <!-- href classes for same or new window -->
-  <xsl:template name="external-link">
-    <!-- Title information and extra class for if external window -->
-    <xsl:choose>
-      <!-- Open in a new window -->
-      <xsl:when test="@rend='newWindow'">
-        <xsl:attribute name="class">
-          <xsl:text>extNew</xsl:text>
-        </xsl:attribute>
-        <xsl:attribute name="rel">
-          <xsl:text>external</xsl:text>
-        </xsl:attribute>
-        <xsl:attribute name="title">
-          <xsl:text>External website (Opens in a new window)</xsl:text>
-        </xsl:attribute>
-      </xsl:when>
-      <!-- Open in same window -->
-      <xsl:otherwise>
-        <xsl:attribute name="class">
-          <xsl:text>ext</xsl:text>
-        </xsl:attribute>
-        <xsl:attribute name="title">
-          <xsl:text>External website</xsl:text>
-        </xsl:attribute>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-  <xsl:template name="internal-link">
-    <xsl:param name="title"/>
-    <!-- Title information and extra class for if external window -->
-    <xsl:choose>
-      <!-- Open in a new window -->
-      <xsl:when test="@rend='newWindow'">
-        <xsl:attribute name="class">
-          <xsl:text>intNew</xsl:text>
-        </xsl:attribute>
-        <xsl:attribute name="rel">
-          <xsl:text>external</xsl:text>
-        </xsl:attribute>
-        <xsl:attribute name="title">
-          <xsl:text>Link to </xsl:text>
-          <xsl:value-of select="$title"/>
-          <xsl:text> (Opens in a new window)</xsl:text>
-        </xsl:attribute>
-      </xsl:when>
-      <!-- Open in same window -->
-      <xsl:otherwise>
-        <xsl:attribute name="class">
-          <xsl:text>int</xsl:text>
-        </xsl:attribute>
-        <xsl:attribute name="title">
-          <xsl:text>Link to </xsl:text>
-          <xsl:value-of select="$title"/>
-        </xsl:attribute>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
+   </xsl:when>
+   <xsl:when test="@target">
+    <a>
+     <xsl:attribute name="href">
+      <xsl:if test="starts-with(@target, '/')">
+       <xsl:value-of select="$xmp:context-path"/>
+      </xsl:if>
+      <!-- This is well dodgy. -->
+      <xsl:value-of select="@target"/>
+     </xsl:attribute>
+     <xsl:apply-templates/>
+    </a>
+   </xsl:when>
+  </xsl:choose>
+ </xsl:template>
+ <!-- href classes for same or new window -->
+ <xsl:template name="external-link">
+  <!-- Title information and extra class for if external window -->
+  <xsl:choose>
+   <!-- Open in a new window -->
+   <xsl:when test="@rend='newWindow'">
+    <xsl:attribute name="class">
+     <xsl:text>extNew</xsl:text>
+    </xsl:attribute>
+    <xsl:attribute name="rel">
+     <xsl:text>external</xsl:text>
+    </xsl:attribute>
+    <xsl:attribute name="title">
+     <xsl:text>External website (Opens in a new window)</xsl:text>
+    </xsl:attribute>
+   </xsl:when>
+   <!-- Open in same window -->
+   <xsl:otherwise>
+    <xsl:attribute name="class">
+     <xsl:text>ext</xsl:text>
+    </xsl:attribute>
+    <xsl:attribute name="title">
+     <xsl:text>External website</xsl:text>
+    </xsl:attribute>
+   </xsl:otherwise>
+  </xsl:choose>
+ </xsl:template>
+ <xsl:template name="internal-link">
+  <xsl:param name="title"/>
+  <!-- Title information and extra class for if external window -->
+  <xsl:choose>
+   <!-- Open in a new window -->
+   <xsl:when test="@rend='newWindow'">
+    <xsl:attribute name="class">
+     <xsl:text>intNew</xsl:text>
+    </xsl:attribute>
+    <xsl:attribute name="rel">
+     <xsl:text>external</xsl:text>
+    </xsl:attribute>
+    <xsl:attribute name="title">
+     <xsl:text>Link to </xsl:text>
+     <xsl:value-of select="$title"/>
+     <xsl:text> (Opens in a new window)</xsl:text>
+    </xsl:attribute>
+   </xsl:when>
+   <!-- Open in same window -->
+   <xsl:otherwise>
+    <xsl:attribute name="class">
+     <xsl:text>int</xsl:text>
+    </xsl:attribute>
+    <xsl:attribute name="title">
+     <xsl:text>Link to </xsl:text>
+     <xsl:value-of select="$title"/>
+    </xsl:attribute>
+   </xsl:otherwise>
+  </xsl:choose>
+ </xsl:template>
 
  <xsl:template match="tei:salute">
   <br/>
