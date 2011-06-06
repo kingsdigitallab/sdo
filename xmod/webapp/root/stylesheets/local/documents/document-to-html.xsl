@@ -58,7 +58,6 @@
       </ul>
 
       <div id="facingtexts">
-        <h2>German and English</h2>
         <table class="docDisplayGandE">
           <tr>
             <td id="GermanVersion">
@@ -93,7 +92,6 @@
         </table>
       </div>
       <div id="german">
-        <h2>German only</h2>
         <table class="docDisplayGandE">
           <tr>
             <td id="GermanVersion">
@@ -114,7 +112,6 @@
         </table>
       </div>
       <div id="english">
-        <h2>English only</h2>
         <table class="docDisplayGandE">
           <tr>
             <td id="EnglishVersion">
