@@ -384,6 +384,44 @@
        <xsl:apply-templates/>
       </a>
      </xsl:when>
+     <xsl:when test="@type != 'unknown'">
+      <!-- ie. one of "correspondence", "diaries", "lessonbooks", "other" -->
+      <xsl:variable name="type" select="@type"/>
+      <xsl:variable name="file">
+       <xsl:choose>
+        <xsl:when test="$type='diaries'">
+         <!-- For DIARIES WE HAVE TO APPEND THE RECORD ID TO URL, eg. diaries/OJ-02-10_1918-01/r0003.html -->
+         <xsl:value-of
+          select="concat(substring-before(@cRef, ':'), '/', substring-after(@cRef, ':'))"/>
+        </xsl:when>
+        <xsl:otherwise>
+         <xsl:value-of select="@cRef"/>
+        </xsl:otherwise>
+       </xsl:choose>
+      </xsl:variable>
+      <xsl:variable name="path">
+       <xsl:value-of select="concat('/documents/', $type, '/', $file, '.html')"/>
+      </xsl:variable>
+      <a>
+       <xsl:call-template name="internal-link">
+        <xsl:with-param name="title" select="$file"/>
+       </xsl:call-template>
+       <xsl:attribute name="href">
+        <xsl:value-of select="$path"/>
+       </xsl:attribute>
+       <xsl:apply-templates/>
+      </a>
+     </xsl:when>
+     <xsl:when test="@type = 'unknown'">
+      <a>
+       <xsl:call-template name="internal-link">
+        <xsl:with-param name="title">
+         <xsl:text>this unavailable - document not yet online.</xsl:text>
+        </xsl:with-param>
+       </xsl:call-template>
+       <xsl:apply-templates/>
+      </a>
+     </xsl:when>
      <xsl:otherwise>
       <xsl:variable name="file" select="@cRef"/>
       <xsl:variable name="title" select="//xmmf:file[@xml:id = $file]/@title"/>
