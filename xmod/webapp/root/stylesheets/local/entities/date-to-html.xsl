@@ -12,34 +12,38 @@
     <xsl:value-of select="$date" />
   </xsl:variable>
 
-  <xsl:variable name="correspondence" select="/aggregation/response/result/doc[str[@name='kind']='correspondence']" />
-  <xsl:variable name="diaries" select="/aggregation/response/result/doc[str[@name='kind']='diaries']" />
-  <xsl:variable name="lessonbooks" select="/aggregation/response/result/doc[str[@name='kind']='lessonbooks']" />
-  <xsl:variable name="other" select="/aggregation/response/result/doc[str[@name='kind']='other']" />
-
   <xsl:template name="xms:content">
-    <xsl:apply-templates select="/aggregation/tei:TEI" />
+    <xsl:choose>
+      <xsl:when test="/aggregation/tei:TEI">
+        <xsl:apply-templates select="/aggregation/tei:TEI" />
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:call-template name="entity-from-eats" />
+      </xsl:otherwise>
+    </xsl:choose>
 
     <ul>
       <li>
         <xsl:for-each select="/aggregation/dates/response/result/doc[str = $date]">
-          <xsl:if test="position() = 1"><xsl:choose>
-            <xsl:when test="preceding-sibling::doc[str != $date][1]">
-              <a href="{preceding-sibling::doc[str != $date][1]/str}.html">Previous</a>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:text>Previous</xsl:text>
-            </xsl:otherwise>
-          </xsl:choose>
-          <xsl:text> and </xsl:text>
-          <xsl:choose>
-            <xsl:when test="following-sibling::doc[str != $date][1]">
-              <a href="{following-sibling::doc[str != $date][1]/str}.html">Next</a>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:text>Next</xsl:text>
-            </xsl:otherwise>
-          </xsl:choose></xsl:if>
+          <xsl:if test="position() = 1">
+            <xsl:choose>
+              <xsl:when test="preceding-sibling::doc[str != $date][1]">
+                <a href="{preceding-sibling::doc[str != $date][1]/str}.html">Previous</a>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:text>Previous</xsl:text>
+              </xsl:otherwise>
+            </xsl:choose>
+            <xsl:text> and </xsl:text>
+            <xsl:choose>
+              <xsl:when test="following-sibling::doc[str != $date][1]">
+                <a href="{following-sibling::doc[str != $date][1]/str}.html">Next</a>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:text>Next</xsl:text>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:if>
         </xsl:for-each>
       </li>
     </ul>
@@ -98,5 +102,4 @@
       </xsl:choose>
     </div>
   </xsl:template>
-
 </xsl:stylesheet>
