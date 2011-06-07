@@ -21,6 +21,7 @@
   -->
 
   <xsl:import href="../xmod/views/screen.xsl"/>
+  <xsl:import href="sdo-p5.xsl"/> 
   
   <xsl:param name="filedir"/>
   <xsl:param name="filename"/>
