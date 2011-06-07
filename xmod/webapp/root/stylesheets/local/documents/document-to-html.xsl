@@ -5,6 +5,8 @@
   xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+
+  <xsl:import href="../sdo-p5.xsl"/> 
   <xsl:import href="../default.xsl"/>
 
   <xsl:param name="filedir" select="'documents/'"/>
