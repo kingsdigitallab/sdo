@@ -232,6 +232,7 @@
               <map:part src="cocoon://_internal/solr/query/q=kind%3A{1}&amp;rows=5000&amp;sort=dateFull%20asc" />
               <map:part src="xml/content/documents/{1}/{2}.xml" />
               <map:part element="commentary" src="cocoon://internal/documents/commentary/{1}/{2}" />
+              <map:part element="eats" src="cocoon://_internal/eats/entities.xml" />
             </map:aggregate>
             <map:transform src="stylesheets/local/documents/{1}-to-html.xsl">
               <map:parameter name="filedir" value="documents/{1}" />
