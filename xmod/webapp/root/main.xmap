@@ -222,6 +222,36 @@
         </map:transform>
         <map:serialize type="xhtml" />
       </map:match>
+      
+      <!-- Browse lessonbooks by saison. -->
+      <map:match pattern="documents/lessonbooks/saison.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.xml" />
+          <map:part src="cocoon://_internal/solr/query/q=kind%3Alessonbooks%20AND%20dateYear%3A*&amp;rows=5000&amp;fl=dateYear" />
+        </map:aggregate>
+        <map:transform src="stylesheets/local/documents/saison-list-to-html.xsl">
+          <map:parameter name="filedir" value="documents/lessonbooks" />
+          <map:parameter name="filename" value="saison.xml" />
+          <map:parameter name="fileextension" value="html" />
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+      
+      <!-- Browse lessonbooks pupils by saison. -->
+      <map:match pattern="documents/lessonbooks/pupil/*-*.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.xml" />
+          <map:part src="cocoon://_internal/solr/query/q=dateYear%3A{2}&amp;rows=5000&amp;fl=pupil" />
+        </map:aggregate>
+        <map:transform src="stylesheets/local/documents/pupil-list-to-html.xsl">
+          <map:parameter name="filedir" value="documents/lessonbooks/pupil" />
+          <map:parameter name="filename" value="{1}-{2}.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="subtype-name" value="Saison" />
+          <map:parameter name="subtype-value" value="{1}/{2}" />
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
 
       <!-- Display a single item. -->
       <map:match pattern="documents/*/*.html">

@@ -7,7 +7,18 @@
 
   <xsl:import href="../default.xsl"/>
 
-  <xsl:variable name="xmg:title" select="'Browse Lessonbooks by Pupil'"/>
+  <xsl:param name="subtype-name" />
+  <xsl:param name="subtype-value" />
+
+  <xsl:variable name="xmg:title">
+    <xsl:text>Browse Lessonbooks by Pupil </xsl:text>
+    <xsl:if test="$subtype-name">
+      <xsl:text> by </xsl:text>
+      <xsl:value-of select="$subtype-name" />
+      <xsl:text>: </xsl:text>
+      <xsl:value-of select="$subtype-value" />
+    </xsl:if>
+  </xsl:variable>
 
   <xsl:key name="alpha-tags"
            use="upper-case(substring(substring-after(., ' '), 1, 1))"

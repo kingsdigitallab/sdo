@@ -400,6 +400,17 @@
          any data added to them will be ignored outright.  --> 
     <fieldtype name="ignored" stored="false" indexed="false" multiValued="true" class="solr.StrField" /> 
 
+    <fieldType name="bucketFirstLetter" class="solr.TextField" sortMissingLast="true" omitNorms="true">
+      <analyzer type="index">
+        <tokenizer class="solr.PatternTokenizerFactory" pattern="^(\w).*" group="1" />
+        <filter class="solr.LowerCaseFilterFactory" />
+        <!--<filter class="solr.SynonymFilterFactory" synonyms="synonyms-letter-buckets.txt" ignoreCase="true" expand="false" />-->
+      </analyzer>
+      <analyzer type="query">
+        <tokenizer class="solr.KeywordTokenizerFactory" />
+        <filter class="solr.LowerCaseFilterFactory" />
+      </analyzer>
+    </fieldType>
  </types>
 
 
@@ -439,6 +450,7 @@
    <field name="description" type="string" indexed="true" stored="true" />
    <field name="dateFull" type="date" indexed="true" stored="true" />
    <field name="dateShort" type="string" indexed="true" stored="true" />
+   <field name="dateYear" type="string" indexed="true" stored="true" />
    <field name="type" type="string" indexed="true" stored="true" required="false" />  
    <field name="correspondence" multiValued="true" type="string" indexed="true" stored="true" />  
    <field name="pupil" type="string" indexed="true" stored="true" />
@@ -455,24 +467,6 @@
    <field indexed="true" multiValued="false" name="entity-name" required="false" stored="true" type="text" />
    <field indexed="true" multiValued="false" name="eats-entity-name" required="false" stored="true" type="text" /> 
    
-
-   <!-- Common metadata fields, named specifically to match up with
-     SolrCell metadata when parsing rich documents such as Word, PDF.
-     Some fields are multiValued only because Tika currently may return
-     multiple values for them.
-   
-   <field name="title" type="text" indexed="true" stored="true" multiValued="true"/>
-   <field name="subject" type="text" indexed="true" stored="true"/>
-   <field name="description" type="text" indexed="true" stored="true"/>
-   <field name="comments" type="text" indexed="true" stored="true"/>
-   <field name="author" type="textgen" indexed="true" stored="true"/>
-   <field name="keywords" type="textgen" indexed="true" stored="true"/>
-   <field name="category" type="textgen" indexed="true" stored="true"/>
-   <field name="content_type" type="string" indexed="true" stored="true" multiValued="true"/>
-   <field name="last_modified" type="date" indexed="true" stored="true"/>
-   <field name="links" type="string" indexed="true" stored="true" multiValued="true"/> -->
-
-
    <!-- catchall field, containing all other searchable text fields (implemented
         via copyField further on in this schema  -->
    <field name="text" type="text" indexed="true" stored="true" multiValued="true"/>

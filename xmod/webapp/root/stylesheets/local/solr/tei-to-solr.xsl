@@ -122,6 +122,10 @@
             <field name="dateShort">
               <xsl:value-of select="substring(sdo:itemDesc/dcterms:created, 1, 10)" />
             </field>
+            <!-- year only for saison: yyyy -->
+            <field name="dateYear">
+              <xsl:value-of select="substring(sdo:itemDesc/dcterms:created, 1, 4)" />
+            </field>
           </xsl:if>
 
           <field name="type">
