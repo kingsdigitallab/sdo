@@ -65,7 +65,7 @@
           <li>
             <a>
               <xsl:attribute name="href">
-                <xsl:text>../../profiles/person/</xsl:text>
+                <xsl:text>/profiles/person/</xsl:text>
                 <xsl:value-of select="substring-before(., ' ')"/>
                 <xsl:text>.html#lessonbooks</xsl:text>
               </xsl:attribute>
