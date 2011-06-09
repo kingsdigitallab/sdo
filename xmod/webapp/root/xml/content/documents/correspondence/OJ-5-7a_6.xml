@@ -4,7 +4,7 @@
  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
- <!-- Encoding in progress. -->
+ <!-- proofread. XR s to add -->
  <sdo:collectionDesc>
   <sdo:source>
    <sdo:correspondence mfID="446" sdoID="OJ-5-7a_6">OJ 5/7a, [6] (formerly vC 6)</sdo:correspondence>
@@ -28,7 +28,7 @@
 
 
   <tei:revisionDesc>
-   <tei:change when="2011-06-08" who="#DB">XML code created</tei:change>
+   <tei:change when="2011-06-09" who="#DB">XML code created</tei:change>
   </tei:revisionDesc>
  </sdo:collectionDesc>
 
@@ -38,12 +38,12 @@
    <tei:rs role="correspondence" type="correspondence" key="entity-002775">Cube ~ HSchenker</tei:rs>
    <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Postcard</tei:rs>
 
-   <dc:title>Handwritten postcard from Schenker to Cube, dated September 4, 1926</dc:title>
+   <dc:title>Handwritten postcard from Schenker to Cube, dated November 28, 1926</dc:title>
 
-   <dcterms:created>1926-09-04T12:00:00Z</dcterms:created>
-   <dcterms:dateSubmitted>2006-05-30</dcterms:dateSubmitted>
-   <dc:description>Schenker acknowledges Cube's note, sends best wishes, and refers to Der freie
-    Satz.</dc:description>
+   <dcterms:created>1926-11-28T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2006-06-05</dcterms:dateSubmitted>
+   <dc:description>Schenker acknowledges receipt OJ 9/34, [3]; has written letter of recommendation
+    to Koblenz authorities, and supporting letter to recipient.</dc:description>
    <dc:subject/>
 
    <marcrel:correspondent key="entity-000632">Heinrich Schenker</marcrel:correspondent>
@@ -61,42 +61,53 @@
     <tei:fw type="envelope">
      <tei:address>
       <tei:addrLine><tei:supplied reason="clarity">Absender:</tei:supplied>
-       <tei:handShift new="#HS"/>Schenker</tei:addrLine>
-      <tei:addrLine>Wein III,</tei:addrLine>
-      <tei:addrLine>Keilgasse 8</tei:addrLine>
+       <tei:handShift new="#HS"/><tei:hi rend="lateinschr">Schenker</tei:hi></tei:addrLine>
+      <tei:addrLine><tei:hi rend="lateinschr">Wein</tei:hi>, III, Keilgasse 8</tei:addrLine>
      </tei:address>
+     <tei:note type="editorial">for continuation of message from verso, see below</tei:note>
      <tei:address>
-      <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied> H Felix v. Cube</tei:addrLine>
+      <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied> H <tei:hi rend="lateinschr"
+        >Felix v. Cube</tei:hi></tei:addrLine>
       <tei:addrLine>Kaiserswerth-Bockum</tei:addrLine>
-      <tei:addrLine>a/ Rhein</tei:addrLine>
-      <tei:addrLine>Pensionat „Hunenhof“</tei:addrLine>
+      <tei:addrLine><tei:hi rend="underline">Rheinland</tei:hi></tei:addrLine>
       <tei:addrLine>Villa Dahlmann</tei:addrLine>
-      <tei:addrLine>Deutschland</tei:addrLine>
      </tei:address>
-     <tei:fw type="postmark"><tei:note type="editorial">postmark:</tei:note> || <tei:gap
-       reason="illegible" extent="several characters"/> | 4. <tei:gap reason="illegible"
-       extent="several characters"/> | * 50 * ||</tei:fw>
+     <tei:fw type="postmark"><tei:note type="editorial">postmark:</tei:note> || 3/3 WIEN 10 |
+      29.XI.26.10 | * R * ||</tei:fw>
     </tei:fw>
     <tei:milestone unit="folio" n="verso"/><tei:lb/>
-    <tei:salute>Lieber Herr v. <tei:rs key="entity-000143" type="person">Cube</tei:rs>!</tei:salute>
+    <tei:salute>Lieber Herr <tei:rs key="entity-000143" type="person">v. Cube</tei:rs>!</tei:salute>
    </tei:opener>
 
-   <tei:p>Besten Dank für Ihr Briefchen vom <tei:date when="1926-08-30">30.8</tei:date>.<tei:note
-     xml:id="r0001-fn01" type="editorial" place="foot">Cube's letter of 30 August appears not to
-     survive, and his <!-- XR -->previous letter speaks of artistic frustration without mentioning
-     any illness. The lost letter presumably speaks of an improvement in both health and
-     professional opportunities.</tei:note> Sehr erfreulich, daß Sie sich so gut erholt haben – auch
-    das gehört zur Kunst, die sehr viel Spannung fordert. An den vielen schönen Hoffnungen u.
-    Aussichten nehme ich lebhaften Anteil, mögen sie Ihnen rastlos in Erfüllung gehen! Hier ist es
-    noch sehr heiß u, trotzden will der <tei:rs key="entity-001728" type="work"><tei:title>„Freie
-      Satz“</tei:title></tei:rs> ausgreifen. Ich grüße Sie auf das beste</tei:p>
+   <tei:p>Heute (<tei:date when="1926-11-28">Sonntag</tei:date>) früh erhielt ich Ihr
+     Schreiben<tei:note xml:id="r0001-fn01" type="editorial" place="foot">In a letter to Schenker
+     written three days earlier <!-- XR -->(OJ 9/34, [3]), Cube asked Schenker to write a letter of
+     reference to the school music authorities in Koblenz.</tei:note> u. schon vor 10<tei:hi
+     rend="supralinear">h</tei:hi> habe ich das gewünschte Zeugnis an die von Ihnen bezeichntete
+    Adresse <tei:hi rend="lateinschr"><tei:unclear reason="reading" cert="medium">per</tei:unclear>
+     expr.</tei:hi> geschickt. Ich habe ein Zeugnis<tei:supplied reason="syntax">,</tei:supplied>
+    die <tei:hi rend="underline">äußerste Wärme</tei:hi> mit Vergnügen u. Überzeugung aufgeboten,
+    auch noch einen Brief an den Empfänger gerichtet, worin ich das Zeugnis unterstrich.<tei:note
+     xml:id="r0001-fn02" type="editorial" place="foot">Neither letter is known to have
+     survived.</tei:note> Dem Zeugnis nach müssten Sie die Stelle erhalten, es wird schließlich
+    darauf ankommen, ob das <tei:hi rend="lateinschr">Collegium</tei:hi> einem Zeugnis von mir den
+    Wert beimessen wird, den es beansprechen darf: wäre mein Name dem <tei:hi rend="lateinschr"
+     >Collegium</tei:hi> aus den Zeitungen vertrauter, so wäre die Sache schon gemacht, so warm
+    hielt ich das Zeugnis. Mit besten Wünschen und Grüßen von uns Beiden<tei:supplied
+     reason="syntax">.</tei:supplied></tei:p>
 
    <tei:closer>
-    <tei:salute rend="indent-55">Ihr</tei:salute>
+    <tei:salute rend="indent-50">Ihr</tei:salute>
     <tei:signed rend="indent-65"><tei:rs key="entity-000632" type="person">H
-     Schenker</tei:rs></tei:signed><tei:lb/>
-    <tei:dateline><tei:date when="1926-09-04">4.9.26</tei:date></tei:dateline>
+     Sch</tei:rs></tei:signed><tei:lb/>
+    <tei:dateline><tei:date when="1926-11-28">Sonntag, 28.11.26</tei:date></tei:dateline>
    </tei:closer>
+
+   <tei:postscript>
+    <tei:p>Nschrift <tei:lb/>Der Postbeamte versichterte, daß der Bf. <tei:hi rend="underline"
+      >morgen</tei:hi> in <tei:rs key="entity-002869" type="place"><tei:hi rend="lateinschr"
+       >Koblenz</tei:hi></tei:rs> antrifft.</tei:p>
+   </tei:postscript>
 
   </tei:div>
 
@@ -111,41 +122,49 @@
     <tei:fw type="envelope">
      <tei:address>
       <tei:addrLine><tei:supplied reason="clarity">Sender:</tei:supplied>
-       <tei:handShift new="#HS"/>Schenker,</tei:addrLine>
-      <tei:addrLine>Vienna III,</tei:addrLine>
-      <tei:addrLine>Keilgasse 8</tei:addrLine>
+       <tei:handShift new="#HS"/>Schenker</tei:addrLine>
+      <tei:addrLine>Vienna, III, Keilgasse 8</tei:addrLine>
      </tei:address>
+     <tei:note type="editorial">for continuation of message from verso, see below</tei:note>
      <tei:address>
-      <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied> Mr. Felix von
+      <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied> Mr. Felix v.
        Cube</tei:addrLine>
       <tei:addrLine>Kaiserswerth-Bockum</tei:addrLine>
-      <tei:addrLine>a/ Rhein</tei:addrLine>
-      <tei:addrLine>Pensionat „Hunenhof“</tei:addrLine>
+      <tei:addrLine><tei:hi rend="underline">Rhineland</tei:hi></tei:addrLine>
       <tei:addrLine>Villa Dahlmann</tei:addrLine>
-      <tei:addrLine>Germany</tei:addrLine>
      </tei:address>
-     <tei:fw type="postmark"><tei:note type="editorial">postmark:</tei:note> || <tei:gap
-       reason="illegible" extent="several characters"/> | 4. <tei:gap reason="illegible"
-       extent="several characters"/> | * 50 * ||</tei:fw>
+     <tei:fw type="postmark"><tei:note type="editorial">postmark:</tei:note> || 3/3 WIEN 10 |
+      29.XI.26.10 | * R * ||</tei:fw>
     </tei:fw>
     <tei:milestone unit="folio" n="verso"/><tei:lb/>
-    <tei:salute>Dear Mr. von <tei:rs key="entity-000143" type="person">Cube</tei:rs>!</tei:salute>
+    <tei:salute>Dear Mr. <tei:rs key="entity-000143" type="person">v. Cube</tei:rs>!</tei:salute>
    </tei:opener>
 
-   <tei:p>Best thanks for your note of <tei:date when="1926-08-30">August 30</tei:date>.<tei:ptr
-     corresp="#r0001-fn01" type="footnote"/> I am very glad that you have recovered from your
-    illness – that, too, belongs to art, which demands a great deal of tension. I shall take active
-    interest in your many beautiful hopes and prospects; may they reach fulfilment in rapid
-    succession! Here it is still very hot, and in spite of this my <tei:rs key="entity-001728"
-     type="work"><tei:title level="m">Free Composition</tei:title></tei:rs> summons me. I send you
-    my best greetings.</tei:p>
+   <tei:p>I received your letter this morning (<tei:date when="1926-11-28"
+     >Sunday</tei:date>),<tei:ptr corresp="#r0001-fn01" type="footnote"/> and even before 10 o'clock
+    I had sent the reference you requested by express post to the address you indicated. I have
+     <tei:supplied reason="clarity">written</tei:supplied> a reference that expressed <tei:hi
+     rend="underline">extreme warmth</tei:hi>, with pleasure and conviction, and I also sent a
+    further letter to the recipient, in which I underscored the reference.<tei:ptr
+     corresp="#r0001-fn02" type="footnote"/> On the basis of its contents, you ought to obtain the
+    post; ultimately it will be a question of whether the executive committee will accord a
+    reference from me the value that it deserves. If my name were known to the committee through
+    newspaper references, then the matter would have already been resolved, so warmly did I write
+    the reference. With best wishes and greetings from the two of us,</tei:p>
 
    <tei:closer>
-    <tei:salute rend="indent-55">Yours,</tei:salute>
-    <tei:signed rend="indent-65"><tei:rs key="entity-000632" type="person">H.
-     Schenker</tei:rs></tei:signed><tei:lb/>
-    <tei:dateline><tei:date when="1926-09-04">September 4, 1926</tei:date></tei:dateline>
+    <tei:salute rend="indent-50">Yours,</tei:salute>
+    <tei:signed rend="indent-65"><tei:rs key="entity-000632" type="person"
+       ><tei:abbr>H</tei:abbr><tei:ex>einrich</tei:ex>
+      <tei:abbr>Sch</tei:abbr><tei:ex>enker</tei:ex></tei:rs></tei:signed><tei:lb/>
+    <tei:dateline><tei:date when="1926-11-28">Sunday, November 28, 1926</tei:date></tei:dateline>
    </tei:closer>
+
+   <tei:postscript>
+    <tei:p>P.S. <tei:lb/>The Post Office official affirmed that the letter would arrive in <tei:rs
+      key="entity-002869" type="place">Koblenz</tei:rs>
+     <tei:hi rend="underline">tomorrow</tei:hi>.</tei:p>
+   </tei:postscript>
 
   </tei:div>
  </sdo:record>
