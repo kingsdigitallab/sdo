@@ -6,15 +6,8 @@
   <xsl:import href="../profiles/profile-to-html.xsl" />
 
   <xsl:template name="xms:content">
-    <xsl:choose>
-      <xsl:when test="/aggregation/tei:TEI">
-        <xsl:apply-templates select="/aggregation/tei:TEI" />
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:call-template name="entity-from-eats" />
-      </xsl:otherwise>
-    </xsl:choose>
     <div>
+          <p><a href="#eats">Information about this person</a></p>
       <xsl:choose>
         <xsl:when test="/aggregation/response/result/doc">
           <p>Documents associated with this person:</p>
@@ -67,5 +60,13 @@
         </xsl:otherwise>
       </xsl:choose>
     </div>
+    <xsl:choose>
+      <xsl:when test="/aggregation/tei:TEI">
+        <div id="eats"><h2>About this person</h2><xsl:apply-templates select="/aggregation/tei:TEI" /></div>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:call-template name="entity-from-eats" />
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 </xsl:stylesheet>
