@@ -98,6 +98,9 @@
     <xsl:choose>
      <xsl:when test="child::tei:opener">
       <div id="opener">
+      <xsl:if test="child::tei:opener/preceding-sibling::tei:note">
+        <xsl:apply-templates select="tei:note"/>
+      </xsl:if>
        <xsl:apply-templates select="child::tei:opener"/>
       </div>
       <div>
@@ -168,6 +171,14 @@
     </p>
    </form>
   </xsl:if>
+ </xsl:template>
+
+ <xsl:template match="tei:ex">
+  <span class="editorial">
+   <xsl:text>[</xsl:text>
+   <xsl:apply-templates/>
+   <xsl:text>] </xsl:text>
+  </span>
  </xsl:template>
 
  <xsl:template match="tei:fw">
@@ -326,7 +337,16 @@
     </xsl:choose>
    </xsl:when>
    <xsl:otherwise>
-    <xsl:text> </xsl:text>
+    <xsl:variable name="position">
+     <xsl:choose>
+      <xsl:when test="@place='margin-bot'">bottom</xsl:when>
+      <xsl:otherwise>
+       <xsl:value-of select="substring-after(@place, '-')"/>
+      </xsl:otherwise>
+     </xsl:choose>
+    </xsl:variable>
+    <span class="editorial">[note in <xsl:value-of select="$position"/> margin]<xsl:text> </xsl:text></span>
+     <xsl:apply-templates/>
    </xsl:otherwise>
   </xsl:choose>
  </xsl:template>
@@ -560,11 +580,11 @@
   </span>
   <xsl:apply-templates/>
  </xsl:template>
- 
-  <xsl:template match="tei:rs">
-      <xsl:apply-templates/>
-  </xsl:template>
- 
+
+ <xsl:template match="tei:rs">
+  <xsl:apply-templates/>
+ </xsl:template>
+
  <xsl:template match="tei:subst">
   <xsl:choose>
    <xsl:when test="child::tei:del[@rend='overwritten']">
