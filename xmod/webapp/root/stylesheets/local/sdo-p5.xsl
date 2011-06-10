@@ -52,6 +52,15 @@
   <xsl:apply-templates/>
  </xsl:template>
 
+ <xsl:template match="tei:date">
+  <xsl:apply-templates/>
+ </xsl:template>
+
+ <xsl:template match="tei:dateLine">
+  <br/>
+  <xsl:apply-templates/>
+ </xsl:template>
+
  <xsl:template match="tei:del">
   <xsl:choose>
    <xsl:when test="@rend = 'overstrike'">
@@ -78,7 +87,7 @@
    </xsl:when>
    <!-- Logos on home page -->
    <xsl:when test="@type='logos'">
-    <div class="logomatrix">
+    <div class="logoMatrix">
      <div class="t01">
       <xsl:apply-templates/>
      </div>
@@ -551,7 +560,11 @@
   </span>
   <xsl:apply-templates/>
  </xsl:template>
-
+ 
+  <xsl:template match="tei:rs">
+      <xsl:apply-templates/>
+  </xsl:template>
+ 
  <xsl:template match="tei:subst">
   <xsl:choose>
    <xsl:when test="child::tei:del[@rend='overwritten']">
