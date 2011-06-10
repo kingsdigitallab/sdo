@@ -44,8 +44,7 @@
  </xsl:template>
 
  <xsl:template match="tei:addrLine">
-  <xsl:apply-templates/>
-  <br/>
+  <br/><xsl:apply-templates/>
  </xsl:template>
 
  <xsl:template match="tei:author">
