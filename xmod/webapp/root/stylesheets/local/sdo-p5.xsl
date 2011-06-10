@@ -166,6 +166,9 @@
        <xsl:apply-templates/>
       </span>
      </xsl:when>
+   <xsl:when test="@type='line'">
+    <hr/>
+   </xsl:when>
     </xsl:choose>
    </xsl:when>
    <xsl:otherwise>
@@ -256,6 +259,13 @@
     </ul>
    </div>
   </div>
+ </xsl:template>
+
+ <xsl:template match="tei:milestone">
+  <xsl:choose>
+   <xsl:when test="@n='recto'"><span class="editorial">{recto}</span></xsl:when>
+   <xsl:when test="@n='verso'"><span class="editorial">{verso}</span></xsl:when>
+  </xsl:choose>
  </xsl:template>
 
  <xsl:template match="tei:note">
