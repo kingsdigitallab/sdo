@@ -11,9 +11,9 @@
   <xsl:variable name="xmg:title">
     <xsl:text>Browse Lessonbooks by Pupil </xsl:text>
     <xsl:if test="$subtype-name">
-      <xsl:text> by </xsl:text>
+      <xsl:text> for </xsl:text>
       <xsl:value-of select="$subtype-name" />
-      <xsl:text>: </xsl:text>
+      <xsl:text> </xsl:text>
       <xsl:value-of select="$subtype-value" />
     </xsl:if>
   </xsl:variable>

@@ -14,6 +14,38 @@
 
   <xsl:template name="xms:content">
     <xsl:choose>
+      <xsl:when test="/aggregation/response/result/doc">
+        <p>Documents associated with this date:</p>
+
+        <ul>
+          <xsl:if test="$correspondence">
+            <li>
+              <a href="#correspondence">Correspondence</a>
+            </li>
+          </xsl:if>
+          <xsl:if test="$diaries">
+            <li>
+              <a href="#diaries">Diaries</a>
+            </li>
+          </xsl:if>
+          <xsl:if test="$lessonbooks">
+            <li>
+              <a href="#lessonbooks">Lessonbooks</a>
+            </li>
+          </xsl:if>
+          <xsl:if test="$other">
+            <li>
+              <a href="#other">Other material</a>
+            </li>
+          </xsl:if>
+        </ul>
+      </xsl:when>
+      <xsl:otherwise>
+        <p>There are no documents associated with this date.</p>
+      </xsl:otherwise>
+    </xsl:choose>
+
+    <xsl:choose>
       <xsl:when test="/aggregation/tei:TEI">
         <xsl:apply-templates select="/aggregation/tei:TEI" />
       </xsl:when>
@@ -48,58 +80,29 @@
       </li>
     </ul>
 
-    <div>
-      <xsl:choose>
-        <xsl:when test="/aggregation/response/result/doc">
-          <p>Documents associated with this date:</p>
-
-          <ul>
-            <xsl:if test="$correspondence">
-              <li>
-                <a href="#correspondence">Correspondence</a>
-              </li>
-            </xsl:if>
-            <xsl:if test="$diaries">
-              <li>
-                <a href="#diaries">Diaries</a>
-              </li>
-            </xsl:if>
-            <xsl:if test="$lessonbooks">
-              <li>
-                <a href="#lessonbooks">Lessonbooks</a>
-              </li>
-            </xsl:if>
-            <xsl:if test="$other">
-              <li>
-                <a href="#other">Other material</a>
-              </li>
-            </xsl:if>
-          </ul>
-          <xsl:call-template name="make-section">
-            <xsl:with-param name="name" select="'Correspondence'" />
-            <xsl:with-param name="id" select="'correspondence'" />
-            <xsl:with-param name="docs" select="$correspondence" />
-          </xsl:call-template>
-          <xsl:call-template name="make-section">
-            <xsl:with-param name="name" select="'Diaries'" />
-            <xsl:with-param name="id" select="'diaries'" />
-            <xsl:with-param name="docs" select="$diaries" />
-          </xsl:call-template>
-          <xsl:call-template name="make-section">
-            <xsl:with-param name="name" select="'Lessonbooks'" />
-            <xsl:with-param name="id" select="'lessonbooks'" />
-            <xsl:with-param name="docs" select="$lessonbooks" />
-          </xsl:call-template>
-          <xsl:call-template name="make-section">
-            <xsl:with-param name="name" select="'Other material'" />
-            <xsl:with-param name="id" select="'other'" />
-            <xsl:with-param name="docs" select="$other" />
-          </xsl:call-template>
-        </xsl:when>
-        <xsl:otherwise>
-          <p>There are no documents associated with this date.</p>
-        </xsl:otherwise>
-      </xsl:choose>
-    </div>
+    <xsl:if test="/aggregation/response/result/doc">
+      <div>
+        <xsl:call-template name="make-section">
+          <xsl:with-param name="name" select="'Correspondence'" />
+          <xsl:with-param name="id" select="'correspondence'" />
+          <xsl:with-param name="docs" select="$correspondence" />
+        </xsl:call-template>
+        <xsl:call-template name="make-section">
+          <xsl:with-param name="name" select="'Diaries'" />
+          <xsl:with-param name="id" select="'diaries'" />
+          <xsl:with-param name="docs" select="$diaries" />
+        </xsl:call-template>
+        <xsl:call-template name="make-section">
+          <xsl:with-param name="name" select="'Lessonbooks'" />
+          <xsl:with-param name="id" select="'lessonbooks'" />
+          <xsl:with-param name="docs" select="$lessonbooks" />
+        </xsl:call-template>
+        <xsl:call-template name="make-section">
+          <xsl:with-param name="name" select="'Other material'" />
+          <xsl:with-param name="id" select="'other'" />
+          <xsl:with-param name="docs" select="$other" />
+        </xsl:call-template>
+      </div>
+    </xsl:if>
   </xsl:template>
 </xsl:stylesheet>
