@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="2.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
-  xmlns:xmg="http://www.cch.kcl.ac.uk/xmod/global/1.0" xmlns:xmp="http://www.cch.kcl.ac.uk/xmod/properties/1.0"
-  xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xmg="http://www.cch.kcl.ac.uk/xmod/global/1.0"
+  xmlns:xmp="http://www.cch.kcl.ac.uk/xmod/properties/1.0" xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:import href="../profiles/profile-to-html.xsl" />
 
@@ -21,7 +22,7 @@
         <xsl:call-template name="entity-from-eats" />
       </xsl:otherwise>
     </xsl:choose>
-    
+
     <div>
       <xsl:choose>
         <xsl:when test="/aggregation/response/result/doc">
