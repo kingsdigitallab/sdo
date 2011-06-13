@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <!-- encoding in progress -->
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="454" sdoID="OJ-5-7a_11">OJ 5/7a, [11] (formerly vC 11)</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="HS" scope="major">Heinrich Schenker</tei:handNote>
+   <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+   <tei:handNote xml:id="unk" scope="minor">unknown hand</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="WD">
+   <tei:persName>William Drabkin</tei:persName>
+   <tei:resp>Transcription, 2006</tei:resp>
+   <tei:resp>Translation, 2006</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="DB">
+   <tei:persName>David Bretherton</tei:persName>
+   <tei:resp>XML Encoding, 2011</tei:resp>
+  </tei:respStmt>
+
+
+  <tei:revisionDesc>
+   <tei:change when="2011-06-13" who="#DB">XML code created</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-002775">Cube ~ HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Postcard</tei:rs>
+
+   <dc:title>Handwritten postcard from Schenker to Cube, dated September 7, 1927</dc:title>
+
+   <dcterms:created>1927-09-07T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2006-06-20</dcterms:dateSubmitted>
+   <dc:description>Schenker acknowledges Cube's postcards; Cube will receive the appeal [for
+    photostats of MSS].</dc:description>
+   <dc:subject/>
+
+   <marcrel:correspondent key="entity-000632">Heinrich Schenker</marcrel:correspondent>
+   <marcrel:recipient key="entity-000143">Felix-Eberhard von Cube</marcrel:recipient>
+  </sdo:itemDesc>
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/><tei:lb/>
+    <tei:note type="editorial" place="inline">printed:</tei:note>
+    <tei:lb/>
+    <tei:fw type="header" rend="inline"><tei:handShift new="#printed"/>Postkarte</tei:fw><tei:lb/>
+    <tei:gap reason="editorial" extent="several paragraphs">
+     <tei:desc>Panel stating the aims of the <tei:rs key="entity-002444" type="organization"
+       >Deutscher Sprachverein</tei:rs>.</tei:desc>
+    </tei:gap>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:addrLine>Absender: <tei:handShift new="#HS"/><tei:hi rend="lateinschr"
+       >Schenker</tei:hi></tei:addrLine>
+      <tei:addrLine>Wien, III., Keilgasse 8</tei:addrLine>
+     </tei:address>
+     <tei:address>
+      <tei:addrLine><tei:handShift new="#printed"/>An <tei:handShift new="#HS"/>H
+       Prof</tei:addrLine>
+      <tei:addrLine><tei:hi rend="lateinschr">Felix von Cube</tei:hi></tei:addrLine>
+      <tei:addrLine><tei:handShift new="#printed"/>in <tei:handShift new="#HS"/>Duisburg
+       (Rhld)</tei:addrLine>
+      <tei:addrLine>Mühlheimerstr. 141/II</tei:addrLine>
+      <tei:addrLine>Deutschland</tei:addrLine>
+      <tei:addrLine><tei:note type="editorial">in another hand:</tei:note>
+       <tei:handShift new="#unk"/>Nahe Be<tei:supplied reason="clarity"
+       >...</tei:supplied></tei:addrLine>
+     </tei:address>
+     <tei:fw type="postmark"><tei:note type="editorial">postmark</tei:note> || 3/3 WIEN 40 |
+       <tei:gap reason="illegible" extent="several characters"/> ||</tei:fw>
+    </tei:fw>
+    <tei:milestone unit="folio" n="verso"/><tei:lb/>
+    <tei:note type="editorial" place="inline">emblem of the Deutscher Sprachverein</tei:note>
+    <tei:dateline><tei:handShift new="#HS"/>Wien, <tei:date when="1927-09-07"
+     >7.9.27</tei:date></tei:dateline>
+    <tei:salute>Lieber Herr <tei:rs key="entity-000143" type="person">von
+     Cube</tei:rs>!</tei:salute>
+   </tei:opener>
+
+   <tei:p>Sehr bald nach Ihnen überraschte uns mein Neffe, (der sogar in Galtür noch verblieb,
+    nachdem wir abreisen mussten, um einen Besuch abzustatten). Herzlich danke ich Ihnen, nun
+    vorgestern nach Wien zurückgekehrt, für alle Ihre lieben Karten, für die Erinnerung der gewissen
+    Brücke, die Mitteilung aus Frkf a/M., die leider noch zu wenig Festes zeigt, usw. Gleich nach
+    Ihrer Abreise kam eine Karte für Sie, ich gab Ihre Adresse an u. hoffentlich ist sie schon in
+    Ihrer Hand.<tei:note xml:id="r0001-fn01" type="editorial" place="foot"/></tei:p>
+
+   <tei:p>Aufruf, Prospekt werden Sie bestimmt erhalten,<tei:note xml:id="r0001-fn02"
+     type="editorial" place="foot"/> Hob.<tei:note xml:id="r0001-fn03" type="editorial" place="foot"
+    /> ist noch nicht soweit, er weilt soeben in Frankf. a/M., um mit H. Koch zu sprechen. Haben Sie
+    die Güte, auch Ihrer Firma Scheuermann<tei:note xml:id="r0001-fn04" type="editorial"
+     place="foot"/> die bestimmte Zusage zu machen, sie schrieb mir drum am 29. 8. Nur ein wenig
+    Geduld noch! Ich u. meine Frau grüßen Sie auf das Beste</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-50">Ihr</tei:salute>
+    <tei:signed rend="indent-55"><tei:rs key="entity-000632" type="person">H
+     Sch</tei:rs></tei:signed>
+   </tei:closer>
+
+  </tei:div>
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/><tei:lb/>
+    <tei:note type="editorial" place="inline">printed:</tei:note>
+    <tei:lb/>
+    <tei:fw type="header" rend="inline"><tei:handShift new="#printed"/>Postkarte</tei:fw><tei:lb/>
+    <tei:gap reason="editorial" extent="several paragraphs">
+     <tei:desc>Panel stating the aims of the <tei:rs key="entity-002444" type="organization"
+       >Deutscher Sprachverein</tei:rs>.</tei:desc>
+    </tei:gap>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:addrLine>Sender: <tei:handShift new="#HS"/><tei:hi rend="lateinschr"
+       >Schenker</tei:hi></tei:addrLine>
+      <tei:addrLine>Vienna, III., Keilgasse 8</tei:addrLine>
+     </tei:address>
+     <tei:address>
+      <tei:addrLine><tei:handShift new="#printed"/>To <tei:handShift new="#HS"/>
+       Professor</tei:addrLine>
+      <tei:addrLine><tei:hi rend="lateinschr">Felix von Cube</tei:hi></tei:addrLine>
+      <tei:addrLine><tei:handShift new="#printed"/>in <tei:handShift new="#HS"/>Duisburg
+       (Rhineland)</tei:addrLine>
+      <tei:addrLine>Mühlheimerstraße 141/II</tei:addrLine>
+      <tei:addrLine>Germany</tei:addrLine>
+      <tei:addrLine><tei:note type="editorial">in another hand:</tei:note>
+       <tei:handShift new="#unk"/>Region<tei:supplied reason="clarity"
+       >...?</tei:supplied></tei:addrLine>
+     </tei:address>
+     <tei:fw type="postmark"><tei:note type="editorial">postmark</tei:note> || 3/3 WIEN 40 |
+       <tei:gap reason="illegible" extent="several characters"/> ||</tei:fw>
+    </tei:fw>
+    <tei:milestone unit="folio" n="verso"/><tei:lb/>
+    <tei:note type="editorial" place="inline">emblem of the Deutscher Sprachverein</tei:note>
+    <tei:dateline><tei:handShift new="#HS"/>Vienna, <tei:date when="1927-09-07">September 7,
+      1927</tei:date></tei:dateline>
+    <tei:salute>Dear Mr. <tei:rs key="entity-000143" type="person">von Cube</tei:rs>!</tei:salute>
+   </tei:opener>
+
+   <tei:p>Soon after you left, my nephew surprised us (he actually stayed on in Galtür, after we had
+    to leave in order to pay an a visit. Having returned to Vienna only yesterday, I thank you
+    warmly for all your lovely cards, for the recollection of that particular bridge, the
+    communication from Frankfurt (which, unfortunately, gives too little in the way of concrete
+    indications), etc. As soon as you had departed, a card arrived for you; I gave your forwarding
+    address and hope that it has already arrived.<tei:ptr corresp="#r0001-fn01" type="footnote"
+    /></tei:p>
+
+   <tei:p>You will certainly receive the appeal and prospectus.<tei:ptr corresp="#r0001-fn02"
+     type="footnote"/> Hoboken<tei:ptr corresp="#r0001-fn03" type="footnote"/> has not gotten so
+    far; he is staying at this moment in Frankfurt, in order to speak with Mr. Koch.<tei:ptr
+     corresp="#r0001-fn04" type="footnote"/> Please be so kind as to make the definite acceptance
+    for Scheuermann, the company you know; they wrote to me about it on August 29.<tei:ptr
+     corresp="#r0001-fn04" type="footnote"/> Just a bit more patient. My wife and I send our best
+    greetings.</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-50">Yours,</tei:salute>
+    <tei:signed rend="indent-55"><tei:rs key="entity-000632" type="person">H.
+        <tei:abbr>Sch<tei:ex>enker</tei:ex></tei:abbr></tei:rs></tei:signed>
+   </tei:closer>
+
+  </tei:div>
+ </sdo:record>
+</sdo:recordCollection>
