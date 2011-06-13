@@ -51,6 +51,11 @@
   <xsl:apply-templates/>
  </xsl:template>
 
+ <xsl:template match="tei:choice">
+  <xsl:apply-templates/>
+ </xsl:template>
+
+
  <xsl:template match="tei:date">
   <xsl:apply-templates/>
  </xsl:template>
@@ -193,6 +198,9 @@
        <xsl:apply-templates/>
       </span>
      </xsl:when>
+     <xsl:when test="@rend='inline'">
+       <xsl:apply-templates/>
+     </xsl:when>
      <xsl:when test="@type='line'">
       <hr/>
      </xsl:when>
@@ -305,8 +313,7 @@
     <xsl:choose>
      <xsl:when test="@place='foot'">
       <xsl:variable name="fnNum" select="substring(substring-after(@xml:id, '-'), 3, 2)"/>
-      <sup>
-       <a class="fnLink">
+      <sup><a class="fnLink">
         <xsl:attribute name="href">
          <xsl:text>#fn</xsl:text>
          <xsl:value-of select="$fnNum"/>
@@ -323,8 +330,7 @@
           <xsl:value-of select="$fnNum"/>
          </xsl:otherwise>
         </xsl:choose>
-       </a>
-      </sup>
+       </a></sup>
      </xsl:when>
      <xsl:otherwise>
       <span class="editorial">
@@ -352,9 +358,7 @@
 
  <xsl:template match="tei:pb">
   <xsl:if test="number(@n) > 1">
-   <xsl:text> {</xsl:text>
-   <xsl:value-of select="@n"/>
-   <xsl:text>} </xsl:text>
+   <strong>{<xsl:value-of select="@n"/>}</strong>
   </xsl:if>
  </xsl:template>
 
