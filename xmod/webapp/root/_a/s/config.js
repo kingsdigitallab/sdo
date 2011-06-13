@@ -38,7 +38,7 @@ $(function() {
     
     
   $("html").removeClass("js");
-$(".erased2").css("display","inline");
+$(".erased2").css("display","none");
 });
 
     function show(a) {
