@@ -38,9 +38,11 @@ $(function() {
     
     
   $("html").removeClass("js");
+$(".erased2").css("display","inline");
 });
 
     function show(a) {
+      
 if (a.childNodes[0].style.display == "inline") {
 a.childNodes[0].style.display = "none"
 } else {
