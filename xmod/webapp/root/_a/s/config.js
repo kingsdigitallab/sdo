@@ -50,3 +50,8 @@ a.childNodes[0].style.display = "inline"
 }
 }
 
+$(function() {
+               $( "#accordion" ).accordion({ autoHeight: false });
+       
+               
+            });
