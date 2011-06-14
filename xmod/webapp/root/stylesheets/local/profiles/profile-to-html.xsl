@@ -1,7 +1,8 @@
 <xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns="http://www.w3.org/1999/xhtml"
   xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xmg="http://www.cch.kcl.ac.uk/xmod/global/1.0"
   xmlns:xmp="http://www.cch.kcl.ac.uk/xmod/properties/1.0" xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  xmlns:xmv="http://www.cch.kcl.ac.uk/xmod/views/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:import href="../default.xsl" />
 
@@ -17,6 +18,14 @@
   <xsl:variable name="diaries" select="/aggregation/response/result/doc[str[@name='kind']='diaries']" />
   <xsl:variable name="lessonbooks" select="/aggregation/response/result/doc[str[@name='kind']='lessonbooks']" />
   <xsl:variable name="other" select="/aggregation/response/result/doc[str[@name='kind']='other']" />
+
+  <xsl:template name="xmv:script">
+    <script src="{$xmp:assets-path}/j/jquery-1.5.min.js" type="text/javascript">&#160;</script>
+    <script src="{$xmp:assets-path}/s/jquery.ui.widget.js" type="text/javascript">&#160;</script>
+    <script src="{$xmp:assets-path}/s/jquery.ui.core.js" type="text/javascript">&#160;</script>
+    <script src="{$xmp:assets-path}/s/jquery.ui.accordion.js" type="text/javascript">&#160;</script>
+    <script src="{$xmp:assets-path}/s/config.js" type="text/javascript">&#160;</script>
+  </xsl:template>
 
   <xsl:template name="xms:pagehead">
     <div class="pageHeader">
@@ -128,66 +137,72 @@
   <xsl:template name="entity-from-eats">
     <xsl:for-each select="/*/eats/entities/entity[keys/key = $entity-key]">
       <xsl:variable name="entity-name" select="names/name[1]" />
-      <div id="eats">
+      <div class="accordion">
         <h3>Types</h3>
-        <p>
-          <xsl:for-each select="types/type">
-            <xsl:value-of select="." />
+        <div>
+          <p>
+            <xsl:for-each select="types/type">
+              <xsl:value-of select="." />
 
-            <xsl:if test="position() != last()">
-              <xsl:text>, </xsl:text>
-            </xsl:if>
-          </xsl:for-each>
-        </p>
+              <xsl:if test="position() != last()">
+                <xsl:text>, </xsl:text>
+              </xsl:if>
+            </xsl:for-each>
+          </p>
+        </div>
 
         <h3>Names</h3>
-        <div class="unorderedList">
-          <div class="t01">
-            <ul>
-              <xsl:for-each select="names/name">
-                <li>
-                  <xsl:value-of select="." />
-                </li>
-              </xsl:for-each>
-            </ul>
+        <div>
+          <div class="unorderedList">
+            <div class="t01">
+              <ul>
+                <xsl:for-each select="names/name">
+                  <li>
+                    <xsl:value-of select="." />
+                  </li>
+                </xsl:for-each>
+              </ul>
+            </div>
           </div>
         </div>
 
         <h3>Relationships</h3>
-        <div class="unorderedList">
-          <div class="t01">
-            <ul>
-              <xsl:for-each select="relationships/relationship[@direction = 'direct']">
-                <xsl:variable name="rel-entity-key" select="keys/key[1]" />
-                <xsl:variable name="rel-entity-type"
-                  select="/*/eats/entities/entity[keys/key = $rel-entity-key]/types/type[1]" />
+        <div>
+          <div class="unorderedList">
+            <div class="t01">
+              <ul>
+                <xsl:for-each select="relationships/relationship[@direction = 'direct']">
+                  <xsl:variable name="rel-entity-key" select="keys/key[1]" />
+                  <xsl:variable name="rel-entity-type"
+                    select="/*/eats/entities/entity[keys/key = $rel-entity-key]/types/type[1]" />
 
-                <li>
-                  <xsl:value-of select="$entity-name" />
-                  <xsl:text> </xsl:text>
-                  <xsl:value-of select="@type" />
-                  <xsl:text> </xsl:text>
-                  <a href="/profiles/{$rel-entity-type}/{$rel-entity-key}.html">
-                    <xsl:value-of select="names/name[1]" />
-                  </a>
-                </li>
-              </xsl:for-each>
-              <xsl:for-each select="relationships/relationship[@direction = 'inverse']">
-                <xsl:variable name="rel-entity-key" select="keys/key[1]" />
-                <xsl:variable name="rel-entity-type"
-                  select="/*/eats/entities/entity[keys/key = $rel-entity-key]/types/type[1]" />
+                  <li>
+                    <xsl:value-of select="$entity-name" />
+                    <xsl:text> </xsl:text>
+                    <xsl:value-of select="@type" />
+                    <xsl:text> </xsl:text>
+                    <a href="/profiles/{$rel-entity-type}/{$rel-entity-key}.html">
+                      <xsl:value-of select="names/name[1]" />
+                    </a>
+                  </li>
+                </xsl:for-each>
+                <xsl:for-each select="relationships/relationship[@direction = 'inverse']">
+                  <xsl:variable name="rel-entity-key" select="keys/key[1]" />
+                  <xsl:variable name="rel-entity-type"
+                    select="/*/eats/entities/entity[keys/key = $rel-entity-key]/types/type[1]" />
 
-                <li>
-                  <a href="/profiles/{$rel-entity-type}/{$rel-entity-key}.html">
-                    <xsl:value-of select="names/name[1]" />
-                  </a>
-                  <xsl:text> </xsl:text>
-                  <xsl:value-of select="@type" />
-                  <xsl:text> </xsl:text>
-                  <xsl:value-of select="$entity-name" />
-                </li>
-              </xsl:for-each>
-            </ul>
+                  <li>
+                    <a href="/profiles/{$rel-entity-type}/{$rel-entity-key}.html">
+                      <xsl:value-of select="names/name[1]" />
+                    </a>
+                    <xsl:text> </xsl:text>
+                    <xsl:value-of select="@type" />
+                    <xsl:text> </xsl:text>
+                    <xsl:value-of select="$entity-name" />
+                  </li>
+                </xsl:for-each>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
