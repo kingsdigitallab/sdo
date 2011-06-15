@@ -55,8 +55,8 @@ function show(a) {
 }
 
 $(function () {
-  if ($('.accordion').length) {
-    $('.accordion').accordion({
+  if ($('.accordion2').length) {
+    $('.accordion2').accordion({
       autoHeight: false,
       collapsible: true
     });

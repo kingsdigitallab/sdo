@@ -137,7 +137,7 @@
   <xsl:template name="entity-from-eats">
     <xsl:for-each select="/*/eats/entities/entity[keys/key = $entity-key]">
       <xsl:variable name="entity-name" select="names/name[1]" />
-      <div class="accordion">
+      <div class="accordion2">
         <h3>Types</h3>
         <div>
           <p>
