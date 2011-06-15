@@ -44,7 +44,8 @@
  </xsl:template>
 
  <xsl:template match="tei:addrLine">
-  <br/><xsl:apply-templates/>
+  <br/>
+  <xsl:apply-templates/>
  </xsl:template>
 
  <xsl:template match="tei:author">
@@ -102,14 +103,15 @@
     <xsl:choose>
      <xsl:when test="child::tei:opener">
       <div id="opener">
-      <xsl:if test="child::tei:opener/preceding-sibling::tei:note">
+       <xsl:if test="child::tei:opener/preceding-sibling::tei:note">
         <xsl:apply-templates select="tei:note"/>
-      </xsl:if>
+       </xsl:if>
        <xsl:apply-templates select="child::tei:opener"/>
       </div>
       <div>
        <xsl:apply-templates
-        select="child::tei:opener/following-sibling::tei:*[not(self::tei:closer) and not(self::tei:postscript)]"/>
+        select="child::tei:opener/following-sibling::tei:*[not(self::tei:closer) and not(self::tei:postscript)]"
+       />
       </div>
       <xsl:if test="child::tei:closer">
        <div id="closer">
@@ -124,7 +126,8 @@
      </xsl:when>
      <xsl:otherwise>
       <div>
-       <xsl:apply-templates select="child::tei:*[not(self::tei:closer) and not(self::tei:postscript)]"/>
+       <xsl:apply-templates
+        select="child::tei:*[not(self::tei:closer) and not(self::tei:postscript)]"/>
       </div>
       <xsl:if test="child::tei:closer">
        <div id="closer">
@@ -209,7 +212,7 @@
       </span>
      </xsl:when>
      <xsl:when test="@rend='inline'">
-       <xsl:apply-templates/>
+      <xsl:apply-templates/>
      </xsl:when>
      <xsl:when test="@type='line'">
       <hr/>
@@ -323,7 +326,8 @@
     <xsl:choose>
      <xsl:when test="@place='foot'">
       <xsl:variable name="fnNum" select="substring(substring-after(@xml:id, '-'), 3, 2)"/>
-      <sup><a class="fnLink">
+      <sup>
+       <a class="fnLink">
         <xsl:attribute name="href">
          <xsl:text>#fn</xsl:text>
          <xsl:value-of select="$fnNum"/>
@@ -340,7 +344,8 @@
           <xsl:value-of select="$fnNum"/>
          </xsl:otherwise>
         </xsl:choose>
-       </a></sup>
+       </a>
+      </sup>
      </xsl:when>
      <xsl:otherwise>
       <span class="editorial">
@@ -360,8 +365,9 @@
       </xsl:otherwise>
      </xsl:choose>
     </xsl:variable>
-    <span class="editorial">[note in <xsl:value-of select="$position"/> margin]<xsl:text> </xsl:text></span>
-     <xsl:apply-templates/>
+    <span class="editorial">[note in <xsl:value-of select="$position"/>
+     margin]<xsl:text> </xsl:text></span>
+    <xsl:apply-templates/>
    </xsl:otherwise>
   </xsl:choose>
  </xsl:template>
@@ -605,9 +611,22 @@
  <xsl:template match="tei:subst">
   <xsl:choose>
    <xsl:when test="child::tei:del[@rend='overwritten']/child::tei:gap">
-    <xsl:variable name="numChars" select="child::tei:del[@rend='overwritten']/child::tei:gap/@extent"/>
-    <xsl:variable name="qMarks"><xsl:text>????????????????????</xsl:text></xsl:variable>
-    <span class="erased" onmouseover="show(this)" onmouseout="show(this)" xml:space="preserve"><span class="erased2 green"><xsl:value-of select="substring($qMarks, 1, $numChars)"/></span><xsl:value-of select="child::tei:add[@place='superimposed']"/></span>
+    <xsl:variable name="numChars">
+     <xsl:choose>
+      <xsl:when test="child::tei:del[@rend='overwritten']/child::tei:gap/@extent">
+       <xsl:value-of select="child::tei:del[@rend='overwritten']/child::tei:gap/@extent"/>
+      </xsl:when>
+      <xsl:otherwise>
+       <xsl:value-of select="string-length(child::tei:del[@rend='overwritten']/following-sibling::tei:add[@place='superimposed'])"/>
+      </xsl:otherwise>
+     </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="qMarks">
+     <xsl:text>????????????????????</xsl:text>
+    </xsl:variable>
+    <span class="erased" onmouseover="show(this)" onmouseout="show(this)" xml:space="preserve"><span class="erased2 green">{illeg.}
+     <!-- <xsl:value-of select="substring($qMarks, 1, $numChars)"/></xsl:comment> -->
+    </span><xsl:value-of select="child::tei:add[@place='superimposed']"/></span>
    </xsl:when>
    <xsl:when test="child::tei:del[@rend='overwritten']">
     <span class="erased" onmouseover="show(this)" onmouseout="show(this)" xml:space="preserve"><span class="erased2"><xsl:value-of select="child::tei:del[@rend='overwritten']"/></span><xsl:value-of select="child::tei:add[@place='superimposed']"/></span>
