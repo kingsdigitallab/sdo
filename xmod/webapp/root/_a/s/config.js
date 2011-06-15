@@ -42,7 +42,7 @@ $(function () {
     
     
     $("html").removeClass("js");
-    $(".erased2").css("display", "none");
+    //$(".erased2").css("display", "none");
   }
 });
 
