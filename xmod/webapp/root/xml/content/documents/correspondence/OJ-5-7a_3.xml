@@ -4,7 +4,6 @@
  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
- <!-- needs proofreading. -->
  <sdo:collectionDesc>
   <sdo:source>
    <sdo:correspondence mfID="427" sdoID="OJ-5-7a_3">OJ 5/7a, [3] (formerly vC 3)</sdo:correspondence>
@@ -53,7 +52,13 @@
   <tei:div type="transcription">
 
    <tei:opener>
-    <tei:salute>Lieber Herr <tei:rs key="entity-000143" type="person">v. Cube</tei:rs>!</tei:salute>
+    <tei:salute>Lieber Herr <tei:rs key="entity-000143" type="person">v. Cube</tei:rs>!<tei:note
+      xml:id="r0001-fn01" type="editorial" place="foot">Writing of this letter is recorded in
+      Schenker's diary at <!-- XR -->OJ 3/8, p. 2970, August 26, 1926: "An Cube jun. (Br.): Bericht
+      von dem Brief des Vaters u. seinem Versprechen; ich stelle noch einmal fest, daß es meine
+      Sache nicht war, dem Vater zu helfen." ("To Cube jnr (letter): report on the letter from his
+      father and pronouncement; I establish yet once more that it was not my business to help his
+      father.").</tei:note></tei:salute>
    </tei:opener>
 
    <tei:p><tei:date when="1926-08-25">Gestern</tei:date> Abends langte mir ein Brief Ihres <tei:rs
@@ -66,9 +71,9 @@
      rend="overstrike">nicht</tei:del> durch meine Werke, die mir gar nichts eintragen, nicht
     gleichsam unentgeltlich zahllose Beflissene, u. kann ich mir über dies Unentgeltliche hinaus
     gestatten, Schüler unentgeltlich zu unterrichten, wo ich doch leben muß, um <tei:unclear
-     reason="reading" cert="medium">Jones</tei:unclear> zu treffen? Der Mutter des „Grünen Heinrich“
-     <tei:pb n="2"/> (<tei:rs key="entity-000429" type="person"><tei:hi rend="sperr">Gottfried
-      Keller</tei:hi></tei:rs>)<tei:note xml:id="r0001-fn01" type="editorial" place="foot">The Swiss
+     reason="reading">Jones</tei:unclear> zu treffen? Der Mutter des „Grünen Heinrich“ <tei:pb n="2"
+    /> (<tei:rs key="entity-000429" type="person"><tei:hi rend="sperr">Gottfried
+     Keller</tei:hi></tei:rs>)<tei:note xml:id="r0001-fn02" type="editorial" place="foot">The Swiss
      author <tei:bibl>Gottfried Keller's autobigraphical novel <tei:title level="m">Der grüne
        Heinrich</tei:title> (1854–55, rev. 1880).</tei:bibl></tei:note> als einer einfachen Frau
     stand es zu, so zu denken: <tei:quote>„Was ich gelernt, zog sie nicht in Betracht, weil sie es
@@ -86,11 +91,11 @@
    <tei:p rend="first">Wir reisen Montag, <tei:date when="1926-08-28">28.d.M.</tei:date> nach
      <tei:rs key="entity-002484" type="place">Wien</tei:rs>. Ich arbeite am <tei:rs
      key="entity-001728" type="work"><tei:title>„freien Satz“</tei:title></tei:rs>, als dem letzten
-    Band der Theorien, der Alles Wünschenswerte bringen wird.</tei:p>
+    Band der <tei:term>Theorien</tei:term>, der Alles Wünschenswerte bringen wird.</tei:p>
 
    <tei:p rend="first">Sie bitte ich, mich zu unterrichten, ob Sie <tei:pb n="3"/> zu Stande kommen?
     Ob Sie die nötige Grundlage finden, auf die Sie Ihre künstlerischen Bestrebungen stellen können?
-     <tei:rs key="entity-000951" type="person"><tei:hi rend="sperr">H. Weisse</tei:hi></tei:rs>
+    H. <tei:rs key="entity-000951" type="person"><tei:hi rend="sperr">Weisse</tei:hi></tei:rs>
     schrieb mir vor kurzem, das er jetzt ein <tei:rs key="entity-002867" type="work"
      >Klarinetten-Quintett</tei:rs> vollendet hat, das bald aufgeführt wird.</tei:p>
 
@@ -110,7 +115,8 @@
   <tei:div type="translation">
 
    <tei:opener>
-    <tei:salute>Dear Mr. <tei:rs key="entity-000143" type="person">von Cube</tei:rs>!</tei:salute>
+    <tei:salute>Dear Mr. <tei:rs key="entity-000143" type="person">von Cube</tei:rs>!<tei:ptr
+      corresp="#r0001-fn01" type="footnote"/></tei:salute>
    </tei:opener>
 
    <tei:p><tei:date when="1926-08-25">Yesterday</tei:date> evening I received a letter from your
@@ -123,7 +129,7 @@
     not teach countless scholars free of charge? And can I allow myself, over and above this unpaid
     work, not to ask for payment for the tuition from which I earn my living in order to keep the
     wolf from the door? The mother of "Green Henry" <tei:pb n="2"/> (<tei:rs key="entity-000429"
-     type="person">Gottfried Keller</tei:rs>)<tei:ptr corresp="#r0001-fn01" type="footnote"/>, a
+     type="person">Gottfried Keller</tei:rs>)<tei:ptr corresp="#r0001-fn02" type="footnote"/>, a
     simple woman, was characterized as follows: <tei:quote>"What I learned, she did not take into
      consideration, because she took it as a universal obligation to communicate to me anything good
      that was known"</tei:quote>; but that, or a similar, way of thinking appears to be entirely
@@ -136,11 +142,12 @@
    <tei:p rend="first">We are traveling on the <tei:date when="1926-08-28">28th of the
      month</tei:date> to <tei:rs key="entity-002484" type="place">Vienna</tei:rs>. I am working on
      <tei:rs key="entity-001728" type="work"><tei:title>"Free Composition,"</tei:title></tei:rs> the
-    last volume of the Theories, which will bring together everything that is needed.</tei:p>
+    last volume of the <tei:term>Theories</tei:term>, which will bring together everything that is
+    needed.</tei:p>
 
    <tei:p rend="first">Please let me know how you <tei:pb n="3"/> are getting on. Have you gained
-    the necessary foundation upon which you can present your artistic endeavours? <tei:rs
-     key="entity-000951" type="person">Mr. Weisse</tei:rs> wrote to me recently that he has just
+    the necessary foundation upon which you can present your artistic endeavours? Mr. <tei:rs
+     key="entity-000951" type="person">Weisse</tei:rs> wrote to me recently that he has just
     finished a <tei:rs key="entity-002867" type="work">clarinet quintet</tei:rs>, which will be
     performed soon.</tei:p>
 
