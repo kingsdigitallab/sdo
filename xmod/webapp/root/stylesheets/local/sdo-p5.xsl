@@ -607,7 +607,7 @@
    <xsl:when test="child::tei:del[@rend='overwritten']/child::tei:gap">
     <xsl:variable name="numChars" select="child::tei:del[@rend='overwritten']/child::tei:gap/@extent"/>
     <xsl:variable name="qMarks"><xsl:text>????????????????????</xsl:text></xsl:variable>
-    <span class="erased" onmouseover="show(this)" onmouseout="show(this)" xml:space="preserve"><span class="erased3"><xsl:value-of select="substring($qMarks, 1, $numChars)"/></span><xsl:value-of select="child::tei:add[@place='superimposed']"/></span>
+    <span class="erased" onmouseover="show(this)" onmouseout="show(this)" xml:space="preserve"><span class="erased2 green"><xsl:value-of select="substring($qMarks, 1, $numChars)"/></span><xsl:value-of select="child::tei:add[@place='superimposed']"/></span>
    </xsl:when>
    <xsl:when test="child::tei:del[@rend='overwritten']">
     <span class="erased" onmouseover="show(this)" onmouseout="show(this)" xml:space="preserve"><span class="erased2"><xsl:value-of select="child::tei:del[@rend='overwritten']"/></span><xsl:value-of select="child::tei:add[@place='superimposed']"/></span>
