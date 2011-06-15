@@ -214,11 +214,10 @@
     <xsl:param name="id" />
     <xsl:param name="docs" />
     <xsl:if test="$docs">
+      <h3>
+        <xsl:value-of select="$name" />
+      </h3>
       <div id="{$id}">
-        <h2>
-          <xsl:value-of select="$name" />
-        </h2>
-
         <ul>
           <xsl:apply-templates select="$docs" />
         </ul>
