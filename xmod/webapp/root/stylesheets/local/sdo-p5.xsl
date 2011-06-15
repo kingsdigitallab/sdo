@@ -109,21 +109,31 @@
       </div>
       <div>
        <xsl:apply-templates
-        select="child::tei:opener/following-sibling::tei:*[not(self::tei:closer)]"/>
+        select="child::tei:opener/following-sibling::tei:*[not(self::tei:closer) and not(self::tei:postscript)]"/>
       </div>
       <xsl:if test="child::tei:closer">
        <div id="closer">
         <xsl:apply-templates select="tei:closer"/>
        </div>
       </xsl:if>
+      <xsl:if test="child::tei:postscript">
+       <div id="postscript">
+        <xsl:apply-templates select="tei:postscript"/>
+       </div>
+      </xsl:if>
      </xsl:when>
      <xsl:otherwise>
       <div>
-       <xsl:apply-templates select="child::tei:*[not(self::tei:closer)]"/>
+       <xsl:apply-templates select="child::tei:*[not(self::tei:closer) and not(self::tei:postscript)]"/>
       </div>
       <xsl:if test="child::tei:closer">
        <div id="closer">
         <xsl:apply-templates select="tei:closer"/>
+       </div>
+      </xsl:if>
+      <xsl:if test="child::tei:postscript">
+       <div id="postscript">
+        <xsl:apply-templates select="tei:postscript"/>
        </div>
       </xsl:if>
      </xsl:otherwise>
@@ -299,10 +309,10 @@
  <xsl:template match="tei:milestone">
   <xsl:choose>
    <xsl:when test="@n='recto'">
-    <span class="editorial">{recto}</span>
+    <strong>{<em>recto</em>}</strong>
    </xsl:when>
    <xsl:when test="@n='verso'">
-    <span class="editorial">{verso}</span>
+    <strong>{<em>verso</em>}</strong>
    </xsl:when>
   </xsl:choose>
  </xsl:template>
@@ -360,6 +370,10 @@
   <xsl:if test="number(@n) > 1">
    <strong>{<xsl:value-of select="@n"/>}</strong>
   </xsl:if>
+ </xsl:template>
+
+ <xsl:template match="tei:postscript">
+  <xsl:apply-templates/>
  </xsl:template>
 
  <xsl:template match="tei:ptr">
@@ -590,6 +604,11 @@
 
  <xsl:template match="tei:subst">
   <xsl:choose>
+   <xsl:when test="child::tei:del[@rend='overwritten']/child::tei:gap">
+    <xsl:variable name="numChars" select="child::tei:del[@rend='overwritten']/child::tei:gap/@extent"/>
+    <xsl:variable name="qMarks"><xsl:text>????????????????????</xsl:text></xsl:variable>
+    <span class="erased" onmouseover="show(this)" onmouseout="show(this)" xml:space="preserve"><span class="erased3"><xsl:value-of select="substring($qMarks, 1, $numChars)"/></span><xsl:value-of select="child::tei:add[@place='superimposed']"/></span>
+   </xsl:when>
    <xsl:when test="child::tei:del[@rend='overwritten']">
     <span class="erased" onmouseover="show(this)" onmouseout="show(this)" xml:space="preserve"><span class="erased2"><xsl:value-of select="child::tei:del[@rend='overwritten']"/></span><xsl:value-of select="child::tei:add[@place='superimposed']"/></span>
    </xsl:when>
