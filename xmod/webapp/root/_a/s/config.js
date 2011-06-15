@@ -20,7 +20,7 @@ $("document").ready(function () {
 $("html").addClass("js");
 
 $(function () {
-  if ($('#acc1').length) {
+  if ($('#acc3').length) {
     $.fn.accordion.defaults.container = false;
     $("#acc3").accordion({
       initShow: "#current"
