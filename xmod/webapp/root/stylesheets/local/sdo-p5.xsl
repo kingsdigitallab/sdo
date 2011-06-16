@@ -61,7 +61,7 @@
   <xsl:apply-templates/>
  </xsl:template>
 
- <xsl:template match="tei:dateLine">
+ <xsl:template match="tei:dateline">
   <br/>
   <xsl:apply-templates/>
  </xsl:template>
