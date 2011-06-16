@@ -424,7 +424,9 @@
      <xsl:apply-templates/>
     </blockquote>
    </xsl:when>
-   <xsl:otherwise><!-- do nothing --></xsl:otherwise>
+   <xsl:otherwise>
+    <xsl:apply-templates/>
+   </xsl:otherwise>
   </xsl:choose>
  </xsl:template>
 
@@ -617,16 +619,16 @@
        <xsl:value-of select="child::tei:del[@rend='overwritten']/child::tei:gap/@extent"/>
       </xsl:when>
       <xsl:otherwise>
-       <xsl:value-of select="string-length(child::tei:del[@rend='overwritten']/following-sibling::tei:add[@place='superimposed'])"/>
+       <xsl:value-of
+        select="string-length(child::tei:del[@rend='overwritten']/following-sibling::tei:add[@place='superimposed'])"
+       />
       </xsl:otherwise>
      </xsl:choose>
     </xsl:variable>
     <xsl:variable name="qMarks">
      <xsl:text>????????????????????</xsl:text>
     </xsl:variable>
-    <span class="erased" onmouseover="show(this)" onmouseout="show(this)" xml:space="preserve"><span class="erased2 green">{illeg.}
-     <!-- <xsl:value-of select="substring($qMarks, 1, $numChars)"/></xsl:comment> -->
-    </span><xsl:value-of select="child::tei:add[@place='superimposed']"/></span>
+    <span class="erased" onmouseover="show(this)" onmouseout="show(this)" xml:space="preserve"><span class="erased2 green">{illeg.}</span><xsl:value-of select="child::tei:add[@place='superimposed']"/></span>
    </xsl:when>
    <xsl:when test="child::tei:del[@rend='overwritten']">
     <span class="erased" onmouseover="show(this)" onmouseout="show(this)" xml:space="preserve"><span class="erased2"><xsl:value-of select="child::tei:del[@rend='overwritten']"/></span><xsl:value-of select="child::tei:add[@place='superimposed']"/></span>
@@ -636,6 +638,7 @@
    </xsl:otherwise>
   </xsl:choose>
  </xsl:template>
+ <!-- <xsl:value-of select="substring($qMarks, 1, $numChars)"/></xsl:comment> -->
 
  <xsl:template match="tei:supplied">
   <span class="editorial">
