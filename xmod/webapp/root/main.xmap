@@ -490,7 +490,7 @@
         <map:generate src="xml/content/documents/{1}/{2}.xml" />
         <map:transform src="stylesheets/local/documents/xinclude-commentary.xsl">
           <map:parameter name="eats-server" value="{global:eats-server}" />
-          <map:parameter name="document-url" value="document/" />
+          <map:parameter name="document-url" value="../document/" />
         </map:transform>
         <map:transform type="xinclude" />
         <map:serialize type="xml" />
