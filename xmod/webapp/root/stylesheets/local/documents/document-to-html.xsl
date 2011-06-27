@@ -166,7 +166,7 @@
                     <xsl:value-of select="@type" />
                   </dt>
                   <dd>
-                    <xsl:value-of select="." />
+                    <xsl:call-template name="simple-email-encoding" />
                   </dd>
                 </xsl:for-each>
                 <xsl:for-each select="container/statements/statement[@type != current()/statements/statement/@type]">
@@ -174,7 +174,7 @@
                     <xsl:value-of select="@type" />
                   </dt>
                   <dd>
-                    <xsl:value-of select="." />
+                    <xsl:call-template name="simple-email-encoding" />
                   </dd>
                 </xsl:for-each>
               </dl>
@@ -183,6 +183,19 @@
         </tr>
       </xsl:for-each>
     </table>
+  </xsl:template>
+
+  <xsl:template name="simple-email-encoding">
+    <xsl:analyze-string flags="im" regex="([A-Z0-9._+-]+)(@)([A-Z0-9.-]+\.[A-Z]+)" select=".">
+      <xsl:matching-substring>
+        <xsl:value-of select="regex-group(1)" />
+        <xsl:text> [at] </xsl:text>
+        <xsl:value-of select="replace(regex-group(3), '\.', ' (dot) ')" />
+      </xsl:matching-substring>
+      <xsl:non-matching-substring>
+        <xsl:value-of select="." />
+      </xsl:non-matching-substring>
+    </xsl:analyze-string>
   </xsl:template>
 
   <xsl:template match="doc" mode="browse-by-date">
