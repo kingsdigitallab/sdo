@@ -148,7 +148,7 @@
                     </xsl:choose>
                   </sup>
                   <xsl:text> </xsl:text>
-                  <xsl:value-of select="." />
+                  <xsl:apply-templates/>
                 </p>
               </xsl:for-each>
             </div>

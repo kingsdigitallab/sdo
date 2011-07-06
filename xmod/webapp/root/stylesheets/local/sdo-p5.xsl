@@ -52,6 +52,10 @@
   <xsl:apply-templates/>
  </xsl:template>
 
+ <xsl:template match="tei:bibl">
+  <xsl:apply-templates/>
+ </xsl:template>
+
  <xsl:template match="tei:choice">
   <xsl:apply-templates/>
  </xsl:template>
@@ -214,10 +218,13 @@
      <xsl:when test="@rend='inline'">
       <xsl:apply-templates/>
      </xsl:when>
-     <xsl:when test="@type='line'">
-      <hr/>
-     </xsl:when>
     </xsl:choose>
+   </xsl:when>
+   <xsl:when test="@type='line'">
+    <hr/>
+   </xsl:when>
+   <xsl:when test="@type='postmark'">
+    <br/><xsl:apply-templates/>
    </xsl:when>
    <xsl:otherwise>
     <xsl:apply-templates/>
@@ -235,7 +242,7 @@
  <xsl:template match="tei:hi">
   <xsl:choose>
    <!-- ITALICS -->
-   <xsl:when test="@rend='italic'">
+   <xsl:when test="@rend='italic' or @rend='lateinschr'">
     <em>
      <xsl:apply-templates/>
     </em>
@@ -254,7 +261,7 @@
      </em>
     </strong>
    </xsl:when>
-   <xsl:when test="@rend='sup'">
+   <xsl:when test="@rend='sup' or @rend='supralinear'">
     <sup>
      <xsl:apply-templates/>
     </sup>
@@ -264,13 +271,13 @@
      <xsl:apply-templates/>
     </sub>
    </xsl:when>
-   <xsl:when test="@rend='supralinear'">
-    <sup>
-     <xsl:apply-templates/>
-    </sup>
-   </xsl:when>
    <xsl:when test="@rend='underline'">
     <span class="underline">
+     <xsl:apply-templates/>
+    </span>
+   </xsl:when>
+   <xsl:when test="@rend='lateinschr-underline'">
+    <span class="underlineitalic">
      <xsl:apply-templates/>
     </span>
    </xsl:when>
@@ -613,21 +620,6 @@
  <xsl:template match="tei:subst">
   <xsl:choose>
    <xsl:when test="child::tei:del[@rend='overwritten']/child::tei:gap">
-    <xsl:variable name="numChars">
-     <xsl:choose>
-      <xsl:when test="child::tei:del[@rend='overwritten']/child::tei:gap/@extent">
-       <xsl:value-of select="child::tei:del[@rend='overwritten']/child::tei:gap/@extent"/>
-      </xsl:when>
-      <xsl:otherwise>
-       <xsl:value-of
-        select="string-length(child::tei:del[@rend='overwritten']/following-sibling::tei:add[@place='superimposed'])"
-       />
-      </xsl:otherwise>
-     </xsl:choose>
-    </xsl:variable>
-    <xsl:variable name="qMarks">
-     <xsl:text>????????????????????</xsl:text>
-    </xsl:variable>
     <span class="erased" onmouseover="show(this)" onmouseout="show(this)" xml:space="preserve"><span class="erased2 green">{illeg.}</span><xsl:value-of select="child::tei:add[@place='superimposed']"/></span>
    </xsl:when>
    <xsl:when test="child::tei:del[@rend='overwritten']">
@@ -638,7 +630,6 @@
    </xsl:otherwise>
   </xsl:choose>
  </xsl:template>
- <!-- <xsl:value-of select="substring($qMarks, 1, $numChars)"/></xsl:comment> -->
 
  <xsl:template match="tei:supplied">
   <span class="editorial">
@@ -651,7 +642,12 @@
 
  <xsl:template match="tei:title">
   <xsl:choose>
-   <xsl:when test="@level = 'j' or level='m'">
+   <xsl:when test="@level ='j'">
+    <em>
+     <xsl:apply-templates/>
+    </em>
+   </xsl:when>
+   <xsl:when test="@level='m'">
     <em>
      <xsl:apply-templates/>
     </em>
@@ -665,9 +661,7 @@
     <xsl:apply-templates/>
    </xsl:when>
    <xsl:otherwise>
-    <em>
      <xsl:apply-templates/>
-    </em>
    </xsl:otherwise>
   </xsl:choose>
  </xsl:template>
