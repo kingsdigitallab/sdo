@@ -224,7 +224,8 @@
     <hr/>
    </xsl:when>
    <xsl:when test="@type='postmark'">
-    <br/><xsl:apply-templates/>
+    <br/>
+    <xsl:apply-templates/>
    </xsl:when>
    <xsl:otherwise>
     <xsl:apply-templates/>
@@ -324,6 +325,9 @@
    <xsl:when test="@n='verso'">
     <strong>{<em>verso</em>}</strong>
    </xsl:when>
+   <xsl:when test="@rend='inline em-dash'">
+    <xsl:text>&#8212;</xsl:text>
+   </xsl:when>
   </xsl:choose>
  </xsl:template>
 
@@ -353,6 +357,9 @@
         </xsl:choose>
        </a>
       </sup>
+     </xsl:when>
+     <xsl:when test="@place = 'pre-text'">
+      <!-- do nothing -->
      </xsl:when>
      <xsl:otherwise>
       <span class="editorial">
@@ -661,7 +668,7 @@
     <xsl:apply-templates/>
    </xsl:when>
    <xsl:otherwise>
-     <xsl:apply-templates/>
+    <xsl:apply-templates/>
    </xsl:otherwise>
   </xsl:choose>
  </xsl:template>
