@@ -10,7 +10,7 @@
   </sdo:source>
 
   <tei:handNotes>
-   <tei:handNote xml:id="HS" scope="major">Heinrich Schenker</tei:handNote>
+   <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
    <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
   </tei:handNotes>
 
@@ -52,9 +52,10 @@
   <tei:div type="transcription">
 
    <tei:opener>
-    <tei:milestone unit="folio" n="recto"/>
+    <tei:milestone unit="folio" n="recto"/><tei:lb/>
     <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
-      >printed:</tei:note><tei:handShift new="#printed"/>Postkarte</tei:fw>
+      >printed:</tei:note>
+     <tei:handShift new="#printed"/>Postkarte</tei:fw>
     <tei:fw type="envelope">
      <tei:address>
       <tei:addrLine><tei:supplied reason="clarity">Absender:</tei:supplied>
@@ -69,9 +70,9 @@
       <tei:addrLine>Deutschland</tei:addrLine>
      </tei:address>
      <tei:fw type="postmark"><tei:note type="editorial">postmark illegible</tei:note></tei:fw>
-    </tei:fw>
+    </tei:fw><tei:lb/>
     <tei:note type="editorial">for continuation of message from verso, see below</tei:note>
-    <tei:milestone unit="folio" n="verso"/>
+    <tei:lb/><tei:milestone unit="folio" n="verso"/>
     <tei:salute>Lieber Herr <tei:rs key="entity-000143" type="person">v. Cube</tei:rs>!<tei:note
       xml:id="r0001-fn01" type="editorial" place="foot">Writing of this postcard is recorded in
       Schenker's diary at <!-- XR -->OJ 3/9, p. 3030, January 31, 1927: "An Cube (K.): Glückwünsche;
@@ -117,9 +118,10 @@
   <tei:div type="translation">
 
    <tei:opener>
-    <tei:milestone unit="folio" n="recto"/>
+    <tei:milestone unit="folio" n="recto"/><tei:lb/>
     <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
-      >printed:</tei:note><tei:handShift new="#printed"/>Postcard</tei:fw>
+      >printed:</tei:note>
+     <tei:handShift new="#printed"/>Postcard</tei:fw>
     <tei:fw type="envelope">
      <tei:address>
       <tei:addrLine><tei:supplied reason="clarity">Sender:</tei:supplied>
@@ -136,8 +138,8 @@
      </tei:address>
      <tei:fw type="postmark"><tei:note type="editorial">postmark illegible</tei:note></tei:fw>
     </tei:fw>
-    <tei:note type="editorial">for continuation of message from verso, see below</tei:note>
-    <tei:milestone unit="folio" n="verso"/>
+    <tei:lb/><tei:note type="editorial">for continuation of message from verso, see below</tei:note>
+    <tei:lb/><tei:milestone unit="folio" n="verso"/>
     <tei:salute>Dear Mr. <tei:rs key="entity-000143" type="person">von Cube</tei:rs>!<tei:ptr
       corresp="#r0001-fn01" type="footnote"/></tei:salute>
    </tei:opener>

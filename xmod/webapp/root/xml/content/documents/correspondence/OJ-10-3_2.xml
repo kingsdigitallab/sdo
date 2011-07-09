@@ -12,6 +12,7 @@
   <tei:handNotes>
    <tei:handNote xml:id="TPunk" scope="major">unknown typist</tei:handNote>
    <tei:handNote xml:id="unk" scope="minor">unknown hand</tei:handNote>
+   <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
    <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
   </tei:handNotes>
 
@@ -61,10 +62,9 @@
 
   <tei:div type="transcription">
    <tei:opener>
-    <tei:address>
-     <tei:addrLine><tei:note type="editorial">printed letterhead:</tei:note> OTTO ERICH
-      DEUTSCH</tei:addrLine>
-    </tei:address>
+    <tei:fw type="header" rend="inline">
+     <tei:note type="editorial">printed letterhead:</tei:note> <tei:handShift new="#printed"/>OTTO ERICH
+      DEUTSCH</tei:fw>
     <tei:dateline rend="indent-55"><tei:handShift new="#TPunk"/><tei:placeName>Wien</tei:placeName>,
       <tei:date when="1913-09-08">8. September 1913.</tei:date></tei:dateline>
     <tei:salute rend="indent-35">Sehr geehrter Herr <tei:rs type="person" key="entity-000632"
@@ -117,9 +117,9 @@
 
   <tei:div type="translation">
    <tei:opener>
-    <tei:address>
-     <tei:addrLine><tei:note type="editorial">printed:</tei:note> OTTO ERICH DEUTSCH</tei:addrLine>
-    </tei:address>
+    <tei:fw type="header" rend="inline">
+     <tei:note type="editorial">printed letterhead:</tei:note> <tei:handShift new="#printed"/>OTTO ERICH
+     DEUTSCH</tei:fw>
     <tei:dateline rend="indent-55"><tei:handShift new="#TPunk"
       /><tei:placeName>Vienna</tei:placeName>, <tei:date when="1913-09-08">September 8,
       1913.</tei:date></tei:dateline>
