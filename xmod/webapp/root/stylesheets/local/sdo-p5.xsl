@@ -53,7 +53,16 @@
  </xsl:template>
 
  <xsl:template match="tei:bibl">
-  <xsl:apply-templates/>
+  <xsl:choose>
+   <xsl:when test="parent::tei:listBibl">
+    <li>
+     <xsl:apply-templates/>
+    </li>
+   </xsl:when>
+   <xsl:otherwise>
+    <xsl:apply-templates/>
+   </xsl:otherwise>
+  </xsl:choose>
  </xsl:template>
 
  <xsl:template match="tei:choice">
