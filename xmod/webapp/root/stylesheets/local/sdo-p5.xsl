@@ -60,6 +60,11 @@
   <xsl:apply-templates/>
  </xsl:template>
 
+ <xsl:template match="tei:corr">
+  <xsl:value-of select="."/>
+  <span class="editorial">]</span>
+ </xsl:template>
+
 
  <xsl:template match="tei:date">
   <xsl:apply-templates/>
@@ -602,12 +607,31 @@
   </xsl:choose>
  </xsl:template>
 
+ <xsl:template match="tei:rs">
+  <xsl:apply-templates/>
+ </xsl:template>
+
  <xsl:template match="tei:salute">
   <br/>
   <xsl:if test="parent::tei:opener">
    <br/>
   </xsl:if>
   <xsl:apply-templates/>
+ </xsl:template>
+
+ <xsl:template match="tei:sic">
+  <xsl:choose>
+   <xsl:when test="not(following-sibling::tei:corr)">
+    <xsl:apply-templates/>
+    <xsl:text> </xsl:text>
+    <span class="editorial">[sic]</span>
+   </xsl:when>
+   <xsl:otherwise>
+    <xsl:apply-templates/>
+    <xsl:text> </xsl:text>
+    <span class="editorial">[recte </span>
+   </xsl:otherwise>
+  </xsl:choose>
  </xsl:template>
 
  <xsl:template match="tei:signed">
@@ -617,10 +641,6 @@
    <em>signed:</em>
    <xsl:text>] </xsl:text>
   </span>
-  <xsl:apply-templates/>
- </xsl:template>
-
- <xsl:template match="tei:rs">
   <xsl:apply-templates/>
  </xsl:template>
 
