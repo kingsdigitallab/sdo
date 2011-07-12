@@ -647,7 +647,7 @@
   <br/>
   <span class="editorial">
    <xsl:text>[</xsl:text>
-   <em>signed:</em>
+   signed:
    <xsl:text>] </xsl:text>
   </span>
   <xsl:apply-templates/>
