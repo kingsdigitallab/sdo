@@ -28,6 +28,10 @@
      <xsl:apply-templates/>
     </span>
    </xsl:when>
+   <xsl:when test="@place = 'margin-bot'">
+    <br/><br/>
+     <xsl:apply-templates/>   
+   </xsl:when>
    <xsl:when test="@place = 'superimposed'"/>
    <!-- template for tei:subst handles this -->
    <xsl:otherwise>
@@ -252,6 +256,14 @@
    <xsl:text>[illeg]</xsl:text>
   </span>
  </xsl:template>
+
+<!-- TEMPORARILY COMMENTED OUT UNTIL BC CAN STYLE THIS 
+ <xsl:template match="tei:handShift">
+  <xsl:variable name="handIDval" select="substring-after(@new, '#')"/>
+  <span class="handshift">
+   <xsl:attribute name="title"><xsl:value-of select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:handNotes/tei:handNote[1]"/></xsl:attribute>&#x21E7;
+  </span>
+ </xsl:template> -->
 
 
  <xsl:template match="tei:hi">
