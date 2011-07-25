@@ -44,6 +44,95 @@ $(function () {
     $("html").removeClass("js");
     //$(".erased2").css("display", "none");
   }
+  
+  
+	$('.monthList td').each(
+		function(i, val1)
+		{
+			$monthCell = $(val1);
+			var dateBits = $monthCell.attr("id").split('-');
+			var divId = "datepicker" + dateBits[0] + dateBits[1];
+			var lastDay = new Date((new Date(dateBits[0], dateBits[1],1))-1).getDate();
+			
+			$( "#" + divId )
+				.datepicker(
+					{
+						dateFormat: 'yy-mm-dd',
+						changeMonth: false,
+    					changeYear: false,
+						minDate: dateBits[0] + "-" + dateBits[1] + "-01",
+						maxDate: dateBits[0] + "-" + dateBits[1] + "-" + lastDay,
+						hideIfNoPrevNext: true,
+						onSelect: function(date, inst) 
+						   {
+								//Date.format = "yyyy-mm-dd",
+								
+								window.location = "../../profiles/date/" + date + ".html"
+								//alert($(inst).toString())
+						   },
+						beforeShowDay: function(date)
+						   {
+						   		currentMonth = getFormattedDate(date, false)
+						   		var today = date.getDate()
+						   		if(today < 10)
+						   		{
+						   			today = "0" + today
+						   		}
+						   		
+						   		var daysList = $("#" + currentMonth).attr("days")
+						   		if(daysList !== undefined)
+						   		{						   		
+									var days = daysList.split(',');
+									
+									for(day = 0; day < days.length; day++)
+									{
+										var dayBits = days[day].split(":")
+										
+										if(dayBits[0] == today)
+										{
+											if(dayBits[1] > 1)
+											{
+												return [true, 'm_items', dayBits[1] + " items"]
+											}
+											else
+											{
+												return [true, 'one_item', dayBits[1] + " item"]
+											}
+										}
+										
+									}
+								}
+						   		
+						   		return [false, 'no_items', '']
+						   },
+						hide: true
+					}	
+				).hide();
+				
+				$monthCell
+					.click(
+						function() 
+						{
+							$("span[id^='datepicker']").each
+							(
+								function(j, val2)
+								{
+									if($(val2).attr("id") != divId)
+									{
+										$(val2).datepicker().hide()
+									}
+									else
+									{
+										$("#" + divId).toggle()	
+									}
+								}			
+							)
+										
+      					});
+      
+		}
+	)  
+  
 });
 
 function show(a) {
@@ -54,6 +143,7 @@ function show(a) {
   }
 }
 
+
 $(function () {
   if ($('.accordion2').length) {
     $('.accordion2').accordion({
@@ -62,3 +152,17 @@ $(function () {
     });
   }
 });
+
+
+function getFormattedDate(date)
+{
+	year = date.getFullYear()
+	month = date.getMonth() + 1
+	if(month < 10)
+	{
+		month = "0" + month
+	}
+	
+	return year + "-" + month
+};
+
