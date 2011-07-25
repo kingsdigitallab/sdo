@@ -60,14 +60,14 @@
                   <xsl:value-of select="$dayList"/>
                 </xsl:attribute>
                 <ul>
-                  <li class="s7" style="padding-left: 10px;">
+                  <li class="s7">
                     <span>
                       <xsl:value-of
                         select="format-date(xs:date(concat('1111-', current-grouping-key(), '-01')), '[MNn]', 'en', (), ())"
                       />
                     </span>
                   </li>
-                  <li style="background: none; padding-left: 15px;">
+                  <li>
                     <xsl:call-template name="add-item-count"/>
                   </li>
                   <!-- <li>                
