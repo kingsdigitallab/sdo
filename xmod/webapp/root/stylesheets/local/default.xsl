@@ -148,6 +148,7 @@
     <script src="{$xmp:assets-path}/s/jquery.nestedAccordion.js" type="text/javascript">&#160;</script>
     <script src="{$xmp:assets-path}/s/jquery.ui.tabs.js" type="text/javascript">&#160;</script>
     <script src="{$xmp:assets-path}/s/jquery.ui.widget.js" type="text/javascript">&#160;</script>
+    <script src="{$xmp:assets-path}/s/jquery.ui.datepicker.js" type="text/javascript">&#160;</script>
     <script src="{$xmp:assets-path}/s/config.js" type="text/javascript">&#160;</script>
   </xsl:template>
   
