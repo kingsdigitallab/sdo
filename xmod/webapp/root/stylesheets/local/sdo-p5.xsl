@@ -257,14 +257,12 @@
   </span>
  </xsl:template>
 
-<!-- TEMPORARILY COMMENTED OUT UNTIL BC CAN STYLE THIS 
  <xsl:template match="tei:handShift">
   <xsl:variable name="handIDval" select="substring-after(@new, '#')"/>
   <span class="handshift">
    <xsl:attribute name="title"><xsl:value-of select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:handNotes/tei:handNote[1]"/></xsl:attribute>&#x21E7;
   </span>
- </xsl:template> -->
-
+ </xsl:template>
 
  <xsl:template match="tei:hi">
   <xsl:choose>
