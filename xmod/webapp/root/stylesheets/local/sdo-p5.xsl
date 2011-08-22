@@ -265,7 +265,7 @@
   <xsl:variable name="handIDval" select="substring-after(@new, '#')"/>
   <span class="handshift">
    <xsl:attribute name="title"><xsl:value-of
-     select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:handNotes/tei:handNote[1]"
+     select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:handNotes/tei:handNote[@xml:id = $handIDval]"
     /></xsl:attribute>&#x21E7; </span>
  </xsl:template>
 
