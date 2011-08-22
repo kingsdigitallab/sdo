@@ -220,6 +220,10 @@
    <xsl:text>] </xsl:text>
   </span>
  </xsl:template>
+ 
+ <xsl:template match="tei:foreign">
+  <!-- do nothing; rendering is controlled by a <tei:hi> child -->
+ </xsl:template>
 
  <xsl:template match="tei:fw">
   <xsl:choose>
@@ -291,18 +295,30 @@
      </em>
     </strong>
    </xsl:when>
-   <xsl:when test="@rend='sup' or @rend='supralinear'">
+   <!-- @@@@@@@@@ MAY NEED TO MOVE INTERLINEAR-ABOVE TO A SEPARATE TEMPLATE IF WE CAN ACTUALLY DISTINGUISH IT IN THE DISPLAY -->
+   <xsl:when test="@rend='sup' or @rend='supralinear' or @rend='interlinear-above'">
     <sup>
      <xsl:apply-templates/>
     </sup>
    </xsl:when>
-   <xsl:when test="@rend='sub'">
+   <!-- @@@@@@@@@ MAY NEED TO MOVE INTERLINEAR-BELOW TO A SEPARATE TEMPLATE IF WE CAN ACTUALLY DISTINGUISH IT IN THE DISPLAY -->
+   <xsl:when test="@rend='sub' or @rend='infralinear' or @rend='interlinear-below'">
     <sub>
      <xsl:apply-templates/>
     </sub>
    </xsl:when>
    <xsl:when test="@rend='underline'">
     <span class="underline">
+     <xsl:apply-templates/>
+    </span>
+   </xsl:when>
+   <xsl:when test="@rend='double-underline'">
+    <span class="doubleunderline">
+     <xsl:apply-templates/>
+    </span>
+   </xsl:when>
+   <xsl:when test="@rend='triple-underline'">
+    <span class="tripleunderline">
      <xsl:apply-templates/>
     </span>
    </xsl:when>
@@ -684,7 +700,7 @@
   <span class="editorial">
    <xsl:text>[</xsl:text>
    <xsl:apply-templates/>
-   <xsl:text>] </xsl:text>
+   <xsl:text>]</xsl:text>
   </span>
  </xsl:template>
 
