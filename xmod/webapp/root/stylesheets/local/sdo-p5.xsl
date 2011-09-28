@@ -133,7 +133,7 @@
       </div>
       <div>
        <xsl:apply-templates
-        select="child::tei:opener/following-sibling::tei:*[not(self::tei:closer) and not(self::tei:postscript)]"
+        select="child::tei:opener/following-sibling::tei:*[not(self::tei:closer) and not(self::tei:postscript) and not(self::tei:fw[@type='envelope'])]"
        />
       </div>
       <xsl:if test="child::tei:closer">
@@ -146,11 +146,16 @@
         <xsl:apply-templates select="tei:postscript"/>
        </div>
       </xsl:if>
+      <xsl:if test="child::tei:fw[@type='envelope']">
+       <div id="envelope">
+        <xsl:apply-templates select="tei:fw[@type='envelope']"/>
+       </div>
+      </xsl:if>
      </xsl:when>
      <xsl:otherwise>
       <div>
        <xsl:apply-templates
-        select="child::tei:*[not(self::tei:closer) and not(self::tei:postscript)]"/>
+        select="child::tei:*[not(self::tei:closer) and not(self::tei:postscript) and not(self::tei:fw[@type='envelope'])]"/>
       </div>
       <xsl:if test="child::tei:closer">
        <div id="closer">
@@ -162,6 +167,11 @@
         <xsl:apply-templates select="tei:postscript"/>
        </div>
       </xsl:if>
+      <xsl:if test="child::tei:fw[@type='envelope']">
+       <div id="envelope">
+        <xsl:apply-templates select="tei:fw[@type='envelope']"/>
+       </div>
+       </xsl:if>
      </xsl:otherwise>
     </xsl:choose>
    </xsl:when>
@@ -658,6 +668,25 @@
   </xsl:if>
   <xsl:apply-templates/>
  </xsl:template>
+ 
+  <!-- FOR THE PAGE GIVING EXAMPLES OF EDITORIAL CONVENTIONS USED IN THE REGULAR TEXT DISPLAY -->
+  <xsl:template match="tei:seg">
+        <xsl:choose>
+         <xsl:when test="@type = 'demo' and @subtype = 'editorial'">
+          <span class="editorial">
+          <xsl:apply-templates/>
+          </span>
+         </xsl:when>
+         <xsl:when test="@type = 'demo' and @subtype = 'added'">
+          <span class="inline-addition">
+          <xsl:apply-templates/>
+          </span>
+         </xsl:when>
+         <xsl:otherwise>
+          <xsl:apply-templates/>
+         </xsl:otherwise>
+        </xsl:choose>
+  </xsl:template> 
 
  <xsl:template match="tei:sic">
   <xsl:choose>
@@ -729,6 +758,14 @@
     <xsl:apply-templates/>
    </xsl:otherwise>
   </xsl:choose>
+ </xsl:template>
+
+ <xsl:template match="tei:unclear">
+  <span class="editorial">
+   <xsl:text>[?</xsl:text>
+   <xsl:apply-templates/>
+   <xsl:text>]</xsl:text>
+  </span>
  </xsl:template>
 
 </xsl:stylesheet>
