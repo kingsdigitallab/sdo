@@ -682,6 +682,13 @@
           <xsl:apply-templates/>
           </span>
          </xsl:when>
+         <xsl:when test="@type = 'demo' and @subtype = 'underline'">
+          <span class="underline">
+          <xsl:apply-templates/>
+          </span>
+         </xsl:when>
+         <xsl:when test="@type = 'demo' and @subtype = 'overwritten'"><span class="erased" onmouseover="show(this)" onmouseout="show(this)" xml:space="preserve"><span class="erased2"><xsl:value-of select="child::tei:seg[@subtype='undertext']"/></span><xsl:value-of select="child::tei:seg[@subtype='overtext']"/></span>
+         </xsl:when>
          <xsl:otherwise>
           <xsl:apply-templates/>
          </xsl:otherwise>
