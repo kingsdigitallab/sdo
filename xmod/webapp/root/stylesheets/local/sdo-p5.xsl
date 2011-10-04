@@ -232,7 +232,7 @@
  </xsl:template>
  
  <xsl:template match="tei:foreign">
-  <!-- do nothing; rendering is controlled by a <tei:hi> child -->
+   <xsl:apply-templates/> 
  </xsl:template>
 
  <xsl:template match="tei:fw">
