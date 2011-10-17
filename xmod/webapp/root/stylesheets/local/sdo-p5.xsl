@@ -124,6 +124,10 @@
    <!-- match 'transcription' and 'translation' divs in a primary document -->
    <xsl:when test="parent::sdo:record">
     <xsl:choose>
+     <xsl:when test="child::tei:div[contains(@type, 'part_')]">
+      <xsl:apply-templates mode="multipartItem"/>
+      <!-- SEE THE FOLLOWING <XSL:TEMPLATE> -->
+     </xsl:when>
      <xsl:when test="child::tei:opener">
       <div id="opener">
        <xsl:if test="child::tei:opener/preceding-sibling::tei:note">
@@ -155,7 +159,8 @@
      <xsl:otherwise>
       <div>
        <xsl:apply-templates
-        select="child::tei:*[not(self::tei:closer) and not(self::tei:postscript) and not(self::tei:fw[@type='envelope'])]"/>
+        select="child::tei:*[not(self::tei:closer) and not(self::tei:postscript) and not(self::tei:fw[@type='envelope'])]"
+       />
       </div>
       <xsl:if test="child::tei:closer">
        <div id="closer">
@@ -171,7 +176,7 @@
        <div id="envelope">
         <xsl:apply-templates select="tei:fw[@type='envelope']"/>
        </div>
-       </xsl:if>
+      </xsl:if>
      </xsl:otherwise>
     </xsl:choose>
    </xsl:when>
@@ -189,6 +194,62 @@
     <div>
      <xsl:apply-templates/>
     </div>
+   </xsl:otherwise>
+  </xsl:choose>
+ </xsl:template>
+
+ <!-- This template takes care of situation where we have multiple items in one document, eg. the picture postcard with two separate messages, OJ-8-4_31.xml. It's the same as the <tei:div> template above, but now applying to <tei:div @type='part_X' -->
+ <xsl:template match="tei:div" mode="multipartItem">
+  <xsl:choose>
+   <xsl:when test="child::tei:opener">
+    <div id="opener">
+     <xsl:if test="child::tei:opener/preceding-sibling::tei:note">
+      <xsl:apply-templates select="tei:note"/>
+     </xsl:if>
+     <xsl:apply-templates select="child::tei:opener"/>
+    </div>
+    <div>
+     <xsl:apply-templates
+      select="child::tei:opener/following-sibling::tei:*[not(self::tei:closer) and not(self::tei:postscript) and not(self::tei:fw[@type='envelope'])]"
+     />
+    </div>
+    <xsl:if test="child::tei:closer">
+     <div id="closer">
+      <xsl:apply-templates select="tei:closer"/>
+     </div>
+    </xsl:if>
+    <xsl:if test="child::tei:postscript">
+     <div id="postscript">
+      <xsl:apply-templates select="tei:postscript"/>
+     </div>
+    </xsl:if>
+    <xsl:if test="child::tei:fw[@type='envelope']">
+     <div id="envelope">
+      <xsl:apply-templates select="tei:fw[@type='envelope']"/>
+     </div>
+    </xsl:if>
+   </xsl:when>
+   <xsl:otherwise>
+    <div>
+     <xsl:apply-templates
+      select="child::tei:*[not(self::tei:closer) and not(self::tei:postscript) and not(self::tei:fw[@type='envelope'])]"
+     />
+    </div>
+    <xsl:if test="child::tei:closer">
+     <div id="closer">
+      <xsl:apply-templates select="tei:closer"/>
+     </div>
+    </xsl:if>
+    <xsl:if test="child::tei:postscript">
+     <div id="postscript">
+      <xsl:apply-templates select="tei:postscript"/>
+     </div>
+    </xsl:if>
+    <xsl:if test="child::tei:fw[@type='envelope']">
+     <div id="envelope">
+      <xsl:apply-templates select="tei:fw[@type='envelope']"/>
+     </div>
+    </xsl:if>
    </xsl:otherwise>
   </xsl:choose>
  </xsl:template>
@@ -230,9 +291,9 @@
    <xsl:text>] </xsl:text>
   </span>
  </xsl:template>
- 
+
  <xsl:template match="tei:foreign">
-   <xsl:apply-templates/> 
+  <xsl:apply-templates/>
  </xsl:template>
 
  <xsl:template match="tei:fw">
@@ -668,32 +729,33 @@
   </xsl:if>
   <xsl:apply-templates/>
  </xsl:template>
- 
-  <!-- FOR THE PAGE GIVING EXAMPLES OF EDITORIAL CONVENTIONS USED IN THE REGULAR TEXT DISPLAY -->
-  <xsl:template match="tei:seg">
-        <xsl:choose>
-         <xsl:when test="@type = 'demo' and @subtype = 'editorial'">
-          <span class="editorial">
-          <xsl:apply-templates/>
-          </span>
-         </xsl:when>
-         <xsl:when test="@type = 'demo' and @subtype = 'added'">
-          <span class="inline-addition">
-          <xsl:apply-templates/>
-          </span>
-         </xsl:when>
-         <xsl:when test="@type = 'demo' and @subtype = 'underline'">
-          <span class="underline">
-          <xsl:apply-templates/>
-          </span>
-         </xsl:when>
-         <xsl:when test="@type = 'demo' and @subtype = 'overwritten'"><span class="erased" onmouseover="show(this)" onmouseout="show(this)" xml:space="preserve"><span class="erased2"><xsl:value-of select="child::tei:seg[@subtype='undertext']"/></span><xsl:value-of select="child::tei:seg[@subtype='overtext']"/></span>
-         </xsl:when>
-         <xsl:otherwise>
-          <xsl:apply-templates/>
-         </xsl:otherwise>
-        </xsl:choose>
-  </xsl:template> 
+
+ <!-- FOR THE PAGE GIVING EXAMPLES OF EDITORIAL CONVENTIONS USED IN THE REGULAR TEXT DISPLAY -->
+ <xsl:template match="tei:seg">
+  <xsl:choose>
+   <xsl:when test="@type = 'demo' and @subtype = 'editorial'">
+    <span class="editorial">
+     <xsl:apply-templates/>
+    </span>
+   </xsl:when>
+   <xsl:when test="@type = 'demo' and @subtype = 'added'">
+    <span class="inline-addition">
+     <xsl:apply-templates/>
+    </span>
+   </xsl:when>
+   <xsl:when test="@type = 'demo' and @subtype = 'underline'">
+    <span class="underline">
+     <xsl:apply-templates/>
+    </span>
+   </xsl:when>
+   <xsl:when test="@type = 'demo' and @subtype = 'overwritten'">
+    <span class="erased" onmouseover="show(this)" onmouseout="show(this)" xml:space="preserve"><span class="erased2"><xsl:value-of select="child::tei:seg[@subtype='undertext']"/></span><xsl:value-of select="child::tei:seg[@subtype='overtext']"/></span>
+   </xsl:when>
+   <xsl:otherwise>
+    <xsl:apply-templates/>
+   </xsl:otherwise>
+  </xsl:choose>
+ </xsl:template>
 
  <xsl:template match="tei:sic">
   <xsl:choose>
