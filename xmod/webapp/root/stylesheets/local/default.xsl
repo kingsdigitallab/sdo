@@ -126,6 +126,7 @@
     <link href="{$xmp:assets-path}/c/print.css" media="print" rel="stylesheet" type="text/css"/>
     <link href="{$xmp:assets-path}/c/default.css" media="screen, projection" rel="stylesheet" type="text/css"/>
     <link href="{$xmp:assets-path}/c/personality.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+    <link href="{$xmp:assets-path}/c/jquery.fancybox-1.3.4.css" media="screen, projection" rel="stylesheet" type="text/css"/>
     <xsl:comment>
       <xsl:text>[if lte IE 6]&gt; &lt;link href="</xsl:text>
       <xsl:value-of select="$xmp:assets-path"/>
@@ -144,8 +145,10 @@
   </xsl:template>
   
   <xsl:template name="xmv:script">
-    <script src="{$xmp:assets-path}/j/jquery-1.5.min.js" type="text/javascript">&#160;</script>
-    <script src="{$xmp:assets-path}/s/jquery.nestedAccordion.js" type="text/javascript">&#160;</script>
+ 
+    <script src="{$xmp:assets-path}/j/jquery-1.6.4.min.js" type="text/javascript">&#160;</script>  
+      <script src="{$xmp:assets-path}/s/jquery.nestedAccordion.js" type="text/javascript">&#160;</script> 
+    <script src="{$xmp:assets-path}/s/jquery.fancybox-1.3.4.js" type="text/javascript">&#160;</script> 
     <script src="{$xmp:assets-path}/s/jquery.ui.tabs.js" type="text/javascript">&#160;</script>
     <script src="{$xmp:assets-path}/s/jquery.ui.widget.js" type="text/javascript">&#160;</script>
     <script src="{$xmp:assets-path}/s/jquery.ui.datepicker.js" type="text/javascript">&#160;</script>
