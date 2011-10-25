@@ -329,6 +329,12 @@
    </xsl:otherwise>
   </xsl:choose>
  </xsl:template>
+ 
+ <xsl:template match="tei:g">
+  <span class="char">
+   <xsl:apply-templates/>
+  </span>
+ </xsl:template>
 
  <xsl:template match="tei:gap">
   <span class="editorial">
@@ -751,6 +757,14 @@
    <xsl:when test="@type = 'demo' and @subtype = 'overwritten'">
     <span class="erased" onmouseover="show(this)" onmouseout="show(this)" xml:space="preserve"><span class="erased2"><xsl:value-of select="child::tei:seg[@subtype='undertext']"/></span><xsl:value-of select="child::tei:seg[@subtype='overtext']"/></span>
    </xsl:when>
+   <xsl:when test="@type = 'demo' and @subtype = 'handshift'">
+    <xsl:variable name="handIDval" select="substring-after(@n, '#')"/>
+    <span class="handshift">
+     <xsl:attribute name="title"
+     ><xsl:text>Otto Erich Deutsch's hand</xsl:text></xsl:attribute>&#x21E7;
+     <xsl:apply-templates/></span>
+   </xsl:when>
+
    <xsl:otherwise>
     <xsl:apply-templates/>
    </xsl:otherwise>
