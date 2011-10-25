@@ -14,7 +14,29 @@ $("document").ready(function () {
       return false;
     }).filter(':first').click();
   });
+  
+  
+$("a.x87").fancybox();
+               
+ /* Using custom settings */
+               
+      $("a#inline").fancybox({
+        'hideOnContentClick': true
+    });
+               
+               /* Apply fancybox to multiple items */
+               
+      $("a.group").fancybox({
+               'transitionIn'	:	'elastic',
+               'transitionOut'	:	'elastic',
+               'speedIn'		:	600, 
+               'speedOut'		:	200, 
+               'overlayShow'	:	false
+               });
+               
+  
 });
+
 
 
 $("html").addClass("js");
@@ -165,4 +187,23 @@ function getFormattedDate(date)
 	
 	return year + "-" + month
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
