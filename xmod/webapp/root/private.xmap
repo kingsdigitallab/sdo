@@ -39,6 +39,16 @@
         <map:generate src="cocoon://_internal/solr/index/{1}/{2}.xml" />
         <map:serialize type="xml" />
       </map:match>
+
+      <!-- Preprocess TEI before indexing. -->
+      <map:match pattern="solr/tei/tei-eats/**/*.xml">
+        <map:generate src="xml/content/{1}/{2}.xml"/>
+        <map:serialize type="xml"/>
+      </map:match>
+      <map:match pattern="solr/tei/*/**/*.xml">
+        <map:generate src="xml/content/{2}/{3}.xml"/>
+        <map:serialize type="xml"/>
+      </map:match>
     </map:pipeline>
 
     <map:pipeline id="local-schematron">
