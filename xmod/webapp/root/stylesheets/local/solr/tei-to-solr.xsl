@@ -147,7 +147,7 @@
           </field>
 
           <xsl:for-each select="distinct-values(descendant::tei:*[@key]/@key)">
-            <field name="entity-key">
+            <field name="entity_key">
               <xsl:value-of select="." />
             </field>
           </xsl:for-each>
