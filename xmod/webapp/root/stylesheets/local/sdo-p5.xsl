@@ -743,6 +743,10 @@
    <br/>
   </xsl:if>
   <xsl:apply-templates/>
+  <xsl:if test="parent::tei:opener">
+   <br/>
+   <br/>
+  </xsl:if>
  </xsl:template>
 
  <!-- FOR THE PAGE GIVING EXAMPLES OF EDITORIAL CONVENTIONS USED IN THE REGULAR TEXT DISPLAY -->
