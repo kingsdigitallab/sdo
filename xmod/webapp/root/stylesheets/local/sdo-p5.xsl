@@ -408,6 +408,11 @@
      <xsl:apply-templates/>
     </span>
    </xsl:when>
+   <xsl:when test="@rend='sperr'">
+    <span class="sperr">
+     <xsl:apply-templates/>
+    </span>
+   </xsl:when>
    <!-- CURRENT DEFAULT: italics -->
    <xsl:otherwise>
     <em>
