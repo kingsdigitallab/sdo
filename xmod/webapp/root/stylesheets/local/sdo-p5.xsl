@@ -459,6 +459,9 @@
    <xsl:when test="@rend='inline em-dash'">
     <xsl:text>&#8212;</xsl:text>
    </xsl:when>
+   <xsl:when test="@rend='block asterisk'">
+    <xsl:text>*</xsl:text><br/>
+   </xsl:when>
   </xsl:choose>
  </xsl:template>
 
