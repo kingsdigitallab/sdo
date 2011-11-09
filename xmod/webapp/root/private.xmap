@@ -51,6 +51,14 @@
       </map:match>
     </map:pipeline>
 
+    <map:pipeline id="local-eats">
+      <!-- Preprocess EATSML. -->
+      <map:match pattern="eats/entities.xml">
+        <map:generate src="cocoon://_internal/eats/entities.xml" />
+        <map:serialize type="xml" />
+      </map:match>
+    </map:pipeline>
+
     <map:pipeline id="local-schematron">
       <!-- Schematron validation. This is the project-specific
            interface to xMod's Schematron handling.
