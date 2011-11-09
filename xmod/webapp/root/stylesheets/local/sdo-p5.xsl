@@ -12,6 +12,9 @@
 
  <xsl:template match="tei:ab">
   <p>
+   <xsl:if test="@type='division-marker'">
+    <xsl:attribute name="class">c</xsl:attribute>
+   </xsl:if>
    <xsl:apply-templates/>
   </p>
  </xsl:template>
@@ -460,7 +463,7 @@
     <xsl:text>&#8212;</xsl:text>
    </xsl:when>
    <xsl:when test="@rend='block asterisk'">
-    <xsl:text>*</xsl:text><br/>
+    <xsl:text>*</xsl:text>
    </xsl:when>
   </xsl:choose>
  </xsl:template>
