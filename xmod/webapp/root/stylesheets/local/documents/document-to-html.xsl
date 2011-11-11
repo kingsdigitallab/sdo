@@ -274,8 +274,18 @@
   </xsl:function>
 
   <xsl:template match="tei:rs[@key]">
-    <xsl:variable name="display-name"
-      select="/*/eats/entities/entity[keys/key = current()/@key]/names/name[1]"/>
+    <xsl:variable name="display-name">
+      <xsl:for-each select="/*/eats/entities/entity[keys/key = current()/@key]">
+        <xsl:choose>
+          <xsl:when test="names/name[@is_preferred = true()]">
+            <xsl:value-of select="names/name[@is_preferred = true()]"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of select="names/name[1]"/>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:for-each>
+    </xsl:variable>
 
     <a href="/profiles/{@type}/{@key}.html" title="{$display-name}">
       <xsl:apply-templates/>
