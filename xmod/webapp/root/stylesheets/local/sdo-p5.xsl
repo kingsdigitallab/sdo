@@ -640,14 +640,51 @@
       </a>
      </xsl:when>
      <xsl:when test="@type = 'unknown'">
-      <a>
-       <xsl:call-template name="internal-link">
-        <xsl:with-param name="title">
-         <xsl:text>this unavailable - document not yet online.</xsl:text>
-        </xsl:with-param>
-       </xsl:call-template>
-       <xsl:apply-templates/>
-      </a>
+      <xsl:variable name="file" select="@cRef"/>
+      <xsl:variable name="fileref">
+       <xsl:choose>
+        <xsl:when test="doc-available(string(concat('../../xml/content/documents/correspondence/', $file, '.xml')))">  
+          <xsl:value-of select="$file"/>
+        </xsl:when>
+        <xsl:when test="doc-available(string(concat('../../xml/content/documents/diaries/', $file, '.xml')))">
+         <xsl:value-of select="concat(substring-before(@cRef, ':'), '/', substring-after(@cRef, ':'))"/>
+        </xsl:when>
+        <xsl:when test="doc-available(string(concat('../../xml/content/documents/lessonbooks/', $file, '.xml')))">
+         <xsl:value-of select="$file"/>
+        </xsl:when>
+        <xsl:when test="doc-available(string(concat('../../xml/content/documents/other/', $file, '.xml')))">
+         <xsl:value-of select="$file"/>
+        </xsl:when>
+        <xsl:otherwise>
+         <xsl:value-of select="''" />
+        </xsl:otherwise>
+       </xsl:choose>
+      </xsl:variable>
+      <xsl:choose>
+       <xsl:when test="$fileref != ''">
+         <xsl:variable name="path" select="concat('/documents/correspondence/', $fileref, '.html')"/>
+         <a>
+          <xsl:call-template name="internal-link">
+           <xsl:with-param name="title" select="$file"/>
+          </xsl:call-template>
+          <xsl:attribute name="href">
+           <xsl:value-of select="$path"/>
+          </xsl:attribute>
+          <xsl:apply-templates/>
+         </a>         
+       </xsl:when>
+       <xsl:otherwise>
+        <a>
+         <xsl:call-template name="internal-link">
+          <xsl:with-param name="title">
+           <xsl:text>this unavailable - document not yet online.</xsl:text>
+          </xsl:with-param>
+         </xsl:call-template>
+         <xsl:apply-templates/>
+        </a> 
+       </xsl:otherwise>
+      </xsl:choose>
+      
      </xsl:when>
      <xsl:otherwise>
       <xsl:variable name="file" select="@cRef"/>
