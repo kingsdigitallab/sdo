@@ -90,13 +90,27 @@
               <!-- English version. -->
               <xsl:apply-templates select="$record/tei:div[@type='translation']"/>
               <div id="translCopyright">
-                <p>&#x00A9; Translation <xsl:value-of
-                    select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt[contains(., 'Translation')]/tei:persName"
-                      /><xsl:choose><xsl:when
-                      test="contains(/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt/tei:resp[contains(., 'Translation')], ',')"
-                      >, <xsl:value-of
-                        select="substring-after(/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt/tei:resp[contains(., 'Translation')], ',')"
-                      /></xsl:when><xsl:otherwise>.</xsl:otherwise></xsl:choose>
+                <p>&#x00A9; Translation<xsl:for-each
+                    select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt[contains(., 'Translation')]"><xsl:choose>
+                      <xsl:when test="position() != last()"><xsl:text> </xsl:text><xsl:value-of
+                          select="child::tei:persName"/><xsl:if
+                          test="child::tei:resp/child::tei:date"
+                            ><xsl:text> (</xsl:text><xsl:value-of
+                            select="child::tei:resp/child::tei:date"
+                            /><xsl:text>)</xsl:text></xsl:if>,</xsl:when>
+                      <xsl:when test="position() = last()"><xsl:text> </xsl:text><xsl:value-of
+                        select="child::tei:persName"/><xsl:if
+                          test="child::tei:resp/child::tei:date"
+                          ><xsl:text> (</xsl:text><xsl:value-of
+                            select="child::tei:resp/child::tei:date"
+                          /><xsl:text>)</xsl:text></xsl:if>.</xsl:when>
+                      <xsl:otherwise><xsl:text> </xsl:text><xsl:value-of
+                          select="child::tei:persName"/><xsl:if
+                          test="child::tei:resp/child::tei:date"
+                            ><xsl:text> (</xsl:text><xsl:value-of
+                            select="child::tei:resp/child::tei:date"
+                          /><xsl:text>)</xsl:text></xsl:if></xsl:otherwise>
+                    </xsl:choose></xsl:for-each>
                 </p>
               </div>
             </td>
@@ -130,13 +144,27 @@
               <!-- English version. -->
               <xsl:apply-templates select="$record/tei:div[@type='translation']"/>
               <div id="translCopyright">
-                <p>&#x00A9; Translation <xsl:value-of
-                    select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt[contains(., 'Translation')]/tei:persName"
-                      /><xsl:choose><xsl:when
-                      test="contains(/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt/tei:resp[contains(., 'Translation')], ',')"
-                      >, <xsl:value-of
-                        select="substring-after(/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt/tei:resp[contains(., 'Translation')], ',')"
-                      /></xsl:when><xsl:otherwise>.</xsl:otherwise></xsl:choose>
+                <p>&#x00A9; Translation<xsl:for-each
+                  select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt[contains(., 'Translation')]"><xsl:choose>
+                    <xsl:when test="position() != last()"><xsl:text> </xsl:text><xsl:value-of
+                      select="child::tei:persName"/><xsl:if
+                        test="child::tei:resp/child::tei:date"
+                        ><xsl:text> (</xsl:text><xsl:value-of
+                          select="child::tei:resp/child::tei:date"
+                        /><xsl:text>)</xsl:text></xsl:if>,</xsl:when>
+                    <xsl:when test="position() = last()"><xsl:text> </xsl:text><xsl:value-of
+                      select="child::tei:persName"/><xsl:if
+                        test="child::tei:resp/child::tei:date"
+                        ><xsl:text> (</xsl:text><xsl:value-of
+                          select="child::tei:resp/child::tei:date"
+                        /><xsl:text>)</xsl:text></xsl:if>.</xsl:when>
+                    <xsl:otherwise><xsl:text> </xsl:text><xsl:value-of
+                      select="child::tei:persName"/><xsl:if
+                        test="child::tei:resp/child::tei:date"
+                        ><xsl:text> (</xsl:text><xsl:value-of
+                          select="child::tei:resp/child::tei:date"
+                        /><xsl:text>)</xsl:text></xsl:if></xsl:otherwise>
+                  </xsl:choose></xsl:for-each>
                 </p>
               </div>
             </td>
