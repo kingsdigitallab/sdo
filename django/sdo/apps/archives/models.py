@@ -93,11 +93,13 @@ CONTENT_TYPES = (
     )
 
 class Container(models.Model):
+	maxlen = 15
+	
     collection = models.ForeignKey(Collection, help_text=u"Select the collection to which this container belongs; click the green plus sign (+) to add a new repository to the archive")
     content_type = models.CharField("Content Type", max_length=1, choices=CONTENT_TYPES, help_text=u"Indicate the kind of material included in this container.")
-    series = models.CharField(max_length=5, blank=True, help_text=u"As required, enter the series identifier for the container")
-    box = models.CharField(max_length=5, blank=True, help_text=u"As required, enter the box identifier for the container")    
-    folder = models.CharField("Folder", max_length=5, blank=True, help_text=u"As required, enter the folder identifier for the container") 
+    series = models.CharField(max_length=maxlen, blank=True, help_text=u"As required, enter the series identifier for the container")
+    box = models.CharField(max_length=maxlen, blank=True, help_text=u"As required, enter the box identifier for the container")    
+    folder = models.CharField("Folder", max_length=maxlen, blank=True, help_text=u"As required, enter the folder identifier for the container") 
     description = models.TextField(blank=True, help_text=u"As required, other descriptive information about this container")
     
     def get_collection_full_name(self):
