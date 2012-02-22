@@ -333,12 +333,21 @@
   </xsl:choose>
  </xsl:template>
  
+ <!-- COMMENTED OUT TO TEST NEW TEMPLATE
  <xsl:template match="tei:g">
   <span class="char">
    <xsl:choose>
     <xsl:when test="substring(@type, 1, 3) = 'cap'"><xsl:value-of select="substring(@type, 4)"/>&#x0302;</xsl:when>
     <xsl:when test="@type='flat'">&#x266D;</xsl:when>
     <xsl:when test="@type='sharp'">&#x266F;</xsl:when>
+   </xsl:choose>
+  </span>
+ </xsl:template> -->
+ 
+ <xsl:template match="tei:g">
+  <span class="csthree">
+   <xsl:choose>
+    <xsl:when test="@type='sharp'">&#x011B;</xsl:when>
    </xsl:choose>
   </span>
  </xsl:template>
