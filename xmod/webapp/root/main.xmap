@@ -18,6 +18,15 @@
       <map:match pattern="_a/**.css">
         <map:read mime-type="text/css" src="_a/{1}.css" />
       </map:match>
+      
+      <!-- TEST TEMPLATES FOR FONT SUBSTITUTION STUFF -->
+      <map:match pattern="_a/**.eot">
+        <map:read mime-type="application/vnd.ms-fontobject" src="_a/{1}.eot" />
+      </map:match>
+      <map:match pattern="_a/**.woff">
+        <map:read mime-type="application/font-woff" src="_a/{1}.woff" />
+      </map:match>
+      <!-- END TEST TEMPLATE -->
 
       <map:match pattern="_a/**.gif">
         <map:read mime-type="image/gif" src="_a/{1}.gif" />
@@ -42,6 +51,12 @@
       <map:match pattern="_a/**.png">
         <map:read mime-type="image/png" src="_a/{1}.png" />
       </map:match>
+      
+      <!-- TEST TEMPLATE FOR FONT SUBSTITUTION STUFF 
+      <map:match pattern="_a/f/csthree/csthree.**">
+        <map:read mime-type="application/vnd.ms-fontobject" src="_a/f/csthree/csthree.{1}" />
+      </map:match>
+      END TEST TEMPLATE -->
 
       <map:match pattern="images/**.gif">
         <map:read mime-type="image/gif" src="images/{1}.gif" />

@@ -348,6 +348,7 @@
   <span class="csthree">
    <xsl:choose>
     <xsl:when test="@type='sharp'">&#x011B;</xsl:when>
+    <xsl:otherwise><!-- do nothing for now --></xsl:otherwise>
    </xsl:choose>
   </span>
  </xsl:template>
