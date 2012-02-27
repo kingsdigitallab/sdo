@@ -6,7 +6,6 @@
 
 
  <xsl:import href="../xmod/tei/p5.xsl"/>
- <xsl:import href="special_characters.xsl"/>
 
  <!-- NOW OVERRIDE DEFAULTS FROM p5.xsl OR SUPPLY TEMPLATES IT DOESN'T HAVE -->
 
