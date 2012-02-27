@@ -38,9 +38,6 @@
                         <xsl:when test="@type='cresc'">&#x02D2;</xsl:when>
                         <xsl:when test="@type='dim'">&#x02D3;</xsl:when>
                         <xsl:when test="@type='crescdim'">&#x02D2;&#x02D3;</xsl:when>
-                        <xsl:when test="@type='Gclef'">&#x;</xsl:when>
-                        <xsl:when test="@type='Fclef'">&#x;</xsl:when>
-                        <xsl:when test="@type='Cclef'">&#x;</xsl:when>
                         <xsl:otherwise><!-- do nothing for now --></xsl:otherwise>
                     </xsl:choose>
                 </span>
