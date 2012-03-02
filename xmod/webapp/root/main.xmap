@@ -195,6 +195,36 @@
           </map:otherwise>
         </map:select>
       </map:match>
+      
+      <!-- Browse other by author. -->
+      <map:match pattern="documents/other/author.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.xml" />
+          <map:part src="cocoon://_internal/solr/query/q=kind%3Aother&amp;rows=5000&amp;fl=author" />
+        </map:aggregate>
+        <map:transform src="stylesheets/local/documents/other-list-to-html.xsl">
+          <map:parameter name="filedir" value="documents/other" />
+          <map:parameter name="filename" value="author.xml" />
+          <map:parameter name="fileextension" value="html" />
+        </map:transform> 
+        <map:serialize type="xhtml" />
+       <!-- <map:serialize type="xml" />-->
+      </map:match>         
+
+      <!-- Browse other by title. -->
+      <map:match pattern="documents/other/title.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.xml" />
+          <map:part src="cocoon://_internal/solr/query/q=kind%3Aother&amp;rows=5000&amp;fl=title,fileId" />
+        </map:aggregate>
+       <map:transform src="stylesheets/local/documents/other-title-to-html.xsl">
+          <map:parameter name="filedir" value="documents/other" />
+          <map:parameter name="filename" value="title.xml" />
+          <map:parameter name="fileextension" value="html" />
+        </map:transform>
+        <map:serialize type="xhtml" />
+       <!--   <map:serialize type="xml" /> -->
+      </map:match>   
 
       <!-- Browse correspondence by type of item. -->
       <map:match pattern="documents/correspondence/type.html">
@@ -202,7 +232,7 @@
           <map:part src="cocoon://_internal/menu/main.xml" />
           <map:part src="cocoon://_internal/solr/query/q=kind%3Acorrespondence&amp;rows=5000&amp;fl=type,fileId" />
         </map:aggregate>
-        <map:transform src="stylesheets/local/documents/correspondence-type-list-to-html.xsl">
+       <map:transform src="stylesheets/local/documents/correspondence-type-list-to-html.xsl">
           <map:parameter name="filedir" value="documents/correspondence" />
           <map:parameter name="filename" value="type.xml" />
           <map:parameter name="fileextension" value="html" />
@@ -222,7 +252,8 @@
           <map:parameter name="fileextension" value="html" />
         </map:transform>
         <map:serialize type="xhtml" />
-      </map:match>
+        <!-- <map:serialize type="xml" /> -->
+      </map:match>    
 
       <!-- Browse lessonbooks by pupil. -->
       <map:match pattern="documents/lessonbooks/pupil.html">
@@ -450,6 +481,7 @@
           <map:parameter name="fileextension" value="html" />
         </map:transform>
         <map:serialize type="xhtml" />
+      <!--  <map:serialize type="xml" /> -->
       </map:match>
 
       <map:match pattern="profiles/*/*.html">

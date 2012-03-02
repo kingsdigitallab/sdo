@@ -87,7 +87,7 @@
                 <xsl:text> </xsl:text>
                 <xsl:value-of select="." />
               </field>
-            </xsl:for-each>
+            </xsl:for-each>            
 
             <xsl:for-each select="sdo:itemDesc/marcrel:recipient">
               <field name="recipient">
@@ -97,6 +97,14 @@
               </field>
             </xsl:for-each>
           </xsl:if>
+
+            <xsl:for-each select="sdo:itemDesc/marcrel:author">
+              <field name="author">
+                <xsl:value-of select="@key" />
+                <xsl:text> </xsl:text>
+                <xsl:value-of select="." />
+              </field>
+            </xsl:for-each>
 
           <xsl:if test="$kind != 'diaries'">
             <field name="title">
