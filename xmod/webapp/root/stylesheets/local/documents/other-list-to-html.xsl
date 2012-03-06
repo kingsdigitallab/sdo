@@ -10,10 +10,11 @@
   </xsl:variable>
 
   <xsl:template name="xms:content">
-    <!-- Group by item type. -->
-    <xsl:for-each-group group-by="substring-before(., ' ')"
-      select="/aggregation/response/result/doc/arr[@name='author']/str">
-      <xsl:sort select="substring-after(., ' ')" />
+    <!-- Group by author -->
+    
+    <xsl:for-each-group group-by="."
+      select="/aggregation/response/result/doc/arr[@name='author_key']/str">
+      <xsl:sort select="." />
       <ul>
         <li>
           <a>
@@ -22,7 +23,10 @@
               <xsl:value-of select="current-grouping-key()" />
               <xsl:text>.html</xsl:text>
             </xsl:attribute>
-            <xsl:value-of select="replace(substring-after(., ' '), '_', ' ~ ')" />
+            <!-- <xsl:value-of select="/aggregation/response/result/doc/arr[@name='author_key']/str[text() = current-grouping-key()]/../../arr[@name='author']" /> -->
+             <xsl:call-template name="get-author-name" >
+              <xsl:with-param name="author-id"><xsl:value-of select="current-grouping-key()" /></xsl:with-param>
+            </xsl:call-template>
           </a>
           <xsl:call-template name="add-item-count" />
         </li>
@@ -37,6 +41,17 @@
     <xsl:if test="count(current-group()) &gt; 1">
       <xsl:text>s</xsl:text>
     </xsl:if>
+  </xsl:template>
+  
+  <xsl:template name="get-author-name">
+    <xsl:param name="author-id" />
+    
+   <!--  <xsl:value-of select="/aggregation/response/result/doc/arr[@name='author_key']/str[text() = $author-id]/../../arr[@name='author']" /> -->
+    
+    <xsl:for-each select="/aggregation/response/result/doc/arr[@name='author_key']/str[text() = $author-id]">
+      <xsl:if test="position() = 1">
+      <xsl:value-of select="../../arr[@name='author']"></xsl:value-of></xsl:if>
+    </xsl:for-each>
   </xsl:template>
 
 

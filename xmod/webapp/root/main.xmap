@@ -200,7 +200,7 @@
       <map:match pattern="documents/other/author.html">
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml" />
-          <map:part src="cocoon://_internal/solr/query/q=kind%3Aother&amp;rows=5000&amp;fl=author" />
+          <map:part src="cocoon://_internal/solr/query/q=kind%3Aother&amp;rows=5000&amp;fl=author_key,author" />
         </map:aggregate>
         <map:transform src="stylesheets/local/documents/other-list-to-html.xsl">
           <map:parameter name="filedir" value="documents/other" />
@@ -208,7 +208,7 @@
           <map:parameter name="fileextension" value="html" />
         </map:transform> 
         <map:serialize type="xhtml" />
-       <!-- <map:serialize type="xml" />-->
+      <!--  <map:serialize type="xml" />-->
       </map:match>         
 
       <!-- Browse other by title. -->
@@ -507,12 +507,13 @@
             </map:aggregate>
           </map:otherwise>
         </map:select>
-        <map:transform src="stylesheets/local/profiles/profile-to-html.xsl">
+         <map:transform src="stylesheets/local/profiles/profile-to-html.xsl">
           <map:parameter name="filedir" value="profiles/{1}" />
           <map:parameter name="filename" value="{2}.xml" />
           <map:parameter name="fileextension" value="html" />
         </map:transform>
         <map:serialize type="xhtml" />
+       <!--<map:serialize type="xml" /> -->
       </map:match>
     </map:pipeline>
 

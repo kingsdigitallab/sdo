@@ -100,7 +100,7 @@
       </xsl:otherwise>
     </xsl:choose>
 
-    <xsl:if test="/aggregation/response/result/doc">
+    <xsl:if test="/aggregation/response/result/doc">      
       <div>
         <xsl:call-template name="make-section">
           <xsl:with-param name="name" select="'Correspondence'" />
@@ -234,7 +234,7 @@
               </xsl:otherwise>
             </xsl:choose>
           </strong>
-        </a>
+        </a> <xsl:if test="arr[@name='author'] and arr[@name='author_key'] = $entity-key"> [Author]</xsl:if>
       </p>
       <xsl:if test="str[@name='description']">
         <p>

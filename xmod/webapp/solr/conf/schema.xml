@@ -456,9 +456,11 @@
    <field name="pupil" type="string" indexed="true" stored="true" />
    <field name="correspondent" multiValued="true" type="string" indexed="true" stored="true"/>
    <field name="recipient" multiValued="true" type="string" indexed="true" stored="true"/>
+   <field name="author_key" multiValued="true" type="string" indexed="true" required="false" stored="true" />
+   
    <!-- xmod default fields below; for SDO these have all been made required="false" -->
    <field indexed="true" multiValued="true" name="document_title" required="false" stored="true" type="text" />
-   <field indexed="true" multiValued="true" name="author" required="false" stored="true" type="text" />
+   <field name="author" multiValued="true" type="string" indexed="true" required="false" stored="true" />
    <field indexed="true" multiValued="false" name="file" required="false" stored="true" type="string" />
    <field indexed="false" multiValued="false" name="tei_id" required="false" stored="true" type="string" />
    <field indexed="false" multiValued="false" name="section_id" required="false" stored="true" type="string" />
