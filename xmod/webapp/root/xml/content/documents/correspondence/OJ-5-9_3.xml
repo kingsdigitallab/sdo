@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:marcrel="http://www.loc.gov/loc.terms/relators/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
+  xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="683" sdoID="OJ-5-9_3">OJ 5/9, [3]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="DB">
+      <tei:persName>David Bretherton</tei:persName>
+      <tei:resp>Transcription, 2012</tei:resp>
+      <tei:resp>Translation, 2012</tei:resp>
+      <tei:resp>XML Encoding, 2012</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2012-03-13" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~ H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~ HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~ H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+      <dc:title>Handwritten letter from Schenker to Deutsch, dated May 15, 1930</dc:title>
+
+      <dcterms:created>1930-05-15T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2012-03-13</dcterms:dateSubmitted>
+      <dc:description>Discusses Beethoven's song "Neue Liebe, neues Leben" (Op. 75, No. 2). Dr. Rinn will be inviting
+        Deutsch to collaborate.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000632">Heinrich Schenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000164">Otto Erich Deutsch</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:salute rend="indent-10"><tei:handShift new="#HS"/>Mein lieber Prof <tei:rs key="entity-000164"
+            type="person">Deutsch</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">This document is
+            a single sheet, so perhaps should be considered a "note" (<tei:hi rend="italic">Zettel</tei:hi>) rather than
+            a letter. Its writing is not recorded in Schenker's diary.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Hier die auf das Lied bezüglichen Notenzeilen.[2] Alles ^gehört^ streng zur ersten Fassung! (die steifer
+        ist als die zweite) Die zweite Fassung ist durch die feinere[corr] Rhytmik ausgezeichnet:
+          <!-- OJ-5-9_3-ex1-ger BLOCK --><tei:note type="editorial">musical example to follow</tei:note> auf die die
+        Skizze noch gar nicht anspielt. </tei:p>
+
+      <tei:p rend="first">D^r^ H Rinn („Kunstwart“) teilt mir soeben mit, daß er Sie zur Mitarbeit einladen wird.[3] </tei:p>
+
+      <tei:p>Frtg. Abend![4]</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-45">Besten Gruß</tei:salute>
+        <tei:salute rend="indent-55">Ihr</tei:salute>
+        <tei:signed rend="indent-60"><tei:rs key="entity-000632" type="person"><tei:hi rend="lateinschr">H
+            Sch</tei:hi></tei:rs></tei:signed>
+      </tei:closer>
+
+      <!-- FROM HERE -->
+      <!-- NOTE TO BE ADDED -->
+
+
+    </tei:div>
+
+
+    <tei:div type="translation"> </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
