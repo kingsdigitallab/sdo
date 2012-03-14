@@ -23,7 +23,8 @@
         <ul>
           <!-- Exclude the content directory from the path. -->
           <!-- ORIG VERSION <xsl:apply-templates select="dir:directory/*" /> -->
-          <xsl:apply-templates select="dir:directory/*[@name='documents']" />
+          <xsl:apply-templates select="dir:directory/*[@name='profiles']" />
+          <xsl:apply-templates select="dir:directory/*[@name='documents']" /> <!---->
         </ul>
       </body>
     </html>
@@ -49,7 +50,7 @@
     </xsl:variable>
     <li>
       <!-- Link to the indexing pipeline for the specific file. -->
-      <a href="tei/{$filepath}">
+      <a href="tei-eats/{$filepath}">
         <xsl:value-of select="$filepath" />
       </a>
     </li>

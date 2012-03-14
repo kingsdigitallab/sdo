@@ -457,6 +457,7 @@
    <field name="correspondent" multiValued="true" type="string" indexed="true" stored="true"/>
    <field name="recipient" multiValued="true" type="string" indexed="true" stored="true"/>
    <field name="author_key" multiValued="true" type="string" indexed="true" required="false" stored="true" />
+   <!-- <field name="eats_type" type="string" indexed="true" stored="true" required="false" />  -->
    
    <!-- xmod default fields below; for SDO these have all been made required="false" -->
    <field indexed="true" multiValued="true" name="document_title" required="false" stored="true" type="text" />
@@ -467,7 +468,8 @@
    <!-- for SDO index we make the entity-key field multiValued="true", where the default is "false" -->
    <field indexed="true" multiValued="true" name="entity_key" required="false" stored="true" type="string" />
    <field indexed="true" multiValued="false" name="entity_name" required="false" stored="true" type="text" />
-   <field indexed="true" multiValued="false" name="eats_entity_name" required="false" stored="true" type="text" /> 
+   <field indexed="true" multiValued="false" name="eats_entity_name" required="false" stored="true" type="string" /> 
+   
    
    <!-- catchall field, containing all other searchable text fields (implemented
         via copyField further on in this schema  -->

@@ -125,6 +125,7 @@
         </map:aggregate>
         <map:transform src="stylesheets/local/solr/query-params-to-solr-xinclude.xsl">
           <map:parameter name="keyword" value="{request-param:kw}" />
+          <map:parameter name="filter" value="{request-param:fq}" />
           <map:parameter name="page" value="{request-param:p}" />
         </map:transform>
         <map:transform type="xinclude" />

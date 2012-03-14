@@ -8,6 +8,8 @@
   <xsl:param name="rows" select="10" />
 
   <xsl:variable name="kw" select="/*/response/lst/lst[@name='params']/str[@name='q']" />
+  <xsl:variable name="filter" select="/*/response/lst/lst[@name='params']/str[@name='fq']" />
+  <xsl:variable name="fq" select="substring-after($filter, 'kind:')" />
   <xsl:variable name="start" select="number(/*/response/result/@start)" />
   <xsl:variable name="number-results" select="number(/*/response/result/@numFound)" />
   <xsl:variable name="current-page" select="floor($start div $rows)+1" />
@@ -25,8 +27,51 @@
       </ul>
       <form action="" method="get">
         <p>
-          <label>Enter search string here:<input name="kw" size="12" type="text" value="{$kw}" /></label>
-          <br/><input type="submit" />
+          <label class="search">Search  <select name="fq">
+              <option value="all">
+                <xsl:if test="$fq='all' or $fq = ''">
+                  <xsl:attribute name="selected">true</xsl:attribute>
+                </xsl:if>Entire Site</option>
+            <option value="diaries">
+              <xsl:if test="$fq='diaries'">
+                <xsl:attribute name="selected">true</xsl:attribute>
+              </xsl:if>Diaries</option>
+            <option value="correspondence">
+              <xsl:if test="$fq='correspondence'">
+                <xsl:attribute name="selected">true</xsl:attribute>
+              </xsl:if>Correspondence</option>
+            <option value="lessonbooks">
+              <xsl:if test="$fq='lessonbooks'">
+                <xsl:attribute name="selected">true</xsl:attribute>
+              </xsl:if>Lessonbooks</option>
+            <option value="work">
+              <xsl:if test="$fq='work'">
+                <xsl:attribute name="selected">true</xsl:attribute>
+              </xsl:if>Works</option>
+            <option value="journal">
+              <xsl:if test="$fq='journal'">
+                <xsl:attribute name="selected">true</xsl:attribute>
+              </xsl:if>Journals</option>
+            <option value="other">
+              <xsl:if test="$fq='other'">
+                <xsl:attribute name="selected">true</xsl:attribute>
+              </xsl:if>Other Documents</option>            
+            <option value="person">
+                <xsl:if test="$fq='person'">
+                  <xsl:attribute name="selected">true</xsl:attribute>
+                </xsl:if>People</option>
+              <option value="place">
+                <xsl:if test="$fq='place'">
+                  <xsl:attribute name="selected">true</xsl:attribute>
+                </xsl:if>Places</option>
+            <option value="organization">
+              <xsl:if test="$fq='organization'">
+              <xsl:attribute name="selected">true</xsl:attribute>
+            </xsl:if>Organizations</option>
+            </select></label>
+          <label class="search"> for 
+          <input name="kw" size="20" type="text" value="{$kw}" /></label><br/>
+          <input type="submit" />
         </p>
       </form>
       <xsl:apply-templates select="/*/response" />
@@ -34,9 +79,13 @@
   </xsl:template>
 
   <xsl:template match="response">
-    <h2>Results for <i><xsl:value-of select="lst/lst[@name='params']/str[@name='q']" /></i></h2>
-
-    <ul>
+    <h2>Searched for <em><xsl:value-of select="lst/lst[@name='params']/str[@name='q']" /></em><xsl:if test="$fq"><xsl:text> in </xsl:text><xsl:value-of select="upper-case(substring($fq, 1, 1))" /><xsl:value-of select="substring($fq, 2)"></xsl:value-of></xsl:if><xsl:if test="$number-results > 0"><xsl:text> (</xsl:text><xsl:value-of select="$number-results"/><xsl:text> results found)</xsl:text></xsl:if></h2>
+    <xsl:choose>
+      <xsl:when test="$number-results = 0">
+        <h3>No results found</h3>
+       </xsl:when> 
+       <xsl:otherwise> 
+        <ul>
       <xsl:for-each select="result/doc">
         <xsl:variable name="hl-pos" select="position()" />
         <xsl:variable name="kind" select="str[@name='kind']" />
@@ -44,7 +93,10 @@
         <li>
           <a>
             <xsl:attribute name="href">
-              <xsl:text>../documents/</xsl:text>
+              <xsl:choose>
+                <xsl:when test="$kind = 'diaries' or $kind = 'correspondence' or $kind = 'lessonbooks' or $kind = 'other'"><xsl:text>../documents/</xsl:text></xsl:when>
+                <xsl:otherwise><xsl:text>../profiles/</xsl:text></xsl:otherwise>
+              </xsl:choose>              
               <xsl:value-of select="str[@name = 'url']" />
             </xsl:attribute>
             <xsl:value-of select="str[@name='title']" />
@@ -67,6 +119,8 @@
       </xsl:for-each>
     </ul>
 
+
+
     <p>Pages: <xsl:for-each select="1 to $total-pages">
         <xsl:choose>
           <xsl:when test=". = $current-page">
@@ -74,7 +128,7 @@
             <xsl:text> </xsl:text>
           </xsl:when>
           <xsl:otherwise>
-            <a href="?kw={$kw}&amp;p={.}">
+            <a href="?kw={$kw}&amp;fq={$fq}&amp;p={.}">
               <xsl:value-of select="." />
             </a>
             <xsl:text> </xsl:text>
@@ -82,6 +136,8 @@
         </xsl:choose>
       </xsl:for-each>
     </p>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template name="unescape-highlight">
