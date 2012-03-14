@@ -79,7 +79,16 @@
   </xsl:template>
 
   <xsl:template match="response">
-    <h2>Searched for <em><xsl:value-of select="lst/lst[@name='params']/str[@name='q']" /></em><xsl:if test="$fq"><xsl:text> in </xsl:text><xsl:value-of select="upper-case(substring($fq, 1, 1))" /><xsl:value-of select="substring($fq, 2)"></xsl:value-of></xsl:if><xsl:if test="$number-results > 0"><xsl:text> (</xsl:text><xsl:value-of select="$number-results"/><xsl:text> results found)</xsl:text></xsl:if></h2>
+    <h2>Searched for <em><xsl:value-of select="lst/lst[@name='params']/str[@name='q']" /></em><xsl:if test="$fq"><xsl:text> in </xsl:text><xsl:value-of select="upper-case(substring($fq, 1, 1))" /><xsl:value-of select="substring($fq, 2)"></xsl:value-of></xsl:if><xsl:if test="$number-results > 0"><xsl:text> (</xsl:text><xsl:value-of select="$number-results"/><xsl:text> result</xsl:text><xsl:if test="$number-results > 1">s</xsl:if><xsl:text> found)</xsl:text></xsl:if></h2>
+  <xsl:if test="not($fq)">
+    <p>Filter: <xsl:for-each select="lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='kind']/int[. > 0]">
+      <a>
+        <xsl:attribute name="href"><xsl:text>?kw=</xsl:text><xsl:value-of select="$kw"/><xsl:text>&amp;fq=</xsl:text><xsl:value-of select="@name" /></xsl:attribute>
+      <xsl:value-of select="@name" /><xsl:text>: </xsl:text><xsl:value-of select="." />
+      </a>
+      <xsl:if test="not(position() = last())">,</xsl:if><xsl:text> </xsl:text>
+    </xsl:for-each></p>
+  </xsl:if>
     <xsl:choose>
       <xsl:when test="$number-results = 0">
         <h3>No results found</h3>

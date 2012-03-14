@@ -28,7 +28,7 @@
               <xsl:text>&amp;start=</xsl:text>
               <xsl:value-of select="xs:integer($start)" />
             </xsl:if>
-            <xsl:text>&amp;hl=true&amp;hl.fl=text&amp;hl.fragsize=250</xsl:text>
+            <xsl:text>&amp;hl=true&amp;hl.fl=text&amp;hl.fragsize=250&amp;facet=true&amp;facet.field=kind</xsl:text>
           </xsl:attribute>
         </xi:include>
       </xsl:if>
