@@ -135,6 +135,7 @@
           <map:parameter name="fileextension" value="" />
         </map:transform>
         <map:serialize type="xhtml" />
+        <!--<map:serialize type="xml" /> -->
       </map:match>
     </map:pipeline>
 
@@ -361,6 +362,8 @@
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml" />
           <map:part src="cocoon:/internal/profiles/indices.xml" />
+          <map:part element="entity_list" src="cocoon://_internal/solr/query/q=entity_key%3A*&amp;rows=0&amp;fl=entity_key&amp;facet=true&amp;facet.field=entity_key&amp;facet.sort=entity_key&amp;facet.limit=5000" />
+          <map:part element="eats" src="cocoon://_internal/eats/entities.xml" />
         </map:aggregate>
         <map:transform src="stylesheets/local/profiles/index-to-html.xsl">
           <map:parameter name="filedir" value="profiles/{1}" />
@@ -368,6 +371,7 @@
           <map:parameter name="fileextension" value="html" />
         </map:transform>
         <map:serialize type="xhtml" />
+        <!--<map:serialize type="xml" /> -->
       </map:match>
 
       <!-- Dates. -->
@@ -476,13 +480,13 @@
             </map:aggregate>
           </map:otherwise>
         </map:select>
-        <map:transform src="stylesheets/local/entities/person-to-html.xsl">
+         <map:transform src="stylesheets/local/entities/person-to-html.xsl">
           <map:parameter name="filedir" value="profiles/person" />
           <map:parameter name="filename" value="{1}.xml" />
           <map:parameter name="fileextension" value="html" />
         </map:transform>
         <map:serialize type="xhtml" />
-      <!--  <map:serialize type="xml" /> -->
+       <!--<map:serialize type="xml" /> -->
       </map:match>
 
       <map:match pattern="profiles/*/*.html">
@@ -514,7 +518,7 @@
           <map:parameter name="fileextension" value="html" />
         </map:transform>
         <map:serialize type="xhtml" />
-       <!--<map:serialize type="xml" /> -->
+      <!-- <map:serialize type="xml" /> -->
       </map:match>
     </map:pipeline>
 
