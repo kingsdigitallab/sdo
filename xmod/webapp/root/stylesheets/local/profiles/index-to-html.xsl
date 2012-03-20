@@ -16,12 +16,23 @@
   
   <!-- <xsl:key match="/*/indices/index[@name=$filename]/entry" name="alpha-profiles" use="upper-case(substring(@sortkey, 1, 1))" /> -->
   
+  
+  <!-- 
+    NB: Currently this file gets the list of all the entities referred to in the documents and uses that list as the master list for the chort biographies. 
+    Alterately it's possible to just get the values from the /*/eats/entities page which is quicker but includes a bunch of entities about whom there is not only no information but which are not referenced by any documents meaning the page is both blank and pointless.
+  -->
   <xsl:variable name="other-entities">
-    <xsl:for-each select="/*//lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='entity_key']/int">
-      <xsl:variable name="ent_id" select="@name" />    
+    <xsl:for-each select="/*//lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='entity_key']/int"> 
+    <!--<xsl:for-each select="/*/eats/entities/entity">-->
+      <xsl:variable name="ent_id" select="@name" />  
+      <!--<xsl:variable name="ent_id" select="keys/key" />-->
+      
       <xsl:if test="not(/*/indices/index/entry[@xml:id = $ent_id])">
         <xsl:variable name="type" select="/*/eats/entities/entity[keys/key = $ent_id]/types/type" />
-        <xsl:variable name="name" select="/*/eats/entities/entity[keys/key = $ent_id]/names/name[@is_preferred = 'true']" />
+       <xsl:variable name="name" select="/*/eats/entities/entity[keys/key = $ent_id]/names/name[@is_preferred = 'true']" /> 
+        
+       <!-- <xsl:variable name="type" select="types/type" />
+        <xsl:variable name="name" select="names/name[@is_preferred = 'true']" /> -->
         
         <xsl:variable name="entity-name">
             <xsl:choose>
