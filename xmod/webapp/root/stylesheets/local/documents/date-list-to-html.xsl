@@ -33,7 +33,10 @@
               <h2>
                 <xsl:value-of select="current-grouping-key()"/>
                 <xsl:text>: </xsl:text>
-                <xsl:call-template name="add-item-count"/>
+                <xsl:call-template name="add-item-count">
+                  <xsl:with-param name="year" select="$year" />
+                  <xsl:with-param name="month" select="'*'" />
+                </xsl:call-template>
               </h2>
             </td>
           </tr>
@@ -62,13 +65,14 @@
                 <ul>
                   <li class="s7">
                     <span>
-                      <xsl:value-of
-                        select="format-date(xs:date(concat('1111-', current-grouping-key(), '-01')), '[MNn]', 'en', (), ())"
-                      />
+                      <xsl:value-of select="format-date(xs:date(concat('1111-', current-grouping-key(), '-01')), '[MNn]', 'en', (), ())" />
                     </span>
                   </li>
                   <li>
-                    <xsl:call-template name="add-item-count"/>
+                    <xsl:call-template name="add-item-count">
+                      <xsl:with-param name="year" select="$year" />
+                      <xsl:with-param name="month" select="current-grouping-key()" />
+                    </xsl:call-template>
                   </li>
                   <!-- <li>                
                     <span id="date"> -->
@@ -155,8 +159,11 @@
   </xsl:template>
 
   <xsl:template name="add-item-count">
-    <!-- <xsl:text>: </xsl:text> -->
-    <xsl:value-of select="count(current-group())"/>
+    <xsl:param name="year" />
+    <xsl:param name="month" />
+    <!-- <xsl:text>: </xsl:text> --><a>
+      <xsl:attribute name="href">/profiles/date/<xsl:value-of select="$year" />-<xsl:value-of select="$month" />-*.html</xsl:attribute>
+      <xsl:value-of select="count(current-group())"/></a><!--  -->
     <xsl:text> item</xsl:text>
     <xsl:if test="count(current-group()) &gt; 1">
       <xsl:text>s</xsl:text>

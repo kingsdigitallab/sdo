@@ -5,8 +5,12 @@
 
   <xsl:import href="../profiles/profile-to-html.xsl" />
 
-  <xsl:variable name="date"
-    select="substring-after(/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='q'], ':')" />
+  <xsl:variable name="date">
+    <xsl:choose>
+      <xsl:when test="contains(substring-after(/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='q'], ':'), '*')"><xsl:value-of select="substring-before(substring-after(/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='q'], ':'), '-*')" /></xsl:when>
+      <xsl:otherwise><xsl:value-of select="substring-after(/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='q'], ':')" /></xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
 
   <xsl:variable name="xmg:title">
     <xsl:value-of select="$date" />
@@ -53,24 +57,60 @@
         <xsl:call-template name="entity-from-eats" />
       </xsl:otherwise>
     </xsl:choose>
+    
+
+      <xsl:variable name="month"><xsl:value-of select="substring-after($date, '-')" /></xsl:variable>
+      <xsl:variable name="year"><xsl:value-of select="substring-before($date, '-')" /></xsl:variable>                
+     
+    <!--<xsl:variable name="prev-month">
+        <xsl:choose>
+          <xsl:when test="$month = '01'"><xsl:value-of select="number($year) - 1" /></xsl:when>
+          <xsl:otherwise><xsl:value-of select="$year" />-<xsl:value-of select="format-number(number($month) - 1, '00')" /></xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable> -->
+    
 
     <ul>
       <li>
-        <xsl:for-each select="/aggregation/dates/response/result/doc[str = $date]">
+        <xsl:for-each select="/aggregation/dates/response/result/doc[starts-with(str, $date)]"> <!-- -->
           <xsl:if test="position() = 1">
             <xsl:choose>
-              <xsl:when test="preceding-sibling::doc[str != $date][1]">
+              <xsl:when test="(preceding-sibling::doc[str != $date][1]) and (string-length($date) > 7)">
                 <a href="{preceding-sibling::doc[str != $date][1]/str}.html">Previous</a>
               </xsl:when>
+             
+              <xsl:when test="preceding-sibling::doc[not(starts-with(str, $date))][1] and (string-length($date) > 5)">                
+                <xsl:variable name="prev-date">
+                  <xsl:value-of select="substring-before(preceding-sibling::doc[not(starts-with(str, $date))][1]/str, '-')" />-<xsl:value-of select="substring-before(substring-after(preceding-sibling::doc[not(starts-with(str, $date))][1]/str, '-'), '-')" />
+                </xsl:variable>
+                
+                <a href="{$prev-date}-*.html">Previous</a>
+              </xsl:when>    
+
+              <xsl:when test="preceding-sibling::doc[not(starts-with(str, $date))][1]">                
+                <a href="{substring-before(preceding-sibling::doc[not(starts-with(str, $date))][1]/str, '-')}-*-*.html">Previous</a>
+              </xsl:when>  
+              
               <xsl:otherwise>
                 <xsl:text>Previous</xsl:text>
               </xsl:otherwise>
             </xsl:choose>
             <xsl:text> and </xsl:text>
             <xsl:choose>
-              <xsl:when test="following-sibling::doc[str != $date][1]">
+              <xsl:when test="following-sibling::doc[str != $date][1] and (string-length($date) > 7)">
                 <a href="{following-sibling::doc[str != $date][1]/str}.html">Next</a>
               </xsl:when>
+              <xsl:when test="following-sibling::doc[not(starts-with(str, $date))][1] and (string-length($date) > 5)">
+               <xsl:variable name="next-date">
+                  <xsl:value-of select="substring-before(following-sibling::doc[not(starts-with(str, $date))][1]/str, '-')" />-<xsl:value-of select="substring-before(substring-after(following-sibling::doc[not(starts-with(str, $date))][1]/str, '-'), '-')" />
+                </xsl:variable>
+                
+                <a href="{$next-date}-*.html">Next</a>
+              </xsl:when>
+              <xsl:when test="following-sibling::doc[not(starts-with(str, $date))][1]">
+                
+                <a href="{substring-before(following-sibling::doc[not(starts-with(str, $date))][1]/str, '-')}-*-*.html">Next</a>
+              </xsl:when>                     
               <xsl:otherwise>
                 <xsl:text>Next</xsl:text>
               </xsl:otherwise>
