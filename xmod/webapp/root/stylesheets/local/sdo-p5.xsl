@@ -392,7 +392,13 @@
   </span>
  </xsl:template>
  
+ <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ TEI:GRAPHIC AND RELATED TEMPLATES @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
  
+  <xsl:template match="tei:graphic">
+    <xsl:if test="string(@url)">
+      <xsl:call-template name="showFigure"/>
+    </xsl:if>
+  </xsl:template>
   <!-- Image dimensions -->
   <xsl:template name="img-dim">
     <xsl:param name="img-width"/>
@@ -512,7 +518,15 @@
       </xsl:choose>
     </xsl:variable>
     <!-- OUTPUT FIGURE TEMPLATE -->
-    <xsl:choose>
+   <xsl:choose>
+    <!-- TEMPLATE FOR MUSICAL EXAMPLES IN SDO PRIMARY DOCUMENTS -->
+    <xsl:when test="parent::tei:figure[@type='musical_example']">
+     <br/><br/>
+     <img class="s{$img-left-right}" src="{$img-path-full}" alt="musical example">
+      
+     </img>
+     <br/>    
+    </xsl:when>
       <!-- START Option 1: showing thumbnail lists -->
       <xsl:when test="ancestor::tei:list[@type='figure-full']">
         <dl style="width: {$img-width}px;">
@@ -589,7 +603,7 @@
       <!-- Images with renditional information are treated differently, they can be thumbnails, thumbnails with captions or full sized images -->
       <xsl:when test="string(@rend)">
         <xsl:choose>
-          <xsl:when test="@n='thumb'">
+          <xsl:when test="(@xmt:type='thumb') or (@n='thumb')">
             <a href="{$img-path-full}">
               <xsl:attribute name="class">
                 <xsl:value-of select="$cap-left-right"/>
@@ -610,7 +624,7 @@
             </a>
           </xsl:when>
           <!-- Thumbnail with caption inline image -->
-          <xsl:when test="@n='thumb-caption'">
+         <xsl:when test="(@xmt:type='thumb-caption') or (@n='thumb-caption')">
             <div class="figure">
               <div class="t{$img-left-right}">
                 <dl style="width: {$img-thm-plus-width}px;">
@@ -643,9 +657,9 @@
               </div>
             </div>
           </xsl:when>
-          <xsl:when test="@n='full'">
-            <xsl:if test="not(preceding-sibling::tei:graphic[@n='thumb' or
-              @n='thumb-caption'])">
+          <xsl:when test="@xmt:type='full'">
+            <xsl:if test="not(preceding-sibling::tei:graphic[@xmt:type='thumb' or
+              @xmt:type='thumb-caption'])">
               <img class="s{$img-left-right}" src="{$img-path-full}">
                 <!-- @alt info -->
                 <xsl:if test="string($img-cap-alt)">
@@ -670,7 +684,7 @@
         </xsl:choose>
       </xsl:when>
       <!-- START Option 3: showing oneoff thumbnail -->
-      <xsl:when test="@n='thumb-caption'">
+      <xsl:when test="@xmt:type='thumb-caption'">
         <!-- Displayed in a div unlike the thumbnails which are inline. -->
         <div class="image">
           <div class="t03">
@@ -702,7 +716,7 @@
           </div>
         </div>
       </xsl:when>
-      <xsl:when test="@n='thumb'">
+      <xsl:when test="@xmt:type='thumb'">
         <a href="{$img-path-full}">
           <xsl:attribute name="class">
             <xsl:value-of select="$cap-left-right"/>
@@ -743,9 +757,9 @@
           </xsl:call-template>
         </img>
       </xsl:when>
-      <xsl:when test="@n='full'">
-        <xsl:if test="not(preceding-sibling::tei:graphic[@n='thumb' or
-          @n='thumb-caption'])">
+      <xsl:when test="@xmt:type='full'">
+        <xsl:if test="not(preceding-sibling::tei:graphic[@xmt:type='thumb' or
+          @xmt:type='thumb-caption'])">
           <div class="image">
             <div class="t03">
               <dl style="width: {$img-width}px;">
@@ -802,6 +816,8 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
+ 
+ <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ END GRAPHICS TEMPLATES @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
  <xsl:template match="tei:handShift">
   <xsl:variable name="handIDval" select="substring-after(@new, '#')"/>
