@@ -1,9 +1,12 @@
-<xsl:stylesheet version="2.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
- xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:xmm="http://www.cch.kcl.ac.uk/xmod/menu/1.0"
- xmlns:xmmf="http://www.cch.kcl.ac.uk/xmod/metadata/files/1.0"
- xmlns:xmp="http://www.cch.kcl.ac.uk/xmod/properties/1.0"
- xmlns:xmt="http://www.cch.kcl.ac.uk/xmod/tei/1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
+<xsl:stylesheet version="2.0" exclude-result-prefixes="#all" 
+     xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:tei="http://www.tei-c.org/ns/1.0"
+     xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" 
+     xmlns:xmm="http://www.cch.kcl.ac.uk/xmod/menu/1.0"
+     xmlns:xmmf="http://www.cch.kcl.ac.uk/xmod/metadata/files/1.0"
+     xmlns:xmp="http://www.cch.kcl.ac.uk/xmod/properties/1.0"
+     xmlns:xmt="http://www.cch.kcl.ac.uk/xmod/tei/1.0" 
+     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
  <xsl:import href="../xmod/tei/p5.xsl"/>
 
@@ -116,6 +119,7 @@
           <xsl:apply-templates/>
         </address>
    </xsl:when>
+   
    <!-- Logos on home page -->
    <xsl:when test="@type='logos'">
     <div class="logoMatrix">
@@ -124,6 +128,7 @@
      </div>
     </div>
    </xsl:when>
+   
    <!-- match 'transcription' and 'translation' divs in a primary document -->
    <xsl:when test="parent::sdo:record">
     <xsl:choose>
@@ -132,7 +137,13 @@
       <!-- SEE THE FOLLOWING <XSL:TEMPLATE> -->
      </xsl:when>
      <xsl:when test="child::tei:opener">
-      <div id="opener">
+      <div>
+        <xsl:attribute name="id">
+         <xsl:text>opener</xsl:text><xsl:if test="@type"><xsl:text>_</xsl:text><xsl:value-of select="@type" /></xsl:if>
+        </xsl:attribute>
+       <xsl:attribute name="class">
+        <xsl:text>opener</xsl:text>
+       </xsl:attribute>
        <xsl:if test="child::tei:opener/preceding-sibling::tei:note">
         <xsl:apply-templates select="tei:note"/>
        </xsl:if>
@@ -144,7 +155,10 @@
        />
       </div>
       <xsl:if test="child::tei:closer">
-       <div id="closer">
+       <div class="closer">
+        <xsl:attribute name="id">
+         <xsl:text>closer</xsl:text><xsl:if test="@type"><xsl:text>_</xsl:text><xsl:value-of select="@type" /></xsl:if>
+        </xsl:attribute>
         <xsl:apply-templates select="tei:closer"/>
        </div>
       </xsl:if>
@@ -166,7 +180,10 @@
        />
       </div>
       <xsl:if test="child::tei:closer">
-       <div id="closer">
+       <div class="closer">
+        <xsl:attribute name="id">
+         <xsl:text>closer</xsl:text><xsl:if test="@type"><xsl:text>_</xsl:text><xsl:value-of select="@type" /></xsl:if>
+        </xsl:attribute>
         <xsl:apply-templates select="tei:closer"/>
        </div>
       </xsl:if>
@@ -205,7 +222,13 @@
  <xsl:template match="tei:div" mode="multipartItem">
   <xsl:choose>
    <xsl:when test="child::tei:opener">
-    <div id="opener">
+    <div>
+     <xsl:attribute name="id">
+      <xsl:text>opener</xsl:text><xsl:if test="parent::tei:div[1]/@type"><xsl:text>_</xsl:text><xsl:value-of select="parent::tei:div[1]/@type" /></xsl:if><xsl:if test="@type"><xsl:text>_</xsl:text><xsl:value-of select="@type" /></xsl:if>
+     </xsl:attribute>
+     <xsl:attribute name="class">
+      <xsl:text>opener</xsl:text>
+     </xsl:attribute>
      <xsl:if test="child::tei:opener/preceding-sibling::tei:note">
       <xsl:apply-templates select="tei:note"/>
      </xsl:if>
@@ -217,7 +240,10 @@
      />
     </div>
     <xsl:if test="child::tei:closer">
-     <div id="closer">
+     <div class="closer">
+      <xsl:attribute name="id">
+       <xsl:text>closer</xsl:text><xsl:if test="parent::tei:div[1]/@type"><xsl:text>_</xsl:text><xsl:value-of select="parent::tei:div[1]/@type" /></xsl:if><xsl:if test="@type"><xsl:text>_</xsl:text><xsl:value-of select="@type" /></xsl:if>
+      </xsl:attribute>
       <xsl:apply-templates select="tei:closer"/>
      </div>
     </xsl:if>
@@ -239,7 +265,10 @@
      />
     </div>
     <xsl:if test="child::tei:closer">
-     <div id="closer">
+     <div class="closer">
+      <xsl:attribute name="id">
+      <xsl:text>closer</xsl:text><xsl:if test="parent::tei:div[1]/@type"><xsl:text>_</xsl:text><xsl:value-of select="parent::tei:div[1]/@type" /></xsl:if><xsl:if test="@type"><xsl:text>_</xsl:text><xsl:value-of select="@type" /></xsl:if>
+      </xsl:attribute>
       <xsl:apply-templates select="tei:closer"/>
      </div>
     </xsl:if>
@@ -1188,6 +1217,7 @@
    </xsl:when>
   </xsl:choose>
  </xsl:template>
+ 
  <!-- href classes for same or new window -->
  <xsl:template name="external-link">
   <!-- Title information and extra class for if external window -->
@@ -1215,6 +1245,7 @@
    </xsl:otherwise>
   </xsl:choose>
  </xsl:template>
+ 
  <xsl:template name="internal-link">
   <xsl:param name="title"/>
   <!-- Title information and extra class for if external window -->
