@@ -21,12 +21,16 @@
   -->
 
   <xsl:import href="../xmod/views/screen.xsl"/>
+  <xsl:include href="cocoon://_internal/properties/properties.xsl" />
   <xsl:import href="sdo-p5.xsl"/> 
   
   <xsl:param name="filedir"/>
   <xsl:param name="filename"/>
   <xsl:param name="fileextension"/>
   <xsl:param name="menutop" select="'true'"/>
+  <xsl:param name="print" select="'false'"/>
+  <xsl:param name="type" select="''"/>
+  <xsl:param name="printable" />
 
   <xsl:variable name="xmg:title" select="/*/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)]"/>
   <xsl:variable name="xmg:pathroot" select="concat($xmp:context-path, '/', $filedir)"/>
@@ -35,15 +39,65 @@
     <xsl:choose>
       <xsl:when test="$menutop = 'false'">
         <xsl:value-of select="false()"/>
-      </xsl:when>
+      </xsl:when>                             
       <xsl:otherwise>
         <xsl:value-of select="true()"/>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:variable>
+  <xsl:variable name="xmg:printpreview">
+    <xsl:choose>
+      <xsl:when test="$print = 'true'">
+        <xsl:value-of select="true()"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="false()"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
+  <xsl:variable name="xmg:minimal">
+    <xsl:choose>
+      <xsl:when test="$type = 'epub'">
+        <xsl:value-of select="true()"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="false()"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
+  <xsl:variable name="xmg:printable">
+    <xsl:choose>
+      <xsl:when test="$printable = 'true'">
+        <xsl:value-of select="true()"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="false()"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
 
   <xsl:template match="/">
-    <xsl:call-template name="xmv:screen"/>
+    <xsl:choose>
+      <xsl:when test="$xmg:minimal = false()"><xsl:call-template name="xmv:screen"/></xsl:when>
+      <xsl:otherwise>
+        <html xmlns="http://www.w3.org/1999/xhtml">
+          <head>
+            <xsl:call-template name="xmv:metadata" />          
+            <title>
+              <xsl:value-of select="$xmp:title" />
+              <xsl:if test="string($xmg:title)">
+                <xsl:text>: </xsl:text>
+                <xsl:value-of select="$xmg:title" />
+              </xsl:if>
+            </title>
+            <link href="../Style/default.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+            <link href="../Style/personality.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+          </head>
+          <xsl:call-template name="xmv:body" />
+        </html>
+      </xsl:otherwise>
+    </xsl:choose>
+    
   </xsl:template>
   
   <xsl:template name="xms:content">
@@ -79,7 +133,7 @@
     </xsl:if>
   </xsl:template>
 
-  <xsl:template name="xms:submenu"/>
+  <xsl:template name="xms:submenu" />
 
   <xsl:template name="xms:option"/>
 
@@ -106,10 +160,64 @@
     </div>
   </xsl:template>
   
+  <xsl:template name="xmm:menu-print">
+    <xsl:choose>
+      <xsl:when test="contains($filedir, 'profile')">
+        <div id="sn" class="tabs">
+          <h3>
+            Bundles
+          </h3>  
+          <ul>
+            <li><a href="{substring-before($filename, '.')}:.pdf">Save PDF</a></li>
+            <li><a href="{substring-before($filename, '.')}:.epub">Save EPub</a></li>
+            <li><a href="{substring-before($filename, '.')}:.zip">Save All Formats</a></li>
+          </ul>
+        </div>  
+      </xsl:when>
+      <xsl:otherwise>
+        <div id="sn" class="tabs">
+          <h3>
+            German and English
+          </h3>
+          <ul class="tabNavigation">
+            <li><a href="#facingtexts">Preview</a></li>
+          </ul>
+          <ul>
+            <li><a href="{substring-before($filename, '.')}:.pdf">Save PDF</a></li>
+            <li><a href="{substring-before($filename, '.')}:.epub">Save EPub</a></li>
+            <li><a href="{substring-before($filename, '.')}:.zip">Save All Formats</a></li>
+          </ul>
+          <h3>
+            German Only
+          </h3>
+          <ul class="tabNavigation">
+            <li><a href="#german">Preview</a></li>
+          </ul>
+          <ul>
+            <li><a href="{substring-before($filename, '.')}:de.pdf?lang=de">Save PDF</a></li>
+            <li><a href="{substring-before($filename, '.')}:de.epub?lang=de">Save EPub</a></li>
+            <li><a href="{substring-before($filename, '.')}:de.zip?lang=de">Save All Formats</a></li>
+          </ul> 
+          <h3>
+            English Only
+          </h3>
+          <ul class="tabNavigation">
+            <li><a href="#english">Preview</a></li>
+          </ul>
+          <ul>
+            <li><a href="{substring-before($filename, '.')}:en.pdf?lang=en">Save PDF</a></li>
+            <li><a href="{substring-before($filename, '.')}:en.epub?lang=en">Save EPub</a></li>
+            <li><a href="{substring-before($filename, '.')}:en.zip?lang=en">Save All Formats</a></li>
+          </ul>       
+        </div>       
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>  
+  
   <xsl:template name="xmv:meta">
     <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
     <meta content="xMod 2.1" name="generator"/>
-    <meta content="Centre for Computing in the Humanities, King's College London" name="author"/>
+    <meta content="Departnent of Digital Humanities, King's College London" name="author"/>
     <meta name="copyright">
       <xsl:attribute name="content">
         <xsl:text>Copyright (c) Schenker Documents Online</xsl:text>
@@ -157,8 +265,9 @@
   
   <xsl:template name="xmv:body">
     <body class="v1 r3 rc0" id="xmd">
+      
       <div id="wrapper">
-        <xsl:call-template name="xmv:banner"/>
+        <xsl:if test="$xmg:printpreview = false()"><xsl:call-template name="xmv:banner"/></xsl:if>
         
         <table cellpadding="0" cellspacing="0" id="xlt" summary="">
           <tr class="r01">
@@ -168,14 +277,20 @@
               </xsl:if>
             </td>
           </tr>
+          <xsl:if test="$xmg:printpreview = false()">
           <tr class="r01">
             <td colspan="2" id="breadcrumb">
               <xsl:call-template name="xmm:breadcrumbs"/>
             </td>
           </tr>
+          </xsl:if>  
           <tr class="r02">
+          <xsl:if test="$xmg:minimal = false()"> 
             <td id="sidenav">
               <xsl:choose>
+                <xsl:when test="$xmg:printpreview = true()">
+                  <xsl:call-template name="xmm:menu-print"/>
+                </xsl:when>
                 <xsl:when test="$xmg:menu-top = true()">
                   <xsl:call-template name="xmm:menu-top-sub"/>
                 </xsl:when>
@@ -183,7 +298,50 @@
                   <xsl:call-template name="xmm:menu"/>
                 </xsl:otherwise>
               </xsl:choose>
+              <xsl:if test="$xmg:printable = true()">
+                <xsl:variable name="mobile-path">
+                  <xsl:choose>
+                    <xsl:when test="contains($filedir, 'profiles')"><xsl:text>../../mobile/</xsl:text><xsl:value-of select="$filedir" /><xsl:text>/</xsl:text></xsl:when>
+                    <xsl:otherwise><xsl:text>../../</xsl:text><xsl:value-of select="replace($filedir, 'documents', 'mobile')" /><xsl:text>/</xsl:text></xsl:otherwise>
+                  </xsl:choose>                  
+                </xsl:variable>
+                
+                <div id="sn" class="tabs">
+                  <h3>
+                    Downloads
+                  </h3>  
+                  <ul>
+                    <li class="s06">
+                      <ul> 
+                      <li><a>
+                      <xsl:attribute name="href">
+                        <xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>.html</xsl:text>
+                      </xsl:attribute>
+                      <xsl:attribute name="target"><xsl:text>_blank</xsl:text></xsl:attribute>
+                      Print Preview</a></li>
+                                       
+                    <li><a>
+                      <xsl:attribute name="href">
+                        <xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:.pdf</xsl:text>
+                      </xsl:attribute>
+                      Save PDF</a></li>
+                    <li><a>
+                      <xsl:attribute name="href">
+                        <xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:.epub</xsl:text>
+                      </xsl:attribute>
+                      Save EPub</a></li>
+                    <li><a>
+                      <xsl:attribute name="href">
+                        <xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:.zip</xsl:text>
+                      </xsl:attribute>
+                      Save All Formats</a></li>
+                    </ul>  
+                    </li>
+                  </ul>
+                </div>                  
+              </xsl:if>
             </td>
+            </xsl:if> 
             <td id="content">
               <xsl:call-template name="xms:rhcontent"/>
               <div id="mainContent">
@@ -195,7 +353,10 @@
             </td>
           </tr>
         </table>
-        <xsl:call-template name="xmv:footer"/>
+        <xsl:choose>
+          <xsl:when test="$xmg:printpreview = true()"><xsl:call-template name="xmv:print-footer"/></xsl:when>
+          <xsl:otherwise><xsl:call-template name="xmv:footer"/></xsl:otherwise>
+        </xsl:choose>        
       </div>
     </body>
   </xsl:template>
@@ -258,7 +419,39 @@
       </div>
     </div>
   </xsl:template>
+ 
 
+  <xsl:template name="xmv:print-footer">
+    <div id="footer">
+      <div class="s01"><xsl:text>Document URL: http://sdo.cch.kcl.ac.uk/</xsl:text>
+        <xsl:choose>
+          <xsl:when test="contains($filedir, 'profiles')"><xsl:value-of select="replace($filedir, 'mobile/', '')"/></xsl:when>
+          <xsl:otherwise><xsl:value-of select="replace($filedir, 'mobile', 'documents')" /></xsl:otherwise>
+        </xsl:choose>        
+        <xsl:text>/</xsl:text><xsl:value-of select="substring-before($filename, '.')" />.html<br/>Referenced: <xsl:value-of select="format-date(current-date(), '[D01]-[M01]-[Y0001]')" /></div>
+        <div class="s01">
+          <ul>
+            <xsl:if test="$xmp:metadata-copyright">
+              <li>
+                <xsl:text>&#xa9;</xsl:text>
+                <xsl:text>&#160;</xsl:text>
+                <xsl:value-of select="format-date(current-date(), '[Y]')"/>
+                <xsl:text>&#160;</xsl:text>
+                <xsl:value-of select="$xmp:metadata-copyright"/>
+              </li>
+            </xsl:if>
+            <xsl:if test="$xmp:footer-resp-message">
+              <li>
+                <xsl:value-of select="$xmp:footer-resp-message"/>
+              </li>
+            </xsl:if>
+            <li class="s01">
+              <xsl:text>Powered by xMod</xsl:text>
+            </li>
+          </ul>
+        </div>
+    </div>  
+  </xsl:template>
 
   <xsl:template name="xmv:dynamic-links">
     <xsl:param name="linkToLabel"/>

@@ -316,6 +316,7 @@
               <map:parameter name="filedir" value="documents/{1}" />
               <map:parameter name="filename" value="{2}.xml" />
               <map:parameter name="fileextension" value="html" />
+              <map:parameter name="printable" value="true" />
             </map:transform>
             <map:serialize type="xhtml" />
           </map:when>
@@ -342,6 +343,7 @@
               <map:parameter name="filename" value="{3}.xml" />
               <map:parameter name="fileextension" value="html" />
               <map:parameter name="recordId" value="{3}" />
+              <map:parameter name="printable" value="true" />
             </map:transform>
             <map:serialize type="xhtml" />
           </map:when>
@@ -352,7 +354,41 @@
           </map:otherwise>
         </map:select>
       </map:match>
+      
+      <!-- Display a single item for printing. -->
+      <map:match pattern="mobile/*/*.html">
+        <map:select type="resource-exists">
+          <map:when test="xml/content/documents/{1}/{2}.xml">
+            <map:aggregate element="aggregation">
+              <map:part src="cocoon://_internal/menu/main.xml" />
+              <map:part src="cocoon://_internal/solr/query/q=kind%3A{1}&amp;rows=5000&amp;sort=dateFull%20asc" />
+              <map:part src="xml/content/documents/{1}/{2}.xml" />
+              <map:part element="commentary" src="cocoon://internal/documents/commentary/{1}/{2}" />
+              <map:part element="eats" src="cocoon://_internal/eats/entities.xml" />
+            </map:aggregate>
+            <map:transform src="stylesheets/local/mobile/document-to-print.xsl">
+              <map:parameter name="filedir" value="mobile/{1}" />
+              <map:parameter name="filename" value="{2}.xml" />
+              <map:parameter name="fileextension" value="html" />
+              <map:parameter name="print" value="true" />
+              <map:parameter name="menutop" value="false" />
+              <map:parameter name="use-request-parameters" value="true"/>
+            </map:transform>
+            <map:serialize type="xhtml" /> 
+           <!-- <map:serialize type="xml" />-->
+          </map:when>
+          <map:otherwise>
+            <map:generate src="xml/content/http404.xml" />
+            <map:transform src="stylesheets/local/error-to-html.xsl" />
+            <map:serialize status-code="404" type="xhtml" />
+          </map:otherwise>
+        </map:select>
+      </map:match>       
+      
+      
     </map:pipeline>
+    
+   
 
     <!-- Entity display. -->
     <map:pipeline>
@@ -400,6 +436,7 @@
           <map:parameter name="fileextension" value="html" />
         </map:transform>
         <map:serialize type="xhtml" />
+        <!--<map:serialize type="xml" /> -->
       </map:match>
 
       <!-- Correspondences. -->
@@ -484,6 +521,7 @@
           <map:parameter name="filedir" value="profiles/person" />
           <map:parameter name="filename" value="{1}.xml" />
           <map:parameter name="fileextension" value="html" />
+          <map:parameter name="printable" value="true" />
         </map:transform>
         <map:serialize type="xhtml" />
        <!--<map:serialize type="xml" /> -->
@@ -516,6 +554,42 @@
           <map:parameter name="filedir" value="profiles/{1}" />
           <map:parameter name="filename" value="{2}.xml" />
           <map:parameter name="fileextension" value="html" />
+          <map:parameter name="printable" value="true" />
+        </map:transform>
+        <map:serialize type="xhtml" />
+      <!-- <map:serialize type="xml" /> -->
+      </map:match>
+    
+    <!-- Profile print preview -->
+    
+    <map:match pattern="mobile/profiles/*/*.html">
+        <map:select type="resource-exists">
+          <map:when test="xml/content/profiles/{1}/{2}.xml">
+            <map:aggregate element="aggregation">
+              <map:part src="cocoon://_internal/menu/main.xml" />
+              <map:part src="cocoon://_internal/metadata/files.xml" />
+              <map:part
+                src="cocoon://_internal/solr/query/q=entity_key%3A{2}&amp;rows=5000&amp;sort=dateFull%20asc"
+              />
+              <map:part src="xml/content/profiles/{1}/{2}.xml" />
+            </map:aggregate>
+          </map:when>
+          <map:otherwise>
+            <map:aggregate element="aggregation">
+              <map:part src="cocoon://_internal/menu/main.xml" />
+              <map:part src="cocoon://_internal/metadata/files.xml" />
+              <map:part src="cocoon://_internal/solr/query/q=entity_key%3A{2}&amp;rows=5000&amp;sort=dateFull%20asc"/>
+              <map:part element="eats" src="cocoon://_internal/eats/entities.xml" />
+            </map:aggregate>
+          </map:otherwise>
+        </map:select>
+         <map:transform src="stylesheets/local/mobile/profile-to-print.xsl">
+          <map:parameter name="filedir" value="mobile/profiles/{1}" />
+          <map:parameter name="filename" value="{2}.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="print" value="true" />
+          <map:parameter name="menutop" value="false" />
+          <map:parameter name="use-request-parameters" value="true"/>
         </map:transform>
         <map:serialize type="xhtml" />
       <!-- <map:serialize type="xml" /> -->
@@ -585,5 +659,16 @@
         <map:serialize type="xml" />
       </map:match>
     </map:pipeline>
+    
+    <!-- Mount sub-sitemaps. -->
+    <map:pipeline>
+      <!-- Mobile options -->
+      <map:match pattern="**">
+        <map:mount check-reload="yes" src="sitemap/xmod/mobile.xmap" uri-prefix="" />
+      </map:match>
+    </map:pipeline>  
+    
+        
   </map:pipelines>
+  
 </map:sitemap>
