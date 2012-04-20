@@ -7,10 +7,10 @@
  xmlns:fo="http://www.w3.org/1999/XSL/Format">
 
 
- <xsl:import href="../../xmod/tei/p5.xsl"/>
+ <xsl:include href="cocoon://_internal/properties/properties.xsl" />
 
  <!-- NOW OVERRIDE DEFAULTS FROM p5.xsl OR SUPPLY TEMPLATES IT DOESN'T HAVE -->
-
+ <xsl:template match="tei:teiHeader"/>
 
  <xsl:template match="tei:ab">
   <fo:block>
@@ -51,14 +51,14 @@
  <xsl:template match="tei:addrLine">
   <fo:list-item>
        <fo:list-item-label end-indent="label-end()"><fo:block>   </fo:block></fo:list-item-label>
-   <fo:list-item-body>
+   <fo:list-item-body start-indent="body-start()">
     <fo:block><xsl:apply-templates/></fo:block>
    </fo:list-item-body>
   </fo:list-item> 
  </xsl:template>
 
  <xsl:template match="tei:author">
-  <xsl:apply-templates/>
+   <xsl:apply-templates/>
  </xsl:template>
 
  <xsl:template match="tei:bibl">
@@ -85,25 +85,21 @@
 
 
  <xsl:template match="tei:date">
-  <fo:list-item>
-       <fo:list-item-label end-indent="label-end()"><fo:block>   </fo:block></fo:list-item-label>
-   <fo:list-item-body>
-    <fo:block><xsl:apply-templates/></fo:block>
-   </fo:list-item-body>
-  </fo:list-item> 
+    <fo:inline><xsl:apply-templates/></fo:inline>
  </xsl:template>
 
  <xsl:template match="tei:dateline">
-  <br/>
+  <fo:block>
   <xsl:apply-templates/>
+  </fo:block>
  </xsl:template>
 
  <xsl:template match="tei:del">
   <xsl:choose>
    <xsl:when test="@rend = 'overstrike'">
-    <span class="inline-deletion">
+    <fo:inline text-decoration="line-through">
      <xsl:apply-templates/>
-    </span>
+    </fo:inline>
    </xsl:when>
    <xsl:when test="@rend = 'overwritten'"/>
    <!-- template for tei:subst handles this -->
@@ -407,9 +403,10 @@
 
  <xsl:template match="tei:item">
   <fo:list-item>
-       <fo:list-item-label end-indent="label-end()"><fo:block>   </fo:block></fo:list-item-label>
-   <fo:list-item-body><xsl:apply-templates/></fo:list-item-body>
+    <fo:list-item-label end-indent="label-end()"><fo:block>   </fo:block></fo:list-item-label>
+    <fo:list-item-body start-indent="body-start()"><fo:block><xsl:apply-templates /></fo:block></fo:list-item-body>
   </fo:list-item>
+
  </xsl:template>
 
  <xsl:template match="tei:lb">
@@ -418,23 +415,23 @@
 
  <xsl:template match="tei:list">
   <fo:list-block>
-   <xsl:apply-templates/>
+   <xsl:apply-templates />
   </fo:list-block>
  </xsl:template>
 
  <xsl:template match="tei:listBibl">
 <fo:list-block>
  <fo:list-item>
-      <fo:list-item-label end-indent="label-end()"><fo:block>   </fo:block></fo:list-item-label>
-   <fo:list-item-body><xsl:apply-templates/></fo:list-item-body>
+  <fo:list-item-label end-indent="label-end()"><fo:block>   </fo:block></fo:list-item-label>
+  <fo:list-item-body start-indent="body-start()"><xsl:apply-templates/></fo:list-item-body>
  </fo:list-item>
 </fo:list-block>
  </xsl:template>
-
+ 
  <xsl:template match="tei:milestone">
   <fo:list-item>
        <fo:list-item-label end-indent="label-end()"><fo:block>   </fo:block></fo:list-item-label>
-   <fo:list-item-body>
+   <fo:list-item-body start-indent="body-start()">
   
   <xsl:choose>
    <xsl:when test="@n='recto'">
@@ -455,6 +452,7 @@
  </xsl:template>
 
  <xsl:template match="tei:note">
+  <fo:block>
   <xsl:choose>
    <xsl:when test="@type='editorial'">
     <xsl:choose>
@@ -507,6 +505,7 @@
     <xsl:apply-templates/>
    </xsl:otherwise>
   </xsl:choose>
+  </fo:block>
  </xsl:template>
 
  <xsl:template match="tei:pb">
@@ -835,11 +834,11 @@
   <xsl:choose>
    <xsl:when test="child::tei:del[@rend='overwritten']/child::tei:gap">
     <!--<span class="erased" onmouseover="show(this)" onmouseout="show(this)" xml:space="preserve"><span class="erased2 green">[illeg]</span><xsl:value-of select="child::tei:add[@place='superimposed']"/></span> -->
-    [illeg]<fo:inline text-decoration="line-through"><xsl:value-of select="child::tei:add[@place='superimposed']"/></fo:inline>
+    <xsl:text>[illeg]</xsl:text><fo:inline text-decoration="line-through"><xsl:value-of select="child::tei:add[@place='superimposed']"/></fo:inline>
    </xsl:when>
    <xsl:when test="child::tei:del[@rend='overwritten']">
     <!-- <span class="erased" onmouseover="show(this)" onmouseout="show(this)" xml:space="preserve"><span class="erased2"><xsl:value-of select="child::tei:del[@rend='overwritten']"/></span><xsl:value-of select="child::tei:add[@place='superimposed']"/></span> -->
-    <xsl:value-of select="child::tei:add[@place='superimposed']"/> [was <fo:inline text-decoration="line-through"><xsl:value-of select="child::tei:del[@rend='overwritten']"/></fo:inline>]
+    <xsl:value-of select="child::tei:add[@place='superimposed']"/><xsl:text>[was </xsl:text><fo:inline text-decoration="line-through"><xsl:value-of select="child::tei:del[@rend='overwritten']"/></fo:inline><xsl:text>]</xsl:text>
    </xsl:when>
    <xsl:otherwise>
     <xsl:apply-templates/>
@@ -895,5 +894,53 @@
   <xsl:apply-templates/>
  </fo:block> 
  </xsl:template>
-
+ 
+ <!--   HEADINGS   -->  
+ <xsl:template match="tei:TEI/*/*/tei:div/tei:head">
+  <fo:block id="{generate-id()}">
+   <xsl:apply-templates/>
+  </fo:block>
+ </xsl:template>
+ <xsl:template match="tei:TEI/*/*/tei:div/tei:div/tei:head">
+  <fo:block id="{generate-id()}">
+   <xsl:apply-templates/>
+  </fo:block>
+ </xsl:template>
+ <xsl:template match="tei:TEI/*/*/tei:div/tei:div/tei:div/tei:head">
+  <fo:block id="{generate-id()}">
+   <xsl:apply-templates/>
+  </fo:block>
+ </xsl:template>
+ <xsl:template match="tei:TEI/*/*/tei:div/tei:div/tei:div/tei:div/tei:head">
+  <fo:block id="{generate-id()}">
+   <xsl:apply-templates/>
+  </fo:block>
+ </xsl:template>
+ <xsl:template match="tei:TEI/*/*/tei:div/tei:div/tei:div/tei:div/tei:div/tei:head">
+  <fo:block id="{generate-id()}">
+   <xsl:apply-templates/>
+  </fo:block>
+ </xsl:template>
+ <xsl:template match="tei:TEI/*/*/tei:div/tei:div/tei:div/tei:div/tei:div/tei:div/tei:head">
+  <fo:block id="{generate-id()}">
+   <xsl:apply-templates/>
+  </fo:block>
+ </xsl:template>
+ 
+ 
+ <xsl:template match="tei:bibl[parent::tei:listBibl]">
+  <fo:list-item>
+   <fo:list-item-label end-indent="label-end()"><fo:block>   </fo:block></fo:list-item-label>
+   <fo:list-item-body>
+    <fo:block start-indent="body-start()"><xsl:apply-templates/></fo:block>
+   </fo:list-item-body>
+  </fo:list-item> 
+ </xsl:template>
+ 
+ <xsl:template match="tei:listBibl/tei:head">
+  <fo:block font-weight="bold">
+    <xsl:apply-templates/>
+  </fo:block>
+ </xsl:template>
+ 
 </xsl:stylesheet>

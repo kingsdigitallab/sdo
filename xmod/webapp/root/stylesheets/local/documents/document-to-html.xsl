@@ -27,12 +27,9 @@
       </div>
       <div class="t01">
         <h1>
-          <xsl:if
-            test="string-length(/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]/text()) != 0">
+          <xsl:if test="string-length(/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]/text()) != 0">
             <strong>
-              <xsl:value-of
-                select="/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]"
-              />
+              <xsl:value-of select="/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]" />
             </strong>
             <xsl:text> - </xsl:text>
           </xsl:if>
@@ -66,9 +63,15 @@
         </li>
         <li>
           <a href="#english">English only</a>
-        </li>
+        </li>       
       </ul>
-
+      <!--
+      <ul>
+        <li class="printNavigation">
+          <a href="/{replace($filedir, 'documents', 'mobile')}/{substring-before($filename, '.')}.html" target="_target">Print Preview</a>
+        </li>        
+      </ul>
+      -->
       <div id="facingtexts">
         <table class="docDisplayGandE">
           <tr>

@@ -9,23 +9,32 @@
 
   <!-- <xsl:param name="filedir" select="'print/'"/> -->
   <xsl:param name="lang" />
-
-  <xsl:variable name="record" select="/aggregation/sdo:recordCollection/sdo:record[1]"/>
+  <xsl:param name="recordId" />
+  
+  <!-- NOTE - sequent is parentless so if any other part of the xml results need to be referenced by a template applied from within the nodes in the sequence then another variable needs to be referenced to get the necessary branch of the results tree e.g. with the eats variable below. -->
+ 
+  <xsl:variable name="record">
+    <xsl:choose>
+      <xsl:when test="$recordId"><xsl:sequence select="/aggregation/sdo:recordCollection/sdo:record[@ID=$recordId]"/></xsl:when>
+      <xsl:otherwise><xsl:sequence select="/aggregation/sdo:recordCollection/sdo:record[1]" /></xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable> 
+  
+  <xsl:variable name="eats" select="/aggregation/eats" />
+  
+   <!--<xsl:variable name="record" select="/aggregation/sdo:recordCollection/sdo:record[@ID=$recordId]" />-->
 
   <xsl:template name="xms:pagehead">
     <div class="pageHeader">
       <div class="t01">
         <h1>
-          <xsl:if
-            test="string-length(/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]/text()) != 0">
+          <xsl:if test="string-length(/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]/text()) != 0">
             <strong>
-              <xsl:value-of
-                select="/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]"
-              />
+              <xsl:value-of select="/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]" />
             </strong>
             <xsl:text> - </xsl:text>
           </xsl:if>
-          <xsl:value-of select="$record/sdo:itemDesc/dc:title"/>
+           <xsl:value-of select="$record//sdo:itemDesc/dc:title"/> 
         </h1>
       </div>
     </div>
@@ -51,7 +60,7 @@
           <tr>
             <td id="GermanVersion">
               <!-- German version. -->
-              <xsl:apply-templates select="$record/tei:div[@type='transcription']"/>
+              <xsl:apply-templates select="$record//tei:div[@type='transcription']"/>
               <div id="transcCopyright">
                 <p>&#x00A9; Transcription <xsl:value-of
                     select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt[contains(., 'Transcription')]/tei:persName"
@@ -65,7 +74,7 @@
             </td>
             <td id="EnglishVersion">
               <!-- English version. -->
-              <xsl:apply-templates select="$record/tei:div[@type='translation']"/>
+              <xsl:apply-templates select="$record//tei:div[@type='translation']"/>
               <div id="translCopyright">
                 <p>&#x00A9; Translation<xsl:for-each
                     select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt[contains(., 'Translation')]"><xsl:choose>
@@ -95,13 +104,14 @@
         </table>
       </div>
     </xsl:if>
+    
     <xsl:if test="$xmg:minimal = false() or ($xmg:minimal = true() and $lang = 'de')">
       <div id="german">
         <table class="docDisplayGandE">
           <tr>
             <td id="GermanVersion">
               <!-- German version. -->
-              <xsl:apply-templates select="$record/tei:div[@type='transcription']"/>
+              <xsl:apply-templates select="$record//tei:div[@type='transcription']"/>
               <div id="transcCopyright">
                 <p>&#x00A9; Transcription <xsl:value-of
                     select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt[contains(., 'Transcription')]/tei:persName"
@@ -117,13 +127,14 @@
         </table>
       </div>
     </xsl:if>
+    
     <xsl:if test="$xmg:minimal = false() or ($xmg:minimal = true() and $lang = 'en')">      
       <div id="english">
         <table class="docDisplayGandE">
           <tr>
             <td id="EnglishVersion">
               <!-- English version. -->
-              <xsl:apply-templates select="$record/tei:div[@type='translation']"/>
+              <xsl:apply-templates select="$record//tei:div[@type='translation']"/>
               <div id="translCopyright">
                 <p>&#x00A9; Translation<xsl:for-each
                   select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt[contains(., 'Translation')]"><xsl:choose>
@@ -152,8 +163,10 @@
           </tr>
         </table>
       </div>
-      </xsl:if>
-    </div>
+    </xsl:if>
+    
+  </div>
+    <xsl:if test="$record//tei:note[@place='foot'] or /aggregation/commentary/doc[statements/statement]">
     <table class="docDisplayGandE">
       <xsl:if test="$record//tei:note[@place='foot']">
         <tr>
@@ -211,6 +224,7 @@
         </tr>
       </xsl:for-each>
     </table>
+    </xsl:if>
   </xsl:template>
 
   <xsl:template name="simple-email-encoding">

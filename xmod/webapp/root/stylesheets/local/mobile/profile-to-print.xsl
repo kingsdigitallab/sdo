@@ -1,18 +1,21 @@
-<xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns="http://www.w3.org/1999/xhtml"
-  xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xmg="http://www.cch.kcl.ac.uk/xmod/global/1.0"
-  xmlns:xmp="http://www.cch.kcl.ac.uk/xmod/properties/1.0" xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0"
-  xmlns:xmv="http://www.cch.kcl.ac.uk/xmod/views/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+<xsl:stylesheet exclude-result-prefixes="#all" version="2.0" 
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:tei="http://www.tei-c.org/ns/1.0" 
+  xmlns:xmg="http://www.cch.kcl.ac.uk/xmod/global/1.0"
+  xmlns:xmp="http://www.cch.kcl.ac.uk/xmod/properties/1.0" 
+  xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0"
+  xmlns:xmv="http://www.cch.kcl.ac.uk/xmod/views/1.0" 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:import href="to-print.xsl" />
-
-  <xsl:param name="menutop" select="'true'" />
-
-  <xsl:param name="filedir" />
+  
+  <xsl:param name="lang" />
+  <xsl:param name="type" />
   <xsl:param name="filename" />
-  <xsl:param name="fileextension" />
 
   <xsl:variable name="entity-key" select="substring-before($filename, '.')" />
+
 
   <xsl:variable name="correspondence" select="/aggregation/response/result/doc[str[@name='kind']='correspondence']" />
   <xsl:variable name="diaries" select="/aggregation/response/result/doc[str[@name='kind']='diaries']" />
@@ -142,7 +145,8 @@
             </xsl:for-each>
           </p>
         </div>
-
+        
+        <xsl:if test="names/name"> 
         <h3>Names</h3>
         <div>
           <div class="unorderedList">
@@ -157,7 +161,9 @@
             </div>
           </div>
         </div>
+        </xsl:if>  
 
+        <xsl:if test="relationships/relationship">
         <h3>Relationships</h3>
         <div>
           <div class="unorderedList">
@@ -197,6 +203,7 @@
             </div>
           </div>
         </div>
+       </xsl:if>   
       </div>
     </xsl:for-each>
   </xsl:template>
@@ -218,23 +225,32 @@
   </xsl:template>
 
   <xsl:template match="doc">
+    
+    <xsl:variable name="doc-id"><xsl:value-of select="str[@name='shelfmark']" /></xsl:variable>
+    
+    <xsl:variable name="doc-title">
+        <xsl:choose>
+          <xsl:when test="str[@name='title']">
+            <xsl:value-of select="str[@name='title']" />
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:text>Diary entry by Schenker for </xsl:text>
+            <xsl:value-of select="format-date(xs:date(str[@name='dateShort']), '[D] [MNn] [Y]')" />
+          </xsl:otherwise>
+        </xsl:choose>      
+    </xsl:variable>
+    
     <li>
       <p>
-        <a href="{$xmp:context-path}/documents/{str[@name='url']}">
-          <xsl:value-of select="str[@name='shelfmark']" />
-          <xsl:text> </xsl:text>
-          <strong>
-            <xsl:choose>
-              <xsl:when test="str[@name='title']">
-                <xsl:value-of select="str[@name='title']" />
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:text>Diary entry by Schenker for </xsl:text>
-                <xsl:value-of select="format-date(xs:date(str[@name='dateShort']), '[D] [MNn] [Y]')" />
-              </xsl:otherwise>
-            </xsl:choose>
-          </strong>
-        </a> <xsl:if test="arr[@name='author'] and arr[@name='author_key'] = $entity-key"> [Author]</xsl:if>
+        <xsl:choose>
+          <xsl:when test="$type = 'epub'">
+            <a href="{str[@name='fileId']}.html"><xsl:value-of select="normalize-space($doc-id)"/><xsl:text> </xsl:text><strong><xsl:value-of select="normalize-space($doc-title)" /></strong></a>
+          </xsl:when>
+          <xsl:otherwise>
+            <a href="{$xmp:context-path}/documents/{str[@name='url']}"><xsl:value-of select="normalize-space($doc-id)" /><xsl:text> </xsl:text><strong><xsl:value-of select="normalize-space($doc-title)" /></strong></a>    
+          </xsl:otherwise>
+          <xsl:if test="arr[@name='author'] and arr[@name='author_key'] = $entity-key"><xsl:text> [Author]</xsl:text></xsl:if>
+      </xsl:choose>
       </p>
       <xsl:if test="str[@name='description']">
         <p>
@@ -243,4 +259,5 @@
       </xsl:if>
     </li>
   </xsl:template>
+
 </xsl:stylesheet>

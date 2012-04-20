@@ -122,6 +122,11 @@
 
     <xsl:if test="/aggregation/response/result/doc">
       <div>
+        <form action="/mobile/docs.zip" method="get" id="dlDocForm" onsubmit="return validate()">
+          <!-- KFL - it would look nicer if this was replaced by side menu options (see default.xsl) when script was enabled and this is the no-script option -->
+          <p>Download all selected files as <input type="submit" name="format" value="pdf" /> or <input type="submit" name="format" value="epub" /> or <input type="submit" name="format" value="both" /> (check files to select/deselect)<br />Where appropriate save: 
+            <input type="radio" name="lang" value="all" checked="checked" /> English and German versions <input type="radio" name="lang" value="de" /> German version only <input type="radio" name="lang" value="en" /> English version only
+          </p> <!-- <noscript> </noscript>-->
         <xsl:call-template name="make-section">
           <xsl:with-param name="name" select="'Correspondence'" />
           <xsl:with-param name="id" select="'correspondence'" />
@@ -142,6 +147,7 @@
           <xsl:with-param name="id" select="'other'" />
           <xsl:with-param name="docs" select="$other" />
         </xsl:call-template>
+        </form>  
       </div>
     </xsl:if>
   </xsl:template>

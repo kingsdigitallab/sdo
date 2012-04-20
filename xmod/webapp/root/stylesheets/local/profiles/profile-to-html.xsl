@@ -100,8 +100,13 @@
       </xsl:otherwise>
     </xsl:choose>
 
-    <xsl:if test="/aggregation/response/result/doc">      
+    <xsl:if test="/aggregation/response/result/doc">  
       <div>
+        <form action="/mobile/docs.zip" method="get" id="dlDocForm" onsubmit="return validate()">
+          <!-- KFL - it would look nicer if this was replaced by side menu options (see default.xsl) when script was enabled and this is the no-script option -->
+          <p>Download all selected files as <input type="submit" name="format" value="pdf" /> or <input type="submit" name="format" value="epub" /> or <input type="submit" name="format" value="both" /> (check files to select/deselect)<br />Where appropriate save: 
+            <input type="radio" name="lang" value="all" checked="checked" /> English and German versions <input type="radio" name="lang" value="de" /> German version only <input type="radio" name="lang" value="en" /> English version only
+          </p> <!-- <noscript> </noscript>-->
         <xsl:call-template name="make-section">
           <xsl:with-param name="name" select="'Correspondence'" />
           <xsl:with-param name="id" select="'correspondence'" />
@@ -122,7 +127,9 @@
           <xsl:with-param name="id" select="'other'" />
           <xsl:with-param name="docs" select="$other" />
         </xsl:call-template>
+       </form>
       </div>
+        
     </xsl:if>
   </xsl:template>
 
@@ -161,7 +168,7 @@
         <h3>Relationships</h3>
         <div>
           <div class="unorderedList">
-            <div class="t01">
+            <div class="t01">            
               <ul>
                 <xsl:for-each select="relationships/relationship[@direction = 'direct']">
                   <xsl:variable name="rel-entity-key" select="keys/key[1]" />
@@ -218,9 +225,24 @@
   </xsl:template>
 
   <xsl:template match="doc">
+    
+    <xsl:variable name="href"><xsl:value-of select="$xmp:context-path"/><xsl:text>/documents/</xsl:text><xsl:value-of select="str[@name='url']"/></xsl:variable>
+    
+    <xsl:variable name="doccode">
+      <xsl:for-each select="tokenize($href, '/')">
+        <xsl:choose>
+          <xsl:when test="position() = last()"><xsl:value-of select="substring-before(., '.html')"/></xsl:when>
+          <xsl:when test="position() = (last() - 1) and ($lessonbooks or $diaries)"><xsl:value-of select="."/>*</xsl:when>
+          <xsl:when test="position() > 1"><xsl:value-of select="substring(., 1, 2)"/><xsl:text>*</xsl:text></xsl:when>
+          <xsl:otherwise><!--  --></xsl:otherwise>
+        </xsl:choose>
+      </xsl:for-each>
+    </xsl:variable>
+    
     <li>
-      <p>
-        <a href="{$xmp:context-path}/documents/{str[@name='url']}">
+      <p><input type="checkbox" name="{$doccode}" value="1" />
+        <a>
+          <xsl:attribute name="href"><xsl:value-of select="$href" /></xsl:attribute>
           <xsl:value-of select="str[@name='shelfmark']" />
           <xsl:text> </xsl:text>
           <strong>

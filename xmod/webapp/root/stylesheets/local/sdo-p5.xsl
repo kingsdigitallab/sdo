@@ -931,7 +931,10 @@
  </xsl:template>
 
  <xsl:template match="tei:lb">
-  <br/>
+  <xsl:if test="not(following-sibling::*[1][self::tei:list])">
+   <br/>
+  </xsl:if>
+  
  </xsl:template>
 
  <xsl:template match="tei:list">
@@ -1018,6 +1021,84 @@
     <span class="editorial">[note in <xsl:value-of select="$position"/>
      margin]<xsl:text> </xsl:text></span>
     <xsl:apply-templates/>
+   </xsl:otherwise>
+  </xsl:choose>
+ </xsl:template>
+ 
+ <xsl:template name="para-splt">
+  <xsl:param name="spliter" />
+  <xsl:param name="nodes" />
+  
+  <xsl:variable name="current-group">
+   <xsl:copy-of select="$nodes" />
+  </xsl:variable>
+  
+  <xsl:variable name="first-nodes" select="$current-group/*[self::tei:list][1]/preceding-sibling::*|text()" />     
+  <xsl:variable name="remaining-nodes" select="$current-group/*[self::tei:list][1]/following-sibling::*|text()" />
+
+  <xsl:choose>
+   <xsl:when test="count($nodes) > 0 and count($first-nodes) = 0">
+    <p>  
+     <xsl:apply-templates select="$nodes"/>      
+    </p>
+   </xsl:when>
+   <xsl:when test="count($nodes) > 0 and count($first-nodes) > 0">
+    <p>  
+     <xsl:apply-templates select="$first-nodes"/>      
+    </p>  
+    <xsl:apply-templates select="$current-group/*[self::tei:list][1]"/>
+    
+    <xsl:if test="count($remaining-nodes) > 0">
+    <xsl:call-template name="para-splt">
+     <xsl:with-param name="nodes" select="$remaining-nodes" />
+    </xsl:call-template>    
+    </xsl:if>
+   </xsl:when>
+  </xsl:choose>
+  
+ </xsl:template>
+ 
+ <xsl:template match="tei:p">
+  <xsl:choose>
+   <xsl:when test="tei:figure/tei:head">
+    <xsl:for-each select="tei:figure[tei:head]/tei:graphic">
+     <xsl:call-template name="showFigure"/>
+    </xsl:for-each>
+    <p>
+     <xsl:call-template name="a-id"/>
+     <xsl:apply-templates/>
+    </p>
+   </xsl:when>
+   <xsl:otherwise>
+    <xsl:choose>
+     <xsl:when test="child::*[self::tei:list]">
+  
+      <xsl:variable name="first-nodes" select="child::*[self::tei:list][1]/preceding-sibling::*|text()" />     
+      <xsl:variable name="remaining-nodes" select="child::*[self::tei:list][1]/following-sibling::*" />
+      
+      <xsl:if test="count($first-nodes) > 0">
+        <p>
+           <xsl:call-template name="a-id"/>
+           <xsl:apply-templates select="$first-nodes"/>      
+        </p>
+      </xsl:if> 
+      
+      <xsl:apply-templates select="child::*[self::tei:list][1]"/> 
+      
+      <xsl:if test="count($remaining-nodes) > 0">
+      <xsl:call-template name="para-splt">
+       <xsl:with-param name="nodes" select="$remaining-nodes" />
+      </xsl:call-template>  
+      </xsl:if> 
+    <!-- -->
+     </xsl:when>
+     <xsl:otherwise>
+       <p>
+       <xsl:call-template name="a-id"/>     
+       <xsl:apply-templates/>
+      </p>     
+     </xsl:otherwise>
+    </xsl:choose>
    </xsl:otherwise>
   </xsl:choose>
  </xsl:template>

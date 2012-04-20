@@ -26,11 +26,17 @@
     <div>
       <xsl:choose>
         <xsl:when test="/aggregation/response/result/doc">
-          <p>Documents of this type:</p>
-
+          
+          <form action="/mobile/docs.zip" method="get" id="dlDocForm" onsubmit="return validate()">
+            <!-- KFL - it would look nicer if this was replaced by side menu options (see default.xsl) when script was enabled and this is the no-script option -->
+            <p>Download all selected files as <input type="submit" name="format" value="pdf" /> or <input type="submit" name="format" value="epub" /> or <input type="submit" name="format" value="both" /> (check files to select/deselect)<br />Where appropriate save: 
+              <input type="radio" name="lang" value="all" checked="checked" /> English and German versions <input type="radio" name="lang" value="de" /> German version only <input type="radio" name="lang" value="en" /> English version only
+            </p> <!-- <noscript> </noscript>-->
+            <p>Documents of this type:</p>
           <ul>
             <xsl:apply-templates select="/aggregation/response/result/doc" />
           </ul>
+          </form>  
         </xsl:when>
         <xsl:otherwise>
           <p>There are no documents of this type.</p>

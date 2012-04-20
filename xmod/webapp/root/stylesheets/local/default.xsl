@@ -75,7 +75,15 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:variable>
-
+  
+    <xsl:variable name="mobile-path">
+      <xsl:choose>
+        <xsl:when test="contains($filedir, 'profiles') and not(contains($filedir, 'mobile'))"><xsl:text>mobile/</xsl:text><xsl:value-of select="$filedir" /><xsl:text>/</xsl:text></xsl:when>
+        <xsl:when test="contains($filedir, 'profiles') and contains($filedir, 'mobile')"><xsl:value-of select="$filedir" /><xsl:text>/</xsl:text></xsl:when>
+        <xsl:otherwise><xsl:value-of select="replace($filedir, 'documents', 'mobile')" /><xsl:text>/</xsl:text></xsl:otherwise>
+      </xsl:choose>                  
+    </xsl:variable>
+  
   <xsl:template match="/">
     <xsl:choose>
       <xsl:when test="$xmg:minimal = false()"><xsl:call-template name="xmv:screen"/></xsl:when>
@@ -165,27 +173,131 @@
       <xsl:when test="contains($filedir, 'profile')">
         <div id="sn" class="tabs">
           <h3>
-            Bundles
+            Profile
           </h3>  
           <ul>
-            <li><a href="{substring-before($filename, '.')}:.pdf">Save PDF</a></li>
-            <li><a href="{substring-before($filename, '.')}:.epub">Save EPub</a></li>
-            <li><a href="{substring-before($filename, '.')}:.zip">Save All Formats</a></li>
+            <ul>
+              <li><a>
+                <xsl:attribute name="href">
+                  <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:.pdf?all=false</xsl:text>
+                </xsl:attribute>
+                Save PDF</a></li>
+              <li><a>
+                <xsl:attribute name="href">
+                  <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:.epub?all=false</xsl:text>
+                </xsl:attribute>
+                Save EPub</a></li>
+              <li><a>
+                <xsl:attribute name="href">
+                  <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:.zip?all=false</xsl:text>
+                </xsl:attribute>             
+                Save All Formats</a></li>
+            </ul>
           </ul>
+          <h3>
+            Profile Bundle
+          </h3>  
+            <ul>
+              <li class="s04"><span>Save PDF</span>
+                <ul class="pn3">
+                  <li class="s01">
+                    <a>
+                      <xsl:attribute name="href">
+                  <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:_bundle.zip</xsl:text>
+                </xsl:attribute>All Languages</a>
+                </li>  
+                  <li>
+                    <a>
+                      <xsl:attribute name="href">
+                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:de.pdf</xsl:text>
+                      </xsl:attribute>German Only</a>
+                  </li>
+                  <li>
+                    <a>
+                      <xsl:attribute name="href">
+                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:en.pdf</xsl:text>
+                      </xsl:attribute>English Only</a>
+                  </li>
+                </ul>
+                </li>
+              <li><span>Save EPub</span>
+                <ul>
+                <li>
+                <a>
+                <xsl:attribute name="href">
+                  <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:.epub</xsl:text>
+                </xsl:attribute>
+                All Languages</a>
+                </li>
+                  <li>
+                    <a>
+                      <xsl:attribute name="href">
+                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:de.epub</xsl:text>
+                      </xsl:attribute>
+                      German Only</a>
+                  </li>
+                  <li>
+                    <a>
+                      <xsl:attribute name="href">
+                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:en.epub</xsl:text>
+                      </xsl:attribute>
+                      English Only</a>
+                  </li>
+              </ul>
+                </li>
+              <li><span>Save All Formats</span>
+                <ul>
+                  <li>
+                    <a>
+                      <xsl:attribute name="href">
+                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:.zip</xsl:text>
+                      </xsl:attribute>             
+                    All Languages</a>
+                  </li>
+                  <li>
+                    <a>
+                      <xsl:attribute name="href">
+                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:de.zip</xsl:text>
+                      </xsl:attribute>             
+                    German Only</a>
+                  </li>
+                  <li>
+                    <a>
+                      <xsl:attribute name="href">
+                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:en.zip</xsl:text>
+                      </xsl:attribute>             
+                      English Only</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+                    
         </div>  
       </xsl:when>
       <xsl:otherwise>
         <div id="sn" class="tabs">
           <h3>
-            German and English
+            German and English 
           </h3>
           <ul class="tabNavigation">
             <li><a href="#facingtexts">Preview</a></li>
           </ul>
           <ul>
-            <li><a href="{substring-before($filename, '.')}:.pdf">Save PDF</a></li>
-            <li><a href="{substring-before($filename, '.')}:.epub">Save EPub</a></li>
-            <li><a href="{substring-before($filename, '.')}:.zip">Save All Formats</a></li>
+            <li><a>
+              <xsl:attribute name="href">
+                <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:.pdf</xsl:text>
+              </xsl:attribute>
+              Save PDF</a></li>
+            <li><a>
+              <xsl:attribute name="href">
+                <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:.epub</xsl:text>
+              </xsl:attribute>
+              Save EPub</a></li>
+            <li><a>
+              <xsl:attribute name="href">
+                <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:.zip</xsl:text>
+              </xsl:attribute>             
+              Save All Formats</a></li>
           </ul>
           <h3>
             German Only
@@ -194,10 +306,22 @@
             <li><a href="#german">Preview</a></li>
           </ul>
           <ul>
-            <li><a href="{substring-before($filename, '.')}:de.pdf?lang=de">Save PDF</a></li>
-            <li><a href="{substring-before($filename, '.')}:de.epub?lang=de">Save EPub</a></li>
-            <li><a href="{substring-before($filename, '.')}:de.zip?lang=de">Save All Formats</a></li>
-          </ul> 
+            <li><a>
+              <xsl:attribute name="href">
+                <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:de.pdf?lang=de</xsl:text>
+              </xsl:attribute>
+              Save PDF</a></li>
+            <li><a>
+              <xsl:attribute name="href">
+                <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:de.epub?lang=de</xsl:text>
+              </xsl:attribute>
+              Save EPub</a></li>
+            <li><a>
+              <xsl:attribute name="href">
+                <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:de.zip?lang=de</xsl:text>
+              </xsl:attribute>             
+              Save All Formats</a></li>
+          </ul>
           <h3>
             English Only
           </h3>
@@ -205,10 +329,22 @@
             <li><a href="#english">Preview</a></li>
           </ul>
           <ul>
-            <li><a href="{substring-before($filename, '.')}:en.pdf?lang=en">Save PDF</a></li>
-            <li><a href="{substring-before($filename, '.')}:en.epub?lang=en">Save EPub</a></li>
-            <li><a href="{substring-before($filename, '.')}:en.zip?lang=en">Save All Formats</a></li>
-          </ul>       
+            <li><a>
+              <xsl:attribute name="href">
+                <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:en.pdf?lang=en</xsl:text>
+              </xsl:attribute>
+              Save PDF</a></li>
+            <li><a>
+              <xsl:attribute name="href">
+                <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:en.epub?lang=en</xsl:text>
+              </xsl:attribute>
+              Save EPub</a></li>
+            <li><a>
+              <xsl:attribute name="href">
+                <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:en.zip?lang=en</xsl:text>
+              </xsl:attribute>             
+              Save All Formats</a></li>
+          </ul>      
         </div>       
       </xsl:otherwise>
     </xsl:choose>
@@ -261,6 +397,7 @@
     <script src="{$xmp:assets-path}/s/jquery.ui.widget.js" type="text/javascript">&#160;</script>
     <script src="{$xmp:assets-path}/s/jquery.ui.datepicker.js" type="text/javascript">&#160;</script>
     <script src="{$xmp:assets-path}/s/config.js" type="text/javascript">&#160;</script>
+    <script src="{$xmp:assets-path}/s/sdo.js" type="text/javascript">&#160;</script>
   </xsl:template>
   
   <xsl:template name="xmv:body">
@@ -298,14 +435,7 @@
                   <xsl:call-template name="xmm:menu"/>
                 </xsl:otherwise>
               </xsl:choose>
-              <xsl:if test="$xmg:printable = true()">
-                <xsl:variable name="mobile-path">
-                  <xsl:choose>
-                    <xsl:when test="contains($filedir, 'profiles')"><xsl:text>../../mobile/</xsl:text><xsl:value-of select="$filedir" /><xsl:text>/</xsl:text></xsl:when>
-                    <xsl:otherwise><xsl:text>../../</xsl:text><xsl:value-of select="replace($filedir, 'documents', 'mobile')" /><xsl:text>/</xsl:text></xsl:otherwise>
-                  </xsl:choose>                  
-                </xsl:variable>
-                
+              <xsl:if test="$xmg:printable = true()"> 
                 <div id="sn" class="tabs">
                   <h3>
                     Downloads
@@ -315,31 +445,43 @@
                       <ul> 
                       <li><a>
                       <xsl:attribute name="href">
-                        <xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>.html</xsl:text>
+                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>.html</xsl:text>
                       </xsl:attribute>
                       <xsl:attribute name="target"><xsl:text>_blank</xsl:text></xsl:attribute>
                       Print Preview</a></li>
                                        
                     <li><a>
                       <xsl:attribute name="href">
-                        <xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:.pdf</xsl:text>
+                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:.pdf</xsl:text>
                       </xsl:attribute>
-                      Save PDF</a></li>
+                      Save Page (PDF)</a></li>
                     <li><a>
                       <xsl:attribute name="href">
-                        <xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:.epub</xsl:text>
+                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:.epub</xsl:text>
                       </xsl:attribute>
-                      Save EPub</a></li>
+                      Save Page (EPub)</a></li>
                     <li><a>
                       <xsl:attribute name="href">
-                        <xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:.zip</xsl:text>
+                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:.zip</xsl:text>
                       </xsl:attribute>
-                      Save All Formats</a></li>
+                      Save Page (All Formats)</a></li> 
+                     <!--   
+                       KFL - NB. Needs to be changed so these display when javascript is enabled so it can replace the buttons int the page
+                     <li><a href="">
+                       <xsl:attribute name="onclick">$('form#dlDocForm').submit(); return false;</xsl:attribute>
+                          Save Selected (PDF)</a> </li>
+                     <li><a href="">
+                       <xsl:attribute name="onclick">$('form#dlDocForm').submit(); return false;</xsl:attribute>
+                          Save Selected (EPub)</a></li>
+                     <li><a href="">
+                       <xsl:attribute name="onclick">$('form#dlDocForm').submit(); return false;</xsl:attribute>
+                          Save Selected (All Formats)</a></li> 
+                      -->   
                     </ul>  
                     </li>
                   </ul>
-                </div>                  
-              </xsl:if>
+                </div>  
+              </xsl:if>                
             </td>
             </xsl:if> 
             <td id="content">

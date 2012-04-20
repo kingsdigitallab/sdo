@@ -6,6 +6,9 @@
   <xsl:import href="default.xsl" />
 
   <xsl:param name="rows" select="10" />
+  
+  <xsl:param name="inc" />
+  <xsl:param name="lang" />
 
   <xsl:variable name="kw" select="/*/response/lst/lst[@name='params']/str[@name='q']" />
   <xsl:variable name="filter" select="/*/response/lst/lst[@name='params']/str[@name='fq']" />
@@ -14,10 +17,23 @@
   <xsl:variable name="number-results" select="number(/*/response/result/@numFound)" />
   <xsl:variable name="current-page" select="floor($start div $rows)+1" />
   <xsl:variable name="total-pages" select="xs:integer(ceiling($number-results div $rows))" />
+  <xsl:variable name="requestString" select="$inc" />
+  <xsl:variable name="print-list">
+    <xsl:for-each select="tokenize($requestString, '&amp;')">
+      <xsl:choose>
+        <xsl:when test="substring-before(.,'=') = 'fq'" />
+        <xsl:when test="substring-before(.,'=') = 'kw'" />
+        <xsl:when test="substring-before(.,'=') = 'p'" />
+        <xsl:when test="substring-before(.,'=') = 'lang'" />
+        <xsl:otherwise>&amp;<xsl:value-of select="."/></xsl:otherwise>
+      </xsl:choose>
+    </xsl:for-each>
+  </xsl:variable>
+  
 
   <xsl:template name="xms:content">
+    
     <div>
-      
       <h2>Full text search of German original and English translation</h2>
       <p>About searching:</p>
       <ul>
@@ -25,7 +41,7 @@
         <li>searches find closely related words - <strong>bakery</strong> finds <strong>bakery</strong> and <strong>bakeries</strong></li>
         <li>use quote marks to find words together - <strong>"railway station"</strong> finds just <strong>railway station</strong></li>
       </ul>
-      <form action="" method="get">
+      <form action="" method="get" name="searchForm">
         <p>
           <label class="search">Search  <select name="fq">
               <option value="all">
@@ -74,21 +90,43 @@
           <input type="submit" />
         </p>
       </form>
+      <form action="/mobile/docs.zip" method="get" onsubmit="return validate()">
+      
       <xsl:apply-templates select="/*/response" />
+        <input name="fq" value="{$fq}" type="hidden"/>
+        <input name="p" value="{$current-page}" type="hidden"/>
+        <input name="kw" value="{$kw}" type="hidden"/>
+      </form>
     </div>
   </xsl:template>
 
   <xsl:template match="response">
     <h2>Searched for <em><xsl:value-of select="lst/lst[@name='params']/str[@name='q']" /></em><xsl:if test="$fq"><xsl:text> in </xsl:text><xsl:value-of select="upper-case(substring($fq, 1, 1))" /><xsl:value-of select="substring($fq, 2)"></xsl:value-of></xsl:if><xsl:if test="$number-results > 0"><xsl:text> (</xsl:text><xsl:value-of select="$number-results"/><xsl:text> result</xsl:text><xsl:if test="$number-results > 1">s</xsl:if><xsl:text> found)</xsl:text></xsl:if></h2>
-  <xsl:if test="not($fq)">
-    <p>Filter: <xsl:for-each select="lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='kind']/int[. > 0]">
+  <xsl:choose>
+    <xsl:when test="not($fq)"><p>Filter: <xsl:for-each select="lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='kind']/int[. > 0]">
       <a>
-        <xsl:attribute name="href"><xsl:text>?kw=</xsl:text><xsl:value-of select="$kw"/><xsl:text>&amp;fq=</xsl:text><xsl:value-of select="@name" /></xsl:attribute>
-      <xsl:value-of select="@name" /><xsl:text>: </xsl:text><xsl:value-of select="." />
+        <xsl:attribute name="href"><xsl:text>?kw=</xsl:text><xsl:value-of select="$kw"/><xsl:text>&amp;fq=</xsl:text><xsl:value-of select="@name" /><xsl:value-of select="$print-list"/></xsl:attribute>
+        <xsl:attribute name="onClick">buildURL(this)</xsl:attribute>
+        <xsl:value-of select="@name" /><xsl:text>: </xsl:text><xsl:value-of select="." />
       </a>
       <xsl:if test="not(position() = last())">,</xsl:if><xsl:text> </xsl:text>
-    </xsl:for-each></p>
-  </xsl:if>
+    </xsl:for-each></p></xsl:when>
+    <xsl:otherwise><p>Remove filter -      
+      <a>
+      <xsl:attribute name="href"><xsl:text>?kw=</xsl:text><xsl:value-of select="$kw"/><xsl:text>&amp;fq=</xsl:text><xsl:value-of select="$print-list"/></xsl:attribute>
+      <xsl:attribute name="onClick">buildURL(this)</xsl:attribute>
+       Category: <xsl:value-of select="$fq" />
+    </a></p></xsl:otherwise>
+  </xsl:choose>  
+    
+    <p>Download all selected files as <input type="submit" name="format" value="pdf" /> or <input type="submit" name="format" value="epub" /> or <input type="submit" name="format" value="both" /> (check files to select/deselect)<br />Where appropriate save: 
+      <xsl:choose>
+        <xsl:when test="$lang = 'de'"><input type="radio" name="lang" value="all" /> English and German versions <input type="radio" name="lang" value="de" checked="checked" /> German version only <input type="radio" name="lang" value="en" /> English version only</xsl:when>
+        <xsl:when test="$lang = 'en'"><input type="radio" name="lang" value="all" /> English and German <input type="radio" name="lang" value="de" /> German Only <input type="radio" name="lang" value="en" checked="checked" /> English only</xsl:when>
+        <xsl:otherwise><input type="radio" name="lang" value="all" checked="checked" /> English and German versions <input type="radio" name="lang" value="de" /> German version only <input type="radio" name="lang" value="en" /> English version only</xsl:otherwise>
+      </xsl:choose>
+    </p>   
+    
     <xsl:choose>
       <xsl:when test="$number-results = 0">
         <h3>No results found</h3>
@@ -98,16 +136,30 @@
       <xsl:for-each select="result/doc">
         <xsl:variable name="hl-pos" select="position()" />
         <xsl:variable name="kind" select="str[@name='kind']" />
-        
-        <li>
-          <a>
-            <xsl:attribute name="href">
+        <xsl:variable name="href">
               <xsl:choose>
                 <xsl:when test="$kind = 'diaries' or $kind = 'correspondence' or $kind = 'lessonbooks' or $kind = 'other'"><xsl:text>../documents/</xsl:text></xsl:when>
                 <xsl:otherwise><xsl:text>../profiles/</xsl:text></xsl:otherwise>
               </xsl:choose>              
-              <xsl:value-of select="str[@name = 'url']" />
-            </xsl:attribute>
+              <xsl:value-of select="str[@name = 'url']" />          
+        </xsl:variable>
+        <xsl:variable name="doccode">
+          <xsl:for-each select="tokenize($href, '/')">
+            <xsl:choose>
+              <xsl:when test="position() = last()"><xsl:value-of select="substring-before(., '.html')"/></xsl:when>
+              <xsl:when test="position() = (last() - 1) and ($kind = 'lessonbooks' or $kind = 'diaries')"><xsl:value-of select="."/>*</xsl:when>
+              <xsl:when test="position() > 1"><xsl:value-of select="substring(., 1, 2)"/><xsl:text>*</xsl:text></xsl:when>
+              <xsl:otherwise><!--  --></xsl:otherwise>
+            </xsl:choose>
+          </xsl:for-each>
+        </xsl:variable>
+        
+        <li>
+          <xsl:choose>
+            <xsl:when test="contains($print-list, $doccode)"><input type="checkbox" name="{$doccode}" value="1" checked="checked" /></xsl:when>
+            <xsl:otherwise><input type="checkbox" name="{$doccode}" value="1" /></xsl:otherwise>
+          </xsl:choose>
+          <a href="{$href}">
             <xsl:value-of select="str[@name='title']" />
             <xsl:if test="$kind = 'diaries'">
               <xsl:text>Diary entry for </xsl:text>
@@ -124,6 +176,7 @@
               <xsl:text> ...</xsl:text>
             </p>
           </xsl:for-each>
+          
         </li>
       </xsl:for-each>
     </ul>
@@ -137,7 +190,9 @@
             <xsl:text> </xsl:text>
           </xsl:when>
           <xsl:otherwise>
-            <a href="?kw={$kw}&amp;fq={$fq}&amp;p={.}">
+            <a>
+              <xsl:attribute name="href"><xsl:text>?kw=</xsl:text><xsl:value-of select="$kw"/><xsl:text>&amp;fq=</xsl:text><xsl:value-of select="$fq"/><xsl:text>&amp;p=</xsl:text><xsl:value-of select="."/><xsl:value-of select="$print-list"/></xsl:attribute>
+              <xsl:attribute name="onClick">buildURL(this)</xsl:attribute>
               <xsl:value-of select="." />
             </a>
             <xsl:text> </xsl:text>
@@ -152,11 +207,11 @@
   <xsl:template name="unescape-highlight">
     <xsl:param name="text" select="''" />
 
-    <xsl:variable name="gt" select="'&gt;'" />
-    <xsl:variable name="open-tag" select="'&lt;'" />
-    <xsl:variable name="close-tag" select="'&lt;/'" />
+    <xsl:variable name="gt" select="'&gt;'" /> <!-- '>' -->
+    <xsl:variable name="open-tag" select="'&lt;'" />  <!-- '<' -->
+    <xsl:variable name="close-tag" select="'&lt;/'" />  <!-- '</' -->
     <xsl:variable name="pre-hl" select="substring-before($text, $open-tag)" />
-
+    
     <xsl:choose>
       <xsl:when test="$pre-hl or starts-with($text, $open-tag)">
         <xsl:value-of select="$pre-hl" />
@@ -167,6 +222,7 @@
         <xsl:variable name="remainder" select="substring-after(substring-after($text, $gt), $gt)" />
 
         <xsl:if test="$remainder">
+          
           <xsl:call-template name="unescape-highlight">
             <xsl:with-param name="text" select="$remainder" />
           </xsl:call-template>
@@ -177,4 +233,5 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
+
 </xsl:stylesheet>

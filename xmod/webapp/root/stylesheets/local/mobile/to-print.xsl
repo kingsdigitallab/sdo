@@ -11,11 +11,12 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:import href="../default.xsl"/>
+  <xsl:include href="cocoon://_internal/properties/properties.xsl" />
 
 
   <xsl:template match="tei:rs[@key]">
     <xsl:variable name="display-name">
-      <xsl:for-each select="/*/eats/entities/entity[keys/key = current()/@key]">
+      <xsl:for-each select="$eats/entities/entity[keys/key = current()/@key]">
         <xsl:choose>
           <xsl:when test="names/name[@is_preferred = true()]">
             <xsl:value-of select="names/name[@is_preferred = true()]"/>
@@ -30,7 +31,6 @@
     <xsl:variable name="default-name"><xsl:apply-templates/></xsl:variable>
     
     <xsl:value-of select="$default-name" /><xsl:if test="not($default-name = $display-name)"><xsl:text> [</xsl:text><xsl:value-of select="$display-name" />]</xsl:if>
-
   </xsl:template>
   
   <xsl:template match="tei:handShift">
@@ -142,5 +142,20 @@
       </xsl:when>
     </xsl:choose>
   </xsl:template>
+  
+  <xsl:template match="tei:subst">
+    <xsl:choose>
+      <xsl:when test="child::tei:del[@rend='overwritten']/child::tei:gap">
+        <span class="green">[illeg]</span><del><xsl:value-of select="child::tei:add[@place='superimposed']"/></del>
+      </xsl:when>
+      <xsl:when test="child::tei:del[@rend='overwritten']">
+        <xsl:value-of select="child::tei:add[@place='superimposed']"/><span class="green">[was <del><xsl:value-of select="child::tei:del[@rend='overwritten']"/></del>]</span>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:apply-templates/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
   
 </xsl:stylesheet>

@@ -13,24 +13,37 @@
     <!-- Base stylesheet from http://wiki.tei-c.org/index.php/Cocoon_epub_Compiler-->
     
 
-    <xsl:import href="../default.xsl" />
+    <xsl:import href="to-print.xsl" />
 
     <xsl:param name="lang" />
     <xsl:param name="filedir" select="'documents/'"/>
+    <xsl:param name="recordId" />
     
     <xsl:variable name="record" select="/aggregation/sdo:recordCollection/sdo:record[1]"/>
-    <xsl:variable name="fileId" select="/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/*[1]/@sdoID"/>
+    <xsl:variable name="fileName" select="/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/*[1]/@sdoID"/>
     <xsl:variable name="fileIdentifier" select="/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/*/@sdoID"/>
+    <xsl:variable name="fileId">
+        <xsl:value-of select="$fileName" /><xsl:if test="$recordId"><xsl:text>-</xsl:text><xsl:value-of select="$recordId"/></xsl:if>
+    </xsl:variable>
     
     <!--
     <xsl:variable name="webpage">
         <xsl:copy-of select="/aggregation/child::*[name() = 'html']"/>
     </xsl:variable>
     -->
+<!-- 
     <xsl:variable name="webpage">       
         <xsl:choose>
-            <xsl:when test="$lang"><xsl:value-of select="replace($filedir, 'documents', 'mobile')" />/<xsl:value-of select="$fileId" />.html?type=epub&amp;lang=<xsl:value-of select="$lang" /></xsl:when>
-            <xsl:otherwise><xsl:value-of select="replace($filedir, 'documents', 'mobile')" />/<xsl:value-of select="$fileId" />.html?type=epub</xsl:otherwise>
+            <xsl:when test="$lang"><xsl:value-of select="replace($filedir, 'documents', 'mobile')" /><xsl:text>/</xsl:text><xsl:value-of select="$fileName" /><xsl:text>.html?type=epub&amp;lang=</xsl:text><xsl:value-of select="$lang" /></xsl:when>
+            <xsl:otherwise><xsl:value-of select="replace($filedir, 'documents', 'mobile')" /><xsl:text>/</xsl:text><xsl:value-of select="$fileName" /><xsl:text>.html?type=epub</xsl:text></xsl:otherwise>
+        </xsl:choose>  
+    </xsl:variable>
+-->
+   
+    <xsl:variable name="webpage">       
+        <xsl:choose>
+            <xsl:when test="$lang"><xsl:value-of select="replace($filedir, 'documents', 'mobile')" /><xsl:text>/</xsl:text><xsl:value-of select="$fileName" /><xsl:if test="$recordId"><xsl:text>/</xsl:text><xsl:value-of select="$recordId"/></xsl:if><xsl:text>.html?type=epub&amp;lang=</xsl:text><xsl:value-of select="$lang" /></xsl:when>
+            <xsl:otherwise><xsl:value-of select="replace($filedir, 'documents', 'mobile')" /><xsl:text>/</xsl:text><xsl:value-of select="$fileName" /><xsl:if test="$recordId"><xsl:text>/</xsl:text><xsl:value-of select="$recordId"/></xsl:if><xsl:text>.html?type=epub</xsl:text></xsl:otherwise>
         </xsl:choose>  
     </xsl:variable>
 
