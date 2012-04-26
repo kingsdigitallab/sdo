@@ -99,7 +99,7 @@
                             </fo:block>
                         </xsl:if>
                         <xsl:if test="child::tei:fw[@type='envelope']">
-                            <fo:list-block>
+                            <fo:list-block id="envelope_{@type}">
                                 <xsl:apply-templates select="tei:fw[@type='envelope']"/>
                             </fo:list-block>
                         </xsl:if>
@@ -111,19 +111,19 @@
                             />
                         </fo:block>
                         <xsl:if test="child::tei:closer">
-                            <fo:block id="closer">
+                            <fo:block id="closer_{@type}">
                                 <xsl:apply-templates select="tei:closer"/>
                             </fo:block>
                         </xsl:if>
                         <xsl:if test="child::tei:postscript">
-                            <fo:block id="postscript">
+                            <fo:block id="postscript_{@type}">
                                 <xsl:apply-templates select="tei:postscript"/>
                             </fo:block>
                         </xsl:if>
                         <xsl:if test="child::tei:fw[@type='envelope']">
-                            <fo:block id="envelope">
+                            <fo:list-block id="envelope_{@type}">
                                 <xsl:apply-templates select="tei:fw[@type='envelope']"/>
-                            </fo:block>
+                            </fo:list-block>
                         </xsl:if>
                     </xsl:otherwise>
                 </xsl:choose>
@@ -172,9 +172,9 @@
                     </fo:block>
                 </xsl:if>
                 <xsl:if test="child::tei:fw[@type='envelope']">
-                    <fo:block>
+                    <fo:list-block>
                         <xsl:apply-templates select="tei:fw[@type='envelope']"/>
-                    </fo:block>
+                    </fo:list-block>
                 </xsl:if>
             </xsl:when>
             <xsl:otherwise>
@@ -192,9 +192,9 @@
                     </fo:block>
                 </xsl:if>
                 <xsl:if test="child::tei:fw[@type='envelope']">
-                    <fo:block>
+                    <fo:list-block>
                         <xsl:apply-templates select="tei:fw[@type='envelope']"/>
-                    </fo:block>
+                    </fo:list-block>
                 </xsl:if>
             </xsl:otherwise>
         </xsl:choose>
