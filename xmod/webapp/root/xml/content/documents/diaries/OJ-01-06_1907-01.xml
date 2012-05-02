@@ -11,12 +11,13 @@
          <!--Select an sdoID from the controlled list -->
          <sdo:diary sdoID="OJ-01-06_1907-01"/>
       </sdo:source>
-      <!-- Most documents will be in the hand of either Heinrich or Jeanette; add additional notes as needed to indicate
-                     the presence of other hands-->
+
       <tei:handNotes>
          <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand, in ink</tei:handNote>
          <tei:handNote xml:id="HSblue" scope="minor">Heinrich Schenker's hand, in blue
             crayon</tei:handNote>
+         <tei:handNote xml:id="HSblue-black" scope="minor">Heinrich Schenker's hand, in blue crayon,
+            overwritten in ink</tei:handNote>
       </tei:handNotes>
       <!-- Add additional or remove unnecessary statements of responsiblity as needed below -->
       <tei:respStmt xml:id="IB">
@@ -39,322 +40,463 @@
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker January, 1907</dc:title>
+         <dc:title>Diary entry by Schenker January 2, 1907</dc:title>
          <dcterms:created>1907-01-02T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-01</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:pb n="32"/>
+            <tei:fw type="header" rend="center"><tei:handShift new="#HSblue"/>I — 07</tei:fw>
+            <tei:fw type="header" rend="center"><tei:handShift new="#HS"/>Jänner 07.</tei:fw>
+            <tei:date when="1907-01-02">2.1.</tei:date>
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab><tei:handShift new="#HSblue"/>√ <tei:handShift new="#HS"/>Fortsetzung der Arbeit am
+               <tei:rs key="entity-000025" type="person"><tei:hi rend="lateinschr"
+               >Bach</tei:hi></tei:rs>-conz.</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:pb n="32"/>
+            <tei:fw type="header" rend="center"><tei:handShift new="#HSblue"/>I — 07</tei:fw>
+            <tei:fw type="header" rend="center"><tei:handShift new="#HS"/>January 07</tei:fw>
+            <tei:date when="1907-01-02">2.1.</tei:date>
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab><tei:handShift new="#HSblue"/>√ <tei:handShift new="#HS"/>Continuation of the work
+            on the <tei:rs key="entity-000025" type="person">Bach</tei:rs> concerto.</tei:ab>
       </tei:div>
    </sdo:record>
    <sdo:record ID="r0002">
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker January, 1907</dc:title>
+         <dc:title>Diary entry by Schenker January 3, 1907</dc:title>
          <dcterms:created>1907-01-03T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-01</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1907-01-03">3.1</tei:date>
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab><tei:handShift new="#HSblue"/>√ <tei:handShift new="#HS"/>Ablieferung des 1. u. 2.
+            Satzes. <tei:hi rend="lateinschr">General</tei:hi>probe zu <tei:hi rend="lateinschr"
+                  ><tei:hi rend="underline"><tei:rs key="entity-000556" type="person"
+                     >Mahler</tei:rs>'s</tei:hi>
+               <tei:rs key="entity-003211" type="composition">VI. Symph</tei:rs></tei:hi>.<tei:note
+               xml:id="r0001-fn01" type="editorial" place="foot">The premier of the Sixth Symphony
+               was given in the Grosser Musikvereinssaal at 8 p.m. on January 4, with the Vienna
+               Philharmonic under the baton of the composer. </tei:note> Ein Werk ohne jegliche
+               <tei:hi rend="lateinschr">Kultur</tei:hi>, kindisch-grotesk. Ein <tei:subst>
+               <tei:del rend="overstrike">Lüster</tei:del>
+               <tei:add place="interlinear-above">Stall</tei:add>
+            </tei:subst> von Schlagwerkzeugen, u. im <tei:hi rend="lateinschr">Finale</tei:hi> der
+               <tei:hi rend="lateinschr">Autor</tei:hi> ein <tei:del rend="overstrike">als</tei:del>
+               Musik-<tei:hi rend="lateinschr">Clown</tei:hi>.</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1907-01-03">3.1</tei:date>
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab><tei:handShift new="#HSblue"/>√ <tei:handShift new="#HS"/>Hand-over of the first
+            and second movements. Public rehearsal of <tei:rs key="entity-000556" type="person"
+                  ><tei:hi rend="underline">Mahler</tei:hi></tei:rs>'s <tei:rs key="entity-003211"
+               type="composition">Sixth Symphony</tei:rs>.<tei:ptr corresp="#r0001-fn01"
+               type="footnote"/> A work without any trace of culture, childishly grotesque. A <tei:subst>
+               <tei:del rend="overstrike">dazzling array</tei:del>
+               <tei:add place="interlinear-above">stable full</tei:add>
+            </tei:subst> of percussion instruments, and in the Finale the composer as a musical
+            clown.</tei:ab>
       </tei:div>
    </sdo:record>
    <sdo:record ID="r0003">
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker January, 1907</dc:title>
+         <dc:title>Diary entry by Schenker January 4, 1907</dc:title>
          <dcterms:created>1907-01-04T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-01</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1907-01-04">4.</tei:date>
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab><tei:rs key="entity-000913" type="person"><tei:hi rend="lateinschr"
+               >Floriz</tei:hi></tei:rs>' Erkrankung, daher a<tei:subst>
+               <tei:del rend="overwritten">m</tei:del>
+               <tei:add place="superimposed">n</tei:add>
+            </tei:subst> seiner Stelle ein </tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
             <tei:date/>
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab><tei:rs key="entity-000913" type="person">Floriz</tei:rs>'s illness, hence
+               <tei:supplied reason="clarity">I take</tei:supplied> his place. </tei:ab>
       </tei:div>
    </sdo:record>
    <sdo:record ID="r0004">
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker January, 1907</dc:title>
+         <dc:title>Diary entry by Schenker January 5, 1907</dc:title>
          <dcterms:created>1907-01-05T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-01</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date when="1907-01-05">5.</tei:date>
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>bei <tei:rs key="entity-003212" type="person"><tei:hi rend="lateinschr"
+                  >Thorsch</tei:hi></tei:rs>' zu Quartett u. Abend.</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
             <tei:date/>
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>At the <tei:rs key="entity-003212" type="person">Thorsch</tei:rs>'s place for
+            quartet and evening.</tei:ab>
       </tei:div>
    </sdo:record>
    <sdo:record ID="r0005">
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker January, 1907</dc:title>
+         <dc:title>Diary entry by Schenker January 6, 1907</dc:title>
          <dcterms:created>1907-01-06T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-02</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date>6.</tei:date>
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>Fertigstellung des letzten Satzes von <tei:rs key="entity-000025" type="person"
+                  ><tei:hi rend="lateinschr">Bach</tei:hi></tei:rs>. Längerer Spaziergang mit H.
+               <tei:rs key="entity-003213" type="person">Schur</tei:rs> am Abend, u. Einiges über
+            mich selbst an die Adresse seiner Kreise.</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date>6.</tei:date>
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>Completion of the last movement of <tei:rs key="entity-000025" type="person"
+               >Bach</tei:rs>. Longish walk with Mr. <tei:rs key="entity-003213" type="person"
+               >Schur</tei:rs> in the evening and something about me myself at the address of his
+            circle.</tei:ab>
       </tei:div>
    </sdo:record>
    <sdo:record ID="r0006">
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker January, 1907</dc:title>
+         <dc:title>Diary entry by Schenker January 7, 1907</dc:title>
          <dcterms:created>1907-01-07T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-02</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date>7.</tei:date>
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>Ablieferung an den Kopisten. Abends bei <tei:rs key="entity-003215" type="person"
+                  ><tei:hi rend="lateinschr">Frau v. Goldschmidt</tei:hi></tei:rs>.</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date>7.</tei:date>
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>Hand-over to the copyists. In the evening, at <tei:rs key="entity-003215"
+               type="person">Mrs. von Goldschmidt</tei:rs>'s place.</tei:ab>
       </tei:div>
    </sdo:record>
    <sdo:record ID="r0007">
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker January, 1907</dc:title>
+         <dc:title>Diary entry by Schenker January 9, 1907</dc:title>
          <dcterms:created>1907-01-09T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-02</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date>9. (Mittw.)</tei:date>
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>Bild u. Lieder <tei:rs key="entity-003214" type="person"><tei:hi rend="lateinschr"
+                  >Goldsch</tei:hi></tei:rs>', von dessen Wittern zur letzten Erinnerung
+            erhalten.</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date>9. (Wed.)</tei:date>
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab><tei:rs key="entity-003214" type="person">Goldschmidt</tei:rs>'s picture and songs,
+            the scent of which lingers as a last remembrance. </tei:ab>
       </tei:div>
    </sdo:record>
    <sdo:record ID="r0008">
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker January, 1907</dc:title>
+         <dc:title>Diary entry by Schenker January 11, 1907</dc:title>
          <dcterms:created>1907-01-11T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-02</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date>11.</tei:date>
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab><tei:rs key="entity-000542" type="person">Löwe</tei:rs> beharrt plötzlich auf dem
+            Trippelkonz ‒ unerwartete Wendung. Autoritätsdünkel eines Dirigenten des XX.
+            Jahrh!</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date>11.</tei:date>
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab><tei:rs key="entity-000542" type="person">Löwe</tei:rs> suddenly insists on the
+            Triple Concerto ‒ unexpected turn of events. Conceited sense of his own authority on the
+            part of a 20th-century conductor!</tei:ab>
       </tei:div>
    </sdo:record>
    <sdo:record ID="r0009">
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker January, 1907</dc:title>
+         <dc:title>Diary entry by Schenker January 12, 1907</dc:title>
          <dcterms:created>1907-01-12T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-02</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date>12.</tei:date>
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>Absage an <tei:rs key="entity-000542" type="person">Löwe</tei:rs> (mündlich).
+            Abends mit letzterem zum Abendessen.</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date>12.</tei:date>
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>Refusal to <tei:rs key="entity-000542" type="person">Löwe</tei:rs> (word of mouth).
+            In the evening with the latter for dinner.</tei:ab>
       </tei:div>
    </sdo:record>
    <sdo:record ID="r0010">
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker January, 1907</dc:title>
+         <dc:title>Diary entry by Schenker January 13, 1907</dc:title>
          <dcterms:created>1907-01-13T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-02</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date>13. (Sonnt.)</tei:date>
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab><tei:handShift new="#HSblue"/>√ <tei:handShift new="#HS"/><tei:hi rend="lateinschr"
+               >Philh</tei:hi>-Konz. (<tei:rs key="entity-000610" type="person"><tei:hi
+                  rend="lateinschr">Mottl</tei:hi></tei:rs>).<tei:note xml:id="r0010-fn01"
+               type="editorial" place="foot">The program included Reger's <tei:title level="m"
+                  >Sinfonietta</tei:title> in A major, Op. 90, his <tei:title level="m"
+                  >Serenade</tei:title> in G, Op. 95, Bach's Brandenburg Concerto No. 5, and
+               Beethoven's Eighth Symphony: <tei:title level="j">Neue Freie Presse</tei:title> Feb
+               14, p. 10. </tei:note>
+            <tei:rs key="entity-000695" type="person"><tei:hi rend="lateinschr"
+               >Reger</tei:hi></tei:rs> spielt ein <tei:rs key="entity-001004" type="composition"
+                  ><tei:hi rend="lateinschr">Brandeburg</tei:hi>'sches Conz.</tei:rs>
+            <tei:handShift new="#HSblue"/>(<tei:handShift new="#HS"/>mit Flöte,
+               Solovln.<tei:handShift new="#HSblue"/>)<tei:handShift new="#HS"/> in teils
+            herkömmlicher, teils persönlicher And. Das Stück war <tei:add place="interlinear-above"
+                  ><tei:handShift new="#HSblue"/>wohl</tei:add>
+            <tei:handShift new="#HS"/>nicht plastisch genug gebracht, <tei:del rend="overstrike"
+               >erst aber</tei:del> hin u. wieder <tei:add place="interlinear-above"><tei:handShift
+                  new="#HSblue"/>aber doch auch</tei:add>
+            <tei:handShift new="#HS"/>mit schöner Wärme gespielt. <tei:rs key="entity-000695"
+               type="person"><tei:hi rend="lateinschr">Reger</tei:hi></tei:rs>'s Erscheinung
+            erinnert an die <tei:rs key="entity-000724" type="person"><tei:hi rend="lateinschr"
+                  >Röntgen</tei:hi></tei:rs>'s: warme Naturen, <tei:add place="interlinear-above"
+                  ><tei:gap reason="illegible"/></tei:add> heiß im Nachempfinden, <tei:subst>
+               <tei:del rend="overstrike">aber</tei:del>
+               <tei:add place="interlinear-above">jedoch</tei:add>
+            </tei:subst> ohne Kunstverstand u. jäglichen schöpferischen Atem. <tei:hi
+               rend="lateinschr"><tei:rs key="entity-000695" type="person">Reger</tei:rs>'s
+                  <tei:title>Serenade</tei:title></tei:hi> ein besinnungslos <tei:unclear
+               reason="reading">gestisches</tei:unclear> Stück, <tei:subst>
+               <tei:del rend="overwritten"><tei:gap reason="illegible" unit="chars" extent="6"
+                  /></tei:del>
+               <tei:add place="superimposed">kindisch</tei:add>
+            </tei:subst>-kleinlich in den Bausteinen, wie im <tei:subst>
+               <tei:del rend="overstrike">Zusammen</tei:del>
+               <tei:add place="interlinear-above">Aneinander</tei:add>
+            </tei:subst>fügen.</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date>13. (Sun.)</tei:date>
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab><tei:handShift new="#HSblue"/>√ <tei:handShift new="#HS"/>Philharmonic concert
+               (<tei:rs key="entity-000610" type="person">Mottl</tei:rs>).<tei:ptr
+               corresp="#r0010-fn01" type="footnote"/>
+            <tei:rs key="entity-000695" type="person">Reger</tei:rs> plays a <tei:rs
+               key="entity-001004" type="composition">Brandenburg Concerto</tei:rs>
+            <tei:handShift new="#HSblue"/>(<tei:handShift new="#HS"/>with flute, solo
+               violin<tei:handShift new="#HSblue"/>)<tei:handShift new="#HS"/>, partly in
+            conventional <tei:supplied reason="clarity">manner</tei:supplied>, partly with personal
+            devotion. The piece <tei:add place="interlinear-above"><tei:handShift new="#HSblue"
+               />without doubt</tei:add>
+            <tei:handShift new="#HS"/>lacked sufficient plasticity, <tei:subst>
+               <tei:del rend="overstrike">but still</tei:del>
+               <tei:add place="interlinear-above"><tei:handShift new="#HSblue"/>and yet at the same
+                  time</tei:add>
+            </tei:subst> ,<tei:handShift new="#HS"/>here and there was played with pleasing warmth.
+               <tei:rs key="entity-000695" type="person">Reger</tei:rs>'s appearance brings to mind
+            that of <tei:rs key="entity-000724" type="person">Röntgen</tei:rs>: <tei:supplied
+               reason="clarity">both had</tei:supplied> warm natures, passionate in feeling, <tei:subst>
+               <tei:del rend="overstrike">but</tei:del>
+               <tei:add place="interlinear-above">however</tei:add>
+            </tei:subst> without artistic understanding or any creative breath whatsoever. <tei:rs
+               key="entity-000695" type="person">Reger</tei:rs>'s <tei:title level="m"
+               >Serenade</tei:title>
+            <tei:supplied reason="clarity">was</tei:supplied> a mindlessly <tei:unclear
+               reason="original_unclear">gestural</tei:unclear> piece, as <tei:subst>
+               <tei:del rend="overwritten"><tei:gap reason="illegible" unit="chars" extent="6"
+                  /></tei:del>
+               <tei:add place="superimposed">childishly</tei:add>
+            </tei:subst> trivial in its building blocks as in its <tei:subst>
+               <tei:del rend="overstrike">assemblage</tei:del>
+               <tei:add place="interlinear-above">jointing together</tei:add>
+            </tei:subst>.</tei:ab>
       </tei:div>
    </sdo:record>
    <sdo:record ID="r0011">
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker January, 1907</dc:title>
+         <dc:title>Diary entry by Schenker January 14, 1907</dc:title>
          <dcterms:created>1907-01-14T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-02</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date>14.</tei:date>
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>100fl. an <tei:rs key="entity-000461" type="organization">Konegen</tei:rs>
+            beglichen.</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date>14.</tei:date>
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>100 Florins paid to <tei:rs key="entity-000461" type="organization"
+               >Konegen</tei:rs>.</tei:ab>
       </tei:div>
    </sdo:record>
    <sdo:record ID="r0012">
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker January, 1907</dc:title>
+         <dc:title>Diary entry by Schenker January 17, 1907</dc:title>
          <dcterms:created>1907-01-17T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-02</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date>17. (Don.) </tei:date>
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab>Conz. <tei:rs key="entity-000028" type="person"><tei:hi rend="lateinschr"
+                  >Backhaus</tei:hi></tei:rs> I: Die blank<tei:del rend="overstrike">e</tei:del>ste,
+            unversehrteste Technik von heute. <tei:add place="interlinear-above">Auch die</tei:add>
+            Pedalisierung vortrefflich. Für die Probleme der Genies <tei:subst>
+               <tei:del rend="overstrike">freilich</tei:del>
+               <tei:add place="interlinear-above">indessen leider</tei:add>
+            </tei:subst> noch nicht reif, <tei:del rend="overstrike">u.</tei:del>
+            <tei:add place="interlinear-above">sucht B.</tei:add> Zugang nur durch Technik <tei:del
+               rend="overstrike">suchend</tei:del>. Eine neue Elevin Frl. <tei:rs
+               key="entity-000416" type="person"><tei:hi rend="lateinschr">Mar.
+               Kahn</tei:hi></tei:rs> stellt sich vor.</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date>17. (Thurs.)</tei:date>
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>Concert: <tei:rs key="entity-000028" type="person">Backhaus</tei:rs> I: The most
+            polished, most intact technique of our day. <tei:add place="interlinear-above">Even
+               the</tei:add> pedalling excellent. <tei:subst>
+               <tei:del rend="overstrike">Admittedly</tei:del>
+               <tei:add place="interlinear-above">However, unfortunately,</tei:add>
+            </tei:subst> not yet mature enough for the problems of genius, <tei:del
+               rend="overstrike">and</tei:del>
+            <tei:add place="interlinear-above">Backhaus seeks his</tei:add> way in merely through
+            technique. A new pupil, Miss <tei:rs key="entity-000416" type="person">Marianne
+               Kahn</tei:rs>, introduces herself.</tei:ab>
       </tei:div>
    </sdo:record>
    <sdo:record ID="r0013">
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker January, 1907</dc:title>
+         <dc:title>Diary entry by Schenker January 20, 1907</dc:title>
          <dcterms:created>1907-01-20T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-02</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date>20. (Sonnt.)</tei:date>
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab><tei:rs key="entity-003216" type="place">Purkersdorf</tei:rs>-<tei:rs key="entity-003217" type="place">Gablitz</tei:rs>. Allein.</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date>20. (Sun.)</tei:date>
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab>From <tei:rs key="entity-003216" type="place">Purkersdorf</tei:rs> to <tei:rs key="entity-003217" type="place">Gablitz</tei:rs>, alone.</tei:ab>
       </tei:div>
    </sdo:record>
    <sdo:record ID="r0014">
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker January, 1907</dc:title>
+         <dc:title>Diary entry by Schenker January 21, 1907</dc:title>
          <dcterms:created>1907-01-21T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-02</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
@@ -375,10 +517,10 @@
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker January, 1907</dc:title>
+         <dc:title>Diary entry by Schenker January 22, 1907</dc:title>
          <dcterms:created>1907-01-22T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-02</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
@@ -386,23 +528,25 @@
          <tei:opener>
             <tei:date/>
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab><tei:handShift new="#HSblue"/>√ <tei:handShift new="#HS"/>The German Transcription
+            Goes Here.</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
             <tei:date/>
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab><tei:handShift new="#HSblue"/>√ <tei:handShift new="#HS"/>The English Translation
+            Goes Here.</tei:ab>
       </tei:div>
    </sdo:record>
    <sdo:record ID="r0016">
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker January, 1907</dc:title>
+         <dc:title>Diary entry by Schenker January 25, 1907</dc:title>
          <dcterms:created>1907-01-25T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-02</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
@@ -423,10 +567,10 @@
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker January, 1907</dc:title>
+         <dc:title>Diary entry by Schenker January 26, 1907</dc:title>
          <dcterms:created>1907-01-26T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-02</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
@@ -434,23 +578,25 @@
          <tei:opener>
             <tei:date/>
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab><tei:handShift new="#HSblue"/>√ <tei:handShift new="#HS"/>The German Transcription
+            Goes Here.</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
             <tei:date/>
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab><tei:handShift new="#HSblue"/>√ <tei:handShift new="#HS"/>The English Translation
+            Goes Here.</tei:ab>
       </tei:div>
    </sdo:record>
    <sdo:record ID="r0018">
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker January, 1907</dc:title>
+         <dc:title>Diary entry by Schenker January 27, 1907</dc:title>
          <dcterms:created>1907-01-27T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-02</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
@@ -471,10 +617,10 @@
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker January, 1907</dc:title>
+         <dc:title>Diary entry by Schenker January 29, 1907</dc:title>
          <dcterms:created>1907-01-29T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-02</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
@@ -482,23 +628,25 @@
          <tei:opener>
             <tei:date/>
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab><tei:handShift new="#HSblue"/>√ <tei:handShift new="#HS"/>The German Transcription
+            Goes Here.</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
             <tei:date/>
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab><tei:handShift new="#HSblue"/>√ <tei:handShift new="#HS"/>The English Translation
+            Goes Here.</tei:ab>
       </tei:div>
    </sdo:record>
    <sdo:record ID="r0020">
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker January, 1907</dc:title>
+         <dc:title>Diary entry by Schenker January 30, 1907</dc:title>
          <dcterms:created>1907-01-30T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-02</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
@@ -506,13 +654,15 @@
          <tei:opener>
             <tei:date/>
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab><tei:handShift new="#HSblue"/>√ <tei:handShift new="#HS"/>The German Transcription
+            Goes Here.</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
             <tei:date/>
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab><tei:handShift new="#HSblue"/>√ <tei:handShift new="#HS"/>The English Translation
+            Goes Here.</tei:ab>
       </tei:div>
    </sdo:record>
 
