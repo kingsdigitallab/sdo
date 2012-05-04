@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/css" href="../../../css/sdo_oxygen.css"?>
+<?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
 <sdo:recordCollection xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
    xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -17,6 +17,8 @@
          <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand, in ink</tei:handNote>
          <tei:handNote xml:id="HSblue" scope="minor">Heinrich Schenker's hand, in blue
             crayon</tei:handNote>
+         <tei:handNote xml:id="HSblue-black" scope="minor">Heinrich Schenker's hand, in blue crayon,
+            overwritten in ink</tei:handNote>
       </tei:handNotes>
       <!-- Add additional or remove unnecessary statements of responsiblity as needed below -->
       <tei:respStmt xml:id="IB">
@@ -39,94 +41,240 @@
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker February, 1907</dc:title>
+         <dc:title>Diary entry by Schenker February 3, 1907</dc:title>
          <dcterms:created>1907-02-03T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-04</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:fw type="header" rend="center"><tei:handShift new="#HS"/><tei:hi rend="underline"
+                  >Februar</tei:hi>. 07.</tei:fw>
+            <tei:date>Sonntag, 3.</tei:date>
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab type="sub-entry" xml:id="r0001-se01">Konzert: Gedächtnisfeier <tei:rs
+               key="entity-003222" type="person"><tei:hi rend="underline"><tei:hi rend="lateinschr"
+                     >Michael Haydn</tei:hi></tei:hi></tei:rs>.<tei:note xml:id="r0001-fn01"
+               type="editorial" place="foot">Cf <tei:title level="j">Neue Freie Presse</tei:title>
+               Feb 4, 1907: account of the concert, arranged by the Orchesterverein of the
+               Gesellschaft der Musikfreunde, the works including the Mass, the C-major Symphony,
+               the fuge "Pignus futurae gloriae," and several male-voice choruses, performed by the
+               Vienna Male-Voice Union and the chorus of the Court Opera, conducted by Karl Luze.
+            </tei:note> Völlig uninteressant, sowohl in der <tei:title><tei:hi rend="lateinschr"
+                  >Sinf. C</tei:hi></tei:title>, als in der Messe (span.). Die
+               <tei:term>Technik</tei:term> zu primitiv, <tei:term>Construction</tei:term> zu
+            kindisch. <tei:add place="interlinear-above">Um</tei:add>
+            <tei:subst>
+               <tei:del rend="ovewritten">E</tei:del>
+               <tei:add place="superimposed">e</tei:add>
+            </tei:subst>ine ganze Welt <tei:add place="interlinear-above">von Kunst</tei:add>
+            getrennt von <tei:rs key="entity-000344" type="person"><tei:hi rend="lateinschr">Josef
+                  H</tei:hi></tei:rs>! <tei:term>Fuge</tei:term>
+            <tei:add place="interlinear-above">fast ganz</tei:add> ohne
+               <tei:term>Zwischenspiel</tei:term>e, <tei:add place="interlinear-above">nur</tei:add>
+            <tei:term>Einsatz</tei:term> auf <tei:term>Einsatz</tei:term>, (ohne Kunst u. dgl.)
+            deutlich zu sehen: ein <tei:add place="interlinear-above">sog.</tei:add> „locales
+            Genie“, ein „Genie“ wenige<tei:subst>
+               <tei:del rend="ovewritten">r</tei:del>
+               <tei:add place="superimposed">n</tei:add>
+            </tei:subst>
+            <tei:add place="interlinear-above">eigenen</tei:add> Freunden, hauptsächlich <tei:del
+               rend="overstrike">dem</tei:del> an Stammtisch; <tei:add place="interlinear-above">in
+               Wahrheit also</tei:add> weniger ein Opfer des Bruders, als umgekehrt vielmehr ein
+            Traband seines Namens, der ohne ihn <tei:add place="interlinear-above"
+               >vielleicht</tei:add> ganz unbeachtet <tei:add place="interlinear-above">geblieben
+               wäre</tei:add> u. <tei:add place="interlinear-above">jedenfalls</tei:add> nicht mit
+            Unrecht unbeachtet bleiben dürfte.</tei:ab>
+
+         <tei:ab type="sub-entry" xml:id="r0001-se02"><tei:term>Trompete</tei:term> als <tei:add
+               place="interlinear-above">der bescheidenste erste</tei:add> Farbenfactor im kleinen
+               <tei:term>Orchester</tei:term>, ganz unentbehrlich, (zumal in kirchlichen Musiken).
+            Dirigent Luze <tei:del rend="overstrike">sehr</tei:del> würdig am Platze. </tei:ab>
       </tei:div>
+
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:fw type="header" rend="center"><tei:handShift new="#HS"/><tei:hi rend="underline"
+                  >February</tei:hi> 07</tei:fw>
+            <tei:date>Sunday 3.</tei:date>
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab corresp="r0001-se01">Concert: memorial celebration for <tei:rs key="entity-003221"
+               type="person"><tei:hi rend="underline">Michael Haydn</tei:hi></tei:rs>.<tei:ptr
+               corresp="#r0001-fn01" type="footnote"/> Utterly uninteresting, not only in the
+               <tei:title>C-major Symphony</tei:title> but also in the Mass (Span.). The
+               <tei:term>technique</tei:term>
+            <tei:supplied reason="clarity">is</tei:supplied> too primitive,
+               <tei:term>construction</tei:term> too childish. A world <tei:add
+               place="interlinear-above">of art</tei:add> away from <tei:rs key="entity-000344"
+               type="person">Josef H.</tei:rs>! <tei:term>Fugue</tei:term>
+            <tei:add place="interlinear-above">almost entirely</tei:add> without
+               <tei:term>episode</tei:term>s, <tei:add place="interlinear-above">merely</tei:add>
+            <tei:term>entrance</tei:term> upon <tei:term>entrance</tei:term> (without art or
+            anything of the sort). <tei:supplied reason="clarity">It is</tei:supplied> plain to see:
+            a <tei:add place="interlinear-above">so-called</tei:add> "local genius," a "genius"
+               <tei:supplied reason="clarity">only</tei:supplied> to <tei:add
+               place="interlinear-above">his own</tei:add> few friends, mainly at the guest table.
+               <tei:add place="interlinear-above">Thus in truth</tei:add> less a victim of the
+            brother than vice versa rather a satellite of his name that would <tei:add
+               place="interlinear-above">perhaps</tei:add> without him <tei:add
+               place="interlinear-above">have gone</tei:add> unnoticed, and <tei:add
+               place="interlinear-above">at any rate</tei:add> ought ‒ not unjustly ‒ to have gone
+            unnoticed.</tei:ab>
+
+         <tei:ab corresp="r0001-se02"><tei:term>Trumpet</tei:term> as <tei:add
+               place="interlinear-above">the most modest first</tei:add> coloristic factor in the
+            small <tei:term>orchestra</tei:term>, almost indispensable (especially in church
+            musics). Conductor Luze <tei:del rend="overstrike">very</tei:del> did his job with
+            distinction.</tei:ab>
       </tei:div>
    </sdo:record>
    <sdo:record ID="r0002">
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker February, 1907</dc:title>
+         <dc:title>Diary entry by Schenker February 4, 1907</dc:title>
          <dcterms:created>1907-02-04T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-04</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date>Mont. 4.</tei:date>
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab type="sub-entry" xml:id="r0002-se01">Einleitung zum <tei:title level="m"
+               >Cp.</tei:title> dictiert. (<tei:rs key="entity-000599" type="person"
+               >Mittelm.</tei:rs>)</tei:ab>
+
+         <tei:ab type="sub-entry" xml:id="r0002-se02"><tei:rs key="entity-000150" type="person"
+                  ><tei:hi rend="lateinschr">D'Albert</tei:hi></tei:rs>
+            <tei:hi rend="lateinschr">I Kzt.</tei:hi><tei:note xml:id="r0002-fn01" type="editorial"
+               place="foot">The program included works by Couperin, four sonatas by Scarlatti, works
+               by Handel, Haydn, Mozart, and Beethoven Sonata in F minor, Op. 57 ("Appassionata"):
+                  <tei:title level="j">Neue freie Presse</tei:title> Jan 31, p. 12. The second and
+               third concerts took place on Feb 11 (Beethoven, Sonatas in E minor, Op. 90, C minor,
+               Op. 111; Schubert, "Fantasy" Sonata, Op. 78; and works by Weber, Mendelssohn, and
+               Schumann) and Feb 18 (see below). </tei:note> Unkünstlerisch, nachlässig, sich selbst
+            gegenüber <tei:add place="interlinear-above">geradezu</tei:add> unverantwortlich, ‒ auch
+            frevel, <tei:subst>
+               <tei:del rend="overstrike">wenn</tei:del>
+               <tei:add place="interlinear-above">sofern</tei:add>
+            </tei:subst>
+            <tei:hi rend="lateinschr">mala fides</tei:hi> angenommen werden müßte. Nur <tei:rs
+               key="entity-000760" type="person"><tei:hi rend="lateinschr"
+               >Scarlatti</tei:hi></tei:rs>
+            <tei:title level="m">Pastorale</tei:title> d<tei:hi rend="supralinear"
+               >m</tei:hi>/e<tei:hi rend="supralinear">m</tei:hi> machte eine Ausnahme. Sein
+            gewöhnliches <tei:add place="interlinear-above">tausendmal abgespültes</tei:add>
+            <tei:hi rend="lateinschr">Program</tei:hi>
+            <tei:add place="interlinear-below">neuerdings trügerischerweise</tei:add> als
+            „historisches“ dosiert u. dem Publ. verabreicht!</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date>Mon. 4.</tei:date>
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab corresp="r0002-se01">Introduction to <tei:title level="m">Counterpoint</tei:title>
+            dictated. (<tei:rs key="entity-000599" type="person">Mittelmann</tei:rs>)</tei:ab>
+
+         <tei:ab corresp="r0002-se02"><tei:rs key="entity-000150" type="person">D'Albert</tei:rs>
+            Concert I:<tei:ptr corresp="#r0002-fn01" type="footnote"/> lacking artistry, sloppy,
+               <tei:add place="interlinear-above">downright</tei:add> irresponsible toward himself —
+            even iniquitous <tei:subst>
+               <tei:del rend="overstrike">if</tei:del>
+               <tei:add place="interlinear-above">insofar as</tei:add>
+            </tei:subst> it had to be taken in <tei:hi rend="italic">mala fides</tei:hi>
+            <tei:note type="editorial" place="inline">[bad faith]</tei:note>. Only the <tei:rs
+               key="entity-000760" type="person">Scarlatti</tei:rs>
+            <tei:title level="m">Pastorale</tei:title> in D minor/E minor was an exception. His
+            usual program <tei:add place="interlinear-above">trotted out a thousand times</tei:add>
+            and <tei:add place="interlinear-below">now deceitfully</tei:add> dished up as
+            "historical" and administered to the public!</tei:ab>
       </tei:div>
    </sdo:record>
    <sdo:record ID="r0003">
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker February, 1907</dc:title>
+         <dc:title>Diary entry by Schenker February 5, 1907</dc:title>
          <dcterms:created>1907-02-05T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-04</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date>Dst. 5.</tei:date>
          </tei:opener>
-         <tei:ab>The German Transcription Goes Here.</tei:ab>
+         <tei:ab><tei:rs key="entity-003223" type="composition"><tei:hi rend="lateinschr"
+                  >Quartett</tei:hi></tei:rs> d<tei:hi rend="supralinear">m</tei:hi> v. <tei:rs
+               key="entity-000798" type="person"><tei:hi rend="lateinschr"
+               >Schönberg</tei:hi></tei:rs> bei <tei:rs key="entity-000727" type="person"><tei:hi
+                  rend="lateinschr">Rosé</tei:hi></tei:rs>:<tei:note xml:id="r0003-fn01"
+               type="editorial" place="foot">The fourth chamber music evening of the season by the
+               Rosé Quartet in the Bösendorfer-Saal consisted of two works: Schoenberg, String
+               Quartet No. 1 in D minor, Op. 7; Schubert, String Quintet in C major, D956.
+            </tei:note> Ein einziger langgezogener Frevel ! Wenn es Verbrecher auch in der <tei:add
+               place="interlinear-above">Welt der</tei:add> Kunst gäbe, man müßte <tei:add
+               place="interlinear-above">zu ihnen auch</tei:add> den Autor <tei:del
+               rend="overstrike">dazu</tei:del> rechnen, <tei:add place="interlinear-above"
+               >als</tei:add> einen geborenen oder <tei:add place="interlinear-above">vielleicht
+               erst</tei:add> gewordenen. Ohne Gefühl für <tei:term>Tonart</tei:term>, <tei:del
+               rend="overstrike">für</tei:del>
+            <tei:term>Motiv</tei:term>, <tei:term>Maß</tei:term>, nur so <tei:add
+               place="interlinear-above">einfach lumpig</tei:add> vor sich hin, ohne <tei:add
+               place="interlinear-above">jegliche</tei:add>
+            <tei:term>Technik</tei:term>, u. dennoch zugleich eine größte, <tei:add
+               place="interlinear-above">nicht dagewesene</tei:add> immerzu simulierend. ...
+            .</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date>Tues. 5.</tei:date>
          </tei:opener>
-         <tei:ab>The English Translation Goes Here.</tei:ab>
+         <tei:ab><tei:rs key="entity-003223" type="composition">D-minor Quartet</tei:rs> of <tei:rs
+               key="entity-000798" type="person">Schoenberg</tei:rs>, by <tei:supplied
+               reason="clarity">the</tei:supplied>
+            <tei:rs key="entity-000727" type="person">Rosé</tei:rs>
+            <tei:supplied reason="clarity">Quartet</tei:supplied>.<tei:ptr corresp="#r0003-fn01"
+               type="footnote"/> A single, long-drawn-out atrocity! If there were such a thing as
+            criminals in <tei:add place="interlinear-above">the realm of</tei:add> art, one would
+            have to count this composer <tei:add place="interlinear-above">among their
+               ranks</tei:add>, <tei:add place="interlinear-above">as</tei:add> one born such or
+               <tei:add place="interlinear-above">perhaps merely</tei:add> turned criminal. Without
+            feeling for <tei:term>key</tei:term>, <tei:term>motive</tei:term>,
+               <tei:term>measure</tei:term>, on its own terms just <tei:add
+               place="interlinear-above">utterly threadbare</tei:add>, without <tei:add
+               place="interlinear-above">a trace of</tei:add>
+            <tei:term>technique</tei:term>, and nevertheless at the same time constantly the hugest
+               <tei:add place="interlinear-above">non-existent</tei:add>, the total sham . ...
+            .</tei:ab>
       </tei:div>
    </sdo:record>
    <sdo:record ID="r0004">
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker February, 1907</dc:title>
+         <dc:title>Diary entry by Schenker February 6, 1907</dc:title>
          <dcterms:created>1907-02-06T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-04</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date>Mtw. 6.</tei:date>
          </tei:opener>
          <tei:ab>The German Transcription Goes Here.</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date>Wed. 6.</tei:date>
          </tei:opener>
          <tei:ab>The English Translation Goes Here.</tei:ab>
       </tei:div>
@@ -135,22 +283,26 @@
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker February, 1907</dc:title>
+         <dc:title>Diary entry by Schenker February 8, 1907</dc:title>
          <dcterms:created>1907-02-08T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-04</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
+         <tei:pb n="34"/>
+         <tei:fw type="header" rend="center"><tei:handShift new="#HSblue"/>07,‒ 2 ‒ 3</tei:fw>
          <tei:opener>
-            <tei:date/>
+            <tei:date><tei:handShift new="#HS"/>Freitag 8.</tei:date>
          </tei:opener>
          <tei:ab>The German Transcription Goes Here.</tei:ab>
       </tei:div>
       <tei:div type="translation">
+         <tei:pb n="34"/>
+         <tei:fw type="header" rend="center"><tei:handShift new="#HSblue"/>07,‒ 2 ‒ 3</tei:fw>
          <tei:opener>
-            <tei:date/>
+            <tei:date><tei:handShift new="#HS"/>Friday 8.</tei:date>
          </tei:opener>
          <tei:ab>The English Translation Goes Here.</tei:ab>
       </tei:div>
@@ -159,22 +311,22 @@
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker February, 1907</dc:title>
+         <dc:title>Diary entry by Schenker February 12, 1907</dc:title>
          <dcterms:created>1907-02-12T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-04</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date>Dienst. 12.</tei:date>
          </tei:opener>
          <tei:ab>The German Transcription Goes Here.</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date>Tues. 12.</tei:date>
          </tei:opener>
          <tei:ab>The English Translation Goes Here.</tei:ab>
       </tei:div>
@@ -183,22 +335,22 @@
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker February, 1907</dc:title>
+         <dc:title>Diary entry by Schenker February 16, 1907</dc:title>
          <dcterms:created>1907-02-16T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-04</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date>Samst. 16.</tei:date>
          </tei:opener>
          <tei:ab>The German Transcription Goes Here.</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date>Sat. 16.</tei:date>
          </tei:opener>
          <tei:ab>The English Translation Goes Here.</tei:ab>
       </tei:div>
@@ -207,22 +359,22 @@
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker February, 1907</dc:title>
+         <dc:title>Diary entry by Schenker February 17, 1907</dc:title>
          <dcterms:created>1907-02-17T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-04</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date>Sonntg. 17.</tei:date>
          </tei:opener>
          <tei:ab>The German Transcription Goes Here.</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date>Sun. 17.</tei:date>
          </tei:opener>
          <tei:ab>The English Translation Goes Here.</tei:ab>
       </tei:div>
@@ -231,22 +383,22 @@
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker February, 1907</dc:title>
+         <dc:title>Diary entry by Schenker February 18, 1907</dc:title>
          <dcterms:created>1907-02-18T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-04</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date>Mtg. 18.</tei:date>
          </tei:opener>
          <tei:ab>The German Transcription Goes Here.</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date>Mon. 18</tei:date>
          </tei:opener>
          <tei:ab>The English Translation Goes Here.</tei:ab>
       </tei:div>
@@ -255,22 +407,22 @@
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker February, 1907</dc:title>
+         <dc:title>Diary entry by Schenker February 19, 1907</dc:title>
          <dcterms:created>1907-02-19T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-04</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date>Dienst. 19.</tei:date>
          </tei:opener>
          <tei:ab>The German Transcription Goes Here.</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date>Tues. 19.</tei:date>
          </tei:opener>
          <tei:ab>The English Translation Goes Here.</tei:ab>
       </tei:div>
@@ -279,22 +431,22 @@
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker February, 1907</dc:title>
+         <dc:title>Diary entry by Schenker February 20, 1907</dc:title>
          <dcterms:created>1907-02-20T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-04</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date>Mtw. 20.</tei:date>
          </tei:opener>
          <tei:ab>The German Transcription Goes Here.</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date>Wed. 20.</tei:date>
          </tei:opener>
          <tei:ab>The English Translation Goes Here.</tei:ab>
       </tei:div>
@@ -303,22 +455,22 @@
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker February, 1907</dc:title>
+         <dc:title>Diary entry by Schenker February 21, 1907</dc:title>
          <dcterms:created>1907-02-21T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-04</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date>Donnstg 21.</tei:date>
          </tei:opener>
          <tei:ab>The German Transcription Goes Here.</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date>Thurs. 21.</tei:date>
          </tei:opener>
          <tei:ab>The English Translation Goes Here.</tei:ab>
       </tei:div>
@@ -327,22 +479,22 @@
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker February, 1907</dc:title>
+         <dc:title>Diary entry by Schenker February 22, 1907</dc:title>
          <dcterms:created>1907-02-22T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-04</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date>Frt. 22.</tei:date>
          </tei:opener>
          <tei:ab>The German Transcription Goes Here.</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date>Fri. 22.</tei:date>
          </tei:opener>
          <tei:ab>The English Translation Goes Here.</tei:ab>
       </tei:div>
@@ -351,22 +503,22 @@
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker February, 1907</dc:title>
+         <dc:title>Diary entry by Schenker February 23, 1907</dc:title>
          <dcterms:created>1907-02-23T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-04</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date>Samst 23.</tei:date>
          </tei:opener>
          <tei:ab>The German Transcription Goes Here.</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date>Sat. 23.</tei:date>
          </tei:opener>
          <tei:ab>The English Translation Goes Here.</tei:ab>
       </tei:div>
@@ -375,22 +527,22 @@
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker February, 1907</dc:title>
+         <dc:title>Diary entry by Schenker February 25, 1907</dc:title>
          <dcterms:created>1907-02-25T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-04</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date>Mtg. 25.</tei:date>
          </tei:opener>
          <tei:ab>The German Transcription Goes Here.</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date>Mon. 25</tei:date>
          </tei:opener>
          <tei:ab>The English Translation Goes Here.</tei:ab>
       </tei:div>
@@ -399,22 +551,22 @@
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker February, 1907</dc:title>
+         <dc:title>Diary entry by Schenker February 28, 1907</dc:title>
          <dcterms:created>1907-02-28T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            YYYY-MM-DD</dcterms:dateSubmitted>
+            2012-05-04</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
       <tei:div type="transcription">
          <tei:opener>
-            <tei:date/>
+            <tei:date>Dstg. 28.</tei:date>
          </tei:opener>
          <tei:ab>The German Transcription Goes Here.</tei:ab>
       </tei:div>
       <tei:div type="translation">
          <tei:opener>
-            <tei:date/>
+            <tei:date>Thurs. 28.</tei:date>
          </tei:opener>
          <tei:ab>The English Translation Goes Here.</tei:ab>
       </tei:div>
