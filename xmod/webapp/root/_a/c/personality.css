@@ -535,3 +535,100 @@ input.fs {visibility:hidden;line-height:0;font-size:0px;}
 #mainContent .toc .t03,
 #mainContent .toc .t04,
 #mainContent .options .t03										{ display: block; zoom: 1;} /* End hide from IE-mac */
+
+
+
+/* ZOOMIFY PLUGIN */
+
+
+span.btn{
+	padding:10px;
+	display:inline-block;
+	cursor:pointer;
+	font:12px/14px Arial, Helvetica, sans-serif;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	background-color: #666666;
+	color: #fff;
+	box-shadow:inset 0 0 2px rgba(0,0,0,.8);
+	border: 1px solid gray;
+
+}
+span.btn:hover{
+	background-color:#eee;
+	color: #333333;
+	box-shadow: 0 0 2px rgba(0,0,0,.8);
+}
+
+#thumbs img{
+	margin: 5px;
+	box-shadow: 0 0 5px rgba(0,0,0,.5);
+	border: 3px solid rgba(255,255,255,.5);
+	cursor:url(../i/zoomin.png), -moz-zoom-in;
+}
+
+.zoomOverlay{
+	box-shadow: inset 0 0 20px rgba(0,0,0,.8);
+	background: #fff;
+}
+
+
+.zoomIn{
+	cursor:url(../i/zoomin.png), -moz-zoom-in !important;
+}
+
+.zoomOut{
+	cursor: url(../i/zoomout.png), -moz-zoom-in !important;
+}
+
+.move{
+	cursor: url(../i/cursor-hand.png), -moz-zoom-in;
+}
+
+#loader{
+	background: rgba(0,0,0,.5);
+}
+
+.zoomControls{
+	position:absolute;
+	top:0;
+	right:0;
+	padding: 10px;
+}
+
+.zoomInControl{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(../i/zoomin.png) no-repeat center center;
+	cursor: pointer;
+	opacity: .5;
+}
+
+.zoomOutControl{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(../i/zoomout.png) no-repeat center center;
+	cursor: pointer;
+	opacity: .5;
+}
+
+.zoomOutControl:hover, .zoomInControl:hover {
+	opacity: 1;
+}
+
+.zoomOutControl.disabled, .zoomInControl.disabled {
+	opacity: .2 !important;
+}
+
+#zoomScreenOver{
+	background: rgba(0,0,0,.5);
+}
+
+#zoomScreen{
+	width: 40%;
+	height: 65%;
+	background: #000000;
+	border: 5px solid #fff;
+}
