@@ -652,7 +652,29 @@
               </img>
             </a>
           </xsl:when>
-          <!-- Thumbnail with caption inline image -->
+         <!-- Thumbnail with caption inline image: special version for the "Overviews" examples -->
+         <xsl:when test="(@n='overviews_eg') and (@xmt:type='thumb-caption')">
+          <div class="figure">
+           <div class="t{$img-left-right}" id="thumbs">
+            <dl style="width: {$img-thm-plus-width}px;">
+             <dt>
+              <!-- Thumbnail image -->
+              <img class="s{$img-left-right}" src="{$img-path-thumb}" data-highres="{$img-path-full}">
+               <!-- @alt info -->
+                <xsl:attribute name="alt">
+                 <xsl:value-of select="$img-cap-alt"/>
+                </xsl:attribute>
+               <xsl:attribute name="onclick">$(this).mbZoomify_overlay({startLevel:0});</xsl:attribute>   
+              </img>
+             </dt>
+             <dd>
+              <xsl:value-of select="$img-cap-desc"/>
+             </dd>
+            </dl>
+           </div>
+          </div>
+         </xsl:when>
+          <!-- Thumbnail with caption inline image: ordinary version -->
          <xsl:when test="(@xmt:type='thumb-caption') or (@n='thumb-caption')">
             <div class="figure">
               <div class="t{$img-left-right}">
@@ -685,7 +707,7 @@
                 </dl>
               </div>
             </div>
-          </xsl:when>
+         </xsl:when>
           <xsl:when test="@xmt:type='full'">
             <xsl:if test="not(preceding-sibling::tei:graphic[@xmt:type='thumb' or
               @xmt:type='thumb-caption'])">
