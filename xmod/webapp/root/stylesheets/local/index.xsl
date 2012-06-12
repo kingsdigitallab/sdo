@@ -186,8 +186,7 @@
                   <section id="tab2" class="tabPane">Diary
                     
                     <div class="tabTeaser">
-                      <p>This diary page, p. 33, written in Heinrich's tiny old-fashioned
-                        "S&#x00FC;tterlinschrift" hand, includes a notorious passage: his outspoken
+                      <p>This diary page, p. 33, includes a notorious passage: his outspoken
                         reaction to Schoenberg's first string quartet.</p>
                       <p><a class="tabLink" href="/documents/overviews/diaries_eg.html">See more</a></p>
                     </div>
