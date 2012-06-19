@@ -178,7 +178,7 @@
                 <div class="tabPanes line">
                   <section id="tab1" class="tabPane">Letter
                     <div class="tabTeaser">
-                      <p>This single-page letter - a note rather than a letter, perhaps - offers some opinions and analytical thoughts on materials that Deutsch had sent him six weeks earlier.</p>
+                      <p>This single-page letter - a note rather than a letter, perhaps - offers some opinions and analytical thoughts on materials that O.E. Deutsch had sent him six weeks earlier.</p>
                       <p><a class="tabLink" href="/documents/overviews/correspondence_eg.html">See more</a></p>
                     </div>
                     
