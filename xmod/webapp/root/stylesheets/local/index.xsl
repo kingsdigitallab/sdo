@@ -209,12 +209,12 @@
                     century's leading theorist of tonal music, produced a series of innovative
                     studies and editions between 1903 and 1935, while exerting a powerful and
                     sustained influence, directly and through his pupils, on the teaching of music
-                    from the 1930s onward in the USA, and since the 1970s in Europe and elsewhere.
-                    Schenker maintained a vigorous correspondence over nearly half a century, kept a
+                    from the 1930s onward in the USA, and since the 1970s in Europe and elsewhere.</p>
+                    <p>Schenker maintained a vigorous correspondence over nearly half a century, kept a
                     meticulously detailed diary over 40 years, and recorded precise notes on lessons
                     that he gave over a period of twenty years. It is these three collections of
                     personal documents that constitute the core of <em>Schenker Documents
-                      Online</em></p>
+                      Online</em>.</p>
                   <!-- PREVIOUS VERSION <p>Viennese musician and teacher Heinrich Schenker (1868-1935), the twentieth
                     century's leading theorist of tonal music, produced a series of innovative
                     studies and editions between 1903 and 1935, while exerting a powerful and
