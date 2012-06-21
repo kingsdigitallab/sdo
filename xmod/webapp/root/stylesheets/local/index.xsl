@@ -230,22 +230,20 @@
                 </div>
 
                 <div class="unit size1of3">
-                  <h3>Schenker Documents</h3>
+                  <h3>Schenker Documents and this Edition</h3>
                   <p>Schenker left behind approximately 130,000 manuscript and typescript leaves
                     comprising unpublished works, preparatory materials, and personal documents,
                     preserved in two dedicated archives, numerous libraries, and private possession.
-                    (For more information on these collections, see "<a class="int"
+                    (See "<a class="int"
                       title="Link to Major Collections" href="/colloquy/major_collections.html"
-                      >Major Collections</a>.") In addition, the archived papers of several other
+                      >Major Collections</a>.") The archived papers of several other
                     scholars, among them Guido Adler, Oswald Jonas, Moriz Violin, and Arnold
-                    Schoenberg, preserve correspondence and other documents relating to Schenker and
-                    his circle. A facsimile edition of all this material, though desirable, would be
-                    prohibitively expensive.<em>Schenker Documents Online</em> instead provides
-                    near-diplomatic transcriptions of original texts, together with English
-                    translations, explanatory footnotes, summaries, "profiles", and such
-                    interpretation as is necessary to relate those texts to Schenker's personal
-                    development and that of his correspondents, as well as providing the means of
-                    searching and indexing the contents of those texts. </p>
+                    Schoenberg, also preserve correspondence and other documents relating to Schenker and
+                    his circle.</p>
+                  <p><em>Schenker Documents Online</em> offers a scholarly edition of this material based not on facsimiles (prohibitively expensive) but on
+                    near-diplomatic transcriptions of the original texts, together with English
+                    translations, explanatory footnotes, summaries, and contextual material relating the texts to Schenker's personal
+                    development and that of his correspondents.</p>
 
                 </div>
                 <div class="unit size1of3 lastUnit" id="blogPosts">
