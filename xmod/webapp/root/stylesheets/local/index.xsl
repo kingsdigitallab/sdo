@@ -239,11 +239,8 @@
                       >Major Collections</a>.") In addition, the archived papers of several other
                     scholars, among them Guido Adler, Oswald Jonas, Moriz Violin, and Arnold
                     Schoenberg, preserve correspondence and other documents relating to Schenker and
-                    his circle.</p>
-
-                  <p><em>Schenker Documents Online</em> is a scholarly edition of the types of
-                    material exhibited on this homepage. For reasons of cost, <em>it does not
-                      present facsimiles of original documents</em>. Rather, it aims to provide
+                    his circle. A facsimile edition of all this material, though desirable, would be
+                    prohibitively expensive.<em>Schenker Documents Online</em> instead provides
                     near-diplomatic transcriptions of original texts, together with English
                     translations, explanatory footnotes, summaries, "profiles", and such
                     interpretation as is necessary to relate those texts to Schenker's personal
