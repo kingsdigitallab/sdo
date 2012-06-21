@@ -8,11 +8,10 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <!--
-      CURRENTLY TESTING
-      
-      PC, 30 May 2012
-      
       Stylesheet for home page only.
+      
+      Yes, it's ugly to have all the HTML in here, but this was a hack to allow 
+      the new homepage (June 2012) to use Kiln while the rest of SDO uses xMod
   -->
 
 
@@ -176,28 +175,27 @@
                   </li>
                 </ul>
                 <div class="tabPanes line">
-                  <section id="tab1" class="tabPane">Letter
-                    <div class="tabTeaser">
-                      <p>This single-page letter - a note rather than a letter, perhaps - offers some opinions and analytical thoughts on materials that O.E. Deutsch had sent him six weeks earlier.</p>
-                      <p><a class="tabLink" href="/documents/overviews/correspondence_eg.html">See more</a></p>
+                  <section id="tab1" class="tabPane">Letter <div class="tabTeaser">
+                      <p>This single-page letter - a note rather than a letter, perhaps - offers
+                        some opinions and analytical thoughts on materials that O.E. Deutsch had
+                        sent him six weeks earlier.</p>
+                      <p><a class="tabLink" href="/documents/overviews/correspondence_eg.html">See
+                          more</a></p>
                     </div>
-                    
                   </section>
-                  <section id="tab2" class="tabPane">Diary
-                    
-                    <div class="tabTeaser">
+                  <section id="tab2" class="tabPane">Diary <div class="tabTeaser">
                       <p>This diary page, p. 33, includes a notorious passage: his outspoken
                         reaction to Schoenberg's first string quartet.</p>
-                      <p><a class="tabLink" href="/documents/overviews/diaries_eg.html">See more</a></p>
+                      <p><a class="tabLink" href="/documents/overviews/diaries_eg.html">See
+                        more</a></p>
                     </div>
-                    
                   </section>
-                  <section id="tab3" class="tabPane">Lessonbook
-                    <div class="tabTeaser">
-                      <p>This is p. 14 of the 1923/24 lessonbook. It records part of the series of lessons of Hans Weisse, covering April 1 to June 3, 1924.</p>
-                      <p><a class="tabLink" href="/documents/overviews/lessonbooks_eg.html">See more</a></p>
+                  <section id="tab3" class="tabPane">Lessonbook <div class="tabTeaser">
+                      <p>This is p. 14 of the 1923/24 lessonbook. It records part of the series of
+                        lessons of Hans Weisse, covering April 1 to June 3, 1924.</p>
+                      <p><a class="tabLink" href="/documents/overviews/lessonbooks_eg.html">See
+                          more</a></p>
                     </div>
-                    
                   </section>
                 </div>
 
@@ -212,15 +210,22 @@
                     studies and editions between 1903 and 1935, while exerting a powerful and
                     sustained influence, directly and through his pupils, on the teaching of music
                     from the 1930s onward in the USA, and since the 1970s in Europe and elsewhere.
+                    Schenker maintained a vigorous correspondence over nearly half a century, kept a
+                    meticulously detailed diary over 40 years, and recorded precise notes on lessons
+                    that he gave over a period of twenty years. It is these three collections of
+                    personal documents that constitute the core of <em>Schenker Documents
+                      Online</em></p>
+                  <!-- PREVIOUS VERSION <p>Viennese musician and teacher Heinrich Schenker (1868-1935), the twentieth
+                    century's leading theorist of tonal music, produced a series of innovative
+                    studies and editions between 1903 and 1935, while exerting a powerful and
+                    sustained influence, directly and through his pupils, on the teaching of music
+                    from the 1930s onward in the USA, and since the 1970s in Europe and elsewhere.
                     Today, Schenkerian theory and analysis constitutes a large and ever-growing
                     field of vital academic study, with its own body of scholars, journals, book
                     literature, institutions, and courses of instruction. (For a more detailed study
                     of Schenker's life and work, see "<a class="int" title="Link to Heinrich Schenker" href="/colloquy/heinrich_schenker.html"
-                      >Heinrich Schenker</a>.")</p>
-                  <!-- why this no work :-( TRANSFORM FROM XML FILE HERE
-                <xsl:for-each select="/TEI/text/body/div[@xml:id='heinrich_schenker']/p">
-                  <xsl:copy-of select="."/>
-                </xsl:for-each> -->
+                      >Heinrich Schenker</a>.")</p> -->
+
 
                 </div>
 
@@ -229,17 +234,21 @@
                   <p>Schenker left behind approximately 130,000 manuscript and typescript leaves
                     comprising unpublished works, preparatory materials, and personal documents,
                     preserved in two dedicated archives, numerous libraries, and private possession.
-                    (For more information on these collections, see "<a class="int" title="Link to Major Collections"
-                      href="/colloquy/major_collections.html">Major Collections</a>.") In addition,
-                    the archived papers of several other scholars, among them Guido Adler, Oswald
-                    Jonas, Moriz Violin, and Arnold Schoenberg, preserve correspondence and other
-                    documents relating to Schenker and his circle.</p>
+                    (For more information on these collections, see "<a class="int"
+                      title="Link to Major Collections" href="/colloquy/major_collections.html"
+                      >Major Collections</a>.") In addition, the archived papers of several other
+                    scholars, among them Guido Adler, Oswald Jonas, Moriz Violin, and Arnold
+                    Schoenberg, preserve correspondence and other documents relating to Schenker and
+                    his circle.</p>
 
-                  <p>Of the personal documents, Schenker maintained a vigorous correspondence over
-                    nearly half a century, kept a meticulously detailed diary over 40 years, and
-                    recorded precise notes on lessons that he gave over a period of twenty years. It
-                    is these three collections of personal documents that constitute the core of
-                    Schenker Documents Online.</p>
+                  <p><em>Schenker Documents Online</em> is a scholarly edition of the types of
+                    material exhibited on this homepage. For reasons of cost, <em>it does not
+                      present facsimiles of original documents</em>. Rather, it aims to provide
+                    near-diplomatic transcriptions of original texts, together with English
+                    translations, explanatory footnotes, summaries, "profiles", and such
+                    interpretation as is necessary to relate those texts to Schenker's personal
+                    development and that of his correspondents, as well as providing the means of
+                    searching and indexing the contents of those texts. </p>
 
                 </div>
                 <div class="unit size1of3 lastUnit" id="blogPosts">
