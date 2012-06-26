@@ -246,9 +246,14 @@
                     development and that of his correspondents.</p>
 
                 </div>
-                <div class="unit size1of3 lastUnit" id="blogPosts">
-                  <h3>Latest Posts</h3>
-                  <nav class="local">
+                <div class="unit size1of3 lastUnit" >
+                   <h3>Latest</h3>
+                     <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem 
+	                 ipsum Lorem ipsum Lorem ipsum</p>
+
+   
+                  <nav class="local" id="blogPosts">
+	               <h4>From the Blog</h4>
                     <ul>
                       <li>
                         <a class="navLink first" href="#">SDO Hat Trick at SMA TAGS</a>
@@ -261,10 +266,7 @@
                         <p>Under the Hapsburgs, public honors (Berufstitel) rewarded people for
                           distinguished service to the state...</p>
                       </li>
-                      <li>
-                        <a class="navLink" href="#">Lightweight and Heavyweight Students</a>
-                        <p>On June 19, 1926 Schenker turned 58. A pupil called with greetings...</p>
-                      </li>
+          
                       <li class="seeAll">
                         <a class="navLink" href="#">See all &#x203A;&#x203A;</a>
                       </li>
