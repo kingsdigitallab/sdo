@@ -240,7 +240,7 @@
                     scholars, among them Guido Adler, Oswald Jonas, Moriz Violin, and Arnold
                     Schoenberg, also preserve correspondence and other documents relating to Schenker and
                     his circle.</p>
-                  <p><em>Schenker Documents Online</em> offers a scholarly edition of this material based not on facsimiles (prohibitively expensive) but on
+                  <p><em>Schenker Documents Online</em> offers a scholarly edition of this material based not on facsimiles but on
                     near-diplomatic transcriptions of the original texts, together with English
                     translations, explanatory footnotes, summaries, and contextual material relating the texts to Schenker's personal
                     development and that of his correspondents.</p>
