@@ -87,7 +87,7 @@
                 <xsl:attribute name="sortkey">
                   
                   <xsl:variable name="parsed"><xsl:call-template name="parse"><xsl:with-param name="value"><xsl:value-of select="."/></xsl:with-param></xsl:call-template></xsl:variable>
-                  <xsl:variable name="deaccented_first"><xsl:value-of select="replace(normalize-unicode(substring(normalize-space($parsed), 1, 1),'NFKD'),'[^A-Za-z]','')" /></xsl:variable>
+                  <xsl:variable name="deaccented_first"><xsl:value-of select="replace(normalize-unicode(substring(normalize-space($parsed), 1, 1),'NFKD'),'[^A-Za-z0-9]','')" /></xsl:variable>
                   
                   <xsl:value-of select="concat(lower-case($deaccented_first), substring(lower-case(translate(translate(normalize-space($parsed), ' ', '_'), ',', '')), 2))" />
                 </xsl:attribute>
