@@ -248,13 +248,40 @@
                 </div>
                 <div class="unit size1of3 lastUnit" >
                    <h3>Latest</h3>
-                     <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem 
-	                 ipsum Lorem ipsum Lorem ipsum</p>
-
-   
+                  <!--   <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem 
+	                 ipsum Lorem ipsum Lorem ipsum</p> -->
                   <nav class="local" id="blogPosts">
 	               <h4>From the Blog</h4>
                     <ul>
+         	
+                    				
+					<xsl:for-each select="/*/rss/channel/item[position() &lt;= 2]">
+					<li>
+						<a>
+							<xsl:attribute name="href">
+								<xsl:value-of select="./link" />
+							</xsl:attribute>
+							<xsl:attribute name="class">
+								<xsl:if test="position() = 1">
+									<xsl:text>navLink first</xsl:text>
+								</xsl:if>
+								<xsl:if test="position() > 1">
+									<xsl:text>navLink</xsl:text>
+								</xsl:if>
+							</xsl:attribute>
+							<xsl:value-of select="./title" />
+						</a>
+						<p><xsl:value-of select="substring-before(./description, ' &amp;#8230;')" /><xsl:text>&#8230;</xsl:text>
+						<a>
+							<xsl:attribute name="href">
+								<xsl:value-of select="./link" />
+							</xsl:attribute>
+						Continue reading →
+						</a></p>
+					</li>	
+					</xsl:for-each>
+   
+<!--
                       <li>
                         <a class="navLink first" href="#">SDO Hat Trick at SMA TAGS</a>
                         <p>The Schenker Documents Online project was well represented at the recent
@@ -265,10 +292,10 @@
                         <a class="navLink" href="#">Hofrat Heinrich Schenker ??</a>
                         <p>Under the Hapsburgs, public honors (Berufstitel) rewarded people for
                           distinguished service to the state...</p>
-                      </li>
+                      </li> -->
           
                       <li class="seeAll">
-                        <a class="navLink" href="#">See all &#x203A;&#x203A;</a>
+                        <a class="navLink" href="http://blog.schenkerdocumentsonline.org/feed/">See all &#x203A;&#x203A;</a>
                       </li>
 
                     </ul>
