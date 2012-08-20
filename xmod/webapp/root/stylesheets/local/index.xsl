@@ -248,8 +248,17 @@
                 </div>
                 <div class="unit size1of3 lastUnit" >
                    <h3>Latest</h3>
-                  <!--   <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem 
-	                 ipsum Lorem ipsum Lorem ipsum</p> -->
+                  <h4>Most recent additions to this site:</h4>
+                  <ul>
+                  <li><a href="/documents/correspondence/correspondence.html">Correspondence:</a> (1) von Cube, complete with all graphs, music examples; (2) UE for 1926, 1927 and 1928</li>
+                  
+                  <li><a href="/documents/diaries/date.html">Diaries:</a> (1) 1925 complete; (2) 1926‒28 now being encoded; (3) 1907 in progress</li>
+                  
+                  <li><a href="/documents/lessonbooks/pupil.html">Lessonbooks:</a> 1923/24 now in progress</li>
+                  
+                  <li><a href="/documents/other/title.html">Other material:</a> (1) Brünauer: "Die Urlinie"; (2) Schenker: "Deutsche Genie"; (3) von Cube: "Ein Meister der Musiktheorie"</li>
+                    <li class="expand"><a href="/documents/overviews/latest_material.html">more →</a></li>   
+                  </ul>
                   <nav class="local" id="blogPosts">
 	               <h4>From the Blog</h4>
                     <ul>
