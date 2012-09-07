@@ -304,7 +304,7 @@
                       </li> -->
           
                       <li class="seeAll">
-                        <a class="navLink" href="http://blog.schenkerdocumentsonline.org/feed/">See all &#x203A;&#x203A;</a>
+                        <a class="navLink" href="http://blog.schenkerdocumentsonline.org/">See all &#x203A;&#x203A;</a>
                       </li>
 
                     </ul>
