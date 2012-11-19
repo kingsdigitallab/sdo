@@ -1,12 +1,9 @@
-<xsl:stylesheet version="2.0" exclude-result-prefixes="#all" 
-     xmlns="http://www.w3.org/1999/xhtml"
-     xmlns:tei="http://www.tei-c.org/ns/1.0"
-     xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" 
-     xmlns:xmm="http://www.cch.kcl.ac.uk/xmod/menu/1.0"
-     xmlns:xmmf="http://www.cch.kcl.ac.uk/xmod/metadata/files/1.0"
-     xmlns:xmp="http://www.cch.kcl.ac.uk/xmod/properties/1.0"
-     xmlns:xmt="http://www.cch.kcl.ac.uk/xmod/tei/1.0" 
-     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="2.0" exclude-result-prefixes="#all" xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
+ xmlns:xmm="http://www.cch.kcl.ac.uk/xmod/menu/1.0"
+ xmlns:xmmf="http://www.cch.kcl.ac.uk/xmod/metadata/files/1.0"
+ xmlns:xmp="http://www.cch.kcl.ac.uk/xmod/properties/1.0"
+ xmlns:xmt="http://www.cch.kcl.ac.uk/xmod/tei/1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
  <xsl:import href="../xmod/tei/p5.xsl"/>
 
@@ -119,7 +116,7 @@
           <xsl:apply-templates/>
         </address>
    </xsl:when>
-   
+
    <!-- Logos on home page -->
    <xsl:when test="@type='logos'">
     <div class="logoMatrix">
@@ -128,7 +125,7 @@
      </div>
     </div>
    </xsl:when>
-   
+
    <!-- match 'transcription' and 'translation' divs in a primary document -->
    <xsl:when test="parent::sdo:record">
     <xsl:choose>
@@ -138,9 +135,13 @@
      </xsl:when>
      <xsl:when test="child::tei:opener">
       <div>
-        <xsl:attribute name="id">
-         <xsl:text>opener</xsl:text><xsl:if test="@type"><xsl:text>_</xsl:text><xsl:value-of select="@type" /></xsl:if>
-        </xsl:attribute>
+       <xsl:attribute name="id">
+        <xsl:text>opener</xsl:text>
+        <xsl:if test="@type">
+         <xsl:text>_</xsl:text>
+         <xsl:value-of select="@type"/>
+        </xsl:if>
+       </xsl:attribute>
        <xsl:attribute name="class">
         <xsl:text>opener</xsl:text>
        </xsl:attribute>
@@ -157,7 +158,11 @@
       <xsl:if test="child::tei:closer">
        <div class="closer">
         <xsl:attribute name="id">
-         <xsl:text>closer</xsl:text><xsl:if test="@type"><xsl:text>_</xsl:text><xsl:value-of select="@type" /></xsl:if>
+         <xsl:text>closer</xsl:text>
+         <xsl:if test="@type">
+          <xsl:text>_</xsl:text>
+          <xsl:value-of select="@type"/>
+         </xsl:if>
         </xsl:attribute>
         <xsl:apply-templates select="tei:closer"/>
        </div>
@@ -182,7 +187,11 @@
       <xsl:if test="child::tei:closer">
        <div class="closer">
         <xsl:attribute name="id">
-         <xsl:text>closer</xsl:text><xsl:if test="@type"><xsl:text>_</xsl:text><xsl:value-of select="@type" /></xsl:if>
+         <xsl:text>closer</xsl:text>
+         <xsl:if test="@type">
+          <xsl:text>_</xsl:text>
+          <xsl:value-of select="@type"/>
+         </xsl:if>
         </xsl:attribute>
         <xsl:apply-templates select="tei:closer"/>
        </div>
@@ -224,7 +233,15 @@
    <xsl:when test="child::tei:opener">
     <div>
      <xsl:attribute name="id">
-      <xsl:text>opener</xsl:text><xsl:if test="parent::tei:div[1]/@type"><xsl:text>_</xsl:text><xsl:value-of select="parent::tei:div[1]/@type" /></xsl:if><xsl:if test="@type"><xsl:text>_</xsl:text><xsl:value-of select="@type" /></xsl:if>
+      <xsl:text>opener</xsl:text>
+      <xsl:if test="parent::tei:div[1]/@type">
+       <xsl:text>_</xsl:text>
+       <xsl:value-of select="parent::tei:div[1]/@type"/>
+      </xsl:if>
+      <xsl:if test="@type">
+       <xsl:text>_</xsl:text>
+       <xsl:value-of select="@type"/>
+      </xsl:if>
      </xsl:attribute>
      <xsl:attribute name="class">
       <xsl:text>opener</xsl:text>
@@ -242,7 +259,15 @@
     <xsl:if test="child::tei:closer">
      <div class="closer">
       <xsl:attribute name="id">
-       <xsl:text>closer</xsl:text><xsl:if test="parent::tei:div[1]/@type"><xsl:text>_</xsl:text><xsl:value-of select="parent::tei:div[1]/@type" /></xsl:if><xsl:if test="@type"><xsl:text>_</xsl:text><xsl:value-of select="@type" /></xsl:if>
+       <xsl:text>closer</xsl:text>
+       <xsl:if test="parent::tei:div[1]/@type">
+        <xsl:text>_</xsl:text>
+        <xsl:value-of select="parent::tei:div[1]/@type"/>
+       </xsl:if>
+       <xsl:if test="@type">
+        <xsl:text>_</xsl:text>
+        <xsl:value-of select="@type"/>
+       </xsl:if>
       </xsl:attribute>
       <xsl:apply-templates select="tei:closer"/>
      </div>
@@ -267,7 +292,15 @@
     <xsl:if test="child::tei:closer">
      <div class="closer">
       <xsl:attribute name="id">
-      <xsl:text>closer</xsl:text><xsl:if test="parent::tei:div[1]/@type"><xsl:text>_</xsl:text><xsl:value-of select="parent::tei:div[1]/@type" /></xsl:if><xsl:if test="@type"><xsl:text>_</xsl:text><xsl:value-of select="@type" /></xsl:if>
+       <xsl:text>closer</xsl:text>
+       <xsl:if test="parent::tei:div[1]/@type">
+        <xsl:text>_</xsl:text>
+        <xsl:value-of select="parent::tei:div[1]/@type"/>
+       </xsl:if>
+       <xsl:if test="@type">
+        <xsl:text>_</xsl:text>
+        <xsl:value-of select="@type"/>
+       </xsl:if>
       </xsl:attribute>
       <xsl:apply-templates select="tei:closer"/>
      </div>
@@ -323,11 +356,11 @@
    <xsl:text>] </xsl:text>
   </span>
  </xsl:template>
- 
+
  <xsl:template match="tei:figDesc"/>
- 
+
  <xsl:template match="tei:figure/tei:head"/>
- 
+
  <xsl:template match="tei:figure">
   <xsl:choose>
    <xsl:when test="parent::tei:p and tei:head"/>
@@ -367,14 +400,16 @@
     <span class="editorial">
      <xsl:text>[postmark:]</xsl:text>
     </span>
-    <xsl:apply-templates/>
+    <span class="postmark">
+     <xsl:apply-templates/>
+    </span>
    </xsl:when>
    <xsl:otherwise>
     <xsl:apply-templates/>
    </xsl:otherwise>
   </xsl:choose>
  </xsl:template>
- 
+
  <xsl:template match="tei:g">
   <xsl:choose>
    <!-- need this first choice because Chord Symbol font does not have clef symbols -->
@@ -420,454 +455,461 @@
    <xsl:text>[illeg]</xsl:text>
   </span>
  </xsl:template>
- 
+
  <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ TEI:GRAPHIC AND RELATED TEMPLATES @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
- 
-  <xsl:template match="tei:graphic">
-    <xsl:if test="string(@url)">
-      <xsl:call-template name="showFigure"/>
-    </xsl:if>
-  </xsl:template>
-  <!-- Image dimensions -->
-  <xsl:template name="img-dim">
-    <xsl:param name="img-width"/>
-    <xsl:param name="img-height"/>
-    <xsl:attribute name="width">
-      <xsl:value-of select="$img-width"/>
-    </xsl:attribute>
-    <xsl:attribute name="height">
-      <xsl:value-of select="$img-height"/>
-    </xsl:attribute>
-  </xsl:template>
-  <!-- Popup information -->
-  <xsl:template name="img-popup">
-    <xsl:param name="popup"/>
-    <xsl:choose>
-      <xsl:when test="string($popup)">
-        <xsl:value-of select="$popup"/>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:text>x87</xsl:text>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-  <!-- SHOW FIGURE /// REDO IT ///-->
-  <xsl:template name="showFigure">
-    <!--   Find info for publication images  -->
-    <!-- folder info -->
-    <xsl:variable name="img-folder" select="concat($xmp:images-path, '/local')"/>
-    <xsl:variable name="img-subpath-full" select="'full'"/>
-    <xsl:variable name="img-subpath-thumb" select="'thumb'"/>
-    <!-- file info -->
-    <xsl:variable name="img-src" select="@url"/>
-    <xsl:variable name="img-thm-prefix" select="'thm_'"/>
-    <!-- path to images -->
-    <xsl:variable name="img-path-full" select="concat($img-folder, '/', $img-subpath-full, '/',
+
+ <xsl:template match="tei:graphic">
+  <xsl:if test="string(@url)">
+   <xsl:call-template name="showFigure"/>
+  </xsl:if>
+ </xsl:template>
+ <!-- Image dimensions -->
+ <xsl:template name="img-dim">
+  <xsl:param name="img-width"/>
+  <xsl:param name="img-height"/>
+  <xsl:attribute name="width">
+   <xsl:value-of select="$img-width"/>
+  </xsl:attribute>
+  <xsl:attribute name="height">
+   <xsl:value-of select="$img-height"/>
+  </xsl:attribute>
+ </xsl:template>
+ <!-- Popup information -->
+ <xsl:template name="img-popup">
+  <xsl:param name="popup"/>
+  <xsl:choose>
+   <xsl:when test="string($popup)">
+    <xsl:value-of select="$popup"/>
+   </xsl:when>
+   <xsl:otherwise>
+    <xsl:text>x87</xsl:text>
+   </xsl:otherwise>
+  </xsl:choose>
+ </xsl:template>
+ <!-- SHOW FIGURE /// REDO IT ///-->
+ <xsl:template name="showFigure">
+  <!--   Find info for publication images  -->
+  <!-- folder info -->
+  <xsl:variable name="img-folder" select="concat($xmp:images-path, '/local')"/>
+  <xsl:variable name="img-subpath-full" select="'full'"/>
+  <xsl:variable name="img-subpath-thumb" select="'thumb'"/>
+  <!-- file info -->
+  <xsl:variable name="img-src" select="@url"/>
+  <xsl:variable name="img-thm-prefix" select="'thm_'"/>
+  <!-- path to images -->
+  <xsl:variable name="img-path-full"
+   select="concat($img-folder, '/', $img-subpath-full, '/',
       $img-src)"/>
-    <xsl:variable name="img-path-thumb" select="concat($img-folder, '/', $img-subpath-thumb,
+  <xsl:variable name="img-path-thumb"
+   select="concat($img-folder, '/', $img-subpath-thumb,
       '/thm_', $img-src)"/>
-    <!-- Dimensions -->
-    <xsl:variable name="img-width">
-      <xsl:choose>
-        <xsl:when test="@width">
-          <xsl:value-of select="number(substring-before(@width, 'px'))"/>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:text>0</xsl:text>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
-    <xsl:variable name="img-height">
-      <xsl:choose>
-        <xsl:when test="@height">
-          <xsl:value-of select="number(substring-before(@height, 'px'))"/>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:text>0</xsl:text>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
-    <xsl:variable name="img-max-height">
-      <xsl:value-of select="max(ancestor::tei:list[starts-with(@type,
-        'figure')]/tei:item/tei:graphic/number(substring-before(@height, 'px')))"/>
-    </xsl:variable>
-    <!-- Caption or description -->
-    <xsl:variable name="img-cap-alt">
-      <xsl:choose>
-        <xsl:when test="parent::tei:figure/tei:figDesc">
-          <xsl:value-of select="parent::tei:figure/tei:figDesc"/>
-        </xsl:when>
-        <xsl:when test="@n">
-          <xsl:value-of select="@n"/>
-        </xsl:when>
-      </xsl:choose>
-    </xsl:variable>
-    <xsl:variable name="img-cap-desc" select="ancestor::tei:figure/tei:head"/>
-    <!-- Rendition info -->
-    <!-- extra width to delimit captions for the inline thumbnails -->
-    <xsl:variable name="img-thm-plus-width" select="$img-width + 12"/>
-    <!-- Use for the image: prefix with 's' and the div: prefix with 't' -->
-    <xsl:variable name="img-left-right">
-      <xsl:choose>
-        <xsl:when test="contains(@rend, 'left')">
-          <xsl:text>01</xsl:text>
-        </xsl:when>
-        <xsl:when test="contains(@rend, 'right')">
-          <xsl:text>02</xsl:text>
-        </xsl:when>
-        <xsl:otherwise/>
-      </xsl:choose>
-    </xsl:variable>
-    <!-- Used on the anchor for thumb-captions -->
-    <xsl:variable name="cap-left-right">
-      <xsl:choose>
-        <xsl:when test="contains(@rend, 'left')">
-          <xsl:text>s03</xsl:text>
-        </xsl:when>
-        <xsl:when test="contains(@rend, 'right')">
-          <xsl:text>s04</xsl:text>
-        </xsl:when>
-        <xsl:otherwise/>
-      </xsl:choose>
-    </xsl:variable>
-    <!-- Different popup options, x87: shrink to fit, x88 and x89 different html pages -->
-    <xsl:variable name="popup">
-      <xsl:choose>
-        <xsl:when test="contains(@rend, 'img') or ancestor::table[@type='thumbnail'][@rend='img']">
-          <xsl:text>x87</xsl:text>
-        </xsl:when>
-        <xsl:when test="contains(@rend, 'html1') or
-          ancestor::table[@type='thumbnail'][@rend='html1']">
-          <xsl:text>x88</xsl:text>
-        </xsl:when>
-        <xsl:when test="contains(@rend, 'html2') or
-          ancestor::table[@type='thumbnail'][@rend='html2']">
-          <xsl:text>x89</xsl:text>
-        </xsl:when>
-      </xsl:choose>
-    </xsl:variable>
-    <!-- OUTPUT FIGURE TEMPLATE -->
+  <!-- Dimensions -->
+  <xsl:variable name="img-width">
    <xsl:choose>
-    <!-- TEMPLATE FOR MUSICAL EXAMPLES IN SDO PRIMARY DOCUMENTS -->
-    <xsl:when test="parent::tei:figure[@type='musical_example']">
-     <br/><br/>
-     <img class="s{$img-left-right}" src="{$img-path-full}" alt="musical example">
-      
-     </img>
-     <br/>    
+    <xsl:when test="@width">
+     <xsl:value-of select="number(substring-before(@width, 'px'))"/>
     </xsl:when>
-      <!-- START Option 1: showing thumbnail lists -->
-      <xsl:when test="ancestor::tei:list[@type='figure-full']">
-        <dl style="width: {$img-width}px;">
-          <!--<dt style="height: {$img-max-height}px;">-->
-          <dt style="height: {$img-max-height}px;">
-            <!-- Image -->
-            <img src="{$img-path-full}">
-              <!-- @alt info -->
-              <xsl:if test="string($img-cap-alt)">
-                <xsl:attribute name="alt">
-                  <xsl:value-of select="$img-cap-alt"/>
-                </xsl:attribute>
-              </xsl:if>
-            </img>
-          </dt>
-          <dd>
-            <p>
-              <xsl:value-of select="$img-cap-desc"/>
-            </p>
-          </dd>
+    <xsl:otherwise>
+     <xsl:text>0</xsl:text>
+    </xsl:otherwise>
+   </xsl:choose>
+  </xsl:variable>
+  <xsl:variable name="img-height">
+   <xsl:choose>
+    <xsl:when test="@height">
+     <xsl:value-of select="number(substring-before(@height, 'px'))"/>
+    </xsl:when>
+    <xsl:otherwise>
+     <xsl:text>0</xsl:text>
+    </xsl:otherwise>
+   </xsl:choose>
+  </xsl:variable>
+  <xsl:variable name="img-max-height">
+   <xsl:value-of
+    select="max(ancestor::tei:list[starts-with(@type,
+        'figure')]/tei:item/tei:graphic/number(substring-before(@height, 'px')))"
+   />
+  </xsl:variable>
+  <!-- Caption or description -->
+  <xsl:variable name="img-cap-alt">
+   <xsl:choose>
+    <xsl:when test="parent::tei:figure/tei:figDesc">
+     <xsl:value-of select="parent::tei:figure/tei:figDesc"/>
+    </xsl:when>
+    <xsl:when test="@n">
+     <xsl:value-of select="@n"/>
+    </xsl:when>
+   </xsl:choose>
+  </xsl:variable>
+  <xsl:variable name="img-cap-desc" select="ancestor::tei:figure/tei:head"/>
+  <!-- Rendition info -->
+  <!-- extra width to delimit captions for the inline thumbnails -->
+  <xsl:variable name="img-thm-plus-width" select="$img-width + 12"/>
+  <!-- Use for the image: prefix with 's' and the div: prefix with 't' -->
+  <xsl:variable name="img-left-right">
+   <xsl:choose>
+    <xsl:when test="contains(@rend, 'left')">
+     <xsl:text>01</xsl:text>
+    </xsl:when>
+    <xsl:when test="contains(@rend, 'right')">
+     <xsl:text>02</xsl:text>
+    </xsl:when>
+    <xsl:otherwise/>
+   </xsl:choose>
+  </xsl:variable>
+  <!-- Used on the anchor for thumb-captions -->
+  <xsl:variable name="cap-left-right">
+   <xsl:choose>
+    <xsl:when test="contains(@rend, 'left')">
+     <xsl:text>s03</xsl:text>
+    </xsl:when>
+    <xsl:when test="contains(@rend, 'right')">
+     <xsl:text>s04</xsl:text>
+    </xsl:when>
+    <xsl:otherwise/>
+   </xsl:choose>
+  </xsl:variable>
+  <!-- Different popup options, x87: shrink to fit, x88 and x89 different html pages -->
+  <xsl:variable name="popup">
+   <xsl:choose>
+    <xsl:when test="contains(@rend, 'img') or ancestor::table[@type='thumbnail'][@rend='img']">
+     <xsl:text>x87</xsl:text>
+    </xsl:when>
+    <xsl:when
+     test="contains(@rend, 'html1') or
+          ancestor::table[@type='thumbnail'][@rend='html1']">
+     <xsl:text>x88</xsl:text>
+    </xsl:when>
+    <xsl:when
+     test="contains(@rend, 'html2') or
+          ancestor::table[@type='thumbnail'][@rend='html2']">
+     <xsl:text>x89</xsl:text>
+    </xsl:when>
+   </xsl:choose>
+  </xsl:variable>
+  <!-- OUTPUT FIGURE TEMPLATE -->
+  <xsl:choose>
+   <!-- TEMPLATE FOR MUSICAL EXAMPLES IN SDO PRIMARY DOCUMENTS -->
+   <xsl:when test="parent::tei:figure[@type='musical_example']">
+    <br/>
+    <br/>
+    <img class="s{$img-left-right}" src="{$img-path-full}" alt="musical example"> </img>
+    <br/>
+   </xsl:when>
+   <!-- START Option 1: showing thumbnail lists -->
+   <xsl:when test="ancestor::tei:list[@type='figure-full']">
+    <dl style="width: {$img-width}px;">
+     <!--<dt style="height: {$img-max-height}px;">-->
+     <dt style="height: {$img-max-height}px;">
+      <!-- Image -->
+      <img src="{$img-path-full}">
+       <!-- @alt info -->
+       <xsl:if test="string($img-cap-alt)">
+        <xsl:attribute name="alt">
+         <xsl:value-of select="$img-cap-alt"/>
+        </xsl:attribute>
+       </xsl:if>
+      </img>
+     </dt>
+     <dd>
+      <p>
+       <xsl:value-of select="$img-cap-desc"/>
+      </p>
+     </dd>
+    </dl>
+   </xsl:when>
+   <xsl:when test="ancestor::tei:list[@type='figure-thumb']">
+    <dl style="width: {$img-width}px;">
+     <dt style="height: {$img-max-height}px;">
+      <!-- Full size popup -->
+      <a class="x87" href="{$img-path-full}">
+       <span>&#160;</span>
+       <!-- Thumbnail image -->
+       <img src="{$img-path-thumb}">
+        <!-- @alt info -->
+        <xsl:if test="string($img-cap-alt)">
+         <xsl:attribute name="alt">
+          <xsl:value-of select="$img-cap-alt"/>
+         </xsl:attribute>
+        </xsl:if>
+       </img>
+      </a>
+     </dt>
+     <dd>
+      <p>
+       <xsl:value-of select="$img-cap-desc"/>
+      </p>
+     </dd>
+    </dl>
+   </xsl:when>
+   <xsl:when test="ancestor::tei:list[@type='graphic-list']">
+    <img src="{$img-path-full}">
+     <!-- IMG @ALT INFO STARTS -->
+     <xsl:attribute name="alt">
+      <xsl:choose>
+       <xsl:when test="string($img-cap-alt)">
+        <xsl:value-of select="$img-cap-alt"/>
+       </xsl:when>
+       <xsl:otherwise>
+        <xsl:text>empty</xsl:text>
+       </xsl:otherwise>
+      </xsl:choose>
+     </xsl:attribute>
+     <!-- IMG @ALT INFO ENDS -->
+     <xsl:if test="$img-width != 0">
+      <xsl:attribute name="width">
+       <xsl:value-of select="$img-width"/>
+      </xsl:attribute>
+     </xsl:if>
+     <xsl:if test="$img-height != 0">
+      <xsl:attribute name="height">
+       <xsl:value-of select="$img-height"/>
+      </xsl:attribute>
+     </xsl:if>
+    </img>
+   </xsl:when>
+   <!-- START Option 2: Inline images -->
+   <!-- Images with renditional information are treated differently, they can be thumbnails, thumbnails with captions or full sized images -->
+   <xsl:when test="string(@rend)">
+    <xsl:choose>
+     <xsl:when test="(@xmt:type='thumb') or (@n='thumb')">
+      <a href="{$img-path-full}">
+       <xsl:attribute name="class">
+        <xsl:value-of select="$cap-left-right"/>
+        <xsl:text> </xsl:text>
+        <xsl:call-template name="img-popup">
+         <xsl:with-param name="popup" select="$popup"/>
+        </xsl:call-template>
+       </xsl:attribute>
+       <span>&#160;</span>
+       <img class="s{$img-left-right}" src="{$img-path-thumb}">
+        <!-- @alt info -->
+        <xsl:if test="string($img-cap-alt)">
+         <xsl:attribute name="alt">
+          <xsl:value-of select="$img-cap-alt"/>
+         </xsl:attribute>
+        </xsl:if>
+       </img>
+      </a>
+     </xsl:when>
+     <!-- Thumbnail with caption inline image: special version for the "Overviews" examples -->
+     <xsl:when test="(@n='overviews_eg') and (@xmt:type='thumb-caption')">
+      <div class="figure">
+       <div class="t{$img-left-right}" id="thumbs">
+        <dl style="width: {$img-thm-plus-width}px;">
+         <dt>
+          <!-- Thumbnail image -->
+          <img class="s{$img-left-right}" src="{$img-path-thumb}" data-highres="{$img-path-full}">
+           <!-- @alt info -->
+           <xsl:attribute name="alt">
+            <xsl:value-of select="$img-cap-alt"/>
+           </xsl:attribute>
+           <xsl:attribute name="onclick">$(this).mbZoomify_overlay({startLevel:0});</xsl:attribute>
+          </img>
+         </dt>
+         <dd>
+          <xsl:value-of select="$img-cap-desc"/>
+         </dd>
         </dl>
-      </xsl:when>
-      <xsl:when test="ancestor::tei:list[@type='figure-thumb']">
-        <dl style="width: {$img-width}px;">
-          <dt style="height: {$img-max-height}px;">
-            <!-- Full size popup -->
-            <a class="x87" href="{$img-path-full}">
-              <span>&#160;</span>
-              <!-- Thumbnail image -->
-              <img src="{$img-path-thumb}">
-                <!-- @alt info -->
-                <xsl:if test="string($img-cap-alt)">
-                  <xsl:attribute name="alt">
-                    <xsl:value-of select="$img-cap-alt"/>
-                  </xsl:attribute>
-                </xsl:if>
-              </img>
-            </a>
-          </dt>
-          <dd>
-            <p>
-              <xsl:value-of select="$img-cap-desc"/>
-            </p>
-          </dd>
-        </dl>
-      </xsl:when>
-      <xsl:when test="ancestor::tei:list[@type='graphic-list']">
-        <img src="{$img-path-full}">
-          <!-- IMG @ALT INFO STARTS -->
-          <xsl:attribute name="alt">
-            <xsl:choose>
-              <xsl:when test="string($img-cap-alt)">
-                <xsl:value-of select="$img-cap-alt"/>
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:text>empty</xsl:text>
-              </xsl:otherwise>
-            </xsl:choose>
-          </xsl:attribute>
-          <!-- IMG @ALT INFO ENDS -->
-          <xsl:if test="$img-width != 0">
-            <xsl:attribute name="width">
-              <xsl:value-of select="$img-width"/>
-            </xsl:attribute>
-          </xsl:if>
-          <xsl:if test="$img-height != 0">
-            <xsl:attribute name="height">
-              <xsl:value-of select="$img-height"/>
-            </xsl:attribute>
-          </xsl:if>
-        </img>
-      </xsl:when>
-      <!-- START Option 2: Inline images -->
-      <!-- Images with renditional information are treated differently, they can be thumbnails, thumbnails with captions or full sized images -->
-      <xsl:when test="string(@rend)">
-        <xsl:choose>
-          <xsl:when test="(@xmt:type='thumb') or (@n='thumb')">
-            <a href="{$img-path-full}">
-              <xsl:attribute name="class">
-                <xsl:value-of select="$cap-left-right"/>
-                <xsl:text> </xsl:text>
-                <xsl:call-template name="img-popup">
-                  <xsl:with-param name="popup" select="$popup"/>
-                </xsl:call-template>
-              </xsl:attribute>
-              <span>&#160;</span>
-              <img class="s{$img-left-right}" src="{$img-path-thumb}">
-                <!-- @alt info -->
-                <xsl:if test="string($img-cap-alt)">
-                  <xsl:attribute name="alt">
-                    <xsl:value-of select="$img-cap-alt"/>
-                  </xsl:attribute>
-                </xsl:if>
-              </img>
-            </a>
-          </xsl:when>
-         <!-- Thumbnail with caption inline image: special version for the "Overviews" examples -->
-         <xsl:when test="(@n='overviews_eg') and (@xmt:type='thumb-caption')">
-          <div class="figure">
-           <div class="t{$img-left-right}" id="thumbs">
-            <dl style="width: {$img-thm-plus-width}px;">
-             <dt>
-              <!-- Thumbnail image -->
-              <img class="s{$img-left-right}" src="{$img-path-thumb}" data-highres="{$img-path-full}">
-               <!-- @alt info -->
-                <xsl:attribute name="alt">
-                 <xsl:value-of select="$img-cap-alt"/>
-                </xsl:attribute>
-               <xsl:attribute name="onclick">$(this).mbZoomify_overlay({startLevel:0});</xsl:attribute>   
-              </img>
-             </dt>
-             <dd>
-              <xsl:value-of select="$img-cap-desc"/>
-             </dd>
-            </dl>
-           </div>
-          </div>
-         </xsl:when>
-          <!-- Thumbnail with caption inline image: ordinary version -->
-         <xsl:when test="(@xmt:type='thumb-caption') or (@n='thumb-caption')">
-            <div class="figure">
-              <div class="t{$img-left-right}">
-                <dl style="width: {$img-thm-plus-width}px;">
-                  <dt>
-                    <!-- Full size popup -->
-                    <a href="{$img-path-full}">
-                      <xsl:attribute name="class">
-                        <xsl:value-of select="$cap-left-right"/>
-                        <xsl:text> </xsl:text>
-                        <xsl:call-template name="img-popup">
-                          <xsl:with-param name="popup" select="$popup"/>
-                        </xsl:call-template>
-                      </xsl:attribute>
-                      <span>&#160;</span>
-                      <!-- Thumbnail image -->
-                      <img class="s{$img-left-right}" src="{$img-path-thumb}">
-                        <!-- @alt info -->
-                        <xsl:if test="string($img-cap-alt)">
-                          <xsl:attribute name="alt">
-                            <xsl:value-of select="$img-cap-alt"/>
-                          </xsl:attribute>
-                        </xsl:if>
-                      </img>
-                    </a>
-                  </dt>
-                  <dd>
-                    <xsl:value-of select="$img-cap-desc"/>
-                  </dd>
-                </dl>
-              </div>
-            </div>
-         </xsl:when>
-          <xsl:when test="@xmt:type='full'">
-            <xsl:if test="not(preceding-sibling::tei:graphic[@xmt:type='thumb' or
-              @xmt:type='thumb-caption'])">
-              <img class="s{$img-left-right}" src="{$img-path-full}">
-                <!-- @alt info -->
-                <xsl:if test="string($img-cap-alt)">
-                  <xsl:attribute name="alt">
-                    <xsl:value-of select="$img-cap-alt"/>
-                  </xsl:attribute>
-                </xsl:if>
-              </img>
-            </xsl:if>
-          </xsl:when>
-          <!-- Full size inline image -->
-          <xsl:otherwise>
-            <img class="s{$img-left-right}" src="{$img-path-full}">
-              <!-- @alt info -->
-              <xsl:if test="string($img-cap-alt)">
-                <xsl:attribute name="alt">
-                  <xsl:value-of select="$img-cap-alt"/>
-                </xsl:attribute>
-              </xsl:if>
-            </img>
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:when>
-      <!-- START Option 3: showing oneoff thumbnail -->
-      <xsl:when test="@xmt:type='thumb-caption'">
-        <!-- Displayed in a div unlike the thumbnails which are inline. -->
-        <div class="image">
-          <div class="t03">
-            <dl style="width: {$img-thm-plus-width}px;">
-              <dt>
-                <!-- Full size popup -->
-                <a href="{$img-path-full}">
-                  <xsl:attribute name="class">
-                    <xsl:call-template name="img-popup">
-                      <xsl:with-param name="popup" select="$popup"/>
-                    </xsl:call-template>
-                  </xsl:attribute>
-                  <span>&#160;</span>
-                  <!-- Thumbnail image -->
-                  <img class="s{$img-left-right}" src="{$img-path-thumb}">
-                    <!-- @alt info -->
-                    <xsl:if test="string($img-cap-desc)">
-                      <xsl:attribute name="alt">
-                        <xsl:value-of select="$img-cap-desc"/>
-                      </xsl:attribute>
-                    </xsl:if>
-                  </img>
-                </a>
-              </dt>
-              <dd>
-                <xsl:value-of select="$img-cap-desc"/>
-              </dd>
-            </dl>
-          </div>
-        </div>
-      </xsl:when>
-      <xsl:when test="@xmt:type='thumb'">
-        <a href="{$img-path-full}">
-          <xsl:attribute name="class">
+       </div>
+      </div>
+     </xsl:when>
+     <!-- Thumbnail with caption inline image: ordinary version -->
+     <xsl:when test="(@xmt:type='thumb-caption') or (@n='thumb-caption')">
+      <div class="figure">
+       <div class="t{$img-left-right}">
+        <dl style="width: {$img-thm-plus-width}px;">
+         <dt>
+          <!-- Full size popup -->
+          <a href="{$img-path-full}">
+           <xsl:attribute name="class">
             <xsl:value-of select="$cap-left-right"/>
             <xsl:text> </xsl:text>
             <xsl:call-template name="img-popup">
-              <xsl:with-param name="popup" select="$popup"/>
+             <xsl:with-param name="popup" select="$popup"/>
             </xsl:call-template>
-          </xsl:attribute>
-          <span>&#160;</span>
-          <img class="s{$img-left-right}" src="{$img-path-thumb}">
+           </xsl:attribute>
+           <span>&#160;</span>
+           <!-- Thumbnail image -->
+           <img class="s{$img-left-right}" src="{$img-path-thumb}">
             <!-- @alt info -->
             <xsl:if test="string($img-cap-alt)">
-              <xsl:attribute name="alt">
-                <xsl:value-of select="$img-cap-alt"/>
-              </xsl:attribute>
+             <xsl:attribute name="alt">
+              <xsl:value-of select="$img-cap-alt"/>
+             </xsl:attribute>
             </xsl:if>
-          </img>
-        </a>
-      </xsl:when>
-      <!-- START Option 4: showing logo tables -->
-      <xsl:when test="ancestor::tei:list/@type='logo'">
-        <img src="{$img-path-full}">
+           </img>
+          </a>
+         </dt>
+         <dd>
+          <xsl:value-of select="$img-cap-desc"/>
+         </dd>
+        </dl>
+       </div>
+      </div>
+     </xsl:when>
+     <xsl:when test="@xmt:type='full'">
+      <xsl:if
+       test="not(preceding-sibling::tei:graphic[@xmt:type='thumb' or
+              @xmt:type='thumb-caption'])">
+       <img class="s{$img-left-right}" src="{$img-path-full}">
+        <!-- @alt info -->
+        <xsl:if test="string($img-cap-alt)">
+         <xsl:attribute name="alt">
+          <xsl:value-of select="$img-cap-alt"/>
+         </xsl:attribute>
+        </xsl:if>
+       </img>
+      </xsl:if>
+     </xsl:when>
+     <!-- Full size inline image -->
+     <xsl:otherwise>
+      <img class="s{$img-left-right}" src="{$img-path-full}">
+       <!-- @alt info -->
+       <xsl:if test="string($img-cap-alt)">
+        <xsl:attribute name="alt">
+         <xsl:value-of select="$img-cap-alt"/>
+        </xsl:attribute>
+       </xsl:if>
+      </img>
+     </xsl:otherwise>
+    </xsl:choose>
+   </xsl:when>
+   <!-- START Option 3: showing oneoff thumbnail -->
+   <xsl:when test="@xmt:type='thumb-caption'">
+    <!-- Displayed in a div unlike the thumbnails which are inline. -->
+    <div class="image">
+     <div class="t03">
+      <dl style="width: {$img-thm-plus-width}px;">
+       <dt>
+        <!-- Full size popup -->
+        <a href="{$img-path-full}">
+         <xsl:attribute name="class">
+          <xsl:call-template name="img-popup">
+           <xsl:with-param name="popup" select="$popup"/>
+          </xsl:call-template>
+         </xsl:attribute>
+         <span>&#160;</span>
+         <!-- Thumbnail image -->
+         <img class="s{$img-left-right}" src="{$img-path-thumb}">
           <!-- @alt info -->
-          <xsl:attribute name="alt">
-            <xsl:choose>
-              <xsl:when test="string($img-cap-desc)">
-                <xsl:value-of select="$img-cap-desc"/>
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:text>logo</xsl:text>
-              </xsl:otherwise>
-            </xsl:choose>
-          </xsl:attribute>
+          <xsl:if test="string($img-cap-desc)">
+           <xsl:attribute name="alt">
+            <xsl:value-of select="$img-cap-desc"/>
+           </xsl:attribute>
+          </xsl:if>
+         </img>
+        </a>
+       </dt>
+       <dd>
+        <xsl:value-of select="$img-cap-desc"/>
+       </dd>
+      </dl>
+     </div>
+    </div>
+   </xsl:when>
+   <xsl:when test="@xmt:type='thumb'">
+    <a href="{$img-path-full}">
+     <xsl:attribute name="class">
+      <xsl:value-of select="$cap-left-right"/>
+      <xsl:text> </xsl:text>
+      <xsl:call-template name="img-popup">
+       <xsl:with-param name="popup" select="$popup"/>
+      </xsl:call-template>
+     </xsl:attribute>
+     <span>&#160;</span>
+     <img class="s{$img-left-right}" src="{$img-path-thumb}">
+      <!-- @alt info -->
+      <xsl:if test="string($img-cap-alt)">
+       <xsl:attribute name="alt">
+        <xsl:value-of select="$img-cap-alt"/>
+       </xsl:attribute>
+      </xsl:if>
+     </img>
+    </a>
+   </xsl:when>
+   <!-- START Option 4: showing logo tables -->
+   <xsl:when test="ancestor::tei:list/@type='logo'">
+    <img src="{$img-path-full}">
+     <!-- @alt info -->
+     <xsl:attribute name="alt">
+      <xsl:choose>
+       <xsl:when test="string($img-cap-desc)">
+        <xsl:value-of select="$img-cap-desc"/>
+       </xsl:when>
+       <xsl:otherwise>
+        <xsl:text>logo</xsl:text>
+       </xsl:otherwise>
+      </xsl:choose>
+     </xsl:attribute>
+     <!-- dimension info -->
+     <xsl:call-template name="img-dim">
+      <xsl:with-param name="img-width" select="$img-width"/>
+      <xsl:with-param name="img-height" select="$img-height"/>
+     </xsl:call-template>
+    </img>
+   </xsl:when>
+   <xsl:when test="@xmt:type='full'">
+    <xsl:if
+     test="not(preceding-sibling::tei:graphic[@xmt:type='thumb' or
+          @xmt:type='thumb-caption'])">
+     <div class="image">
+      <div class="t03">
+       <dl style="width: {$img-width}px;">
+        <dt>
+         <img src="{$img-path-full}">
+          <!-- @alt info -->
+          <xsl:if test="string($img-cap-desc)">
+           <xsl:attribute name="alt">
+            <xsl:value-of select="$img-cap-desc"/>
+           </xsl:attribute>
+          </xsl:if>
           <!-- dimension info -->
           <xsl:call-template name="img-dim">
-            <xsl:with-param name="img-width" select="$img-width"/>
-            <xsl:with-param name="img-height" select="$img-height"/>
+           <xsl:with-param name="img-width" select="$img-width"/>
+           <xsl:with-param name="img-height" select="$img-height"/>
           </xsl:call-template>
+         </img>
+        </dt>
+        <dd>
+         <xsl:value-of select="$img-cap-desc"/>
+        </dd>
+       </dl>
+      </div>
+     </div>
+    </xsl:if>
+   </xsl:when>
+   <!-- START Default: show full image -->
+   <xsl:otherwise>
+    <!-- Changed: div is centered -->
+    <div class="image">
+     <div class="t03">
+      <dl style="width: {$img-width}px;">
+       <dt>
+        <img src="{$img-path-full}">
+         <!-- @alt info -->
+         <xsl:if test="string($img-cap-desc)">
+          <xsl:attribute name="alt">
+           <xsl:value-of select="$img-cap-desc"/>
+          </xsl:attribute>
+         </xsl:if>
+         <!-- dimension info -->
+         <xsl:call-template name="img-dim">
+          <xsl:with-param name="img-width" select="$img-width"/>
+          <xsl:with-param name="img-height" select="$img-height"/>
+         </xsl:call-template>
         </img>
-      </xsl:when>
-      <xsl:when test="@xmt:type='full'">
-        <xsl:if test="not(preceding-sibling::tei:graphic[@xmt:type='thumb' or
-          @xmt:type='thumb-caption'])">
-          <div class="image">
-            <div class="t03">
-              <dl style="width: {$img-width}px;">
-                <dt>
-                  <img src="{$img-path-full}">
-                    <!-- @alt info -->
-                    <xsl:if test="string($img-cap-desc)">
-                      <xsl:attribute name="alt">
-                        <xsl:value-of select="$img-cap-desc"/>
-                      </xsl:attribute>
-                    </xsl:if>
-                    <!-- dimension info -->
-                    <xsl:call-template name="img-dim">
-                      <xsl:with-param name="img-width" select="$img-width"/>
-                      <xsl:with-param name="img-height" select="$img-height"/>
-                    </xsl:call-template>
-                  </img>
-                </dt>
-                <dd>
-                  <xsl:value-of select="$img-cap-desc"/>
-                </dd>
-              </dl>
-            </div>
-          </div>
-        </xsl:if>
-      </xsl:when>
-      <!-- START Default: show full image -->
-      <xsl:otherwise>
-        <!-- Changed: div is centered -->
-        <div class="image">
-          <div class="t03">
-            <dl style="width: {$img-width}px;">
-              <dt>
-                <img src="{$img-path-full}">
-                  <!-- @alt info -->
-                  <xsl:if test="string($img-cap-desc)">
-                    <xsl:attribute name="alt">
-                      <xsl:value-of select="$img-cap-desc"/>
-                    </xsl:attribute>
-                  </xsl:if>
-                  <!-- dimension info -->
-                  <xsl:call-template name="img-dim">
-                    <xsl:with-param name="img-width" select="$img-width"/>
-                    <xsl:with-param name="img-height" select="$img-height"/>
-                  </xsl:call-template>
-                </img>
-              </dt>
-              <dd>
-                <xsl:value-of select="$img-cap-desc"/>
-              </dd>
-            </dl>
-          </div>
-        </div>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
- 
+       </dt>
+       <dd>
+        <xsl:value-of select="$img-cap-desc"/>
+       </dd>
+      </dl>
+     </div>
+    </div>
+   </xsl:otherwise>
+  </xsl:choose>
+ </xsl:template>
+
  <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ END GRAPHICS TEMPLATES @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
  <xsl:template match="tei:handShift">
@@ -956,7 +998,7 @@
   <xsl:if test="not(following-sibling::*[1][self::tei:list])">
    <br/>
   </xsl:if>
-  
+
  </xsl:template>
 
  <xsl:template match="tei:list">
@@ -978,10 +1020,10 @@
  <xsl:template match="tei:milestone">
   <xsl:choose>
    <xsl:when test="@n='recto'">
-    <strong>{<em>recto</em>}</strong>
+    <span class="folio_milestone"><strong>{<em>recto</em>}</strong></span>
    </xsl:when>
    <xsl:when test="@n='verso'">
-    <strong>{<em>verso</em>}</strong>
+    <span class="folio_milestone"><strong>{<em>verso</em>}</strong></span>
    </xsl:when>
    <xsl:when test="@rend='inline em-dash'">
     <xsl:text>&#8212;</xsl:text>
@@ -1046,40 +1088,42 @@
    </xsl:otherwise>
   </xsl:choose>
  </xsl:template>
- 
+
  <xsl:template name="para-splt">
-  <xsl:param name="spliter" />
-  <xsl:param name="nodes" />
-  
+  <xsl:param name="spliter"/>
+  <xsl:param name="nodes"/>
+
   <xsl:variable name="current-group">
-   <xsl:copy-of select="$nodes" />
+   <xsl:copy-of select="$nodes"/>
   </xsl:variable>
-  
-  <xsl:variable name="first-nodes" select="$current-group/*[self::tei:list][1]/preceding-sibling::*|text()" />     
-  <xsl:variable name="remaining-nodes" select="$current-group/*[self::tei:list][1]/following-sibling::*|text()" />
+
+  <xsl:variable name="first-nodes"
+   select="$current-group/*[self::tei:list][1]/preceding-sibling::*|text()"/>
+  <xsl:variable name="remaining-nodes"
+   select="$current-group/*[self::tei:list][1]/following-sibling::*|text()"/>
 
   <xsl:choose>
    <xsl:when test="count($nodes) > 0 and count($first-nodes) = 0">
-    <p>  
-     <xsl:apply-templates select="$nodes"/>      
+    <p>
+     <xsl:apply-templates select="$nodes"/>
     </p>
    </xsl:when>
    <xsl:when test="count($nodes) > 0 and count($first-nodes) > 0">
-    <p>  
-     <xsl:apply-templates select="$first-nodes"/>      
-    </p>  
+    <p>
+     <xsl:apply-templates select="$first-nodes"/>
+    </p>
     <xsl:apply-templates select="$current-group/*[self::tei:list][1]"/>
-    
+
     <xsl:if test="count($remaining-nodes) > 0">
-    <xsl:call-template name="para-splt">
-     <xsl:with-param name="nodes" select="$remaining-nodes" />
-    </xsl:call-template>    
+     <xsl:call-template name="para-splt">
+      <xsl:with-param name="nodes" select="$remaining-nodes"/>
+     </xsl:call-template>
     </xsl:if>
    </xsl:when>
   </xsl:choose>
-  
+
  </xsl:template>
- 
+
  <xsl:template match="tei:p">
   <xsl:choose>
    <xsl:when test="tei:figure/tei:head">
@@ -1094,31 +1138,32 @@
    <xsl:otherwise>
     <xsl:choose>
      <xsl:when test="child::*[self::tei:list]">
-  
-      <xsl:variable name="first-nodes" select="child::*[self::tei:list][1]/preceding-sibling::*|text()" />     
-      <xsl:variable name="remaining-nodes" select="child::*[self::tei:list][1]/following-sibling::*" />
-      
+
+      <xsl:variable name="first-nodes"
+       select="child::*[self::tei:list][1]/preceding-sibling::*|text()"/>
+      <xsl:variable name="remaining-nodes" select="child::*[self::tei:list][1]/following-sibling::*"/>
+
       <xsl:if test="count($first-nodes) > 0">
-        <p>
-           <xsl:call-template name="a-id"/>
-           <xsl:apply-templates select="$first-nodes"/>      
-        </p>
-      </xsl:if> 
-      
-      <xsl:apply-templates select="child::*[self::tei:list][1]"/> 
-      
+       <p>
+        <xsl:call-template name="a-id"/>
+        <xsl:apply-templates select="$first-nodes"/>
+       </p>
+      </xsl:if>
+
+      <xsl:apply-templates select="child::*[self::tei:list][1]"/>
+
       <xsl:if test="count($remaining-nodes) > 0">
-      <xsl:call-template name="para-splt">
-       <xsl:with-param name="nodes" select="$remaining-nodes" />
-      </xsl:call-template>  
-      </xsl:if> 
-    <!-- -->
+       <xsl:call-template name="para-splt">
+        <xsl:with-param name="nodes" select="$remaining-nodes"/>
+       </xsl:call-template>
+      </xsl:if>
+      <!-- -->
      </xsl:when>
      <xsl:otherwise>
-       <p>
-       <xsl:call-template name="a-id"/>     
+      <p>
+       <xsl:call-template name="a-id"/>
        <xsl:apply-templates/>
-      </p>     
+      </p>
      </xsl:otherwise>
     </xsl:choose>
    </xsl:otherwise>
@@ -1245,35 +1290,40 @@
       <xsl:variable name="file" select="@cRef"/>
       <xsl:variable name="fileref">
        <xsl:choose>
-        <xsl:when test="doc-available(string(concat('../../xml/content/documents/correspondence/', $file, '.xml')))">  
-          <xsl:value-of select="$file"/>
-        </xsl:when>
-        <xsl:when test="doc-available(string(concat('../../xml/content/documents/diaries/', $file, '.xml')))">
-         <xsl:value-of select="concat(substring-before(@cRef, ':'), '/', substring-after(@cRef, ':'))"/>
-        </xsl:when>
-        <xsl:when test="doc-available(string(concat('../../xml/content/documents/lessonbooks/', $file, '.xml')))">
+        <xsl:when
+         test="doc-available(string(concat('../../xml/content/documents/correspondence/', $file, '.xml')))">
          <xsl:value-of select="$file"/>
         </xsl:when>
-        <xsl:when test="doc-available(string(concat('../../xml/content/documents/other/', $file, '.xml')))">
+        <xsl:when
+         test="doc-available(string(concat('../../xml/content/documents/diaries/', $file, '.xml')))">
+         <xsl:value-of
+          select="concat(substring-before(@cRef, ':'), '/', substring-after(@cRef, ':'))"/>
+        </xsl:when>
+        <xsl:when
+         test="doc-available(string(concat('../../xml/content/documents/lessonbooks/', $file, '.xml')))">
+         <xsl:value-of select="$file"/>
+        </xsl:when>
+        <xsl:when
+         test="doc-available(string(concat('../../xml/content/documents/other/', $file, '.xml')))">
          <xsl:value-of select="$file"/>
         </xsl:when>
         <xsl:otherwise>
-         <xsl:value-of select="''" />
+         <xsl:value-of select="''"/>
         </xsl:otherwise>
        </xsl:choose>
       </xsl:variable>
       <xsl:choose>
        <xsl:when test="$fileref != ''">
-         <xsl:variable name="path" select="concat('/documents/correspondence/', $fileref, '.html')"/>
-         <a>
-          <xsl:call-template name="internal-link">
-           <xsl:with-param name="title" select="$file"/>
-          </xsl:call-template>
-          <xsl:attribute name="href">
-           <xsl:value-of select="$path"/>
-          </xsl:attribute>
-          <xsl:apply-templates/>
-         </a>         
+        <xsl:variable name="path" select="concat('/documents/correspondence/', $fileref, '.html')"/>
+        <a>
+         <xsl:call-template name="internal-link">
+          <xsl:with-param name="title" select="$file"/>
+         </xsl:call-template>
+         <xsl:attribute name="href">
+          <xsl:value-of select="$path"/>
+         </xsl:attribute>
+         <xsl:apply-templates/>
+        </a>
        </xsl:when>
        <xsl:otherwise>
         <a>
@@ -1283,10 +1333,10 @@
           </xsl:with-param>
          </xsl:call-template>
          <xsl:apply-templates/>
-        </a> 
+        </a>
        </xsl:otherwise>
       </xsl:choose>
-      
+
      </xsl:when>
      <xsl:otherwise>
       <xsl:variable name="file" select="@cRef"/>
@@ -1320,7 +1370,7 @@
    </xsl:when>
   </xsl:choose>
  </xsl:template>
- 
+
  <!-- href classes for same or new window -->
  <xsl:template name="external-link">
   <!-- Title information and extra class for if external window -->
@@ -1348,7 +1398,7 @@
    </xsl:otherwise>
   </xsl:choose>
  </xsl:template>
- 
+
  <xsl:template name="internal-link">
   <xsl:param name="title"/>
   <!-- Title information and extra class for if external window -->
