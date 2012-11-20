@@ -1446,9 +1446,10 @@
   </xsl:if>
  </xsl:template>
 
- <!-- FOR THE PAGE GIVING EXAMPLES OF EDITORIAL CONVENTIONS USED IN THE REGULAR TEXT DISPLAY -->
+ 
  <xsl:template match="tei:seg">
   <xsl:choose>
+   <!-- FOR THE PAGE GIVING EXAMPLES OF EDITORIAL CONVENTIONS USED IN THE REGULAR TEXT DISPLAY -->
    <xsl:when test="@type = 'demo' and @subtype = 'editorial'">
     <span class="editorial">
      <xsl:apply-templates/>
@@ -1474,7 +1475,15 @@
      ><xsl:text>Otto Erich Deutsch's hand</xsl:text></xsl:attribute>&#x21E7;
      <xsl:apply-templates/></span>
    </xsl:when>
-
+   <!-- END THE DEMO PAGE TYPES --> 
+   
+   <!-- this is for handwritten parts of telegrams -->
+   <xsl:when test="@type='entry' and @rend='ms'">
+    <em>
+     <xsl:apply-templates/>
+    </em>
+   </xsl:when>
+   
    <xsl:otherwise>
     <xsl:apply-templates/>
    </xsl:otherwise>
