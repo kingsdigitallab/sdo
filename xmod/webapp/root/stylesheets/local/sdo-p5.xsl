@@ -1040,8 +1040,7 @@
     <xsl:choose>
      <xsl:when test="@place='foot'">
       <xsl:variable name="fnNum" select="substring(substring-after(@xml:id, '-'), 3, 2)"/>
-      <sup>
-       <a class="fnLink">
+      <sup><a class="fnLink">
         <xsl:attribute name="href">
          <xsl:text>#fn</xsl:text>
          <xsl:value-of select="$fnNum"/>
