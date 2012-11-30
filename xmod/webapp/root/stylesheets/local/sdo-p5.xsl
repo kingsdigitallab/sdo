@@ -932,18 +932,18 @@
      <xsl:apply-templates/>
     </strong>
    </xsl:when>
-   <xsl:when test="@rend='bolditalic' or 'bold-italic' or 'bold italic' or 'italic bold'">
+   <xsl:when test="contains(@rend, 'bold') and contains(@rend, 'italic')">
     <strong>
      <em>
       <xsl:apply-templates/>
      </em>
     </strong>
-   </xsl:when>
-   <xsl:when test="@rend='boldunderline' or 'bold-underline' or 'bold underline' or 'underline bold'">
+   </xsl:when>   
+   <xsl:when test="contains(@rend, 'bold') and contains(@rend, 'underline')">
     <span class="bold-underline">
      <xsl:apply-templates/>
     </span>
-   </xsl:when>
+   </xsl:when> 
    <!-- @@@@@@@@@ MAY NEED TO MOVE INTERLINEAR-ABOVE TO A SEPARATE TEMPLATE IF WE CAN ACTUALLY DISTINGUISH IT IN THE DISPLAY -->
    <xsl:when test="@rend='sup' or @rend='supralinear' or @rend='interlinear-above'">
     <sup>
@@ -971,7 +971,7 @@
      <xsl:apply-templates/>
     </span>
    </xsl:when>
-   <xsl:when test="@rend='underline lateinschr' or 'lateinschr underline' or 'lateinschr-underline'">
+   <xsl:when test="contains(@rend, 'lateinschr') and contains(@rend, 'underline')">
     <span class="italic-underline">
      <xsl:apply-templates/>
     </span>
@@ -980,8 +980,8 @@
     <span class="sperr">
      <xsl:apply-templates/>
     </span>
-   </xsl:when>
-   <xsl:when test="@rend='sperr underline' or 'underline sperr' or 'sperr-underline'">
+   </xsl:when> 
+   <xsl:when test="contains(@rend, 'sperr') and contains(@rend, 'underline')">
     <span class="sperr-underline">
      <xsl:apply-templates/>
     </span>
