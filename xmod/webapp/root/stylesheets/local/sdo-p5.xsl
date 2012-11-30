@@ -922,25 +922,27 @@
 
  <xsl:template match="tei:hi">
   <xsl:choose>
-   <!-- ITALICS -->
    <xsl:when test="@rend='italic' or @rend='lateinschr'">
     <em>
      <xsl:apply-templates/>
     </em>
    </xsl:when>
-   <!-- BOLD -->
    <xsl:when test="@rend='bold'">
     <strong>
      <xsl:apply-templates/>
     </strong>
    </xsl:when>
-   <!-- BOLD AND ITALICS -->
-   <xsl:when test="@rend='bolditalic'">
+   <xsl:when test="@rend='bolditalic' or 'bold-italic' or 'bold italic' or 'italic bold'">
     <strong>
      <em>
       <xsl:apply-templates/>
      </em>
     </strong>
+   </xsl:when>
+   <xsl:when test="@rend='boldunderline' or 'bold-underline' or 'bold underline' or 'underline bold'">
+    <span class="bold-underline">
+     <xsl:apply-templates/>
+    </span>
    </xsl:when>
    <!-- @@@@@@@@@ MAY NEED TO MOVE INTERLINEAR-ABOVE TO A SEPARATE TEMPLATE IF WE CAN ACTUALLY DISTINGUISH IT IN THE DISPLAY -->
    <xsl:when test="@rend='sup' or @rend='supralinear' or @rend='interlinear-above'">
@@ -969,13 +971,18 @@
      <xsl:apply-templates/>
     </span>
    </xsl:when>
-   <xsl:when test="@rend='lateinschr-underline'">
-    <span class="underlineitalic">
+   <xsl:when test="@rend='underline lateinschr' or 'lateinschr underline' or 'lateinschr-underline'">
+    <span class="italic-underline">
      <xsl:apply-templates/>
     </span>
    </xsl:when>
    <xsl:when test="@rend='sperr'">
     <span class="sperr">
+     <xsl:apply-templates/>
+    </span>
+   </xsl:when>
+   <xsl:when test="@rend='sperr underline' or 'underline sperr' or 'sperr-underline'">
+    <span class="sperr-underline">
      <xsl:apply-templates/>
     </span>
    </xsl:when>
@@ -1216,10 +1223,10 @@
 
  <xsl:template match="tei:quote">
   <xsl:choose>
-   <xsl:when test="@rend='block'">
-    <blockquote>
+   <xsl:when test="@rend='block'and parent::tei:p">
+    <span class="inside-block">
      <xsl:apply-templates/>
-    </blockquote>
+    </span>
    </xsl:when>
    <xsl:otherwise>
     <xsl:apply-templates/>
