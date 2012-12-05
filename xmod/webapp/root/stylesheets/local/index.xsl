@@ -250,9 +250,9 @@
                    <h3>Latest</h3>
                   <h4>Most recent additions to this site:</h4>
                   <ul>
-                  <li><a href="/documents/correspondence/correspondence.html">Correspondence:</a> (1) von Cube, complete with all graphs, music examples; (2) UE for 1926, 1927 and 1928</li>
+                  <li><a href="/documents/correspondence/correspondence.html">Correspondence:</a> (1) von Cube, complete with graphs, music examples; (2) UE for 1926-30; (3) Walter Dahms (1913-31); (4) Photogrammarchiv</li>
                   
-                  <li><a href="/documents/diaries/date.html">Diaries:</a> (1) 1925 complete; (2) 1926‒28 now being encoded; (3) 1907 in progress</li>
+                  <li><a href="/documents/diaries/date.html">Diaries:</a> (1) 1925 complete; (2) 1926‒30 now being encoded; (3) 1907 in progress</li>
                   
                   <li><a href="/documents/lessonbooks/pupil.html">Lessonbooks:</a> 1923/24 now in progress</li>
                   
