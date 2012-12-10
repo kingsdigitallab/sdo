@@ -11,12 +11,20 @@
 
 
  <xsl:template match="tei:ab">
-  <p>
-   <xsl:if test="@type='division-marker'">
-    <xsl:attribute name="class">c</xsl:attribute>
-   </xsl:if>
-   <xsl:apply-templates/>
-  </p>
+  <xsl:choose>
+   <xsl:when test="(name(child::*[1])='tei:list') and (name(child::*[last()])='tei:list')">
+    <!-- if <tei:ab> just wraps a <tei:list>, don't create a <p> -->
+    <xsl:apply-templates/>
+   </xsl:when>
+   <xsl:otherwise>
+    <p>
+     <xsl:if test="@type='division-marker'">
+      <xsl:attribute name="class">c</xsl:attribute>
+     </xsl:if>
+     <xsl:apply-templates/>
+    </p>
+   </xsl:otherwise>
+  </xsl:choose>
  </xsl:template>
 
  <xsl:template match="tei:add">
@@ -292,7 +300,7 @@
     <xsl:if test="child::tei:closer">
      <div class="closer">
       <xsl:attribute name="id">
-       <xsl:text>closer</xsl:text>
+<!--       <xsl:text>closer</xsl:text>-->
        <xsl:if test="parent::tei:div[1]/@type">
         <xsl:text>_</xsl:text>
         <xsl:value-of select="parent::tei:div[1]/@type"/>
@@ -938,12 +946,12 @@
       <xsl:apply-templates/>
      </em>
     </strong>
-   </xsl:when>   
+   </xsl:when>
    <xsl:when test="contains(@rend, 'bold') and contains(@rend, 'underline')">
     <span class="bold-underline">
      <xsl:apply-templates/>
     </span>
-   </xsl:when> 
+   </xsl:when>
    <!-- @@@@@@@@@ MAY NEED TO MOVE INTERLINEAR-ABOVE TO A SEPARATE TEMPLATE IF WE CAN ACTUALLY DISTINGUISH IT IN THE DISPLAY -->
    <xsl:when test="@rend='sup' or @rend='supralinear' or @rend='interlinear-above'">
     <sup>
@@ -980,7 +988,7 @@
     <span class="sperr">
      <xsl:apply-templates/>
     </span>
-   </xsl:when> 
+   </xsl:when>
    <xsl:when test="contains(@rend, 'sperr') and contains(@rend, 'underline')">
     <span class="sperr-underline">
      <xsl:apply-templates/>
@@ -1027,10 +1035,14 @@
  <xsl:template match="tei:milestone">
   <xsl:choose>
    <xsl:when test="@n='recto'">
-    <span class="folio_milestone"><strong>{<em>recto</em>}</strong></span>
+    <span class="folio_milestone">
+     <strong>{<em>recto</em>}</strong>
+    </span>
    </xsl:when>
    <xsl:when test="@n='verso'">
-    <span class="folio_milestone"><strong>{<em>verso</em>}</strong></span>
+    <span class="folio_milestone">
+     <strong>{<em>verso</em>}</strong>
+    </span>
    </xsl:when>
    <xsl:when test="@rend='inline em-dash'">
     <xsl:text>&#8212;</xsl:text>
@@ -1047,7 +1059,8 @@
     <xsl:choose>
      <xsl:when test="@place='foot'">
       <xsl:variable name="fnNum" select="substring(substring-after(@xml:id, '-'), 3, 2)"/>
-      <sup><a class="fnLink">
+      <sup>
+       <a class="fnLink">
         <xsl:attribute name="href">
          <xsl:text>#fn</xsl:text>
          <xsl:value-of select="$fnNum"/>
@@ -1221,7 +1234,7 @@
   </sup>
  </xsl:template>
 
- <xsl:template match="tei:quote">
+ <xsl:template match="tei:quote | tei:q">
   <xsl:choose>
    <xsl:when test="@rend='block'and parent::tei:p">
     <span class="inside-block">
@@ -1452,7 +1465,7 @@
   </xsl:if>
  </xsl:template>
 
- 
+
  <xsl:template match="tei:seg">
   <xsl:choose>
    <!-- FOR THE PAGE GIVING EXAMPLES OF EDITORIAL CONVENTIONS USED IN THE REGULAR TEXT DISPLAY -->
@@ -1481,15 +1494,15 @@
      ><xsl:text>Otto Erich Deutsch's hand</xsl:text></xsl:attribute>&#x21E7;
      <xsl:apply-templates/></span>
    </xsl:when>
-   <!-- END THE DEMO PAGE TYPES --> 
-   
+   <!-- END THE DEMO PAGE TYPES -->
+
    <!-- this is for handwritten parts of telegrams -->
    <xsl:when test="@type='entry' and @rend='ms'">
     <em>
      <xsl:apply-templates/>
     </em>
    </xsl:when>
-   
+
    <xsl:otherwise>
     <xsl:apply-templates/>
    </xsl:otherwise>
