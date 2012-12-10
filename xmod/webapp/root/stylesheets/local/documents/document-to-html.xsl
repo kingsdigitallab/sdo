@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns="http://www.w3.org/1999/xhtml"
-  xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
+  xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
   xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xmg="http://www.cch.kcl.ac.uk/xmod/global/1.0"
   xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
@@ -199,6 +199,12 @@
                   </dd>
                 </xsl:for-each>
               </dl>
+              <p>
+                <xsl:text>Digital version created: </xsl:text><xsl:value-of select="$record/sdo:itemDesc/dcterms:dateSubmitted"/>
+                <xsl:if test="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:revisionDesc">
+                  <br/><xsl:text>Last updated: </xsl:text><xsl:value-of select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:revisionDesc/tei:change[last()]/@when"/>
+                </xsl:if>
+              </p>
             </div>
           </td>
         </tr>
