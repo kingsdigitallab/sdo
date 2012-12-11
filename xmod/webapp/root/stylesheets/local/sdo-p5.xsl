@@ -186,6 +186,7 @@
        </div>
       </xsl:if>
      </xsl:when>
+     <!-- now if there is NOT a <tei:div type="opener"> -->
      <xsl:otherwise>
       <div>
        <xsl:apply-templates
@@ -235,7 +236,9 @@
   </xsl:choose>
  </xsl:template>
 
- <!-- This template takes care of situation where we have multiple items in one document, eg. the picture postcard with two separate messages, OJ-8-4_31.xml. It's the same as the <tei:div> template above, but now applying to <tei:div @type='part_X' -->
+ <!-- This template takes care of situation where we have multiple items in one document, eg. the 
+  picture postcard with two separate messages, OJ-8-4_31.xml. It's the same as the <tei:div> template 
+  above, but now applying to <tei:div @type='part_X' -->
  <xsl:template match="tei:div" mode="multipartItem">
   <xsl:choose>
    <xsl:when test="child::tei:opener">
