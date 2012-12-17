@@ -75,6 +75,9 @@
      <xsl:apply-templates/>
     </li>
    </xsl:when>
+   <xsl:when test="parent::tei:cit and preceding-sibling::tei:q">
+    <br/><xsl:apply-templates/>   
+   </xsl:when>
    <xsl:otherwise>
     <xsl:apply-templates/>
    </xsl:otherwise>
@@ -83,6 +86,19 @@
 
  <xsl:template match="tei:choice">
   <xsl:apply-templates/>
+ </xsl:template>
+ 
+ <xsl:template match="tei:cit">
+   <xsl:choose>
+    <xsl:when test="parent::tei:p">
+     <span class="inside-block">
+      <xsl:apply-templates/>
+     </span>
+    </xsl:when>
+    <xsl:otherwise>
+     <xsl:apply-templates/>
+    </xsl:otherwise>
+   </xsl:choose>
  </xsl:template>
 
  <xsl:template match="tei:corr">
@@ -1239,7 +1255,7 @@
 
  <xsl:template match="tei:quote | tei:q">
   <xsl:choose>
-   <xsl:when test="@rend='block'and parent::tei:p">
+   <xsl:when test="@rend='block' and parent::tei:p">
     <span class="inside-block">
      <xsl:apply-templates/>
     </span>
