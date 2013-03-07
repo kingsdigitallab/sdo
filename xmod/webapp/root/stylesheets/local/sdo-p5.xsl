@@ -623,6 +623,7 @@
     <br/>
     <br/>
     <a href="{$img-path-full}" class="x87">
+     <span>&#160;</span>
      <img src="{$img-path-thumb}">
       <!-- @alt info -->
       <xsl:if test="string($img-cap-alt)">
