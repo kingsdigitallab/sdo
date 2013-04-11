@@ -83,7 +83,7 @@
  
         <xsl:choose>
         
-          <xsl:when test="$type = 'person' and count($tokenised-name) > 1 and not($tokenised-name[last()] = 'I') and not($tokenised-name[last()] = 'II')">                   
+          <xsl:when test="$type = 'person' and count($tokenised-name) > 1 and not($tokenised-name[last()] = 'I') and not($tokenised-name[last()] = 'II') and not($tokenised-name[last()] = 'family')">                   
             <filing_title><xsl:value-of select="$tokenised-name[last()]" /><xsl:text>, </xsl:text><xsl:value-of select="normalize-space($forenames)" /><xsl:text> </xsl:text><xsl:value-of select="$suffix" /></filing_title>
           </xsl:when>
           <!-- composer: composition title -->
@@ -125,9 +125,11 @@
                 <xsl:attribute name="sortkey">
                   
                   <xsl:variable name="parsed"><xsl:call-template name="parse"><xsl:with-param name="value"><xsl:value-of select="."/></xsl:with-param></xsl:call-template></xsl:variable>
-                  <xsl:variable name="deaccented_first"><xsl:value-of select="replace(normalize-unicode(substring(normalize-space($parsed), 1, 1),'NFKD'),'[^A-Za-z0-9]','')" /></xsl:variable>
+                  <!-- <xsl:variable name="deaccented_first"><xsl:value-of select="replace(normalize-unicode(substring(normalize-space($parsed), 1, 1),'NFKD'),'[^A-Za-z0-9]','')" /></xsl:variable> -->
                   
-                  <xsl:value-of select="concat(lower-case($deaccented_first), substring(lower-case(translate(translate(normalize-space($parsed), ' ', '_'), ',', '')), 2))" />
+                  <xsl:variable name="deaccented"><xsl:value-of select="replace(normalize-unicode(normalize-space($parsed),'NFKD'),'[^A-Za-z0-9]','')" /></xsl:variable>
+                  
+                  <xsl:value-of select="concat(lower-case($deaccented), substring(lower-case(translate(translate(normalize-space($parsed), ' ', '_'), ',', '')), 2))" />
                 </xsl:attribute>
               </xsl:when>
               <xsl:when test="name() = 'title'"><xsl:attribute name="title"><xsl:call-template name="parse"><xsl:with-param name="value" select="."/></xsl:call-template></xsl:attribute></xsl:when>
