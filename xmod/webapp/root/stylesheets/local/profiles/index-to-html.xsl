@@ -1,6 +1,9 @@
 <xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns="http://www.w3.org/1999/xhtml"
-  xmlns:xmg="http://www.cch.kcl.ac.uk/xmod/global/1.0" xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  xmlns:xmg="http://www.cch.kcl.ac.uk/xmod/global/1.0"
+  xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xmp="http://www.cch.kcl.ac.uk/xmod/properties/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0">
 
   <xsl:import href="../default.xsl" />
 
@@ -18,7 +21,7 @@
   
   
   <!-- 
-    NB: Currently this file gets the list of all the entities referred to in the documents and uses that list as the master list for the chort biographies. 
+    NB: Currently this file gets the list of all the entities referred to in the documents and uses that list as the master list for the short biographies. 
     Alterately it's possible to just get the values from the /*/eats/entities page which is quicker but includes a bunch of entities about whom there is not only no information but which are not referenced by any documents meaning the page is both blank and pointless.
   -->
   <xsl:variable name="other-entities">
@@ -28,8 +31,9 @@
       <!--<xsl:variable name="ent_id" select="keys/key" />-->
       
       <xsl:if test="not(/*/indices/index/entry[@xml:id = $ent_id])">
-        <xsl:variable name="type" select="/*/eats/entities/entity[keys/key = $ent_id]/types/type" />
-       <xsl:variable name="name" select="/*/eats/entities/entity[keys/key = $ent_id]/names/name[@is_preferred = 'true']" /> 
+    	<xsl:variable name="type" select="/*/eats/entities/entity[keys/key = $ent_id]/types/type" />
+       	<xsl:variable name="name" select="/*/eats/entities/entity[keys/key = $ent_id]/names/name[@is_preferred = 'true']" /> 
+       	<xsl:variable name="related-name" select="/*/eats/entities/entity[keys/key = $ent_id]/relationships/relationship[@type = 'is composed by']/names/name[@is_preferred = 'true']/text()[1]" />
         
        <!-- <xsl:variable name="type" select="types/type" />
         <xsl:variable name="name" select="names/name[@is_preferred = 'true']" /> -->
@@ -40,6 +44,14 @@
               <xsl:otherwise><xsl:value-of select="$name"/></xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
+        
+        <xsl:variable name="related-entity-name">
+            <xsl:choose>
+              <xsl:when test="not($related-name)"><xsl:text>Unknown:</xsl:text></xsl:when>            
+              <xsl:when test="contains($related-name, '(')"><xsl:value-of select="normalize-space(substring-before($related-name, '('))" /></xsl:when>
+              <xsl:otherwise><xsl:value-of select="$related-name"/></xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
 
         <xsl:variable name="suffix">
             <xsl:choose>
@@ -47,9 +59,22 @@
             </xsl:choose>
         </xsl:variable>
           
-        <xsl:variable name="tokenised-name" select="tokenize($entity-name, '\s+')" />    
+        <xsl:variable name="tokenised-name" select="tokenize($entity-name, '\s+')" />        
+        <xsl:variable name="tokenised-related-name" select="tokenize($related-entity-name, '\s+')" />    
+        
+        <!-- 
+          /*/eats/entities/entity[types/type = $type]/relationships/relationship[@type = 'is composed by']/names/[name = $related-name]
+        -->
+        
+        <xsl:variable name="name-count" select="count(/*/eats/entities/entity[types/type = $type]/relationships/relationship[@type = 'is composed by']/names[name = $related-name])" />
+        
+        <xsl:variable name="surname" select="$tokenised-related-name[last()]" />  
+        
+        <xsl:variable name="surname-count" select="count(/*/eats/entities/entity[types/type = $type]/relationships/relationship[@type = 'is composed by']/names/name[@is_preferred = 'true' and contains(text()[1], $surname[1])])" />     
         
         <xsl:variable name="forenames"><xsl:for-each select="$tokenised-name"><xsl:if test="not(position() eq last())"><xsl:value-of select="." /><xsl:text> </xsl:text></xsl:if></xsl:for-each></xsl:variable>
+        
+        <xsl:variable name="initials"><xsl:for-each select="$tokenised-related-name"><xsl:if test="not(position() eq last())"><xsl:text> </xsl:text><xsl:value-of select="substring(., 1, 1)" /><xsl:text>.</xsl:text></xsl:if></xsl:for-each></xsl:variable>
         
         <entity>
           
@@ -57,11 +82,24 @@
         <title><xsl:value-of select="$name"/></title> 
  
         <xsl:choose>
+        
           <xsl:when test="$type = 'person' and count($tokenised-name) > 1 and not($tokenised-name[last()] = 'I') and not($tokenised-name[last()] = 'II')">                   
             <filing_title><xsl:value-of select="$tokenised-name[last()]" /><xsl:text>, </xsl:text><xsl:value-of select="normalize-space($forenames)" /><xsl:text> </xsl:text><xsl:value-of select="$suffix" /></filing_title>
           </xsl:when>
+          <!-- composer: composition title -->
+          
+          <xsl:when test="$type = 'composition' and count($tokenised-related-name) > 1 and not($tokenised-related-name[last()] = 'I') and not($tokenised-related-name[last()] = 'II')">
+            <filing_title><xsl:value-of select="$tokenised-related-name[last()]" /><xsl:if test="$name-count != $surname-count"><xsl:text>,</xsl:text><xsl:value-of select="$initials"/></xsl:if><xsl:text>: </xsl:text><xsl:value-of select="$name"/></filing_title>
+          </xsl:when> <!---->
+
+          <xsl:when test="$type = 'composition'">
+          	<filing_title><xsl:value-of select="$tokenised-related-name" /><xsl:text> </xsl:text><xsl:value-of select="$name"/></filing_title>
+          </xsl:when> <!---->
+                    
           <xsl:otherwise><filing_title><xsl:value-of select="$name"/></filing_title></xsl:otherwise>
+          
         </xsl:choose> 
+        
           <type><xsl:value-of select="$type"/></type>
         </entity>
       </xsl:if>
@@ -157,7 +195,22 @@
               <xsl:variable name="id" select="@xml:id"/>
               <a href="{@filename}" title="{@title}">
                 <xsl:value-of select="@filing_title" />
-              </a> <xsl:if test="not(@key)"><xsl:text> (short)</xsl:text></xsl:if>
+              </a> <!--<xsl:if test="not(@key)"><xsl:text> (short)</xsl:text></xsl:if>--> 
+              
+              <xsl:variable name="source" select="concat('../../../xml/content/', $filedir, '/', replace(@filename, 'html', 'xml'))" />
+              <!--[<xsl:value-of select="$source" />]-->
+              
+              <!-- rather than using @key, could use doc-available($source) which will check whether the document exists or not in the file system -->
+              <xsl:if test="@key">
+                     <img src="{$xmp:assets-path}/i/profile.png" alt="[Profile]" class="profile-icon"/> <!---->
+                <xsl:if test="boolean(document($source)//tei:graphic)">
+                   <xsl:text>+</xsl:text><img src="{$xmp:assets-path}/i/camera.png" alt="[Images]"/>
+                   </xsl:if> 
+               <!-- <xsl:choose>
+                  <xsl:when test="boolean(document($source)//tei:graphic)"><img src="{$xmp:assets-path}/i/profile-image.png" alt="[Illustrated Profile]"/></xsl:when>
+                  <xsl:otherwise><img src="{$xmp:assets-path}/i/profile.png" alt="[Profile]"/></xsl:otherwise>
+                </xsl:choose>-->
+              </xsl:if> 
             </li>
           </xsl:for-each>
         </ul>
