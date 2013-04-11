@@ -34,7 +34,7 @@
 
   <xsl:variable name="xmg:title" select="/*/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)]"/>
   <xsl:variable name="xmg:pathroot" select="concat($xmp:context-path, '/', $filedir)"/>
-  <xsl:variable name="xmg:path" select="concat($xmg:pathroot, '/', substring-before($filename, '.'), '.', $fileextension)"/>
+  <xsl:variable name="xmg:path" select="concat($xmg:pathroot, '/', substring-before($filename, '.xml'), '.', $fileextension)"/>
   <xsl:variable name="xmg:menu-top">
     <xsl:choose>
       <xsl:when test="$menutop = 'false'">
@@ -179,17 +179,17 @@
             <ul>
               <li><a>
                 <xsl:attribute name="href">
-                  <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:.pdf?all=false</xsl:text>
+                  <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.xml')" /><xsl:text>:.pdf?all=false</xsl:text>
                 </xsl:attribute>
                 Save PDF</a></li>
               <li><a>
                 <xsl:attribute name="href">
-                  <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:.epub?all=false</xsl:text>
+                  <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.xml')" /><xsl:text>:.epub?all=false</xsl:text>
                 </xsl:attribute>
                 Save EPub</a></li>
               <li><a>
                 <xsl:attribute name="href">
-                  <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:.zip?all=false</xsl:text>
+                  <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.xml')" /><xsl:text>:.zip?all=false</xsl:text>
                 </xsl:attribute>             
                 Save All Formats</a></li>
             </ul>
@@ -203,19 +203,19 @@
                   <li class="s01">
                     <a>
                       <xsl:attribute name="href">
-                  <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:_bundle.zip</xsl:text>
+                  <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.xml')" /><xsl:text>:_bundle.zip</xsl:text>
                 </xsl:attribute>All Languages</a>
                 </li>  
                   <li>
                     <a>
                       <xsl:attribute name="href">
-                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:de.pdf</xsl:text>
+                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.xml')" /><xsl:text>:de.pdf</xsl:text>
                       </xsl:attribute>German Only</a>
                   </li>
                   <li>
                     <a>
                       <xsl:attribute name="href">
-                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:en.pdf</xsl:text>
+                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.xml')" /><xsl:text>:en.pdf</xsl:text>
                       </xsl:attribute>English Only</a>
                   </li>
                 </ul>
@@ -225,21 +225,21 @@
                 <li>
                 <a>
                 <xsl:attribute name="href">
-                  <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:.epub</xsl:text>
+                  <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.xml')" /><xsl:text>:.epub</xsl:text>
                 </xsl:attribute>
                 All Languages</a>
                 </li>
                   <li>
                     <a>
                       <xsl:attribute name="href">
-                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:de.epub</xsl:text>
+                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.xml')" /><xsl:text>:de.epub</xsl:text>
                       </xsl:attribute>
                       German Only</a>
                   </li>
                   <li>
                     <a>
                       <xsl:attribute name="href">
-                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:en.epub</xsl:text>
+                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.xml')" /><xsl:text>:en.epub</xsl:text>
                       </xsl:attribute>
                       English Only</a>
                   </li>
@@ -250,21 +250,21 @@
                   <li>
                     <a>
                       <xsl:attribute name="href">
-                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:.zip</xsl:text>
+                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.xml')" /><xsl:text>:.zip</xsl:text>
                       </xsl:attribute>             
                     All Languages</a>
                   </li>
                   <li>
                     <a>
                       <xsl:attribute name="href">
-                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:de.zip</xsl:text>
+                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.xml')" /><xsl:text>:de.zip</xsl:text>
                       </xsl:attribute>             
                     German Only</a>
                   </li>
                   <li>
                     <a>
                       <xsl:attribute name="href">
-                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:en.zip</xsl:text>
+                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.xml')" /><xsl:text>:en.zip</xsl:text>
                       </xsl:attribute>             
                       English Only</a>
                   </li>
@@ -285,17 +285,17 @@
           <ul>
             <li><a>
               <xsl:attribute name="href">
-                <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:.pdf</xsl:text>
+                <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.xml')" /><xsl:text>:.pdf</xsl:text>
               </xsl:attribute>
               Save PDF</a></li>
             <li><a>
               <xsl:attribute name="href">
-                <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:.epub</xsl:text>
+                <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.xml')" /><xsl:text>:.epub</xsl:text>
               </xsl:attribute>
               Save EPub</a></li>
             <li><a>
               <xsl:attribute name="href">
-                <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:.zip</xsl:text>
+                <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.xml')" /><xsl:text>:.zip</xsl:text>
               </xsl:attribute>             
               Save All Formats</a></li>
           </ul>
@@ -308,17 +308,17 @@
           <ul>
             <li><a>
               <xsl:attribute name="href">
-                <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:de.pdf?lang=de</xsl:text>
+                <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.xml')" /><xsl:text>:de.pdf?lang=de</xsl:text>
               </xsl:attribute>
               Save PDF</a></li>
             <li><a>
               <xsl:attribute name="href">
-                <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:de.epub?lang=de</xsl:text>
+                <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.xml')" /><xsl:text>:de.epub?lang=de</xsl:text>
               </xsl:attribute>
               Save EPub</a></li>
             <li><a>
               <xsl:attribute name="href">
-                <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:de.zip?lang=de</xsl:text>
+                <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.xml')" /><xsl:text>:de.zip?lang=de</xsl:text>
               </xsl:attribute>             
               Save All Formats</a></li>
           </ul>
@@ -331,17 +331,17 @@
           <ul>
             <li><a>
               <xsl:attribute name="href">
-                <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:en.pdf?lang=en</xsl:text>
+                <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.xml')" /><xsl:text>:en.pdf?lang=en</xsl:text>
               </xsl:attribute>
               Save PDF</a></li>
             <li><a>
               <xsl:attribute name="href">
-                <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:en.epub?lang=en</xsl:text>
+                <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.xml')" /><xsl:text>:en.epub?lang=en</xsl:text>
               </xsl:attribute>
               Save EPub</a></li>
             <li><a>
               <xsl:attribute name="href">
-                <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:en.zip?lang=en</xsl:text>
+                <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.xml')" /><xsl:text>:en.zip?lang=en</xsl:text>
               </xsl:attribute>             
               Save All Formats</a></li>
           </ul>      
@@ -437,7 +437,7 @@
                 </xsl:otherwise>
               </xsl:choose>
               <xsl:if test="$xmg:printable = true()"> 
-                <div id="sn" class="tabs">
+                                <div id="sn" class="tabs">
                   <h3>
                     Downloads
                   </h3>  
@@ -446,24 +446,24 @@
                       <ul> 
                       <li><a>
                       <xsl:attribute name="href">
-                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>.html</xsl:text>
+                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.xml')" /><xsl:text>.html</xsl:text>
                       </xsl:attribute>
                       <xsl:attribute name="target"><xsl:text>_blank</xsl:text></xsl:attribute>
                       Print Preview</a></li>
                                        
                     <li><a>
                       <xsl:attribute name="href">
-                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:.pdf</xsl:text>
+                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.xml')" /><xsl:text>:.pdf</xsl:text>
                       </xsl:attribute>
                       Save Page (PDF)</a></li>
                     <li><a>
                       <xsl:attribute name="href">
-                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:.epub</xsl:text>
+                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.xml')" /><xsl:text>:.epub</xsl:text>
                       </xsl:attribute>
                       Save Page (EPub)</a></li>
                     <li><a>
                       <xsl:attribute name="href">
-                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.')" /><xsl:text>:.zip</xsl:text>
+                        <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.xml')" /><xsl:text>:.zip</xsl:text>
                       </xsl:attribute>
                       Save Page (All Formats)</a></li> 
                      <!--   
@@ -571,7 +571,7 @@
           <xsl:when test="contains($filedir, 'profiles')"><xsl:value-of select="replace($filedir, 'mobile/', '')"/></xsl:when>
           <xsl:otherwise><xsl:value-of select="replace($filedir, 'mobile', 'documents')" /></xsl:otherwise>
         </xsl:choose>        
-        <xsl:text>/</xsl:text><xsl:value-of select="substring-before($filename, '.')" />.html<br/>Referenced: <xsl:value-of select="format-date(current-date(), '[D01]-[M01]-[Y0001]')" /></div>
+        <xsl:text>/</xsl:text><xsl:value-of select="substring-before($filename, '.xml')" />.html<br/>Referenced: <xsl:value-of select="format-date(current-date(), '[D01]-[M01]-[Y0001]')" /></div>
         <div class="s01">
           <ul>
             <xsl:if test="$xmp:metadata-copyright">
