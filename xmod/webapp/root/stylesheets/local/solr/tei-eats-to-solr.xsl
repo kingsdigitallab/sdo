@@ -255,6 +255,66 @@
 
             <xsl:value-of select="normalize-space($free-text)" />
           </field>
+          
+          
+          <field name="illustrated">
+            <xsl:choose>
+              <xsl:when test="//tei:figure">true</xsl:when>
+              <xsl:otherwise>false</xsl:otherwise>
+            </xsl:choose>
+          </field>         
+          
+          <xsl:for-each select="tei:div[@type='transcription']//tei:term">           
+            <field name="term">
+              <xsl:value-of select="normalize-space(lower-case(.))" />
+            </field>
+            
+            <xsl:choose>
+              <xsl:when test="@xml:lang and @xml:lang != 'de'">
+              <field>
+                <xsl:attribute name="name"><xsl:value-of select="concat('term_', @xml:lang)" /></xsl:attribute>
+                <xsl:value-of select="normalize-space(lower-case(.))" />
+              </field>                 
+              </xsl:when>
+              <xsl:otherwise>
+              <field name="term_de">
+                <xsl:value-of select="normalize-space(lower-case(.))" />
+              </field>               
+              </xsl:otherwise>
+              </xsl:choose>        
+          </xsl:for-each>    
+
+          <xsl:for-each select="tei:div[@type='translation']//tei:term">           
+            <field name="term">
+              <xsl:value-of select="normalize-space(lower-case(.))" />
+            </field>
+            
+            <xsl:choose>
+              <xsl:when test="@xml:lang and @xml:lang != 'en'">               
+                <field>
+                  <xsl:attribute name="name"><xsl:value-of select="concat('term_', @xml:lang)" /></xsl:attribute>
+                  <xsl:value-of select="normalize-space(lower-case(.))" />
+                </field>                 
+              </xsl:when>
+              <xsl:otherwise>
+                <field name="term_en">
+                  <xsl:value-of select="normalize-space(lower-case(.))" />
+                </field>               
+              </xsl:otherwise>
+            </xsl:choose>        
+          </xsl:for-each> 
+
+          <xsl:for-each select="//tei:foreign">  
+            <field name="foreign_word">
+              <xsl:value-of select="normalize-space(lower-case(.))" />
+            </field>
+            
+            <field>
+              <xsl:attribute name="name"><xsl:value-of select="concat('foreign_word_', @xml:lang)" /></xsl:attribute>
+              <xsl:value-of select="normalize-space(lower-case(.))" />
+            </field>                       
+          </xsl:for-each> 
+
         </doc>
       </xsl:for-each>
 
