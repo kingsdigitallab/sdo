@@ -122,15 +122,23 @@
               </xsl:when>
               <xsl:when test="name() = 'filing_title'">
                 <xsl:attribute name="filing_title"><xsl:call-template name="parse"><xsl:with-param name="value" select="."/></xsl:call-template></xsl:attribute>
+                
                 <xsl:attribute name="sortkey">
                   
-                  <xsl:variable name="parsed"><xsl:call-template name="parse"><xsl:with-param name="value"><xsl:value-of select="."/></xsl:with-param></xsl:call-template></xsl:variable>
-                  <!-- <xsl:variable name="deaccented_first"><xsl:value-of select="replace(normalize-unicode(substring(normalize-space($parsed), 1, 1),'NFKD'),'[^A-Za-z0-9]','')" /></xsl:variable> -->
+                  <xsl:variable name="parsed">
+                    <xsl:call-template name="parse"><xsl:with-param name="value"><xsl:value-of select="."/></xsl:with-param></xsl:call-template>
+                  </xsl:variable>
                   
-                  <xsl:variable name="deaccented"><xsl:value-of select="replace(normalize-unicode(normalize-space($parsed),'NFKD'),'[^A-Za-z0-9]','')" /></xsl:variable>
                   
-                  <xsl:value-of select="concat(lower-case($deaccented), substring(lower-case(translate(translate(normalize-space($parsed), ' ', '_'), ',', '')), 2))" />
+                  <!-- <xsl:variable name="deaccented_first"><xsl:value-of select="replace(normalize-unicode(substring(normalize-space($parsed), 1, 1),'NFKD'),'[^A-Za-z0-9]','')" /></xsl:variable> -->                  
+                  <xsl:variable name="deaccented"><xsl:value-of select="replace(normalize-unicode(normalize-space($parsed),'NFKD'),'[^A-Za-z0-9 ]','')" /></xsl:variable>
+                  
+                  <!-- <xsl:value-of select="concat(lower-case($deaccented_first), substring(lower-case(translate(translate(normalize-space($parsed), ' ', '_'), ',', '')), 2))" /> -->
+                  <!-- <xsl:value-of select="concat(lower-case($deaccented), substring(lower-case(translate(translate(normalize-space($parsed), ' ', '_'), ',', '')), 2))" />
+                  -->
+                  <xsl:value-of select="lower-case(translate(translate(normalize-space($deaccented), ' ', '_'), ',', ''))" /> 
                 </xsl:attribute>
+                
               </xsl:when>
               <xsl:when test="name() = 'title'"><xsl:attribute name="title"><xsl:call-template name="parse"><xsl:with-param name="value" select="."/></xsl:call-template></xsl:attribute></xsl:when>
             </xsl:choose>  
@@ -196,7 +204,7 @@
             <li>
               <xsl:variable name="id" select="@xml:id"/>
               <a href="{@filename}" title="{@title}">
-                <xsl:value-of select="@filing_title" />
+                <xsl:value-of select="@filing_title" /> <!-- (<xsl:value-of select="@sortkey" />) -->
               </a> <!--<xsl:if test="not(@key)"><xsl:text> (short)</xsl:text></xsl:if>--> 
               
               <xsl:variable name="source" select="concat('../../../xml/content/', $filedir, '/', replace(@filename, 'html', 'xml'))" />
