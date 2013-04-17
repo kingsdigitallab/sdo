@@ -90,6 +90,7 @@ CONTENT_TYPES = (
     ('2', 'Diary'),
     ('3', 'Lessonbook'),
     ('4', 'Other'),
+    ('5', 'Mixed'),
     )
 
 class Container(models.Model):
