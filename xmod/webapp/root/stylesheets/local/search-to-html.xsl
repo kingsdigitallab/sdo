@@ -257,6 +257,8 @@
                         
              <xsl:variable name="test" as="item()*">
              <xsl:for-each-group select="current-group()" group-by="../../str[@name = 'fileId']">1</xsl:for-each-group></xsl:variable>  
+             
+          <xsl:if test="$facet != ''">  
           <a>
             <xsl:attribute name="href"> 
               <xsl:text>?kw=</xsl:text><xsl:value-of select="$kw"/>
@@ -268,7 +270,7 @@
             <xsl:value-of select="$facet" /><xsl:text>: </xsl:text><xsl:value-of select="count($test)" />
           </a>
               <xsl:if test="not(position() = last())">,</xsl:if><xsl:text> </xsl:text>
-            
+          </xsl:if> 
           </xsl:if> 
           
             
