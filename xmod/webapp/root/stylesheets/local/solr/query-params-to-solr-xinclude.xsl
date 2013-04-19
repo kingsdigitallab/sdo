@@ -59,6 +59,7 @@
   </xsl:template>
 
   <xsl:template name="escape-parameter">
+    <!-- terms and forign words surrounded by speech marks if they aren't already because otherwise solr doesn't give the expected results -->
     <xsl:param name="param" />
     <xsl:param name="quote" />
     <xsl:choose>
