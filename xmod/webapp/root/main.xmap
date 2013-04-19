@@ -142,18 +142,19 @@
         <map:transform src="stylesheets/local/solr/query-params-to-solr-xinclude.xsl">
           <map:parameter name="keyword" value="{request-param:kw}"/>
           <map:parameter name="filter" value="{request-param:fq}"/>
+          <map:parameter name="filter2" value="{request-param:fq2}"/>
           <map:parameter name="page" value="{request-param:p}"/>
         </map:transform>
-        <map:transform type="xinclude"/>
-        <map:transform src="stylesheets/local/search-to-html.xsl">
+         <map:transform type="xinclude"/>
+     <map:transform src="stylesheets/local/search-to-html.xsl">
           <map:parameter name="filedir" value="search"/>
           <map:parameter name="filename" value=""/>
           <map:parameter name="fileextension" value=""/>
           <map:parameter name="use-request-parameters" value="true"/>
           <map:parameter name="inc" value="{request:queryString}" />                    
         </map:transform>
-        <map:serialize type="xhtml"/>
-        <!--<map:serialize type="xml" /> -->
+        <map:serialize type="xhtml"/> 
+    <!--      <map:serialize type="xml" /> -->
       </map:match>
     </map:pipeline>
 
@@ -446,8 +447,8 @@
           <map:parameter name="menutop" value="false" />
           <map:parameter name="use-request-parameters" value="true"/>
         </map:transform>
-            <map:serialize type="xhtml"/>
- <!-- <map:serialize type="xml" /> -->
+           <map:serialize type="xhtml"/> 
+   <!--<map:serialize type="xml" />-->
       </map:match>
       
 	<!-- Print preview a diary or lessonbook item -->
@@ -479,7 +480,6 @@
     </map:pipeline>
 
 
-
     <!-- Entity display. -->
     <map:pipeline>
       <!-- Indices of entities that have a profile XML file (ie, this
@@ -498,7 +498,7 @@
           <map:parameter name="fileextension" value="html"/>
         </map:transform>
         <map:serialize type="xhtml"/>
-        <!--<map:serialize type="xml" /> -->
+       <!-- <map:serialize type="xml" /> -->
       </map:match>
 
       <!-- Dates. -->
