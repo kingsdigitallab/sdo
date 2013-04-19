@@ -457,8 +457,10 @@
    <field name="correspondent" multiValued="true" type="string" indexed="true" stored="true"/>
    <field name="recipient" multiValued="true" type="string" indexed="true" stored="true"/>
    <field name="author_key" multiValued="true" type="string" indexed="true" required="false" stored="true" />
-   <field name="term" multiValued="true" type="string" indexed="true" stored="true" />
-   <field name="foreign_word" multiValued="true" type="string" indexed="true" stored="true" />
+   <field name="term" multiValued="true" type="text" indexed="true" stored="true" />
+   <field name="term_de" multiValued="true" type="text" indexed="true" stored="true" />
+   <field name="term_en" multiValued="true" type="text" indexed="true" stored="true" /> 
+   <field name="foreign_word" multiValued="true" type="text" indexed="true" stored="true" />
    <field name="illustrated" type="boolean" indexed="true" stored="true" />  
    <!-- <field name="eats_type" type="string" indexed="true" stored="true" required="false" />  -->
    
@@ -512,8 +514,8 @@
    <dynamicField name="*_d"  type="double" indexed="true"  stored="true"/>
    <dynamicField name="*_dt" type="date"    indexed="true"  stored="true"/>
    
-   <dynamicField name="term_*" multiValued="true" type="string"  indexed="true"  stored="true"/>
-   <dynamicField name="foreign_word_*" multiValued="true" type="string"  indexed="true"  stored="true"/>
+   <dynamicField name="term_*" multiValued="true" type="text"  indexed="true"  stored="true"/>
+   <dynamicField name="foreign_word_*" multiValued="true" type="text"  indexed="true"  stored="true"/>
 
    <!-- some trie-coded dynamic fields for faster range queries -->
    <dynamicField name="*_ti" type="tint"    indexed="true"  stored="true"/>
