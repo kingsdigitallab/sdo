@@ -330,6 +330,23 @@
         <map:serialize type="xhtml"/>
       </map:match>
 
+      <!-- Browse mixed by mixed. -->
+      <map:match pattern="documents/mixed/mixed.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.xml"/>
+          <map:part
+            src="cocoon://_internal/solr/query/q=kind%3Amixed&amp;rows=5000&amp;fl=mixed"
+          />
+        </map:aggregate>
+       <map:transform src="stylesheets/local/documents/mixed-list-to-html.xsl">
+          <map:parameter name="filedir" value="documents/mixed"/>
+          <map:parameter name="filename" value="mixed.xml"/>
+          <map:parameter name="fileextension" value="html"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+        <!--  <map:serialize type="xml" /> -->
+      </map:match>
+
       <!-- Display a single item. -->
       <map:match pattern="documents/*/*.html">
         <map:select type="resource-exists">
