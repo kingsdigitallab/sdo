@@ -330,7 +330,7 @@
         <map:serialize type="xhtml"/>
       </map:match>
 
-      <!-- Browse mixed by mixed. -->
+      <!-- Browse mixed by mixed. 
       <map:match pattern="documents/mixed/mixed.html">
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
@@ -344,28 +344,28 @@
           <map:parameter name="fileextension" value="html"/>
         </map:transform>
         <map:serialize type="xhtml"/>
-        <!--  <map:serialize type="xml" /> -->
-      </map:match>
+      </map:match>-->
 
       <!-- Display a single item. -->
       <map:match pattern="documents/*/*.html">
         <map:select type="resource-exists">
           <map:when test="xml/content/documents/{1}/{2}.xml">
             <map:aggregate element="aggregation">
-              <map:part src="cocoon://_internal/menu/main.xml"/>
-              <map:part
+           <map:part src="cocoon://_internal/menu/main.xml"/>
+               <map:part
                 src="cocoon://_internal/solr/query/q=kind%3A{1}&amp;rows=5000&amp;sort=dateFull%20asc"/>
-              <map:part src="xml/content/documents/{1}/{2}.xml"/>
+              <map:part src="xml/content/documents/{1}/{2}.xml"/>   <!---->
               <map:part element="commentary" src="cocoon://internal/documents/commentary/{1}/{2}"/>
-              <map:part element="eats" src="cocoon://_internal/eats/entities.xml"/>
+               <map:part element="eats" src="cocoon://_internal/eats/entities.xml"/> <!---->
             </map:aggregate>
             <map:transform src="stylesheets/local/documents/{1}-to-html.xsl">
               <map:parameter name="filedir" value="documents/{1}"/>
               <map:parameter name="filename" value="{2}.xml"/>
               <map:parameter name="fileextension" value="html"/>
               <map:parameter name="printable" value="true"/>
-            </map:transform>
+            </map:transform>  
             <map:serialize type="xhtml"/>
+            <!-- <map:serialize type="xml"/>-->
           </map:when>
           <map:otherwise>
             <map:generate src="xml/content/http404.xml"/>
@@ -712,12 +712,13 @@
           <map:part src="cocoon://_internal/metadata/files.xml"/>
           <map:part label="tei" src="xml/content/{1}/{2}.xml"/>
         </map:aggregate>
-        <map:transform src="stylesheets/local/default.xsl">
+       <map:transform src="stylesheets/local/default.xsl">
           <map:parameter name="filedir" value="{1}"/>
           <map:parameter name="filename" value="{2}.xml"/>
           <map:parameter name="fileextension" value="html"/>
         </map:transform>
-        <map:serialize type="xhtml"/>
+        <map:serialize type="xhtml"/> 
+      <!--    <map:serialize type="xml"/>-->
       </map:match>
     </map:pipeline>
 

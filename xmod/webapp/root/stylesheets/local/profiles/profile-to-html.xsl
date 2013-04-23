@@ -18,7 +18,7 @@
   <xsl:variable name="diaries" select="/aggregation/response/result/doc[str[@name='kind']='diaries']" />
   <xsl:variable name="lessonbooks" select="/aggregation/response/result/doc[str[@name='kind']='lessonbooks']" />
   <xsl:variable name="other" select="/aggregation/response/result/doc[str[@name='kind']='other']" />
-  <xsl:variable name="mixed" select="/aggregation/response/result/doc[str[@name='kind']='mixed']" />
+ <!-- <xsl:variable name="mixed" select="/aggregation/response/result/doc[str[@name='kind']='mixed']" /> -->
 
   <xsl:template name="xms:pagehead">
     <div class="pageHeader">
@@ -80,11 +80,11 @@
               <a href="#lessonbooks">Lessonbooks</a>
             </li>
           </xsl:if>
-          <xsl:if test="$mixed">
+ <!--         <xsl:if test="$mixed">
             <li>
               <a href="#mixed">Mixed material</a>
             </li>
-          </xsl:if>          
+          </xsl:if>   -->       
           <xsl:if test="$other">
             <li>
               <a href="#other">Other material</a>
@@ -128,11 +128,11 @@
           <xsl:with-param name="id" select="'lessonbooks'" />
           <xsl:with-param name="docs" select="$lessonbooks" />
         </xsl:call-template>         
-          <xsl:call-template name="make-section">
+       <!--   <xsl:call-template name="make-section">
             <xsl:with-param name="name" select="'Mixed material'" />
             <xsl:with-param name="id" select="'mixed'" />
             <xsl:with-param name="docs" select="$mixed" />
-          </xsl:call-template>   <!-- -->      
+          </xsl:call-template>    -->      
         <xsl:call-template name="make-section">
           <xsl:with-param name="name" select="'Other material'" />
           <xsl:with-param name="id" select="'other'" />

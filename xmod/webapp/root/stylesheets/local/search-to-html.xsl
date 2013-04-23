@@ -98,10 +98,10 @@
               <xsl:if test="$fq='journal' and $fq2 = ''">
                 <xsl:attribute name="selected">true</xsl:attribute>
               </xsl:if>Journals</option>
-            <option value="mixed">
+ <!--           <option value="mixed">
               <xsl:if test="$fq='mixed' and $fq2 = ''">
                 <xsl:attribute name="selected">true</xsl:attribute>
-              </xsl:if>Mixed Documents</option>               
+              </xsl:if>Mixed Documents</option>   -->            
             <option value="other">
               <xsl:if test="$fq='other' and $fq2 = ''">
                 <xsl:attribute name="selected">true</xsl:attribute>
@@ -298,7 +298,7 @@
         <xsl:variable name="kind" select="str[@name='kind']" />
         <xsl:variable name="href">
               <xsl:choose>
-                <xsl:when test="$kind = 'diaries' or $kind = 'correspondence' or $kind = 'lessonbooks' or $kind = 'other' or $kind = 'mixed'"><xsl:text>../documents/</xsl:text></xsl:when>
+                <xsl:when test="$kind = 'diaries' or $kind = 'correspondence' or $kind = 'lessonbooks' or $kind = 'other'"><xsl:text>../documents/</xsl:text></xsl:when>
                 <xsl:otherwise><xsl:text>../profiles/</xsl:text></xsl:otherwise>
               </xsl:choose>              
               <xsl:value-of select="str[@name = 'url']" />          
