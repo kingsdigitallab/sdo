@@ -635,6 +635,25 @@
     <br/>
    </xsl:when>
    <!-- END CODE FOR SDO MUSICAL EXAMPLES IN PRIMARY DOCS-->
+   <!-- PC, 24 April 2013 -->
+   <!-- THE 'WHEN' CONDITION BELOW IS THE CURRENT CODE FOR MISCELLANEOUS IMAGES IN SDO PRIMARY DOCUMENTS.  IT IS -->
+   <!-- FUNCTIONALLY IDENTICAL TO THE MUSICAL EXAMPLE CODE ABOVE, BUT WE WANT TO KEEP THE IMAGE TYPES SEPARATE -->
+   <xsl:when test="parent::tei:figure[@type='misc_image'] and @n='thumb'">
+    <br/>
+    <br/>
+    <a href="{$img-path-full}" class="x87">
+     <img src="{$img-path-thumb}">
+      <!-- @alt info -->
+      <xsl:if test="string($img-cap-alt)">
+       <xsl:attribute name="alt">
+        <xsl:value-of select="$img-cap-alt"/>
+       </xsl:attribute>
+      </xsl:if>
+     </img>
+    </a>
+    <br/>
+   </xsl:when>
+   <!-- END CODE FOR SDO MUSICAL EXAMPLES IN PRIMARY DOCS-->
    <!-- START Option 1: showing thumbnail lists -->
    <xsl:when test="ancestor::tei:list[@type='figure-full']">
     <dl style="width: {$img-width}px;">
