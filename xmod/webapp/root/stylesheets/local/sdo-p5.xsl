@@ -620,8 +620,6 @@
    <!-- PC, 5 March 2013 -->
    <!-- THE 'WHEN' CONDITION BELOW IS THE CURRENT CODE FOR MUSICAL EXAMPLES IN SDO PRIMARY DOCUMENTS -->
    <xsl:when test="parent::tei:figure[@type='musical_example'] and @n='thumb'">
-    <br/>
-    <br/>
     <a href="{$img-path-full}" class="x87">
      <img src="{$img-path-thumb}">
       <!-- @alt info -->
@@ -632,7 +630,6 @@
       </xsl:if>
      </img>
     </a>
-    <br/>
    </xsl:when>
    <!-- END CODE FOR SDO MUSICAL EXAMPLES IN PRIMARY DOCS-->
    <!-- PC, 24 April 2013 -->
