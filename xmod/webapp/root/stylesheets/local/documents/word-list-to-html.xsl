@@ -64,19 +64,27 @@
               <xsl:value-of select="substring-after(current-grouping-key(), 'word_')"/>
             </xsl:variable>   
             
-            <xsl:if test="$facet = ''">
-              <xsl:text>Unclassified: </xsl:text><xsl:value-of select="count(distinct-values(/aggregation/response/result/doc/arr[@name=current-grouping-key()]/str))" /><xsl:text>, </xsl:text>
-            </xsl:if>
-            
-            <xsl:if test="not($facet = '')">  
-              <a>
-                <xsl:attribute name="href"> 
-                  <xsl:text>?fq=foreign_word_</xsl:text><xsl:value-of select="$facet" />
-                </xsl:attribute>
-                <xsl:value-of select="$facet" /><xsl:text>: </xsl:text><xsl:value-of select="count(distinct-values(/aggregation/response/result/doc/arr[@name=current-grouping-key()]/str))" />
-              </a>
-              <xsl:if test="not(position() = last())">,</xsl:if><xsl:text> </xsl:text>
-            </xsl:if> 
+            <xsl:choose>
+              <xsl:when test="$facet = ''">
+                <a>
+                  <xsl:attribute name="href"> 
+                    <xsl:text>?fq=foreign_word_</xsl:text>
+                  </xsl:attribute>
+                <xsl:text>Unclassified: </xsl:text>
+                <xsl:value-of select="count(distinct-values(/aggregation/response/result/doc/arr[@name=current-grouping-key()]/str))" />
+                </a>
+                <xsl:text>, </xsl:text>
+              </xsl:when>
+              <xsl:otherwise>               
+                <a>
+                  <xsl:attribute name="href"> 
+                    <xsl:text>?fq=foreign_word_</xsl:text><xsl:value-of select="$facet" />
+                  </xsl:attribute>
+                  <xsl:value-of select="$facet" /><xsl:text>: </xsl:text><xsl:value-of select="count(distinct-values(/aggregation/response/result/doc/arr[@name=current-grouping-key()]/str))" />
+                </a>
+                <xsl:if test="not(position() = last())">,</xsl:if><xsl:text> </xsl:text>
+              </xsl:otherwise>
+            </xsl:choose>
                        
           </xsl:for-each-group>
         </p>               
