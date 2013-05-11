@@ -11,20 +11,61 @@
   <xsl:param name="filedir" />
   <xsl:param name="filename" />
   <xsl:param name="fileextension" />
+  <xsl:param name="type" />
 
   <xsl:variable name="entity-key" select="substring-before($filename, '.')" />
+  
+  <xsl:variable name="filePrefix" select="/aggregation/response/result/doc[arr[@name=$type]/str=$entity-key][1]/str[@name='filePrefix']"/>
 
   <xsl:variable name="correspondence" select="/aggregation/response/result/doc[str[@name='kind']='correspondence']" />
   <xsl:variable name="diaries" select="/aggregation/response/result/doc[str[@name='kind']='diaries']" />
   <xsl:variable name="lessonbooks" select="/aggregation/response/result/doc[str[@name='kind']='lessonbooks']" />
   <xsl:variable name="other" select="/aggregation/response/result/doc[str[@name='kind']='other']" />
+  <xsl:variable name="repository" select="/aggregation/response/result/doc[str[@name='filePrefix']=$filePrefix]/arr[@name='repository']/str[1]" />
+  <xsl:variable name="collection" select="/aggregation/response/result/doc[str[@name='filePrefix']=$filePrefix]/arr[@name='collection']/str[1]" />
  <!-- <xsl:variable name="mixed" select="/aggregation/response/result/doc[str[@name='kind']='mixed']" /> -->
+  
 
+  
+  <xsl:variable name="loc">
+    <xsl:if test="doc-available('../../../xml/content/colloquy/major_collections.xml')">
+        <xsl:copy-of select="document('../../../xml/content/colloquy/major_collections.xml')//tei:text"/>   
+    </xsl:if>
+  </xsl:variable>
+  
+  <xsl:variable name="repos-node">
+    <xsl:choose>
+      <xsl:when test="$loc//tei:div[@xml:id = $filePrefix]/parent::tei:div[@xml:id]"> 
+        <xsl:copy-of select="$loc//tei:div[@xml:id = $filePrefix]/.."/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:copy-of select="$loc//tei:div[@xml:id = $filePrefix]"/>                   
+      </xsl:otherwise>                 
+    </xsl:choose>     
+  </xsl:variable>
+  
   <xsl:template name="xms:pagehead">
     <div class="pageHeader">
       <div class="t01">
         <h1>
           <xsl:choose>
+            <xsl:when test="$type = 'collection' or $type = 'repository'">
+              <xsl:if test="$type = 'repository'"><a><xsl:attribute name="name"><xsl:value-of select="$filePrefix"/></xsl:attribute></a></xsl:if>
+              <xsl:choose>
+                <xsl:when test="contains($repos-node/tei:div/tei:head, ':')">
+                    <xsl:value-of select="normalize-space(substring-after($repos-node/tei:div/tei:head, ':'))"/>                  
+                </xsl:when>
+                <xsl:when test="$repos-node/tei:div/tei:head">
+                  <xsl:value-of select="$repos-node/tei:div/tei:head"/> 
+                </xsl:when>
+                <xsl:when test="$type = 'collection'">
+                  <xsl:value-of select="replace($collection, '_', ' ')"></xsl:value-of>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:value-of select="replace($repository, '_', ' ')"></xsl:value-of>              
+                </xsl:otherwise>
+              </xsl:choose>   
+            </xsl:when>
             <xsl:when test="/*/tei:TEI">
               <xsl:value-of select="/*/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)]" />
             </xsl:when>
@@ -37,22 +78,34 @@
           </xsl:choose>
         </h1>
 
-        <xsl:if test="/*/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type = 'sub']">
-          <h2>
-            <xsl:apply-templates mode="pagehead"
-              select="/*/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type = 'sub']" />
-          </h2>
-        </xsl:if>
-
-        <xsl:variable name="authors-and-editors"
-          select="/*/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:*[self::tei:author or self::tei:editor]" />
-        <xsl:if test="$authors-and-editors">
-          <p>
-            <xsl:text>(</xsl:text>
-            <xsl:apply-templates mode="pagehead" select="$authors-and-editors" />
-            <xsl:text>)</xsl:text>
-          </p>
-        </xsl:if>
+        
+        <xsl:choose>
+          <xsl:when test="$type = 'collection' or $type = 'repository'">
+            <xsl:if test="contains($repos-node/tei:div/tei:head, ':')">
+              <xsl:value-of select="normalize-space(substring-before($repos-node/tei:div/tei:head, ':'))"/>                  
+            </xsl:if>
+          </xsl:when>
+          <xsl:otherwise>
+            
+            <xsl:if test="/*/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type = 'sub']">
+              <h2>
+                <xsl:apply-templates mode="pagehead"
+                  select="/*/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type = 'sub']" />
+              </h2>
+            </xsl:if>
+            
+            <xsl:variable name="authors-and-editors"
+              select="/*/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:*[self::tei:author or self::tei:editor]" />
+            <xsl:if test="$authors-and-editors">
+              <p>
+                <xsl:text>(</xsl:text>
+                <xsl:apply-templates mode="pagehead" select="$authors-and-editors" />
+                <xsl:text>)</xsl:text>
+              </p>
+            </xsl:if>            
+            
+          </xsl:otherwise>
+        </xsl:choose>
       </div>
     </div>
   </xsl:template>
@@ -98,6 +151,14 @@
     </xsl:choose>
 
     <xsl:choose>
+      <xsl:when test="$type = 'collection' or $type = 'repository'">
+          <xsl:for-each select="$repos-node//tei:div">
+            
+            <xsl:if test="not(./tei:head = $repos-node/tei:div/tei:head)"><h2><a><xsl:attribute name="name"><xsl:value-of select="@xml:id"/></xsl:attribute></a><xsl:apply-templates select="tei:head"/></h2></xsl:if>
+              <xsl:apply-templates select="tei:p"/>           
+              <xsl:apply-templates select="tei:listBibl" />           
+          </xsl:for-each>                
+      </xsl:when>
       <xsl:when test="/aggregation/tei:TEI">
         <xsl:apply-templates select="/aggregation/tei:TEI" />
       </xsl:when>

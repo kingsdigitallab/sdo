@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns="http://www.w3.org/1999/xhtml"
-  xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+<xsl:stylesheet exclude-result-prefixes="#all" version="2.0" 
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0" 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:import href="default.xsl" />
@@ -213,8 +215,6 @@
       </a></p></xsl:otherwise>
   </xsl:choose> 
     
-    <!-- TO DO - make sure the URLs for adding the language filter and taking them off are working then remove specific langugae options from dropdown-->
-    
     <xsl:choose>
       <xsl:when test="contains($fq2, 'term_') or contains($fq2, 'foreign_word_')">
         <xsl:variable name="lang_id" >
@@ -255,7 +255,7 @@
                </xsl:choose>
              </xsl:variable>            
                         
-             <xsl:variable name="test" as="item()*">
+             <xsl:variable name="nodes" as="item()*">
              <xsl:for-each-group select="current-group()" group-by="../../str[@name = 'fileId']">1</xsl:for-each-group></xsl:variable>  
              
           <xsl:if test="$facet != ''">  
@@ -267,7 +267,7 @@
               <xsl:value-of select="$print-list"/>
             </xsl:attribute>
             <xsl:attribute name="onClick">buildURL(this)</xsl:attribute>
-            <xsl:value-of select="$facet" /><xsl:text>: </xsl:text><xsl:value-of select="count($test)" />
+            <xsl:value-of select="$facet" /><xsl:text>: </xsl:text><xsl:value-of select="count($nodes)" />
           </a>
               <xsl:if test="not(position() = last())">,</xsl:if><xsl:text> </xsl:text>
           </xsl:if> 
