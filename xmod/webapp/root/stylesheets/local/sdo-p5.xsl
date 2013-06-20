@@ -118,13 +118,14 @@
 
  <xsl:template match="tei:del">
   <xsl:choose>
+   <xsl:when test="(@rend='overwritten') and (parent::tei:subst)">
+    <!-- do nothing: template for tei:subst handles it -->
+   </xsl:when>
    <xsl:when test="@rend = 'overstrike'">
     <span class="inline-deletion">
      <xsl:apply-templates/>
     </span>
    </xsl:when>
-   <xsl:when test="@rend = 'overwritten'"/>
-   <!-- template for tei:subst handles this -->
    <xsl:otherwise>
     <xsl:apply-templates/>
    </xsl:otherwise>
