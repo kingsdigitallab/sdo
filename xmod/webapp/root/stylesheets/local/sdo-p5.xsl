@@ -1574,7 +1574,7 @@
  <xsl:template match="tei:signed">
   <br/>
   <span class="editorial">
-   <xsl:text>[</xsl:text> signed: <xsl:text>] </xsl:text>
+   <xsl:text>[</xsl:text>signed:<xsl:text>] </xsl:text>
   </span>
   <xsl:apply-templates/>
  </xsl:template>
