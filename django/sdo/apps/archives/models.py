@@ -51,7 +51,7 @@ class Collection(models.Model):
     repository = models.ForeignKey(Repository)
     name = models.CharField("Name", max_length=200, help_text=u"The name by which this collection is currently known")
     name_supplied = models.BooleanField("Collection name supplied?", blank=False, help_text=u"Indicate if the collection name is supplied by the Schenker Documents Online project")
-    identifier = models.CharField(max_length=6, blank=True, help_text=u"The code used to refer to this collection in shelfmarks and other identifying information")
+    identifier = models.CharField(max_length=10, blank=True, help_text=u"The code used to refer to this collection in shelfmarks and other identifying information")
     description = models.TextField(blank=True, help_text=u"As required, other descriptive information about this collection")
        
 
