@@ -24,14 +24,14 @@
  <xsl:template match="tei:add">
   <xsl:choose>
    <xsl:when test="@place = 'inline'">
-    <fo:block>
+    <fo:inline font-weight="bold">
      <xsl:apply-templates/>
-    </fo:block>
+    </fo:inline>
    </xsl:when>
    <xsl:when test="@place = 'interlinear-above'">
-    <fo:block>
+    <fo:inline font-weight="bold">
      <xsl:apply-templates/>
-    </fo:block>
+    </fo:inline>
    </xsl:when>
    <xsl:when test="@place = 'margin-bot'">
     <xsl:apply-templates/>
@@ -452,7 +452,7 @@
  </xsl:template>
 
  <xsl:template match="tei:note">
-  <fo:block>
+  <fo:inline>
   <xsl:choose>
    <xsl:when test="@type='editorial'">
     <xsl:choose>
@@ -505,7 +505,7 @@
     <xsl:apply-templates/>
    </xsl:otherwise>
   </xsl:choose>
-  </fo:block>
+  </fo:inline>
  </xsl:template>
 
  <xsl:template match="tei:pb">
@@ -834,11 +834,11 @@
   <xsl:choose>
    <xsl:when test="child::tei:del[@rend='overwritten']/child::tei:gap">
     <!--<span class="erased" onmouseover="show(this)" onmouseout="show(this)" xml:space="preserve"><span class="erased2 green">[illeg]</span><xsl:value-of select="child::tei:add[@place='superimposed']"/></span> -->
-    <xsl:text>[illeg]</xsl:text><fo:inline text-decoration="line-through"><xsl:value-of select="child::tei:add[@place='superimposed']"/></fo:inline>
+    <fo:inline font-weight="bold"><xsl:value-of select="child::tei:add[@place='superimposed']"/></fo:inline><xsl:text>[illeg]</xsl:text>
    </xsl:when>
    <xsl:when test="child::tei:del[@rend='overwritten']">
     <!-- <span class="erased" onmouseover="show(this)" onmouseout="show(this)" xml:space="preserve"><span class="erased2"><xsl:value-of select="child::tei:del[@rend='overwritten']"/></span><xsl:value-of select="child::tei:add[@place='superimposed']"/></span> -->
-    <xsl:value-of select="child::tei:add[@place='superimposed']"/><xsl:text>[was </xsl:text><fo:inline text-decoration="line-through"><xsl:value-of select="child::tei:del[@rend='overwritten']"/></fo:inline><xsl:text>]</xsl:text>
+    <fo:inline font-weight="bold"><xsl:value-of select="child::tei:add[@place='superimposed']"/></fo:inline><fo:inline text-decoration="line-through"><xsl:value-of select="child::tei:del[@rend='overwritten']"/></fo:inline>
    </xsl:when>
    <xsl:otherwise>
     <xsl:apply-templates/>
@@ -890,7 +890,7 @@
  </xsl:template>
  
  <xsl:template match="tei:p">
- <fo:block>
+ <fo:block padding-bottom="20mm">
   <xsl:apply-templates/>
  </fo:block> 
  </xsl:template>

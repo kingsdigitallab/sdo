@@ -68,7 +68,7 @@
       
       <fo:page-sequence master-reference="all">
         <fo:flow flow-name="xsl-region-body">
-          <fo:block font-family="serif" space-after="22pt" keep-with-next="always" line-height="32pt" font-size="28pt">
+          <fo:block font-family="serif" space-after="18pt" keep-with-next="always" line-height="25pt" font-size="20pt">
             <xsl:choose>
               <xsl:when test="/*/tei:TEI">
                 <xsl:value-of select="/*/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)]" />

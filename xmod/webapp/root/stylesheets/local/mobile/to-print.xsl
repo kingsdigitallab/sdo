@@ -146,10 +146,10 @@
   <xsl:template match="tei:subst">
     <xsl:choose>
       <xsl:when test="child::tei:del[@rend='overwritten']/child::tei:gap">
-        <span class="green">[illeg]</span><del><xsl:value-of select="child::tei:add[@place='superimposed']"/></del>
+        <xsl:value-of select="child::tei:add[@place='superimposed']"/><span class="green">[illeg]</span>
       </xsl:when>
       <xsl:when test="child::tei:del[@rend='overwritten']">
-        <xsl:value-of select="child::tei:add[@place='superimposed']"/><span class="green">[was <del><xsl:value-of select="child::tei:del[@rend='overwritten']"/></del>]</span>
+        <xsl:value-of select="child::tei:add[@place='superimposed']"/><span class="green"><del><xsl:value-of select="child::tei:del[@rend='overwritten']"/></del></span>
       </xsl:when>
       <xsl:otherwise>
         <xsl:apply-templates/>

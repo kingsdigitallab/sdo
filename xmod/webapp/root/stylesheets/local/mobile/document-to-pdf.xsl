@@ -232,7 +232,7 @@
     </xsl:template>
     
     <xsl:template name="chapter">
-            <fo:block font-family="serif" space-after="22pt" keep-with-next="always" line-height="32pt" font-size="28pt">
+        <fo:block font-family="serif" space-after="18pt" keep-with-next="always" line-height="25pt" font-size="20pt">
                 <xsl:if test="string-length(/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]/text()) != 0">
                     <xsl:value-of select="/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]" />
                     <xsl:text> - </xsl:text>
