@@ -227,12 +227,15 @@
             </xsl:for-each>
         </xsl:variable> 
         <xsl:variable name="default-name"><xsl:apply-templates/></xsl:variable>
-        <xsl:value-of select="$default-name" /><xsl:if test="not($default-name = $display-name)"><xsl:text> [</xsl:text><xsl:value-of select="$display-name" />]</xsl:if>
+        <xsl:apply-templates/>
+        <xsl:if test="not($default-name = $display-name)">
+            <fo:inline font-size="8pt"><xsl:text> [</xsl:text><xsl:value-of select="$display-name" />]</fo:inline>
+        </xsl:if>
         
     </xsl:template>
     
     <xsl:template name="chapter">
-        <fo:block font-family="serif" space-after="18pt" keep-with-next="always" line-height="25pt" font-size="20pt">
+        <fo:block font-family="serif" space-after="12pt" keep-with-next="always" line-height="20pt" font-size="18pt">
                 <xsl:if test="string-length(/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]/text()) != 0">
                     <xsl:value-of select="/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]" />
                     <xsl:text> - </xsl:text>
@@ -280,13 +283,16 @@
             </fo:block>
             
             <xsl:if test="$record//tei:note[@place='foot']">
-                <fo:block font-size="8pt">
-                    <fo:inline font-weight="bold">Footnotes</fo:inline>
+                <fo:block font-size="8pt" space-before="12pt">
+                    <fo:block font-weight="bold" font-size="9pt" space-after="6pt">Footnotes</fo:block>
                     <xsl:for-each select="$record//tei:note[@place='foot']">
                         <xsl:variable name="noteNum" select="substring(substring-after(@xml:id, '-'), 3, 2)"/>
                         <fo:block>
-                            <xsl:attribute name="internal-destination" select="concat('fn', $noteNum)"/>  
-                            <fo:inline vertical-align="sup">
+                            <fo:basic-link>
+                            <xsl:attribute name="internal-destination" select="concat('fnLink', $noteNum)"/>  
+                            <xsl:attribute name="id" select="concat('fn', $noteNum)"/> <!---->
+                            
+                            <fo:inline vertical-align="super" font-size="6pt">
                                 <xsl:choose>
                                     <xsl:when test="starts-with($noteNum, '0')">
                                         <xsl:value-of select="substring($noteNum, 2, 1)"/>
@@ -295,7 +301,7 @@
                                         <xsl:value-of select="$noteNum"/>
                                     </xsl:otherwise>
                                 </xsl:choose>                                              
-                            </fo:inline>
+                            </fo:inline></fo:basic-link>
                             <xsl:text> </xsl:text>
                             <xsl:apply-templates/>
                         </fo:block>
@@ -305,8 +311,8 @@
             </xsl:if> 
             
             <xsl:for-each select="/aggregation/commentary/doc[statements/statement]">
-                <fo:block>
-                    <fo:block font-style="bold">Commentary</fo:block>
+                <fo:block font-size="10pt">
+                    <fo:block font-style="bold" space-before="16pt" keep-with-next="always" font-size="16pt">Commentary</fo:block>
                     
                     <xsl:for-each select="statements/statement">
                         <fo:block font-weight="bold" keep-with-next="always">

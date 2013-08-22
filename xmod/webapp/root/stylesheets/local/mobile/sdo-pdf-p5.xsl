@@ -337,7 +337,7 @@
   <xsl:choose>
    <!-- ITALICS -->
    <xsl:when test="@rend='italic' or @rend='lateinschr'">
-    <fo:inline font-style="italics">
+    <fo:inline font-style="italic">
      <xsl:apply-templates/>
     </fo:inline>
    </xsl:when>
@@ -350,14 +350,14 @@
    <!-- BOLD AND ITALICS -->
    <xsl:when test="@rend='bolditalic'">
     <fo:inline font-style="bold">
-     <fo:inline font-style="italics">
+     <fo:inline font-style="italic">
       <xsl:apply-templates/>
      </fo:inline>
     </fo:inline>
    </xsl:when>
    <!-- @@@@@@@@@ MAY NEED TO MOVE INTERLINEAR-ABOVE TO A SEPARATE TEMPLATE IF WE CAN ACTUALLY DISTINGUISH IT IN THE DISPLAY -->
    <xsl:when test="@rend='sup' or @rend='supralinear' or @rend='interlinear-above'">
-    <fo:inline vertical-align="sup" font-size="8pt">
+    <fo:inline vertical-align="super" font-size="8pt">
      <xsl:apply-templates/>
     </fo:inline>
    </xsl:when>
@@ -458,26 +458,28 @@
     <xsl:choose>
      <xsl:when test="@place='foot'">
       <xsl:variable name="fnNum" select="substring(substring-after(@xml:id, '-'), 3, 2)"/>
-      <fo:inline vertical-align="sup" font-size="8pt">
+
        <fo:basic-link>
         <xsl:attribute name="internal-destination">
          <xsl:text>#fn</xsl:text>
          <xsl:value-of select="$fnNum"/>
         </xsl:attribute>
+        
         <xsl:attribute name="id">
          <xsl:text>fnLink</xsl:text>
          <xsl:value-of select="$fnNum"/>
         </xsl:attribute>
+        
         <xsl:choose>
          <xsl:when test="starts-with($fnNum, '0')">
-          <xsl:value-of select="substring($fnNum, 2, 1)"/>
+          <fo:inline font-size="6pt" vertical-align="super"><xsl:value-of select="substring($fnNum, 2, 1)"/></fo:inline>
          </xsl:when>
          <xsl:otherwise>
-          <xsl:value-of select="$fnNum"/>
+          <fo:inline font-size="6pt" vertical-align="super"><xsl:value-of select="$fnNum"/></fo:inline>
          </xsl:otherwise>
         </xsl:choose>
        </fo:basic-link>
-      </fo:inline>
+      
      </xsl:when>
      <xsl:when test="@place = 'pre-text'">
       <!-- do nothing -->
@@ -520,12 +522,13 @@
 
  <xsl:template match="tei:ptr">
   <xsl:variable name="ptrNum" select="substring(substring-after(@corresp, '-'), 3, 2)"/>
-  <fo:inline vertical-align="sup" font-size="8pt">
+  
    <fo:basic-link>
     <xsl:attribute name="internal-destination">
      <xsl:text>#fn</xsl:text>
      <xsl:value-of select="$ptrNum"/>
     </xsl:attribute>
+    
     <xsl:choose>
      <xsl:when test="starts-with(@corresp, 'http://')">
       <xsl:call-template name="external-link"/>
@@ -541,16 +544,16 @@
       </xsl:attribute>
      </xsl:otherwise>
     </xsl:choose>
+    
     <xsl:choose>
      <xsl:when test="starts-with($ptrNum, '0')">
-      <xsl:value-of select="substring($ptrNum, 2, 1)"/>
+      <fo:inline font-size="6pt" vertical-align="super"><xsl:value-of select="substring($ptrNum, 2, 1)"/></fo:inline>
      </xsl:when>
      <xsl:otherwise>
-      <xsl:value-of select="$ptrNum"/>
+      <fo:inline font-size="6pt" vertical-align="super"><xsl:value-of select="$ptrNum"/></fo:inline>
      </xsl:otherwise>
     </xsl:choose>
    </fo:basic-link>
-  </fo:inline>
  </xsl:template>
 
  <xsl:template match="tei:quote">
@@ -570,10 +573,11 @@
  <xsl:template match="tei:ref">
   <xsl:choose>
    <xsl:when test="@type  = 'external' or @rend = 'external'">
-    <fo:basic-link color="blue" external-destination="{@target}">
+    <!-- <fo:basic-link color="blue" external-destination="{@target}">
      <xsl:call-template name="external-link"/>
      <xsl:apply-templates/>
-    </fo:basic-link>
+     </fo:basic-link> -->
+    <fo:inline><xsl:apply-templates/></fo:inline><fo:inline font-size="6pt">[<xsl:value-of select="@target"/>]</fo:inline>
    </xsl:when>
    <xsl:when test="@cRef">
     <xsl:choose>
@@ -582,6 +586,8 @@
       <xsl:variable name="title" select="//xmmf:file[@xml:id = $file]/@title"/>
       <xsl:variable name="path" select="//xmmf:file[@xml:id = $file]/@path"/>
       <xsl:variable name="anchor" select="substring-after(@cRef, '#')"/>
+      
+      <!--
       <fo:basic-link color="blue">
        <xsl:attribute name="internal-destination">
         <xsl:if test="string($file)">
@@ -594,8 +600,26 @@
         <xsl:with-param name="title" select="$title"/>
        </xsl:call-template>
        <xsl:apply-templates/>
-      </fo:basic-link>
+      </fo:basic-link> -->
+      
+      <fo:inline>       
+       <xsl:call-template name="internal-link">
+        <xsl:with-param name="title" select="$title"/>
+       </xsl:call-template>
+       <xsl:apply-templates/>
+      </fo:inline>
+      <fo:inline font-size="6pt">
+        <xsl:text> [http://www.schenkerdocumentsonline.org/</xsl:text>        
+        <xsl:if test="string($file)">
+        <xsl:value-of select="$path"/>
+       </xsl:if>
+        <xsl:text>#</xsl:text>
+        <xsl:value-of select="$anchor"/><xsl:text>]</xsl:text>
+       </fo:inline>
+      
+      
      </xsl:when>
+     
      <xsl:when test="@type != 'unknown'">
       <!-- ie. one of "correspondence", "diaries", "lessonbooks", "other" -->
       <xsl:variable name="type" select="@type"/>
@@ -614,6 +638,8 @@
       <xsl:variable name="path">
        <xsl:value-of select="concat('/documents/', $type, '/', $file, '.html')"/>
       </xsl:variable>
+      
+      <!--
       <fo:basic-link color="blue">
        <xsl:call-template name="internal-link">
         <xsl:with-param name="title" select="$file"/>
@@ -623,6 +649,18 @@
        </xsl:attribute>
        <xsl:apply-templates/>
       </fo:basic-link>
+      -->
+      
+      <fo:inline>       
+       <xsl:call-template name="internal-link">
+        <xsl:with-param name="title" select="$file"/>
+       </xsl:call-template>
+       <xsl:apply-templates/>
+      </fo:inline>
+      <fo:inline font-size="6pt">
+       <xsl:text> [http://www.schenkerdocumentsonline.org/</xsl:text><xsl:value-of select="$path"/><xsl:text>]</xsl:text>
+      </fo:inline>     
+      
      </xsl:when>
      <xsl:when test="@type = 'unknown'">
       <xsl:variable name="file" select="@cRef"/>
@@ -648,7 +686,7 @@
       <xsl:choose>
        <xsl:when test="$fileref != ''">
          <xsl:variable name="path" select="concat('/documents/correspondence/', $fileref, '.html')"/>
-         <fo:basic-link color="blue">
+         ££<fo:basic-link color="blue">
           <xsl:call-template name="internal-link">
            <xsl:with-param name="title" select="$file"/>
           </xsl:call-template>
@@ -659,7 +697,7 @@
          </fo:basic-link>         
        </xsl:when>
        <xsl:otherwise>
-        <fo:basic-link color="blue">
+        %%<fo:basic-link color="blue">
          <xsl:call-template name="internal-link">
           <xsl:with-param name="title">
            <xsl:text>this unavailable - document not yet online.</xsl:text>
@@ -675,7 +713,7 @@
       <xsl:variable name="file" select="@cRef"/>
       <xsl:variable name="title" select="//xmmf:file[@xml:id = $file]/@title"/>
       <xsl:variable name="path" select="//xmmf:file[@xml:id = $file]/@path"/>
-      <fo:basic-link color="blue">
+      @@<fo:basic-link color="blue">
        <xsl:call-template name="internal-link">
         <xsl:with-param name="title" select="$title"/>
        </xsl:call-template>
@@ -690,7 +728,7 @@
     </xsl:choose>
    </xsl:when>
    <xsl:when test="@target">
-    <fo:basic-link color="blue">
+    ^^<fo:basic-link color="blue">
      <xsl:attribute name="external-destination">
       <xsl:if test="starts-with(@target, '/')">
        <xsl:value-of select="$xmp:context-path"/>
@@ -890,7 +928,7 @@
  </xsl:template>
  
  <xsl:template match="tei:p">
- <fo:block padding-bottom="20mm">
+ <fo:block padding-bottom="10mm">
   <xsl:apply-templates/>
  </fo:block> 
  </xsl:template>
@@ -942,5 +980,68 @@
     <xsl:apply-templates/>
   </fo:block>
  </xsl:template>
+ 
+ <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ TEI:GRAPHIC AND RELATED TEMPLATES @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+ <xsl:template match="tei:graphic[@url]">
+   <xsl:call-template name="showFigure"/>
+ </xsl:template>
+ 
+ 
+ <!-- Image dimensions -->
+ <xsl:template name="img-dim">
+  <xsl:param name="img-width"/>
+  <xsl:param name="img-height"/>
+  <xsl:attribute name="width">
+   <xsl:value-of select="$img-width"/>
+  </xsl:attribute>
+  <xsl:attribute name="height">
+   <xsl:value-of select="$img-height"/>
+  </xsl:attribute>
+ </xsl:template>
+ 
+
+ 
+ <!-- SHOW FIGURE /// REDO IT ///-->
+ <xsl:template name="showFigure">
+  <!-- VARIABLES -->
+  <!--   Find info for publication images  -->
+  <!-- folder info -->
+  <xsl:variable name="img-folder" select="concat($xmp:images-path, '/local')"/>
+  <xsl:variable name="img-subpath-full" select="'full'"/>
+  <xsl:variable name="img-subpath-thumb" select="'thumb'"/>
+  
+  <!-- file info -->
+  <xsl:variable name="img-src" select="@url"/>
+  <xsl:variable name="img-thm-prefix" select="'thm_'"/>
+  
+  <!-- path to images -->
+  <xsl:variable name="img-path-full"
+   select="concat($img-folder, '/', $img-subpath-full, '/',
+      $img-src)"/>
+  <xsl:variable name="img-path-thumb"
+   select="concat($img-folder, '/', $img-subpath-thumb,
+      '/thm_', $img-src)"/>
+  
+  
+  <!-- OUTPUT FIGURE TEMPLATE -->
+  <xsl:choose>
+   <!-- PC, 5 March 2013 -->
+   <!-- THE 'WHEN' CONDITION BELOW IS THE CURRENT CODE FOR MUSICAL EXAMPLES IN SDO PRIMARY DOCUMENTS -->
+   <xsl:when test="parent::tei:figure[@type='musical_example'] and @n='thumb'">
+    <fo:external-graphic src="url('{concat('http://www.schenkerdocumentsonline.org/', $img-path-thumb)}')" content-type="image/png"/>
+   </xsl:when>
+
+   <!-- END CODE FOR SDO MUSICAL EXAMPLES IN PRIMARY DOCS-->
+   <!-- PC, 24 April 2013 -->
+   <!-- THE 'WHEN' CONDITION BELOW IS THE CURRENT CODE FOR MISCELLANEOUS IMAGES IN SDO PRIMARY DOCUMENTS.  IT IS -->
+   <!-- FUNCTIONALLY IDENTICAL TO THE MUSICAL EXAMPLE CODE ABOVE, BUT WE WANT TO KEEP THE IMAGE TYPES SEPARATE -->
+   <xsl:when test="parent::tei:figure[@type='misc_image'] and @n='thumb'">
+    <fo:external-graphic src="url('{concat('http://www.schenkerdocumentsonline.org/', $img-path-thumb)}')"/>
+   </xsl:when>
+
+  </xsl:choose>
+ </xsl:template>
+
  
 </xsl:stylesheet>
