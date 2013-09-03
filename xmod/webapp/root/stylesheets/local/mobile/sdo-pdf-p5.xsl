@@ -984,7 +984,7 @@
  <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ TEI:GRAPHIC AND RELATED TEMPLATES @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
  <xsl:template match="tei:graphic[@url]">
-   <xsl:call-template name="showFigure"/>
+  <xsl:call-template name="showFigure"/>
  </xsl:template>
  
  
@@ -1029,7 +1029,7 @@
    <!-- PC, 5 March 2013 -->
    <!-- THE 'WHEN' CONDITION BELOW IS THE CURRENT CODE FOR MUSICAL EXAMPLES IN SDO PRIMARY DOCUMENTS -->
    <xsl:when test="parent::tei:figure[@type='musical_example'] and @n='thumb'">
-    <fo:external-graphic src="url('{concat('http://www.schenkerdocumentsonline.org/', $img-path-thumb)}')" content-type="image/png"/>
+    <fo:external-graphic src="url('{concat('http://www.schenkerdocumentsonline.org', $img-path-thumb)}')" content-type="image/png" content-height="scale-to-fit" height="0.6cm"/>
    </xsl:when>
 
    <!-- END CODE FOR SDO MUSICAL EXAMPLES IN PRIMARY DOCS-->
@@ -1037,7 +1037,7 @@
    <!-- THE 'WHEN' CONDITION BELOW IS THE CURRENT CODE FOR MISCELLANEOUS IMAGES IN SDO PRIMARY DOCUMENTS.  IT IS -->
    <!-- FUNCTIONALLY IDENTICAL TO THE MUSICAL EXAMPLE CODE ABOVE, BUT WE WANT TO KEEP THE IMAGE TYPES SEPARATE -->
    <xsl:when test="parent::tei:figure[@type='misc_image'] and @n='thumb'">
-    <fo:external-graphic src="url('{concat('http://www.schenkerdocumentsonline.org/', $img-path-thumb)}')"/>
+    <fo:external-graphic src="url('{concat('http://www.schenkerdocumentsonline.org', $img-path-thumb)}')" content-type="image/png" content-height="scale-to-fit" height="0.6cm"/>
    </xsl:when>
 
   </xsl:choose>
