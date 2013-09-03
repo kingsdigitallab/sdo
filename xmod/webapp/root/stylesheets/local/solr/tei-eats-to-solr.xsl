@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns="http://www.w3.org/1999/xhtml"
-  xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
-  xmlns:marcrel="http://www.loc.gov/loc.terms/relators/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
-  xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet exclude-result-prefixes="#all" version="2.0" 
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:marcrel="http://www.loc.gov/loc.terms/relators/" 
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
+  xmlns:tei="http://www.tei-c.org/ns/1.0" 
+  xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   
   <xsl:import href="../../xmod/solr/tei-eats-to-solr.xsl" />
 
@@ -35,10 +40,22 @@
        	</xsl:choose>
       </xsl:variable>
       
+      <xsl:variable name="filePrefix">
+        <xsl:choose>
+          <xsl:when test="contains($fileId, '-')">
+            <xsl:value-of select="substring-before($fileId, '-')"/>
+          </xsl:when>
+          <xsl:when test="contains($fileId, '_')">
+            <xsl:value-of select="substring-before($fileId, '_')"/>
+          </xsl:when> 
+          <xsl:otherwise/>
+        </xsl:choose>       
+      </xsl:variable>
+      
       <xsl:for-each select="//tei:body">
       
-      <xsl:variable name="eats_key" select="ancestor::tei:TEI/@xml:id" />  
-      <xsl:variable name="eats_type" select="../../../../eats/entities/entity[keys/key = $eats_key]/types/type[1]" />
+        <xsl:variable name="eats_key" select="ancestor::tei:TEI/@xml:id" />  
+        <xsl:variable name="eats_type" select="../../../../eats/entities/entity[keys/key = $eats_key]/types/type[1]" />       
       
       <!-- begin the metadata <doc> -->
       
@@ -95,7 +112,7 @@
 
             <xsl:value-of select="normalize-space($free-text)" />
           </field>
-        
+
        </doc>      
       </xsl:for-each>
 
@@ -103,6 +120,7 @@
     <xsl:for-each select="//sdo:record">
         <!-- $kind refers to whether it is correspondence, diary, etc. -->
         <xsl:variable name="source" select="local-name(preceding-sibling::sdo:collectionDesc/sdo:source/*[1])" />
+      
         <xsl:variable name="kind">
           <xsl:choose>
             <xsl:when test="$source = 'diary'">
@@ -116,6 +134,7 @@
             </xsl:otherwise>
           </xsl:choose>
         </xsl:variable>
+      
         <xsl:variable name="recordId" select="@ID" />
 
         <!-- begin the metadata <doc> -->
@@ -271,8 +290,15 @@
             
             <xsl:choose>
               <xsl:when test="@xml:lang and @xml:lang != 'de'">
+                
+                <xsl:variable name="scriptlang">
+                  <xsl:call-template name="get_lang">
+                    <xsl:with-param name="lang_code"><xsl:value-of select="xml:lang"/></xsl:with-param>
+                  </xsl:call-template>
+                </xsl:variable>
+                
               <field>
-                <xsl:attribute name="name"><xsl:value-of select="concat('term_', @xml:lang)" /></xsl:attribute>
+                <xsl:attribute name="name"><xsl:value-of select="concat('term_', $scriptlang)" /></xsl:attribute>
                 <xsl:value-of select="normalize-space(lower-case(.))" />
               </field>                 
               </xsl:when>
@@ -284,20 +310,28 @@
               </xsl:choose>        
           </xsl:for-each>    
 
+
           <xsl:for-each select="tei:div[@type='translation']//tei:term">           
             <field name="term">
               <xsl:value-of select="normalize-space(lower-case(.))" />
             </field>
             
             <xsl:choose>
-              <xsl:when test="@xml:lang and @xml:lang != 'en'">               
+              <xsl:when test="@xml:lang and @xml:lang != 'en'">   
+                
+                <xsl:variable name="latlang">
+                  <xsl:call-template name="get_lang">
+                    <xsl:with-param name="lang_code"><xsl:value-of select="@xml:lang"/></xsl:with-param>
+                  </xsl:call-template>
+                </xsl:variable>
+                
                 <field>
-                  <xsl:attribute name="name"><xsl:value-of select="concat('term_', @xml:lang)" /></xsl:attribute>
+                  <xsl:attribute name="name"><xsl:value-of select="concat('term_', $latlang)" /></xsl:attribute>
                   <xsl:value-of select="normalize-space(lower-case(.))" />
                 </field>                 
               </xsl:when>
               <xsl:otherwise>
-                <field name="term_en">
+                <field name="term_English">
                   <xsl:value-of select="normalize-space(lower-case(.))" />
                 </field>               
               </xsl:otherwise>
@@ -305,20 +339,60 @@
           </xsl:for-each> 
 
           <xsl:for-each select="//tei:foreign">  
+            <xsl:variable name="lang">
+              <xsl:call-template name="get_lang">
+                <xsl:with-param name="lang_code"><xsl:value-of select="@xml:lang"/></xsl:with-param>
+              </xsl:call-template>
+            </xsl:variable>
+            
             <field name="foreign_word">
               <xsl:value-of select="normalize-space(lower-case(.))" />
             </field>
             
             <field>
-              <xsl:attribute name="name"><xsl:value-of select="concat('foreign_word_', @xml:lang)" /></xsl:attribute>
+              <xsl:attribute name="name"><xsl:value-of select="concat('foreign_word_', $lang)" /></xsl:attribute>
               <xsl:value-of select="normalize-space(lower-case(.))" />
             </field>                       
           </xsl:for-each> 
 
+          <xsl:if test="not($filePrefix = '')">
+
+          <field name="filePrefix">
+            <xsl:value-of select="normalize-space($filePrefix)" />
+          </field>
+                    
+          <field name="collection">            
+            <xsl:variable name="collect_name">
+            <xsl:choose>
+              <xsl:when test="../../../repos/entities/entity[contains(key, $filePrefix)]/collections">               
+                <xsl:value-of select="string-join(../../../repos/entities/entity[contains(key, $filePrefix)]/collections/collection, ' and ')" />
+              </xsl:when>
+              <xsl:otherwise><xsl:value-of select="../../../repos/entities/entity[contains(key, $filePrefix)]/collection" /></xsl:otherwise>
+            </xsl:choose>
+            </xsl:variable>           
+            <xsl:value-of select="replace(normalize-space($collect_name), ' ', '_')"/>           
+          </field>          
+         
+          <field name="repository">
+            <xsl:variable name="repos_name">
+              <xsl:value-of select="../../../repos/entities/entity[contains(key, $filePrefix)]/repository"/>
+            </xsl:variable>           
+            <xsl:value-of select="replace(normalize-space($repos_name), ' ', '_')"/>
+          </field>
+        </xsl:if>
         </doc>
       </xsl:for-each>
 
     </add>
+  </xsl:template>
+  
+  <xsl:template name="get_lang">
+    <xsl:param name="lang_code" />
+    
+    <xsl:choose>
+      <xsl:when test="//languages/language/code[text() = $lang_code]"><xsl:value-of select="../name"/></xsl:when>
+      <xsl:otherwise><xsl:value-of select="$lang_code"/></xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
   
 </xsl:stylesheet>

@@ -21,8 +21,8 @@
   <xsl:variable name="diaries" select="/aggregation/response/result/doc[str[@name='kind']='diaries']" />
   <xsl:variable name="lessonbooks" select="/aggregation/response/result/doc[str[@name='kind']='lessonbooks']" />
   <xsl:variable name="other" select="/aggregation/response/result/doc[str[@name='kind']='other']" />
-  <xsl:variable name="repository" select="/aggregation/response/result/doc[str[@name='filePrefix']=$filePrefix]/arr[@name='repository']/str[1]" />
-  <xsl:variable name="collection" select="/aggregation/response/result/doc[str[@name='filePrefix']=$filePrefix]/arr[@name='collection']/str[1]" />
+  <xsl:variable name="repository" select="/aggregation/response/result/doc[str[@name='filePrefix']=$filePrefix][1]/arr[@name='repository']/str[1]" />
+  <xsl:variable name="collection" select="/aggregation/response/result/doc[str[@name='filePrefix']=$filePrefix][1]/arr[@name='collection']/str[1]" />
  <!-- <xsl:variable name="mixed" select="/aggregation/response/result/doc[str[@name='kind']='mixed']" /> -->
   
 
@@ -62,7 +62,7 @@
                   <xsl:value-of select="replace($collection, '_', ' ')"></xsl:value-of>
                 </xsl:when>
                 <xsl:otherwise>
-                  <xsl:value-of select="replace($repository, '_', ' ')"></xsl:value-of>              
+                  <xsl:value-of select="replace($repository, '_', ' ')"></xsl:value-of>   
                 </xsl:otherwise>
               </xsl:choose>   
             </xsl:when>
