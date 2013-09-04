@@ -444,6 +444,7 @@
    <field name="kind" type="string" indexed="true" stored="true" />
    <field name="shelfmark" type="string" indexed="true" stored="true" />
    <field name="fileId" type="string" indexed="true" stored="true" required="true" />
+   <field name="filePrefix" type="string" indexed="true" stored="true" />
    <field name="recordId" type="string" indexed="true" stored="true" required="true" />
    <field name="url" type="string" indexed="false" stored="true"/>
    <field name="title" type="string" indexed="true" stored="true" />
@@ -461,7 +462,9 @@
    <field name="term_de" multiValued="true" type="text" indexed="true" stored="true" />
    <field name="term_en" multiValued="true" type="text" indexed="true" stored="true" /> 
    <field name="foreign_word" multiValued="true" type="text" indexed="true" stored="true" />
-   <field name="illustrated" type="boolean" indexed="true" stored="true" />  
+   <field name="illustrated" type="boolean" indexed="true" stored="true" />     
+   <field name="repository" multiValued="true" type="string" indexed="true" stored="true" />
+   <field name="collection" multiValued="true" type="string" indexed="true" stored="true" />
    <!-- <field name="eats_type" type="string" indexed="true" stored="true" required="false" />  -->
    
    <!-- xmod default fields below; for SDO these have all been made required="false" -->
