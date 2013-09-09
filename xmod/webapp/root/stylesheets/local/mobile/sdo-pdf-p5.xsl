@@ -928,7 +928,7 @@
  </xsl:template>
  
  <xsl:template match="tei:p">
- <fo:block padding-bottom="10mm">
+ <fo:block padding-bottom="5mm">
   <xsl:apply-templates/>
  </fo:block> 
  </xsl:template>

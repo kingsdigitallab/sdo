@@ -77,7 +77,7 @@
                         <!-- SEE THE FOLLOWING <XSL:TEMPLATE> -->
                     </xsl:when>
                     <xsl:when test="child::tei:opener">
-                        <fo:block>
+                        <fo:block padding-bottom="5mm">
                             <xsl:if test="child::tei:opener/preceding-sibling::tei:note">
                                 <xsl:apply-templates select="tei:note"/>
                             </xsl:if>
@@ -150,7 +150,7 @@
     <xsl:template match="tei:div" mode="multipartItem">
         <xsl:choose>
             <xsl:when test="child::tei:opener">
-                <fo:block>
+                <fo:block padding-bottom="5mm">
                     <xsl:if test="child::tei:opener/preceding-sibling::tei:note">
                         <xsl:apply-templates select="tei:note"/>
                     </xsl:if>
