@@ -1042,6 +1042,31 @@
      <xsl:apply-templates/>
     </span>
    </xsl:when>
+   <xsl:when test="@rend='strikethrough'">
+    <span class="inline-deletion">
+     <xsl:apply-templates/>
+    </span>
+   </xsl:when>
+   <xsl:when test="@rend='strikethroughNONE'">
+    <span class="inline-deletion-none">
+     <xsl:apply-templates/>
+    </span>
+   </xsl:when>
+   <xsl:when test="@rend='strikethroughPINK'">
+    <span class="inline-deletion-pink">
+     <xsl:apply-templates/>
+    </span>
+   </xsl:when>
+   <xsl:when test="@rend='strikethroughLEMON'">
+    <span class="inline-deletion-lemon">
+     <xsl:apply-templates/>
+    </span>
+    </xsl:when>
+    <xsl:when test="@rend='strikethroughLIME'">
+     <span class="inline-deletion-lime">
+      <xsl:apply-templates/>
+     </span>
+   </xsl:when>
    <!-- CURRENT DEFAULT: italics -->
    <xsl:otherwise>
     <em>

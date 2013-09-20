@@ -72,6 +72,7 @@
         <li>searches are case-insensitive - <strong>bakery</strong> finds <strong>bakery</strong> and <strong>Bakery</strong></li>
         <li>searches find closely related words - <strong>bakery</strong> finds <strong>bakery</strong> and <strong>bakeries</strong></li>
         <li>use quote marks to find words together - <strong>"railway station"</strong> finds just <strong>railway station</strong> while <strong>railway station</strong> finds instances of <strong>railway</strong> and <strong>station</strong></li>
+        <li>add tilde (~) and number to specify desired proximity - <strong>"errors copy"~5</strong> finds <strong>errors</strong> and <strong>copy within 5 words of each other</strong></li>
       </ul>
       <form action="" method="get" name="searchForm">
         <p>
