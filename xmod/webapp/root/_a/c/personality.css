@@ -466,9 +466,14 @@ c9dae3 mid light blue
 
 #mainContent .editorial {color: #5d804f;  }
 
-/* #mainContent span.inline-deletion {text-decoration: line-through; background: #c9d6dc} */
+/* THIS IS THE VERSION WITHOUT ANY BACKGROUND COLOR: #mainContent span.inline-deletion {text-decoration: line-through;} */
 /* Commented out the background for .inline-deletion to see if it makes the display clearer PC, 20-06-2013 */
-#mainContent span.inline-deletion {text-decoration: line-through;}
+#mainContent span.inline-deletion-none {text-decoration: line-through;}
+#mainContent span.inline-deletion {text-decoration: line-through; background: #c9d6dc}
+#mainContent span.inline-deletion-pink {text-decoration: line-through; background: #FF66CC}
+#mainContent span.inline-deletion-lemon {text-decoration: line-through; background: #FFFF99}
+#mainContent span.inline-deletion-lime {text-decoration: line-through; background: #CCFF99}
+
 #mainContent span.inline-addition {color: #9e4a06}
 
 #mainContent span.sperr {letter-spacing: 0.09em;}
