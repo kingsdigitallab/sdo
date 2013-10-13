@@ -262,13 +262,10 @@
                    <h3>Latest</h3>
                   <h4>Most recent additions to this site:</h4>
                   <ul>
-                  <li><a href="/documents/correspondence/correspondence.html">Correspondence:</a> (1) von Cube, complete with graphs, music examples; (2) UE for 1926-30; (3) Walter Dahms (1913-31); (4) Photogrammarchiv</li>
+                    <li><a href="/documents/correspondence/correspondence.html">Correspondence:</a> (1) Drei Masken Verlag (DMV): 1924 and 1925 complete; (2) Moriz Violin: 1925-30 complete; (3) Hans Weisse: 1925-30 complete</li>
                   
-                  <li><a href="/documents/diaries/date.html">Diaries:</a> (1) 1925 complete; (2) 1926‒30 now being encoded; (3) 1907 in progress</li>
-                  
-                  <li><a href="/documents/lessonbooks/pupil.html">Lessonbooks:</a> 1923/24 now in progress</li>
-                  
-                  <li><a href="/documents/other/title.html">Other material:</a> (1) Brünauer: "Die Urlinie"; (2) Schenker: "Deutsche Genie"; (3) von Cube: "Ein Meister der Musiktheorie"</li>
+                  <li><a href="/documents/diaries/date.html">Diaries:</a> (1) Jan 1926 to Sept 1928 now complete; (2) Oct 1926 to Dec 1930 now being encoded</li>
+
                     <li class="expand"><a href="/documents/overviews/latest_material.html">more →</a></li>   
                   </ul>
                   <nav class="local" id="blogPosts">
