@@ -189,7 +189,7 @@
             </div>
           </td>
         </tr>
-      </xsl:if>
+      </xsl:if>  
       <xsl:for-each select="/aggregation/commentary/doc[statements/statement]">
         <tr>
           <td colspan="2">
