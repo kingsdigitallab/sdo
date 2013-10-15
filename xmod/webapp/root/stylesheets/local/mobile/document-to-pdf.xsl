@@ -284,7 +284,7 @@
             
             <xsl:if test="$record//tei:note[@place='foot']">
                 <fo:block font-size="8pt" space-before="12pt">
-                    <fo:block font-weight="bold" font-size="9pt" space-after="6pt">Footnotes</fo:block>
+                    <fo:block font-weight="bold" font-size="12pt" space-after="6pt">Footnotes</fo:block>
                     <xsl:for-each select="$record//tei:note[@place='foot']">
                         <xsl:variable name="noteNum" select="substring(substring-after(@xml:id, '-'), 3, 2)"/>
                         <fo:block>
@@ -309,13 +309,23 @@
                     
                 </fo:block>
             </xsl:if> 
-            
+
+            <xsl:if test="($record//tei:hi[@rend='double-underline']) or ($record//tei:hi[@rend='triple-underline'])">
+                    <fo:block font-weight="bold" space-before="16pt" keep-with-next="always" font-size="12pt" space-after="6pt">Format</fo:block>
+                    <fo:block keep-with-next="always" font-size="8pt">
+                        &#8224; Double underlined
+                    </fo:block>
+                    <fo:block keep-with-next="always" font-size="8pt">
+                        &#9674; Triple underlined
+                    </fo:block>
+            </xsl:if>
+
             <xsl:for-each select="/aggregation/commentary/doc[statements/statement]">
                 <fo:block font-size="10pt">
-                    <fo:block font-style="bold" space-before="16pt" keep-with-next="always" font-size="16pt">Commentary</fo:block>
+                    <fo:block font-weight="bold" space-before="16pt" keep-with-next="always" font-size="12pt" space-after="6pt">Commentary</fo:block>
                     
                     <xsl:for-each select="statements/statement">
-                        <fo:block font-weight="bold" keep-with-next="always">
+                        <fo:block start-indent="0.5cm" font-weight="bold" keep-with-next="always">
                             <xsl:value-of select="@type"/>
                         </fo:block>
                         <fo:block start-indent="1cm">
@@ -323,7 +333,7 @@
                         </fo:block>
                     </xsl:for-each>
                     <xsl:for-each select="container/statements/statement[@type != current()/statements/statement/@type]">
-                        <fo:block font-weight="bold" keep-with-next="always">
+                        <fo:block start-indent="0.5cm" font-weight="bold" keep-with-next="always">
                             <xsl:value-of select="@type"/>
                         </fo:block>
                         <fo:block start-indent="1cm">

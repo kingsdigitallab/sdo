@@ -373,14 +373,25 @@
     </fo:inline>
    </xsl:when>
    <xsl:when test="@rend='double-underline'">
-    <fo:inline text-decoration="underline" text-underline-style="double">
+    <fo:inline text-decoration="underline">
      <xsl:apply-templates/>
     </fo:inline>
+    <fo:inline vertical-align="super" font-size="8pt">&#8224;</fo:inline>
+    <!--
+    <fo:inline vertical-align="bottom" font-size="8pt" font-style="italic">
+      <xsl:text> [double underline]</xsl:text>
+    </fo:inline>
+    -->
    </xsl:when>
    <xsl:when test="@rend='triple-underline'">
-    <fo:inline text-decoration="underline" text-underline-style="double" font-style="italic">
+    <fo:inline text-decoration="underline">
      <xsl:apply-templates/>
     </fo:inline>
+    <fo:inline vertical-align="super" font-size="8pt">&#9674;</fo:inline>
+    <!--<fo:inline vertical-align="bottom" font-size="8pt" font-style="italic">
+      <xsl:text> [triple underline]</xsl:text>
+    </fo:inline>
+    -->
    </xsl:when>
    <xsl:when test="@rend='lateinschr-underline'">
     <fo:inline text-decoration="underline" font-style="italic">

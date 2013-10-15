@@ -195,6 +195,23 @@
           </td>
         </tr>
       </xsl:if>
+      
+        <xsl:if test="($record//tei:hi[@rend='double-underline']) or ($record//tei:hi[@rend='triple-underline'])">
+        <tr>
+          <td colspan="2">
+            <div class="ft">
+              <h3>Format</h3>
+                <xsl:if test="$record//tei:hi[@rend='double-underline']">
+                  <a id="f1"><p><sup>&#8224;</sup> Double underlined</p></a>
+                </xsl:if>
+                <xsl:if test="$record//tei:hi[@rend='triple-underline']">
+                  <a id="f2"><p><sup>&#9674;</sup> Triple underlined</p></a>
+                </xsl:if>
+            </div>
+          </td>
+        </tr>
+      </xsl:if>
+
       <xsl:for-each select="/aggregation/commentary/doc[statements/statement]">
         <tr>
           <td colspan="2">

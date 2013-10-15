@@ -1020,11 +1020,13 @@
    <xsl:when test="@rend='double-underline'">
     <span class="doubleunderline">
      <xsl:apply-templates/>
+     <sup><a href="#f1">&#8224;</a></sup>
     </span>
    </xsl:when>
    <xsl:when test="@rend='triple-underline'">
     <span class="tripleunderline">
      <xsl:apply-templates/>
+     <sup><a href="#f2">&#9674;</a></sup>
     </span>
    </xsl:when>
    <xsl:when test="contains(@rend, 'lateinschr') and contains(@rend, 'underline')">
