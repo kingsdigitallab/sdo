@@ -15,7 +15,10 @@
     
     <xsl:for-each-group group-by="."
       select="/aggregation/response/result/doc/arr[@name='author_key']/str">
-      <xsl:sort select="." />
+      
+      <!-- split author string and sort on last word -->
+      <xsl:sort select="tokenize(../../arr[@name='author']/str[1], ' ')[last()]" />
+
       <ul>
         <li>
           <a>
@@ -33,6 +36,7 @@
         </li>
       </ul>
     </xsl:for-each-group>
+
   </xsl:template>
 
   <xsl:template name="add-item-count">
