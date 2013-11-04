@@ -260,6 +260,10 @@
                 </div>
                 <div class="unit size1of3 lastUnit" >
                    <h3>Latest</h3>
+                  <h4>!! International recognition for SDO !!</h4>
+                  <ul>
+                    <li>The Society for Music Theory, at its annual meeting in November 2013, awarded its Citation of Special Merit "to Ian Bent, William Drabkin, and their teams of contributing scholars, for Phase 2 of Schenker Documents Online". The citation begins: "Rare is the time when the work of a music theorist enjoys the kind of scholarly attention to life and works typically accorded major figures in intellectual history ..."</li>
+                  </ul>
                   <h4>Most recent additions to this site:</h4>
                   <ul>
                     <li><a href="/documents/correspondence/correspondence.html">Correspondence:</a> (1) Drei Masken Verlag (DMV): 1924 and 1925 complete; (2) Moriz Violin: 1925-30 complete; (3) Hans Weisse: 1925-30 complete</li>
