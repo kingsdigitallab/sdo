@@ -408,8 +408,8 @@ class NameForm (PropertyForm):
         super(NameForm, self).__init__(authority_records, extra_data, *args, **kw_args)
         name_types = extra_data.get('name_types')
         self.fields['name_type'].queryset = name_types
-        name_type_choices = extra_data.get('name_type_choices', name_types)
-        self.fields['name_type'].choices = create_choice_list(name_type_choices)
+        name_type_choices = extra_data.get('name_type_choices', name_types).order_by('-is_default')
+        self.fields['name_type'].choices = create_choice_list(name_type_choices, True, True)
 
     class Meta:
         model = Name
@@ -585,15 +585,22 @@ class ImportForm (forms.Form):
     description = forms.CharField(max_length=200)
 
 
-def create_choice_list (qs, default=False):
+def create_choice_list (qs, default=False, omitEmpty=False):
     """Return a list of 2-tuples from the records in the QuerySet.
 
     If there is a single record and default is True, do not provide an
     empty option.
 
+    ------
+    extended to include paramater "omitEmpty" which, as expected, omits
+    the empty option. When setting to True, please use .order_by('-is_default')
+    on the qs passed to this function (to ensure that the default option is selected)
+
     """
     choices = [(record.id, unicode(record)) for record in qs]
     if not (qs.count() == 1 and default):
         choices = [('', '----------')] + choices
+    if (omitEmpty == True):
+	choices = [(record.id, unicode(record)) for record in qs]
     return choices
 
