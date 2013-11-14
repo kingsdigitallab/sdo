@@ -148,8 +148,11 @@ def create_name (request, entity_id):
     name_part_forms = []
     name_note_forms = []
     authority_records = get_authority_records(entity, editable_authorities)
+    # manually setting default name type to 'regular', currently pk=1.
+    default_name_type = NameType.objects.get(pk=1)
     initial_data = {'language': profile.language.id,
-                    'script': profile.script.id }
+                    'script': profile.script.id,
+                    'name_type': default_name_type.pk }
     extra_data = {}
     context_data = {}
     extra_data['name_types'] = NameType.objects.filter(
