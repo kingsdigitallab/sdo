@@ -148,8 +148,8 @@ def create_name (request, entity_id):
     name_part_forms = []
     name_note_forms = []
     authority_records = get_authority_records(entity, editable_authorities)
-    # manually setting default name type to 'regular', currently pk=1.
-    default_name_type = NameType.objects.get(pk=1)
+    # select the first NameType with 'is_default' set as True (EATS allows multiple defaults, because...?)
+    default_name_type = NameType.objects.order_by('-is_default')[0]
     initial_data = {'language': profile.language.id,
                     'script': profile.script.id,
                     'name_type': default_name_type.pk }
