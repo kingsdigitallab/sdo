@@ -12,44 +12,48 @@
     <xsl:param name="type" />
     <xsl:param name="as" />
     <xsl:param name="recordId" />
-    
-  <!--   <xsl:variable name="record" select="/aggregation/sdo:recordCollection/sdo:record[1]"/>  -->
-    
+
     <xsl:variable name="record">
         <xsl:choose>
-            <xsl:when test="$recordId"><xsl:sequence select="/aggregation/sdo:recordCollection/sdo:record[@ID=$recordId]"/></xsl:when>
-            <xsl:otherwise><xsl:sequence select="/aggregation/sdo:recordCollection/sdo:record[1]" /></xsl:otherwise>
+            <xsl:when test="$recordId">
+                <xsl:sequence select="/aggregation/sdo:recordCollection/sdo:record[@ID=$recordId]"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:sequence select="/aggregation/sdo:recordCollection/sdo:record[1]" />
+            </xsl:otherwise>
         </xsl:choose>
-    </xsl:variable> 
-    
-    <xsl:variable name="eats" select="/aggregation/eats" />    
+    </xsl:variable>
 
-    
+    <xsl:variable name="eats" select="/aggregation/eats" />
+
     <xsl:template match="/">
         <xsl:choose>
-            <xsl:when test="$as = 'part'"><xsl:call-template name="chapter" /></xsl:when>
-            <xsl:otherwise><xsl:call-template name="standalone" /></xsl:otherwise>
-        </xsl:choose>        
-    </xsl:template>    
+            <xsl:when test="$as = 'part'">
+                <xsl:call-template name="chapter" />
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:call-template name="standalone" />
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
     
-
     <!-- generate PDF page structure -->
         <xsl:template name="standalone">
 
             <fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
                 <fo:layout-master-set>
                     <fo:simple-page-master master-name="page"
-                        page-height="29.7cm" 
+                        page-height="29.7cm"
                         page-width="21cm"
-                        margin-top="1cm" 
-                        margin-bottom="2cm" 
-                        margin-left="2.5cm" 
+                        margin-top="1cm"
+                        margin-bottom="2cm"
+                        margin-left="2.5cm"
                         margin-right="2.5cm">
                         <fo:region-before extent="3cm"/>
                         <fo:region-body margin-top="3cm"/>
                         <fo:region-after extent="1.5cm"/>
                     </fo:simple-page-master>
-                    
+
                     <fo:page-sequence-master master-name="all">
                         <fo:repeatable-page-master-alternatives>
                             <fo:conditional-page-master-reference master-reference="page" page-position="first"/>
@@ -57,16 +61,17 @@
                     </fo:page-sequence-master>
                 </fo:layout-master-set>
 
-            
                 <fo:page-sequence master-reference="all">
                     <fo:flow flow-name="xsl-region-body">
                     <xsl:call-template name="chapter" />
-                    </fo:flow>    
+                    </fo:flow>
                 </fo:page-sequence>
             </fo:root>
         </xsl:template>
- 
- 
+
+
+
+
     <xsl:template match="tei:div">
         <xsl:choose>
             <!-- match 'transcription' and 'translation' divs in a primary document -->
@@ -88,16 +93,44 @@
                                 select="child::tei:opener/following-sibling::tei:*[not(self::tei:closer) and not(self::tei:postscript) and not(self::tei:fw[@type='envelope'])]"
                             />
                         </fo:block>
-                        <xsl:if test="child::tei:closer">
-                            <fo:block id="closer_{@type}">
-                                <xsl:apply-templates select="tei:closer"/>
-                            </fo:block>
-                        </xsl:if>
-                        <xsl:if test="child::tei:postscript">
-                            <fo:block id="postscript_{@type}">
-                                <xsl:apply-templates select="tei:postscript"/>
-                            </fo:block>
-                        </xsl:if>
+
+                        <!-- VERSIONS!!! -->
+                        <xsl:choose>
+                            <xsl:when test=".[@n='early_v']">
+                                <fo:block id="closer_{@type}_early">
+                                    <xsl:apply-templates select="tei:closer"/>
+                                </fo:block>
+                            </xsl:when>
+                            <xsl:when test=".[@n='final_v']">
+                                <fo:block id="closer_{@type}_final">
+                                    <xsl:apply-templates select="tei:closer"/>
+                                </fo:block>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <fo:block id="closer_{@type}">
+                                    <xsl:apply-templates select="tei:closer"/>
+                                </fo:block>
+                            </xsl:otherwise>
+                        </xsl:choose>
+
+                        <xsl:choose>
+                            <xsl:when test=".[@n='early_v']">
+                                <fo:block id="postscript_{@type}_early">
+                                    <xsl:apply-templates select="tei:postscript"/>
+                                </fo:block>
+                            </xsl:when>
+                            <xsl:when test=".[@n='final_v']">
+                                <fo:block id="postscript_{@type}_final">
+                                    <xsl:apply-templates select="tei:postscript"/>
+                                </fo:block>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <fo:block id="postscript_{@type}">
+                                    <xsl:apply-templates select="tei:postscript"/>
+                                </fo:block>
+                            </xsl:otherwise>
+                        </xsl:choose>
+
                         <xsl:if test="child::tei:fw[@type='envelope']">
                             <fo:list-block id="envelope_{@type}">
                                 <xsl:apply-templates select="tei:fw[@type='envelope']"/>
@@ -212,7 +245,7 @@
             </xsl:non-matching-substring>
         </xsl:analyze-string>
     </xsl:template>
- 
+
     <xsl:template match="tei:rs[@key]">
         <xsl:variable name="display-name">
             <xsl:for-each select="$eats/entities/entity[keys/key = current()/@key]">
@@ -225,15 +258,15 @@
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:for-each>
-        </xsl:variable> 
+        </xsl:variable>
         <xsl:variable name="default-name"><xsl:apply-templates/></xsl:variable>
         <xsl:apply-templates/>
         <xsl:if test="not($default-name = $display-name)">
             <fo:inline font-size="8pt"><xsl:text> [</xsl:text><xsl:value-of select="$display-name" />]</fo:inline>
         </xsl:if>
-        
+
     </xsl:template>
-    
+
     <xsl:template name="chapter">
         <fo:block font-family="serif" space-after="12pt" keep-with-next="always" line-height="20pt" font-size="18pt">
                 <xsl:if test="string-length(/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]/text()) != 0">
@@ -242,8 +275,7 @@
                 </xsl:if>
                 <xsl:value-of select="$record//sdo:itemDesc/dc:title"/>
             </fo:block>
-            
-            
+
             <xsl:if test="$record//tei:note[@place='pre-text']">
                 <fo:block>
                     <xsl:for-each select="$record//tei:note[@place='pre-text']">
@@ -253,45 +285,83 @@
                     </xsl:for-each>
                 </fo:block>
             </xsl:if>
-            
-            
-            <fo:block>                         
-                <xsl:choose>
-                    <xsl:when test="$lang = 'de'"><xsl:apply-templates select="$record//tei:div[@type='transcription']"/></xsl:when>
-                    <xsl:when test="$lang = 'en'"><xsl:apply-templates select="$record//tei:div[@type='translation']"/></xsl:when>
-                    <xsl:otherwise>
-                        <fo:table table-layout="fixed">
-                            
-                            
-                            <fo:table-column column-width="50%" column-number="1" />
-                            <fo:table-column column-width="50%" column-number="2" />
-                            
-                            <fo:table-body>
-                                
-                                <fo:table-row>
-                                    <fo:table-cell><xsl:apply-templates select="$record//tei:div[@type='transcription']"/></fo:table-cell>
-                                    <fo:table-cell><xsl:apply-templates select="$record//tei:div[@type='translation']"/></fo:table-cell>
-                                </fo:table-row>
-                                
-                            </fo:table-body>
-                            
-                            
-                            
-                        </fo:table>    
-                    </xsl:otherwise>
-                </xsl:choose>
-            </fo:block>
-            
-            <xsl:if test="$record//tei:note[@place='foot']">
+        
+
+        <xsl:choose>
+            <xsl:when test="$record//tei:div[@n='final_v' or @n='early_v']">
+                <fo:block font-size="16pt" space-after="5pt"><xsl:text>Final Version</xsl:text></fo:block>
+
+                <xsl:call-template name="text_body"><xsl:with-param name="node" select="$record//tei:div[@n='final_v']" /></xsl:call-template>
+                <xsl:call-template name="footnotes"><xsl:with-param name="node" select="$record//tei:div[@n='final_v']" /></xsl:call-template>
+                <xsl:call-template name="format_footnote"></xsl:call-template>
+               <xsl:call-template name="commentary"></xsl:call-template>
+
+                <fo:block break-before="page" font-size="16pt"><xsl:text>Early Version</xsl:text></fo:block>
+
+                <xsl:call-template name="text_body"><xsl:with-param name="node" select="$record//tei:div[@n='early_v']" /></xsl:call-template>
+                <xsl:call-template name="footnotes"><xsl:with-param name="node" select="$record//tei:div[@n='early_v']" /></xsl:call-template>
+                <xsl:call-template name="format_footnote"></xsl:call-template>
+               <xsl:call-template name="commentary"></xsl:call-template>
+            </xsl:when>
+
+            <xsl:otherwise>
+                <xsl:call-template name="text_body">
+                    <xsl:with-param name="node" select="$record//tei:div[not(@n)]" />
+                </xsl:call-template>
+                <xsl:call-template name="footnotes">
+                    <xsl:with-param name="node" select="$record//tei:div[not(@n)]" />
+                </xsl:call-template>
+                <xsl:call-template name="format_footnote"></xsl:call-template>
+                <xsl:call-template name="commentary"></xsl:call-template>
+            </xsl:otherwise>
+        </xsl:choose>
+
+
+    </xsl:template>
+
+    <xsl:template name="text_body">
+        <xsl:param name="node" />
+        <xsl:param name="version" />
+        <fo:block>
+            <xsl:choose>
+                <xsl:when test="$lang = 'de'">
+                    <xsl:apply-templates select="$node[@type='transcription']"/>
+                </xsl:when>
+                <xsl:when test="$lang = 'en'">
+                    <xsl:apply-templates select="$node[@type='translation']"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <fo:table table-layout="fixed">
+                        <fo:table-column column-width="50%" column-number="1" border-right-style="solid" border-right-width="thin" />
+                        <fo:table-column column-width="50%" column-number="2" />
+                        <fo:table-body>
+                            <fo:table-row>
+                                <fo:table-cell padding-right="5pt">
+                                    <xsl:apply-templates select="$node[@type='transcription']"/>
+                                </fo:table-cell>
+                                <fo:table-cell padding-left="5pt">
+                                    <xsl:apply-templates select="$node[@type='translation']"/>
+                                </fo:table-cell>
+                            </fo:table-row>
+                        </fo:table-body>
+                    </fo:table>
+                </xsl:otherwise>
+            </xsl:choose>
+        </fo:block>
+    </xsl:template>
+
+    <xsl:template name="footnotes">
+        <xsl:param name="node" />
+        <xsl:if test="$node//tei:note[@place='foot']">
                 <fo:block font-size="8pt" space-before="12pt">
                     <fo:block font-weight="bold" font-size="12pt" space-after="6pt">Footnotes</fo:block>
-                    <xsl:for-each select="$record//tei:note[@place='foot']">
+                    <xsl:for-each select="$node//tei:note[@place='foot']">
                         <xsl:variable name="noteNum" select="substring(substring-after(@xml:id, '-'), 3, 2)"/>
                         <fo:block>
                             <fo:basic-link>
-                            <xsl:attribute name="internal-destination" select="concat('fnLink', $noteNum)"/>  
-                            <xsl:attribute name="id" select="concat('fn', $noteNum)"/> <!---->
-                            
+                            <xsl:attribute name="internal-destination" select="concat('fnLink', $noteNum)"/>
+                            <xsl:attribute name="id" select="concat('fn', $noteNum)"/>
+
                             <fo:inline vertical-align="super" font-size="6pt">
                                 <xsl:choose>
                                     <xsl:when test="starts-with($noteNum, '0')">
@@ -300,49 +370,61 @@
                                     <xsl:otherwise>
                                         <xsl:value-of select="$noteNum"/>
                                     </xsl:otherwise>
-                                </xsl:choose>                                              
+                                </xsl:choose>
                             </fo:inline></fo:basic-link>
                             <xsl:text> </xsl:text>
                             <xsl:apply-templates/>
                         </fo:block>
                     </xsl:for-each>
-                    
                 </fo:block>
-            </xsl:if> 
-
-            <xsl:if test="($record//tei:hi[@rend='double-underline']) or ($record//tei:hi[@rend='triple-underline'])">
-                    <fo:block font-weight="bold" space-before="16pt" keep-with-next="always" font-size="12pt" space-after="6pt">Format</fo:block>
-                    <fo:block keep-with-next="always" font-size="8pt">
-                        &#8224; Double underlined
-                    </fo:block>
-                    <fo:block keep-with-next="always" font-size="8pt">
-                        &#9674; Triple underlined
-                    </fo:block>
             </xsl:if>
-
-            <xsl:for-each select="/aggregation/commentary/doc[statements/statement]">
-                <fo:block font-size="10pt">
-                    <fo:block font-weight="bold" space-before="16pt" keep-with-next="always" font-size="12pt" space-after="6pt">Commentary</fo:block>
-                    
-                    <xsl:for-each select="statements/statement">
-                        <fo:block start-indent="0.5cm" font-weight="bold" keep-with-next="always">
-                            <xsl:value-of select="@type"/>
-                        </fo:block>
-                        <fo:block start-indent="1cm">
-                            <xsl:call-template name="simple-email-encoding"/>
-                        </fo:block>
-                    </xsl:for-each>
-                    <xsl:for-each select="container/statements/statement[@type != current()/statements/statement/@type]">
-                        <fo:block start-indent="0.5cm" font-weight="bold" keep-with-next="always">
-                            <xsl:value-of select="@type"/>
-                        </fo:block>
-                        <fo:block start-indent="1cm">
-                            <xsl:call-template name="simple-email-encoding"/>
-                        </fo:block>
-                    </xsl:for-each>                                      
-                </fo:block>
-            </xsl:for-each>
-                   
     </xsl:template>
- 
+
+    <xsl:template name="format_footnote">
+        <xsl:if test="($record//tei:hi[@rend='double-underline']) or ($record//tei:hi[@rend='triple-underline'])">
+            <fo:block font-weight="bold" space-before="16pt" keep-with-next="always" font-size="12pt" space-after="6pt">Format</fo:block>
+        </xsl:if>
+        <xsl:if test="$record//tei:hi[@rend='double-underline']">
+            <fo:block keep-with-next="always" font-size="8pt">
+                &#8224; Double underlined
+            </fo:block>
+        </xsl:if>
+        <xsl:if test="$record//tei:hi[@rend='triple-underline']">
+            <fo:block keep-with-next="always" font-size="8pt">
+                &#9674; Triple underlined
+            </fo:block>
+        </xsl:if>
+    </xsl:template>
+
+    <xsl:template name="commentary">
+        <xsl:for-each select="/aggregation/commentary/doc[statements/statement]">
+            <fo:block font-size="10pt">
+                <fo:block font-weight="bold" space-before="16pt" keep-with-next="always" font-size="12pt" space-after="6pt">Commentary</fo:block>
+
+                <xsl:for-each select="statements/statement">
+                    <fo:block start-indent="0.5cm" font-weight="bold" keep-with-next="always">
+                        <xsl:value-of select="@type"/>
+                    </fo:block>
+                    <fo:block start-indent="1cm">
+                        <xsl:call-template name="simple-email-encoding"/>
+                    </fo:block>
+                </xsl:for-each>
+                <xsl:for-each select="container/statements/statement[@type != current()/statements/statement/@type]">
+                    <fo:block start-indent="0.5cm" font-weight="bold" keep-with-next="always">
+                        <xsl:value-of select="@type"/>
+                    </fo:block>
+                    <fo:block start-indent="1cm">
+                        <xsl:call-template name="simple-email-encoding"/>
+                    </fo:block>
+                </xsl:for-each>
+            </fo:block>
+        </xsl:for-each>
+    </xsl:template>
+
+
+
+
+
+
+
     </xsl:stylesheet>
