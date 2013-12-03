@@ -55,7 +55,7 @@
     
     <xsl:for-each select="/aggregation/response/result/doc/arr[@name='author_key']/str[text() = $author-id]">
       <xsl:if test="position() = 1">
-      <xsl:value-of select="../../arr[@name='author']"></xsl:value-of></xsl:if>
+      <xsl:value-of select="../../arr[@name='author'][1]"></xsl:value-of></xsl:if>
     </xsl:for-each>
   </xsl:template>
 
