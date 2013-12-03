@@ -53,6 +53,161 @@
       </div>
     </xsl:if>
 
+  <!-- make div.tab an xsl:template, call appropriately. -->
+    <xsl:choose>
+      <xsl:when test="$record//tei:div[@n='final_v' or @n='early_v']">
+          <h2>Final Version</h2>
+          <xsl:call-template name="text_body">
+            <xsl:with-param name="node" select="$record//tei:div[@n='final_v']" />
+          </xsl:call-template>
+          
+          <xsl:if test="$record//tei:note[@place='foot'] or /aggregation/commentary/doc[statements/statement]">
+            <table class="docDisplayGandE">
+              <xsl:if test="$record//tei:note[@place='foot']">
+                <xsl:call-template name="footnotes">
+                  <xsl:with-param name="node" select="$record//tei:div[@n='final_v']" />
+                </xsl:call-template>
+              </xsl:if>
+              <xsl:if test="($record//tei:hi[@rend='double-underline']) or ($record//tei:hi[@rend='triple-underline'])">
+                <xsl:call-template name="format">
+                  <xsl:with-param name="node" select="$record//tei:div[@n='final_v']" />
+                </xsl:call-template>
+              </xsl:if>
+              <xsl:call-template name="commentary"></xsl:call-template>
+            </table>
+          </xsl:if>
+
+
+          <h2>Early Version</h2>
+          <xsl:call-template name="text_body">
+            <xsl:with-param name="node" select="$record//tei:div[@n='early_v']" />
+          </xsl:call-template>
+
+          <xsl:if test="$record//tei:note[@place='foot'] or /aggregation/commentary/doc[statements/statement]">
+            <table class="docDisplayGandE">
+              <xsl:if test="$record//tei:note[@place='foot']">
+                <xsl:call-template name="footnotes">
+                  <xsl:with-param name="node" select="$record//tei:div[@n='early_v']" />
+                </xsl:call-template>
+              </xsl:if>
+              <xsl:if test="($record//tei:hi[@rend='double-underline']) or ($record//tei:hi[@rend='triple-underline'])">
+                <xsl:call-template name="format">
+                  <xsl:with-param name="node" select="$record//tei:div[@n='early_v']" />
+                </xsl:call-template>
+              </xsl:if>
+              <xsl:call-template name="commentary"></xsl:call-template>
+            </table>
+          </xsl:if>
+      </xsl:when>
+
+      <xsl:otherwise>
+          <xsl:call-template name="text_body">
+              <xsl:with-param name="node" select="$record//tei:div[not(@n)]" />
+          </xsl:call-template>
+
+          <xsl:if test="$record//tei:note[@place='foot'] or /aggregation/commentary/doc[statements/statement]">
+            <table class="docDisplayGandE">
+              <xsl:if test="$record//tei:note[@place='foot']">
+                <xsl:call-template name="footnotes">
+                  <xsl:with-param name="node" select="$record//tei:div[not(@n)]" />
+                </xsl:call-template>
+              </xsl:if>
+              <xsl:if test="($record//tei:hi[@rend='double-underline']) or ($record//tei:hi[@rend='triple-underline'])">
+                <xsl:call-template name="format">
+                  <xsl:with-param name="node" select="$record//tei:div[not(@n)]" />
+                </xsl:call-template>
+              </xsl:if>
+              <xsl:call-template name="commentary"></xsl:call-template>
+            </table>
+          </xsl:if>
+
+      </xsl:otherwise>
+    </xsl:choose>
+
+
+
+
+  </xsl:template>
+
+  <xsl:template name="commentary">
+    <xsl:for-each select="/aggregation/commentary/doc[statements/statement]">
+      <tr>
+        <td colspan="2">
+          <div class="ft">
+            <h3>Commentary</h3>
+            <dl>
+              <xsl:for-each select="statements/statement">
+                <dt>
+                  <xsl:value-of select="@type"/>
+                </dt>
+                <dd>
+                  <xsl:call-template name="simple-email-encoding"/>
+                </dd>
+              </xsl:for-each>
+              <xsl:for-each
+                select="container/statements/statement[@type != current()/statements/statement/@type]">
+                <dt>
+                  <xsl:value-of select="@type"/>
+                </dt>
+                <dd>
+                  <xsl:call-template name="simple-email-encoding"/>
+                </dd>
+              </xsl:for-each>
+            </dl>
+          </div>
+        </td>
+      </tr>
+    </xsl:for-each>
+  </xsl:template>
+
+  <xsl:template name="format">
+    <xsl:param name="node" />
+      <tr>
+        <td colspan="2">
+          <div class="ft">
+            <h3>Format</h3>
+              <xsl:if test="$node//tei:hi[@rend='double-underline']">
+                <a id="f1"><p><sup>&#8224;</sup> Double underlined</p></a>
+              </xsl:if>
+              <xsl:if test="$node//tei:hi[@rend='triple-underline']">
+                <a id="f2"><p><sup>&#9674;</sup> Triple underlined</p></a>
+              </xsl:if>
+          </div>
+        </td>
+      </tr>
+  </xsl:template>
+
+  <xsl:template name="footnotes">
+    <xsl:param name="node" />
+    <tr>
+      <td colspan="2">
+        <div class="ft">
+          <h3>Footnotes</h3>
+          <xsl:for-each select="$node//tei:note[@place='foot']">
+            <xsl:variable name="noteNum" select="substring(substring-after(@xml:id, '-'), 3, 2)"/>
+            <p>
+              <xsl:attribute name="id" select="concat('fn', $noteNum)"/>
+              <sup>
+                <xsl:choose>
+                  <xsl:when test="starts-with($noteNum, '0')">
+                    <xsl:value-of select="substring($noteNum, 2, 1)"/>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:value-of select="$noteNum"/>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </sup>
+              <xsl:text> </xsl:text>
+              <xsl:apply-templates/>
+            </p>
+          </xsl:for-each>
+        </div>
+      </td>
+    </tr>
+  </xsl:template>
+
+  <xsl:template name="text_body">
+  <xsl:param name="node" />
   <div class="tabs">
     <xsl:if test="$xmg:minimal = false() or ($xmg:minimal = true() and not($lang))">
       <div id="facingtexts">
@@ -60,7 +215,7 @@
           <tr>
             <td id="GermanVersion">
               <!-- German version. -->
-              <xsl:apply-templates select="$record//tei:div[@type='transcription']"/>
+              <xsl:apply-templates select="$node[@type='transcription']"/>
               <div id="transcCopyright">
                 <p>&#x00A9; Transcription <xsl:value-of
                     select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt[contains(., 'Transcription')]/tei:persName"
@@ -74,7 +229,7 @@
             </td>
             <td id="EnglishVersion">
               <!-- English version. -->
-              <xsl:apply-templates select="$record//tei:div[@type='translation']"/>
+              <xsl:apply-templates select="$node[@type='translation']"/>
               <div id="translCopyright">
                 <p>&#x00A9; Translation<xsl:for-each
                     select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt[contains(., 'Translation')]"><xsl:choose>
@@ -111,7 +266,7 @@
           <tr>
             <td id="GermanVersion">
               <!-- German version. -->
-              <xsl:apply-templates select="$record//tei:div[@type='transcription']"/>
+              <xsl:apply-templates select="$node[@type='transcription']"/>
               <div id="transcCopyright">
                 <p>&#x00A9; Transcription <xsl:value-of
                     select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt[contains(., 'Transcription')]/tei:persName"
@@ -134,7 +289,7 @@
           <tr>
             <td id="EnglishVersion">
               <!-- English version. -->
-              <xsl:apply-templates select="$record//tei:div[@type='translation']"/>
+              <xsl:apply-templates select="$node[@type='translation']"/>
               <div id="translCopyright">
                 <p>&#x00A9; Translation<xsl:for-each
                   select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt[contains(., 'Translation')]"><xsl:choose>
@@ -164,84 +319,7 @@
         </table>
       </div>
     </xsl:if>
-    
   </div>
-    <xsl:if test="$record//tei:note[@place='foot'] or /aggregation/commentary/doc[statements/statement]">
-    <table class="docDisplayGandE">
-      <xsl:if test="$record//tei:note[@place='foot']">
-        <tr>
-          <td colspan="2">
-            <div class="ft">
-              <h3>Footnotes</h3>
-              <xsl:for-each select="$record//tei:note[@place='foot']">
-                <xsl:variable name="noteNum" select="substring(substring-after(@xml:id, '-'), 3, 2)"/>
-                <p>
-                  <xsl:attribute name="id" select="concat('fn', $noteNum)"/>
-                  <sup>
-                    <xsl:choose>
-                      <xsl:when test="starts-with($noteNum, '0')">
-                        <xsl:value-of select="substring($noteNum, 2, 1)"/>
-                      </xsl:when>
-                      <xsl:otherwise>
-                        <xsl:value-of select="$noteNum"/>
-                      </xsl:otherwise>
-                    </xsl:choose>
-                  </sup>
-                  <xsl:text> </xsl:text>
-                  <xsl:apply-templates/>
-                </p>
-              </xsl:for-each>
-            </div>
-          </td>
-        </tr>
-      </xsl:if>
-      
-        <xsl:if test="($record//tei:hi[@rend='double-underline']) or ($record//tei:hi[@rend='triple-underline'])">
-        <tr>
-          <td colspan="2">
-            <div class="ft">
-              <h3>Format</h3>
-                <xsl:if test="$record//tei:hi[@rend='double-underline']">
-                  <a id="f1"><p><sup>&#8224;</sup> Double underlined</p></a>
-                </xsl:if>
-                <xsl:if test="$record//tei:hi[@rend='triple-underline']">
-                  <a id="f2"><p><sup>&#9674;</sup> Triple underlined</p></a>
-                </xsl:if>
-            </div>
-          </td>
-        </tr>
-      </xsl:if>
-
-      <xsl:for-each select="/aggregation/commentary/doc[statements/statement]">
-        <tr>
-          <td colspan="2">
-            <div class="ft">
-              <h3>Commentary</h3>
-              <dl>
-                <xsl:for-each select="statements/statement">
-                  <dt>
-                    <xsl:value-of select="@type"/>
-                  </dt>
-                  <dd>
-                    <xsl:call-template name="simple-email-encoding"/>
-                  </dd>
-                </xsl:for-each>
-                <xsl:for-each
-                  select="container/statements/statement[@type != current()/statements/statement/@type]">
-                  <dt>
-                    <xsl:value-of select="@type"/>
-                  </dt>
-                  <dd>
-                    <xsl:call-template name="simple-email-encoding"/>
-                  </dd>
-                </xsl:for-each>
-              </dl>
-            </div>
-          </td>
-        </tr>
-      </xsl:for-each>
-    </table>
-    </xsl:if>
   </xsl:template>
 
   <xsl:template name="simple-email-encoding">
