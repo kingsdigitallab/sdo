@@ -83,6 +83,13 @@
    </xsl:otherwise>
   </xsl:choose>
  </xsl:template>
+ 
+ <xsl:template match="tei:cell">
+  <td>
+   <xsl:attribute name="class" select="@rend"/>
+   <xsl:apply-templates/>
+  </td>
+ </xsl:template>
 
  <xsl:template match="tei:choice">
   <xsl:apply-templates/>
@@ -1524,6 +1531,12 @@
   </xsl:choose>
  </xsl:template>
 
+ <xsl:template match="tei:row">
+  <tr>
+   <xsl:apply-templates/>
+  </tr>
+ </xsl:template>
+ 
  <xsl:template match="tei:rs">
   <xsl:apply-templates/>
  </xsl:template>
@@ -1627,6 +1640,12 @@
    <xsl:apply-templates/>
    <xsl:text>]</xsl:text>
   </span>
+ </xsl:template>
+ 
+ <xsl:template match="tei:table">
+  <table>
+   <xsl:apply-templates/>
+  </table>
  </xsl:template>
 
 
