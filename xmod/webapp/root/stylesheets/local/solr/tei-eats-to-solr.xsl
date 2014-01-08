@@ -42,7 +42,10 @@
       
       <xsl:variable name="filePrefix">
         <xsl:choose>
-          <xsl:when test="contains($fileId, '-')">
+          <xsl:when test="contains($fileId, 'Hds')">
+            <xsl:text>WSLB-Hds</xsl:text>
+          </xsl:when>
+          <xsl:when test="contains($fileId, '-') and not(contains($fileId, 'Hds'))">
             <xsl:value-of select="substring-before($fileId, '-')"/>
           </xsl:when>
           <xsl:when test="contains($fileId, '_')">
@@ -364,10 +367,10 @@
           <field name="collection">            
             <xsl:variable name="collect_name">
             <xsl:choose>
-              <xsl:when test="../../../repos/entities/entity[contains(key, $filePrefix)]/collections">               
-                <xsl:value-of select="string-join(../../../repos/entities/entity[contains(key, $filePrefix)]/collections/collection, ' and ')" />
+              <xsl:when test="../../../repos/entities/entity[key = $filePrefix]/collections">               
+                <xsl:value-of select="string-join(../../../repos/entities/entity[key = $filePrefix]/collections/collection, ' and ')" />
               </xsl:when>
-              <xsl:otherwise><xsl:value-of select="../../../repos/entities/entity[contains(key, $filePrefix)]/collection" /></xsl:otherwise>
+              <xsl:otherwise><xsl:value-of select="../../../repos/entities/entity[key = $filePrefix]/collection" /></xsl:otherwise>
             </xsl:choose>
             </xsl:variable>           
             <xsl:value-of select="replace(normalize-space($collect_name), ' ', '_')"/>           
@@ -375,7 +378,7 @@
          
           <field name="repository">
             <xsl:variable name="repos_name">
-              <xsl:value-of select="../../../repos/entities/entity[contains(key, $filePrefix)]/repository"/>
+              <xsl:value-of select="../../../repos/entities/entity[key = $filePrefix]/repository"/>
             </xsl:variable>           
             <xsl:value-of select="replace(normalize-space($repos_name), ' ', '_')"/>
           </field>
