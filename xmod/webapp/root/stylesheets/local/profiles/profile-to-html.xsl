@@ -14,8 +14,14 @@
   <xsl:param name="type" />
 
   <xsl:variable name="entity-key" select="substring-before($filename, '.')" />
-  
-  <xsl:variable name="filePrefix" select="/aggregation/response/result/doc[arr[@name=$type]/str=$entity-key][1]/str[@name='filePrefix']"/>
+
+  <!-- workaround for filePrefix WSLB-Hds, treat it the same as WSLB. -->
+  <xsl:variable name="filePrefix">
+   <xsl:choose>
+      <xsl:when test="/aggregation/response/result/doc[arr[@name=$type]/str=$entity-key][1]/str[@name='filePrefix'] = 'WSLB-Hds'">WSLB</xsl:when>
+      <xsl:otherwise><xsl:value-of select="/aggregation/response/result/doc[arr[@name=$type]/str=$entity-key][1]/str[@name='filePrefix']" /></xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
 
   <xsl:variable name="correspondence" select="/aggregation/response/result/doc[str[@name='kind']='correspondence']" />
   <xsl:variable name="diaries" select="/aggregation/response/result/doc[str[@name='kind']='diaries']" />
