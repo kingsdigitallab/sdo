@@ -1009,9 +1009,7 @@
    </xsl:when>
    <!-- @@@@@@@@@ MAY NEED TO MOVE INTERLINEAR-ABOVE TO A SEPARATE TEMPLATE IF WE CAN ACTUALLY DISTINGUISH IT IN THE DISPLAY -->
    <xsl:when test="@rend='sup' or @rend='supralinear' or @rend='interlinear-above'">
-    <sup>
-     <xsl:apply-templates/>
-    </sup>
+    <sup><xsl:apply-templates/></sup>
    </xsl:when>
    <!-- @@@@@@@@@ MAY NEED TO MOVE INTERLINEAR-BELOW TO A SEPARATE TEMPLATE IF WE CAN ACTUALLY DISTINGUISH IT IN THE DISPLAY -->
    <xsl:when test="@rend='sub' or @rend='infralinear' or @rend='interlinear-below'">
@@ -1141,8 +1139,7 @@
     <xsl:choose>
      <xsl:when test="@place='foot'">
       <xsl:variable name="fnNum" select="substring(substring-after(@xml:id, '-'), 3, 2)"/>
-      <sup>
-       <a class="fnLink">
+      <sup><a class="fnLink">
         <xsl:attribute name="href">
          <xsl:text>#fn</xsl:text>
          <xsl:value-of select="$fnNum"/>
@@ -1159,8 +1156,7 @@
           <xsl:value-of select="$fnNum"/>
          </xsl:otherwise>
         </xsl:choose>
-       </a>
-      </sup>
+       </a></sup>
      </xsl:when>
      <xsl:when test="@place = 'pre-text'">
       <!-- do nothing -->
@@ -1283,8 +1279,7 @@
 
  <xsl:template match="tei:ptr">
   <xsl:variable name="ptrNum" select="substring(substring-after(@corresp, '-'), 3, 2)"/>
-  <sup>
-   <a class="fnLink">
+  <sup><a class="fnLink">
     <xsl:attribute name="href">
      <xsl:text>#fn</xsl:text>
      <xsl:value-of select="$ptrNum"/>
@@ -1635,11 +1630,7 @@
  </xsl:template>
 
  <xsl:template match="tei:supplied">
-  <span class="editorial">
-   <xsl:text>[</xsl:text>
-   <xsl:apply-templates/>
-   <xsl:text>]</xsl:text>
-  </span>
+  <span class="editorial"><xsl:text>[</xsl:text><xsl:apply-templates/><xsl:text>]</xsl:text></span>
  </xsl:template>
  
  <xsl:template match="tei:table">
