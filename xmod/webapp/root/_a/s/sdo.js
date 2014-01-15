@@ -81,3 +81,16 @@ function validate()
 	alert('WTF!');
 	
 }
+
+/*	a further fix to the problem with spaces inserted before a footnote link
+	CSS handles most occurences, except for when a <sup> is preceded by <span.editorial>
+	this function moves the <sup> into the <span> thus removing the space.
+*/
+$(document).ready(function(){
+	// look for span.editorial
+	$('span.editorial').each(function(){
+		if($(this).next('sup').length){ 
+			$(this).append($(this).next('sup'));
+		}
+	})
+});
