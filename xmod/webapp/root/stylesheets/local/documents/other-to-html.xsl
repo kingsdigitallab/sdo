@@ -33,14 +33,16 @@
     <li>
       <xsl:text>Author:</xsl:text>
       <ul>
-        <xsl:for-each select="arr[@name='author']/str">
-          <xsl:variable name="key" select="substring-before(., ' ')" />
+        <xsl:for-each select="arr[@name='author_key']/str">
+          <xsl:variable name="key" select="." />
+          <xsl:variable name="pos" select="position()"/>
+          <xsl:variable name="name" select="parent::arr/preceding-sibling::arr[@name='author']/child::str[position()=$pos]"/>
           <xsl:call-template name="browse-for-type">
-            <xsl:with-param name="type" select="substring-after(., ' ')" />
+            <xsl:with-param name="type" select="$name" />
             <xsl:with-param name="previous"
-              select="../../preceding-sibling::doc[arr[@name='author']/str[substring-before(., ' ')=$key]][1]" />
+              select="../../preceding-sibling::doc[arr[@name='author_key']/str[.=$key]][1]" />
             <xsl:with-param name="next"
-              select="../../following-sibling::doc[arr[@name='author']/str[substring-before(., ' ')=$key]][1]" />
+              select="../../following-sibling::doc[arr[@name='author_key']/str[.=$key]][1]" />
           </xsl:call-template>
         </xsl:for-each>
       </ul>
