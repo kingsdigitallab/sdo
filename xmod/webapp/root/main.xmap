@@ -95,15 +95,15 @@
           <map:part src="cocoon://_internal/menu/main.xml"/>
           <map:part src="cocoon://_internal/metadata/files.xml"/>
           <map:part label="tei" src="xml/content/index.xml"/>
-          <map:part label="rss" src="http://blog.schenkerdocumentsonline.org/feed/" />
+          <map:part label="rss" src="http://blog.schenkerdocumentsonline.org/feed/"/>
         </map:aggregate>
         <map:transform src="stylesheets/local/index.xsl">
           <map:parameter name="filedir" value="."/>
           <map:parameter name="filename" value="index.xml"/>
           <map:parameter name="fileextension" value="html"/>
-        </map:transform> 
+        </map:transform>
         <map:serialize type="html5"/>
-       <!-- <map:serialize type="xml"/> -->
+        <!-- <map:serialize type="xml"/> -->
       </map:match>
 
       <map:match pattern="*.html">
@@ -145,18 +145,18 @@
           <map:parameter name="filter2" value="{request-param:fq2}"/>
           <map:parameter name="page" value="{request-param:p}"/>
         </map:transform>
-         <map:transform type="xinclude"/>
-     <map:transform src="stylesheets/local/search-to-html.xsl">
+        <map:transform type="xinclude"/>
+        <map:transform src="stylesheets/local/search-to-html.xsl">
           <map:parameter name="filedir" value="search"/>
           <map:parameter name="filename" value=""/>
           <map:parameter name="fileextension" value=""/>
           <map:parameter name="use-request-parameters" value="true"/>
-          <map:parameter name="inc" value="{request:queryString}" />                    
+          <map:parameter name="inc" value="{request:queryString}"/>
         </map:transform>
-        <map:serialize type="xhtml"/> 
+        <map:serialize type="xhtml"/>
         <!--  <map:serialize type="xml" /> -->
       </map:match>
-          
+
     </map:pipeline>
 
     <!-- Documents browsing and display. -->
@@ -180,27 +180,27 @@
       <map:match pattern="search/terms.html">
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
-          <map:part src="cocoon://_internal/solr/query/q=term%3A*&amp;rows=5000" />
+          <map:part src="cocoon://_internal/solr/query/q=term%3A*&amp;rows=5000"/>
         </map:aggregate>
-         <map:transform src="stylesheets/local/documents/term-list-to-html.xsl" >
-         	<map:parameter name="use-request-parameters" value="true"/>
-         </map:transform>         
+        <map:transform src="stylesheets/local/documents/term-list-to-html.xsl">
+          <map:parameter name="use-request-parameters" value="true"/>
+        </map:transform>
         <map:serialize type="xhtml"/>
-     <!--   <map:serialize type="xml" /> -->
+        <!--   <map:serialize type="xml" /> -->
       </map:match>
-      
+
       <!-- Search foreign words by language -->
       <map:match pattern="search/words.html">
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
-          <map:part src="cocoon://_internal/solr/query/q=foreign_word%3A*&amp;rows=5000" />
+          <map:part src="cocoon://_internal/solr/query/q=foreign_word%3A*&amp;rows=5000"/>
         </map:aggregate>
-         <map:transform src="stylesheets/local/documents/word-list-to-html.xsl">
-         	<map:parameter name="use-request-parameters" value="true"/>
-         </map:transform>
+        <map:transform src="stylesheets/local/documents/word-list-to-html.xsl">
+          <map:parameter name="use-request-parameters" value="true"/>
+        </map:transform>
         <map:serialize type="xhtml"/>
-       <!-- <map:serialize type="xml" /> -->
-      </map:match>    
+        <!-- <map:serialize type="xml" /> -->
+      </map:match>
 
 
       <!-- Browse by date. -->
@@ -363,16 +363,15 @@
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
           <map:part
-            src="cocoon://_internal/solr/query/q=repository%3A*&amp;rows=5000&amp;fl=repository"
-          />
+            src="cocoon://_internal/solr/query/q=repository%3A*&amp;rows=5000&amp;fl=repository"/>
         </map:aggregate>
-         <map:transform src="stylesheets/local/documents/loc-list-to-html.xsl">
+        <map:transform src="stylesheets/local/documents/loc-list-to-html.xsl">
           <map:parameter name="filedir" value="documents/repository"/>
           <map:parameter name="filename" value="repository.xml"/>
           <map:parameter name="fileextension" value="html"/>
         </map:transform>
         <map:serialize type="xhtml"/>
-     <!--   <map:serialize type="xml" /> -->
+        <!--   <map:serialize type="xml" /> -->
       </map:match>
 
       <!-- Browse collections by collection. -->
@@ -389,22 +388,20 @@
           <map:parameter name="fileextension" value="html"/>
         </map:transform>
         <map:serialize type="xhtml"/>
-       <!--  <map:serialize type="xml" /> -->
+        <!--  <map:serialize type="xml" /> -->
       </map:match>
 
       <!-- Browse terms by terms. -->
       <map:match pattern="search/terms.html">
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
-          <map:part
-            src="cocoon://_internal/solr/query/q=term%3A*&amp;rows=5000&amp;fl=term"
-          />
+          <map:part src="cocoon://_internal/solr/query/q=term%3A*&amp;rows=5000&amp;fl=term"/>
         </map:aggregate>
-         <map:transform src="stylesheets/local/documents/term-list-to-html.xsl" />
+        <map:transform src="stylesheets/local/documents/term-list-to-html.xsl"/>
         <map:serialize type="xhtml"/>
-     <!--   <map:serialize type="xml" /> -->
+        <!--   <map:serialize type="xml" /> -->
       </map:match>
-      
+
       <!-- Browse foriegn words by language. -->
       <map:match pattern="search/words.html">
         <map:aggregate element="aggregation">
@@ -413,29 +410,31 @@
             src="cocoon://_internal/solr/query/q=foreign_word%3A*&amp;rows=5000&amp;fl=foreign_word"
           />
         </map:aggregate>
-         <map:transform src="stylesheets/local/documents/word-list-to-html.xsl" />
+        <map:transform src="stylesheets/local/documents/word-list-to-html.xsl"/>
         <map:serialize type="xhtml"/>
-     <!--   <map:serialize type="xml" /> -->
-      </map:match>      
+        <!--   <map:serialize type="xml" /> -->
+      </map:match>
 
       <!-- Display a single item. -->
       <map:match pattern="documents/*/*.html">
         <map:select type="resource-exists">
           <map:when test="xml/content/documents/{1}/{2}.xml">
             <map:aggregate element="aggregation">
-           <map:part src="cocoon://_internal/menu/main.xml"/>
-               <map:part
+              <map:part src="cocoon://_internal/menu/main.xml"/>
+              <map:part
                 src="cocoon://_internal/solr/query/q=kind%3A{1}&amp;rows=5000&amp;sort=dateFull%20asc"/>
-              <map:part src="xml/content/documents/{1}/{2}.xml"/>   <!---->
+              <map:part src="xml/content/documents/{1}/{2}.xml"/>
+              <!---->
               <map:part element="commentary" src="cocoon://internal/documents/commentary/{1}/{2}"/>
-               <map:part element="eats" src="cocoon://_internal/eats/entities.xml"/> <!---->
+              <map:part element="eats" src="cocoon://_internal/eats/entities.xml"/>
+              <!---->
             </map:aggregate>
             <map:transform src="stylesheets/local/documents/{1}-to-html.xsl">
               <map:parameter name="filedir" value="documents/{1}"/>
               <map:parameter name="filename" value="{2}.xml"/>
               <map:parameter name="fileextension" value="html"/>
               <map:parameter name="printable" value="true"/>
-            </map:transform>  
+            </map:transform>
             <map:serialize type="xhtml"/>
             <!-- <map:serialize type="xml"/>-->
           </map:when>
@@ -475,18 +474,19 @@
         </map:select>
       </map:match>
 
-     <!-- Print Previews -->
-      
+      <!-- Print Previews -->
+
       <!-- Print preview a single item (not diaries) -->
       <map:match pattern="mobile/*/*.html">
         <map:select type="resource-exists">
           <map:when test="xml/content/documents/{1}/{2}.xml">
             <map:aggregate element="aggregation">
               <!-- <map:part src="cocoon://_internal/menu/main.xml" /> -->
-              <map:part src="cocoon://_internal/solr/query/q=kind%3A{1}&amp;rows=5000&amp;sort=dateFull%20asc" />
-              <map:part src="xml/content/documents/{1}/{2}.xml" />
-              <map:part element="commentary" src="cocoon://internal/documents/commentary/{1}/{2}" />
-              <map:part element="eats" src="cocoon://_internal/eats/entities.xml" />
+              <map:part
+                src="cocoon://_internal/solr/query/q=kind%3A{1}&amp;rows=5000&amp;sort=dateFull%20asc"/>
+              <map:part src="xml/content/documents/{1}/{2}.xml"/>
+              <map:part element="commentary" src="cocoon://internal/documents/commentary/{1}/{2}"/>
+              <map:part element="eats" src="cocoon://_internal/eats/entities.xml"/>
             </map:aggregate>
             <map:transform src="stylesheets/local/mobile/document-to-print.xsl">
               <map:parameter name="filedir" value="mobile/{1}"/>
@@ -497,7 +497,7 @@
               <map:parameter name="use-request-parameters" value="true"/>
             </map:transform>
             <map:serialize type="xhtml"/>
-          <!--  <map:serialize type="xml" />-->
+            <!--  <map:serialize type="xml" />-->
           </map:when>
           <map:otherwise>
             <map:generate src="xml/content/http404.xml"/>
@@ -505,63 +505,66 @@
             <map:serialize status-code="404" type="xhtml"/>
           </map:otherwise>
         </map:select>
-      </map:match>       
-      
-    <!-- Print preview a single entity -->
-    
-    <map:match pattern="mobile/profiles/*/*.html">
+      </map:match>
+
+      <!-- Print preview a single entity -->
+
+      <map:match pattern="mobile/profiles/*/*.html">
         <map:select type="resource-exists">
           <map:when test="xml/content/profiles/{1}/{2}.xml">
             <map:aggregate element="aggregation">
               <!-- <map:part src="cocoon://_internal/menu/main.xml" /> -->
-              <map:part src="cocoon://_internal/metadata/files.xml" />
-              <map:part src="cocoon://_internal/solr/query/q=entity_key%3A{2}&amp;rows=5000&amp;sort=dateFull%20asc" />
-              <map:part src="xml/content/profiles/{1}/{2}.xml" />
+              <map:part src="cocoon://_internal/metadata/files.xml"/>
+              <map:part
+                src="cocoon://_internal/solr/query/q=entity_key%3A{2}&amp;rows=5000&amp;sort=dateFull%20asc"/>
+              <map:part src="xml/content/profiles/{1}/{2}.xml"/>
             </map:aggregate>
           </map:when>
           <map:otherwise>
             <map:aggregate element="aggregation">
               <!-- <map:part src="cocoon://_internal/menu/main.xml" /> -->
-              <map:part src="cocoon://_internal/metadata/files.xml" />
-              <map:part src="cocoon://_internal/solr/query/q=entity_key%3A{2}&amp;rows=5000&amp;sort=dateFull%20asc"/>
-              <map:part element="eats" src="cocoon://_internal/eats/entities.xml" />
+              <map:part src="cocoon://_internal/metadata/files.xml"/>
+              <map:part
+                src="cocoon://_internal/solr/query/q=entity_key%3A{2}&amp;rows=5000&amp;sort=dateFull%20asc"/>
+              <map:part element="eats" src="cocoon://_internal/eats/entities.xml"/>
             </map:aggregate>
           </map:otherwise>
         </map:select>
-         <map:transform src="stylesheets/local/mobile/profile-to-print.xsl">
-          <map:parameter name="filedir" value="mobile/profiles/{1}" />
-          <map:parameter name="filename" value="{2}.xml" />
-          <map:parameter name="fileextension" value="html" />
-          <map:parameter name="print" value="true" />
-          <map:parameter name="menutop" value="false" />
+        <map:transform src="stylesheets/local/mobile/profile-to-print.xsl">
+          <map:parameter name="filedir" value="mobile/profiles/{1}"/>
+          <map:parameter name="filename" value="{2}.xml"/>
+          <map:parameter name="fileextension" value="html"/>
+          <map:parameter name="print" value="true"/>
+          <map:parameter name="menutop" value="false"/>
           <map:parameter name="use-request-parameters" value="true"/>
         </map:transform>
-           <map:serialize type="xhtml"/> 
-   <!--<map:serialize type="xml" />-->
+        <map:serialize type="xhtml"/>
+        <!--<map:serialize type="xml" />-->
       </map:match>
-      
-	<!-- Print preview a diary or lessonbook item -->
+
+      <!-- Print preview a diary or lessonbook item -->
       <map:match pattern="mobile/*/*/*.html">
         <map:select type="resource-exists">
           <map:when test="xml/content/documents/{1}/{2}.xml">
             <map:aggregate element="aggregation">
               <!-- <map:part src="cocoon://_internal/menu/main.xml" /> -->
-              <map:part src="cocoon://_internal/solr/query/q=kind%3A{1}&amp;rows=5000&amp;sort=dateFull%20asc" />
-              <map:part src="xml/content/documents/{1}/{2}.xml" />
-              <map:part element="eats" src="cocoon://_internal/eats/entities.xml" />
+              <map:part
+                src="cocoon://_internal/solr/query/q=kind%3A{1}&amp;rows=5000&amp;sort=dateFull%20asc"/>
+              <map:part src="xml/content/documents/{1}/{2}.xml"/>
+              <map:part element="eats" src="cocoon://_internal/eats/entities.xml"/>
             </map:aggregate>
-           <map:transform src="stylesheets/local/mobile/document-to-print.xsl">
-              <map:parameter name="filedir" value="mobile/{1}/{2}" />
-              <map:parameter name="filename" value="{3}.xml" />
-              <map:parameter name="fileextension" value="html" />
-              <map:parameter name="print" value="true" />
-              <map:parameter name="menutop" value="false" />
+            <map:transform src="stylesheets/local/mobile/document-to-print.xsl">
+              <map:parameter name="filedir" value="mobile/{1}/{2}"/>
+              <map:parameter name="filename" value="{3}.xml"/>
+              <map:parameter name="fileextension" value="html"/>
+              <map:parameter name="print" value="true"/>
+              <map:parameter name="menutop" value="false"/>
               <map:parameter name="use-request-parameters" value="true"/>
-              <map:parameter name="recordId" value="{3}" />
+              <map:parameter name="recordId" value="{3}"/>
             </map:transform>
-            <map:serialize type="xhtml" />
-           <!--  <map:serialize type="xml" /> -->
-           </map:when>
+            <map:serialize type="xhtml"/>
+            <!--  <map:serialize type="xml" /> -->
+          </map:when>
         </map:select>
       </map:match>
 
@@ -587,7 +590,7 @@
           <map:parameter name="fileextension" value="html"/>
         </map:transform>
         <map:serialize type="xhtml"/>
-       <!-- <map:serialize type="xml" /> -->
+        <!-- <map:serialize type="xml" /> -->
       </map:match>
 
       <!-- Dates. -->
@@ -678,37 +681,7 @@
         <map:serialize type="xhtml"/>
       </map:match>
 
-      <!-- People. -->
-      <map:match pattern="profiles/person/*.html">
-        <map:select type="resource-exists">
-          <map:when test="xml/content/profiles/person/{1}.xml">
-            <map:aggregate element="aggregation">
-              <map:part src="cocoon://_internal/menu/main.xml"/>
-              <map:part src="cocoon://_internal/metadata/files.xml"/>
-              <map:part
-                src="cocoon://_internal/solr/query/q=entity_key%3A{1}&amp;rows=5000&amp;sort=dateFull%20asc"/>
-              <map:part src="xml/content/profiles/person/{1}.xml"/>
-            </map:aggregate>
-          </map:when>
-          <map:otherwise>
-            <map:aggregate element="aggregation">
-              <map:part src="cocoon://_internal/menu/main.xml"/>
-              <map:part src="cocoon://_internal/metadata/files.xml"/>
-              <map:part
-                src="cocoon://_internal/solr/query/q=entity_key%3A{1}&amp;rows=5000&amp;sort=dateFull%20asc"/>
-              <map:part element="eats" src="cocoon://_internal/eats/entities.xml"/>
-            </map:aggregate>
-          </map:otherwise>
-        </map:select>
-        <map:transform src="stylesheets/local/entities/person-to-html.xsl">
-          <map:parameter name="filedir" value="profiles/person"/>
-          <map:parameter name="filename" value="{1}.xml"/>
-          <map:parameter name="fileextension" value="html"/>
-          <map:parameter name="printable" value="true"/>
-        </map:transform>
-        <map:serialize type="xhtml"/>
-        <!--<map:serialize type="xml" /> -->
-      </map:match>
+
 
       <map:match pattern="profiles/*/*.html">
         <map:select type="resource-exists">
@@ -720,39 +693,39 @@
                 src="cocoon://_internal/solr/query/q=entity_key%3A{2}&amp;rows=5000&amp;sort=dateFull%20asc"/>
               <map:part src="xml/content/profiles/{1}/{2}.xml"/>
             </map:aggregate>
-          </map:when> 
-                 
+          </map:when>
+
           <map:otherwise>
-          	<map:select type="parameter">
-          		<map:parameter name="parameter-selector-test" value="{1}" />
-          		
-          		<map:when test="repository">
-					<map:aggregate element="aggregation">
-					  <map:part src="cocoon://_internal/menu/main.xml"/>
-					  <map:part src="cocoon://_internal/metadata/files.xml"/>
-					  <map:part
-						src="cocoon://_internal/solr/query/q=repository%3A{2}&amp;rows=5000&amp;sort=dateFull%20asc"/>
-					  <map:part label="tei" src="xml/content/colloquy/major_collections.xml"/>
-					</map:aggregate>          
-			  	</map:when>			  
-			  	<map:when test="collection">
-					<map:aggregate element="aggregation">
-					  <map:part src="cocoon://_internal/menu/main.xml"/>
-					  <map:part src="cocoon://_internal/metadata/files.xml"/>
-					  <map:part
-						src="cocoon://_internal/solr/query/q=collection%3A{2}&amp;rows=5000&amp;sort=dateFull%20asc"/>
-					  <map:part label="tei" src="xml/content/colloquy/major_collections.xml"/>
-					</map:aggregate>          
-			  </map:when>  
-          	<map:otherwise>
-				<map:aggregate element="aggregation">
-				  <map:part src="cocoon://_internal/menu/main.xml"/>
-				  <map:part src="cocoon://_internal/metadata/files.xml"/>
-				  <map:part
-					src="cocoon://_internal/solr/query/q=entity_key%3A{2}&amp;rows=5000&amp;sort=dateFull%20asc"/>
-				  <map:part element="eats" src="cocoon://_internal/eats/entities.xml"/>
-				</map:aggregate>
-            </map:otherwise>
+            <map:select type="parameter">
+              <map:parameter name="parameter-selector-test" value="{1}"/>
+
+              <map:when test="repository">
+                <map:aggregate element="aggregation">
+                  <map:part src="cocoon://_internal/menu/main.xml"/>
+                  <map:part src="cocoon://_internal/metadata/files.xml"/>
+                  <map:part
+                    src="cocoon://_internal/solr/query/q=repository%3A{2}&amp;rows=5000&amp;sort=dateFull%20asc"/>
+                  <map:part label="tei" src="xml/content/colloquy/major_collections.xml"/>
+                </map:aggregate>
+              </map:when>
+              <map:when test="collection">
+                <map:aggregate element="aggregation">
+                  <map:part src="cocoon://_internal/menu/main.xml"/>
+                  <map:part src="cocoon://_internal/metadata/files.xml"/>
+                  <map:part
+                    src="cocoon://_internal/solr/query/q=collection%3A{2}&amp;rows=5000&amp;sort=dateFull%20asc"/>
+                  <map:part label="tei" src="xml/content/colloquy/major_collections.xml"/>
+                </map:aggregate>
+              </map:when>
+              <map:otherwise>
+                <map:aggregate element="aggregation">
+                  <map:part src="cocoon://_internal/menu/main.xml"/>
+                  <map:part src="cocoon://_internal/metadata/files.xml"/>
+                  <map:part
+                    src="cocoon://_internal/solr/query/q=entity_key%3A{2}&amp;rows=5000&amp;sort=dateFull%20asc"/>
+                  <map:part element="eats" src="cocoon://_internal/eats/entities.xml"/>
+                </map:aggregate>
+              </map:otherwise>
             </map:select>
           </map:otherwise>
         </map:select>
@@ -769,7 +742,7 @@
 
       <!-- Profile print preview -->
 
-    <!--  <map:match pattern="mobile/profiles/*/*.html">
+      <!--  <map:match pattern="mobile/profiles/*/*.html">
         <map:select type="resource-exists">
           <map:when test="xml/content/profiles/{1}/{2}.xml">
             <map:aggregate element="aggregation">
@@ -810,13 +783,13 @@
           <map:part src="cocoon://_internal/metadata/files.xml"/>
           <map:part label="tei" src="xml/content/{1}/{2}.xml"/>
         </map:aggregate>
-       <map:transform src="stylesheets/local/default.xsl">
+        <map:transform src="stylesheets/local/default.xsl">
           <map:parameter name="filedir" value="{1}"/>
           <map:parameter name="filename" value="{2}.xml"/>
           <map:parameter name="fileextension" value="html"/>
         </map:transform>
-        <map:serialize type="xhtml"/> 
-      <!--    <map:serialize type="xml"/>-->
+        <map:serialize type="xhtml"/>
+        <!--    <map:serialize type="xml"/>-->
       </map:match>
     </map:pipeline>
 
