@@ -640,10 +640,8 @@
         <map:select type="exception">
 
           <map:when test="not-found">
-            <map:generate type="exception" />
+            <map:generate type="exception" src="xml/content/http404.xml" />
             <map:transform src="stylesheets/system/exception2html.xslt">
-              <map:parameter name="contextPath" value="{request:contextPath}" />
-              <map:parameter name="realPath" value="{realpath:}" />
               <map:parameter name="pageTitle" value="Resource not found" />
             </map:transform>
             <map:serialize status-code="404" />
@@ -652,8 +650,6 @@
           <map:when test="invalid-continuation">
             <map:generate type="exception" />
             <map:transform src="stylesheets/system/exception2html.xslt">
-              <map:parameter name="contextPath" value="{request:contextPath}" />
-              <map:parameter name="realPath" value="{realpath:}" />
               <map:parameter name="pageTitle" value="Invalid Continuation" />
             </map:transform>
             <map:serialize status-code="404" />
@@ -662,8 +658,6 @@
           <map:otherwise>
             <map:generate type="exception" />
             <map:transform src="stylesheets/system/exception2html.xslt">
-              <map:parameter name="contextPath" value="{request:contextPath}" />
-              <map:parameter name="realPath" value="{realpath:}" />
             </map:transform>
             <map:serialize status-code="500" />
           </map:otherwise>
