@@ -55,6 +55,7 @@
         </xsl:choose>       
       </xsl:variable>
       
+      <!-- this for-each deals with profile files; the primary content files don't have a <tei:body> element -->
       <xsl:for-each select="//tei:body">
       
         <xsl:variable name="eats_key" select="ancestor::tei:TEI/@xml:id" />  
