@@ -457,8 +457,13 @@
      </xsl:choose>
     </span>
    </xsl:when>
-   <!-- these use Chord Symbol font replacement -->
+   <xsl:when test="@type='cresc'">&#x1D192;</xsl:when>
+   <xsl:when test="@type='dim'">&#x1D193;</xsl:when>
+   <xsl:when test="@type='crescdim'">&#x1D192;&#x1D193;</xsl:when>
+   
+   
    <xsl:otherwise>
+    <!-- these use Chord Symbol font replacement -->
     <span class="csthree">
      <xsl:choose>
       <xsl:when test="@type='cap1'">&#x0102;</xsl:when>
@@ -474,9 +479,6 @@
       <xsl:when test="@type='nat'">&#x011A;</xsl:when>
       <xsl:when test="@type='sharp'">&#x011B;</xsl:when>
       <xsl:when test="@type='2sharp'">&#x011C;</xsl:when>
-      <xsl:when test="@type='cresc'">&#x02D2;</xsl:when>
-      <xsl:when test="@type='dim'">&#x02D3;</xsl:when>
-      <xsl:when test="@type='crescdim'">&#x02D2;&#x02D3;</xsl:when>
       <xsl:when test="@type='div'">&#x026F;</xsl:when>
       <xsl:otherwise><!-- do nothing for now --></xsl:otherwise>
      </xsl:choose>
