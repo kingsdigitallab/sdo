@@ -76,7 +76,7 @@
       </ul>
       <form action="" method="get" name="searchForm">
         <p>
-          <label class="search">Search  <select name="fq">
+          <label class="search" style="display:inline;">Search <select name="fq" style="display:inline;">
               <option value="all">
                 <xsl:if test="$fq='all' or $fq = ''">
                   <xsl:attribute name="selected">true</xsl:attribute>
@@ -165,7 +165,7 @@
             </select></label>
           <label class="search"> for 
           <input name="kw" size="20" type="text" value="{$kw}" />
-          </label><br/>
+          </label>
           <input type="submit" />
         </p>
       </form>
