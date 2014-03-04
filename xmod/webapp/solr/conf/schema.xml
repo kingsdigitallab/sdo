@@ -461,10 +461,14 @@
    <field name="term" multiValued="true" type="text" indexed="true" stored="true" />
    <field name="term_de" multiValued="true" type="text" indexed="true" stored="true" />
    <field name="term_en" multiValued="true" type="text" indexed="true" stored="true" /> 
-   <field name="foreign_word" multiValued="true" type="text" indexed="true" stored="true" />
+   <field name="foreign_word" multiValued="true" type="text" indexed="true" stored="true" /> 
    <field name="illustrated" type="boolean" indexed="true" stored="true" />     
    <field name="repository" multiValued="true" type="string" indexed="true" stored="true" />
    <field name="collection" multiValued="true" type="string" indexed="true" stored="true" />
+   <!-- PC, 4th March 2014: temporary dummy field to stop Solr throwing exceptions for field "foreign" being requested by zombie threads --> 
+   <field name="foreign" multiValued="true" type="text" indexed="true" stored="true" />
+   <!--  -->
+   
    <!-- <field name="eats_type" type="string" indexed="true" stored="true" required="false" />  -->
    
    <!-- xmod default fields below; for SDO these have all been made required="false" -->
