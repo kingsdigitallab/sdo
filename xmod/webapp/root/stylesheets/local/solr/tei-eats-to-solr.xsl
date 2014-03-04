@@ -379,6 +379,13 @@
               </xsl:attribute>
               <xsl:value-of select="normalize-space(lower-case(.))"/>
             </field>
+            
+            <!-- PC, 4th March 2014: temporary dummy field to stop Solr throwing exceptions for field "foreign" being requested by zombie threads -->
+            <field name="foreign">
+              <xsl:text>dummy</xsl:text>
+            </field>
+            <!--  -->
+            
           </xsl:for-each>
 
           <xsl:if test="not($filePrefix = '')">
