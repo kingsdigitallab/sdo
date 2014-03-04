@@ -224,7 +224,17 @@
             <xsl:when test="contains($fq2, 'foreign_word_')"><xsl:value-of select="substring-after($fq2, 'word_')"/></xsl:when>
           </xsl:choose>
         </xsl:variable>
-        <xsl:variable name="facet_base" select="substring-before($fq2, concat('_', $lang_id))" />
+        
+        <!-- PC, 04 Mar 2014: changed from original template because previously if $lang_id was empty
+          the value of $facet_base got set to be just 'foreign', and that caused Solr to throw severe
+          exceptions because there is no such field named 'foreign'.  -->
+        <xsl:variable name="facet_base" >
+          <xsl:choose>
+            <xsl:when test="contains($fq2, 'term')"><xsl:text>term</xsl:text></xsl:when>
+            <xsl:when test="contains($fq2, 'foreign_word')"><xsl:text>foreign_word</xsl:text></xsl:when>
+          </xsl:choose>
+        </xsl:variable>
+        
         
         <p>Remove <xsl:value-of select="translate(substring-before($fq2, concat('_', $lang_id)), '_', ' ')" /><xsl:text> </xsl:text>language filter -      
         <a>

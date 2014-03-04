@@ -117,7 +117,7 @@
               <xsl:attribute name="href">
                 <xsl:text>/search/?fq=foreign_word&amp;kw=</xsl:text>
                 <xsl:value-of select="." />
-                <xsl:if test="not($filter = 'foreign_word')">
+                <xsl:if test="not($filter = 'foreign_word') and not($filter = 'foreign_word_')">
                   <xsl:text>&amp;fq2=</xsl:text>
                   <xsl:value-of select="$fq" />
                 </xsl:if>
@@ -134,7 +134,7 @@
   <xsl:template name="add-item-count">
     <xsl:text>: </xsl:text>
     <xsl:value-of select="count(current-group())" />
-    <xsl:text> intance</xsl:text>
+    <xsl:text> instance</xsl:text>
     <xsl:if test="count(current-group()) &gt; 1">
       <xsl:text>s</xsl:text>
     </xsl:if>
