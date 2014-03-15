@@ -15,6 +15,7 @@
    <tei:handNote xml:id="AB" scope="minor">Alfred Böhme's hand (DMV)</tei:handNote>
    <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
    <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+    <tei:handNote xml:id="unk" scope="minor">Unknown hand</tei:handNote>
   </tei:handNotes>
 
 
@@ -140,9 +141,14 @@
     <tei:signed rend="indent-60"><tei:handShift new="stamp"/><tei:rs key="entity-002627"
       type="organization">DREI MASKEN VERLAG Ges. m. B. H.</tei:rs></tei:signed>
     <tei:signed rend="indent-60"><tei:handShift new="#AB"/><tei:rs key="entity-004930" type="person"
-      >Böhme</tei:rs></tei:signed><tei:note xml:id="r0001-fn06" type="editorial" place="foot"
-     >Indecipherable handwritten signature in the lower left corner.</tei:note>
-   </tei:closer>
+      >Böhme</tei:rs></tei:signed>
+   </tei:closer>  
+     
+     
+     <tei:postscript><tei:lb/><tei:lb/>
+       <tei:p><tei:handShift new="#unk"></tei:handShift><tei:note type="editorial">Indecipherable signature.</tei:note></tei:p>
+     </tei:postscript>
+   
 
   </tei:div>
 
@@ -205,8 +211,13 @@
     <tei:signed rend="indent-60"><tei:handShift new="stamp"/><tei:rs key="entity-002627"
       type="organization">DREI MASKEN VERLAG &amp; Co.</tei:rs></tei:signed>
     <tei:signed rend="indent-60"><tei:handShift new="#AB"/><tei:rs key="entity-004930" type="person"
-      >Böhme</tei:rs></tei:signed><tei:ptr corresp="#r0001-fn06" type="footnote"/>
+      >Böhme</tei:rs></tei:signed>
    </tei:closer>
+    
+    <tei:postscript><tei:lb/><tei:lb/>
+      <tei:p><tei:handShift new="#unk"></tei:handShift><tei:note type="editorial">Indecipherable signature.</tei:note></tei:p>
+    </tei:postscript>
+    
   </tei:div>
  </sdo:record>
 </sdo:recordCollection>
