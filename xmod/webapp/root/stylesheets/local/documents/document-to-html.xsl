@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns="http://www.w3.org/1999/xhtml"
-  xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
-  xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xmg="http://www.cch.kcl.ac.uk/xmod/global/1.0"
+  xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xmg="http://www.cch.kcl.ac.uk/xmod/global/1.0"
   xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
@@ -27,9 +28,12 @@
       </div>
       <div class="t01">
         <h1>
-          <xsl:if test="string-length(/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]/text()) != 0">
+          <xsl:if
+            test="string-length(/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]/text()) != 0">
             <strong>
-              <xsl:value-of select="/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]" />
+              <xsl:value-of
+                select="/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]"
+              />
             </strong>
             <xsl:text> - </xsl:text>
           </xsl:if>
@@ -81,11 +85,14 @@
             <td id="GermanVersion">
               <!-- German version. -->
               <div class="finalVersion">
-                <xsl:apply-templates select="$record/tei:div[(@type='transcription' and @n='final_v') or (@type='transcription' and not(@n))]"/>
+                <xsl:apply-templates
+                  select="$record/tei:div[(@type='transcription' and @n='final_v') or (@type='transcription' and not(@n))]"
+                />
               </div>
               <xsl:if test="$record/tei:div[@type='transcription' and @n='early_v']">
                 <div class="earlyVersion">
-                  <xsl:apply-templates select="$record/tei:div[(@type='transcription' and @n='early_v')]"/>
+                  <xsl:apply-templates
+                    select="$record/tei:div[(@type='transcription' and @n='early_v')]"/>
                 </div>
               </xsl:if>
               <div id="transcCopyright">
@@ -102,21 +109,27 @@
             <td id="EnglishVersion">
               <!-- English version. -->
               <div class="finalVersion">
-                <xsl:apply-templates select="$record/tei:div[(@type='translation' and @n='final_v') or (@type='translation' and not(@n))]"/>
+                <xsl:apply-templates
+                  select="$record/tei:div[(@type='translation' and @n='final_v') or (@type='translation' and not(@n))]"
+                />
               </div>
               <xsl:if test="$record/tei:div[@type='translation' and @n='early_v']">
                 <div class="earlyVersion">
-                  <xsl:apply-templates select="$record/tei:div[(@type='translation' and @n='early_v')]"/>
+                  <xsl:apply-templates
+                    select="$record/tei:div[(@type='translation' and @n='early_v')]"/>
                 </div>
               </xsl:if>
               <div id="translCopyright">
-                <p>&#x00A9; Translation <xsl:value-of
-                  select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt[contains(., 'Translation')]/tei:persName"
-                /><xsl:choose><xsl:when
-                  test="contains(/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt/tei:resp[contains(., 'Translation')], ',')"
-                  >, <xsl:value-of
-                    select="substring-after(/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt/tei:resp[contains(., 'Translation')], ',')"
-                  /></xsl:when><xsl:otherwise>.</xsl:otherwise></xsl:choose>
+                <p>&#x00A9; Translation <xsl:for-each
+                    select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt[contains(., 'Translation')]">
+                  <xsl:value-of select="tei:persName"/>
+                  <xsl:if test="child::tei:resp/child::tei:date"> (<xsl:value-of select="child::tei:resp/child::tei:date"/>)</xsl:if>
+                    <xsl:choose><xsl:when test="following-sibling::tei:respStmt[position()=1 and contains(., 'Translation')]">, </xsl:when>
+                    <xsl:when
+                        test="contains(., ',')">, <xsl:value-of select="substring-after(., ',')"
+                        /></xsl:when>
+                    <xsl:otherwise>.</xsl:otherwise></xsl:choose>
+                  </xsl:for-each>
                 </p>
               </div>
             </td>
@@ -129,11 +142,14 @@
             <td id="GermanVersion">
               <!-- German version. -->
               <div class="finalVersion">
-                <xsl:apply-templates select="$record/tei:div[(@type='transcription' and @n='final_v') or (@type='transcription' and not(@n))]"/>
+                <xsl:apply-templates
+                  select="$record/tei:div[(@type='transcription' and @n='final_v') or (@type='transcription' and not(@n))]"
+                />
               </div>
               <xsl:if test="$record/tei:div[@type='transcription' and @n='early_v']">
                 <div class="earlyVersion">
-                  <xsl:apply-templates select="$record/tei:div[(@type='transcription' and @n='early_v')]"/>
+                  <xsl:apply-templates
+                    select="$record/tei:div[(@type='transcription' and @n='early_v')]"/>
                 </div>
               </xsl:if>
               <div id="transcCopyright">
@@ -156,21 +172,27 @@
             <td id="EnglishVersion">
               <!-- English version. -->
               <div class="finalVersion">
-                <xsl:apply-templates select="$record/tei:div[(@type='translation' and @n='final_v') or (@type='translation' and not(@n))]"/>
+                <xsl:apply-templates
+                  select="$record/tei:div[(@type='translation' and @n='final_v') or (@type='translation' and not(@n))]"
+                />
               </div>
               <xsl:if test="$record/tei:div[@type='translation' and @n='early_v']">
                 <div class="earlyVersion">
-                  <xsl:apply-templates select="$record/tei:div[(@type='translation' and @n='early_v')]"/>
+                  <xsl:apply-templates
+                    select="$record/tei:div[(@type='translation' and @n='early_v')]"/>
                 </div>
               </xsl:if>
               <div id="translCopyright">
-                <p>&#x00A9; Translation <xsl:value-of
-                  select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt[contains(., 'Translation')]/tei:persName"
-                /><xsl:choose><xsl:when
-                  test="contains(/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt/tei:resp[contains(., 'Translation')], ',')"
-                  >, <xsl:value-of
-                    select="substring-after(/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt/tei:resp[contains(., 'Translation')], ',')"
-                  /></xsl:when><xsl:otherwise>.</xsl:otherwise></xsl:choose>
+                <p>&#x00A9; Translation <xsl:for-each
+                  select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt[contains(., 'Translation')]">
+                  <xsl:value-of select="tei:persName"/>
+                  <xsl:if test="child::tei:resp/child::tei:date"> (<xsl:value-of select="child::tei:resp/child::tei:date"/>)</xsl:if>
+                  <xsl:choose><xsl:when test="following-sibling::tei:respStmt[position()=1 and contains(., 'Translation')]">, </xsl:when>
+                    <xsl:when
+                      test="contains(., ',')">, <xsl:value-of select="substring-after(., ',')"
+                      /></xsl:when>
+                    <xsl:otherwise>.</xsl:otherwise></xsl:choose>
+                </xsl:for-each>
                 </p>
               </div>
             </td>
@@ -188,21 +210,23 @@
                 <xsl:when test="$record/tei:div[@n='final_v' or @n='early_v']">
                   <div class="finalVersion">
                     <xsl:call-template name="footnotes">
-                      <xsl:with-param name="node" select="$record/tei:div[(@n='final_v')]//tei:note[@place='foot']" />
-                      <xsl:with-param name="version" select="'_final'" />
+                      <xsl:with-param name="node"
+                        select="$record/tei:div[(@n='final_v')]//tei:note[@place='foot']"/>
+                      <xsl:with-param name="version" select="'_final'"/>
                     </xsl:call-template>
                   </div>
                   <div class="earlyVersion">
                     <xsl:call-template name="footnotes">
-                      <xsl:with-param name="node" select="$record/tei:div[(@n='early_v')]//tei:note[@place='foot']" />
-                      <xsl:with-param name="version" select="'_early'" />
+                      <xsl:with-param name="node"
+                        select="$record/tei:div[(@n='early_v')]//tei:note[@place='foot']"/>
+                      <xsl:with-param name="version" select="'_early'"/>
                     </xsl:call-template>
                   </div>
                 </xsl:when>
 
                 <xsl:otherwise>
                   <xsl:call-template name="footnotes">
-                    <xsl:with-param name="node" select="$record//tei:note[@place='foot']" />
+                    <xsl:with-param name="node" select="$record//tei:note[@place='foot']"/>
                   </xsl:call-template>
                 </xsl:otherwise>
               </xsl:choose>
@@ -210,21 +234,26 @@
           </td>
         </tr>
       </xsl:if>
-      <xsl:if test="($record//tei:hi[@rend='double-underline']) or ($record//tei:hi[@rend='triple-underline'])">
+      <xsl:if
+        test="($record//tei:hi[@rend='double-underline']) or ($record//tei:hi[@rend='triple-underline'])">
         <tr>
           <td colspan="2">
             <div class="ft">
               <h3>Format</h3>
-                <xsl:if test="$record//tei:hi[@rend='double-underline']">
-                  <a id="f1"><p><sup>&#8224;</sup> Double underlined</p></a>
-                </xsl:if>
-                <xsl:if test="$record//tei:hi[@rend='triple-underline']">
-                  <a id="f2"><p><sup>&#9674;</sup> Triple underlined</p></a>
-                </xsl:if>
+              <xsl:if test="$record//tei:hi[@rend='double-underline']">
+                <a id="f1">
+                  <p><sup>&#8224;</sup> Double underlined</p>
+                </a>
+              </xsl:if>
+              <xsl:if test="$record//tei:hi[@rend='triple-underline']">
+                <a id="f2">
+                  <p><sup>&#9674;</sup> Triple underlined</p>
+                </a>
+              </xsl:if>
             </div>
           </td>
         </tr>
-      </xsl:if>  
+      </xsl:if>
       <xsl:for-each select="/aggregation/commentary/doc[statements/statement]">
         <tr>
           <td colspan="2">
@@ -250,9 +279,14 @@
                 </xsl:for-each>
               </dl>
               <p>
-                <xsl:text>Digital version created: </xsl:text><xsl:value-of select="$record/sdo:itemDesc/dcterms:dateSubmitted"/>
+                <xsl:text>Digital version created: </xsl:text>
+                <xsl:value-of select="$record/sdo:itemDesc/dcterms:dateSubmitted"/>
                 <xsl:if test="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:revisionDesc">
-                  <br/><xsl:text>Last updated: </xsl:text><xsl:value-of select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:revisionDesc/tei:change[last()]/@when"/>
+                  <br/>
+                  <xsl:text>Last updated: </xsl:text>
+                  <xsl:value-of
+                    select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:revisionDesc/tei:change[last()]/@when"
+                  />
                 </xsl:if>
               </p>
             </div>
@@ -286,8 +320,8 @@
   </xsl:template>
 
   <xsl:template name="footnotes">
-    <xsl:param name="node" />
-    <xsl:param name="version" />
+    <xsl:param name="node"/>
+    <xsl:param name="version"/>
     <xsl:for-each select="$node">
       <xsl:variable name="noteNum" select="substring(substring-after(@xml:id, '-'), 3, 2)"/>
       <p>
