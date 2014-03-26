@@ -11,7 +11,7 @@
     </sdo:source>
 
     <tei:handNotes>
-      <tei:handNote xml:id="TPfn" scope="major">Typist "N." (DMV)</tei:handNote>
+      <tei:handNote xml:id="TPn" scope="major">Typist "N." (DMV)</tei:handNote>
       <tei:handNote xml:id="AD" scope="minor">August Demblin's hand (DMV)</tei:handNote>
       <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
       <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
@@ -105,7 +105,7 @@
 
       <tei:postscript>
         <tei:lb/><tei:lb/>
-        <tei:p>2 Anlagen<tei:lb/><tei:hi rend="underline">Einschreiben!</tei:hi>
+        <tei:p><tei:handShift new="#TPn"/>2 Anlagen<tei:lb/><tei:hi rend="underline">Einschreiben!</tei:hi>
         </tei:p>
       </tei:postscript>
 
@@ -150,13 +150,13 @@
         <tei:salute rend="indent-50">With our highest regards,</tei:salute>
         <tei:signed rend="indent-50"><tei:handShift new="#stamp"/><tei:rs key="entity-002627"
             type="organization">Drei Masken Verlag &amp; Co.</tei:rs></tei:signed>
-        <tei:signed rend="indent-80"><tei:handShift new="#AD"/>p.p. <tei:rs key="entity-004417"
+        <tei:signed rend="indent-80">p.p. <tei:handShift new="#AD"/><tei:rs key="entity-004417"
             type="person">Demblin</tei:rs></tei:signed>
       </tei:closer>
       
 
       <tei:postscript><tei:lb/><tei:lb/>
-        <tei:p>2 enclosures<tei:lb/><tei:hi rend="underline">Registered letter!</tei:hi>
+        <tei:p><tei:handShift new="#TPn"/>2 enclosures<tei:lb/><tei:hi rend="underline">Registered letter!</tei:hi>
         </tei:p>
       </tei:postscript>
 
