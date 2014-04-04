@@ -1530,6 +1530,9 @@
 
  <xsl:template match="tei:row">
   <tr>
+   <xsl:if test="@rend = 'demo'">
+    <xsl:attribute name="class">demoTable</xsl:attribute>
+   </xsl:if>
    <xsl:apply-templates/>
   </tr>
  </xsl:template>
@@ -1560,7 +1563,7 @@
     </span>
    </xsl:when>
    <xsl:when test="@type = 'demo' and @subtype = 'added'">
-    <span class="inline-addition">
+    <span class="interlinear-addition">
      <xsl:apply-templates/>
     </span>
    </xsl:when>
