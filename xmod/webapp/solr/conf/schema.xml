@@ -45,7 +45,7 @@
     that avoids logging every request
 -->
 
-<schema name="example" version="1.5">
+<schema name="sdo" version="1.2">
   <!-- attribute "name" is the name of this schema and is only used
        for display purposes.  version="x.y" is Solr's version number
        for the schema syntax and semantics.  It should not normally be
@@ -108,15 +108,12 @@
         trailing underscores (e.g. _version_) are reserved.
    -->
 
-   <field indexed="true" multiValued="true" name="document_title"
+  <!-- <field indexed="true" multiValued="true" name="document_title"
           required="false" stored="true" type="text_general" />
    <field indexed="true" multiValued="true" name="author"
           required="false" stored="true" type="string" />
    <field indexed="true" multiValued="true" name="editor"
           required="false" stored="true" type="text_general" />
-   <!-- publication_date is treated as a string, because Solr's date
-        field type requires a UTC time, and we may wish to store only
-        a year. -->
    <field indexed="true" multiValued="false" name="publication_date"
           required="false" stored="true" type="string" />
    <field indexed="true" multiValued="false" name="file_path"
@@ -130,12 +127,57 @@
    <field indexed="true" multiValued="false" name="entity_name"
           required="false" stored="true" type="text_general" />
    <field indexed="true" multiValued="false" name="eats_entity_name"
-          required="false" stored="true" type="text_general" />
+          required="false" stored="true" type="text_general" /> -->
+          
+             <field name="kind" type="string" indexed="true" stored="true" />
+   <field name="shelfmark" type="string" indexed="true" stored="true" />
+   <field name="fileId" type="string" indexed="true" stored="true" required="true" />
+   <field name="filePrefix" type="string" indexed="true" stored="true" />
+   <field name="recordId" type="string" indexed="true" stored="true" required="true" />
+   <field name="url" type="string" indexed="false" stored="true"/>
+   <field name="title" type="string" indexed="true" stored="true" />
+   <field name="description" type="string" indexed="true" stored="true" />
+   <field name="dateFull" type="date" indexed="true" stored="true" />
+   <field name="dateShort" type="string" indexed="true" stored="true" />
+   <field name="dateYear" type="string" indexed="true" stored="true" />
+   <field name="type" type="string" indexed="true" stored="true" required="false" />  
+   <field name="correspondence" multiValued="true" type="string" indexed="true" stored="true" />  
+   <field name="pupil" type="string" indexed="true" stored="true" />
+   <field name="correspondent" multiValued="true" type="string" indexed="true" stored="true"/>
+   <field name="recipient" multiValued="true" type="string" indexed="true" stored="true"/>
+   <field name="author_key" multiValued="true" type="string" indexed="true" required="false" stored="true" />
+   <field name="term" multiValued="true" type="text" indexed="true" stored="true" />
+   <field name="term_de" multiValued="true" type="text" indexed="true" stored="true" />
+   <field name="term_en" multiValued="true" type="text" indexed="true" stored="true" /> 
+   <field name="foreign_word" multiValued="true" type="text" indexed="true" stored="true" /> 
+   <field name="illustrated" type="boolean" indexed="true" stored="true" />     
+   <field name="repository" multiValued="true" type="string" indexed="true" stored="true" />
+   <field name="collection" multiValued="true" type="string" indexed="true" stored="true" />
+   <!-- PC, 4th March 2014: temporary dummy field to stop Solr throwing exceptions for field "foreign" being requested by zombie threads --> 
+   <field name="foreign" multiValued="true" type="text" indexed="true" stored="true" />
+   <!--  -->
+   
+   <!-- <field name="eats_type" type="string" indexed="true" stored="true" required="false" />  -->
+   
+   <!-- xmod default fields below; for SDO these have all been made required="false" -->
+   <field indexed="true" multiValued="true" name="document_title" required="false" stored="true" type="text" />
+   <field name="author" multiValued="true" type="string" indexed="true" required="false" stored="true" />
+   <field indexed="true" multiValued="false" name="file" required="false" stored="true" type="string" />
+   <field indexed="false" multiValued="false" name="tei_id" required="false" stored="true" type="string" />
+   <field indexed="false" multiValued="false" name="section_id" required="false" stored="true" type="string" />
+   <!-- for SDO index we make the entity-key field multiValued="true", where the default is "false" -->
+   <field indexed="true" multiValued="true" name="entity_key" required="false" stored="true" type="string" />
+   <field indexed="true" multiValued="false" name="entity_name" required="false" stored="true" type="text" />
+   <field indexed="true" multiValued="false" name="eats_entity_name" required="false" stored="true" type="string" /> 
 
    <!-- catchall field, containing all other searchable text fields
-        (implemented via copyField further on in this schema -->
+        (implemented via copyField further on in this schema 
    <field name="text" type="text_general" indexed="true"
-          stored="false" multiValued="true"/>
+          stored="false" multiValued="true"/>-->
+          
+  <!-- catchall field, containing all other searchable text fields (implemented
+        via copyField further on in this schema  -->
+   <field name="text" type="text" indexed="true" stored="true" multiValued="true"/>
 
    <!-- catchall text field that indexes tokens both normally and in
         reverse for efficient leading wildcard queries. -->
@@ -187,6 +229,10 @@
    <dynamicField name="attr_*" type="text_general" indexed="true" stored="true" multiValued="true"/>
 
    <dynamicField name="random_*" type="random" />
+   
+   
+	<dynamicField name="term_*" multiValued="true" type="text"  indexed="true"  stored="true"/>
+   	<dynamicField name="foreign_word_*" multiValued="true" type="text"  indexed="true"  stored="true"/>
 
    <!-- uncomment the following to ignore any fields that don't
         already match an existing field name or dynamic field, rather
@@ -233,6 +279,8 @@
    <!-- copy name to alphaNameSort, a field designed for sorting by name -->
    <!-- <copyField source="name" dest="alphaNameSort"/> -->
 
+<copyField dest="text" source="dateShort" />
+
   <types>
     <!-- field type definitions. The "name" attribute is
        just a label to be used by field definitions.  The "class"
@@ -246,10 +294,12 @@
        It supports doc values but in that case the field needs to be
        single-valued and either required or have a default value.
       -->
-    <fieldType name="string" class="solr.StrField" sortMissingLast="true" />
+    <fieldType name="string" class="solr.StrField" sortMissingLast="true" omitNorms="true" />
 
     <!-- boolean type: "true" or "false" -->
-    <fieldType name="boolean" class="solr.BoolField" sortMissingLast="true"/>
+    <fieldType name="boolean" class="solr.BoolField" sortMissingLast="true" omitNorms="true"/>
+    <!--Binary data type. The data should be sent/retrieved in as Base64 encoded Strings -->
+    <fieldtype name="binary" class="solr.BinaryField"/>
 
     <!-- sortMissingLast and sortMissingFirst attributes are optional attributes are
          currently supported on types that are sorted internally as strings
@@ -273,10 +323,10 @@
       These fields support doc values, but they require the field to be
       single-valued and either be required or have a default value.
     -->
-    <fieldType name="int" class="solr.TrieIntField" precisionStep="0" positionIncrementGap="0"/>
-    <fieldType name="float" class="solr.TrieFloatField" precisionStep="0" positionIncrementGap="0"/>
-    <fieldType name="long" class="solr.TrieLongField" precisionStep="0" positionIncrementGap="0"/>
-    <fieldType name="double" class="solr.TrieDoubleField" precisionStep="0" positionIncrementGap="0"/>
+    <fieldType name="int" class="solr.TrieIntField" precisionStep="0" omitNorms="true" positionIncrementGap="0"/>
+    <fieldType name="float" class="solr.TrieFloatField" precisionStep="0" omitNorms="true" positionIncrementGap="0"/>
+    <fieldType name="long" class="solr.TrieLongField" precisionStep="0" omitNorms="true" positionIncrementGap="0"/>
+    <fieldType name="double" class="solr.TrieDoubleField" precisionStep="0" omitNorms="true" positionIncrementGap="0"/>
 
     <!--
      Numeric field types that index each value at various levels of precision
@@ -288,10 +338,11 @@
      indexed per value, slightly larger index size, and faster range queries.
      A precisionStep of 0 disables indexing at different precision levels.
     -->
-    <fieldType name="tint" class="solr.TrieIntField" precisionStep="8" positionIncrementGap="0"/>
-    <fieldType name="tfloat" class="solr.TrieFloatField" precisionStep="8" positionIncrementGap="0"/>
-    <fieldType name="tlong" class="solr.TrieLongField" precisionStep="8" positionIncrementGap="0"/>
-    <fieldType name="tdouble" class="solr.TrieDoubleField" precisionStep="8" positionIncrementGap="0"/>
+    <fieldType name="tint" class="solr.TrieIntField" precisionStep="8" omitNorms="true" positionIncrementGap="0"/>
+    <fieldType name="tfloat" class="solr.TrieFloatField" precisionStep="8" omitNorms="true" positionIncrementGap="0"/>
+    <fieldType name="tlong" class="solr.TrieLongField" precisionStep="8" omitNorms="true" positionIncrementGap="0"/>
+    <fieldType name="tdouble" class="solr.TrieDoubleField" precisionStep="8" omitNorms="true" positionIncrementGap="0"/>
+
 
     <!-- The format for this date field is of the form
          1995-12-31T23:59:59Z, and is a more restricted form of the
@@ -316,11 +367,11 @@
 
          Note: For faster range queries, consider the tdate type
       -->
-    <fieldType name="date" class="solr.TrieDateField" precisionStep="0" positionIncrementGap="0"/>
+    <fieldType name="date" class="solr.TrieDateField" omitNorms="true" precisionStep="0" positionIncrementGap="0"/>
 
     <!-- A Trie based date field for faster date range queries and
          date faceting. -->
-    <fieldType name="tdate" class="solr.TrieDateField" precisionStep="6" positionIncrementGap="0"/>
+    <fieldType name="tdate" class="solr.TrieDateField" omitNorms="true" precisionStep="6" positionIncrementGap="0"/>
 
 
     <!--Binary data type. The data should be sent/retrieved in as
@@ -336,11 +387,11 @@
       value verbatim (and hence don't correctly support range queries, since the
       lexicographic ordering isn't equal to the numeric ordering)
     -->
-    <fieldType name="pint" class="solr.IntField"/>
-    <fieldType name="plong" class="solr.LongField"/>
-    <fieldType name="pfloat" class="solr.FloatField"/>
-    <fieldType name="pdouble" class="solr.DoubleField"/>
-    <fieldType name="pdate" class="solr.DateField" sortMissingLast="true"/>
+    <fieldType name="pint" class="solr.IntField" omitNorms="true"/>
+    <fieldType name="plong" class="solr.LongField" omitNorms="true"/>
+    <fieldType name="pfloat" class="solr.FloatField" omitNorms="true"/>
+    <fieldType name="pdouble" class="solr.DoubleField" omitNorms="true"/>
+    <fieldType name="pdate" class="solr.DateField" sortMissingLast="true" omitNorms="true"/>
 
     <!-- The "RandomSortField" is not used to store or search any
          data.  You can declare fields of this type it in your schema
@@ -404,6 +455,47 @@
         <filter class="solr.LowerCaseFilterFactory"/>
       </analyzer>
     </fieldType>
+    
+    <!-- A text field that uses WordDelimiterFilter to enable splitting and matching of
+        words on case-change, alpha numeric boundaries, and non-alphanumeric chars,
+        so that a query of "wifi" or "wi fi" could match a document containing "Wi-Fi".
+        Synonyms and stopwords are customized by external files, and stemming is enabled.
+        -->
+    <fieldType name="text" class="solr.TextField" positionIncrementGap="100">
+      <analyzer type="index">
+        <charFilter class="solr.MappingCharFilterFactory" mapping="mapping-ISOLatin1Accent.txt"/>
+        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+        <!-- in this example, we will only use synonyms at query time
+        <filter class="solr.SynonymFilterFactory" synonyms="index_synonyms.txt" ignoreCase="true" expand="false"/>
+        -->
+        <!-- Case insensitive stop word removal.
+          add enablePositionIncrements=true in both the index and query
+          analyzers to leave a 'gap' for more accurate phrase queries.
+        -->
+        <filter class="solr.StopFilterFactory"
+                ignoreCase="true"
+                words="stopwords.txt"
+                enablePositionIncrements="true"
+                />
+        <filter class="solr.WordDelimiterFilterFactory" generateWordParts="1" generateNumberParts="1" catenateWords="1" catenateNumbers="1" catenateAll="0" splitOnCaseChange="1"/>
+        <filter class="solr.LowerCaseFilterFactory"/>
+        <filter class="solr.SnowballPorterFilterFactory" language="English" protected="protwords.txt"/>
+      </analyzer>
+      <analyzer type="query">
+        <charFilter class="solr.MappingCharFilterFactory" mapping="mapping-ISOLatin1Accent.txt"/>
+        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+        <filter class="solr.SynonymFilterFactory" synonyms="synonyms.txt" ignoreCase="true" expand="true"/>
+        <filter class="solr.StopFilterFactory"
+                ignoreCase="true"
+                words="stopwords.txt"
+                enablePositionIncrements="true"
+                />
+        <filter class="solr.WordDelimiterFilterFactory" generateWordParts="1" generateNumberParts="1" catenateWords="0" catenateNumbers="0" catenateAll="0" splitOnCaseChange="1"/>
+        <filter class="solr.LowerCaseFilterFactory"/>
+        <filter class="solr.SnowballPorterFilterFactory" language="English" protected="protwords.txt"/>
+      </analyzer>
+    </fieldType>
+    
 
     <!-- A text field with defaults appropriate for English: it
          tokenizes with StandardTokenizer, removes English stop words
