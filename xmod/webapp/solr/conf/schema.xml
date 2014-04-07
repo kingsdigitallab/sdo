@@ -248,7 +248,7 @@
       Unless this field is marked with required="false", it will be a
       required field
    -->
- <!--<uniqueKey>id</uniqueKey>-->
+ <uniqueKey></uniqueKey><!---->
 
  <!-- DEPRECATED: The defaultSearchField is consulted by various query parsers when
   parsing a query string that isn't explicit about the field.  Machine (non-user)
@@ -375,8 +375,8 @@
 
 
     <!--Binary data type. The data should be sent/retrieved in as
-         Base64 encoded Strings -->
-    <fieldtype name="binary" class="solr.BinaryField"/>
+         Base64 encoded Strings 
+    <fieldtype name="binary" class="solr.BinaryField"/>-->
 
     <!--
       Note:
@@ -433,28 +433,6 @@
         <tokenizer class="solr.WhitespaceTokenizerFactory"/>
       </analyzer>
     </fieldType>
-
-    <!-- A general text field that has reasonable, generic
-         cross-language defaults: it tokenizes with StandardTokenizer,
-	 removes stop words from case-insensitive "stopwords.txt"
-	 (empty by default), and down cases.  At query time only, it
-	 also applies synonyms. -->
-    <fieldType name="text_general" class="solr.TextField" positionIncrementGap="100">
-      <analyzer type="index">
-        <tokenizer class="solr.StandardTokenizerFactory"/>
-        <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt" enablePositionIncrements="true" />
-        <!-- in this example, we will only use synonyms at query time
-        <filter class="solr.SynonymFilterFactory" synonyms="index_synonyms.txt" ignoreCase="true" expand="false"/>
-        -->
-        <filter class="solr.LowerCaseFilterFactory"/>
-      </analyzer>
-      <analyzer type="query">
-        <tokenizer class="solr.StandardTokenizerFactory"/>
-        <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt" enablePositionIncrements="true" />
-        <filter class="solr.SynonymFilterFactory" synonyms="synonyms.txt" ignoreCase="true" expand="true"/>
-        <filter class="solr.LowerCaseFilterFactory"/>
-      </analyzer>
-    </fieldType>
     
     <!-- A text field that uses WordDelimiterFilter to enable splitting and matching of
         words on case-change, alpha numeric boundaries, and non-alphanumeric chars,
@@ -494,8 +472,29 @@
         <filter class="solr.LowerCaseFilterFactory"/>
         <filter class="solr.SnowballPorterFilterFactory" language="English" protected="protwords.txt"/>
       </analyzer>
+    </fieldType>    
+
+    <!-- A general text field that has reasonable, generic
+         cross-language defaults: it tokenizes with StandardTokenizer,
+	 removes stop words from case-insensitive "stopwords.txt"
+	 (empty by default), and down cases.  At query time only, it
+	 also applies synonyms. -->
+    <fieldType name="text_general" class="solr.TextField" positionIncrementGap="100">
+      <analyzer type="index">
+        <tokenizer class="solr.StandardTokenizerFactory"/>
+        <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt" enablePositionIncrements="true" />
+        <!-- in this example, we will only use synonyms at query time
+        <filter class="solr.SynonymFilterFactory" synonyms="index_synonyms.txt" ignoreCase="true" expand="false"/>
+        -->
+        <filter class="solr.LowerCaseFilterFactory"/>
+      </analyzer>
+      <analyzer type="query">
+        <tokenizer class="solr.StandardTokenizerFactory"/>
+        <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt" enablePositionIncrements="true" />
+        <filter class="solr.SynonymFilterFactory" synonyms="synonyms.txt" ignoreCase="true" expand="true"/>
+        <filter class="solr.LowerCaseFilterFactory"/>
+      </analyzer>
     </fieldType>
-    
 
     <!-- A text field with defaults appropriate for English: it
          tokenizes with StandardTokenizer, removes English stop words
