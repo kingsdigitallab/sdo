@@ -83,6 +83,31 @@
         <map:mount check-reload="yes" src="private.xmap" uri-prefix="private/"/>
       </map:match>
     </map:pipeline>
+    
+	<map:handle-errors>
+    <map:select type="exception">
+      <map:when test="processing">
+      	<map:generate src="xml/content/http404.xml"/>
+        <map:transform src="stylesheets/local/error-to-html.xsl"/>
+        <map:serialize status-code="404" type="xhtml"/>
+       </map:when>
+      <map:when test="sax">
+      	<map:generate src="xml/content/http404.xml"/>
+        <map:transform src="stylesheets/local/error-to-html.xsl"/>
+        <map:serialize status-code="404" type="xhtml"/>      
+      </map:when>
+      <map:when test="application">
+      	<map:generate src="xml/content/http404.xml"/>
+        <map:transform src="stylesheets/local/error-to-html.xsl"/>
+        <map:serialize status-code="404" type="xhtml"/>
+      </map:when>
+      <map:otherwise>
+      	<map:generate src="xml/content/http404.xml"/>
+        <map:transform src="stylesheets/local/error-to-html.xsl"/>
+        <map:serialize status-code="404" type="xhtml"/>
+      </map:otherwise>      
+    </map:select>
+  </map:handle-errors>
 
     <map:pipeline type="caching">
       <map:match pattern="">
