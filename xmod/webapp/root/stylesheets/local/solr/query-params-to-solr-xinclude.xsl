@@ -38,7 +38,7 @@
         
         <xi:include>
           <xsl:attribute name="href">
-            <xsl:text>cocoon://_internal/solr/#/collection1/query/q=</xsl:text><xsl:value-of select="$escaped-keyword" />
+            <xsl:text>cocoon://_internal/solr/query/q=</xsl:text><xsl:value-of select="$escaped-keyword" />
             <xsl:choose>
               <xsl:when test="$filter = 'all' or $filter = ''" />
               <xsl:when test="(contains($filter, 'foreign_word') or contains($filter, 'term')) and $fq2 != ''"/>
