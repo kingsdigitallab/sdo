@@ -75,7 +75,16 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:variable>
-  
+  <xsl:variable name="xmg:error">
+    <xsl:choose>
+      <xsl:when test="$type = 'error'">
+        <xsl:value-of select="true()"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="false()"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable> 
     <xsl:variable name="mobile-path">
       <xsl:choose>
         <xsl:when test="contains($filedir, 'profiles') and not(contains($filedir, 'mobile'))"><xsl:text>mobile/</xsl:text><xsl:value-of select="$filedir" /><xsl:text>/</xsl:text></xsl:when>
@@ -500,7 +509,9 @@
               <xsl:call-template name="xms:rhcontent"/>
               <div id="mainContent">
                 <xsl:call-template name="xms:pagehead"/>
-                <xsl:call-template name="xms:toc1"/>
+                <xsl:if test="$xmg:error = true()">
+                  <xsl:call-template name="xms:toc1"/>
+                </xsl:if>  
                 <xsl:call-template name="xms:content"/>
                 <xsl:call-template name="xms:footnotes"/>
               </div>
