@@ -675,6 +675,7 @@
      </xsl:when>
      <xsl:when test="@type = 'unknown'">
       <xsl:variable name="file" select="@cRef"/>
+      
       <xsl:variable name="fileref">
        <xsl:choose>
         <xsl:when test="doc-available(string(concat('../../xml/content/documents/correspondence/', $file, '.xml')))">  
@@ -694,50 +695,43 @@
         </xsl:otherwise>
        </xsl:choose>
       </xsl:variable>
+      
       <xsl:choose>
        <xsl:when test="$fileref != ''">
          <xsl:variable name="path" select="concat('/documents/correspondence/', $fileref, '.html')"/>
-         ££<fo:basic-link color="blue">
+         <fo:basic-link color="blue">
           <xsl:call-template name="internal-link">
            <xsl:with-param name="title" select="$file"/>
           </xsl:call-template>
-          <xsl:attribute name="internal-destination">
-           <xsl:value-of select="$path"/>
+          <xsl:attribute name="external-destination">
+           <xsl:value-of select="concat('http://www.schenkerdocumentsonline.org/', $path)"/>
           </xsl:attribute>
           <xsl:apply-templates/>
          </fo:basic-link>         
        </xsl:when>
        <xsl:otherwise>
-        %%<fo:basic-link color="blue">
-         <xsl:call-template name="internal-link">
-          <xsl:with-param name="title">
-           <xsl:text>this unavailable - document not yet online.</xsl:text>
-          </xsl:with-param>
-         </xsl:call-template>
-         <xsl:apply-templates/>
-        </fo:basic-link> 
+         <xsl:apply-templates/>        
        </xsl:otherwise>
-      </xsl:choose>
-      
+      </xsl:choose>     
      </xsl:when>
+     
      <xsl:otherwise>
       <xsl:variable name="file" select="@cRef"/>
       <xsl:variable name="title" select="//xmmf:file[@xml:id = $file]/@title"/>
       <xsl:variable name="path" select="//xmmf:file[@xml:id = $file]/@path"/>
-      @@<fo:basic-link color="blue">
+      <fo:basic-link color="blue">
        <xsl:call-template name="internal-link">
-        <xsl:with-param name="title" select="$title"/>
+        <xsl:with-param name="title" select="$file"/>
        </xsl:call-template>
-       <xsl:attribute name="internal-destination">
-        <xsl:value-of select="$xmp:context-path"/>
-        <xsl:text>/</xsl:text>
-        <xsl:value-of select="$path"/>
+       <xsl:attribute name="external-destination">
+        <xsl:value-of select="concat('http://www.schenkerdocumentsonline.org/', $path)"/>
        </xsl:attribute>
        <xsl:apply-templates/>
       </fo:basic-link>
      </xsl:otherwise>
     </xsl:choose>
    </xsl:when>
+   
    <xsl:when test="@target">
     ^^<fo:basic-link color="blue">
      <xsl:attribute name="external-destination">
@@ -779,6 +773,7 @@
    </xsl:otherwise>
   </xsl:choose>
  </xsl:template>
+ 
  <xsl:template name="internal-link">
   <xsl:param name="title"/>
   <!-- Title information and extra class for if external window -->
@@ -992,11 +987,41 @@
   </fo:block>
  </xsl:template>
  
+ <xsl:template match="tei:dl">
+  <xsl:apply-templates select="*"/>
+ </xsl:template>
+ 
+ <xsl:template match="tei:dt">
+  <fo:block font-weight="bold" space-after="2pt"
+   keep-with-next="always">
+   <xsl:apply-templates select="*|text()"/>
+  </fo:block>
+ </xsl:template>
+ 
+ <xsl:template match="tei:dd">
+  <fo:block start-indent="1cm">
+   <xsl:attribute name="space-after">
+    <xsl:choose>
+     <xsl:when test="name(following::*[1]) = 'dd'">
+      <xsl:text>3pt</xsl:text>
+     </xsl:when>
+     <xsl:otherwise>
+      <xsl:text>12pt</xsl:text>
+     </xsl:otherwise>
+    </xsl:choose>
+   </xsl:attribute>
+   <xsl:apply-templates select="*|text()"/>
+  </fo:block>
+ </xsl:template>
+ 
  <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ TEI:GRAPHIC AND RELATED TEMPLATES @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
  <xsl:template match="tei:graphic[@url]">
-  <xsl:call-template name="showFigure"/>
+  <xsl:call-template name="showFigure"/> 
  </xsl:template>
+ 
+ <xsl:template match="tei:figure/tei:head"/>
+ <xsl:template match="tei:figure/tei:figDesc"/> 
  
  
  <!-- Image dimensions -->
@@ -1027,16 +1052,20 @@
   <xsl:variable name="img-thm-prefix" select="'thm_'"/>
   
   <!-- path to images -->
-  <xsl:variable name="img-path-full"
-   select="concat($img-folder, '/', $img-subpath-full, '/',
-      $img-src)"/>
-  <xsl:variable name="img-path-thumb"
-   select="concat($img-folder, '/', $img-subpath-thumb,
-      '/thm_', $img-src)"/>
+  <xsl:variable name="img-path-full" select="concat($img-folder, '/', $img-subpath-full, '/', $img-src)"/>
+  <xsl:variable name="img-path-thumb" select="concat($img-folder, '/', $img-subpath-thumb, '/thm_', $img-src)"/>
   
+  <!-- caption -->
+  <xsl:variable name="img-cap-desc">
+   <xsl:choose>
+    <xsl:when test="ancestor::tei:figure/tei:head"><xsl:value-of select="ancestor::tei:figure/tei:head"/></xsl:when>
+    <xsl:otherwise><xsl:value-of select="ancestor::tei:figure/tei:figDesc"/></xsl:otherwise>
+   </xsl:choose>
+  </xsl:variable>
   
   <!-- OUTPUT FIGURE TEMPLATE -->
   <xsl:choose>
+    
    <!-- PC, 5 March 2013 -->
    <!-- THE 'WHEN' CONDITION BELOW IS THE CURRENT CODE FOR MUSICAL EXAMPLES IN SDO PRIMARY DOCUMENTS -->
    <xsl:when test="parent::tei:figure[@type='musical_example'] and @n='thumb'">
@@ -1049,6 +1078,29 @@
    <!-- FUNCTIONALLY IDENTICAL TO THE MUSICAL EXAMPLE CODE ABOVE, BUT WE WANT TO KEEP THE IMAGE TYPES SEPARATE -->
    <xsl:when test="parent::tei:figure[@type='misc_image'] and @n='thumb'">
     <fo:external-graphic src="url('{concat('http://www.schenkerdocumentsonline.org', $img-path-thumb)}')" content-type="image/png" content-height="scale-to-fit" height="0.6cm"/>
+   </xsl:when>
+   
+   <xsl:when test="not(contains(@xmt:type, 'thumb'))">
+   
+    <fo:block font-weight="bold" space-after="2pt" keep-with-next="always">
+     <fo:external-graphic src="url('{concat('http://www.schenkerdocumentsonline.org', $img-path-full)}')" content-type="image/png" content-height="scale-to-fit" height="6cm"/>	
+    </fo:block>
+    
+    <xsl:if test="$img-cap-desc != ''">
+    <fo:block start-indent="1cm">
+     <xsl:attribute name="space-after">
+      <xsl:choose>
+       <xsl:when test="name(following::*[1]) = 'dd'">
+        <xsl:text>3pt</xsl:text>
+       </xsl:when>
+       <xsl:otherwise>
+        <xsl:text>12pt</xsl:text>
+       </xsl:otherwise>
+      </xsl:choose>
+     </xsl:attribute>
+     <xsl:value-of select="$img-cap-desc"/>
+    </fo:block>
+    </xsl:if>
    </xsl:when>
 
   </xsl:choose>

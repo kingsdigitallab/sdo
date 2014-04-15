@@ -5,6 +5,8 @@
     xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
     xmlns:tei="http://www.tei-c.org/ns/1.0" 
     xmlns:xmg="http://www.cch.kcl.ac.uk/xmod/global/1.0"
+    xmlns:xmp="http://www.cch.kcl.ac.uk/xmod/properties/1.0"
+    xmlns:xmt="http://www.cch.kcl.ac.uk/xmod/tei/1.0"
     xmlns:zip="http://apache.org/cocoon/zip-archive/1.0"
     xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -79,7 +81,17 @@
 <!-- STYLESHEETS -->
           <zip:entry name="OEBPS/Style/default.css" src="../../_a/c/default.css" />
           <zip:entry name="OEBPS/Style/personality.css" src="../../_a/c/personality.css" />
+ 
+<!-- IMAGES -->
           
+          <xsl:for-each select="$record//tei:graphic[not(@xmt:type='thumb-caption')]">   
+              <xsl:variable name="image_full" select="concat('../../', $xmp:images-path, '/local/full/', @url)"/>
+              <xsl:variable name="image_thumb" select="concat('../../', $xmp:images-path, '/local/thumb/thm_', @url)"/>
+              <!-- texts -->
+              <zip:entry name="OEBPS/Image/full/{@url}" src="{$image_full}" />       
+              <zip:entry name="OEBPS/Image/thumb/thm_{@url}" src="{$image_thumb}" /> 
+          </xsl:for-each> 
+ 
           
 <!-- CONTAINER.XML -->
           <zip:entry name="META-INF/container.xml" src="../../stylesheets/local/mobile/documents/container.xml" />
@@ -200,7 +212,7 @@
     <xsl:text>
     </xsl:text><ncx:head>
         <xsl:text>
-        </xsl:text><ncx:meta name="dtb:uid" content="http://sdo.cch.kcl.ac.uk/{replace($filedir, 'mobile', 'documents')}/{$fileId}.html"/>
+        </xsl:text><ncx:meta name="dtb:uid" content="http://www.schenkerdocumentsonline.org/{replace($filedir, 'mobile', 'documents')}/{$fileId}.html"/>
         <xsl:text>
         </xsl:text><ncx:meta name="dtb:depth" content="2"/>
         <xsl:text>
@@ -251,6 +263,5 @@
       </zip:archive>       
 
   </xsl:template>
-    
  
     </xsl:stylesheet>

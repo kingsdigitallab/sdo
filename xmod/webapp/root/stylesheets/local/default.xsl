@@ -588,7 +588,7 @@
 
   <xsl:template name="xmv:print-footer">
     <div id="footer">
-      <div class="s01"><xsl:text>Document URL: http://sdo.cch.kcl.ac.uk/</xsl:text>
+      <div class="s01"><xsl:text>Document URL: http://www.schenkerdocumentsonline.org/</xsl:text>
         <xsl:choose>
           <xsl:when test="contains($filedir, 'profiles')"><xsl:value-of select="replace($filedir, 'mobile/', '')"/></xsl:when>
           <xsl:otherwise><xsl:value-of select="replace($filedir, 'mobile', 'documents')" /></xsl:otherwise>
