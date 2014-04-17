@@ -733,7 +733,7 @@
    </xsl:when>
    
    <xsl:when test="@target">
-    ^^<fo:basic-link color="blue">
+    <fo:basic-link color="blue">
      <xsl:attribute name="external-destination">
       <xsl:if test="starts-with(@target, '/')">
        <xsl:value-of select="$xmp:context-path"/>

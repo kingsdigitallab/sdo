@@ -126,25 +126,25 @@
           <xsl:if test="$correspondence">
             <fo:list-item>
               <fo:list-item-label end-indent="label-end()"><fo:block>   </fo:block></fo:list-item-label>           
-              <fo:list-item-body><fo:block><fo:basic-link internal-destination="#correspondence">Correspondence</fo:basic-link></fo:block></fo:list-item-body>
+              <fo:list-item-body><fo:block><fo:basic-link internal-destination="correspondence" color="green">Correspondence</fo:basic-link></fo:block></fo:list-item-body>
             </fo:list-item> 
           </xsl:if>
           <xsl:if test="$diaries">
             <fo:list-item>
               <fo:list-item-label end-indent="label-end()"><fo:block>   </fo:block></fo:list-item-label>           
-              <fo:list-item-body><fo:block><fo:basic-link internal-destination="#diaries">Diaries</fo:basic-link></fo:block></fo:list-item-body>
+              <fo:list-item-body><fo:block><fo:basic-link internal-destination="diaries" color="green">Diaries</fo:basic-link></fo:block></fo:list-item-body>
             </fo:list-item>  
           </xsl:if>
           <xsl:if test="$lessonbooks">
             <fo:list-item>
               <fo:list-item-label end-indent="label-end()"><fo:block>   </fo:block></fo:list-item-label>           
-              <fo:list-item-body><fo:block><fo:basic-link internal-destination="#lessonbooks">Lessonbooks</fo:basic-link></fo:block></fo:list-item-body>
+              <fo:list-item-body><fo:block><fo:basic-link internal-destination="lessonbooks" color="green">Lessonbooks</fo:basic-link></fo:block></fo:list-item-body>
             </fo:list-item>             
           </xsl:if>
           <xsl:if test="$other">
             <fo:list-item>
               <fo:list-item-label end-indent="label-end()"><fo:block>   </fo:block></fo:list-item-label>           
-              <fo:list-item-body><fo:block><fo:basic-link internal-destination="#other">Other material</fo:basic-link></fo:block></fo:list-item-body>
+              <fo:list-item-body><fo:block><fo:basic-link internal-destination="other" color="green">Other material</fo:basic-link></fo:block></fo:list-item-body>
             </fo:list-item>  
           </xsl:if>
         </fo:list-block>
@@ -261,10 +261,10 @@
     <xsl:param name="id" />
     <xsl:param name="docs" />
     <xsl:if test="$docs">
-      <fo:block font-family="serif" space-after="14pt" keep-with-next="always" line-height="24pt" font-size="21pt">
+      <fo:block id="{$id}" font-family="serif" space-after="14pt" keep-with-next="always" line-height="24pt" font-size="21pt">
         <xsl:value-of select="$name" />
       </fo:block>
-      <fo:block id="{$id}">
+      <fo:block>
         <fo:list-block provisional-distance-between-starts="0.2cm" provisional-label-separation="0.5cm" space-after="12pt" start-indent="1cm">  
           <xsl:apply-templates select="$docs" />
         </fo:list-block>
@@ -273,10 +273,13 @@
   </xsl:template>
 
   <xsl:template match="doc">
+    <xsl:variable name="path" select="concat('http://www.schenkerdocumentsonline.org/', str[@name='url'])"/>
+    
     <fo:list-item>
       <fo:list-item-label end-indent="label-end()"><fo:block>   </fo:block></fo:list-item-label>
       <fo:list-item-body>
         <fo:block>
+          <fo:basic-link color="blue" external-destination="{$path}">
           <xsl:value-of select="str[@name='shelfmark']" />
           <xsl:text> </xsl:text>
           <fo:inline font-weight="bold">
@@ -291,7 +294,12 @@
             </xsl:choose>
           </fo:inline>
         <xsl:if test="arr[@name='author'] and arr[@name='author_key'] = $filename"> [Author]</xsl:if>
+          </fo:basic-link>
+          <fo:inline font-size="6pt">
+          <xsl:text> [</xsl:text><xsl:value-of select="$path"/><xsl:text>]</xsl:text>
+        </fo:inline>  
       </fo:block>
+           
       <xsl:if test="str[@name='description']">
         <fo:block>
           <xsl:value-of select="str[@name='description']" />

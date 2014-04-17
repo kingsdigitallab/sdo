@@ -2,6 +2,8 @@
 <xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns="http://www.w3.org/1999/xhtml"
     xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
     xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xmg="http://www.cch.kcl.ac.uk/xmod/global/1.0"
+    xmlns:xmmf="http://www.cch.kcl.ac.uk/xmod/metadata/files/1.0"
+    xmlns:dcterms="http://purl.org/dc/terms/"
     xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:fo="http://www.w3.org/1999/XSL/Format">
@@ -25,6 +27,18 @@
     </xsl:variable>
 
     <xsl:variable name="eats" select="/aggregation/eats" />
+    
+    <xsl:variable name="docType">
+        <xsl:choose>
+            <xsl:when test="/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]/local-name() = 'diary'"><xsl:text>diaries</xsl:text></xsl:when>
+            <xsl:when test="/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]/local-name() = 'lessonbook'"><xsl:text>lessonbooks</xsl:text></xsl:when>
+            <xsl:otherwise><xsl:value-of select="/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]/local-name()"/></xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>
+    
+    <xsl:variable name="docID" select="/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]/@sdoID"/>
+    
+    <xsl:variable name="path"><xsl:text>http://www.schenkerdocumentsonline.org/documents/</xsl:text><xsl:value-of select="$docType"/><xsl:text>/</xsl:text><xsl:value-of select="$docID"/><xsl:if test="$recordId"><xsl:text>/</xsl:text><xsl:value-of select="$recordId"/></xsl:if><xsl:text>.html</xsl:text></xsl:variable>
 
     <xsl:template match="/">
         <xsl:choose>
@@ -268,12 +282,18 @@
     </xsl:template>
 
     <xsl:template name="chapter">
+        
         <fo:block font-family="serif" space-after="12pt" keep-with-next="always" line-height="20pt" font-size="18pt">
                 <xsl:if test="string-length(/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]/text()) != 0">
                     <xsl:value-of select="/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]" />
                     <xsl:text> - </xsl:text>
                 </xsl:if>
                 <xsl:value-of select="$record//sdo:itemDesc/dc:title"/>
+            <fo:basic-link external-destination="{$path}" color="blue">
+            <fo:inline font-size="8pt">
+                <xsl:text> [</xsl:text><xsl:value-of select="$path"/><xsl:text>]</xsl:text>
+            </fo:inline>
+            </fo:basic-link> 
             </fo:block>
 
             <xsl:if test="$record//tei:note[@place='pre-text']">
@@ -315,8 +335,6 @@
                 <xsl:call-template name="commentary"></xsl:call-template>
             </xsl:otherwise>
         </xsl:choose>
-
-
     </xsl:template>
 
     <xsl:template name="text_body">
@@ -347,6 +365,42 @@
                     </fo:table>
                 </xsl:otherwise>
             </xsl:choose>
+        </fo:block>
+        
+        <fo:block font-weight="bold" space-before="16pt" keep-with-next="always" font-size="12pt" space-after="6pt">Citation</fo:block>
+        <fo:block>
+            <xsl:text>Schenker Documents Online, </xsl:text>
+            <xsl:choose>
+                <xsl:when test="string-length(/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]/text()) != 0"><xsl:value-of select="/aggregation/sdo:recordCollection/sdo:collectionDesc/sdo:source/child::*[1]" /></xsl:when>
+                <xsl:when test="$recordId"><xsl:value-of select="/aggregation/sdo:recordCollection/sdo:record[@ID=$recordId]/sdo:itemDesc/dc:title" /></xsl:when>
+                <xsl:otherwise><xsl:value-of select="/aggregation/sdo:recordCollection/sdo:record/sdo:itemDesc/dc:title" /></xsl:otherwise>
+            </xsl:choose>  
+            <xsl:choose>
+                <xsl:when test="$docType = 'correspondence'">
+                    <xsl:text> (</xsl:text><xsl:value-of select="format-dateTime(/aggregation/sdo:recordCollection/sdo:record/sdo:itemDesc/dcterms:created, '[MNn] [D01], [Y0001]')"/>
+                    <xsl:text>), transcr. Christoph Hust, transl. Ian Bent. </xsl:text>
+                </xsl:when>
+                <xsl:when test="$docType = 'diaries'">
+                    <xsl:text>, transcr. Marko Deisinger, trans. Stephen Ferguson. </xsl:text>
+                </xsl:when>
+                <xsl:when test="$docType = 'lessonbooks'">
+                    <xsl:text>,  transcr. Robert Kosovsky, transl. Sigrun Heinzelmann. </xsl:text>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:text>,  </xsl:text>
+                    <xsl:for-each select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt[tei:resp[contains(text(), 'Trans')]]">
+                        <xsl:for-each select="tei:resp[contains(text(), 'Trans')]">
+                            <xsl:if test="contains(text(), 'Transcription')"><xsl:text>transcr. </xsl:text></xsl:if>
+                            <xsl:if test="contains(text(), 'Translation')"><xsl:text>transl. </xsl:text></xsl:if>
+                            <xsl:if test="last() > 1 and position() != last()"><xsl:text>and </xsl:text> </xsl:if>
+                        </xsl:for-each>
+                        <xsl:value-of select="tei:persName"/>
+                        <xsl:if test="position() != last()"><xsl:text>,</xsl:text></xsl:if>
+                        <xsl:text> </xsl:text>
+                    </xsl:for-each>
+                </xsl:otherwise>
+            </xsl:choose>
+            <xsl:value-of select="$path"/> <xsl:text> Accessed: </xsl:text><xsl:value-of select="format-date(current-date(), '[D01] [MNn] [Y0001]')"/>
         </fo:block>
     </xsl:template>
 
@@ -420,11 +474,6 @@
             </fo:block>
         </xsl:for-each>
     </xsl:template>
-
-
-
-
-
 
 
     </xsl:stylesheet>
