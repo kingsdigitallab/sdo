@@ -80,7 +80,7 @@
         <li>
           <a>
             <xsl:attribute name="href">
-              <xsl:text>../../profiles/correspondence/</xsl:text>
+              <xsl:text>/profiles/correspondence/</xsl:text>
               <xsl:value-of select="substring-before(., ' ')" />
               <xsl:text>.html</xsl:text>
             </xsl:attribute>
