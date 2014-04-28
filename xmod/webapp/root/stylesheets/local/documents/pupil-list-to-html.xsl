@@ -4,6 +4,7 @@
   xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:import href="../default.xsl" />
+  <xsl:param name="filter"/>
 
   <xsl:param name="subtype-name" />
   <xsl:param name="subtype-value" />
@@ -23,15 +24,18 @@
   <xsl:variable name="root" select="/" />
 
   <xsl:template name="xms:content">
-    <xsl:variable as="xs:string" name="alphabet" select="'A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z'" />
+    <xsl:variable as="xs:string" name="alphabet" select="'All,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z'" />
     <div class="alphaNav">
       <div class="t01">
         <ul>
           <xsl:for-each select="tokenize($alphabet, ',')">
             <li>
               <xsl:choose>
-                <xsl:when test="key('alpha-tags', ., $root)">
-                  <a href="#{.}">
+                <xsl:when test="key('alpha-tags', ., $root) or . = 'All'">
+                  <a>
+                    <xsl:attribute name="href">
+                      <xsl:value-of select="."/>
+                    </xsl:attribute>                    
                     <xsl:value-of select="." />
                   </a>
                 </xsl:when>
@@ -50,7 +54,9 @@
     <xsl:for-each-group group-by="substring(substring-after(., ' '), 1, 1)"
       select="distinct-values(/aggregation/response/result/doc/str[@name='pupil'])">
       <xsl:sort select="substring-after(., ' ')" />
-      <xsl:variable name="initial" select="upper-case(substring(current-grouping-key(), 1))" />
+      <xsl:variable name="initial" select="upper-case(current-grouping-key())" />
+      <xsl:if test="upper-case($filter) = $initial or $filter = 'All' or ($filter = '' and $initial = 'A')">
+        
       <h3 id="{$initial}">
         <xsl:value-of select="$initial" />
       </h3>
@@ -70,6 +76,7 @@
           </li>
         </xsl:for-each>
       </ul>
+      </xsl:if>
     </xsl:for-each-group>
   </xsl:template>
 

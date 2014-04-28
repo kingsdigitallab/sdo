@@ -7,6 +7,7 @@
   xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <xsl:import href="../default.xsl" />
+  <xsl:param name="filter"/>
 
   <xsl:variable name="xmg:title">
     <xsl:text>Browse Correspondence by Correspondents</xsl:text>
@@ -21,7 +22,7 @@
 
   <xsl:template name="xms:content">
     
-    <xsl:variable as="xs:string" name="alphabet" select="'A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z'" />
+    <xsl:variable as="xs:string" name="alphabet" select="'All,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z'" />
     
     <div class="alphaNav">
       <div class="t01">
@@ -29,8 +30,11 @@
           <xsl:for-each select="tokenize($alphabet, ',')">
             <li>
               <xsl:choose>
-                <xsl:when test="key('alpha-profiles', ., $root)">
-                  <a href="#{.}">
+                <xsl:when test="key('alpha-profiles', ., $root) or . = 'All'">
+                  <a>
+                    <xsl:attribute name="href">
+                      <xsl:value-of select="."/>
+                    </xsl:attribute>
                     <xsl:value-of select="." />
                   </a>
                 </xsl:when>
@@ -50,12 +54,14 @@
     <!-- Group by first initial of correspondent. -->
     <xsl:for-each-group group-by="substring(replace(normalize-unicode(normalize-space(substring-after(., ' ')),'NFKD'),'[^A-Za-z0-9 ]',''), 1, 1)"
       select="distinct-values(/aggregation/response/result/doc/arr[@name='correspondence']/str)">
-
-      <xsl:sort select="replace(normalize-unicode(normalize-space(substring-after(., ' ')),'NFKD'),'[^A-Za-z0-9 ]','')" />
+<xsl:sort select="replace(normalize-unicode(normalize-space(substring-after(., ' ')),'NFKD'),'[^A-Za-z0-9 ]','')" />
       
+      
+      <xsl:if test="upper-case($filter) = upper-case(current-grouping-key()) or $filter = 'All' or ($filter = '' and upper-case(current-grouping-key()) = 'A')">
+            
       <h3>
-        <a name="{upper-case(substring(current-grouping-key(), 1))}" />
-        <xsl:value-of select="upper-case(substring(current-grouping-key(), 1))" />
+        <a name="{upper-case(current-grouping-key())}" />
+        <xsl:value-of select="upper-case(current-grouping-key())" />
       </h3>
  <!--     
       <xsl:for-each select="current-group()">
@@ -83,10 +89,11 @@
           
           <xsl:call-template name="add-item-count" />
         </li>
+
           </xsl:for-each-group>
       </ul>
  <!--      
--->      
+-->        </xsl:if>
     </xsl:for-each-group>
   </xsl:template>
 

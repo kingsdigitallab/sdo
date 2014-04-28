@@ -11,6 +11,7 @@
   <xsl:param name="filedir"/>
   <xsl:param name="filename"/>
   <xsl:param name="fileextension"/>
+  <xsl:param name="filter"/>
 
   <xsl:variable name="xmg:title"
     select="concat(upper-case(substring($filename, 1, 1)), substring($filename, 2), ' Index')"/>
@@ -24,6 +25,7 @@
     but includes a bunch of entities about whom there is not only no information but which are not 
     referenced by any documents meaning the page is both blank and pointless.
   -->
+  <!--
   <xsl:variable name="other-entities">
     <xsl:for-each
       select="/*//lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='entity_key']/int">
@@ -116,7 +118,7 @@
                 <xsl:value-of select="$suffix"/>
               </filing_title>
             </xsl:when>
-            <!-- composer: composition title -->
+            <!- composer: composition title ->
 
             <xsl:when
               test="$type = 'composition' and count($tokenised-related-name) > 1 and not($tokenised-related-name[last()] = 'I') and not($tokenised-related-name[last()] = 'II')">
@@ -130,7 +132,6 @@
                 <xsl:value-of select="$name"/>
               </filing_title>
             </xsl:when>
-            <!---->
 
             <xsl:when test="$type = 'composition'">
               <filing_title>
@@ -139,7 +140,6 @@
                 <xsl:value-of select="$name"/>
               </filing_title>
             </xsl:when>
-            <!---->
 
             <xsl:otherwise>
               <filing_title>
@@ -217,13 +217,30 @@
       </xsl:if>
     </xsl:for-each>
   </xsl:variable>
+  
+  -->
+  
+  <xsl:variable name="index">
+    <xsl:for-each select="/*/list/entry">
+      <xsl:copy-of select="."/>
+    </xsl:for-each>   
+  </xsl:variable>
 
   <xsl:key match="$index/child::*" name="alpha-profiles" use="upper-case(substring(@sortkey, 1, 1))"/>
+  
+  <xsl:variable name="first">
+    <xsl:for-each-group select="$index/child::*" group-by="./substring(@sortkey, 1, 1)">
+      <xsl:sort select="current-grouping-key()"/>
+      <xsl:if test="position() = 1">
+        <xsl:value-of select="current-grouping-key()"/>
+      </xsl:if>
+    </xsl:for-each-group>
+  </xsl:variable>
 
   <xsl:template name="xms:content">
 
     <xsl:variable as="xs:string" name="alphabet"
-      select="'A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z'"/>
+      select="'All,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z'"/>
 
     <xsl:if test="count($index/child::*)">
       <div class="alphaNav">
@@ -232,8 +249,11 @@
             <xsl:for-each select="tokenize($alphabet, ',')">
               <li>
                 <xsl:choose>
-                  <xsl:when test="key('alpha-profiles', ., $index)">
-                    <a href="#{.}">
+                  <xsl:when test="(key('alpha-profiles', ., $index) or . = 'All') and . != $filter">
+                    <a>
+                      <xsl:attribute name="href">
+                          <xsl:if test="contains($filedir,'index')"><xsl:text>index/</xsl:text></xsl:if>
+                        <xsl:value-of select="."/></xsl:attribute>
                       <xsl:value-of select="."/>
                     </a>
                   </xsl:when>
@@ -251,6 +271,7 @@
 
       <xsl:for-each-group group-by="substring(@sortkey, 1, 1)" select="$index/child::*">
         <xsl:sort select="@sortkey"/>
+        <xsl:if test="upper-case(current-grouping-key()) = upper-case($filter) or $filter = 'All' or ($filter = '' and upper-case(current-grouping-key()) = upper-case($first))"> <!---->
         <h3>
           <a name="{upper-case(substring(current-grouping-key(), 1))}"/>
           <xsl:value-of select="upper-case(substring(current-grouping-key(), 1))"/>
@@ -279,6 +300,7 @@
             </li>
           </xsl:for-each>
         </ul>
+       </xsl:if><!--  -->
       </xsl:for-each-group>
     </xsl:if>
   </xsl:template>
