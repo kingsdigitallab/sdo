@@ -281,7 +281,10 @@
             <xsl:sort select="@sortkey"/>
             <li>
               <xsl:variable name="id" select="@xml:id"/>
-              <a href="{@filename}" title="{@title}">
+              <a title="{@title}">
+                <xsl:attribute name="href">
+                  <xsl:text>/</xsl:text><xsl:value-of select="$filedir"/><xsl:text>/</xsl:text><xsl:value-of select="@filename"/>
+                </xsl:attribute>
                 <xsl:value-of select="@filing_title"/>
               </a>
 
