@@ -84,7 +84,7 @@
       </map:match>
     </map:pipeline>
     
-    <!-- The error handling section needs to be commented out on DEV but left as live on STG and LIV
+    <!-- The error handling section needs to be commented out on DEV but left as live on STG and LIV-->
     
 	<map:handle-errors>
 		<map:aggregate element="aggregation" label="content">
@@ -93,7 +93,7 @@
       	</map:aggregate> 
        <map:transform src="stylesheets/local/error-to-html.xsl"/>
         <map:serialize status-code="404" type="xhtml"/>  
-  </map:handle-errors> -->
+  </map:handle-errors> 
 
     <map:pipeline type="caching">
       <map:match pattern="">
