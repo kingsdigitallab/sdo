@@ -84,7 +84,7 @@
       </map:match>
     </map:pipeline>
     
-    <!-- The error handling section needs to be commented out on DEV but left as live on STG and LIV -->
+    <!-- The error handling section needs to be commented out on DEV but left as live on STG and LIV
     
 	<map:handle-errors>
 		<map:aggregate element="aggregation" label="content">
@@ -93,7 +93,7 @@
       	</map:aggregate> 
        <map:transform src="stylesheets/local/error-to-html.xsl"/>
         <map:serialize status-code="404" type="xhtml"/>  
-  </map:handle-errors>
+  </map:handle-errors> -->
 
     <map:pipeline type="caching">
       <map:match pattern="">
@@ -309,7 +309,11 @@
       </map:match>
 
       <!-- Browse correspondence by correspondence. -->
-      <map:match pattern="documents/correspondence/correspondence.html">
+       <map:match pattern="documents/correspondence/correspondence.html">
+        <map:redirect-to uri="/documents/correspondence/correspondence/"/>		
+       </map:match>
+           
+      <map:match pattern="documents/correspondence/correspondence/*">
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
           <map:part
@@ -320,6 +324,7 @@
           <map:parameter name="filedir" value="documents/correspondence"/>
           <map:parameter name="filename" value="correspondence.xml"/>
           <map:parameter name="fileextension" value="html"/>
+          <map:parameter name="filter" value="{1}"/>
         </map:transform>
         <map:serialize type="xhtml"/>
         <!-- <map:serialize type="xml" /> -->
@@ -327,6 +332,10 @@
 
       <!-- Browse lessonbooks by pupil. -->
       <map:match pattern="documents/lessonbooks/pupil.html">
+		 <map:redirect-to uri="/documents/lessonbooks/pupil/"/>	
+      </map:match>
+            
+      <map:match pattern="documents/lessonbooks/pupil/*">
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
           <map:part src="cocoon://_internal/solr/query/q=pupil%3A*&amp;rows=5000&amp;fl=pupil"/>
@@ -335,6 +344,7 @@
           <map:parameter name="filedir" value="documents/lessonbooks"/>
           <map:parameter name="filename" value="pupil.xml"/>
           <map:parameter name="fileextension" value="html"/>
+          <map:parameter name="filter" value="{1}"/>
         </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
@@ -516,7 +526,7 @@
               <map:parameter name="use-request-parameters" value="true"/>
             </map:transform>
             <map:serialize type="xhtml"/>
-            <!--  <map:serialize type="xml" />-->
+           <!--   <map:serialize type="xml" />-->
           </map:when>
           <map:otherwise>
             <map:generate src="xml/content/http404.xml"/>
@@ -623,11 +633,11 @@
 
     </map:pipeline>
 
-
+ <map:pipeline type="caching">
     <!-- Entity display. -->
-    <map:pipeline type="caching">
-      <!-- Indices of entities that have a profile XML file (ie, this
-           is not all entities!). -->
+    <!-- Indices of entities that have a profile XML file (ie, this
+           is not all entities!). ??? -->
+  <!--  
       <map:match pattern="profiles/*/index.html">
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
@@ -636,13 +646,33 @@
             src="cocoon://_internal/solr/query/q=entity_key%3A*&amp;rows=0&amp;fl=entity_key&amp;facet=true&amp;facet.field=entity_key&amp;facet.sort=entity_key&amp;facet.limit=5000"/>
           <map:part element="eats" src="cocoon://_internal/eats/entities.xml"/>
         </map:aggregate>
-        <map:transform src="stylesheets/local/profiles/index-to-html.xsl">
+         <map:transform src="stylesheets/local/profiles/index-to-html.xsl">
           <map:parameter name="filedir" value="profiles/{1}"/>
           <map:parameter name="filename" value="{1}"/>
           <map:parameter name="fileextension" value="html"/>
+          <map:parameter name="filter" value="'A'"/>
         </map:transform>
         <map:serialize type="xhtml"/>
-        <!-- <map:serialize type="xml" /> -->
+        
+      </map:match>-->
+      
+      <map:match pattern="profiles/*/index.html">
+        <map:redirect-to uri="/profiles/{1}/index/"/>
+      </map:match>
+      
+      <map:match pattern="profiles/*/index/*">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.xml"/>
+          <map:part src="xml/content/profiles/indices/{1}.xml"/>
+      </map:aggregate>
+         <map:transform src="stylesheets/local/profiles/index-to-html.xsl">
+          <map:parameter name="filedir" value="profiles/{1}"/>
+          <map:parameter name="filename" value="{1}"/>
+          <map:parameter name="fileextension" value="html"/>
+          <map:parameter name="filter" value="{2}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      <!--    <map:serialize type="xml" /> -->
       </map:match>
 
       <!-- Dates. -->
@@ -733,6 +763,7 @@
         <map:serialize type="xhtml"/>
       </map:match>
 
+	<!-- Individual Profile Pages-->
       <map:match pattern="profiles/*/*.html">
         <map:select type="resource-exists">
           <map:when test="xml/content/profiles/{1}/{2}.xml">
@@ -856,6 +887,20 @@
         </map:transform>
         <map:serialize type="xml"/>
       </map:match>
+      
+      <map:match pattern="internal/profiles/*/index/generate">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon:/internal/profiles/indices.xml"/>
+          <map:part element="entity_list"
+            src="cocoon://_internal/solr/query/q=entity_key%3A*&amp;rows=0&amp;fl=entity_key&amp;facet=true&amp;facet.field=entity_key&amp;facet.sort=entity_key&amp;facet.limit=5000"/>
+          <map:part element="eats" src="cocoon://_internal/eats/entities.xml"/>
+       </map:aggregate>
+        <map:transform src="stylesheets/local/profiles/generate-entries.xsl">
+          <map:parameter name="filename" value="{1}"/>
+        </map:transform>
+        <map:serialize type="xml" /> 
+      </map:match>
+            
     </map:pipeline>
 
     <!-- Mount sub-sitemaps. -->
