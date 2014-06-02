@@ -21,13 +21,13 @@
       <xsl:otherwise>entity</xsl:otherwise>
     </xsl:choose>
   </xsl:variable>
-
-  <!-- workaround for filePrefix WSLB-Hds, treat it the same as WSLB. -->
+  
+  <!-- the prefix "WSLB" needs to be mapped to the collection identifier WSLB-Mus -->
   <xsl:variable name="filePrefix">
     <xsl:choose>
       <xsl:when
-        test="/aggregation/response/result/doc[arr[@name=$type]/str=$entity-key][1]/str[@name='filePrefix'] = 'WSLB-Hds'"
-        >WSLB</xsl:when>
+        test="/aggregation/response/result/doc[arr[@name=$type]/str=$entity-key][1]/str[@name='filePrefix'] = 'WSLB'"
+        >WSLB-Mus</xsl:when>
       <xsl:otherwise>
         <xsl:value-of
           select="/aggregation/response/result/doc[arr[@name=$type]/str=$entity-key][1]/str[@name='filePrefix']"
@@ -50,7 +50,7 @@
   <!-- <xsl:variable name="mixed" select="/aggregation/response/result/doc[str[@name='kind']='mixed']" /> -->
 
 
-
+<!-- get the element containing all the repository/collection descriptions -->
   <xsl:variable name="loc">
     <xsl:if test="doc-available('../../../xml/content/colloquy/major_collections.xml')">
       <xsl:copy-of
@@ -58,10 +58,12 @@
     </xsl:if>
   </xsl:variable>
 
+<!-- a repository <div> might contain several collection <div>s, otherwise it's the same as the collection <div> -->
   <xsl:variable name="repos-node">
     <xsl:choose>
       <xsl:when test="$loc//tei:div[@xml:id = $filePrefix]/parent::tei:div[@xml:id]">
-        <xsl:copy-of select="$loc//tei:div[@xml:id = $filePrefix]/.."/>
+        <!--<xsl:copy-of select="$loc//tei:div[@xml:id = $filePrefix]/.."/>-->
+        <xsl:copy-of select="$loc//tei:div[child::tei:div[@xml:id = $filePrefix]]"/>
       </xsl:when>
       <xsl:otherwise>
         <xsl:copy-of select="$loc//tei:div[@xml:id = $filePrefix]"/>
@@ -187,9 +189,26 @@
     </xsl:choose>
 
     <xsl:choose>
-      <xsl:when test="$type = 'collection' or $type = 'repository'">
+      <xsl:when test="$type = 'repository'">
         <xsl:for-each select="$repos-node//tei:div">
 
+          <xsl:if test="not(./tei:head = $repos-node/tei:div/tei:head)">
+            <h2>
+              <a>
+                <xsl:attribute name="name">
+                  <xsl:value-of select="@xml:id"/>
+                </xsl:attribute>
+              </a>
+              <xsl:apply-templates select="tei:head"/>
+            </h2>
+          </xsl:if>
+          <xsl:apply-templates select="tei:p"/>
+          <xsl:apply-templates select="tei:listBibl"/>
+        </xsl:for-each>
+      </xsl:when>
+      <xsl:when test="$type = 'collection'">
+        <xsl:for-each select="$repos-node//tei:div[@xml:id = $filePrefix]">
+          
           <xsl:if test="not(./tei:head = $repos-node/tei:div/tei:head)">
             <h2>
               <a>
