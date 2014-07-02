@@ -126,7 +126,7 @@
                   <xsl:if test="child::tei:resp/child::tei:date"> (<xsl:value-of select="child::tei:resp/child::tei:date"/>)</xsl:if>
                     <xsl:choose><xsl:when test="following-sibling::tei:respStmt[position()=1 and contains(., 'Translation')]">, </xsl:when>
                     <xsl:when
-                        test="contains(., ',')">, <xsl:value-of select="substring-after(., ',')"
+                      test="child::tei:resp[contains(., 'Translation,')]">, <xsl:value-of select="substring-after(child::tei:resp[contains(., 'Translation,')], 'Translation,')"
                         /></xsl:when>
                     <xsl:otherwise>.</xsl:otherwise></xsl:choose>
                   </xsl:for-each>
@@ -189,7 +189,7 @@
                   <xsl:if test="child::tei:resp/child::tei:date"> (<xsl:value-of select="child::tei:resp/child::tei:date"/>)</xsl:if>
                   <xsl:choose><xsl:when test="following-sibling::tei:respStmt[position()=1 and contains(., 'Translation')]">, </xsl:when>
                     <xsl:when
-                      test="contains(., ',')">, <xsl:value-of select="substring-after(., ',')"
+                      test="child::tei:resp[contains(., 'Translation,')]">, <xsl:value-of select="substring-after(child::tei:resp[contains(., 'Translation,')], 'Translation,')"
                       /></xsl:when>
                     <xsl:otherwise>.</xsl:otherwise></xsl:choose>
                 </xsl:for-each>
