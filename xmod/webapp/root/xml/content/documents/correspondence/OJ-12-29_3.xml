@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+
+    <sdo:source>
+      <sdo:correspondence mfID="1309" sdoID="OJ-12-29_3">OJ 12/29, [3]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="CL" scope="major">Carl Lafite's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="ME">
+      <tei:persName>Martin Eybl</tei:persName>
+      <tei:resp>Transcription, 2007, 2009</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Translation, 2008, 2009</tei:resp>
+      <tei:resp>XML Encoding, 2014</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-11-02" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+
+  </sdo:collectionDesc>
+  <sdo:record ID="r0001">
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005515">LafiteC ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-003332">calling card</tei:rs>
+
+
+      <dc:title>Handwritten calling card from Carl Lafite to Schenker, undated, probably fall/winter
+        1904/1905</dc:title>
+      <dcterms:created>1904-10-01T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2014-11-14</dcterms:dateSubmitted>
+      <dc:description>The Damenchor-Verein has deferred performance of Schenker's choral work until
+        March [1905].</dc:description>
+      <dc:subject>Chor; chorus; studiren; study; rehearse; Concert; Programm; program</dc:subject>
+
+      <marcrel:correspondent key="entity-000500">Carl Lafite</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/><tei:lb/>
+        <tei:salute><tei:handShift new="#CL"/>Sehr geehrter <tei:rs key="entity-000632"
+            type="person">Doctor</tei:rs>. —<tei:note xml:id="r0001-fn01" type="editorial"
+            place="foot">Receipt of this calling card does not appear to be recorded in Schenker's
+            diary.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Ihr interessanter aber schwerer <tei:term>Chor</tei:term>,<tei:note xml:id="r0001-fn02"
+          type="editorial" place="foot">Probably <tei:title level="a">Agnes,</tei:title> Op. 18,
+          No. 1, cf. OJ 12/29, [2], May 25, 1904.</tei:note> ist vom <tei:rs key="entity-005517"
+          type="organization">Damenchor-Verein</tei:rs><tei:note xml:id="r0001-fn03"
+          type="editorial" place="foot">Carl Lafite directed the Wiener Damenchor-Verein, which had
+          been founded in 1900: <tei:bibl><tei:editor>Richard Heuberger, ed.</tei:editor>,
+              <tei:title level="m">Musikbuch aus Österreich</tei:title>, vol. II (Vienna: Fromme,
+            1905), p. 146</tei:bibl>. </tei:note> studirt worden, aber nicht bis zur Vollendung
+        gebracht worden. Im Interesse der <tei:term>Composition</tei:term> ist beschlossen worden,
+        denselben noch weiter zu studiren und erst <tei:milestone unit="folio" n="recto"/> im II
+        Concert, <tei:date when="1905-03">März</tei:date>, zu bringen. Bitte daher zu entschuldigen,
+        dass er diesmal am Programm fehlt.</tei:p>
+
+      <tei:closer>
+        <tei:salute>Mit dem Ausdruck besonderer Hochachtung,</tei:salute>
+        <tei:salute rend="ident-20">ergebenst</tei:salute><tei:lb/><tei:lb/>
+        <tei:note type="editorial" place="inline">printed:</tei:note>
+        <tei:address>
+          <tei:addrLine rend="indent-40"><tei:handShift new="#printed"/>Carl Lafite</tei:addrLine>
+          <tei:addrLine rend="indent-50">I., Schottengasse, Mölkerhof,</tei:addrLine>
+          <tei:addrLine rend="indent-60">II. Stiege 4.St.</tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/><tei:lb/>
+        <tei:salute><tei:handShift new="#CL"/>Dear Dr. <tei:supplied reason="identity"><tei:rs
+              key="entity-000632" type="person">Schenker</tei:rs></tei:supplied>, —<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>Your interesting but difficult <tei:term>chorus</tei:term><tei:ptr
+          corresp="#r0001-fn02" type="footnote"/> has been rehearsed by the <tei:rs
+          key="entity-005517" type="organization">Female Chorus Association</tei:rs><tei:ptr
+          corresp="#r0001-fn03" type="footnote"/> but not brought to completion. In the interests of
+        the <tei:term>composition</tei:term> it has been decided to rehearse the work further, and
+        not <tei:milestone unit="folio" n="recto"/> to present it until the second concert, in
+          <tei:date when="1905-03">March</tei:date>. Please therefore forgive its not being included
+        in the program this time. </tei:p>
+
+      <tei:closer>
+        <tei:salute>With expression of our kind regards,</tei:salute>
+        <tei:salute rend="ident-20">Your most devoted</tei:salute><tei:lb/><tei:lb/>
+        <tei:note type="editorial" place="inline">printed:</tei:note>
+        <tei:address>
+          <tei:addrLine rend="indent-40"><tei:handShift new="#printed"/>Carl Lafite</tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:supplied reason="location">Vienna</tei:supplied> I,
+            Schottengasse, Mölkerhof,</tei:addrLine>
+          <tei:addrLine rend="indent-60">Staircase II, 4th Floor</tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
