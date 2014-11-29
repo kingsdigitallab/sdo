@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1345" sdoID="OJ-12-21_1">OJ 12/21, [1]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="CKr" scope="major">Carl Krebs's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="NM">
+      <tei:persName>Nicholas Marston</tei:persName>
+      <tei:resp>Transcription, 2014</tei:resp>
+      <tei:resp>Translation, 2014</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2014</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-26" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005537">KrebsC ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">letter</tei:rs>
+
+      <dc:title>Handwritten letter from Carl Krebs to Schenker, dated August 30, 1912</dc:title>
+      <dcterms:created>1912-08-30T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2014-11-29</dcterms:dateSubmitted>
+      <dc:description>Krebs is unable to give Schenker information as to the whereabouts of the
+        autograph manuscript of Beethoven's Piano Sonata in E major, Op. 109</dc:description>
+      <dc:subject>Sommerreise; summer travels; Manuskript; autograph manuscript; Aufenthalt;
+        whereabouts; Handschrift; manuscript</dc:subject>
+
+
+
+      <marcrel:correspondent key="entity-000479">Carl Krebs</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine rend="indent-60"><tei:placeName><tei:handShift new="#printed"
+              />FRIEDENAU-BERLIN</tei:placeName></tei:addrLine>
+          <tei:addrLine rend="indent-60">RINGSTRASSE 56.</tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:dateline><tei:handShift new="#CKr"/>d. <tei:date when="1912-08-30">30. Aug.
+            12</tei:date>.</tei:dateline><tei:lb/>
+        <tei:salute>Sehr geehrter Herr <tei:rs key="entity-000632" type="person"
+            >Doktor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
+            this letter appears not to be recorded in Schenker’s diary. A photocopy of this letter
+            is preserved in the folder OJ 41/6.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>verzeihen Sie gütigst, daß ich nur jetzt Ihren Brief beantworte, aber ich habe ihn nur
+        jetzt bekommen. Grundsätzlich lasse ich mir nämlich auf die Sommerreise keine Postsachen
+        nachschicken, was auch seine Schwierigkeiten hätte, da ich gern von Ort zu Ort springe und
+        mich jetzt in <tei:rs key="entity-002638" type="place">Rom</tei:rs> und Süditalien
+        herumgetrieben habe.</tei:p>
+
+      <tei:p>Leider hätte es Ihnen aber auch nicht genutzt, wenn ich Ihren Brief früher bekommen
+        hätte, denn über das <tei:term>Ms.</tei:term> von <tei:rs key="entity-001216"
+          type="composition">op. 109</tei:rs> kann ich Ihnen keine Auskunft geben. Daß es <tei:rs
+          key="entity-000404" type="person">Joachim</tei:rs>
+        <tei:pb n="2"/>
+        <tei:hi rend="underline">nicht</tei:hi> besessen hat, weiß ich ziemlich bestimmt, will aber,
+        wenn <tei:rs key="entity-005538" type="person">Moser</tei:rs> von der Reise kommt, den noch
+        mal danach fragen, zur Sicherheit. <tei:rs key="entity-000636" type="person"
+          >Nottebohm</tei:rs>s Angabe<tei:note xml:id="r0001-fn02" type="editorial" place="foot">The
+          reference is to <tei:bibl><tei:author>Gustav Nottebohm</tei:author>, <tei:title level="m"
+              >Thematisches Verzeichniss der im Druck erschienenen Werke von Ludwig van
+              Beethoven</tei:title>, 2nd edn (Leipzig: Breitkopf &amp; Härtel, 1868), p.
+            106</tei:bibl>, where "M. Schlesinger in Baden-Baden" is listed as the owner of the
+          autograph manuscript of Op. 109. </tei:note> kennen Sie ja und haben wohl, wie ich
+        seinerzeit, vergeblich an den mysteriösen Schlesinger<tei:note xml:id="r0001-fn03"
+          type="editorial" place="foot">Moritz Schlesinger, son of Adolf Martin Schlesinger, who ran
+          the Paris office of the latter's Berlin publishing house. Beethoven's Sonata in E major,
+          Op. 109 was published by Schlesinger in Berlin, in 1821.</tei:note> in <tei:rs
+          key="entity-003990" type="place">Baden-Baden</tei:rs> geschrieben. So weiß ich Ihnen denn
+        nicht zu helfen. Sollte ich irgend etwas in Erfahrung bringen, über den Aufenthalt der
+          <tei:term>Handschrift</tei:term>, werde ich es Ihnen gern mitteilen.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-30">Mit vorzüglicher Hochachtung</tei:salute>
+        <tei:salute rend="indent-50">sehr ergeben</tei:salute>
+        <tei:signed rend="indent-50"><tei:rs key="entity-000479" type="person">C
+          Krebs</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine rend="indent-60"><tei:placeName><tei:handShift new="#printed"
+              />FRIEDENAU-BERLIN</tei:placeName></tei:addrLine>
+          <tei:addrLine rend="indent-60">RINGSTRASSE 56</tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:dateline><tei:handShift new="#CKr"/><tei:date when="1912-08-30">August 30,
+            1912</tei:date></tei:dateline><tei:lb/>
+        <tei:salute>Dear Dr. <tei:supplied reason="identity"><tei:rs key="entity-000632"
+              type="person">Schenker</tei:rs></tei:supplied>,<tei:ptr corresp="#r0001-fn01"
+            type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>Please be so very kind as to forgive me for answering your letter only now, but I have
+        only just received it. Being on my summer travels, I do not on principle have any items of
+        post forwarded to me; this would also be difficult since I happily jump from place to place
+        and have now been gadding about in <tei:rs key="entity-002638" type="place">Rome</tei:rs>
+        and southern Italy.</tei:p>
+
+      <tei:p>It would in any case unfortunately have been of no use to you if I had received your
+        letter sooner, because I can give you no information about the
+          <tei:term>manuscript</tei:term> of <tei:supplied reason="clarity"
+          >Beethoven’s</tei:supplied>
+        <tei:rs key="entity-001216" type="composition">Op. 109</tei:rs>. I am fairly certain that
+          <tei:rs key="entity-000404" type="person">Joachim</tei:rs>
+        <tei:pb n="2"/> did <tei:hi rend="underline">not</tei:hi> own it, but will ask <tei:rs
+          key="entity-005538" type="person">Moser</tei:rs> about it again when he comes back from
+        his trip, just to be sure. You know <tei:rs key="entity-000636" type="person"
+          >Nottebohm</tei:rs>'s reference,<tei:ptr corresp="#r0001-fn02" type="footnote"/> of
+        course, and have no doubt written in vain to the mysterious Schlesinger<tei:ptr
+          corresp="#r0001-fn03" type="footnote"/> in <tei:rs key="entity-003990" type="place">Baden
+          Baden</tei:rs>, as I did some time ago. Thus I don't know how to help you. If I should
+        hear anything about the whereabouts of the <tei:term>manuscript</tei:term> I will gladly
+        pass it on to you.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-30">With kind regards,</tei:salute>
+        <tei:salute rend="indent-50">Very truly,</tei:salute>
+        <tei:signed rend="indent-50"><tei:rs key="entity-000479" type="person">C.
+          Krebs</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
