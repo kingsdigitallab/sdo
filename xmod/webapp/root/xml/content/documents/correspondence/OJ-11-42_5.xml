@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1350" sdoID="OJ-11-42_5">OJ 11/42, [5]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="MH" scope="major">Maximilian Harden's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WP">
+      <tei:persName>William Pastille</tei:persName>
+      <tei:resp>Transcription, 2006</tei:resp>
+      <tei:resp>Translation, 2006</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2014</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-26" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005539">HardenM ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005540">ZukunftD ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Maximilian Harden to Schenker, dated September 29,
+        1893</dc:title>
+      <dcterms:created>1893-09-29T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2014-12-05</dcterms:dateSubmitted>
+      <dc:description>Harden encourages articles from Schenker on Leoncavallo and
+        Bruckner.</dc:description>
+      <dc:subject>Gerede; talk</dc:subject>
+
+
+
+      <marcrel:correspondent key="entity-000333">Maximilian Harden</marcrel:correspondent>
+      <marcrel:correspondent key="entity-002566">Die Zukunft</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/>Deutsche
+          Reichspost</tei:fw>
+        <tei:fw type="header" rend="center">Postkarte</tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>An: <tei:handShift new="#MH"/>Herrn Dr. <tei:hi rend="lateinschr">H.
+                Schenker</tei:hi></tei:addrLine>
+            <tei:addrLine rend="indent-10"><tei:handShift new="#printed"/>in <tei:handShift
+                new="#MH"/><tei:hi rend="lateinschr">Wien</tei:hi> III</tei:addrLine>
+            <tei:addrLine rend="indent-10"><tei:handShift new="#printed"/>Wohnung <tei:handShift
+                new="#MH"/>Traungasse 1</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">BERLIN W. c | 9 | 29 9 | 93 | 6½ -7N. ||</tei:fw>
+          <tei:fw type="postmark">|| WIEN 3/3 | 49 | BESTELLT | 30. 9. 93 | 7N. ||</tei:fw>
+          <tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+        </tei:fw>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>DIE ZUKUNFT.</tei:addrLine>
+          <tei:addrLine>HERAUSGEBER: MAXIMILIAN HARDEN.</tei:addrLine>
+          <tei:addrLine rend="indent-70">BERLIN W. 9, <tei:handShift new="#MH"/><tei:date
+              when="1893-09-29">29. 9 <tei:handShift new="#printed"/><tei:supplied reason="clarity"
+                >18</tei:supplied>9<tei:handShift new="#MH"/>3</tei:date></tei:addrLine>
+          <tei:addrLine rend="indent-70"><tei:handShift new="#printed"/>27 KÖTHENER
+            STRASSE.</tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:salute><tei:handShift new="#MH"/>Sehr geehrter <tei:rs key="entity-000632"
+            type="person">Herr</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>der Artikel über <tei:rs key="entity-000521" type="person"><tei:hi rend="lateinschr"
+            >Leoncavallo</tei:hi></tei:rs><tei:note xml:id="r0001-fn01" type="editorial"
+          place="foot">This became <tei:title level="a">Ruggiero Leoncavallo,</tei:title> which
+          appeared in <tei:title level="j">Die Zukunft</tei:title> 6 (January 20, 1894), 138‒40. It
+          is reprinted in <tei:bibl><tei:editor>Hellmut Federhofer</tei:editor>, <tei:title
+              level="m">Heinrich Schenker als Essayist und Kritiker</tei:title> (Hildesheim: Georg
+            Olms Verlag, 1990), 66‒69</tei:bibl>.</tei:note> wird mir vor <tei:title>den <tei:hi
+            rend="lateinschr">Medici</tei:hi></tei:title><tei:note xml:id="r0001-fn02"
+          type="editorial" place="foot">That is, before the opera opens in Berlin. <tei:title
+            level="m">I Medici</tei:title>, first performed in Milan on November 9, 1893: the first
+          part of Leoncavallo's planned historical trilogy <tei:title level="m"
+            >Crepusculum</tei:title>, the remaining two parts of which remained
+          unfinished.</tei:note> sehr willkommen sein; vielleicht können wir ihn Gerede in der betr.
+        Woche bringen. Auch <tei:rs key="entity-000104" type="person">Bruckner</tei:rs><tei:note
+          xml:id="r0001-fn03" type="editorial" place="foot">This became <tei:title level="a">Anton
+            Bruckner,</tei:title> which appeared in <tei:title level="j">Die Zukunft</tei:title> 5
+          (October 21, 1893), 135‒37, and was republished as part of the composite article
+            <tei:title level="a">Über Anton Bruckner</tei:title> in <tei:title level="j">Der
+            Dreiklang</tei:title> 7 (October 1937), 166‒76. It is reprinted in
+              <tei:bibl><tei:editor>Hellmut Federhofer</tei:editor>, <tei:title level="m">Heinrich
+              Schenker als Essayist und Kritiker</tei:title> (Hildesheim: Georg Olms Verlag, 1990),
+            57‒61</tei:bibl>.</tei:note> ist willkommen. Wann wird seine Symphonie gespielt? </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">Mit bestem Dank, in herzlicher Hochachtung</tei:salute>
+        <tei:salute rend="indent-70">Ihr erg.</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs key="entity-000333" type="person">
+          Harden</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/>German Imperial
+          Post</tei:fw>
+        <tei:fw type="header" rend="center">Postcard</tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>To: <tei:handShift new="#MH"/>Dr. H. Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-10"><tei:handShift new="#printed"/>in: <tei:handShift
+                new="#MH"/>Vienna III</tei:addrLine>
+            <tei:addrLine rend="indent-10"><tei:handShift new="#printed"/>Address: <tei:handShift
+                new="#MH"/>Traungasse 1</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| BERLIN W. c | 9 | 29 9 | 93 | 6½ -7 P.M. ||</tei:fw>
+          <tei:fw type="postmark">|| VIENNA 3/3 | 49 | DELIVERED | 30. 6. 93, 7 P.M. ||</tei:fw>
+          <tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+        </tei:fw>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>DIE ZUKUNFT.</tei:addrLine>
+          <tei:addrLine>EDITOR: MAXIMILIAN HARDEN.</tei:addrLine>
+          <tei:addrLine rend="indent-70">BERLIN W. 9, <tei:handShift new="#MH"/><tei:date
+              when="1893-09-29">September 29, <tei:handShift new="#printed"/><tei:supplied
+                reason="clarity">18</tei:supplied>9<tei:handShift new="#MH"
+            />3</tei:date></tei:addrLine>
+          <tei:addrLine rend="indent-70"><tei:handShift new="#printed"/>27 KÖTHENER
+            STRASSE</tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:salute><tei:handShift new="#MH"/>Dear <tei:rs key="entity-000632" type="person"
+            >Sir</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>I would very much welcome the article on <tei:rs key="entity-000521" type="person"
+          >Leoncavallo</tei:rs><tei:ptr corresp="#r0001-fn01" type="footnote"/> before <tei:title
+          level="m">I Medici</tei:title>;<tei:ptr corresp="#r0001-fn02" type="footnote"/> perhaps we
+        can get him talked about during the appropriate week. The <tei:rs key="entity-000104"
+          type="person">Bruckner</tei:rs><tei:ptr corresp="#r0001-fn03" type="footnote"/> is welcome
+        too. When will his symphony be played?</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50">With sincere thanks, in cordial esteem,</tei:salute>
+        <tei:salute rend="indent-70">Yours truly,</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs key="entity-000333" type="person">
+          Harden</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
