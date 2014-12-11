@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1364" sdoID="OJ-11-42_20">OJ 11/42, [20]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="MH" scope="major">Maximilian Harden's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WP">
+      <tei:persName>William Pastille</tei:persName>
+      <tei:resp>Transcription, 2006</tei:resp>
+      <tei:resp>Translation, 2006</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2014</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-26" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005539">HardenM ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005540">ZukunftD ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Maximilian Harden to Schenker, dated October 13,
+        1894</dc:title>
+      <dcterms:created>1894-10-13T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2014-12-11</dcterms:dateSubmitted>
+      <dc:description>Harden denies that he will try prevent Schenker from publishing his material
+        wherever he chooses; and he commiserates with Schenker over a presumed slight by Hermann
+        Bahr of Die Zeit.</dc:description>
+      <dc:subject>Mamooth; mammoth; Enttäuschung; disappointment</dc:subject>
+
+
+
+      <marcrel:correspondent key="entity-000333">Maximilian Harden</marcrel:correspondent>
+      <marcrel:correspondent key="entity-002566">Die Zukunft</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/>Deutsche
+          Reichspost</tei:fw>
+        <tei:fw type="header" rend="center">Postkarte</tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>An: <tei:handShift new="#MH"/>Herrn Dr. <tei:hi rend="lateinschr">H.
+                Schenker</tei:hi></tei:addrLine>
+            <tei:addrLine rend="indent-10"><tei:handShift new="#printed"/>in <tei:handShift
+                new="#MH"/><tei:hi rend="lateinschr">Wien</tei:hi></tei:addrLine>
+            <tei:addrLine rend="indent-10"><tei:handShift new="#printed"/>Wohnung <tei:handShift
+                new="#MH"/>III Traungasse 1</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| BERLIN W. c | 9 | 13/10 | 94 | 4½ -5N. ||</tei:fw>
+          <tei:fw type="postmark">|| WIEN 3/3 | 49 | BESTELLT | 15.10.94 | 8-10V. ||</tei:fw>
+          <tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/><tei:lb/>
+          <tei:note type="editorial" place="inline">in vertical format</tei:note>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#MH"/>Sehr geehrter Herr <tei:rs key="entity-000632"
+            type="person">Doktor</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>nein, so tyrannisch bin ich doch nicht, Sie in der Verwerthung Ihrer Arbeiten irgend zu
+        geniren. Geben Sie ruhig dem kleinen Mamooth,<tei:note xml:id="r0001-fn01" type="editorial"
+          place="foot">The reference is uncertain.</tei:note> was Sie wollen.</tei:p>
+
+      <tei:p><tei:rs key="entity-002545" type="journal"><tei:title>Die „Zeit“</tei:title></tei:rs>
+        ist eine böse Enttäuschung. So wenig hätte ich doch unserem <tei:rs key="entity-000031"
+          type="person">H.<tei:supplied reason="identity">ermann</tei:supplied> B.<tei:supplied
+            reason="identity">ahr</tei:supplied></tei:rs> nich zugetraut. Aber vielleicht wirds
+          <tei:del rend="overstrike">d</tei:del> noch besser.<tei:note xml:id="r0001-fn02"
+          type="editorial" place="foot">Schenker contributed 43 articles and reviews to <tei:title
+            level="j">Die Zeit</tei:title> in 1895‒96.</tei:note></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">Besten Gruß Ihnen u. Gelber<tei:note xml:id="r0001-fn03"
+            type="editorial" place="foot">Probably the scholar of German language and literature,
+            Adolph Gelber (1856‒1923).</tei:note></tei:salute>
+        <tei:salute rend="indent-60">Von Ihrem</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs key="entity-000333" type="person">
+          Harden</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/>German Imperial
+          Post</tei:fw>
+        <tei:fw type="header" rend="center">Postcard</tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>To: <tei:handShift new="#MH"/>Dr. H. Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-10"><tei:handShift new="#printed"/>in: <tei:handShift
+                new="#MH"/>Vienna III</tei:addrLine>
+            <tei:addrLine rend="indent-10"><tei:handShift new="#printed"/>Address: <tei:handShift
+                new="#MH"/>Traungasse 1</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| BERLIN W. c | 9 | 13/10 | 94 | 4½ -5PM ||</tei:fw>
+          <tei:fw type="postmark">|| VIENNA 3/3 | 49 | DELIVERED | 15.10.94 | 8-10AM ||</tei:fw>
+          <tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/><tei:lb/>
+          <tei:note type="editorial" place="inline">in vertical format</tei:note>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#MH"/>Dear Dr. <tei:rs key="entity-000632" type="person"
+              ><tei:supplied reason="identity">Schenker</tei:supplied></tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>No, I am not at all so tyrannical as to hamper you in any way from using your own
+        works. You are free to give the little mammoth<tei:ptr corresp="#r0001-fn01" type="footnote"
+        /> whatever you please.</tei:p>
+
+      <tei:p><tei:rs key="entity-002545" type="journal"><tei:title level="j">Die
+          Zeit</tei:title></tei:rs> is a terrible disappointment. I wouldn't have expected so little
+        even from our <tei:rs key="entity-000031" type="person">H<tei:supplied reason="identity"
+            >ermann</tei:supplied> B<tei:supplied reason="identity">ahr</tei:supplied></tei:rs>. But
+        perhaps it will yet turn out better.<tei:ptr corresp="#r0001-fn02" type="footnote"/></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">Best greetings to you and Gelber,<tei:ptr corresp="#r0001-fn03"
+            type="footnote"/></tei:salute>
+        <tei:salute rend="indent-60">from Your</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs key="entity-000333" type="person">
+          Harden</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
