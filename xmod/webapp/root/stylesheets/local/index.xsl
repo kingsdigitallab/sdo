@@ -42,7 +42,7 @@
       <!--<![endif]-->
       <head>
         <title>Schenker - Home</title>
-        
+
         <!-- Google Analytics tracking code -->
         <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -221,12 +221,13 @@
                     century's leading theorist of tonal music, produced a series of innovative
                     studies and editions between 1903 and 1935, while exerting a powerful and
                     sustained influence, directly and through his pupils, on the teaching of music
-                    from the 1930s onward in the USA, and since the 1970s in Europe and elsewhere.</p>
-                    <p>Schenker maintained a vigorous correspondence over nearly half a century, kept a
-                    meticulously detailed diary over 40 years, and recorded precise notes on lessons
-                    that he gave over a period of twenty years. It is these three collections of
-                    personal documents that constitute the core of <em>Schenker Documents
-                      Online</em>.</p>
+                    from the 1930s onward in the USA, and since the 1970s in Europe and
+                    elsewhere.</p>
+                  <p>Schenker maintained a vigorous correspondence over nearly half a century, kept
+                    a meticulously detailed diary over 40 years, and recorded precise notes on
+                    lessons that he gave over a period of twenty years. It is these three
+                    collections of personal documents that constitute the core of <em>Schenker
+                      Documents Online</em>.</p>
                   <!-- PREVIOUS VERSION <p>Viennese musician and teacher Heinrich Schenker (1868-1935), the twentieth
                     century's leading theorist of tonal music, produced a series of innovative
                     studies and editions between 1903 and 1935, while exerting a powerful and
@@ -246,64 +247,71 @@
                   <p>Schenker left behind approximately 130,000 manuscript and typescript leaves
                     comprising unpublished works, preparatory materials, and personal documents,
                     preserved in two dedicated archives, numerous libraries, and private possession.
-                    (See "<a class="int"
-                      title="Link to Major Collections" href="/colloquy/major_collections.html"
-                      >Major Collections</a>.") The archived papers of several other
-                    scholars, among them Guido Adler, Oswald Jonas, Moriz Violin, and Arnold
-                    Schoenberg, also preserve correspondence and other documents relating to Schenker and
-                    his circle.</p>
-                  <p><em>Schenker Documents Online</em> offers a scholarly edition of this material based not on facsimiles but on
-                    near-diplomatic transcriptions of the original texts, together with English
-                    translations, explanatory footnotes, summaries, and contextual material relating the texts to Schenker's personal
-                    development and that of his correspondents.</p>
+                    (See "<a class="int" title="Link to Major Collections"
+                      href="/colloquy/major_collections.html">Major Collections</a>.") The archived
+                    papers of several other scholars, among them Guido Adler, Oswald Jonas, Moriz
+                    Violin, and Arnold Schoenberg, also preserve correspondence and other documents
+                    relating to Schenker and his circle.</p>
+                  <p><em>Schenker Documents Online</em> offers a scholarly edition of this material
+                    based not on facsimiles but on near-diplomatic transcriptions of the original
+                    texts, together with English translations, explanatory footnotes, summaries, and
+                    contextual material relating the texts to Schenker's personal development and
+                    that of his correspondents.</p>
 
                 </div>
-                <div class="unit size1of3 lastUnit" >
-                   <h3>Latest</h3>
-                  <h4>!! INTERNATIONAL RECOGNITION FOR SDO !!</h4>
+                <div class="unit size1of3 lastUnit">
+                  <h3>Latest</h3>
+                  <h4>!! TENTH ANNIVERSARY !!</h4>
                   <ul>
-                    <li>The Society for Music Theory, at its annual meeting in November 2013, awarded its Citation of Special Merit to SDO and its contributors. The citation begins: "Rare is the time when the work of a music theorist enjoys the kind of scholarly attention to life and works typically accorded major figures in intellectual history ..."</li>
+                    <li>SDO just passed its tenth anniversary! The first letter went up on June 12,
+                      2004</li>
+                    <li>It was coded in a blogging software called MovableType on a site set up for
+                      the project by Maurice Matiz of Columbia University in New York. Over the next
+                      five years some 1,200 documents were encoded on the site.</li>
+                    <li>It was on that platform that the familiar parallel German-English format was
+                      devised, the clever “sender~recipient” tagging system created, and the
+                      internal dictionary of profiles established.</li>
+                    <li>Since then, external funding has enabled SDO to create its new, XML-encoded
+                      searchable website, and post many more correspondence items; and, with the
+                      collaboration of the Universität für Musik und Darstellende Kunst in Vienna,
+                      to incorporate Schenker’s diaries from 1918 to 1930. — For more information,
+                      see our blog post.</li>
+                    <li>To all our contributors and developers: Happy Tenth Anniversary!</li>
                   </ul>
-                  <h4>Most recent additions to this site:</h4>
-                  <ul>
-                    <li><a href="/documents/correspondence/correspondence.html">Correspondence:</a> (1) Drei Masken Verlag (DMV): 1924 and 1925 complete; (2) Moriz Violin: 1925-30 complete; (3) Hans Weisse: 1925-30 complete</li>
-                  
-                  <li><a href="/documents/diaries/date.html">Diaries:</a> (1) Jan 1926 to Sept 1928 now complete; (2) Oct 1926 to Dec 1930 now being encoded</li>
 
-                    <li class="expand"><a href="/documents/overviews/latest_material.html">more →</a></li>   
-                  </ul>
                   <nav class="local" id="blogPosts">
-	               <h4>From the Blog</h4>
+                    <h4>From the Blog</h4>
                     <ul>
-         	
-                    				
-					<xsl:for-each select="/*/rss/channel/item[position() &lt;= 2]">
-					<li>
-						<a>
-							<xsl:attribute name="href">
-								<xsl:value-of select="./link" />
-							</xsl:attribute>
-							<xsl:attribute name="class">
-								<xsl:if test="position() = 1">
-									<xsl:text>navLink first</xsl:text>
-								</xsl:if>
-								<xsl:if test="position() > 1">
-									<xsl:text>navLink</xsl:text>
-								</xsl:if>
-							</xsl:attribute>
-							<xsl:value-of select="./title" />
-						</a>
-						<p><xsl:value-of select="substring-before(./description, ' &amp;#8230;')" /><xsl:text>&#8230;</xsl:text>
-						<a>
-							<xsl:attribute name="href">
-								<xsl:value-of select="./link" />
-							</xsl:attribute>
-						Continue reading →
-						</a></p>
-					</li>	
-					</xsl:for-each>
-   
-<!--
+
+
+                      <xsl:for-each select="/*/rss/channel/item[position() &lt;= 2]">
+                        <li>
+                          <a>
+                            <xsl:attribute name="href">
+                              <xsl:value-of select="./link"/>
+                            </xsl:attribute>
+                            <xsl:attribute name="class">
+                              <xsl:if test="position() = 1">
+                                <xsl:text>navLink first</xsl:text>
+                              </xsl:if>
+                              <xsl:if test="position() > 1">
+                                <xsl:text>navLink</xsl:text>
+                              </xsl:if>
+                            </xsl:attribute>
+                            <xsl:value-of select="./title"/>
+                          </a>
+                          <p>
+                            <xsl:value-of select="substring-before(./description, ' &amp;#8230;')"/>
+                            <xsl:text>&#8230;</xsl:text>
+                            <a>
+                              <xsl:attribute name="href">
+                                <xsl:value-of select="./link"/>
+                              </xsl:attribute> Continue reading → </a>
+                          </p>
+                        </li>
+                      </xsl:for-each>
+
+                      <!--
                       <li>
                         <a class="navLink first" href="#">SDO Hat Trick at SMA TAGS</a>
                         <p>The Schenker Documents Online project was well represented at the recent
@@ -315,9 +323,10 @@
                         <p>Under the Hapsburgs, public honors (Berufstitel) rewarded people for
                           distinguished service to the state...</p>
                       </li> -->
-          
+
                       <li class="seeAll">
-                        <a class="navLink" href="http://blog.schenkerdocumentsonline.org/">See all &#x203A;&#x203A;</a>
+                        <a class="navLink" href="http://blog.schenkerdocumentsonline.org/">See all
+                          &#x203A;&#x203A;</a>
                       </li>
 
                     </ul>
