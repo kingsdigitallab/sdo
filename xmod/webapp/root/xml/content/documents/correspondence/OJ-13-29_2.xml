@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1383" sdoID="OJ-13-29_2">OJ 13/29, [2]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="MR" scope="sole">Moriz Rosenthal's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="CH">
+      <tei:persName>Christoph Hust</tei:persName>
+      <tei:resp>Transcription, 2007</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Translation, 2007</tei:resp>
+      <tei:resp>XML Encoding, 2014</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-28" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005548">RosenthalM ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">letter</tei:rs>
+
+      <dc:title>Handwritten letter from Rosenthal to Schenker, dated May 26, 1896</dc:title>
+
+      <dcterms:created>1896-05-26T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2014-12-19</dcterms:dateSubmitted>
+      <dc:description>Rosenthal thanks Schenker for his words of friendship.</dc:description>
+      <dc:subject>Freundesworte; words of friendship; Studium; study</dc:subject>
+
+
+
+      <marcrel:correspondent key="entity-000732">Moriz Rosenthal</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">Heinrich Schenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+      <tei:opener>
+        <tei:note type="editorial" place="inline">on black-edged writing paper</tei:note>
+        <tei:salute>Verehrter <tei:rs type="person" key="entity-000632"
+          >Freund</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p>Herzlichen Dank für Ihre warmen Freundesworte. Ich reise dieser Tage ab, um fern von
+          <tei:rs key="entity-002484" type="place"><tei:hi rend="lateinschr">Wien</tei:hi></tei:rs>
+        mich dem <tei:hi rend="lateinschr">Studium</tei:hi> ganz zu widmen. Ihre Freundschaft ehrt
+        u. freut mich u. erwidere ich sie aufrichtig. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50">Ihr ergebener</tei:salute>
+        <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000732">Moriz
+            Rosenthal</tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:placeName>Wien</tei:placeName>, <tei:date when="1896-05-26">26/5
+              <tei:supplied reason="date">1</tei:supplied>896</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+      <tei:opener>
+        <tei:note type="editorial" place="inline">on black-edged writing paper</tei:note>
+        <tei:salute>Revered <tei:rs type="person" key="entity-000632">Friend</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>Cordial thanks for your kind words of friendship. I am leaving today so as to devote
+        myself wholly to study, far from <tei:rs key="entity-002484" type="place">Vienna</tei:rs>.
+        Your friendship does me honor and gives me pleasure; I reciprocate it sincerely.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50">Yours truly,</tei:salute>
+        <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000732">Moriz
+            Rosenthal</tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:placeName>Vienna</tei:placeName>, <tei:date when="1896-05-26">May 26,
+              <tei:supplied reason="date">1</tei:supplied>896</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
