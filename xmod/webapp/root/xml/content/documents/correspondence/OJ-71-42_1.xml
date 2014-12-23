@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1375" sdoID="OJ-71-42_1">OJ 71/42, [1]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HWo" scope="major">Hermann Wolff's hand</tei:handNote>
+      <tei:handNote xml:id="MH" scope="minor">Maximilian Harden's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WP">
+      <tei:persName>William Pastille</tei:persName>
+      <tei:resp>Transcription, 2006</tei:resp>
+      <tei:resp>Translation, 2006</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2014</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-26" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005553">WolffH ~
+        MHarden</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005539">HardenM ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005540">ZukunftD ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">letter</tei:rs>
+
+      <dc:title>Handwritten message from Harden to Schenker, on handwritten letter from Hermann Woff
+        to Harden, dated October 20, 1893</dc:title>
+      <dcterms:created>1893-10-20T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2014-12-21</dcterms:dateSubmitted>
+      <dc:description>Wolff encourages Harden to find him a collaborator for an article on music and
+        concert life; having read Schenker's article on Bruckner, he praises Schenker for his clear
+        and accurate understanding of Bruckner's music. Harden commends Wollf's praise to Schenker,
+        and suggests that he write an article about "conductors."</dc:description>
+      <dc:subject>Musikwesen; music life; Concertwesen; concert life; Wahrheit; truth; Klarheit;
+        clarity; Schriftsteller; writer; Artikel; article</dc:subject>
+
+
+      <marcrel:correspondent key="entity-005551">Hermann Wolff</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000333">Maximilian Harden</marcrel:correspondent>
+      <marcrel:correspondent key="entity-002566">Die Zukunft</marcrel:correspondent>
+      <marcrel:recipient key="entity-000333">Maximilian Harden</marcrel:recipient>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+      <tei:div type="doc1">
+        <tei:opener>
+          <tei:note type="editorial" place="inline"><tei:hi rend="bold">Letter from Hermann Wolff to
+              Maximilian Harden</tei:hi></tei:note><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#printed"/>Concert-Direction Hermann
+              Wolff.</tei:addrLine>
+            <tei:addrLine>Berlin W., Am Carlsbad 19, Telegramm-Adresse: Musikwolff,
+              Berlin</tei:addrLine>
+          </tei:address><tei:lb/><tei:lb/>
+          <tei:note type="editorial" place="inline">Printed advertisement</tei:note><tei:lb/>
+          <tei:dateline rend="indent-70"><tei:placeName>BERLIN</tei:placeName> W., am Carlsbad
+            19.I</tei:dateline>
+          <tei:dateline rend="indent-70"><tei:date when="1893-10-20"><tei:handShift new="#HWo"/>20
+              Octob</tei:date></tei:dateline>
+          <tei:salute>Sehr geehrter <tei:rs key="entity-000333" type="person"
+            >Herr</tei:rs>,</tei:salute>
+        </tei:opener>
+
+        <tei:p rend="first">Mit großem Interesse werde ich den Artikel über <tei:rs
+            key="entity-000104" type="person">Bruckner</tei:rs> lesen.</tei:p>
+
+        <tei:p rend="first">Ich habe schon oft die Idee gehabt, über das Musik- und Concertwesen
+          einmal nöthige Aufklärungen zu geben, Vorurtheile <tei:pb n="2"/> zu beseitigen &amp;
+          Wahrheit &amp; Klarheit zu schaffen. <tei:rs key="entity-000110" type="person"
+            >Bülow</tei:rs> hat mich oft dazu animirt, denn er pflegte Stundenlang in meinem
+            <tei:foreign xml:lang="fre"><tei:sic>Beureau</tei:sic></tei:foreign> zu sitzen, dem
+          Getriebe zuzuschauen, Einblicke in den Mechanismus zu nehmen.</tei:p>
+
+        <tei:p rend="first">Aber mir fehlt Zeit, Ruhe, &amp; Geduld. Vielleicht finden Sie den
+          Geeigneten. Nothwendig ist’s. Ich stelle gern Alles Material zur Verfügung, gebe jede
+          nötige Aufklärung &amp; gewähre dem von Ihnen designirten Schriftsteller gern Einsicht in
+          Alles. Hätten Sie Zeit, Sie wären der rechte Mann wir fänden auch Gelegenheit, uns öfter
+          darüber auszusprechen.</tei:p>
+
+        <tei:p rend="first">Die Bedeutung eines solchen Artikels wäre zweifellos sehr groß. Die
+          Nothwendigkeit erscheint mir geradezu dringend.</tei:p>
+
+        <tei:p rend="first">Vielleicht finden Sie bald einmal Zeit mir ein Wort zu antworten</tei:p>
+
+
+
+        <tei:closer>
+          <tei:salute rend="indent-20">Ergebenst</tei:salute>
+          <tei:signed rend="indent-50"><tei:rs key="entity-005551" type="person"> Hermann
+              Wolff</tei:rs>
+            <tei:handShift new="#MH"/>W. S. G. U.<tei:note xml:id="r0001-fn01" type="editorial"
+              place="foot">= "Wenden Sie Gefälligst Um" = "Kindly turn the page
+            over."</tei:note></tei:signed>
+        </tei:closer>
+        <tei:lb/>
+        <tei:lb/>
+
+        <tei:postscript>
+          <tei:p><tei:handShift new="#HWo"/><tei:pb n="3"/> Ich habe eben den Artikel über <tei:rs
+              key="entity-000104" type="person">Bruckner</tei:rs><tei:note xml:id="r0001-fn02"
+              type="editorial" place="foot"><tei:bibl><tei:author>Heinrich Schenker</tei:author>,
+                  <tei:title level="a">Anton Bruckner,</tei:title>
+                <tei:title level="j">Die Zukunft</tei:title> 5 (October 21, 1893),
+              135‒37</tei:bibl>, reprinted in <tei:bibl><tei:title level="j">Der
+                  Dreiklang</tei:title> 7 (October 1937), 166‒76</tei:bibl>, and reprinted again in
+                  <tei:bibl><tei:editor>Hellmut Federhofer</tei:editor>, <tei:title level="m"
+                  >Heinrich Schenker als Essayist und Kritiker</tei:title> (Hildesheim: Georg Olms
+                Verlag, 1990), pp. 57‒61</tei:bibl>.</tei:note> gelesen. <tei:foreign xml:lang="fre"
+                ><tei:hi rend="lateinschr">Sans phrase</tei:hi></tei:foreign> er ist gut u. richtig.
+            Dr. <tei:rs key="entity-000632" type="person"><tei:hi rend="lateinschr">H.
+              S.</tei:hi></tei:rs> kennt die <tei:term>Partitur</tei:term>en Bruckners wirklich
+            genau. Was er speciell über den <tei:term>Kontrapunktiker</tei:term> Bruckner sagt, ist
+            treffend; Sch hat sich eben nicht blenden lassen, wie die Meisten, denen eine
+            Scheingelehrsamkeit imponirt. Ich kann Ihnen hier nicht auseinandersetzen, wie famos in
+            dem Artikel das Wesen <tei:rs key="entity-000104" type="person">Br</tei:rs>’scher Musik
+            erkannt ist &amp; nur der, welcher weiß, wie undendlich schwer es ist, dies Wesen mit
+            Worten zu characterisiren, kann voll beurtheilen, wie Dr. <tei:hi rend="lateinschr"
+              >Sch</tei:hi> den Kern getroffen hat. </tei:p>
+
+          <tei:p rend="ident-10">Besten Dank.</tei:p>
+          <tei:p rend="indent-50">Ihr</tei:p>
+          <tei:p rend="indent-60"><tei:rs key="entity-005551" type="person">H.W.</tei:rs></tei:p>
+        </tei:postscript>
+        <tei:lb/>
+      </tei:div>
+
+      <tei:div type="doc2">
+        <tei:note type="editorial" place="inline"><tei:hi rend="bold">Annotated message from
+            Maximilian Harden to Schenker</tei:hi></tei:note>
+        <tei:lb/>
+        <tei:lb/>
+        <tei:p><tei:handShift new="#MH"/>Könnten <tei:rs key="entity-000632" type="person"
+            >Sie</tei:rs> nicht einmal über <tei:supplied reason="punctuation"
+            >„</tei:supplied>Dirigenten“<tei:note xml:id="r0001-fn03" type="editorial" place="foot"
+            >This suggestion led to the article <tei:bibl><tei:title level="a"
+                >Konzertdirigenten,</tei:title> which appeared in <tei:title level="j">Die
+                Zukunft</tei:title> 7 (April 14, 1894), 88‒92</tei:bibl>, and is reprinted in
+                <tei:bibl><tei:editor>Hellmut Federhofer</tei:editor>, <tei:title level="m">Heinrich
+                Schenker als Essayist und Kritiker</tei:title> (Hildesheim: Georg Olms Verlag,
+              1990), pp. 75-82</tei:bibl>. </tei:note> schreiben, <tei:rs key="entity-000110"
+            type="person">Bülow</tei:rs>, <tei:rs key="entity-005552" type="person"
+          >Richter</tei:rs>, <tei:rs key="entity-000525" type="person">Levi</tei:rs> u.s.w. ?? </tei:p>
+
+        <tei:closer>
+          <tei:salute>Vielleicht interesssirt Sies! </tei:salute>
+          <tei:salute>Besten Gruß. Ihr erg.</tei:salute>
+          <tei:signed><tei:rs key="entity-000333" type="person">H.</tei:rs></tei:signed>
+        </tei:closer>
+
+      </tei:div>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+      <tei:div type="doc1">
+        <tei:opener>
+          <tei:note type="editorial" place="inline"><tei:hi rend="bold">Letter from Hermann Wolff to
+              Maximilian Harden</tei:hi></tei:note><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#printed"/>Hermann Wolff Concert Agency</tei:addrLine>
+            <tei:addrLine>Berlin W., Carlsbad 19, Telegram Address: Musikwolff,
+              Berlin</tei:addrLine>
+          </tei:address><tei:lb/><tei:lb/>
+          <tei:note type="editorial" place="inline">Printed advertisement</tei:note><tei:lb/>
+          <tei:dateline rend="indent-70"><tei:placeName>BERLIN</tei:placeName> W., Carlsbad
+            19.I</tei:dateline>
+          <tei:dateline rend="indent-70"><tei:date when="1893-10-20"><tei:handShift new="#HWo"
+              />October 20</tei:date></tei:dateline>
+          <tei:salute>Dear <tei:rs key="entity-000333" type="person">Sir</tei:rs>,</tei:salute>
+        </tei:opener>
+
+        <tei:p rend="first">I will read the article on <tei:rs key="entity-000104" type="person"
+            >Bruckner</tei:rs> with great interest.</tei:p>
+
+        <tei:p rend="first">Quite often I've had the notion to set down some needful explanations
+          about music and concert life, <tei:pb n="2"/> to eliminate prejudices and produce accuracy
+          and clarity. <tei:rs key="entity-000110" type="person">Bülow</tei:rs> often urged me to do
+          so, for he used to spend hours sitting in my office watching the commotion and observing
+          the workings.</tei:p>
+
+        <tei:p rend="first">But I don't have the time, leisure, or patience. Perhaps you will find
+          the appropriate person. It's imperative. I will make all materials available, provide all
+          necessary explanations, and allow the writer chosen by you to inspect everything. If you
+          had time, you would be the right man and we would find the opportunity to exchange our
+          opinions about it from time to time.</tei:p>
+
+        <tei:p rend="first">The significance of such an article would undoubtedly be very great. The
+          need for it seems nearly critical to me.</tei:p>
+
+        <tei:p rend="first">Perhaps you will find time sometime soon to send me a brief
+          reply.</tei:p>
+
+        <tei:closer>
+          <tei:salute rend="indent-20">Yours most truly,</tei:salute>
+          <tei:signed rend="indent-50"><tei:rs key="entity-005551" type="person">Hermann
+              Wolff</tei:rs>
+            <tei:handShift new="#MH"/>K. T. P. O.<tei:ptr corresp="#r0001-fn01" type="footnote"
+            /></tei:signed>
+        </tei:closer>
+        <tei:lb/>
+        <tei:lb/>
+
+        <tei:postscript>
+          <tei:p><tei:handShift new="#HWo"/><tei:pb n="3"/> I've just read the article on <tei:rs
+              key="entity-000104" type="person">Bruckner</tei:rs>.<tei:ptr corresp="#r0001-fn02"
+              type="footnote"/> Without any exaggeration, it is good and accurate. Dr. <tei:rs
+              key="entity-000632" type="person">H. S.</tei:rs> has an exceptionally precise
+            knowledge of Bruckner's <tei:term>score</tei:term>s. In particular, what he says about
+            Bruckner as a <tei:term>contrapuntalist</tei:term> is on the mark; Schenker hasn't let
+            himself be blinded like most people, who are impressed by the appearance of erudition. I
+            cannot explain here how splendidly the essence of Bruckner's music is revealed in the
+            article and only a person who knows how infinitely difficult it is to describe this
+            essence in words can accurately gauge how close Dr. Schenker has gotten to the root of
+            the matter. </tei:p>
+
+          <tei:p rend="ident-10">Sincere thanks,</tei:p>
+          <tei:p rend="indent-50">Yours,</tei:p>
+          <tei:p rend="indent-60"><tei:rs key="entity-005551" type="person">H.W.</tei:rs></tei:p>
+        </tei:postscript>
+        <tei:lb/>
+      </tei:div>
+
+      <tei:div type="doc2">
+        <tei:note type="editorial" place="inline"><tei:hi rend="bold">Annotated message from
+            Maximilian Harden to Schenker</tei:hi></tei:note>
+        <tei:lb/>
+        <tei:lb/>
+        <tei:p><tei:handShift new="#MH"/>Couldn't <tei:rs key="entity-000632" type="person"
+            >you</tei:rs> write sometime about "Conductors,"<tei:ptr corresp="#r0001-fn03"
+            type="footnote"/>
+          <tei:rs key="entity-000110" type="person">Bülow</tei:rs>, <tei:rs key="entity-005552"
+            type="person">Richter</tei:rs>, <tei:rs key="entity-000525" type="person">Levi</tei:rs>
+          etc.??</tei:p>
+        <tei:closer>
+          <tei:salute>Perhaps this will interest you! </tei:salute>
+          <tei:salute>Your faithful</tei:salute>
+          <tei:signed><tei:rs key="entity-000333" type="person">H.</tei:rs></tei:signed>
+        </tei:closer>
+
+      </tei:div>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
