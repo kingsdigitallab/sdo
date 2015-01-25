@@ -16,6 +16,20 @@
     <!-- if <tei:ab> just wraps a <tei:list>, don't create a <p> -->
     <xsl:apply-templates/>
    </xsl:when>
+   <!-- ****** -->
+   <!-- this second condition relates to visualization testing by PC, 04/06/2014 -->
+   <xsl:when test="@type='makediv'">
+    <div>
+     <xsl:if test="@subtype">
+      <xsl:attribute name="class" select="@subtype"/>
+     </xsl:if>
+     <xsl:if test="@xml:id">
+      <xsl:attribute name="id" select="@xml:id"/>
+     </xsl:if>
+     <xsl:apply-templates/>
+    </div>
+   </xsl:when>
+   <!-- ****** -->
    <xsl:otherwise>
     <p>
      <xsl:if test="@type='division-marker'">
@@ -76,14 +90,15 @@
     </li>
    </xsl:when>
    <xsl:when test="parent::tei:cit and preceding-sibling::tei:q">
-    <br/><xsl:apply-templates/>   
+    <br/>
+    <xsl:apply-templates/>
    </xsl:when>
    <xsl:otherwise>
     <xsl:apply-templates/>
    </xsl:otherwise>
   </xsl:choose>
  </xsl:template>
- 
+
  <xsl:template match="tei:cell">
   <td>
    <xsl:attribute name="class" select="@rend"/>
@@ -94,19 +109,44 @@
  <xsl:template match="tei:choice">
   <xsl:apply-templates/>
  </xsl:template>
- 
+
  <xsl:template match="tei:cit">
-   <xsl:choose>
-    <xsl:when test="parent::tei:p">
-     <span class="inside-block">
-      <xsl:apply-templates/>
-     </span>
-    </xsl:when>
-    <xsl:otherwise>
+  <xsl:choose>
+   <xsl:when test="parent::tei:p">
+    <span class="inside-block">
      <xsl:apply-templates/>
-    </xsl:otherwise>
-   </xsl:choose>
+    </span>
+   </xsl:when>
+   <xsl:otherwise>
+    <xsl:apply-templates/>
+   </xsl:otherwise>
+  </xsl:choose>
  </xsl:template>
+
+ <!-- ****************** -->
+ <!-- ****************** -->
+ <!-- <tei:code> is not used in regular SDO encoding so we use it for visualization test code. PC, 3rd June 2014-->
+ <xsl:template match="tei:code">
+  <xsl:choose>
+   <xsl:when test="@lang = 'js'">
+    <span>Make way for Wibbly-Wobbly ducks!</span>
+    <script type="text/javascript">
+     <xsl:apply-templates/>
+    </script>
+
+   </xsl:when>
+   <xsl:otherwise>
+    <!-- do nothing useful -->
+    <xsl:text>Rafts!</xsl:text>
+   </xsl:otherwise>
+  </xsl:choose>
+ </xsl:template>
+
+ <xsl:template match="processing-instruction()">
+  <xsl:value-of select="."/>
+ </xsl:template>
+ <!-- ****************** -->
+ <!-- ****************** -->
 
  <xsl:template match="tei:corr">
   <xsl:value-of select="."/>
@@ -137,6 +177,13 @@
     <xsl:apply-templates/>
    </xsl:otherwise>
   </xsl:choose>
+ </xsl:template>
+
+ <!-- tei:desc should only occur inside tei:gap to explain why 
+  editor is ommitting some text; template for tei:gap will create a 
+  <span class="editorial" to wrap the explanation in -->
+ <xsl:template match="tei:desc">
+  <xsl:apply-templates/>
  </xsl:template>
 
  <xsl:template match="tei:div">
@@ -327,7 +374,7 @@
     <xsl:if test="child::tei:closer">
      <div class="closer">
       <xsl:attribute name="id">
-<!--       <xsl:text>closer</xsl:text>-->
+       <!--       <xsl:text>closer</xsl:text>-->
        <xsl:if test="parent::tei:div[1]/@type">
         <xsl:text>_</xsl:text>
         <xsl:value-of select="parent::tei:div[1]/@type"/>
@@ -460,8 +507,8 @@
    <xsl:when test="@type='cresc'">&#x1D192;</xsl:when>
    <xsl:when test="@type='dim'">&#x1D193;</xsl:when>
    <xsl:when test="@type='crescdim'">&#x1D192;&#x1D193;</xsl:when>
-   
-   
+
+
    <xsl:otherwise>
     <!-- these use Chord Symbol font replacement -->
     <span class="csthree">
@@ -488,9 +535,20 @@
  </xsl:template>
 
  <xsl:template match="tei:gap">
-  <span class="editorial">
-   <xsl:text>[illeg]</xsl:text>
-  </span>
+  <xsl:choose>
+   <xsl:when test="child::tei:desc">
+    <span class="editorial">
+     <xsl:text>[</xsl:text>
+     <xsl:apply-templates/>
+     <xsl:text>]</xsl:text>
+    </span>
+   </xsl:when>
+   <xsl:when test="@reason='illegible' and not(child::tei:desc)">
+    <span class="editorial">
+     <xsl:text>[illeg]</xsl:text>
+    </span>
+   </xsl:when>
+  </xsl:choose>
  </xsl:template>
 
  <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ TEI:GRAPHIC AND RELATED TEMPLATES @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
@@ -1011,7 +1069,9 @@
    </xsl:when>
    <!-- @@@@@@@@@ MAY NEED TO MOVE INTERLINEAR-ABOVE TO A SEPARATE TEMPLATE IF WE CAN ACTUALLY DISTINGUISH IT IN THE DISPLAY -->
    <xsl:when test="@rend='sup' or @rend='supralinear' or @rend='interlinear-above'">
-    <sup><xsl:apply-templates/></sup>
+    <sup>
+     <xsl:apply-templates/>
+    </sup>
    </xsl:when>
    <!-- @@@@@@@@@ MAY NEED TO MOVE INTERLINEAR-BELOW TO A SEPARATE TEMPLATE IF WE CAN ACTUALLY DISTINGUISH IT IN THE DISPLAY -->
    <xsl:when test="@rend='sub' or @rend='infralinear' or @rend='interlinear-below'">
@@ -1026,15 +1086,19 @@
    </xsl:when>
    <xsl:when test="@rend='double-underline'">
     <span class="doubleunderline">
-     <xsl:apply-templates/>    
+     <xsl:apply-templates/>
     </span>
-    <sup><a href="#f1">&#8224;</a></sup>
+    <sup>
+     <a href="#f1">&#8224;</a>
+    </sup>
    </xsl:when>
    <xsl:when test="@rend='triple-underline'">
     <span class="tripleunderline">
      <xsl:apply-templates/>
     </span>
-    <sup><a href="#f2">&#9674;</a></sup>
+    <sup>
+     <a href="#f2">&#9674;</a>
+    </sup>
    </xsl:when>
    <xsl:when test="contains(@rend, 'lateinschr') and contains(@rend, 'underline')">
     <span class="italic-underline">
@@ -1070,11 +1134,11 @@
     <span class="inline-deletion-lemon">
      <xsl:apply-templates/>
     </span>
-    </xsl:when>
-    <xsl:when test="@rend='strikethroughLIME'">
-     <span class="inline-deletion-lime">
-      <xsl:apply-templates/>
-     </span>
+   </xsl:when>
+   <xsl:when test="@rend='strikethroughLIME'">
+    <span class="inline-deletion-lime">
+     <xsl:apply-templates/>
+    </span>
    </xsl:when>
    <!-- CURRENT DEFAULT: italics -->
    <xsl:otherwise>
@@ -1141,7 +1205,8 @@
     <xsl:choose>
      <xsl:when test="@place='foot'">
       <xsl:variable name="fnNum" select="substring(substring-after(@xml:id, '-'), 3, 2)"/>
-      <sup><a class="fnLink">
+      <sup>
+       <a class="fnLink">
         <xsl:attribute name="href">
          <xsl:text>#fn</xsl:text>
          <xsl:value-of select="$fnNum"/>
@@ -1158,7 +1223,8 @@
           <xsl:value-of select="$fnNum"/>
          </xsl:otherwise>
         </xsl:choose>
-       </a></sup>
+       </a>
+      </sup>
      </xsl:when>
      <xsl:when test="@place = 'pre-text'">
       <!-- do nothing -->
@@ -1281,7 +1347,8 @@
 
  <xsl:template match="tei:ptr">
   <xsl:variable name="ptrNum" select="substring(substring-after(@corresp, '-'), 3, 2)"/>
-  <sup><a class="fnLink">
+  <sup>
+   <a class="fnLink">
     <xsl:attribute name="href">
      <xsl:text>#fn</xsl:text>
      <xsl:value-of select="$ptrNum"/>
@@ -1536,7 +1603,7 @@
    <xsl:apply-templates/>
   </tr>
  </xsl:template>
- 
+
  <xsl:template match="tei:rs">
   <xsl:apply-templates/>
  </xsl:template>
@@ -1591,6 +1658,32 @@
     </em>
    </xsl:when>
 
+   <!-- ****** -->
+   <!-- this condition relates to visualization testing by PC, 04/06/2014 -->
+   <!--<xsl:when test="@type='button'">
+    <button>
+     <xsl:attribute name="onclick" select="concat(substring-before(@subtype, 'QQQ'), '(', substring-after(@subtype, 'QQQ'), ')')"></xsl:attribute>
+     <xsl:apply-templates/>
+    </button>
+   </xsl:when>-->
+   <xsl:when test="contains(@type, 'makebutton_')">
+    <xsl:variable name="func" select="substring-after(@type, 'makebutton_')"/>
+    <button>
+     <xsl:attribute name="onclick">
+      <xsl:choose>
+       <xsl:when test="@subtype">
+        <xsl:value-of select="concat($func, '(', @subtype, ')')"/>
+       </xsl:when>
+       <xsl:otherwise>
+        <xsl:value-of select="concat($func, '()')"/>
+       </xsl:otherwise>
+      </xsl:choose>
+     </xsl:attribute>
+     <xsl:apply-templates/>
+    </button>
+   </xsl:when>
+   <!-- ****** -->
+
    <xsl:otherwise>
     <xsl:apply-templates/>
    </xsl:otherwise>
@@ -1635,9 +1728,13 @@
  </xsl:template>
 
  <xsl:template match="tei:supplied">
-  <span class="editorial"><xsl:text>[</xsl:text><xsl:apply-templates/><xsl:text>]</xsl:text></span>
+  <span class="editorial">
+   <xsl:text>[</xsl:text>
+   <xsl:apply-templates/>
+   <xsl:text>]</xsl:text>
+  </span>
  </xsl:template>
- 
+
  <xsl:template match="tei:table">
   <table>
    <xsl:if test="starts-with(ancestor::tei:div/@type, 'trans')">
@@ -1681,5 +1778,6 @@
    <xsl:text>]</xsl:text>
   </span>
  </xsl:template>
+
 
 </xsl:stylesheet>

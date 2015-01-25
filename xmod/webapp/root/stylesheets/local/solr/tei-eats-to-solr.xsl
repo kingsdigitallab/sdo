@@ -259,7 +259,7 @@
             <field name="correspondence">
               <xsl:value-of select="@key"/>
               <xsl:text> </xsl:text>
-              <xsl:value-of select="replace(., '\s~\s', '_')"/>
+              <xsl:value-of select="replace(normalize-space(.), '\s~\s', '_')"/>
             </field>
           </xsl:for-each>
 
