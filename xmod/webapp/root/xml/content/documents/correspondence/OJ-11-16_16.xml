@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1408" sdoID="OJ-11-16_16">OJ 11/16, [16]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="WF" scope="major">Wilhelm Furtwängler's hand</tei:handNote>
+      <tei:handNote xml:id="TPwf" scope="major">Wilhelm Furtwängler as typist</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="CH">
+      <tei:persName>Christoph Hust</tei:persName>
+      <tei:resp>Transcription, 2008</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Translation, 2008</tei:resp>
+      <tei:resp>XML Encoding, 2015</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-06-28" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002728">Furtwängler ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+      <dc:title>Typewritten letter from Furtwängler to Schenker, dated October 3, 1934</dc:title>
+
+      <dcterms:created>1934-10-03T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2015-01-28</dcterms:dateSubmitted>
+      <dc:description>Furtwängler has used his influence to enable [Hans Wolf to exit
+        Germany].</dc:description>
+      <dc:subject>telefonieren; to telephone; Schüler; pupil; Erlaubnis; permission</dc:subject>
+
+      <marcrel:correspondent key="entity-000268">Furtwängler</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine rend="indent-50"><tei:handShift new="#printed"/>BERLIN W. 62 <tei:handShift
+              new="#TPwf"/><tei:date when="1934-10-03">3. Oktober 1934</tei:date>.</tei:addrLine>
+          <tei:addrLine rend="indent-60"><tei:handShift new="#printed"/>KEITHSTR. 1<tei:hi
+              rend="supralinear">IV</tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:salute><tei:handShift new="#TPwf"/>Lieber Herr <tei:rs type="person"
+            key="entity-000632">Schenker</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial"
+            place="foot">Receipt of this letter is recorded in Schenker's diary at OJ 4/8, p. 3956,
+            October 24, 1934: "Von Furtwängler (Br.): hat sich für Wolf verwendet" ("From
+            Furtwängler (letter): has used his influence on behalf of Wolf"), and his reply ibid,
+            October 26: "An Furtwängler (Br.): Dank für Wolf usw." (To Furtwängler (letter): thanks
+            for Wolf, etc.").</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Nach Empfang Ihres Briefes<tei:note xml:id="r0001-fn02" type="editorial"
+          place="foot">This letter is not known to survive. </tei:note> hat sich Herr Dr. <tei:rs
+          key="entity-000412" type="person">Jonas</tei:rs><tei:note xml:id="r0001-fn03"
+          type="editorial" place="foot">The letter from Jonas to Furtwängler is not known to
+          survive.</tei:note> in derselben Angelegenheit an mich gewandt. Ich habe <tei:del
+          rend="overstrike">sofort</tei:del> an die betreffende Stelle telefoniert und es wurde mir
+        zugesagt, dass die Angelegenheit sofort erledigt werden sollte. Hoffentlich hat Ihr <tei:rs
+          key="entity-000973" type="person">Schüler</tei:rs><tei:note xml:id="r0001-fn04"
+          type="editorial" place="foot"><tei:rs key="entity-000973" type="person">Hans
+          Wolf</tei:rs>, who had traveled from Vienna to Hamburg in September 1934, and then was not
+          allowed by the authorities to return until Furtwängler intervened on his behalf.
+          Correspondence between Wolf and Schenker exists concerning this incident.</tei:note>
+        inzwischen die Erlaubnis schon in den Händen.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">Mit den schönsten Grüssen<tei:handShift new="#WF"/>, in aller
+          Eile</tei:salute>
+        <tei:salute rend="indent-60">Ihr</tei:salute>
+        <tei:signed rend="indent-50"><tei:rs key="entity-000268" type="person">Wilhelm
+            Furtwängler</tei:rs></tei:signed><tei:lb/><tei:lb/>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p>NB: Ich schreibe in den nächsten Tagen nochmal!</tei:p>
+      </tei:postscript>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine rend="indent-50"><tei:handShift new="#printed"/>BERLIN W. 62 <tei:handShift
+              new="#TPwf"/><tei:date when="1934-10-03">October 3, 1934</tei:date></tei:addrLine>
+          <tei:addrLine rend="indent-60"><tei:handShift new="#printed"/>KEITHSTRASSE 1<tei:hi
+              rend="supralinear">IV</tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:salute><tei:handShift new="#TPwf"/>Dear Mr. <tei:rs type="person" key="entity-000632"
+            >Schenker</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">After I had received your letter,<tei:ptr corresp="#r0001-fn02"
+          type="footnote"/> Dr. <tei:rs key="entity-000412" type="person">Jonas</tei:rs><tei:ptr
+          corresp="#r0001-fn03" type="footnote"/> turned to me on the same matter. I <tei:del
+          rend="overstrike">immediately</tei:del> telephoned the relevant authority and was promised
+        that the matter would be dealt with immediately. I hope that by now your <tei:rs
+          key="entity-000973" type="person">pupil</tei:rs><tei:ptr corresp="#r0001-fn04"
+          type="footnote"/> will in the meantime have received permission.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">With very best wishes<tei:handShift new="#WF"/>, in great
+          haste,</tei:salute>
+        <tei:salute rend="indent-60">Yours,</tei:salute>
+        <tei:signed rend="indent-50"><tei:rs key="entity-000268" type="person">Wilhelm
+            Furtwängler</tei:rs></tei:signed><tei:lb/><tei:lb/>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p>NB: I shall write again in the next few days.</tei:p>
+      </tei:postscript>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
