@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1435" sdoID="OC-B-273">OC B/273</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="TPlko" scope="major">Louis Koch as typist</tei:handNote>
+      <tei:handNote xml:id="LKo" scope="minor">Louis Koch's hand</tei:handNote>
+      <tei:handNote xml:id="HS" scope="minor">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="NM">
+      <tei:persName>Nicholas Marston</tei:persName>
+      <tei:resp>Transcription, 2014</tei:resp>
+      <tei:resp>Translation, 2014</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2015</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-26" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005575">KochL ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">letter</tei:rs>
+
+      <dc:title>Typewritten letter from Louis Koch to Schenker, dated October 23, 1913</dc:title>
+      <dcterms:created>1913-10-23T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2015-02-12</dcterms:dateSubmitted>
+      <dc:description>Koch lists the Beethoven manuscript items in his possession.</dc:description>
+      <dc:subject>Manuscript; Titelblatt; title-page; Correcturen; corrections; Bemerkungen;
+        annotations; Noten; notes; Skizzen; sketches</dc:subject>
+
+
+
+      <marcrel:correspondent key="entity-000454">Louis Koch</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine rend="indent-50"><tei:handShift new="#printed"/><tei:placeName>FRANKFURT A.
+              M.</tei:placeName>
+            <tei:handShift new="#TPlko"/><tei:date when="1913-10-23">23. Okt.
+            1913</tei:date>.</tei:addrLine>
+          <tei:addrLine rend="indent-60"><tei:handShift new="#printed"/>KAISERSTRASSE
+            25</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine rend="indent-10"><tei:handShift new="#TPlko"/>Hochwohlgeboren Herrn Dr.
+            HEINRICH <tei:hi rend="sperr">SCHENKER</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-60"><tei:hi rend="underline"><tei:hi rend="sperr"
+                >WIEN.</tei:hi></tei:hi></tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:salute rend="indent-20">Sehr geehrter <tei:rs key="entity-000632" type="person"
+            >Herr</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
+            this letter is recorded in Schenker's diary at OJ 1/13, p. 454, October 25, 1913: "Von
+            Herrn Koch, Frankfurt <tei:hi rend="supralinear">a</tei:hi>/M, Brief mit Aufzählung der
+            Manuskripte. Ein sehr liebenswürdiger Zug, der in Wien sicher nicht <tei:subst>
+              <tei:del rend="overstrike">angetroffen</tei:del>
+              <tei:add place="interlinear-above">anzutreffen</tei:add>
+            </tei:subst>
+            <tei:subst>
+              <tei:del rend="overstrike">würde</tei:del>
+              <tei:add place="interlinear-above">wäre</tei:add>
+            </tei:subst>! Er versprach die Antwort für Ende des Monats u. ohne neuen Urgieren hielt
+            er Wort!" ("Letter from Mr Koch, Frankfurt am Main, with a list of the manuscripts. A
+            very kind trait, certainly not to be encountered in Vienna! He promised the answer at
+            the end of the month and kept his word without renewed demand!")</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Von einer Reise hierher zurückgekehrt finde ich Ihre werten Zeilen vom
+          <tei:date when="1913-09-29">29. pto.</tei:date> vor.<tei:note xml:id="r0001-fn02"
+          type="editorial" place="foot">This letter to Koch is recorded in Schenker's diary at OJ
+          1/13, p. 431, September 29, 1913: "Anfrage an Juwelier Koch wegen der Autographe."
+          ("Enquiry to the jeweller Koch about the autograph manuscripts.") The letter is not known
+          to survive.</tei:note></tei:p>
+
+      <tei:p rend="first">Von <tei:rs key="entity-000055" type="person"
+        >Beethoven</tei:rs>-Manuscripten besitze ich die folgenden Piecen: <tei:cit>
+          <tei:q>1.) <tei:rs key="entity-001191" type="composition">Ouverture zu „Egmont”</tei:rs>,
+            Titelblatt und zahlreiche Correcturen und Bemerkungen von Beethovens Hand.<tei:note
+              xml:id="r0001-fn03" type="editorial" place="foot">This manuscript, principally in the
+              hand of two copyists, is now Bonn, Beethovenhaus, NE 64, and contains the entire
+              incidental music for "Egmont", not merely the Overture.</tei:note>
+            <tei:lb/><tei:lb/>2.) <tei:rs key="entity-001203" type="composition">Sonate in As-dur
+                <tei:hi rend="underline">op. 110</tei:hi></tei:rs><tei:hi rend="underline">, 3ter
+              und 4ter Satz</tei:hi><tei:note xml:id="r0001-fn04" type="editorial" place="foot">"op.
+              110 ... Satz" ("Op. 110 ... movement") underlined by Schenker and cross marked in left
+              margin, all in pencil. This manuscript is now Bonn, Beethovenhaus, BMh
+              2/42.</tei:note>
+            <tei:lb/><tei:lb/>3.) Skizzenbuch aus den Jahren 1815 und 1816<tei:note
+              xml:id="r0001-fn05" type="editorial" place="foot">This is the "Scheide" Sketchbook,
+              today in the library of William Scheide, Princeton University, New Jersey. Koch's
+              figure of 52 leaves is inaccurate: see <tei:bibl><tei:author>Douglas
+                  Johnson</tei:author>, <tei:author>Alan Tyson</tei:author>, and <tei:author>Robert
+                  Winter</tei:author>, <tei:title level="m">The Beethoven Sketchbooks: History,
+                  Reconstruction, Inventory</tei:title>, ed. <tei:editor>Douglas
+                  Johnson</tei:editor> (Oxford: Clarendon Press, 1985), p. 241</tei:bibl>, where the
+              correct figure of "56 (or 551/4) leaves" is given.</tei:note> 52 Seiten;
+            <tei:lb/>enthaltend: Noten und Skizzen zur <tei:rs key="entity-002617"
+              type="composition">Sonate für Piano und Cello, op. 102</tei:rs>
+            <tei:lb/><tei:supplied reason="ditto">enthaltend</tei:supplied>
+            <tei:rs key="entity-005576" type="composition">Liederkreis op. 98</tei:rs>, <tei:rs
+              key="entity-001201" type="composition">op. 101</tei:rs> etc. <tei:lb/><tei:lb/>4.)
+            irische Lieder, 22 Seiten: Quartett für 2 Violinen, Cello und Pianoforte.<tei:note
+              xml:id="r0001-fn06" type="editorial" place="foot">This manuscript, presently in the
+              private collection of William Zachs (UK), contains six folksong settings of various
+              nationalities: Op. 108, No. 24 (Scottish), WoO 153, No. 32 (Irish), WoO 155, No. 25
+              (Welsh), and WoO 156, Nos 3–4 (Scottish). The instrumental setting is for piano trio.
+              See <tei:bibl><tei:title level="m">Ludwig van Beethoven: Thematisch-bibliographisches
+                  Werkverzeichnis</tei:title>, ed. <tei:editor>Kurt Dorfmüller</tei:editor>,
+                  <tei:editor>Norbert Gertsch</tei:editor>, and <tei:editor>Julia
+                Ronge</tei:editor>, 2 vols (Munich: Henle, 2014), I, 690 (no. 12); II, 404 (no. 3),
+                426 (no. 6), 440 (no. 4)</tei:bibl>.</tei:note>
+            
+            <tei:lb/><tei:lb/><tei:pb n="2"/> 5.) schottische Lieder, 2 Violinen, Cello und Pianoforte, 24 Seiten
+              <tei:rs key="entity-005577" type="composition">op108</tei:rs><tei:note
+              xml:id="r0001-fn07" type="editorial" place="foot">This manuscript, containing Op. 108,
+              Nos 5, 6, 7, 10, and 19, is now divided between New York, Pierpont Morgan Library,
+              Cary Collection 275 (nos 5, 10, and 19) and a private collection (nos 6–7). According
+              to <tei:bibl><tei:title level="m">Ludwig van Beethoven: Thematisch-bibliographisches
+                  Werkverzeichnis</tei:title>, ed. <tei:editor>Kurt Dorfmüller</tei:editor>,
+                  <tei:editor>Norbert Gertsch</tei:editor>, and <tei:editor>Julia
+                Ronge</tei:editor>, 2 vols (Munich: Henle, 2014), I, 689 (nos 6–7)</tei:bibl>, the
+              manuscripts comprise respectively six and five leaves: thus, 22 rather than 24 pages.
+              The instrumental setting of Op. 108 is for solo violin (or flute), cello, and
+              piano.</tei:note><tei:supplied reason="punctuation">.</tei:supplied></tei:q>
+        </tei:cit>
+      </tei:p>
+
+      <tei:p rend="first">Wenn Sie die Sachen interessiren, so stelle ich Ihnen solche gerne hier
+        zur Verfügung. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">Mit vorzüglichster Hochachtung!</tei:salute>
+        <tei:signed rend="indent-30"><tei:handShift new="#LKo"/><tei:rs key="entity-000454"
+            type="person">Louis Koch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine rend="indent-50"><tei:handShift new="#printed"/><tei:placeName>FRANKFURT AM
+              MAIN</tei:placeName>
+            <tei:handShift new="#TPlko"/><tei:date when="1913-10-23">October 23,
+            1913</tei:date></tei:addrLine>
+          <tei:addrLine rend="indent-60"><tei:handShift new="#printed"/>KAISERSTRASSE
+            25</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine rend="indent-10"><tei:handShift new="#TPlko"/>Dr. HEINRICH <tei:hi
+              rend="sperr">SCHENKER</tei:hi>, Esq.</tei:addrLine>
+          <tei:addrLine rend="indent-60"><tei:hi rend="underline"><tei:hi rend="sperr"
+                >VIENNA</tei:hi></tei:hi></tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:salute rend="indent-20">Dear <tei:rs key="entity-000632" type="person"
+            >Sir</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Having returned here from a trip, I find your valued lines of the
+          <tei:date when="1913-09-29">29th inst</tei:date>.<tei:ptr corresp="#r0001-fn02"
+          type="footnote"/></tei:p>
+
+      <tei:p rend="first">I possess the following manuscript items of <tei:rs key="entity-000055"
+          type="person">Beethoven</tei:rs>: <tei:cit>
+          <tei:q>1. <tei:rs key="entity-001191" type="composition">Overture to "Egmont"</tei:rs>,
+            title-page and extensive corrections and annotations in Beethoven's hand.<tei:ptr
+              corresp="#r0001-fn03" type="footnote"/>
+            <tei:lb/><tei:lb/>2. <tei:rs key="entity-001203" type="composition">Sonata in A<tei:g
+                type="flat"/> major, <tei:hi rend="underline">Op. 110</tei:hi></tei:rs><tei:hi
+              rend="underline">, 3rd and 4th movement</tei:hi><tei:ptr corresp="#r0001-fn04"
+              type="footnote"/>
+            <tei:lb/><tei:lb/>3. Sketchbook from the years 1815 and 1816<tei:ptr
+              corresp="#r0001-fn05" type="footnote"/>, 52 pages; <tei:lb/>containing: notes and
+            sketches for the <tei:rs key="entity-002617" type="composition">Sonata for piano and
+              cello, Op. 102 <tei:supplied reason="identity">No. 2</tei:supplied></tei:rs>
+            <tei:lb/><tei:supplied reason="ditto">containing</tei:supplied>
+            <tei:rs key="entity-005576" type="composition">Liederkreis, Op. 98</tei:rs>, <tei:rs
+              key="entity-001201" type="composition">Op. 101</tei:rs>, etc. <tei:lb/><tei:lb/>4.
+            Irish Songs, 22 pages: Quartet for 2 violins, cello and pianoforte<tei:ptr
+              corresp="#r0001-fn06" type="footnote"/>
+            
+            <tei:lb/><tei:lb/><tei:pb n="2"/> 5. Scottish Songs, 2 violins, cello and pianoforte, 24 pages, <tei:rs
+              key="entity-005577" type="composition">Op. 108</tei:rs>.<tei:ptr corresp="#r0001-fn07"
+              type="footnote"/></tei:q>
+        </tei:cit>
+      </tei:p>
+
+      <tei:p rend="first">If these things are of interest to you, I will gladly put them at your
+        disposal here.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">With kindest regards!</tei:salute>
+        <tei:signed rend="indent-30"><tei:handShift new="#LKo"/><tei:rs key="entity-000454"
+            type="person">Louis Koch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
