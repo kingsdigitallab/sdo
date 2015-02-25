@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1461" sdoID="OJ-9-3_6">OJ 9/3, [6]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="TPbz-1" scope="major">Typist 1 (cyclostyled)</tei:handNote>
+      <tei:handNote xml:id="TPbz-2" scope="minor">Typist 2</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamped</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="KK">
+      <tei:persName>Kevin Karnes</tei:persName>
+      <tei:resp>Transcription, 2008</tei:resp>
+      <tei:resp>Translation, 2008</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2015</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-26" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005580">AdlerG ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005583">BundMin ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005581">IMG ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">letter</tei:rs>
+
+      <dc:title>Typewritten letter from Guido Adler to Schenker, dated April 4, 1927</dc:title>
+      <dcterms:created>1927-04-04T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2015-02-24</dcterms:dateSubmitted>
+      <dc:description>Schenker is asked to have his photograph taken as a collaborator in the
+        Beethoven Centennial Celebration.</dc:description>
+      <dc:subject>Programm; program; Zentenarfeier; Centennial Celebration; Album; Portrait;
+        Aufnahme; photograph; Mitwirkung; collaboration</dc:subject>
+
+      <marcrel:correspondent key="entity-000003">Guido Adler</marcrel:correspondent>
+      <marcrel:correspondent key="entity-005584">Bundesministerium für
+        Unterricht</marcrel:correspondent>
+      <marcrel:correspondent key="entity-002429">Internationale
+        Musikgesellschaft</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+      <tei:opener>
+        <tei:dateline rend="indent-60"><tei:handShift new="#TPbz-1"
+            /><tei:placeName>Wien</tei:placeName>, am <tei:date when="1927-04-04">4. April
+            1927</tei:date>.</tei:dateline>
+        <tei:address>
+          <tei:addrLine rend="indent-40"><tei:handShift new="#TPbz-2"/>Herrn Dr. Heinrich
+            Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-60"><tei:hi rend="underline">Wien III</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-60">Keilgasse 8</tei:addrLine>
+        </tei:address><tei:lb/><tei:lb/>
+      </tei:opener>
+
+      <tei:p rend="first"><tei:handShift new="#TPbz-1"/>Das Programm der Zentenarfeier schliesst die
+        Widmung eines Albums an die <tei:rs key="entity-002686" type="organization"
+          >Nationalbibliothek</tei:rs> und an das Museum der Stadt Wien, mit den Portraits der
+        illustren Gäste, welche in so liebenswürdiger Weise den Glanz des Festes erhöht haben, ein.
+          –<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this letter does
+          not appear to have been recorded in Schenker's diary.</tei:note></tei:p>
+
+      <tei:p rend="first">Das Executivkomitee ersucht Sie daher das <tei:rs key="entity-004462"
+          type="place">Atelier Pietzner Fayer</tei:rs>, Wien I. Opernring 1 (<tei:foreign
+          xml:lang="fre">vis a vis</tei:foreign> der <tei:rs key="entity-002778" type="place"
+          >Oper</tei:rs>) Tel 6426 welchem die künstlerische Ausführung des Albums übertragen wurde,
+        zwecks Anfertigung der kostenlosen Aufnahme, freundlichst aufsuchen zu wollen. –<tei:note
+          xml:id="r0001-fn02" type="editorial" place="foot">The letter from the Atelier
+          Pietzner-Fayer to Schenker survives as <tei:ref type="correspondence" cRef="OJ-11-1_1">OJ
+            11/1, [1]</tei:ref>, dated May 10, 1927. The album survives in the Picture Archive
+          (Bildarchiv) of the Austrian National Library, catalog no. Pb
+        580.555-F.</tei:note></tei:p>
+
+      <tei:p rend="first">Für Ihre freundliche Mitwirkung an unserem denkwürdigen Werke freundlichst
+        dankend, zeichnet </tei:p>
+
+
+      <tei:closer>
+        <tei:salute rend="indent-60">hochachtungsvoll</tei:salute>
+        <tei:salute rend="indent-55">für das Exekutivkomitee</tei:salute>
+        <tei:salute rend="indent-50">der Beethoven Zentenarfeier.</tei:salute>
+        <tei:signed rend="indent-60"><tei:handShift new="#stamp"/><tei:rs key="entity-000003"
+            type="person">Guido Adler</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+      <tei:opener>
+        <tei:dateline rend="indent-60"><tei:handShift new="#TPbz-1"
+            /><tei:placeName>Vienna</tei:placeName>, <tei:date when="1927-04-04">April 4,
+            1927</tei:date></tei:dateline>
+        <tei:address>
+          <tei:addrLine rend="indent-40"><tei:handShift new="#TPbz-2"/>Dr. Heinrich
+            Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-60"><tei:hi rend="underline">Vienna III</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-60">Keilgasse 8</tei:addrLine>
+        </tei:address><tei:lb/><tei:lb/>
+      </tei:opener>
+
+      <tei:p rend="first"><tei:handShift new="#TPbz-1"/>The program for the Centennial Celebration
+        includes the dedication of an album to the <tei:rs key="entity-002686" type="organization"
+          >National Library</tei:rs> and the Museum of the City of Vienna, with portraits of the
+        illustrious guests who contributed to the brilliance of the festival in such generous
+          ways.<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:p>
+
+      <tei:p rend="first">For this reason the Executive Committee most kindly asks that you contact
+          <tei:rs key="entity-004462" type="place">Studio Pietzner Fayer</tei:rs>, Vienna I,
+        Opernring 1 (across from the <tei:rs key="entity-002778" type="place">Opera</tei:rs>; tel.
+        6426), to which the artistic production of the album has been entrusted, to have your
+        photograph taken free of charge.<tei:ptr corresp="#r0001-fn02" type="footnote"/></tei:p>
+
+      <tei:p rend="first">With heartfelt thanks for your friendly collaboration on our memorable
+        project,</tei:p>
+
+
+      <tei:closer>
+        <tei:salute rend="indent-60">with kind regards,</tei:salute>
+        <tei:salute rend="indent-55">on behalf of the Executive Committee </tei:salute>
+        <tei:salute rend="indent-50">of the Beethoven Centennial Celebration,</tei:salute>
+        <tei:signed rend="indent-60"><tei:handShift new="#stamp"/><tei:rs key="entity-000003"
+            type="person">Guido Adler</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
