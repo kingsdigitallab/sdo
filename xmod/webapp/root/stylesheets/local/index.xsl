@@ -261,22 +261,17 @@
                 </div>
                 <div class="unit size1of3 lastUnit">
                   <h3>Latest</h3>
-                  <h4>!! TENTH ANNIVERSARY !!</h4>
+                  <h4>What’s New? ‒ nearly 200 letters</h4>
                   <ul>
-                    <li>SDO just passed its tenth anniversary! The first letter went up on June 12,
-                      2004</li>
-                    <li>It was coded in a blogging software called MovableType on a site set up for
-                      the project by Maurice Matiz of Columbia University in New York. Over the next
-                      five years some 1,200 documents were encoded on the site.</li>
-                    <li>It was on that platform that the familiar parallel German-English format was
-                      devised, the clever “sender~recipient” tagging system created, and the
-                      internal dictionary of profiles established.</li>
-                    <li>Since then, external funding has enabled SDO to create its new, XML-encoded
-                      searchable website, and post many more correspondence items; and, with the
-                      collaboration of the Universität für Musik und Darstellende Kunst in Vienna,
-                      to incorporate Schenker’s diaries from 1918 to 1930. — For more information,
-                      see our blog post.</li>
-                    <li>To all our contributors and developers: Happy Tenth Anniversary!</li>
+                    <li>March 2015 brings to the site important correspondences with Guido Adler (9
+                      items), Wilhelm Furtwängler (40), the Gesellschaft der Musikfreunde in Wien
+                      (25), Maximilian Harden (31), and Moriz Rosenthal (12), and shorter
+                      correspondences with Antropp, Bahr, Bienenfeld, Bösendorfer, Emma Fischer,
+                      Hellmesberger, Liebstöckl, Richard Robert, Schnabel, and Zuckerkandl ‒ all
+                      transfers from the old site.</li>
+                    <li>It also features ‒ new to SDO ‒ Schenker’s search for autograph sources with
+                      librarians and dealers: V. A. Heck, Louis Koch, Albert Kopfermann, Karl Krebs,
+                      Leo Liepmannssohn, Max Meinert, and the British Museum.</li>
                   </ul>
 
                   <nav class="local" id="blogPosts">
