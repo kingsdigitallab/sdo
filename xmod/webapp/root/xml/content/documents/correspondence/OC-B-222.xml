@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1471" sdoID="OC-B-222">OC B/222</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="TPvah" scope="major">V. A. Heck's typist</tei:handNote>
+      <tei:handNote xml:id="VAH" scope="minor">V. A. Heck's hand</tei:handNote>
+      <tei:handNote xml:id="HS" scope="minor">Heinrich Schenker's hand (pencil)</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="NM">
+      <tei:persName>Nicholas Marston</tei:persName>
+      <tei:resp>Transcription, 2015</tei:resp>
+      <tei:resp>Translation, 2015</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2015</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-26" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005586"> HeckVA ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">letter</tei:rs>
+
+      <dc:title>Typewritten letter from V. A. Heck to Schenker, dated April 12, 1927</dc:title>
+      <dcterms:created>1927-04-12T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2015-03-06</dcterms:dateSubmitted>
+      <dc:description>Heck sends a Beethoven sketchleaf and asks Schenker's opinion of
+        it.</dc:description>
+      <dc:subject>Skizzenblatt; sketchleaf, Manuskript; manuscript; Skizze; sketch; Photographie;
+        photograph</dc:subject>
+
+
+
+      <marcrel:correspondent key="entity-000345">V. A. Heck</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>BUCH- UND KUNSTANTIQUARIAT</tei:addrLine>
+          <tei:addrLine>AUTOGRAPHEN-HANDLUNG</tei:addrLine>
+          <tei:addrLine><tei:hi rend="bold">V. A. HECK</tei:hi></tei:addrLine>
+          <tei:addrLine>WIEN I, KÄRNTNERRING 12</tei:addrLine>
+          <tei:addrLine>____________________</tei:addrLine>
+          <tei:addrLine>KATALOGE AUF VERLANGEN GRATIS</tei:addrLine>
+          <tei:addrLine>____________________</tei:addrLine>
+          <tei:addrLine>ÖSTERR. POSTSPARK.-KTO. 3.845</tei:addrLine>
+          <tei:addrLine>TELEPHON 51-2-61</tei:addrLine>
+          <tei:addrLine>WECHSELSTUBE DER UNIONBANK</tei:addrLine>
+          <tei:addrLine>WIEN I., KÄRNTNERRING 12</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-60"><tei:placeName>WIEN</tei:placeName>, <tei:handShift
+            new="#TPvah"/>am <tei:date when="1927-04-12">12. April 1927</tei:date>.</tei:dateline><tei:lb/>
+        <tei:address>
+          <tei:addrLine rend="indent-20">Herrn Prof. Dr. Heinrich <tei:hi rend="sperr"
+              >Schenker</tei:hi>,</tei:addrLine>
+          <tei:addrLine rend="indent-70"><tei:hi rend="sperr">Wien</tei:hi>, III.</tei:addrLine>
+          <tei:addrLine rend="indent-65">Keilgasse 8.</tei:addrLine>
+        </tei:address><tei:lb/><tei:lb/>
+        <tei:fw place="inline" rend="indent-70"><tei:handShift new="#HS"/><tei:rs
+            key="entity-004748" type="composition"><tei:title>Konig
+          Stephan</tei:title></tei:rs>?</tei:fw>
+        <tei:salute rend="indent-20"><tei:handShift new="#TPvah"/>Sehr geehrter Herr <tei:rs
+            key="entity-000632" type="person">Professor</tei:rs>!<tei:note xml:id="r0001-fn01"
+            type="editorial" place="foot">Receipt of this letter is recorded in Schenker's diary at
+            OJ 3/9, p. 3055, April 12, 1927: "½2<tei:hi rend="supralinear">h</tei:hi> Heck jun.
+            bringt eine Beethoven-Skizze." ("At 1. 30 the younger Heck brings a Beethoven
+            sketch.").</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Es freut mich, dass ich Ihnen heute wieder ein interessantes <tei:rs
+          key="entity-000055" type="person">Beethoven</tei:rs>
+        <tei:term>Skizzenblatt</tei:term> zur Ansicht schicken kann.</tei:p>
+
+      <tei:p rend="first">Ich wäre Ihnen ausserordentlich dankbar, wenn Sie auch diesmal wieder die
+        Freundlichkeit hätten, mir mit einigen Zeilen Ihre Ansicht über das
+          <tei:term>Manuskript</tei:term> mitzuteilen<tei:note xml:id="r0001-fn02" type="editorial"
+          place="foot">Schenker's diary at OJ 3/9, pp. 3055–3056, April 13, 1927, records: "Im
+          Archiv wegen <tei:rs key="entity-004748" type="composition">König
+          Stephan</tei:rs>-Partitur <tei:note type="editorial" place="inline">...</tei:note> werfe
+          ich einen Blick auf die Ouvertüre und finde meine Vermutung bestätigt: die Skizze bezieht
+          sich auf diese Ouvertüre. <tei:note type="editorial" place="inline">...</tei:note> — An
+          Heck (Br.): gebe die Lösung der Skizze." ("In the Archive, on account of the score of
+            <tei:supplied reason="identity">Beethoven's Overture</tei:supplied> "<tei:rs
+            key="entity-004748" type="composition">King Stephen</tei:rs>" <tei:supplied
+            reason="identity">Op. 117</tei:supplied>
+          <tei:note type="editorial" place="inline">...</tei:note> I cast my eyes over the overture
+          and find my suspicion confirmed: the sketch pertains to this overture. <tei:note
+            type="editorial" place="inline">...</tei:note> —To Heck (letter): I give the solution to
+          the sketch.").</tei:note> und ob Sie davon eine Photographie wünschen.<tei:note
+          xml:id="r0001-fn03" type="editorial" place="foot">Photographs of this sketchleaf (today
+          Bonn, Beethovenhaus, HCB Mh 83) are preserved at OC B/293–294. The leaf belonged
+          originally to the home-made Sketchbook of 1810–11: see <tei:bibl><tei:author>Douglas
+              Johnson</tei:author>, <tei:author>Alan Tyson</tei:author> and <tei:author>Robert
+              Winter</tei:author>, <tei:title level="m">The Beethoven Sketchbooks: History,
+              Reconstruction, Inventory</tei:title>, ed. <tei:editor>Douglas Johnson</tei:editor>
+            (Oxford: Clarendon Press, 1985), pp. 201–06</tei:bibl>. Schenker's diary at OJ 3/9, p.
+          3057, April 16, 1927, records: "Herr Heck bringt eine Photographie des <tei:rs
+            key="entity-004748" type="composition"><tei:title>König
+          Stephan</tei:title></tei:rs>-Blattes; erkundigt sich nach Worten, die auf diesem Blatte
+          stehen; Lie-Liechen antwortet treffend, daß mich die Noten weit mehr interessieren." ("Mr.
+          Heck brings a photograph of the sketch-leaf for the <tei:rs key="entity-004748"
+            type="composition"><tei:title><tei:supplied reason="identity">Overture to</tei:supplied>
+              "King Stephen"</tei:title></tei:rs>; asks about words that are written on this leaf;
+          Lie-Liechen answers tellingly that the notes interest me far more.").</tei:note></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">Mit dem Ausdruck aller Hochachtung,</tei:salute>
+        <tei:salute rend="indent-70">Ihr ganz ergebenster</tei:salute>
+        <tei:signed rend="indent-60"><tei:handShift new="#VAH"/><tei:rs key="entity-000345"
+            type="person">V A Heck</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>ANTIQUARIAN BOOKS AND ART</tei:addrLine>
+          <tei:addrLine>AUTOGRAPH DEALERS</tei:addrLine>
+          <tei:addrLine><tei:hi rend="bold">V. A. HECK</tei:hi></tei:addrLine>
+          <tei:addrLine>VIENNA I, KÄRNTNERRING 12</tei:addrLine>
+          <tei:addrLine>____________________</tei:addrLine>
+          <tei:addrLine>CATALOGUES FREE ON REQUEST</tei:addrLine>
+          <tei:addrLine>____________________</tei:addrLine>
+          <tei:addrLine>AUSTRIAN POSTAL SAVINGS BANK ACCOUNT 3. 845</tei:addrLine>
+          <tei:addrLine>TELEPHONE 51-2-61</tei:addrLine>
+          <tei:addrLine>UNION BANK EXCHANGE</tei:addrLine>
+          <tei:addrLine>VIENNA I, KÄRNTNERRING 12</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-60"><tei:placeName>VIENNA</tei:placeName>, <tei:handShift
+            new="#TPvah"/><tei:date when="1927-04-12">April 12, 1927</tei:date></tei:dateline><tei:lb/>
+        <tei:address>
+          <tei:addrLine rend="indent-20">Prof. Heinrich <tei:hi rend="sperr"
+            >Schenker</tei:hi>,</tei:addrLine>
+          <tei:addrLine rend="indent-70"><tei:hi rend="sperr">Vienna</tei:hi> III,</tei:addrLine>
+          <tei:addrLine rend="indent-65">Keilgasse 8</tei:addrLine>
+        </tei:address><tei:lb/><tei:lb/>
+        <tei:fw place="inline" rend="indent-70"><tei:handShift new="#HS"/><tei:rs
+            key="entity-004748" type="composition"><tei:title>King
+          Stephen</tei:title></tei:rs>?</tei:fw>
+        <tei:salute rend="indent-20"><tei:handShift new="#TPvah"/>Dear <tei:rs key="entity-000632"
+            type="person">Professor</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"
+          /></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">I am delighted to be able to send you once again today an interesting
+          <tei:rs key="entity-000055" type="person">Beethoven</tei:rs>
+        <tei:term>sketchleaf</tei:term> for inspection.</tei:p>
+
+      <tei:p rend="first">I would be extremely grateful to you if you could this time too be so kind
+        as to send me a few lines giving your opinion of the
+          <tei:term>manuscript</tei:term>,<tei:ptr corresp="#r0001-fn02" type="footnote"/> and
+          <tei:supplied reason="clarity">saying</tei:supplied> whether you would like a photograph
+        of it.<tei:ptr corresp="#r0001-fn03" type="footnote"/></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">With the highest expression of regard,</tei:salute>
+        <tei:salute rend="indent-70">Most truly yours,</tei:salute>
+        <tei:signed rend="indent-60"><tei:handShift new="#VAH"/><tei:rs key="entity-000345"
+            type="person">V A Heck</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
