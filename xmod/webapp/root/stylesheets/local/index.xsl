@@ -272,6 +272,9 @@
                     <li>It also features ‒ new to SDO ‒ Schenker’s search for autograph sources with
                       librarians and dealers: V. A. Heck, Louis Koch, Albert Kopfermann, Karl Krebs,
                       Leo Liepmannssohn, Max Meinert, and the British Museum.</li>
+                    <li>New source materials continue to come to light, the latest being eight
+                      letters between Schenker and the Beethovenhaus, Bonn, dating from 1913 and
+                      1914.</li>
                   </ul>
 
                   <nav class="local" id="blogPosts">
