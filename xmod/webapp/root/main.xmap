@@ -175,7 +175,7 @@
       <map:match pattern="search/terms.html">
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
-          <map:part src="cocoon://_internal/solr/query/q=term%3A*&amp;rows=5000"/>
+          <map:part src="cocoon://_internal/solr/query/q=term%3A*&amp;rows=9999"/>
         </map:aggregate>
         <map:transform src="stylesheets/local/documents/term-list-to-html.xsl">
           <map:parameter name="use-request-parameters" value="true"/>
@@ -188,7 +188,7 @@
       <map:match pattern="search/words.html">
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
-          <map:part src="cocoon://_internal/solr/query/q=foreign_word%3A*&amp;rows=5000"/>
+          <map:part src="cocoon://_internal/solr/query/q=foreign_word%3A*&amp;rows=9999"/>
         </map:aggregate>
         <map:transform src="stylesheets/local/documents/word-list-to-html.xsl">
           <map:parameter name="use-request-parameters" value="true"/>
@@ -222,7 +222,7 @@
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
           <map:part
-            src="cocoon://_internal/solr/query/q=kind%3A*&amp;rows=5000&amp;sort=dateFull%20asc&amp;fl=dateShort,fileId"
+            src="cocoon://_internal/solr/query/q=kind%3A*&amp;rows=9999&amp;sort=dateFull%20asc&amp;fl=dateShort,fileId"
           />
         </map:aggregate>
         <map:transform src="stylesheets/local/documents/date-list-to-html.xsl">
@@ -240,7 +240,7 @@
             <map:aggregate element="aggregation">
               <map:part src="cocoon://_internal/menu/main.xml"/>
               <map:part
-                src="cocoon://_internal/solr/query/q=kind%3A{1}&amp;rows=5000&amp;sort=dateFull%20asc&amp;fl=dateShort,fileId"
+                src="cocoon://_internal/solr/query/q=kind%3A{1}&amp;rows=9999&amp;sort=dateFull%20asc&amp;fl=dateShort,fileId"
               />
             </map:aggregate>
             <map:transform src="stylesheets/local/documents/date-list-to-html.xsl">
@@ -264,7 +264,7 @@
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
           <map:part
-            src="cocoon://_internal/solr/query/q=kind%3Aother&amp;rows=5000&amp;fl=author_key,author"
+            src="cocoon://_internal/solr/query/q=kind%3Aother&amp;rows=9999&amp;fl=author_key,author"
           />
         </map:aggregate>
         <map:transform src="stylesheets/local/documents/other-list-to-html.xsl">
@@ -281,7 +281,7 @@
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
           <map:part
-            src="cocoon://_internal/solr/query/q=kind%3Aother&amp;rows=5000&amp;fl=title,fileId"/>
+            src="cocoon://_internal/solr/query/q=kind%3Aother&amp;rows=9999&amp;fl=title,fileId"/>
         </map:aggregate>
         <map:transform src="stylesheets/local/documents/other-title-to-html.xsl">
           <map:parameter name="filedir" value="documents/other"/>
@@ -297,7 +297,7 @@
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
           <map:part
-            src="cocoon://_internal/solr/query/q=kind%3Acorrespondence&amp;rows=5000&amp;fl=type,fileId"
+            src="cocoon://_internal/solr/query/q=kind%3Acorrespondence&amp;rows=9999&amp;fl=type,fileId"
           />
         </map:aggregate>
         <map:transform src="stylesheets/local/documents/correspondence-type-list-to-html.xsl">
@@ -317,7 +317,7 @@
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
           <map:part
-            src="cocoon://_internal/solr/query/q=kind%3Acorrespondence&amp;rows=5000&amp;fl=correspondence"
+            src="cocoon://_internal/solr/query/q=kind%3Acorrespondence&amp;rows=9999&amp;fl=correspondence"
           />
         </map:aggregate>
         <map:transform src="stylesheets/local/documents/correspondence-list-to-html.xsl">
@@ -338,7 +338,7 @@
       <map:match pattern="documents/lessonbooks/pupil/*">
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
-          <map:part src="cocoon://_internal/solr/query/q=pupil%3A*&amp;rows=5000&amp;fl=pupil"/>
+          <map:part src="cocoon://_internal/solr/query/q=pupil%3A*&amp;rows=9999&amp;fl=pupil"/>
         </map:aggregate>
         <map:transform src="stylesheets/local/documents/pupil-list-to-html.xsl">
           <map:parameter name="filedir" value="documents/lessonbooks"/>
@@ -354,7 +354,7 @@
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
           <map:part
-            src="cocoon://_internal/solr/query/q=kind%3Alessonbooks%20AND%20dateYear%3A*&amp;rows=5000&amp;fl=dateYear"
+            src="cocoon://_internal/solr/query/q=kind%3Alessonbooks%20AND%20dateYear%3A*&amp;rows=9999&amp;fl=dateYear"
           />
         </map:aggregate>
         <map:transform src="stylesheets/local/documents/saison-list-to-html.xsl">
@@ -369,7 +369,7 @@
       <map:match pattern="documents/lessonbooks/pupil/*-*.html">
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
-          <map:part src="cocoon://_internal/solr/query/q=dateYear%3A{2}&amp;rows=5000&amp;fl=pupil"
+          <map:part src="cocoon://_internal/solr/query/q=dateYear%3A{2}&amp;rows=9999&amp;fl=pupil"
           />
         </map:aggregate>
         <map:transform src="stylesheets/local/documents/pupil-list-to-html.xsl">
@@ -387,7 +387,7 @@
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
           <map:part
-            src="cocoon://_internal/solr/query/q=repository%3A*&amp;rows=5000&amp;fl=repository"/>
+            src="cocoon://_internal/solr/query/q=repository%3A*&amp;rows=9999&amp;fl=repository"/>
         </map:aggregate>
         <map:transform src="stylesheets/local/documents/loc-list-to-html.xsl">
           <map:parameter name="filedir" value="documents/repository"/>
@@ -403,7 +403,7 @@
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
           <map:part
-            src="cocoon://_internal/solr/query/q=collection%3A*&amp;rows=5000&amp;fl=collection%2C+filePrefix"
+            src="cocoon://_internal/solr/query/q=collection%3A*&amp;rows=9999&amp;fl=collection%2C+filePrefix"
           />
         </map:aggregate>
         <map:transform src="stylesheets/local/documents/collect-list-to-html.xsl">
@@ -419,7 +419,7 @@
       <map:match pattern="search/terms.html">
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
-          <map:part src="cocoon://_internal/solr/query/q=term%3A*&amp;rows=5000&amp;fl=term"/>
+          <map:part src="cocoon://_internal/solr/query/q=term%3A*&amp;rows=9999&amp;fl=term"/>
         </map:aggregate>
         <map:transform src="stylesheets/local/documents/term-list-to-html.xsl"/>
         <map:serialize type="xhtml"/>
@@ -431,7 +431,7 @@
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
           <map:part
-            src="cocoon://_internal/solr/query/q=foreign_word%3A*&amp;rows=5000&amp;fl=foreign_word"
+            src="cocoon://_internal/solr/query/q=foreign_word%3A*&amp;rows=9999&amp;fl=foreign_word"
           />
         </map:aggregate>
         <map:transform src="stylesheets/local/documents/word-list-to-html.xsl"/>
@@ -446,7 +446,7 @@
             <map:aggregate element="aggregation">
               <map:part src="cocoon://_internal/menu/main.xml"/>
               <map:part
-                src="cocoon://_internal/solr/query/q=kind%3A{1}&amp;rows=5000&amp;sort=dateFull%20asc"/>
+                src="cocoon://_internal/solr/query/q=kind%3A{1}&amp;rows=9999&amp;sort=dateFull%20asc"/>
               <map:part src="xml/content/documents/{1}/{2}.xml"/>
               <!---->
               <map:part element="commentary" src="cocoon://internal/documents/commentary/{1}/{2}"/>
@@ -477,7 +477,7 @@
             <map:aggregate element="aggregation" label="content">
               <map:part src="cocoon://_internal/menu/main.xml"/>
               <map:part
-                src="cocoon://_internal/solr/query/q=kind%3A{1}&amp;rows=5000&amp;sort=dateFull%20asc"/>
+                src="cocoon://_internal/solr/query/q=kind%3A{1}&amp;rows=9999&amp;sort=dateFull%20asc"/>
               <map:part element="eats" src="cocoon://_internal/eats/entities.xml"/>
               <map:part src="xml/content/documents/{1}/{2}.xml"/>
             </map:aggregate>
@@ -512,7 +512,7 @@
             <map:aggregate element="aggregation">
               <!-- <map:part src="cocoon://_internal/menu/main.xml" /> -->
               <map:part
-                src="cocoon://_internal/solr/query/q=kind%3A{1}&amp;rows=5000&amp;sort=dateFull%20asc"/>
+                src="cocoon://_internal/solr/query/q=kind%3A{1}&amp;rows=9999&amp;sort=dateFull%20asc"/>
               <map:part src="xml/content/documents/{1}/{2}.xml"/>
               <map:part element="commentary" src="cocoon://internal/documents/commentary/{1}/{2}"/>
               <map:part element="eats" src="cocoon://_internal/eats/entities.xml"/>
@@ -544,7 +544,7 @@
               <!-- <map:part src="cocoon://_internal/menu/main.xml" /> -->
               <map:part src="cocoon://_internal/metadata/files.xml"/>
               <map:part
-                src="cocoon://_internal/solr/query/q=entity_key%3A{2}&amp;rows=5000&amp;sort=dateFull%20asc"/>
+                src="cocoon://_internal/solr/query/q=entity_key%3A{2}&amp;rows=9999&amp;sort=dateFull%20asc"/>
               <map:part src="xml/content/profiles/{1}/{2}.xml"/>
             </map:aggregate>
           </map:when>
@@ -553,7 +553,7 @@
               <!-- <map:part src="cocoon://_internal/menu/main.xml" /> -->
               <map:part src="cocoon://_internal/metadata/files.xml"/>
               <map:part
-                src="cocoon://_internal/solr/query/q=entity_key%3A{2}&amp;rows=5000&amp;sort=dateFull%20asc"/>
+                src="cocoon://_internal/solr/query/q=entity_key%3A{2}&amp;rows=9999&amp;sort=dateFull%20asc"/>
               <map:part element="eats" src="cocoon://_internal/eats/entities.xml"/>
             </map:aggregate>
           </map:otherwise>
@@ -577,7 +577,7 @@
             <map:aggregate element="aggregation">
               <!-- <map:part src="cocoon://_internal/menu/main.xml" /> -->
               <map:part
-                src="cocoon://_internal/solr/query/q=kind%3A{1}&amp;rows=5000&amp;sort=dateFull%20asc"/>
+                src="cocoon://_internal/solr/query/q=kind%3A{1}&amp;rows=9999&amp;sort=dateFull%20asc"/>
               <map:part src="xml/content/documents/{1}/{2}.xml"/>
               <map:part element="eats" src="cocoon://_internal/eats/entities.xml"/>
             </map:aggregate>
@@ -605,7 +605,7 @@
               <map:part src="cocoon://_internal/menu/main.xml"/>
               <map:part src="cocoon://_internal/metadata/files.xml"/>
               <map:part
-                src="cocoon://_internal/solr/query/q=entity_key%3A{2}&amp;rows=5000&amp;sort=dateFull%20asc"/>
+                src="cocoon://_internal/solr/query/q=entity_key%3A{2}&amp;rows=9999&amp;sort=dateFull%20asc"/>
               <map:part src="xml/content/profiles/{1}/{2}.xml"/>
             </map:aggregate>
           </map:when>
@@ -614,7 +614,7 @@
               <map:part src="cocoon://_internal/menu/main.xml"/>
               <map:part src="cocoon://_internal/metadata/files.xml"/>
               <map:part
-                src="cocoon://_internal/solr/query/q=entity_key%3A{2}&amp;rows=5000&amp;sort=dateFull%20asc"/>
+                src="cocoon://_internal/solr/query/q=entity_key%3A{2}&amp;rows=9999&amp;sort=dateFull%20asc"/>
               <map:part element="eats" src="cocoon://_internal/eats/entities.xml"/>
             </map:aggregate>
           </map:otherwise>
@@ -681,18 +681,18 @@
           <map:when test="xml/content/profiles/date/{1}.xml">
             <map:aggregate element="aggregation">
               <map:part src="cocoon://_internal/menu/main.xml"/>
-              <map:part src="cocoon://_internal/solr/query/q=dateShort%3A{1}&amp;rows=5000"/>
+              <map:part src="cocoon://_internal/solr/query/q=dateShort%3A{1}&amp;rows=9999"/>
               <map:part element="dates"
-                src="cocoon://_internal/solr/query/q=dateShort%3A*&amp;rows=5000&amp;fl=dateShort&amp;sort=dateShort%20asc"/>
+                src="cocoon://_internal/solr/query/q=dateShort%3A*&amp;rows=9999&amp;fl=dateShort&amp;sort=dateShort%20asc"/>
               <map:part src="xml/content/profiles/date/{1}.xml"/>
             </map:aggregate>
           </map:when>
           <map:otherwise>
             <map:aggregate element="aggregation">
               <map:part src="cocoon://_internal/menu/main.xml"/>
-              <map:part src="cocoon://_internal/solr/query/q=dateShort%3A{1}&amp;rows=5000"/>
+              <map:part src="cocoon://_internal/solr/query/q=dateShort%3A{1}&amp;rows=9999"/>
               <map:part element="dates"
-                src="cocoon://_internal/solr/query/q=dateShort%3A*&amp;rows=5000&amp;fl=dateShort&amp;sort=dateShort%20asc"/>
+                src="cocoon://_internal/solr/query/q=dateShort%3A*&amp;rows=9999&amp;fl=dateShort&amp;sort=dateShort%20asc"/>
               <map:part element="eats" src="cocoon://_internal/eats/entities.xml"/>
             </map:aggregate>
           </map:otherwise>
@@ -713,7 +713,7 @@
             <map:aggregate element="aggregation">
               <map:part src="cocoon://_internal/menu/main.xml"/>
               <map:part
-                src="cocoon://_internal/solr/query/q=correspondence%3A{1}*&amp;rows=5000&amp;sort=dateFull%20asc"/>
+                src="cocoon://_internal/solr/query/q=correspondence%3A{1}*&amp;rows=9999&amp;sort=dateFull%20asc"/>
               <map:part src="xml/content/profiles/correspondence/{1}.xml"/>
             </map:aggregate>
           </map:when>
@@ -721,7 +721,7 @@
             <map:aggregate element="aggregation">
               <map:part src="cocoon://_internal/menu/main.xml"/>
               <map:part
-                src="cocoon://_internal/solr/query/q=correspondence%3A{1}*&amp;rows=5000&amp;sort=dateFull%20asc"/>
+                src="cocoon://_internal/solr/query/q=correspondence%3A{1}*&amp;rows=9999&amp;sort=dateFull%20asc"/>
               <map:part element="eats" src="cocoon://_internal/eats/entities.xml"/>
             </map:aggregate>
           </map:otherwise>
@@ -742,7 +742,7 @@
             <map:aggregate element="aggregation">
               <map:part src="cocoon://_internal/menu/main.xml"/>
               <map:part
-                src="cocoon://_internal/solr/query/q=type%3A{1}*&amp;rows=5000&amp;sort=dateFull%20asc"/>
+                src="cocoon://_internal/solr/query/q=type%3A{1}*&amp;rows=9999&amp;sort=dateFull%20asc"/>
               <map:part src="xml/content/profiles/correspondence-type/{1}.xml"/>
             </map:aggregate>
           </map:when>
@@ -750,7 +750,7 @@
             <map:aggregate element="aggregation">
               <map:part src="cocoon://_internal/menu/main.xml"/>
               <map:part
-                src="cocoon://_internal/solr/query/q=type%3A{1}*&amp;rows=5000&amp;sort=dateFull%20asc"/>
+                src="cocoon://_internal/solr/query/q=type%3A{1}*&amp;rows=9999&amp;sort=dateFull%20asc"/>
               <map:part element="eats" src="cocoon://_internal/eats/entities.xml"/>
             </map:aggregate>
           </map:otherwise>
@@ -771,7 +771,7 @@
               <map:part src="cocoon://_internal/menu/main.xml"/>
               <map:part src="cocoon://_internal/metadata/files.xml"/>
               <map:part
-                src="cocoon://_internal/solr/query/q=entity_key%3A{2}&amp;rows=5000&amp;sort=dateFull%20asc"/>
+                src="cocoon://_internal/solr/query/q=entity_key%3A{2}&amp;rows=9999&amp;sort=dateFull%20asc"/>
               <map:part src="xml/content/profiles/{1}/{2}.xml"/>
             </map:aggregate>
           </map:when>
@@ -785,7 +785,7 @@
                   <map:part src="cocoon://_internal/menu/main.xml"/>
                   <map:part src="cocoon://_internal/metadata/files.xml"/>
                   <map:part
-                    src="cocoon://_internal/solr/query/q=repository%3A{2}&amp;rows=5000&amp;sort=dateFull%20asc"/>
+                    src="cocoon://_internal/solr/query/q=repository%3A{2}&amp;rows=9999&amp;sort=dateFull%20asc"/>
                   <map:part label="tei" src="xml/content/colloquy/major_collections.xml"/>
                 </map:aggregate>
               </map:when>
@@ -794,7 +794,7 @@
                   <map:part src="cocoon://_internal/menu/main.xml"/>
                   <map:part src="cocoon://_internal/metadata/files.xml"/>
                   <map:part
-                    src="cocoon://_internal/solr/query/q=collection%3A{2}&amp;rows=5000&amp;sort=dateFull%20asc"/>
+                    src="cocoon://_internal/solr/query/q=collection%3A{2}&amp;rows=9999&amp;sort=dateFull%20asc"/>
                   <map:part label="tei" src="xml/content/colloquy/major_collections.xml"/>
                 </map:aggregate>
               </map:when>
@@ -803,7 +803,7 @@
                   <map:part src="cocoon://_internal/menu/main.xml"/>
                   <map:part src="cocoon://_internal/metadata/files.xml"/>
                   <map:part
-                    src="cocoon://_internal/solr/query/q=entity_key%3A{2}&amp;rows=5000&amp;sort=dateFull%20asc"/>
+                    src="cocoon://_internal/solr/query/q=entity_key%3A{2}&amp;rows=9999&amp;sort=dateFull%20asc"/>
                   <map:part element="eats" src="cocoon://_internal/eats/entities.xml"/>
                 </map:aggregate>
               </map:otherwise>
