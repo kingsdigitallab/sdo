@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="1480" sdoID="OJ-11-35-9b">OJ 11/35, 9b</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="AHa" scope="major">August Halm's hand</tei:handNote>
+   <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+   <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="LR">
+   <tei:persName>Lee Rothfarb</tei:persName>
+   <tei:resp>Transcription, 2006</tei:resp>
+   <tei:resp>Translation, 2006</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>XML Encoding, 2015</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="BOT">
+   <tei:name>Automated Script</tei:name>
+   <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2010-03-08" who="#IB">revision of XML code</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-002698">Halm ~ HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+   <dc:title>Handwritten postcard from Halm to Schenker, dated July 21, 1917</dc:title>
+
+   <dcterms:created>1917-07-21T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2015-03-26</dcterms:dateSubmitted>
+   <dc:description>Halm thanks Schenker for arranging that Cotta send him NMTP vols. I and
+    II/1.</dc:description>
+   <dc:subject>Auskunft; information; Order; directive</dc:subject>
+
+
+
+   <marcrel:correspondent key="entity-000326">Halm</marcrel:correspondent>
+   <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+  </sdo:itemDesc>
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/>
+    <tei:lb/>
+    <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+      >Postkarte</tei:hi></tei:fw><tei:lb/>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:addrLine><tei:handShift new="#AHa"/>Abs: Halm</tei:addrLine>
+      <tei:addrLine>Eßlingen a.N.</tei:addrLine>
+      <tei:addrLine>Panoramast. 11.</tei:addrLine>
+     </tei:address>
+     <tei:address>
+      <tei:addrLine><tei:supplied reason="clarity">An: </tei:supplied> Herrn Prof. Heinr.
+       Schenker</tei:addrLine>
+      <tei:addrLine>derz. in Pension Wetterstein</tei:addrLine>
+      <tei:addrLine>Seefeld</tei:addrLine>
+      <tei:addrLine>Tirol</tei:addrLine>
+     </tei:address><tei:lb/>
+     <tei:fw type="postmark"><tei:handShift new="#stamp"/>STUTTGART <tei:gap reason="illegible"
+      /></tei:fw>
+     <tei:fw type="postmark">|| ESSLINGEN (Neckar) | 21.JUL.17.5 N. | * 1 b ||</tei:fw><tei:lb/><tei:lb/>
+     <tei:milestone unit="folio" n="verso"/>
+    </tei:fw>
+    <tei:dateline rend="indent-80"><tei:handShift new="#AHa"
+      /><tei:placeName>Eßlingen</tei:placeName>, <tei:date when="1917-07-21">2<tei:subst>
+       <tei:del rend="overwritten">0</tei:del>
+       <tei:add place="superimposed">1</tei:add>
+      </tei:subst>.VII.</tei:date></tei:dateline>
+    <tei:salute>Sehr geehrter Herr <tei:rs type="person" key="entity-000632">Professor</tei:rs>!
+    </tei:salute>
+   </tei:opener>
+
+   <tei:p>Ich danke Ihnen für Ihre gütige Auskunft<tei:note xml:id="r0001-fn01" type="editorial"
+     place="foot">Presumably <tei:ref type="correspondence" cRef="DLA-69.930-1">DLA
+      69.930/1</tei:ref>, July 8, 1917. </tei:note> u. Ihre <tei:foreign xml:lang="eng"
+     >Order</tei:foreign> an <tei:rs key="entity-002405" type="organization">Cotta</tei:rs>, der mir
+    nun Ihre <tei:rs key="entity-001724" type="work"><tei:title level="m"
+     >Harmonielehre</tei:title></tei:rs> u. <tei:rs key="entity-001726" type="work"><tei:title
+      level="m">Kontrap. I</tei:title></tei:rs> sandte. Sehr bedauere ich, diese wichtigen Werke
+     <tei:hi rend="underline">jetzt erst</tei:hi> kennenzulernen, zumal ich jetzt auch nur mit
+    Unterbrechungen mich einarbeiten kann. Nehmen Sie bitte mit diesen wenigen Worten <tei:add
+     place="interlinear-above">vorerst</tei:add> vorlieb.</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-40">Mit hochachtungsvoller Begrüßung</tei:salute>
+    <tei:signed rend="indent-60">A. Halm</tei:signed>
+   </tei:closer>
+
+  </tei:div>
+
+
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/>
+    <tei:lb/>
+    <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+      >Postcard</tei:hi></tei:fw><tei:lb/>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:addrLine><tei:handShift new="#AHa"/>From: Halm</tei:addrLine>
+      <tei:addrLine>Eßlingen on the Neckar</tei:addrLine>
+      <tei:addrLine>Panoramastraße 11</tei:addrLine>
+     </tei:address>
+     <tei:address>
+      <tei:addrLine><tei:supplied reason="clarity">To: </tei:supplied> Prof. Heinr.
+       Schenker</tei:addrLine>
+      <tei:addrLine>c/o Guesthouse Wetterstein</tei:addrLine>
+      <tei:addrLine>Seefeld</tei:addrLine>
+      <tei:addrLine>Tyrol</tei:addrLine>
+     </tei:address><tei:lb/>
+     <tei:fw type="postmark"><tei:handShift new="#stamp"/>STUTTGART <tei:gap reason="illegible"
+      /></tei:fw>
+     <tei:fw type="postmark">|| ESSLINGEN (Neckar) | 21.JUL.17.5 P.M | * 1 b ||</tei:fw><tei:lb/><tei:lb/>
+     <tei:milestone unit="folio" n="verso"/>
+    </tei:fw>
+    <tei:dateline rend="indent-80"><tei:handShift new="#AHa"
+      /><tei:placeName>Eßlingen</tei:placeName>, <tei:date when="1917-07-21">July 2<tei:subst>
+       <tei:del rend="overwritten">0</tei:del>
+       <tei:add place="superimposed">1</tei:add>
+      </tei:subst>, <tei:supplied reason="clarity">1917</tei:supplied></tei:date></tei:dateline>
+    <tei:salute>Dear <tei:rs type="person" key="entity-000632">Professor</tei:rs>, </tei:salute>
+   </tei:opener>
+
+   <tei:p>I thank you for your kind information<tei:ptr corresp="#r0001-fn01" type="footnote"/> and
+    your directive to <tei:rs key="entity-002405" type="organization">Cotta</tei:rs>, who have now
+    sent me your <tei:rs key="entity-001724" type="work"><tei:title level="m">Theory of
+      Harmony</tei:title></tei:rs> and <tei:rs key="entity-001726" type="work"><tei:title level="m"
+      >Counterpoint 1</tei:title></tei:rs>. I greatly regret that it is <tei:hi rend="underline"
+     >only now</tei:hi> that I am getting to know these important works, particularly because I am
+    able to familiarize myself with them only with interruptions. Please be satisfied for now with
+    these few words. </tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-40">With respectful greetings</tei:salute>
+    <tei:signed rend="indent-60">A. Halm</tei:signed>
+   </tei:closer>
+
+  </tei:div>
+ </sdo:record>
+</sdo:recordCollection>
