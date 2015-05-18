@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="1489" sdoID="OJ-11-35_24">OJ 11/35, 24</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="AHa" scope="major">August Halm's hand</tei:handNote>
+   <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+   <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="LR">
+   <tei:persName>Lee Rothfarb</tei:persName>
+   <tei:resp>Transcription, 2006</tei:resp>
+   <tei:resp>Translation, 2006</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="LR-IB">
+   <tei:persName>Lee Rothfarb and Ian Bent</tei:persName>
+   <tei:resp>Footnotes, 2006, 2015</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>XML Encoding, 2015</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2013-08-28" who="#DB">XML code created</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-002698">Halm ~ HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+   <dc:title>Handwritten postcard from Halm to Schenker, dated August 11, 1926</dc:title>
+
+   <dcterms:created>1926-08-11T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2015-05-18</dcterms:dateSubmitted>
+   <dc:description>Halm acknowledges receipt of Meisterwerk vol. I.</dc:description>
+   <dc:subject>Dank; thanks; Gabe; gift</dc:subject>
+
+
+   <marcrel:correspondent key="entity-000326">Halm</marcrel:correspondent>
+   <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+  </sdo:itemDesc>
+
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/><tei:lb/>
+    <tei:fw type="header" rend="center">
+     <tei:handShift new="#printed"/>Postkarte</tei:fw>
+    <tei:lb/>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:addrLine>Absender: <tei:handShift new="#stamp"/>A. Halm, Wickersdorf bei
+       Saalfeld</tei:addrLine>
+     </tei:address>
+     <tei:address>
+      <tei:addrLine><tei:supplied reason="clarity">An</tei:supplied>
+       <tei:handShift new="#AHa"/>Herrn Professor Dr. Heinrich Schenker</tei:addrLine>
+      <tei:addrLine rend="indent-20"><tei:hi rend="underline">Galtür</tei:hi></tei:addrLine>
+      <tei:addrLine>Tirol</tei:addrLine>
+     </tei:address><tei:lb/>
+     <tei:fw type="postmark">|| SAALFELD | (Saale) 2 | 11.8.26.6.7N | * der Feengrotten *
+      ||</tei:fw>
+     <tei:lb/><tei:lb/>
+    </tei:fw>
+    <tei:milestone unit="folio" n="verso"/>
+    <tei:dateline rend="indent-70"><tei:date when="1926-08-11">11. VIII.
+     26</tei:date></tei:dateline>
+    <tei:salute>Lieber u. verehter Herr <tei:rs key="entity-000632" type="person"
+      >Professor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
+      this postcard is recorded in Schenker's diary at OJ 3/8, p. 2965, August 13, 1926: "Von Halm
+      (K.): bestätigt den Empfang des Jahrbuchs." ("From Halm (postcard): confirms receipt of the
+      Yearbook.").</tei:note></tei:salute>
+   </tei:opener>
+
+   <tei:p>Ihr Buch: „<tei:rs key="entity-001750" type="work"><tei:title>Das
+     Meisterwerk</tei:title></tei:rs>“<tei:note xml:id="r0001-fn02" type="editorial" place="foot"
+     >Halm is referring to Schenker’s yearbook, <tei:title level="j">Das Meisterwerk in der
+      Musik</tei:title>, vol. I, dated 1925, but actually published in late June 1926 (Munich: Drei
+     Masken Verlag) (see <tei:ref type="correspondence" cRef="OC-54-90">OC 54/90</tei:ref>, June 23,
+     1926).</tei:note> habe ich nach meiner Rückkehr, etwa am <tei:date when="1926-08-06"
+     >6.VIII</tei:date>, erhalten, habe auch die Korrektur meiner Behauptung schon zur Kenntnis
+    genommen. Ich kann mich aber jetzt darüber nicht äußern. Vorerst also nur herzlichen Dank für
+    Ihre wertvolle Gabe!</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-50">Mit besten Grüßen u. Wünschen</tei:salute>
+    <tei:salute rend="indent-40">Ihr</tei:salute>
+    <tei:signed rend="indent-50"><tei:rs key="entity-000326" type="person">A.
+     Halm</tei:rs>.</tei:signed>
+   </tei:closer>
+
+  </tei:div>
+
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/><tei:lb/>
+    <tei:fw type="header" rend="center">
+     <tei:handShift new="#printed"/>Postcard</tei:fw>
+    <tei:lb/>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:addrLine>From: <tei:handShift new="#stamp"/>A. Halm, Wickersdorf nr.
+       Saalfeld</tei:addrLine>
+     </tei:address>
+     <tei:address>
+      <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied>
+       <tei:handShift new="#AHa"/>Professor Heinrich Schenker</tei:addrLine>
+      <tei:addrLine rend="indent-20"><tei:hi rend="underline">Galtür</tei:hi></tei:addrLine>
+      <tei:addrLine>Tyrol</tei:addrLine>
+     </tei:address><tei:lb/>
+     <tei:fw type="postmark">|| SAALFELD | (Saale) 2 | 11.8.26.6.7 P.M. | * of the Fairy Grotto *
+      ||</tei:fw>
+     <tei:lb/><tei:lb/>
+    </tei:fw>
+    <tei:milestone unit="folio" n="verso"/>
+    <tei:dateline rend="indent-70"><tei:date when="1926-08-11">August 11,
+     1926</tei:date></tei:dateline>
+    <tei:salute>Dear and revered <tei:rs key="entity-000632" type="person"
+      >Professor</tei:rs>!<tei:ptr corresp="#r0001-fn01" type="footnote"/>
+    </tei:salute>
+   </tei:opener>
+
+   <tei:p>I received your book, <tei:rs key="entity-001750" type="work"><tei:title level="j">The
+      Masterwork</tei:title></tei:rs>,<tei:ptr corresp="#r0001-fn02" type="footnote"/> on my return,
+    around <tei:date when="1926-08-06">August 6</tei:date>, and have also taken note of the
+    correction of my assertion. I can’t elaborate on it at the moment. For the time being, then,
+    cordial thanks for your valuable gift! </tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-50">With cordial greetings and best wishes</tei:salute>
+    <tei:salute rend="indent-40">Yours,</tei:salute>
+    <tei:signed rend="indent-50"><tei:rs key="entity-000326" type="person">A.
+     Halm</tei:rs></tei:signed>
+   </tei:closer>
+
+  </tei:div>
+
+ </sdo:record>
+</sdo:recordCollection>
