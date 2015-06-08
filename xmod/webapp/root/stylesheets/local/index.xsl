@@ -261,7 +261,7 @@
                 </div>
                 <div class="unit size1of3 lastUnit">
                   <h3>Latest</h3>
-                  <h4>What’s New? ‒ two new important of correspondence</h4>
+                  <h4>What’s New? ‒ two important sets of correspondence</h4>
                   <ul>
                     <li>June 2015 brings Schenker’s entire surviving correspondence with August
                       Halm, edited by Lee Rothfarb. One of the most revealing of all Schenker’s
