@@ -261,20 +261,24 @@
                 </div>
                 <div class="unit size1of3 lastUnit">
                   <h3>Latest</h3>
-                  <h4>What’s New? ‒ nearly 200 letters</h4>
+                  <h4>What’s New? ‒ two new important of correspondence</h4>
                   <ul>
-                    <li>March 2015 brings to the site important correspondences with Guido Adler (9
-                      items), Wilhelm Furtwängler (40), the Gesellschaft der Musikfreunde in Wien
-                      (25), Maximilian Harden (31), and Moriz Rosenthal (12), and shorter
-                      correspondences with Antropp, Bahr, Bienenfeld, Bösendorfer, Emma Fischer,
-                      Hellmesberger, Liebstöckl, Richard Robert, Schnabel, and Zuckerkandl ‒ all
-                      transfers from the old site.</li>
-                    <li>It also features ‒ new to SDO ‒ Schenker’s search for autograph sources with
-                      librarians and dealers: V. A. Heck, Louis Koch, Albert Kopfermann, Karl Krebs,
-                      Leo Liepmannssohn, Max Meinert, and the British Museum.</li>
-                    <li>New source materials continue to come to light, the latest being eight
-                      letters between Schenker and the Beethovenhaus, Bonn, dating from 1913 and
-                      1914.</li>
+                    <li>June 2015 brings Schenker’s entire surviving correspondence with August
+                      Halm, edited by Lee Rothfarb. One of the most revealing of all Schenker’s
+                      correspondence exchanges, it comprises 50 items (31 Halm→Schenker, 19
+                      Schenker→Halm), spanning 1916‒29, some letters as long as 12 pages, with much
+                      intense discussion of music, exchanges of aesthetic view, and fierce
+                      controversy about Bruckner and Brahms—a fascinating interplay of
+                      personalities!</li>
+                    <li>June also brings the correspondence between Schenker and Wilhelm Altmann of
+                      the Prussian State Library: 35 items, spanning 1914‒26 and 1934, edited by
+                      Nicholas Marston. The letters and postcards are all from Altmann to Schenker,
+                      but Schenker's side is partly reconstructed from his diary. Much of the
+                      content concerns Schenker’s search for autographs and early editions of music
+                      by Bach and Beethoven, especially for his Erläuterungsausgabe.</li>
+                    <li>The next few months will see further correspondence in Schenker’s search for
+                      early sources, and the transfer of all the Oswald Jonas correspondence, edited
+                      by John Rothgeb, from the old website to the new.</li>
                   </ul>
 
                   <nav class="local" id="blogPosts">
