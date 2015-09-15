@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:marcrel="http://www.loc.gov/loc.terms/relators/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
+  xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1278" sdoID="OJ-10-3_31">OJ 10/3, [31]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="TPunk" scope="major">unknown typist</tei:handNote>
+      <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="DB">
+      <tei:persName>David Bretherton</tei:persName>
+      <tei:resp>Transcription, 2015</tei:resp>
+      <tei:resp>Translation, 2015</tei:resp>
+      <tei:resp>XML Encoding, 2015</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-03" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~ H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~ HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~ H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+      <dc:title>Typewritten letter from Deutsch to Schenker, dated April 18, 1922</dc:title>
+
+      <dcterms:created>1922-04-18T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2015-09-03</dcterms:dateSubmitted>
+      <dc:description>Deutsch informs Schenker that Drei Masken is publishing a facsimile of Beethoven's Piano Sonata in
+        C minor, Op. 111.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000163">DeutschH</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+      <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:fw type="header" rend="inline">
+          <tei:note type="editorial">printed letterhead:</tei:note>
+          <tei:handShift new="#printed"/>OTTO ERICH DEUTSCH</tei:fw>
+        <tei:address>
+          <tei:addrLine rend="indent-75">WIEN II.</tei:addrLine>
+          <tei:addrLine rend="indent-75">Böcklinstrasse 26</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-50"><tei:handShift new="#TPunk"/><tei:rs key="entity-002484" type="place"
+            >Wien</tei:rs>, <tei:date when="1922-04-18">18. April 1922</tei:date>.</tei:dateline>
+        <tei:lb/><tei:address>
+          <tei:addrLine rend="indent-05"><tei:supplied reason="clarity">An:</tei:supplied> Herrn</tei:addrLine>
+          <tei:addrLine rend="indent-15">Professor Dr. <tei:rs key="entity-000632" type="person">Heinrich
+              Schenker</tei:rs>,</tei:addrLine>
+          <tei:addrLine rend="indent-60"><tei:hi rend="underline"><tei:hi><!-- spaced out --><tei:rs key="entity-002484"
+                  type="place">Wien</tei:rs></tei:hi></tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:salute rend="indent-15">Sehr geehrter Herr <tei:rs type="person" key="entity-000632"
+            >Doktor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this letter is
+            recorded in Schenker's diary at OJ 3/3, p. 2426 (April 19, 1922): "Von Deutsch (Br.): Drei Masken Verlag
+            bringt op. 111." ("From Deutsch (letter): Drei Masken Verlag is bringing <tei:supplied reason="clarity"
+              >out</tei:supplied> Op. 111.").</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Ich möchte nicht versäumen Sie darauf aufmerksam zu machen, daß die <tei:rs
+          key="entity-001210" type="composition">Sonate Opus 111</tei:rs> als dritter Band der <tei:rs
+          key="entity-002286" type="place">München</tei:rs>er Faksimile Drucke ersch<tei:del hand="#OED"
+          rend="overstrike">e</tei:del>i<tei:add hand="#OED" place="inline">e</tei:add>nen <tei:del hand="#OED"
+          rend="overstrike">wird.</tei:del>
+        <tei:add hand="#OED" place="inline">ist. (<tei:rs key="entity-002501" type="place"
+          >Berlin</tei:rs>)</tei:add><tei:note xml:id="r0001-fn02" type="editorial" place="foot"><tei:bibl>Ludwig van
+            Beethoven, <tei:title level="m">Piano Sonata in C minor, Op. 111</tei:title> [autograph facsimile] (Munich:
+            Drei Masken, 1922).</tei:bibl></tei:note></tei:p>
+
+      <tei:p rend="first">Ich bemerke eben aus einem illustrierten Katalog des <tei:rs key="entity-004558"
+          type="organization">Beethovenhaus</tei:rs>es in <tei:rs key="entity-002603" type="place">Bonn</tei:rs>, daß
+        dort <tei:subst>
+          <tei:del hand="#OED" rend="overstrike">das</tei:del>
+          <tei:add hand="#OED" place="interlinear-above">auch ein</tei:add>
+        </tei:subst> Manuskript des ersten Satzes dieser Sonate ist.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-25">Mit den besten Empfehlungen</tei:salute>
+        <tei:salute rend="indent-60">Ihr ergebener</tei:salute>
+        <tei:signed rend="indent-80"><tei:handShift new="#OED"/><tei:rs type="person" key="entity-000164"
+            >Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:fw type="header" rend="inline">
+          <tei:note type="editorial">printed letterhead:</tei:note>
+          <tei:handShift new="#printed"/>OTTO ERICH DEUTSCH</tei:fw>
+        <tei:address>
+          <tei:addrLine rend="indent-75">VIENNA II</tei:addrLine>
+          <tei:addrLine rend="indent-75">Böcklinstrasse 26</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-50"><tei:handShift new="#TPunk"/><tei:rs key="entity-002484" type="place"
+            >Vienna</tei:rs>, <tei:date when="1922-04-18">April 18, 1922</tei:date></tei:dateline>
+        <tei:lb/><tei:address>
+          <tei:addrLine rend="indent-15"><tei:supplied reason="clarity">to:</tei:supplied> Professor Dr. <tei:rs
+              key="entity-000632" type="person">Heinrich Schenker</tei:rs>,</tei:addrLine>
+          <tei:addrLine rend="indent-60"><tei:hi rend="underline"><tei:hi><!-- spaced out --><tei:rs key="entity-002484"
+                  type="place">Vienna</tei:rs></tei:hi></tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:salute rend="indent-15">Very honored <tei:rs type="person" key="entity-000632">Doctor <tei:supplied
+              reason="clarity">Schenker</tei:supplied></tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"
+          /></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">I would not like to fail to inform you that the <tei:rs key="entity-001210" type="composition"
+          >Sonata Opus 111</tei:rs>
+        <tei:subst>
+          <tei:del hand="#OED" rend="overstrike">will be</tei:del>
+          <tei:add hand="#OED" place="inline">is</tei:add>
+        </tei:subst> published as the third volume of the <tei:rs key="entity-002286" type="place">Munich</tei:rs>
+        facsimile prints. <tei:add hand="#OED" place="inline">(<tei:rs key="entity-002501" type="place"
+          >Berlin</tei:rs>)</tei:add><tei:ptr corresp="#r0001-fn02" type="footnote"/></tei:p>
+
+      <tei:p rend="first">I notice, just now, from an illustrated catalogue of the <tei:rs key="entity-004558"
+          type="organization">Beethoven House</tei:rs> in <tei:rs key="entity-002603" type="place">Bonn</tei:rs>, that
+        there is <tei:subst>
+          <tei:del hand="#OED" rend="overstrike">the</tei:del>
+          <tei:add hand="#OED" place="interlinear-above">also a</tei:add>
+        </tei:subst> manuscript of the first movement of this sonata.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-25">With the best regards,</tei:salute>
+        <tei:salute rend="indent-60">Yours truly,</tei:salute>
+        <tei:signed rend="indent-80"><tei:handShift new="#OED"/><tei:rs type="person" key="entity-000164"
+            >Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
