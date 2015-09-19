@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:marcrel="http://www.loc.gov/loc.terms/relators/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
+  xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1559" sdoID="OJ-14-21_6">OJ 14/21, [6]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+      <tei:handNote xml:id="unk" scope="minor">unknown hand</tei:handNote>
+      <tei:handNote xml:id="HS" scope="minor">Heinrich Schenker's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="DB">
+      <tei:persName>David Bretherton</tei:persName>
+      <tei:resp>Transcription, 2015</tei:resp>
+      <tei:resp>Translation, 2015</tei:resp>
+      <tei:resp>XML Encoding, 2015</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-18" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~ HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005470">Seidel's ~ HSchenker</tei:rs>
+      <tei:rs key="entity-003349" type="corr-item-type" role="corr-item-type">Invoice</tei:rs>
+
+      <dc:title>Interim invoice from Seidel'sche Buchhandlung to Schenker, dated February 2, 1924</dc:title>
+
+      <dcterms:created>1924-02-02T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2015-09-18</dcterms:dateSubmitted>
+      <dc:description>Delivery note from Seidel'sche Buchhandlung to Schenker for Beethoven's Piano Sonata in F-sharp,
+        Op. 78. </dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:correspondent key="entity-002462">Seidel's</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:note type="editorial">printed form, with handwritten entries:</tei:note>
+        <tei:lb/><tei:handShift new="#printed"/>B <tei:lb/>
+        <tei:fw type="header" rend="inline">Interims-Rechnung </tei:fw>
+        <tei:lb/><tei:address>
+          <tei:addrLine><tei:handShift new="#stamp"/><tei:rs key="entity-002462" type="organization">SEIDELSCHE
+              <tei:lb/>BUCHHANDLUNG</tei:rs></tei:addrLine>
+          <tei:addrLine>WIEN, I. GRABEN 13</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied><tei:handShift new="#printed"
+            />Hochwohlgeboren</tei:addrLine>
+          <tei:addrLine>Herr<tei:add place="inline" hand="unk">n</tei:add>/<tei:del rend="overstrike" hand="unk"
+              >Löbl.</tei:del>
+            <tei:handShift new="#unk"/>Professor D<tei:hi rend="supralinear">r.</tei:hi>
+            <tei:rs key="entity-000632" type="person">Heinrich Schenker</tei:rs>,<tei:note xml:id="r0001-fn01"
+              type="editorial" place="foot">Receipt of this invoice and delivery is recorded in Schenker's diary at OJ
+              3/6, p. 2630 (February 4, 1924): "Von Deutsch verabredungsgemäß Facsimile op. 78 zur Ansicht; sofort
+              durchgesehen." ("From Deutsch, as arranged, facsimile Op. 78 for inspection; immediately looked through
+                <tei:supplied reason="clarity">it</tei:supplied>.").</tei:note></tei:addrLine>
+          <tei:addrLine>III./4 Keilg. 8</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine rend="indent-50"><tei:handShift new="#printed"/>empfangen von</tei:addrLine>
+          <tei:addrLine>
+            <tei:del rend="overstrike"><tei:rs key="entity-002462" type="organization">L. W. Seidel &amp; Sohn</tei:rs>,
+                <tei:note type="editorial">coat of arms</tei:note> k. u. k. Hofbuchhändler</tei:del>
+          </tei:addrLine>
+          <tei:addrLine rend="indent-45">Wien I, Graben 13.</tei:addrLine>
+          <tei:addrLine rend="indent-10">Österr. Scheckkonto <tei:del rend="overstrike">Nr. 9363.</tei:del>
+            <tei:lb/>Ungar. " " <tei:del rend="overstrike">2774.</tei:del>
+            <tei:lb/>Bosn.-herz " " <tei:del rend="overstrike">7403.</tei:del>
+          </tei:addrLine>
+          <tei:addrLine>Telephon Nr. <tei:subst>
+              <tei:del rend="overstrike">1288.</tei:del>
+              <tei:add place="interlinear-above">73202</tei:add>
+            </tei:subst></tei:addrLine>
+        </tei:address>
+        <tei:lb/>Zahlbar und klagbar in Wien I.<tei:lb/>
+        <tei:dateline rend="indent-45"><tei:rs key="entity-002484" type="place">Wien</tei:rs>, den <tei:handShift
+            new="#unk"/>
+          <tei:date when="1924-02-02">2. II. <tei:choice>
+              <tei:sic><tei:handShift new="#printed"/>191<tei:handShift new="#unk"/>24</tei:sic>
+              <tei:corr>1924</tei:corr>
+            </tei:choice></tei:date></tei:dateline>
+      </tei:opener>
+      <tei:lb/>
+
+      <tei:ab>
+        <tei:note type="editorial">table, simplified:</tei:note>
+        <tei:table rows="2" cols="3">
+          <tei:row>
+            <tei:cell role="label"><tei:handShift new="#printed"/>Fol.</tei:cell>
+            <tei:cell role="label">Zur geneigten Ansicht.</tei:cell>
+            <tei:cell role="label">Kronen</tei:cell>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data"><tei:handShift new="#unk"/>1</tei:cell>
+            <tei:cell role="data">Beethoven, Fis-Dur-Sonate
+                <tei:abbr>g<tei:ex>e</tei:ex>b<tei:ex>unden</tei:ex></tei:abbr>.</tei:cell>
+            <tei:cell role="data">195.000</tei:cell>
+          </tei:row>
+        </tei:table>
+      </tei:ab>
+
+      <tei:note type="editorial">lower half of page missing</tei:note>
+      <tei:lb/>
+      <tei:lb/>
+
+      <tei:ab>
+        <tei:note type="editorial">note added in top right-hand corner, upside-down, in Schenker's[?] hand:</tei:note>
+        <tei:table rows="7" cols="3">
+          <tei:row>
+            <tei:cell role="data"/>
+            <tei:cell role="data"><tei:handShift new="#HS"/>286 600</tei:cell>
+            <tei:cell role="data"/>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data"/>
+            <tei:cell role="data">650 000</tei:cell>
+            <tei:cell role="data"/>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data">1000000</tei:cell>
+            <tei:cell role="data">30.000</tei:cell>
+            <tei:cell role="data"/>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data"/>
+            <tei:cell role="data">------------</tei:cell>
+            <tei:cell role="data"/>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data">9660<tei:supplied reason="clarity">00</tei:supplied></tei:cell>
+            <tei:cell role="data">966.600</tei:cell>
+            <tei:cell role="data"><tei:gap reason="illegible" unit="chars" extent="few"/>400</tei:cell>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data">------------</tei:cell>
+            <tei:cell role="data"/>
+            <tei:cell role="data"/>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data">33.4<tei:supplied reason="clarity">00</tei:supplied></tei:cell>
+            <tei:cell role="data">1000000</tei:cell>
+            <tei:cell role="data">33.4<tei:supplied reason="clarity">00</tei:supplied></tei:cell>
+          </tei:row>
+        </tei:table>
+      </tei:ab>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:note type="editorial">printed form, with handwritten entries:</tei:note><tei:lb/>
+        <tei:lb/><tei:handShift new="#printed"/>B <tei:lb/>
+        <tei:fw type="header" rend="inline">Interim Invoice </tei:fw>
+        <tei:lb/><tei:address>
+          <tei:addrLine><tei:handShift new="#stamp"/><tei:rs key="entity-002462" type="organization">SEIDEL'S
+              <tei:lb/>BOOK DEALERSHIP</tei:rs></tei:addrLine>
+          <tei:addrLine>VIENNA I. GRABEN 13</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">to:</tei:supplied><tei:handShift new="#printed"
+            />High-born</tei:addrLine>
+          <tei:addrLine>Mister/<tei:del rend="overstrike" hand="unk">Laudable</tei:del>
+            <tei:handShift new="#unk"/>Professor Dr. <tei:rs key="entity-000632" type="person">Heinrich
+              Schenker</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:addrLine>
+          <tei:addrLine>III./4 Keilgasse 8</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine rend="indent-50"><tei:handShift new="#printed"/>received from </tei:addrLine>
+          <tei:addrLine>
+            <tei:del rend="overstrike"><tei:rs key="entity-002462" type="organization">L. W. Seidel &amp; Sohn</tei:rs>,
+                <tei:note type="editorial">coat of arms</tei:note> Imperial and Royal Court Book Dealer</tei:del>
+          </tei:addrLine>
+          <tei:addrLine rend="indent-45">Vienna I, Graben 13.</tei:addrLine>
+          <tei:addrLine rend="indent-10"> Austrian Checking Account <tei:del rend="overstrike">No. 9363.</tei:del>
+            <tei:lb/>Hungarian " " <tei:del rend="overstrike">2774.</tei:del>
+            <tei:lb/>Bosnian-Herzegovinian " " <tei:del rend="overstrike">7403.</tei:del>
+          </tei:addrLine>
+          <tei:addrLine>Telephone No. <tei:subst>
+              <tei:del rend="overstrike">1288.</tei:del>
+              <tei:add place="interlinear-above">73202</tei:add>
+            </tei:subst></tei:addrLine>
+        </tei:address>
+        <tei:lb/>Payable and actionable in Vienna I.<tei:lb/>
+        <tei:dateline rend="indent-45"><tei:rs key="entity-002484" type="place">Vienna</tei:rs>, <tei:handShift
+            new="#unk"/>
+          <tei:date when="1924-02-02">February 2, <tei:choice>
+              <tei:sic><tei:handShift new="#printed"/>191<tei:handShift new="#unk"/>24</tei:sic>
+              <tei:corr>1924</tei:corr>
+            </tei:choice></tei:date></tei:dateline>
+      </tei:opener>
+      <tei:lb/>
+
+      <tei:ab>
+        <tei:note type="editorial">table, simplified:</tei:note>
+        <tei:table rows="2" cols="3">
+          <tei:row>
+            <tei:cell role="label"><tei:handShift new="#printed"/>Fol.</tei:cell>
+            <tei:cell role="label">For considered viewing.</tei:cell>
+            <tei:cell role="label">kronen</tei:cell>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data"><tei:handShift new="#unk"/>1</tei:cell>
+            <tei:cell role="data">Beethoven, Sonata in F<tei:g type="sharp"/> major, bound.</tei:cell>
+            <tei:cell role="data">195,000</tei:cell>
+          </tei:row>
+        </tei:table>
+      </tei:ab>
+
+      <tei:note type="editorial">lower half of page missing</tei:note>
+      <tei:lb/>
+      <tei:lb/>
+
+      <tei:ab>
+        <tei:note type="editorial">note added in top right-hand corner, upside-down, in Schenker's[?] hand:</tei:note>
+        <tei:table rows="7" cols="3">
+          <tei:row>
+            <tei:cell role="data"/>
+            <tei:cell role="data"><tei:handShift new="#HS"/>286,600</tei:cell>
+            <tei:cell role="data"/>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data"/>
+            <tei:cell role="data">650,000</tei:cell>
+            <tei:cell role="data"/>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data">1,000,000</tei:cell>
+            <tei:cell role="data">30,000</tei:cell>
+            <tei:cell role="data"/>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data"/>
+            <tei:cell role="data">------------</tei:cell>
+            <tei:cell role="data"/>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data">966,0<tei:supplied reason="clarity">00</tei:supplied></tei:cell>
+            <tei:cell role="data">966,600</tei:cell>
+            <tei:cell role="data"><tei:gap reason="illegible" unit="chars" extent="few"/>400</tei:cell>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data">------------</tei:cell>
+            <tei:cell role="data"/>
+            <tei:cell role="data"/>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data">33,4<tei:supplied reason="clarity">00</tei:supplied></tei:cell>
+            <tei:cell role="data">1,000,000</tei:cell>
+            <tei:cell role="data">33,4<tei:supplied reason="clarity">00</tei:supplied></tei:cell>
+          </tei:row>
+        </tei:table>
+      </tei:ab>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:marcrel="http://www.loc.gov/loc.terms/relators/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
+  xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1564" sdoID="OJ-10-3_43">OJ 10/3, [43]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="TPunk" scope="major">unknown typist</tei:handNote>
+      <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="DB">
+      <tei:persName>David Bretherton</tei:persName>
+      <tei:resp>Transcription, 2015</tei:resp>
+      <tei:resp>Translation, 2015</tei:resp>
+      <tei:resp>XML Encoding, 2015</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-18" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~ H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~ HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~ H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Typewritten postcard from Deutsch to Schenker, dated November 7, 1925</dc:title>
+
+      <dcterms:created>1925-11-07T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2015-09-18</dcterms:dateSubmitted>
+      <dc:description>Deutsch thanks Schenker for agreeing to the cuts to his article, and asks to come to the Schenkers
+        on November 22 for the planned snack.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline">printed:</tei:note>
+          <tei:handShift new="#printed"/>Postkarte</tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">Absender:</tei:supplied>
+              <tei:handShift new="#TPunk"/>Otto Erich Deutsch</tei:addrLine>
+            <tei:addrLine>Wien II. Böcklinstr. 26</tei:addrLine>
+            <tei:addrLine>Tel. 42822</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied> Herrn</tei:addrLine>
+            <tei:addrLine>Professor Dr.</tei:addrLine>
+            <tei:addrLine rend="indent-20">Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-50">WIEN III.</tei:addrLine>
+            <tei:addrLine rend="indent-30">Keilgasse <tei:subst>
+                <tei:del rend="overwritten" hand="#TPunk">7</tei:del>
+                <tei:add place="superimposed" hand="#TPunk">8</tei:add>
+              </tei:subst></tei:addrLine>
+          </tei:address>
+          <tei:lb/><tei:fw type="postmark">|| 1/1. WIEN 1 | -8. XI. 25 11<tei:note type="editorial">?</tei:note> | * 4c
+            * ||</tei:fw>
+        </tei:fw>
+        <tei:lb/>
+        <tei:lb/><tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-30"><tei:rs key="entity-002484" type="place">Wien</tei:rs>, <tei:date
+            when="1925-11-07">7. November 25</tei:date></tei:dateline>
+        <tei:salute>Sehr verehrter Herr <tei:rs type="person" key="entity-000632">Doktor</tei:rs>!<tei:note
+            xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this postcard is recorded in Schenker's diary
+            at OJ 3/8, pp. 2887-88 (November 7, 1925): "Von Deutsch (K.): ist bereit am 22. zu kommen." ("From Deutsch
+            (postcard): is willing to come on the 22nd.").</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Für die prompte und gütige Erledi<tei:del rend="overstrike" hand="#OED">n</tei:del>gung danke
+        ich Ihnen bestens. Wir möchten Ihre freundliche Einladung gleich annehmen, aber es ist leider unsicher<tei:add
+          hand="#OED" place="inline">,</tei:add> ob meine <tei:rs key="entity-000163" type="person">Frau</tei:rs> - die
+        nächster Tage zu einem neuen Neffen nach <tei:rs key="entity-002286" type="place">München</tei:rs> fahren soll -
+          <tei:date when="1925-11-12">Donnerstag</tei:date> noch hier ist; <tei:date when="1925-11-15"
+          >Sonntag</tei:date> ist es geradezu unwahrscheinlich. So könnten wir bindend nur für den <tei:date
+          when="1925-11-22">22. d. M.</tei:date> zusagen, wenn's Ihnen recht ist oder Sie nicht erst mit einem knapp
+        bemessenen Ja vorlieb nehmen können.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-45"><tei:handShift new="#OED"/>Ihr sehr ergebener</tei:salute>
+        <tei:signed rend="indent-70">
+          <tei:rs key="entity-000164" type="person">Otto Erich Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline">printed:</tei:note>
+          <tei:handShift new="#printed"/>Postcard</tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">sender:</tei:supplied>
+              <tei:handShift new="#TPunk"/>Otto Erich Deutsch</tei:addrLine>
+            <tei:addrLine>Vienna II, Böcklinstrasse 26</tei:addrLine>
+            <tei:addrLine>Tel. 42822</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">to:</tei:supplied> Professor Dr.</tei:addrLine>
+            <tei:addrLine rend="indent-20">Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-50">VIENNA III</tei:addrLine>
+            <tei:addrLine rend="indent-30">Keilgasse <tei:subst>
+                <tei:del rend="overwritten" hand="#TPunk">7</tei:del>
+                <tei:add place="superimposed" hand="#TPunk">8</tei:add>
+              </tei:subst></tei:addrLine>
+          </tei:address>
+          <tei:lb/><tei:fw type="postmark">|| 1/1. WIEN 1 | -8. XI. 25 11<tei:note type="editorial">?</tei:note> | * 4c
+            * ||</tei:fw>
+        </tei:fw>
+        <tei:lb/>
+        <tei:lb/><tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-30"><tei:rs key="entity-002484" type="place">Vienna</tei:rs>, <tei:date
+            when="1925-11-07">November 7, 1925</tei:date></tei:dateline>
+        <tei:salute>Most revered <tei:rs type="person" key="entity-000632">Doctor <tei:supplied reason="clarity"
+              >Schenker</tei:supplied></tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">I thank you very much for the prompt and gracious decision. We would like to accept your kind
+        invitation immediately, but unfortunately it is uncertain whether my <tei:rs key="entity-000163" type="person"
+          >wife</tei:rs> – who is to travel to <tei:rs key="entity-002286" type="place">Munich</tei:rs> to see a newborn
+        nephew – will still be here on <tei:date when="1925-11-12">Thursday <tei:supplied reason="clarity"
+            >12th</tei:supplied></tei:date>; <tei:date when="1925-11-15">Sunday</tei:date>
+        <tei:supplied reason="clarity">15th</tei:supplied> is frankly unlikely. So we could only give a binding
+        commitment for the <tei:date when="1925-11-22">22nd of the month</tei:date>, if it is all right with you, unless
+        you would be satisfied with a provisional "yes".</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-45"><tei:handShift new="#OED"/>Yours very truly,</tei:salute>
+        <tei:signed rend="indent-70">
+          <tei:rs key="entity-000164" type="person">Otto Erich Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

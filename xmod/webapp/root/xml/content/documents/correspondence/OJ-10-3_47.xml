@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:marcrel="http://www.loc.gov/loc.terms/relators/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
+  xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1567" sdoID="OJ-10-3_47">OJ 10/3, [47]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="TPunk" scope="major">unknown typist</tei:handNote>
+      <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="DB">
+      <tei:persName>David Bretherton</tei:persName>
+      <tei:resp>Transcription, 2015</tei:resp>
+      <tei:resp>Translation, 2015</tei:resp>
+      <tei:resp>XML Encoding, 2015</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-19" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~ H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~ HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~ H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Typewritten postcard from Deutsch to Schenker, dated February 15, 1926</dc:title>
+
+      <dcterms:created>1926-02-15T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2015-09-19</dcterms:dateSubmitted>
+      <dc:description>Deutsch has received Schenker's request for a subscription to Die literarische Welt and has
+        dispatched the required payment transfer form.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline">printed:</tei:note>
+          <tei:handShift new="#printed"/>Postkarte</tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">Absender:</tei:supplied>
+              <tei:handShift new="#TPunk"/>Otto Erich Deutsch</tei:addrLine>
+            <tei:addrLine>Wien II. Böcklinstr. 26</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied> Herrn</tei:addrLine>
+            <tei:addrLine>Prof. Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-40">WIEN III.</tei:addrLine>
+            <tei:addrLine rend="indent-35">Keilgasse 8</tei:addrLine>
+          </tei:address>
+          <tei:lb/><tei:fw type="postmark">|| <tei:gap reason="illegible" unit="chars" extent="few"/> WIEN <tei:gap
+              reason="illegible" unit="chars" extent="few"/> | 15<tei:supplied reason="clarity">. II.</tei:supplied> 26
+            | <tei:gap reason="illegible" unit="chars" extent="few"/> ||</tei:fw>
+        </tei:fw>
+        <tei:lb/>
+        <tei:lb/><tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-30"><tei:rs key="entity-002484" type="place">Wien</tei:rs>, <tei:date
+            when="1926-02-15">15. Februar 26</tei:date></tei:dateline>
+        <tei:salute>Sehr geehrter Herr <tei:rs type="person" key="entity-000632">Professor</tei:rs>!<tei:note
+            xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this letter is recorded in Schenker's diary at
+            OJ 3/8, p. 2920 (February 15, 1926): "Von Deutsch (K.): wird einen Erlagschein für <tei:title>die
+              literarische Welt</tei:title> schicken." ("From Deutsch (postcard): he will send a transfer form for
+              <tei:title level="m">Die literarische Welt</tei:title>.").</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Für Ihr freundliches Interesse an der <tei:rs key="entity-004613" type="journal"
+            ><tei:title>Literarischen Welt</tei:title></tei:rs> danke ich bestens. Ein Erlagschein geht Ihnen zu. Ich
+        nehme an, dass Sie nur ab <tei:date when="1926-02-01">1. Februar</tei:date> beziehen wollen, weshalb er
+        ausnahmsweise auf ein Abonnement von 2 Monaten (Februar-März S 2.50, sonst 1 Quartal des Kal<tei:del
+          rend="overstrike" hand="#OED">n</tei:del>enders S 4.-) lautet. -</tei:p>
+
+      <tei:p rend="first">Neulich fiel mir wieder die schöne Stelle im Tagebuch des <tei:title>"Auch Einer"</tei:title>
+        von <tei:rs key="entity-005695" type="person">Vischer</tei:rs> ein,<tei:note xml:id="r0001-fn02"
+          type="editorial" place="foot"><tei:bibl>Friedrich Theodor Vischer, <tei:title level="m">Auch Einer. Eine
+              Reisebekanntschaft</tei:title> (Stuttgart and Leipzig: Hallberger, 1879).</tei:bibl></tei:note> über das
+        Wienertum im Musikgenuss. Kennen Sie die, oder habe ich sie Ihnen schon genannt?</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-30">Mit schönen Grüssen von Haus zu Haus</tei:salute>
+        <tei:salute rend="indent-55">Ihr sehr ergebener </tei:salute>
+        <tei:signed rend="indent-70"><tei:handShift new="#OED"/>
+          <tei:rs key="entity-000164" type="person">O E Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline">printed:</tei:note>
+          <tei:handShift new="#printed"/>Postcard</tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">sender:</tei:supplied>
+              <tei:handShift new="#TPunk"/>Otto Erich Deutsch</tei:addrLine>
+            <tei:addrLine>Vienna II, Böcklinstrasse 26</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">to:</tei:supplied> Prof. Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-40">VIENNA III.</tei:addrLine>
+            <tei:addrLine rend="indent-35">Keilgasse 8</tei:addrLine>
+          </tei:address>
+          <tei:lb/><tei:fw type="postmark">|| <tei:gap reason="illegible" unit="chars" extent="few"/> WIEN <tei:gap
+              reason="illegible" unit="chars" extent="few"/> | 15<tei:supplied reason="clarity">. II.</tei:supplied> 26
+            | <tei:gap reason="illegible" unit="chars" extent="few"/> ||</tei:fw>
+        </tei:fw>
+        <tei:lb/>
+        <tei:lb/><tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-30"><tei:rs key="entity-002484" type="place">Vienna</tei:rs>, <tei:date
+            when="1926-02-15">February 15, 1926</tei:date></tei:dateline>
+        <tei:salute>Very honoured <tei:rs type="person" key="entity-000632">Professor <tei:supplied reason="clarity"
+              >Schenker</tei:supplied></tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Thank you very much for your kind interest in <tei:rs key="entity-004613" type="journal"
+            ><tei:title level="m">Die literarische Welt</tei:title></tei:rs>. A payment transfer form is on its way to
+        you. I assume that you only want to subscribe from <tei:date when="1926-02-01">February 1</tei:date>, which is
+        why it states an exceptional subscription of two months (2.50 shillings for February–March, otherwise it is 4
+        schillings per quarter year).</tei:p>
+
+      <tei:p rend="first">Recently I remembered a beautiful passage in <tei:rs key="entity-005695" type="person"
+          >Vischer</tei:rs>'s <tei:supplied reason="clarity">travel</tei:supplied> diary, <tei:title>"Auch
+          Einer"</tei:title>,<tei:ptr corresp="#r0001-fn02" type="footnote"/> about the Viennese and music appreciation.
+        Do you know it, or have I already mentioned it to you?</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-30">With kind greetings from house to house,</tei:salute>
+        <tei:salute rend="indent-55">Yours very truly,</tei:salute>
+        <tei:signed rend="indent-70"><tei:handShift new="#OED"/>
+          <tei:rs key="entity-000164" type="person">O E Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
