@@ -261,24 +261,27 @@
                 </div>
                 <div class="unit size1of3 lastUnit">
                   <h3>Latest</h3>
-                  <h4>What’s New? ‒ two important sets of correspondence</h4>
+                  <h4>What’s New? ‒ Oswald Jonas</h4>
                   <ul>
-                    <li>June 2015 brings Schenker’s entire surviving correspondence with August
-                      Halm, edited by Lee Rothfarb. One of the most revealing of all Schenker’s
-                      correspondence exchanges, it comprises 50 items (31 Halm→Schenker, 19
-                      Schenker→Halm), spanning 1916‒29, some letters as long as 12 pages, with much
-                      intense discussion of music, exchanges of aesthetic view, and fierce
-                      controversy about Bruckner and Brahms—a fascinating interplay of
-                      personalities!</li>
-                    <li>June also brings the correspondence between Schenker and Wilhelm Altmann of
-                      the Prussian State Library: 35 items, spanning 1914‒26 and 1934, edited by
-                      Nicholas Marston. The letters and postcards are all from Altmann to Schenker,
-                      but Schenker's side is partly reconstructed from his diary. Much of the
-                      content concerns Schenker’s search for autographs and early editions of music
-                      by Bach and Beethoven, especially for his Erläuterungsausgabe.</li>
-                    <li>The next few months will see further correspondence in Schenker’s search for
-                      early sources, and the transfer of all the Oswald Jonas correspondence, edited
-                      by John Rothgeb, from the old website to the new.</li>
+                    <li>November 2015 brings to the website another installment of the
+                      correspondence between Schenker and his erstwhile pupil Oswald Jonas: that
+                      from summer 1932 to summer 1934, edited by John Rothgeb and Heribert
+                      Esser.</li>
+                    <li>Its content is dominated by the preparation of Jonas's book <font title="m">Das Wesen des
+                      musikalischen Kunstwerks</font> (1934), and by the unpredictabilities of Anthony van
+                      Hoboken as its financial backer (something which rouses Schenker’s
+                      indignation. Jonas reports on his work in Berlin ‒ rapidly diminishing from
+                      March 1933 on, with the coming-to-power of the Nazis, as one-by-one doors
+                      close to him as a Jew. Schenker makes a far-reaching statement about his own
+                      Jewishness in a letter of December 21, 1933 in reaction to the sermons of
+                      Cardinal Faulhaber regarding the Catholic Church and the Jews.</li>
+                    <li>The entire Jonas correspondence will be on the site by early in the New Year
+                      ‒ 111 items, spanning October 1918 to February 1938.</li>
+                    <li>This month also brings several new profiles to the site (e.g. Syrian
+                      Dances), as well as many updates to existing profiles.</li>
+                    <li>For news of major importance concerning Schenker’s diaries, see our
+                      blog.</li>
+                    <li>Also for recent publications, see our blog.</li>
                   </ul>
 
                   <nav class="local" id="blogPosts">
