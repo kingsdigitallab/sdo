@@ -267,21 +267,16 @@
                       correspondence between Schenker and his erstwhile pupil Oswald Jonas: that
                       from summer 1932 to summer 1934, edited by John Rothgeb and Heribert
                       Esser.</li>
-                    <li>Its content is dominated by the preparation of Jonas's book <font title="m">Das Wesen des
-                      musikalischen Kunstwerks</font> (1934), and by the unpredictabilities of Anthony van
-                      Hoboken as its financial backer (something which rouses Schenker’s
-                      indignation. Jonas reports on his work in Berlin ‒ rapidly diminishing from
-                      March 1933 on, with the coming-to-power of the Nazis, as one-by-one doors
-                      close to him as a Jew. Schenker makes a far-reaching statement about his own
+                    <li>Its content is dominated by the preparation of Jonas's book <em>Das Wesen
+                        des musikalischen Kunstwerks</em> (1934), and by the unpredictabilities of
+                      Anthony van Hoboken as its financial backer (something which arouses
+                      Schenker’s indignation). — From March 1933 on, with the coming-to-power of the
+                      Nazis, Jonas's work in Berlin is rapidly diminishing as one by one doors close
+                      on him as a Jew. — Schenker makes a far-reaching statement about his own
                       Jewishness in a letter of December 21, 1933 in reaction to the sermons of
                       Cardinal Faulhaber regarding the Catholic Church and the Jews.</li>
-                    <li>The entire Jonas correspondence will be on the site by early in the New Year
-                      ‒ 111 items, spanning October 1918 to February 1938.</li>
-                    <li>This month also brings several new profiles to the site (e.g. Syrian
-                      Dances), as well as many updates to existing profiles.</li>
-                    <li>For news of major importance concerning Schenker’s diaries, see our
+                    <li>For news of <em>major importance</em> concerning Schenker’s diaries, see our
                       blog.</li>
-                    <li>Also for recent publications, see our blog.</li>
                   </ul>
 
                   <nav class="local" id="blogPosts">
