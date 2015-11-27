@@ -261,20 +261,27 @@
                 </div>
                 <div class="unit size1of3 lastUnit">
                   <h3>Latest</h3>
-                  <h4>What’s New? ‒ Oswald Jonas</h4>
+                  <h4>What’s New? ‒ Oswald Jonas and Otto Erich Deutsch</h4>
                   <ul>
-                    <li>November 2015 brings to the website another installment of the
-                      correspondence between Schenker and his erstwhile pupil Oswald Jonas: that
-                      from summer 1932 to summer 1934, edited by John Rothgeb and Heribert
-                      Esser.</li>
-                    <li>Its content is dominated by the preparation of Jonas's book <em>Das Wesen
-                        des musikalischen Kunstwerks</em> (1934), and by the unpredictabilities of
-                      Anthony van Hoboken as its financial backer (something which arouses
-                      Schenker’s indignation). — From March 1933 on, with the coming-to-power of the
-                      Nazis, Jonas's work in Berlin is rapidly diminishing as one by one doors close
-                      on him as a Jew. — Schenker makes a far-reaching statement about his own
-                      Jewishness in a letter of December 21, 1933 in reaction to the sermons of
-                      Cardinal Faulhaber regarding the Catholic Church and the Jews.</li>
+                    <li>November 2015 brings to the website installments of two correspondences:
+                      those between Schenker and Oswald Jonas, summer 1932 to fall 1934, ed. John
+                      Rothgeb and Heribert Esser; and Schenker and Otto Erich Deutsch, 1922‒26, ed.
+                      David Bretherton.</li>
+
+                    <li>The Jonas material is dominated by the preparation of Jonas's book <em>Das
+                        Wesen des musikalischen Kunstwerks</em> (1934), and by the infuriating
+                      unpredictabilities of Anthony van Hoboken as its financial backer. — With the
+                      coming-to-power of the Nazis, Jonas's work in Berlin rapidly diminishes; one
+                      by one doors close on him as a Jew. — Schenker makes two far-reaching
+                      statements about his own Jewishness.</li>
+
+                    <li>The Deutsch-Schenker correspondence in 1922 is primarily concerned with the
+                      fee for Schenker's facsimile edition of Beethoven's "Moonlight" Sonata (1921),
+                      and the hunt for other suitable facsimile-edition subjects. 1925 sees
+                      discussion of Schenker’s contribution to a Schubert special issue of
+                        <em>Moderne Welt</em> (Dec 1, 1925), which Deutsch edited, and during
+                      1925‒26 there are increasing references to social gatherings.</li>
+
                     <li>For news of <em>major importance</em> concerning Schenker’s diaries, see our
                       blog.</li>
                   </ul>
