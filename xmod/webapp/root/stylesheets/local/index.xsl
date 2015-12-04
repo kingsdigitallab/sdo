@@ -261,6 +261,9 @@
                 </div>
                 <div class="unit size1of3 lastUnit">
                   <h3>Latest</h3>
+                  <!-- COPY AND PASTE LINK BELOW TO DIRECT USERS TO THE 'OVERFLOW' PAGE FOR UPDATE NEWS -->
+                  <!-- <a class="int" title="Link to Latest Material"
+                        href="/documents/overviews/latest_material.html">More</a> -->
                   <h4>What’s New? ‒ Oswald Jonas and Otto Erich Deutsch</h4>
                   <ul>
                     <li>November 2015 brings to the website installments of two correspondences:
@@ -280,7 +283,8 @@
                       and the hunt for other suitable facsimile-edition subjects. 1925 sees
                       discussion of Schenker’s contribution to a Schubert special issue of
                         <em>Moderne Welt</em> (Dec 1, 1925), which Deutsch edited, and during
-                      1925‒26 there are increasing references to social gatherings.</li>
+                      1925‒26 there are increasing references to social gatherings. <a class="int" title="Link to Latest Material"
+                        href="/documents/overviews/latest_material.html">More</a></li>
 
                     <li>For news of <em>major importance</em> concerning Schenker’s diaries, see our
                       blog.</li>
