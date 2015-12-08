@@ -268,23 +268,20 @@
                   <ul>
                     <li>December 2015 brings to the website installments of two correspondences.
                       That between Schenker and his erstwhile pupil Oswald Jonas, edited by John
-                      Rothgeb and Heribert Esser, is now complete, spanning 1918 to 1938. That
-                      between Schenker and Otto Erich Deutsch spans 1922 to 1926, edited by David
+                      Rothgeb and Heribert Esser, is now complete, spanning 1918 to 1938. For more
+                      on this, see <a class="int" title="Link to Latest Material"
+                        href="/documents/overviews/latest_material.html">the following</a>. That
+                      between Schenker and Otto Erich Deutsch covers 1922 to 1926, edited by David
                       Bretherton.</li>
 
                     <li>Overall, the Deutsch correspondence spans 26 years: 1913 to 1939. In the
                       early 1920s, Deutsch is important to Schenker as the editor of UE's series of
                       "Connoisseur Prints" and for his work in Schubert scholarship. The 1922
                       exchanges are primarily concerned with the fee for Schenker's facsimile
-                      edition of Beethoven's "Moonlight" Sonata (Vienna: UE, 1921), and the hunt for
-                      other suitable facsimile-edition subjects. The 1925 exchanges see discussion
-                      of Schenker’s contribution to a Schubert special issue of Moderne Welt (Dec 1,
-                      1925), which Deutsch edited, and during 1925‒26 there is an increasing number
-                      of references to social gatherings.</li>
-
-                    <li>For more about the Oswald Jonas correspondence, and in particular the new
-                      material from 1932 to 1938, see <a class="int" title="Link to Latest Material"
-                        href="/documents/overviews/latest_material.html">the following</a></li>
+                      edition of Beethoven's "Moonlight" Sonata (1921), and the hunt for other
+                      suitable facsimile-edition subjects. The 1925 exchanges see discussion of
+                      Schenker’s contribution to a Schubert special issue of <em>Moderne Welt</em>
+                      (Dec 1, 1925), which Deutsch edited.</li>
 
                     <li>For news of <em>major importance</em> concerning Schenker’s diaries, see our
                       blog.</li>
