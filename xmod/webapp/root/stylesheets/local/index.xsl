@@ -266,25 +266,25 @@
                         href="/documents/overviews/latest_material.html">More</a> -->
                   <h4>What’s New? ‒ Oswald Jonas and Otto Erich Deutsch</h4>
                   <ul>
-                    <li>November 2015 brings to the website installments of two correspondences:
-                      those between Schenker and Oswald Jonas, summer 1932 to fall 1934, ed. John
-                      Rothgeb and Heribert Esser; and Schenker and Otto Erich Deutsch, 1922‒26, ed.
-                      David Bretherton.</li>
+                    <li>December 2015 brings to the website installments of two correspondences.
+                      That between Schenker and his erstwhile pupil Oswald Jonas, edited by John
+                      Rothgeb and Heribert Esser, is now complete, spanning 1918 to 1938. That
+                      between Schenker and Otto Erich Deutsch spans 1922 to 1926, edited by David
+                      Bretherton.</li>
 
-                    <li>The Jonas material is dominated by the preparation of Jonas's book <em>Das
-                        Wesen des musikalischen Kunstwerks</em> (1934), and by the infuriating
-                      unpredictabilities of Anthony van Hoboken as its financial backer. — With the
-                      coming-to-power of the Nazis, Jonas's work in Berlin rapidly diminishes; one
-                      by one doors close on him as a Jew. — Schenker makes two far-reaching
-                      statements about his own Jewishness.</li>
+                    <li>Overall, the Deutsch correspondence spans 26 years: 1913 to 1939. In the
+                      early 1920s, Deutsch is important to Schenker as the editor of UE's series of
+                      "Connoisseur Prints" and for his work in Schubert scholarship. The 1922
+                      exchanges are primarily concerned with the fee for Schenker's facsimile
+                      edition of Beethoven's "Moonlight" Sonata (Vienna: UE, 1921), and the hunt for
+                      other suitable facsimile-edition subjects. The 1925 exchanges see discussion
+                      of Schenker’s contribution to a Schubert special issue of Moderne Welt (Dec 1,
+                      1925), which Deutsch edited, and during 1925‒26 there is an increasing number
+                      of references to social gatherings.</li>
 
-                    <li>The Deutsch-Schenker correspondence in 1922 is primarily concerned with the
-                      fee for Schenker's facsimile edition of Beethoven's "Moonlight" Sonata (1921),
-                      and the hunt for other suitable facsimile-edition subjects. 1925 sees
-                      discussion of Schenker’s contribution to a Schubert special issue of
-                        <em>Moderne Welt</em> (Dec 1, 1925), which Deutsch edited, and during
-                      1925‒26 there are increasing references to social gatherings. <a class="int" title="Link to Latest Material"
-                        href="/documents/overviews/latest_material.html">More</a></li>
+                    <li>For more about the Oswald Jonas correspondence, and in particular the new
+                      material from 1932 to 1938, see <a class="int" title="Link to Latest Material"
+                        href="/documents/overviews/latest_material.html">the following</a></li>
 
                     <li>For news of <em>major importance</em> concerning Schenker’s diaries, see our
                       blog.</li>
