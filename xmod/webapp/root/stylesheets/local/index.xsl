@@ -264,7 +264,7 @@
                   <!-- COPY AND PASTE LINK BELOW TO DIRECT USERS TO THE 'OVERFLOW' PAGE FOR UPDATE NEWS -->
                   <!-- <a class="int" title="Link to Latest Material"
                         href="/documents/overviews/latest_material.html">More</a> -->
-                  <h4>What’s New? ‒ Oswald Jonas and Otto Erich Deutsch</h4>
+                  <h4>What’s New? ‒ Oswald Jonas, Otto Erich Deutsch, Diaries ’31‒’34</h4>
                   <ul>
                     <li>December 2015 brings to the website installments of two correspondences.
                       That between Schenker and his erstwhile pupil Oswald Jonas, edited by John
@@ -274,17 +274,15 @@
                       between Schenker and Otto Erich Deutsch covers 1922 to 1926, edited by David
                       Bretherton.</li>
 
-                    <li>Overall, the Deutsch correspondence spans 26 years: 1913 to 1939. In the
-                      early 1920s, Deutsch is important to Schenker as the editor of UE's series of
-                      "Connoisseur Prints" and for his work in Schubert scholarship. The 1922
-                      exchanges are primarily concerned with the fee for Schenker's facsimile
-                      edition of Beethoven's "Moonlight" Sonata (1921), and the hunt for other
-                      suitable facsimile-edition subjects. The 1925 exchanges see discussion of
-                      Schenker’s contribution to a Schubert special issue of <em>Moderne Welt</em>
-                      (Dec 1, 1925), which Deutsch edited.</li>
+                    <li>Four more years of the highly instructive correspondence between Otto Erich
+                      Deutsch and Schenker come online this month: 1922‒26. For more, see <a
+                        class="int" title="Link to Latest Material"
+                        href="/documents/overviews/latest_material.html">the following</a>.</li>
 
-                    <li>For news of <em>major importance</em> concerning Schenker’s diaries, see our
-                      blog.</li>
+                    <li>Three-and-a-half more years of Schenker's diaries are added to the site this
+                      month: 1931 to May 1934. For more, see <a class="int"
+                        title="Link to Latest Material"
+                        href="/documents/overviews/latest_material.html">the following</a></li>
                   </ul>
 
                   <nav class="local" id="blogPosts">
