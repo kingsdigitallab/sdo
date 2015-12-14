@@ -270,13 +270,11 @@
                       That between Schenker and his erstwhile pupil Oswald Jonas, edited by John
                       Rothgeb and Heribert Esser, is now complete, spanning 1918 to 1938. For more
                       on this, see <a class="int" title="Link to Latest Material"
-                        href="/documents/overviews/latest_material.html">the following</a>. That
-                      between Schenker and Otto Erich Deutsch covers 1922 to 1926, edited by David
-                      Bretherton.</li>
+                        href="/documents/overviews/latest_material.html">the following</a>.</li>
 
                     <li>Four more years of the highly instructive correspondence between Otto Erich
-                      Deutsch and Schenker come online this month: 1922‒26. For more, see <a
-                        class="int" title="Link to Latest Material"
+                      Deutsch and Schenker come online this month: 1922‒26, edited by David
+                      Bretherton. For more, see <a class="int" title="Link to Latest Material"
                         href="/documents/overviews/latest_material.html">the following</a>.</li>
 
                     <li>Three-and-a-half more years of Schenker's diaries are added to the site this
