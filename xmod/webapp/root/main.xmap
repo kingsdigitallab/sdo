@@ -151,7 +151,7 @@
           <map:part src="cocoon://_internal/menu/main.xml"/>
         </map:aggregate>
         <map:transform src="stylesheets/local/solr/query-params-to-solr-xinclude.xsl">
-          <map:parameter name="keyword" value="{request-param:kw}"/>
+          <map:parameter name="keyword" value="{raw-request-param:kw}"/>
           <map:parameter name="filter" value="{request-param:fq}"/>
           <map:parameter name="filter2" value="{request-param:fq2}"/>
           <map:parameter name="page" value="{request-param:p}"/>
@@ -165,7 +165,7 @@
           <map:parameter name="inc" value="{request:queryString}"/>
         </map:transform>
         <map:serialize type="xhtml"/>
-        <!--  <map:serialize type="xml" /> -->
+          <!--<map:serialize type="xml" />--> 
       </map:match>
 
     </map:pipeline>
@@ -672,7 +672,7 @@
           <map:parameter name="filter" value="{2}"/>
         </map:transform>
         <map:serialize type="xhtml"/>
-      <!--    <map:serialize type="xml" /> -->
+          <!--<map:serialize type="xml" />--> 
       </map:match>
 
       <!-- Dates. -->
@@ -892,7 +892,7 @@
         <map:aggregate element="aggregation">
           <map:part src="cocoon:/internal/profiles/indices.xml"/>
           <map:part element="entity_list"
-            src="cocoon://_internal/solr/query/q=entity_key%3A*&amp;rows=0&amp;fl=entity_key&amp;facet=true&amp;facet.field=entity_key&amp;facet.sort=entity_key&amp;facet.limit=5000"/>
+            src="cocoon://_internal/solr/query/q=entity_key%3A*&amp;rows=0&amp;fl=entity_key&amp;facet=true&amp;facet.field=entity_key&amp;facet.sort=entity_key&amp;facet.limit=9000"/>
           <map:part element="eats" src="cocoon://_internal/eats/entities.xml"/>
        </map:aggregate>
         <map:transform src="stylesheets/local/profiles/generate-entries.xsl">
