@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1649" sdoID="OC-52-380">OC 52/380</sdo:correspondence>
+    </sdo:source>
+    <tei:handNotes>
+      <tei:handNote xml:id="JW" scope="minor">Josef Weinberger's hand</tei:handNote>
+      <tei:handNote xml:id="HWi" scope="minor">Hugo Winter's hand</tei:handNote>
+      <tei:handNote xml:id="TPue" scope="major">typist for Universal Edition</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2004</tei:resp>
+      <tei:resp>Translation, 20004</tei:resp>
+      <tei:resp>XML Encoding, 2016</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-02-07" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-006164">WeinbergerJ ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-003184">WinterH ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002702">UE ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+      <dc:title>Typewritten letter from Weinberger and Winter (UE) to Schenker, dated July 15,
+        1902</dc:title>
+
+      <dcterms:created>1902-07-15T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2016-02-04</dcterms:dateSubmitted>
+      <dc:description>UE has agreed to issue the introduction to Schenker's edition of C. P. E. Bach
+        keyboard works as a separate publication [Ein Beitrag zur Ornamentation], requests the
+        manuscript, and transfers the remainder of the honorarium.</dc:description>
+      <dc:subject>Executiv-Comité ; Executive Committee; Brochüre-Form; paperback; Honorar;
+        honorarium; Betrag; sum; Manuscript; Titel; title</dc:subject>
+
+      <marcrel:correspondent key="entity-000946">Josef Weinberger</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000968">Hugo Winter</marcrel:correspondent>
+      <marcrel:correspondent key="entity-002408">Universal Edition</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>Universal-Edition
+            Actiengesellschaft</tei:addrLine>
+          <tei:addrLine>Maximilianstrasse No.11.</tei:addrLine>
+          <tei:addrLine>TELEPHON N<tei:hi rend="supralinear">o.</tei:hi> 3364</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-50">
+          <tei:placeName>Wien, am </tei:placeName><tei:handShift new="#TPue"/>
+          <tei:date when="1902-07-15">15. Juli 1902</tei:date></tei:dateline>.<tei:lb/>
+        <tei:address>
+          <tei:addrLine rend="indent-20">
+            <tei:persName>Sr. Hochwolgeboren Herrn Professor Dr. Heinrich Schenker,</tei:persName>
+          </tei:addrLine>
+          <tei:addrLine rend="indent-60">
+            <tei:hi rend="underline">derz. Alexanderhof.</tei:hi>
+          </tei:addrLine>
+        </tei:address>
+        <tei:salute>Hochverehrter <tei:rs type="person" key="entity-000632"
+          >Herr</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">In nunmehriger Erledigung Ihrer sehr geschätzten Schreiben,<tei:note
+          xml:id="r0001-fn01" type="editorial" place="foot">Schenker's letter is not known to
+          survive.</tei:note> beehren wir uns Ihnen mitzutheilen, dass unser Executiv-Comité sich
+        mit der Herausgabe der Einleitung zu <tei:rs key="entity-001720" type="work">Phil. Eman.
+          Bach</tei:rs> in Brochüren-Form<tei:note xml:id="r0001-fn02" type="editorial" place="foot"
+          >i.e. <tei:rs key="entity-001721" type="work"><tei:title level="m">Ein Beitrag zur
+              Ornamentik</tei:title></tei:rs>, originally intended to form part of the edition,
+          released on or about July 24, 1903.</tei:note> einverstanden erklärt und ein Honorar von K
+        200. – <tei:note xml:id="r0001-fn03" type="editorial" place="foot">Figure underlined by
+          Schenker.</tei:note> hiefür bewilligt hat.</tei:p>
+
+      <tei:p rend="first">Falls dieser Betrag, der – wie wir uns gleich höflichst zu bemerken
+        erlauben – ein definitiv festgesetzter ist, der einer Aenderung nicht mehr unterliegen kann,
+        Ihre Genehmigung findet, bitten <tei:sic>bitten</tei:sic> wir um freundliche bald möglichste
+        Einsendung des Manuscriptes, zu welchem Sie auch gütigst den genauen Wortlaut des Titels
+        vorzuschreiben belieben.</tei:p>
+
+      <tei:p rend="first"><tei:pb n="2"/>Den kleinen Restbetrag per <tei:cit>
+          <tei:q><tei:hi rend="underline">K. 57.-</tei:hi></tei:q>
+        </tei:cit> haben wir uns erlaubt, Ihnen heute per Postsparcassa an Ihre Adresse:Alexanderhof
+          b/Siegenfeld<tei:note xml:id="r0001-fn04" type="editorial" place="foot">Siegenfeld, in
+          Lower Austria, was Schenker's vacationing place in the summer of 1902.</tei:note> zu
+        überweisen und bitten wir, den Empfang dieses Betrages durch freundliche Unterfertigung und
+        Retournirung beiliegender Quittung bestätigen zu wollen.</tei:p>
+
+      <tei:p rend="first">Ihrer geschätzten Rückäusserung mit Vergnügen entgegensehend, zeichnen
+        wir</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-30">mit dem Ausdrucke vorzüglichster Hochachtung</tei:salute>
+        <tei:signed rend="indent-60"><tei:handShift new="#stamp"/>„<tei:rs key="entity-002408"
+            type="organization">Universal-Edition“</tei:rs> Actiengesellschaft</tei:signed>
+        <tei:signed rend="indent-50"><tei:handShift new="#JW"/><tei:rs key="entity-000946"
+            type="person">Josef Weinberger</tei:rs>
+          <tei:handShift new="#HWi"/><tei:rs key="entity-000968" type="person">D<tei:hi
+              rend="supralinear">r</tei:hi> Winter</tei:rs></tei:signed><tei:lb/><tei:lb/>
+        <tei:note type="editorial" place="inline">illegible initialling bottom-right corner of p.
+          2</tei:note>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:lb/>
+        <tei:p><tei:note type="editorial" place="inline">at foot of p. 1: </tei:note><tei:hi
+            rend="underline">1 Quittung</tei:hi></tei:p>
+      </tei:postscript>
+
+    </tei:div>
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>Universal Edition &amp; Co.</tei:addrLine>
+          <tei:addrLine>Maximilianstrasse 11</tei:addrLine>
+          <tei:addrLine>TELEPHONE No. 3364</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-50">
+          <tei:placeName>Vienna, </tei:placeName><tei:handShift new="#TPue"/>
+          <tei:date when="1902-07-15">July 15, 1902</tei:date></tei:dateline><tei:lb/>
+        <tei:address>
+          <tei:addrLine rend="indent-20">
+            <tei:persName>Professor Heinrich Schenker,Esq.</tei:persName>
+          </tei:addrLine>
+          <tei:addrLine rend="indent-60">
+            <tei:hi rend="underline">currently at Alexanderhof.</tei:hi>
+          </tei:addrLine>
+        </tei:address>
+        <tei:salute>Highly revered Mr. <tei:supplied reason="identity"><tei:rs type="person"
+              key="entity-000632">Schenker</tei:rs></tei:supplied>,</tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">In response now to your highly esteemed letter,<tei:ptr
+          corresp="#r0001-fn01" type="footnote"/> we have the honor of informing you that our
+        Executive Committee declared itself in agreement with publishing in paperback<tei:ptr
+          corresp="#r0001-fn02" type="footnote"/> the Introduction to <tei:rs key="entity-001720"
+          type="work">C. P. E. Bach</tei:rs>, authorizing an honorarium of 200.– Kroner<tei:ptr
+          corresp="#r0001-fn03" type="footnote"/> for this purpose.</tei:p>
+
+      <tei:p rend="first">In the event of this sum, which ‒ as we take the liberty of observing ‒ is
+        final and subject to no alteration, meeting with your satisfaction, we ask you kindly to
+        send the manuscript as soon as possible, and kindly also to stipulate the precise wording of
+        the title.</tei:p>
+
+      <tei:p rend="first"><tei:pb n="2"/>We have taken the liberty of today transferring the small
+        remaining payment of <tei:cit>
+          <tei:q><tei:hi rend="underline">57.– Kronen</tei:hi></tei:q>
+        </tei:cit> via the Postal Savings Bank to your address at Alexanderhof nr.
+          Siegenfeld,<tei:ptr corresp="#r0001-fn04" type="footnote"/> and we ask you please to
+        confirm receipt of this payment by kindly completing and signing the enclosed slip.</tei:p>
+
+      <tei:p rend="first">In looking with pleasure forward to your esteemed response, we
+        remain,</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-30">with expression of highest regard,</tei:salute>
+        <tei:signed rend="indent-60"><tei:handShift new="#stamp"/><tei:rs key="entity-002408"
+            type="organization">Universal Edition</tei:rs> &amp; Co.</tei:signed>
+        <tei:signed rend="indent-50"><tei:handShift new="#JW"/><tei:rs key="entity-000946"
+            type="person">Josef Weinberger</tei:rs>
+          <tei:handShift new="#HWi"/><tei:rs key="entity-000968" type="person">Dr.
+          Winter</tei:rs></tei:signed><tei:lb/><tei:lb/>
+        <tei:note type="editorial" place="inline">illegible initialling bottom-right corner of p.
+          2</tei:note>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:lb/>
+        <tei:p><tei:note type="editorial" place="inline">at foot of p. 1: </tei:note><tei:hi
+            rend="underline">1 receipt slip</tei:hi></tei:p>
+      </tei:postscript>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
