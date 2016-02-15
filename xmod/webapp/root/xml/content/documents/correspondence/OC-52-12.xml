@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1670" sdoID="OC-52-12">OC 52/12</sdo:correspondence>
+    </sdo:source>
+    <tei:handNotes>
+      <tei:handNote xml:id="Asch" scope="minor">E. Ascherberg's hand</tei:handNote>
+      <tei:handNote xml:id="stenAsch" scope="major">stenographer for E. Asherberg</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2004, 2016</tei:resp>
+      <tei:resp>XML Encoding, 2016</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-02-07" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002702">UE ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+      <dc:title>Handwritten letter from E. Ascherberg to Universal Edition, dated January 20,
+        1904</dc:title>
+
+      <dcterms:created>1904-01-20T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2016-02-15</dcterms:dateSubmitted>
+      <dc:description>Ascherberg reports research on ballads arranged by Haydn.</dc:description>
+      <dc:subject>arrangements; songs; string accompaniments</dc:subject>
+
+      <marcrel:correspondent key="entity-000019">E. Ascherberg &amp; Co.</marcrel:correspondent>
+      <marcrel:recipient key="entity-002408">Universal Edition</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>E. ASHERBERG &amp; CO.</tei:addrLine>
+          <tei:addrLine><tei:hi rend="italic">(Duncan Davison &amp; Co.)</tei:hi></tei:addrLine>
+          <tei:addrLine>Music Publishers</tei:addrLine>
+          <tei:addrLine>AND</tei:addrLine>
+          <tei:addrLine>MANUFACTURERS OF PIANOS</tei:addrLine>
+          <tei:addrLine>46, Berners Street</tei:addrLine>
+        </tei:address>
+        <tei:dateline>London W., <tei:handShift new="#stenAsch"/><tei:date when="1904-01-20"
+              >20<tei:hi rend="supralinear">th</tei:hi> Jany 1904</tei:date></tei:dateline><tei:lb/>
+        <tei:address>
+          <tei:addrLine>Universal Edition</tei:addrLine>
+          <tei:addrLine>Wien</tei:addrLine>
+        </tei:address>
+        <tei:salute>Dear <tei:rs type="person" key="entity-002408">Sirs</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Referring to your favor of December 31<tei:hi rend="supralinear"
+          >st.</tei:hi><tei:note xml:id="r0001-fn01" type="editorial" place="foot">Universal
+          Edition's letter is not known to survive.</tei:note> we have sent a representative to the
+          <tei:rs key="entity-002641" type="organization">British Museum</tei:rs> in accordance with
+        your request.</tei:p>
+
+      <tei:p rend="first">At the expense of much time and trouble he has been able to trace the
+          <tei:hi rend="italic">Ballads</tei:hi> you refer to, with the exception of Nos. 46 &amp;
+        50, which have evidently never been arranged by <tei:rs key="entity-000344" type="person"
+            ><tei:hi rend="italic">Haydn</tei:hi></tei:rs> – only by <tei:rs key="entity-000472"
+          type="person"><tei:hi rend="italic">Kozeluch</tei:hi></tei:rs>.</tei:p>
+
+      <tei:p rend="first">We understood from your letter that the songs (as arranged by <tei:rs
+          key="entity-000344" type="person"><tei:hi rend="italic">Haydn</tei:hi></tei:rs>) <tei:pb
+          n="2"/> were to be found in vol. G. 370, but only 4 of these are arranged by <tei:rs
+          key="entity-000344" type="person"><tei:hi rend="italic">Haydn</tei:hi></tei:rs> in that
+        volume, all the others being arranged by <tei:rs key="entity-006173" type="person"><tei:hi
+            rend="italic">Pleyel</tei:hi></tei:rs> and <tei:rs key="entity-000472" type="person"
+            ><tei:hi rend="italic">Kozeluch</tei:hi></tei:rs>.</tei:p>
+
+      <tei:p rend="first">To trace the other numbers it was necessary to search through many volumes
+        and collections of <tei:title level="m">Scotch Ballads and Airs</tei:title>.</tei:p>
+
+      <tei:p rend="first">Only a few of the string accompaniments are in existence. We are by this
+        post forwarding copies of all the arrangements to which <tei:hi rend="italic"><tei:rs
+            key="entity-000344" type="person">Haydn</tei:rs>’s</tei:hi> name may safely be
+        put.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">We <tei:supplied>r</tei:supplied>e<tei:supplied
+            reason="abbreviation">main</tei:supplied>
+          <tei:handShift new="#Asch"/>Yours faithfully</tei:salute>
+        <tei:signed rend="indent-50"><tei:rs key="entity-000019" type="person">E. Ascherberg &amp;
+            Co.</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+    <tei:div type="translation">
+
+      <tei:opener/>
+
+      <tei:p/>
+
+      <tei:closer/>
+
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
