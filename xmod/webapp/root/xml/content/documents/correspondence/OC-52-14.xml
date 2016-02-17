@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1672" sdoID="OC-52-14">OC 52/14</sdo:correspondence>
+    </sdo:source>
+    <tei:handNotes>
+      <tei:handNote xml:id="unk" scope="minor">unknown hand (Georg Kalbeck?)</tei:handNote>
+      <tei:handNote xml:id="UEsten" scope="major">stenographer for Universal Edition</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2004, 2016</tei:resp>
+      <tei:resp>Translation, 2004, 2016</tei:resp>
+      <tei:resp>XML Encoding, 2016</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-02-07" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002702">UE ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-005447">receipt</tei:rs>
+
+
+
+      <dc:title>Handwritten receipt from UE to Schenker, dated June 7, 1904</dc:title>
+
+      <dcterms:created>1904-06-07T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2016-02-17</dcterms:dateSubmitted>
+      <dc:description>UE receipt for return of score materials</dc:description>
+      <dc:subject>Partitur; score; Arrangement</dc:subject>
+
+      <marcrel:correspondent key="entity-002408">Universal Edition</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:note type="editorial" place="inline">in left margin: printed sideways</tei:note>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>Universal-Edition
+            Actiengesellschaft</tei:addrLine>
+          <tei:addrLine>Maximilianstrasse No.11.</tei:addrLine>
+          <tei:addrLine>TELEPHON N<tei:hi rend="supralinear">o.</tei:hi> 3364</tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:note type="editorial" place="inline">printed/written upright, on printed
+          lines:</tei:note>
+        <tei:dateline rend="indent-70">
+          <tei:placeName>Wien</tei:placeName>, am <tei:date when="1904-06-07"><tei:handShift
+              new="#UEsten"/>7. Juni <tei:handShift new="#printed"/>190<tei:handShift new="#UEsten"
+            />4</tei:date></tei:dateline><tei:lb/>
+        <tei:address>
+          <tei:addrLine rend="indent-10">
+            <tei:persName>Hochwolgeboren Herrn <tei:hi rend="lateinschr">Prof.
+              Schenker,</tei:hi></tei:persName>, </tei:addrLine>
+          <tei:addrLine rend="indent-60">
+            <tei:hi rend="underline lateinschr">Wien</tei:hi>
+          </tei:addrLine>
+          <tei:lb/>
+          <tei:lb/>
+        </tei:address>
+      </tei:opener>
+
+      <tei:p rend="first">Wir bestätigen dankend den Erhalt von <tei:cit>
+          <tei:q><tei:hi rend="lateinschr">1. Part. <tei:rs key="entity-000329" type="person"
+                >Händel</tei:rs></tei:hi>, —<tei:note xml:id="r0001-fn01" type="editorial"
+              place="foot">This must be the "material for comparison" (<tei:hi rend="italic"
+                >Vergleichsmaterial</tei:hi>) offered in <tei:ref type="correspondence"
+                cRef="OC-52-9">OC 52/9</tei:ref>, July 23, 1903, i.e. the full score from which
+              Schenker made his arrangements.</tei:note></tei:q>
+        </tei:cit>
+        <tei:cit>
+          <tei:q>1 vierhändg. Arrg’t. erster Band.<tei:note xml:id="r0001-fn02" type="editorial"
+              place="foot">2 i.e. UE 936, <tei:title>Handel: Orgelkonzerte</tei:title>, vol. I,
+              published March 11, 1905 (<tei:ref type="correspondence" cRef="OC-52-17">OC
+                52/17</tei:ref>) in a print-run of 1,000 copies (Verlagsdruckbuch UE 936). Schenker
+              never produced vol. II, because of a dispute over honorarium (see, e.g., <tei:ref
+                type="correspondence" cRef="OC-52-395">OC 52/395</tei:ref>, July 5,
+              1906).</tei:note></tei:q>
+        </tei:cit>
+      </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Ergebenst</tei:salute>
+        <tei:signed rend="indent-60"><tei:handShift new="#unk"/><tei:rs key="entity-000946"
+            type="person"><tei:unclear reason="reading">Georg
+          Kalbeck</tei:unclear></tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:note type="editorial" place="inline">in left margin: printed sideways</tei:note>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>Universal Edition &amp; Co.</tei:addrLine>
+          <tei:addrLine>Maximilianstrasse No.11</tei:addrLine>
+          <tei:addrLine>TELEPHONE No. 3364</tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:note type="editorial" place="inline">printed/written upright, on printed
+          lines:</tei:note>
+        <tei:dateline rend="indent-70">
+          <tei:placeName>Vienna</tei:placeName>, <tei:date when="1904-06-07"><tei:handShift
+              new="#UEsten"/>June 7, <tei:handShift new="#printed"/>190<tei:handShift new="#UEsten"
+            />4</tei:date></tei:dateline><tei:lb/>
+        <tei:address>
+          <tei:addrLine rend="indent-10">
+            <tei:persName>Prof. Schenker, Esq.</tei:persName>
+          </tei:addrLine>
+          <tei:addrLine rend="indent-60">
+            <tei:hi rend="underline">Vienna</tei:hi>
+          </tei:addrLine>
+        </tei:address><tei:lb/><tei:lb/>
+      </tei:opener>
+
+      <tei:p rend="first">We gratefully confirm receipt of <tei:cit>
+          <tei:q>1 score <tei:rs key="entity-000329" type="person">Handel</tei:rs>, —<tei:ptr
+              corresp="#r0001-fn01" type="footnote"/></tei:q>
+        </tei:cit>
+        <tei:cit>
+          <tei:q>1 four-handed arrangement, vol.I.<tei:ptr corresp="#r0001-fn02" type="footnote"
+            /></tei:q>
+        </tei:cit>
+      </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60"><tei:supplied reason="clarity">Your</tei:supplied> most
+          devoted</tei:salute>
+        <tei:signed rend="indent-60"><tei:handShift new="#unk"/><tei:rs key="entity-000946"
+            type="person"><tei:unclear reason="reading">Georg
+          Kalbeck</tei:unclear></tei:rs></tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
