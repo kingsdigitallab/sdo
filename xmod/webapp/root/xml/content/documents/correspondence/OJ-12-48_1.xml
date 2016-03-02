@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1694" sdoID="OJ-12-48_1">OJ 12/48, [1]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="GM" scope="sole">Gustav Mahler's hand</tei:handNote>
+    </tei:handNotes>
+
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2006</tei:resp>
+      <tei:resp>Translation, 2006</tei:resp>
+      <tei:resp>XML Encoding, 2016</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2011-03-05" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-006179">MahlerG ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002750">Note</tei:rs>
+
+      <dc:title>Handwritten note from Gustav Mahler to Schenker, undated [May 23?, 1907]</dc:title>
+
+      <dcterms:created>1907-05-23T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2016-03-02</dcterms:dateSubmitted>
+      <dc:description>Mahler thanks Schenker for his good wishes.</dc:description>
+      <dc:subject>Wünsche; wishes; Dank; thanks</dc:subject>
+
+
+      <marcrel:correspondent key="entity-000556">Gustav Mahler</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:salute>Sehr geehrter Herr <tei:rs type="person" key="entity-000632"><tei:hi
+              rend="lateinschr">Doctor</tei:hi></tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Ich sage Ihnen für Ihre freundlichen Wünsche meinen herzlichsten
+          Dank.<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Presumably in response to
+          Schenker's having signed the open letter to be published in the <tei:bibl><tei:title
+              level="j">Neue Freie Presse</tei:title>, <tei:title level="j">Morgenblatt</tei:title>,
+            No. 15357, Saturday May 25, 1907, p. 10, col. 2</tei:bibl>. On May 22, Schenker noted in
+          his diary (OJ 1/6, p. 41: "Adresse an <tei:hi rend="lateinschr">Mahler</tei:hi> in
+          überlegener Laune unterfertigt; u. <tei:hi rend="lateinschr">Situation</tei:hi> nicht ohne
+            <tei:hi rend="lateinschr">Humor</tei:hi>." ("Signed open letter to Mahler in a superior
+          frame of mind; and the situation [is] not without its funny side.").</tei:note></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50">Ihr ergebenster</tei:salute>
+        <tei:signed rend="indent-50"><tei:rs key="entity-000556" type="person"><tei:hi
+              rend="lateinschr">Mahler</tei:hi></tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+      <tei:opener>
+        <tei:salute>Dear Dr. <tei:supplied reason="identity"><tei:rs type="person"
+              key="entity-000632">Schenker</tei:rs></tei:supplied>,</tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">My heartfelt thanks to you for your friendly good wishes.<tei:ptr
+          corresp="#r0001-fn01" type="footnote"/></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50">Your most devoted</tei:salute>
+        <tei:signed rend="indent-50"><tei:rs key="entity-000556" type="person"
+          >Mahler</tei:rs></tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
