@@ -264,23 +264,20 @@
                   <!-- COPY AND PASTE LINK BELOW TO DIRECT USERS TO THE 'OVERFLOW' PAGE FOR UPDATE NEWS -->
                   <!-- <a class="int" title="Link to Latest Material"
                         href="/documents/overviews/latest_material.html">More</a> -->
-                  <h4>What’s New? ‒ Oswald Jonas, Otto Erich Deutsch, Diaries ’31‒’34</h4>
+                  <h4>What’s New? ‒ Weinberger, Hertzka, Willfort; new profiles</h4>
                   <ul>
-                    <li>December 2015 brings to the website installments of two correspondences.
-                      That between Schenker and his erstwhile pupil Oswald Jonas, edited by John
-                      Rothgeb and Heribert Esser, is now complete, spanning 1918 to 1938. For more
-                      on this, see <a class="int" title="Link to Latest Material"
-                        href="/documents/overviews/latest_material.html">the following</a>.</li>
-
-                    <li>Four more years of the highly instructive correspondence between Otto Erich
-                      Deutsch and Schenker come online this month: 1922‒26, edited by David
-                      Bretherton. For more, see <a class="int" title="Link to Latest Material"
-                        href="/documents/overviews/latest_material.html">the following</a>.</li>
-
-                    <li>Three-and-a-half more years of Schenker's diaries are added to the site this
-                      month: 1931 to May 1934. For more, see <a class="int"
+                    <li>April brings correspondence illuminating Schenker's relationship with the
+                        <em>Josef Weinberger</em> company and the fledgling <em>Universal
+                        Edition</em> 1898-1908 (55 items). It also brings 13 letters from
+                        <em>Manfred Willfort</em>, Schenker Seminar member, spanning 1931 to 1935,
+                      and a letter from Schenker to <em>Valerie Violin</em> from 1917 with
+                      significant new biographical information. For more on this, see <a class="int"
                         title="Link to Latest Material"
-                        href="/documents/overviews/latest_material.html">the following</a></li>
+                        href="/documents/overviews/latest_material.html">the following</a>.</li>
+
+                    <li>Online now, too, are 11 new profiles and several significantly up-dated ones.
+                      For more, see <a class="int" title="Link to Latest Material"
+                        href="/documents/overviews/latest_material.html">the following</a>.</li>
                   </ul>
 
                   <nav class="local" id="blogPosts">
