@@ -275,7 +275,7 @@
                         title="Link to Latest Material"
                         href="/documents/overviews/latest_material.html">the following</a>.</li>
 
-                    <li>Online now, too, are 11 new profiles and several significantly up-dated ones.
+                    <li>Online now, too, are 12 new profiles and several significantly up-dated ones.
                       For more, see <a class="int" title="Link to Latest Material"
                         href="/documents/overviews/latest_material.html">the following</a>.</li>
                   </ul>
