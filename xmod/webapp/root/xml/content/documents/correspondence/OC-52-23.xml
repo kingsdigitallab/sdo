@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1704" sdoID="OC-52-23">OC 52/23</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="TPue" scope="major">Universal Edition typist</tei:handNote>
+      <tei:handNote xml:id="EH" scope="minor">Emil Hertzka's hand</tei:handNote>
+      <tei:handNote xml:id="HS" scope="minor">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="unk" scope="minor">unknown hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2004, 2016</tei:resp>
+      <tei:resp>Translation, 2004, 2016</tei:resp>
+      <tei:resp>XML Encoding, 2016</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-01" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002700">Hertzka ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002701">UE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002702">UE ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+      <dc:title>Typewritten letter from Hertzka (UE) to Schenker, dated June 30, 1908</dc:title>
+
+      <dcterms:created>1908-06-30T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2016-06-20</dcterms:dateSubmitted>
+      <dc:description>Hertzka asks Schenker to visit him to clear up a matter over
+        payment.</dc:description>
+      <dc:subject>Angelegenheit; matter; Besuch; visit; Erfahrung; experience; Auszahlung; payment;
+        Honorar; honorarium; fee; Auflage; edition</dc:subject>
+
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000356">Hertzka</marcrel:recipient>
+      <marcrel:recipient key="entity-002408">UE</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/><tei:hi rend="bold">„Universal-Edition“
+              Aktiengesellschaft</tei:hi></tei:addrLine>
+          <tei:addrLine>Wien, I., Maximilianstraße 11.</tei:addrLine>
+          <tei:addrLine>(Jos. Aibl Verlag, G. m. b. H., Leipzig.)</tei:addrLine>
+          <tei:addrLine><tei:note type="editorial" place="inline"><tei:hi rend="italic"
+                >etc.</tei:hi></tei:note></tei:addrLine>
+        </tei:address>
+        <tei:dateline><tei:handShift new="#TPue"/><tei:placeName>Wien</tei:placeName>, 30. Juni
+            190<tei:add place="inline"><tei:handShift new="#unk"/>08</tei:add></tei:dateline><tei:lb/>
+        <tei:address>
+          <tei:addrLine rend="indent-10"><tei:handShift new="#TPue"/>Wohlgeboren Professor Heinrich
+            Schenker,</tei:addrLine>
+          <tei:addrLine rend="indent-60"><tei:hi rend="underline sperr">WIEN</tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:salute>Sehr geehrter Herr <tei:rs type="person" key="entity-000632"
+            >Professor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt
+            of this letter is not recorded in Schenker's diary.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Um die zwischen uns schwebende kleine Angelegenheit zu erledigen, bitte
+        ich Sie, mir das Vergnügen Ihres Besuches zu machen, nachdem die Erfahrung auch mich nötigt,
+        Sie zu bitten, mir bei Auszahlung des bewussten Honorars etwas Schriftliches <tei:add
+          place="interlinear-above"><tei:handShift new="#EH"/>bezüglich der event. weiteren
+          Auflagen</tei:add>
+        <tei:handShift new="#TPue"/>zur Verfügung zu stellen,<tei:note xml:id="r0001-fn02"
+          type="editorial" place="foot">Allusion is to <tei:ref type="correspondence" cRef="WSLB-10"
+            >WSLB 10</tei:ref>, June 26, 1908, and Schenker's insistence on having something in
+          writing regarding the <tei:title level="m">Table of Instrumentation</tei:title>. Hertzka
+          uses identical wording. See <tei:ref type="correspondence" cRef="OC-52-421">OC
+            52/421</tei:ref> of the same date for the contract for the <tei:title level="m">Table of
+            Instrumentation</tei:title>.</tei:note></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">Mit ausgezeichneter Hochachtung</tei:salute>
+        <tei:salute rend="indent-60">Ihr ergebener</tei:salute>
+        <tei:signed rend="indent-70"><tei:handShift new="#EH"/>
+          <tei:rs key="entity-000356" type="person">Emil Hertzka</tei:rs>
+        </tei:signed><tei:lb/><tei:lb/>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p><tei:handShift new="#HS"/>2 Verträge unterfertigt <tei:supplied reason="spacer"
+            >/</tei:supplied> Schluß</tei:p>
+      </tei:postscript>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/><tei:hi rend="bold">Universal Edition &amp;
+              Co.</tei:hi></tei:addrLine>
+          <tei:addrLine>Vienna I, Maximilianstraße 11</tei:addrLine>
+          <tei:addrLine>(Jos. Aibl Publishers, &amp; Co., Leipzig)</tei:addrLine>
+          <tei:addrLine><tei:note type="editorial" place="inline"><tei:hi rend="italic"
+                >etc.</tei:hi></tei:note></tei:addrLine>
+        </tei:address>
+        <tei:dateline><tei:handShift new="#TPue"/><tei:placeName>Vienna</tei:placeName>, June 30,
+            190<tei:add place="inline"><tei:handShift new="#unk"/>08</tei:add></tei:dateline><tei:lb/>
+        <tei:address>
+          <tei:addrLine rend="indent-10"><tei:handShift new="#TPue"/>Professor Heinrich Schenker,
+            Esq.</tei:addrLine>
+          <tei:addrLine rend="indent-60"><tei:hi rend="underline sperr"
+            >VIENNA</tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:salute>Dear <tei:rs type="person" key="entity-000632">Professor</tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">So that we can settle the small matter that remains unresolved between us,
+        please give me the pleasure of a visit from you, since experience makes it necessary for me,
+        too, to ask you to provide me with something in writing <tei:add place="interlinear-above"
+            ><tei:handShift new="#EH"/>regarding possible further editions</tei:add>
+        <tei:handShift new="#TPue"/>upon payment of the honorarium in question.<tei:ptr
+          corresp="#r0001-fn02" type="footnote"/></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">With kind regards,</tei:salute>
+        <tei:salute rend="indent-60">Your devoted</tei:salute>
+        <tei:signed rend="indent-70"><tei:handShift new="#EH"/>
+          <tei:rs key="entity-000356" type="person">Emil Hertzka</tei:rs>
+        </tei:signed><tei:lb/><tei:lb/>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p><tei:handShift new="#HS"/>2 contracts signed <tei:supplied reason="spacer"
+            >/</tei:supplied> finished</tei:p>
+      </tei:postscript>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
