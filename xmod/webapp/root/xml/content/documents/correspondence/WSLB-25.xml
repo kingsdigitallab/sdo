@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1740" sdoID="WSLB-25">WSLB 25</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="unk" scope="minor">unknown hand</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamped</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2005, 2016</tei:resp>
+      <tei:resp>Translation, 2005, 2016</tei:resp>
+      <tei:resp>XML Encoding, 2016</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-01" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002700">Hertzka ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002701">UE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002702">UE ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+      <dc:title>Handwritten letter from Schenker to Hertzka (UE), dated November 9, 1908</dc:title>
+      <dcterms:created>1908-11-09T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2016-07-04</dcterms:dateSubmitted>
+      <dc:description>Schenker asks for copies of the Instrumentations-Tabelle to be sent to Violin
+        and Gärtner. — He has bought two copies of the Beitrag zur Ornamentik at the Gutmann music
+        store. </dc:description>
+      <dc:subject> </dc:subject>
+
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000356">Hertzka</marcrel:recipient>
+      <marcrel:recipient key="entity-002408">UE</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:byline><tei:handShift new="#unk"/><tei:hi rend="underline">Franz Lehár</tei:hi> +
+          <tei:hi rend="double-underline">Simon</tei:hi></tei:byline><tei:lb/><tei:lb/>
+        <tei:byline><tei:note type="editorial" place="inline">UE receipt stamp:</tei:note>
+          <tei:handShift new="#stamp"/>8906</tei:byline><tei:lb/>
+        <tei:note type="editorial" place="inline">UE: date stamp:</tei:note><tei:lb/>
+        <tei:byline>Eingegangen ......<tei:lb/>Beantwortet <tei:note type="editorial" place="inline"
+            >in pencil:</tei:note><tei:handShift new="#unk"/><tei:date when="1908-11-11">11. XI.
+            08</tei:date> P.</tei:byline><tei:lb/><tei:lb/>
+        <tei:salute rend="indent-10"><tei:handShift new="#HS"/>Sehr geehrter Herr <tei:rs
+            type="person" key="entity-000356">Direktor</tei:rs>!<tei:note xml:id="r0001-fn01"
+            type="editorial" place="foot">Writing of this letter is not recorded in Schenker's
+            diary.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Verzeihen Sie, wenn ich Ihre Güte noch in Anspruch nehmen u. ich Sie sehr darum bitte,
+        je einen „<tei:rs key="entity-001729" type="work">Niloff</tei:rs>“ an <tei:hi
+          rend="lateinschr">Prof. <tei:rs key="entity-000913" type="person">M. Violin</tei:rs>, XIV,
+          Sechshauserstr. 126</tei:hi>, u. <tei:hi rend="lateinschr">Prof. <tei:rs
+            key="entity-000274" type="person">Ed. Gärtner</tei:rs>, III.
+          Metternichgasse</tei:hi><tei:note xml:id="r0001-fn02" type="editorial" place="foot">"M
+          Violin ... Metternichgasse": underlined in crayon.</tei:note> 7, schicken zu
+        lassen.</tei:p>
+
+      <tei:p>Daß ich nicht ganz ohne Scham bin, möge Ihnen die Tatsache beweisen, daß ich die
+          „<tei:rs type="work" key="entity-001721"><tei:title>Ornamentik</tei:title></tei:rs>“
+        kürzlich 2.mal selbst bei <tei:rs key="entity-002456" type="organization">Gutmann</tei:rs>
+        gekauft habe, um dem <tei:rs key="entity-002408" type="organization">Verlag</tei:rs> nicht
+        zur Last zu fallen, dem ich schon mit so vielen Exempl. belastet habe.</tei:p>
+
+      <tei:p rend="first">Also nur noch dieses Mal.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-30">Mit ausgez Hochachtung</tei:salute>
+        <tei:salute rend="indent-50">I<tei:supplied reason="omission">h</tei:supplied>r
+          ergeb</tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:rs key="entity-000632" type="person"><tei:hi rend="lateinschr">H
+            Schenker</tei:hi></tei:rs>
+        </tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1908-11-09">9. 11. 08</tei:date>.</tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:byline><tei:handShift new="#unk"/><tei:hi rend="underline">Franz Lehár</tei:hi> +
+          <tei:hi rend="double-underline">Simon</tei:hi></tei:byline><tei:lb/><tei:lb/>
+        <tei:byline><tei:note type="editorial" place="inline">UE receipt stamp:</tei:note>
+          <tei:handShift new="#stamp"/>8906</tei:byline><tei:lb/>
+        <tei:note type="editorial" place="inline">UE: date stamp:</tei:note><tei:lb/>
+        <tei:byline>Received ......<tei:lb/>Answered <tei:note type="editorial" place="inline">in
+            pencil:</tei:note><tei:handShift new="#unk"/><tei:date when="1908-11-11">11. XI.
+            08</tei:date> P.</tei:byline><tei:lb/><tei:lb/>
+        <tei:salute rend="indent-10"><tei:handShift new="#HS"/>Dear <tei:rs type="person"
+            key="entity-000356">Director</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"
+          /></tei:salute>
+      </tei:opener>
+
+      <tei:p>Forgive me if I trespass on your kindness yet again and ask you please to have one copy
+        of "<tei:rs key="entity-001729" type="work">Niloff</tei:rs>" each sent to Prof. <tei:rs
+          key="entity-000913" type="person">Moriz Violin</tei:rs>, <tei:supplied reason="location"
+          >Vienna</tei:supplied> XIV, Sechshauserstraße 126, and Prof. <tei:rs key="entity-000274"
+          type="person">Eduard Gärtner</tei:rs>, <tei:supplied reason="location"
+          >Vienna</tei:supplied> III, Metternichgasse 7.<tei:ptr corresp="#r0001-fn02"
+          type="footnote"/></tei:p>
+
+      <tei:p>You can tell that I am not wholly without shame from the fact that I recently twice
+        bought <tei:rs type="work" key="entity-001721"><tei:title level="m"
+            >Ornamentation</tei:title></tei:rs> from <tei:rs key="entity-002456" type="organization"
+          >Gutmann</tei:rs> myself so as not to be a burden to the <tei:rs key="entity-002408"
+          type="organization">Press</tei:rs>, when I have already burdened it with so many
+        copies.</tei:p>
+
+      <tei:p rend="first">So just this one more time.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-30">With kind regards</tei:salute>
+        <tei:salute rend="indent-50">Your devoted</tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:rs key="entity-000632" type="person">H. Schenker</tei:rs>
+        </tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1908-11-09">November 9, 1908</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
