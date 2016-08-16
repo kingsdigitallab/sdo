@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="1761" sdoID="OJ-12-9_15">OJ 12/9, [15]</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="LK" scope="major">Ludwig Karpath's hand</tei:handNote>
+   <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+   <tei:handNote xml:id="unk" scope="minor">unknown hand</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="ME">
+   <tei:persName>Martin Eybl</tei:persName>
+   <tei:resp>Transcription, 2013</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>Translation, 2016</tei:resp>
+   <tei:resp>XML Encoding, 2016</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2010-03-18" who="#IB">revision of XML code</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-002733">Karpath ~
+    HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+   <dc:title>Handwritten postcard from Karpath to Schenker, postmarked February 1, 1916</dc:title>
+
+   <dcterms:created>1916-02-01T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2016-08-16</dcterms:dateSubmitted>
+   <dc:description>After attendance at the court [regarding Mittelmann], Karpath asks Schenker to be
+    in touch with him.</dc:description>
+   <dc:subject>Gericht; court; anrufen; to telephone</dc:subject>
+
+
+   <marcrel:correspondent key="entity-000424">Karpath</marcrel:correspondent>
+   <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+  </sdo:itemDesc>
+
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/><tei:lb/>
+    <tei:fw type="envelope">
+     <tei:note type="editorial" place="inline">all in a decorated rule-frame</tei:note><tei:lb/>
+     <tei:address>
+      <tei:addrLine><tei:handShift new="#LK"/>Herrn D<tei:hi rend="supralinear">r.</tei:hi> Heinrich
+       Schenker</tei:addrLine>
+      <tei:addrLine>III. Reisnerstr. 38</tei:addrLine>
+     </tei:address><tei:lb/>
+     <tei:fw type="postmark">WIEN I/I | <tei:unclear reason="reading">1.2.16</tei:unclear> V 11 15 |
+      * 15 * ||</tei:fw>
+    </tei:fw><tei:lb/>
+    <tei:dateline> Dienstag ½ 11<tei:note xml:id="r0001-fn01" type="editorial" place="foot">February
+      1, 1916 was a Tuesday.</tei:note></tei:dateline>
+    <tei:address>
+     <tei:addrLine><tei:note type="editorial" place="inline">left side of recto overwritten by:
+       </tei:note><tei:handShift new="#unk"/>49</tei:addrLine>
+    </tei:address>
+    <tei:salute><tei:handShift new="#LK"/>L. <tei:rs key="entity-000632" type="person"
+      >Fr.</tei:rs><tei:note xml:id="r0001-fn02" type="editorial" place="foot">Receipt of this
+      postcard is not recorded in Schenker's diary, which does however record at OJ 2/1, p. 123,
+      February 2, 1916: "Nach Tisch zu Karpath, ihn leider nicht angetroffen. Welche
+      Rücksichtslosigkeit!!" ("After lunch to Karpath, unfortunately did not find him at home. How
+      inconsiderate of him!!").</tei:note></tei:salute>
+   </tei:opener>
+   <tei:lb/>
+
+   <tei:p>Ich komme <tei:unclear reason="reading">soeben</tei:unclear> vom Gericht, <tei:supplied
+     reason="overwritten">mö</tei:supplied>chte Sie sprechen. Da Sie leider telephonisch nicht zu
+    erreichen sind, so bitte ich Sie, vielleicht mich anzurufen oder mich zu besu- <tei:milestone
+     unit="folio" n="verso"/> chen. Ich bin ab 1 Uhr zuhause.</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indentl-80">Herzl.</tei:salute>
+    <tei:signed rend="indent-60"><tei:rs key="entity-000424" type="person"
+     >Karpath</tei:rs></tei:signed>
+   </tei:closer>
+
+  </tei:div>
+
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/><tei:lb/>
+    <tei:fw type="envelope">
+     <tei:note type="editorial" place="inline">all in a decorated rule-frame</tei:note><tei:lb/>
+     <tei:address>
+      <tei:addrLine><tei:handShift new="#LK"/>Dr. Heinrich Schenker</tei:addrLine>
+      <tei:addrLine><tei:supplied reason="location">Vienna</tei:supplied> III, Reisnerstraße
+       38</tei:addrLine>
+     </tei:address><tei:lb/>
+     <tei:fw type="postmark">VIENNA I/I | <tei:unclear reason="reading">1.2.16</tei:unclear> V 11 15
+      | * 15 * ||</tei:fw>
+    </tei:fw><tei:lb/>
+    <tei:dateline> Tuesday ½ 11<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:dateline>
+    <tei:address>
+     <tei:addrLine><tei:note type="editorial" place="inline">left side of recto overwritten by:
+       </tei:note><tei:handShift new="#unk"/>49</tei:addrLine>
+    </tei:address>
+    <tei:salute><tei:handShift new="#LK"/>Dear <tei:rs key="entity-000632" type="person"
+      >Fr.</tei:rs><tei:ptr corresp="#r0001-fn02" type="footnote"/></tei:salute>
+   </tei:opener>
+   <tei:lb/>
+
+   <tei:p>I have just come from the court, and should like to speak with you. Since unfortunately
+    you cannot be reached by telephone, please either call me or come and see me. <tei:milestone
+     unit="folio" n="verso"/> I will be home from 1 p.m.</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indentl-80">Cordially</tei:salute>
+    <tei:signed rend="indent-60"><tei:rs key="entity-000424" type="person"
+     >Karpath</tei:rs></tei:signed>
+   </tei:closer>
+
+  </tei:div>
+ </sdo:record>
+</sdo:recordCollection>
