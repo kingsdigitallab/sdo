@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1823" sdoID="OC-52-36">OC 52/36</sdo:correspondence>
+    </sdo:source>
+    <tei:handNotes>
+      <tei:handNote xml:id="TPue" scope="major">Universal Edition's typist</tei:handNote>
+      <tei:handNote xml:id="EH" scope="minor">Emil Hertzka's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2005, 2016</tei:resp>
+      <tei:resp>Translation, 2005, 2016</tei:resp>
+      <tei:resp>XML Encoding, 2016</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-02-07" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002702">UE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002701">UE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002700">Hertzka ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+      <dc:title>Typewritten letter from Hertzka (UE) to Schenker, dated March 29, 1909</dc:title>
+
+      <dcterms:created>1909-03-29T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2016-08-26</dcterms:dateSubmitted>
+      <dc:description>Hertzka welcomes the prospect of a discussion at the home of Robert
+        Brüunauer.</dc:description>
+      <dc:subject>Abend; evening; besprechen; to discuss</dc:subject>
+
+      <marcrel:correspondent key="entity-002408">Universal Edition</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000356">Emil Hertzka</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>„Universal-Edition“ A.-G.</tei:addrLine>
+          <tei:addrLine>(Jos. Aibl Verlag, G.m.b.H.)</tei:addrLine>
+          <tei:addrLine>Leipzig <tei:supplied reason="spacer">/</tei:supplied> Sternwartestrasse
+            1520.</tei:addrLine>
+          <tei:addrLine>Wien <tei:supplied reason="spacer">/</tei:supplied> I., Wipplingerstrasse
+            32.</tei:addrLine>
+          <tei:addrLine><tei:note type="editorial" place="inline"><tei:hi rend="italic"
+                >etc.</tei:hi></tei:note></tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-60">
+          <tei:placeName>Wien</tei:placeName>, <tei:handShift new="#TPue"/><tei:date
+            when="1909-03-29">29. März 1909</tei:date></tei:dateline><tei:lb/>
+        <tei:address>
+          <tei:addrLine rend="ident-20">Wohlgeboren Herrn Professor Dr. <tei:persName>Heinrich
+              Schenker</tei:persName></tei:addrLine>
+          <tei:addrLine rend="indent-60">
+            <tei:hi rend="sperr">Wien</tei:hi>.</tei:addrLine>
+        </tei:address>
+        <tei:salute>Verehrter Herr <tei:rs key="entity-000632" type="person"
+            >Professor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt
+            of this letter is not recorded in Schenker's diary. Note Hertzka's use here of the more
+            respectful mode of address "verehrter" (revered, or honored). Hertzka has used this on
+            only two previous occasions: November 7, 1908 (<tei:ref type="correspondence"
+              cRef="OC-52-444">OC 52/444</tei:ref>) and December 18, 1908 (<tei:ref
+              type="correspondence" cRef="OC-52-399-401">OC 52/399‒401</tei:ref>). The mode of
+            address in Hertzka's letters (and those of other members of UE's staff) fluctuates
+            according to the relations between the two parties.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Mit bestem Dank bestätige ich Ihre geschätzten Zeilen vom <tei:date
+          when="1909-03-28">28. d.</tei:date><tei:note xml:id="r0001-fn02" type="editorial"
+          place="foot">i.e. <tei:ref type="correspondence" cRef="WSLB-37">WSLB 37</tei:ref>, March
+          28, 1909.</tei:note> und wird es mir ein grosses Vergnügen sein, wenn wir einen Abend bei
+        Dr. <tei:rs key="entity-000107" type="person">Brünauer</tei:rs> zusammenfinden und <tei:add
+          place="inline"><tei:handShift new="#EH"/> mit Ihnen</tei:add>
+        <tei:handShift new="#TPue"/>in Ruhe gewisse schwebende Dinge besprechen können.</tei:p>
+
+      <tei:p rend="first">Ich erwarte nun Ihre <tei:add place="interlinear-above"><tei:handShift
+            new="#EH"/> und Dr. <tei:rs key="entity-000107" type="person">B</tei:rs>’s</tei:add>
+        <tei:handShift new="#TPue"/>weitere<tei:del rend="overstrike">s</tei:del> Nachrichten und
+        zeichne </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">hochachtungsvoll</tei:salute>
+        <tei:signed rend="indent-60"><tei:handShift new="#stamp"/><tei:rs key="entity-002408"
+            type="organization">Universal-Edition Actiengesellschaft</tei:rs>.</tei:signed>
+        <tei:signed rend="indent-80"><tei:handShift new="#EH"/><tei:rs key="entity-000356"
+            type="person">Emil Hertzka</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>Universal Edition &amp; Co.</tei:addrLine>
+          <tei:addrLine>(Jos. Aibl Publisher &amp; Co.)</tei:addrLine>
+          <tei:addrLine>Leipzig <tei:supplied reason="spacer">/</tei:supplied> Sternwartestrasse
+            1520</tei:addrLine>
+          <tei:addrLine>Vienna <tei:supplied reason="spacer">/</tei:supplied> I, Wipplingerstrasse
+            32</tei:addrLine>
+          <tei:addrLine><tei:note type="editorial" place="inline"><tei:hi rend="italic"
+                >etc.</tei:hi></tei:note></tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-60">
+          <tei:placeName>Vienna</tei:placeName>, <tei:handShift new="#TPue"/><tei:date
+            when="1909-03-29">March 29, 1909</tei:date></tei:dateline><tei:lb/>
+        <tei:address>
+          <tei:addrLine rend="ident-20">Professor <tei:persName>Heinrich Schenker</tei:persName>,
+            Esq.</tei:addrLine>
+          <tei:addrLine rend="indent-60">
+            <tei:hi rend="sperr">Vienna</tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:salute>Revered <tei:rs key="entity-000632" type="person">Professor</tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">I confirm with grateful thanks your esteemed letter of the <tei:date
+          when="1909-03-28">28th</tei:date><tei:ptr corresp="#r0001-fn02" type="footnote"/> I will
+        be absolutely delighted if we can find a mutually convenient evening at Dr. <tei:rs
+          key="entity-000107" type="person">Brünauer</tei:rs>'s, and <tei:supplied reason="clarity"
+          >if I</tei:supplied> can discuss certain undecided matters <tei:add place="inline"
+            ><tei:handShift new="#EH"/> with you</tei:add>
+        <tei:handShift new="#TPue"/>in an atmosphere of calm.</tei:p>
+
+      <tei:p rend="first">I await further word from you <tei:add place="interlinear-above"
+            ><tei:handShift new="#EH"/> and Dr. <tei:rs key="entity-000107" type="person"
+            >Brünauer</tei:rs></tei:add>, <tei:handShift new="#TPue"/>and remain,</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Kind regards,</tei:salute>
+        <tei:signed rend="indent-60"><tei:handShift new="#stamp"/><tei:rs key="entity-002408"
+            type="organization">Universal Edition &amp; Co.</tei:rs>.</tei:signed>
+        <tei:signed rend="indent-80"><tei:handShift new="#EH"/><tei:rs key="entity-000356"
+            type="person">Emil Hertzka</tei:rs></tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
