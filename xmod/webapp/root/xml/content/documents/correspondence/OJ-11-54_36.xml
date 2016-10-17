@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="1844" sdoID="OJ-11-54_36">OJ 11/54, [36]</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="AvH" scope="major">Anthony van Hoboken's hand</tei:handNote>
+   <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+   <tei:handNote xml:id="stamp" scope="minor">stamped</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="JR-HE">
+   <tei:persName>John Rothgeb &amp; Heribert Esser</tei:persName>
+   <tei:resp>Transcription, 2016</tei:resp>
+   <tei:resp>Translation, 2016</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>XML Encoding, 2016</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2011-03-01" who="#IB">revision of XML code</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-002730">Hoboken ~
+    HSchenker</tei:rs>
+   <tei:rs role="correspondence" type="correspondence" key="entity-002731">Hoboken ~
+    H+JSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+
+   <dc:title>Handwritten postcard from Hoboken to Schenker, dated November 26, 1931</dc:title>
+
+   <dcterms:created>1931-11-26T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2016-11-17</dcterms:dateSubmitted>
+   <dc:description>Hoboken's next lesson will be December 2: Chopin mazurkas.</dc:description>
+   <dc:subject>Stunde; lesson; Mazurka</dc:subject>
+
+
+
+   <marcrel:correspondent key="entity-000380">Hoboken</marcrel:correspondent>
+   <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+   <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+  </sdo:itemDesc>
+
+
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+        >Postkarte</tei:hi></tei:fw>
+      <tei:lb/>
+
+      <tei:addrLine><tei:supplied reason="clarity">An: </tei:supplied><tei:handShift new="#AvH"
+       />Herrn D<tei:hi rend="supralinear">r.</tei:hi> Heinrich Schenker</tei:addrLine>
+      <tei:addrLine rend="indent-10">Wien III</tei:addrLine>
+      <tei:addrLine>Keilgasse 8, Tür 12</tei:addrLine>
+     </tei:address><tei:lb/>
+     <tei:fw type="postmark">|| BERLIN <tei:gap reason="illegible" unit="chars" extent="6"/> |
+      26.11.31 | <tei:gap reason="illegible" unit="chars" extent="3"/> ||</tei:fw><tei:lb/><tei:lb/>
+     <tei:fw type="stamp"><tei:note type="editorial" place="inline">stamp: </tei:note><tei:handShift
+       new="#stamp"/>Vergiß nicht Strasse <tei:supplied reason="separator">|</tei:supplied> und
+      Hausnummber <tei:supplied reason="separator">|</tei:supplied> anzugeben.</tei:fw><tei:lb/><tei:lb/>
+     <tei:milestone unit="folio" n="verso"/><tei:lb/>
+     <tei:date when="1931-09-26" rend="ident-70"><tei:handShift new="#AvH"/>26.<tei:choice>
+       <tei:sic>IX</tei:sic>
+       <tei:corr>XI</tei:corr>
+      </tei:choice>.'31</tei:date>
+    </tei:fw>
+    <tei:salute><tei:handShift new="#AvH"/>Verehrter und lieber Herr <tei:rs type="person"
+      key="entity-000632">D<tei:hi rend="supralinear">r.</tei:hi></tei:rs>!<tei:note
+      xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this postcard is recorded in
+      Schenker's diary at OJ 4/5, p. 3681, November 27, 1931: "Von v. Hoboken (K., as Berlin): wird
+      erst Mittwoch kommen." ("From Hoboken (postcard from Berlin): he will not come until
+      Wednesday." — This confirms the postmarked date, and shows that Hoboken wrote "IX" intending
+      to write "XI" in the dateline.</tei:note></tei:salute>
+   </tei:opener>
+
+
+   <tei:p rend="first">Ich habe mich nun doch dafür entschieden, erst am <tei:date when="1931-12-01"
+     >Dienstag</tei:date>-abend wieder zurückzufahren. Ich werde mir daher erlauben, am <tei:date
+     when="1931-12-02">Mittwoch</tei:date> in die Stunde zu kommen und bringe dann die Mazurken
+     mit<tei:supplied reason="punctuation">.</tei:supplied><tei:note xml:id="r0001-fn02"
+     type="editorial" place="foot">Hoboken returned in time to attend his lesson on Wednesday
+     December 2. The lesson notes for that day (OC 16/30) begin: "Handschrift Chop Maz. c<tei:hi
+      rend="supralinear">d</tei:hi> zuende <tei:supplied reason="ditto">Maz.</tei:supplied>
+      As<tei:hi rend="supralinear">d</tei:hi> neu begonnen." ("Manuscript of Chopin
+      <tei:title>Mazurka in C major [Op. 24 No. 2]</tei:title> finished; <tei:title>Mazurka in
+       A<tei:g type="flat"/> major [Op. 24, No. 3]</tei:title> newly begun.").</tei:note></tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-10">Mit den besten Grüssen bin ich</tei:salute>
+    <tei:salute rend="indent-50">Ihr ergebener</tei:salute>
+    <tei:signed rend="indent-70"><tei:rs key="entity-000380" type="person"
+     >AvHoboken</tei:rs></tei:signed>
+   </tei:closer>
+
+  </tei:div>
+
+
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+        >Postcard</tei:hi></tei:fw>
+      <tei:lb/>
+
+      <tei:addrLine><tei:supplied reason="clarity">To: </tei:supplied><tei:handShift new="#AvH"/>Dr.
+       Heinrich Schenker</tei:addrLine>
+      <tei:addrLine rend="indent-10">Vienna III</tei:addrLine>
+      <tei:addrLine>Keilgasse 8, Door 12</tei:addrLine>
+     </tei:address><tei:lb/>
+     <tei:fw type="postmark">|| BERLIN <tei:gap reason="illegible" unit="chars" extent="6"/> |
+      26.11.31 | <tei:gap reason="illegible" unit="chars" extent="3"/> ||</tei:fw><tei:lb/><tei:lb/>
+     <tei:fw type="stamp"><tei:note type="editorial" place="inline">stamp: </tei:note><tei:handShift
+       new="#stamp"/>Do not forget <tei:supplied reason="separator">|</tei:supplied> to give street
+       <tei:supplied reason="separator">|</tei:supplied> and house number.</tei:fw><tei:lb/><tei:lb/>
+     <tei:milestone unit="folio" n="verso"/><tei:lb/>
+     <tei:date when="1931-09-26" rend="ident-70"><tei:handShift new="#AvH"/><tei:choice>
+       <tei:sic>September</tei:sic>
+       <tei:corr>November</tei:corr>
+      </tei:choice> 26, 1931</tei:date>
+    </tei:fw>
+    <tei:salute><tei:handShift new="#AvH"/>Dear and revered Dr. <tei:supplied reason="identity"
+       ><tei:rs type="person" key="entity-000632">Schenker</tei:rs></tei:supplied>,<tei:ptr
+      corresp="#r0001-fn01" type="footnote"/></tei:salute>
+   </tei:opener>
+
+
+   <tei:p rend="first">I have now decided instead not to return until <tei:date when="1931-12-01"
+     >Tuesday</tei:date> evening. I will therefore take the liberty of coming to the lesson on
+     <tei:date when="1931-12-02">Wednesday</tei:date>, and will then bring the Mazurkas.<tei:ptr
+     corresp="#r0001-fn02" type="footnote"/></tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-10">With best greetings, I am</tei:salute>
+    <tei:salute rend="indent-50">Your devoted</tei:salute>
+    <tei:signed rend="indent-70"><tei:rs key="entity-000380" type="person">A v
+     Hoboken</tei:rs></tei:signed>
+   </tei:closer>
+
+  </tei:div>
+ </sdo:record>
+</sdo:recordCollection>
