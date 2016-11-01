@@ -1740,6 +1740,9 @@
    <xsl:if test="starts-with(ancestor::tei:div/@type, 'trans')">
     <xsl:attribute name="class">tableInSource</xsl:attribute>
    </xsl:if>
+   <xsl:if test="starts-with(ancestor::tei:TEI/@xml:id, 'entity')">
+    <xsl:attribute name="class">tableInProfile</xsl:attribute>
+   </xsl:if>
    <xsl:apply-templates/>
   </table>
  </xsl:template>
