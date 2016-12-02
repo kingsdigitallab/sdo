@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="1864" sdoID="OJ-9-18_1">OJ 9/18, [1]</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="TPamdk" scope="major">Typist of Akademie für Musik</tei:handNote>
+   <tei:handNote xml:id="WB" scope="minor">Wilhelm Bopp's hand</tei:handNote>
+   <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>Transcription, 2016</tei:resp>
+   <tei:resp>Translation, 2016</tei:resp>
+   <tei:resp>XML Encoding, 2016</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2011-03-11" who="#IB">revision of XML code</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+
+   <tei:rs role="correspondence" type="correspondence" key="entity-006195">AMdK ~ HSchenker</tei:rs>
+   <tei:rs role="correspondence" type="correspondence" key="entity-006214">BoppW ~
+    HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+   <dc:title>Typewritten letter from Wilhelm Bopp (Akademie für Musik) to Schenker, dated October
+    13, 1910</dc:title>
+
+   <dcterms:created>1910-10-13T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2016-12-02</dcterms:dateSubmitted>
+   <dc:description>Bopp is pleased that matters have been settled, and hopes to make Schenker's
+    acquaintance.</dc:description>
+   <dc:subject>Missverständnisse; misunderstandings; Dokumente; documents; Vergangenheit; past;
+    nachschöpferisch; creative-interpretive; Publikation; publication; Aufsatz; essay</dc:subject>
+
+
+
+   <marcrel:correspondent key="entity-000089">Wilhelm Bopp</marcrel:correspondent>
+   <marcrel:correspondent key="entity-002591">Akademie für Musik und darstellende
+    Kunst</marcrel:correspondent>
+   <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+  </sdo:itemDesc>
+
+
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:note type="editorial" place="inline">printed letterhead:</tei:note>
+    <tei:address>
+     <tei:addrLine><tei:handShift new="#printed"/>DER DIREKTOR</tei:addrLine>
+     <tei:addrLine>DER</tei:addrLine>
+     <tei:addrLine>K. K. AKADEMIE FÜR MUSIK</tei:addrLine>
+     <tei:addrLine>UND DARSTELLENDE KUNST.</tei:addrLine>
+    </tei:address><tei:lb/>
+    <tei:dateline rend="indent-50"><tei:handShift new="#TPamdk"
+     /><tei:placeName>Wien</tei:placeName>, <tei:date when="1910-10-13">13. Oktober
+     1910</tei:date>.</tei:dateline><tei:lb/>
+    <tei:salute rend="indent-10">SEHR GEEHRTER <tei:rs key="entity-000632" type="person"
+      >HERR</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this
+      letter is not recorded in Schenker's diary. The "communications" to which it responds are not
+      known to survive.</tei:note></tei:salute>
+   </tei:opener>
+
+   <tei:p rend="first">Ich habe mit grossem Vergnügen Ihre werten Mitteilungen empfangen und freue
+    mich, dass die Möglichkeit weiterer Missverständnisse nunmehr beiseitigt erscheint.<tei:note
+     xml:id="r0001-fn02" type="editorial" place="foot">"Missverständnisse" ("misunderstandings"):
+     this perhaps relates to the plans for a "historical concert" that Wilhelm Bopp in October 1909
+     invited Schenker to devise. For this Schenker arranged two concertos by C. P. E. Bach, two
+     cantatas by J. S. Bach and a concerto by Handel, and Moriz Violin wrote an extended program
+     booklet, only for the concert to be replaced "after forty rehearsals" (as Schenker says) by a
+     performance of Beethoven's Ninth Symphony, to Schenker's fury (diary, OJ 1/9, p. 118, June
+     1910). For a subsequent presentation of this program under the title "chamber music concert"
+     see <tei:ref type="correspondence" cRef="OJ-9-18_2">OJ 9/18, [2]</tei:ref>, January 14,
+     1911.</tei:note> An Ihrer Arbeit nehme ich das grösste und wärmste Interesse. Ich bin stolz,
+    dass es uns vergönnt ist, die interessanten Dokumente einer grossen Vergangenheit, die durch
+    Ihre nachschöpferische<tei:note xml:id="r0001-fn03" type="editorial" place="foot">Bopp implies
+     that Schenker's role is not the "creative" (<tei:hi rend="italic">schöpferisch</tei:hi>) one of
+     the composer, but rather the reproductive (<tei:hi rend="italic">nachschöperisch</tei:hi> ‒
+     literally "post-creative") one of the arranger or editor. This sentence has clearly been
+     crafted with some deliberation.</tei:note> Einflussnahme neue Lebensmöglichkeiten gewonnen
+    haben, unsern Kreisen vorzuführen.</tei:p>
+
+   <tei:p rend="first">Ich würde mich freuen, Sie bei einer nächsten Gelegenheit persönlich kennen
+    zu lernen. Wegen der Publikation des <tei:rs key="entity-000913" type="person"
+    >Violin</tei:rs>'schen Aufsatzes<tei:note xml:id="r0001-fn04" type="editorial" place="foot"
+       ><tei:bibl><tei:author>Moriz Violin</tei:author>, <tei:title level="m">Über das sogenannte
+       Continuo: Ein Beitrag zur Lösung des Problems</tei:title> (Vienna: Universal Edition,
+      [1911])</tei:bibl>, which was originally written as a program booklet for the canceled
+     "historical concert," and which Schenker had evidently raised in his letter to Bopp.</tei:note>
+    werde ich mit <tei:pb n="2"/> dem Verfasser selbst das Mögliche und Notwendige
+    besprechen.</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-20">In besonderer Wertschätzung</tei:salute>
+    <tei:salute rend="indent-50">Ihr</tei:salute>
+    <tei:signed rend="indent-20"><tei:handShift new="#WB"/><tei:rs key="entity-000089" type="person"
+      >Wilhelm Bopp</tei:rs></tei:signed>
+   </tei:closer>
+
+  </tei:div>
+
+
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:note type="editorial" place="inline">printed letterhead:</tei:note>
+    <tei:address>
+     <tei:addrLine><tei:handShift new="#printed"/>THE DIRECTOR</tei:addrLine>
+     <tei:addrLine>OF THE</tei:addrLine>
+     <tei:addrLine>IMP.-ROYAL ACADEMY FOR MUSIC</tei:addrLine>
+     <tei:addrLine>AND PERFORMING ART</tei:addrLine>
+    </tei:address><tei:lb/>
+    <tei:dateline rend="indent-50"><tei:handShift new="#TPamdk"
+      /><tei:placeName>Vienna</tei:placeName>, <tei:date when="1910-10-13">October 13,
+      1910</tei:date></tei:dateline><tei:lb/>
+    <tei:salute rend="indent-10">DEAR <tei:rs key="entity-000632" type="person"
+      >SIR</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+   </tei:opener>
+
+   <tei:p rend="first">It is with great pleasure that I have received your valued communications,
+    and am delighted that the possibility of further misunderstandings appears now to have been
+     averted.<tei:ptr corresp="#r0001-fn02" type="footnote"/> I take the keenest and warmest
+    interest in your work. I am proud that we have been granted the opportunity to present to our
+    circles the interesting documents of a great past era that have been given a lease of life
+    through your creative-interpretive<tei:ptr corresp="#r0001-fn03" type="footnote"/>
+    powers.</tei:p>
+
+   <tei:p rend="first">I should be pleased to make your acquaintance personally at an occasion in
+    the near future. As regards the publication of <tei:rs key="entity-000913" type="person"
+     >Violin</tei:rs>'s essay<tei:ptr corresp="#r0001-fn04" type="footnote"/> I will dscuss what is
+    possible and what is necessary with <tei:pb n="2"/> the author directly.</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-20">With particular regards,</tei:salute>
+    <tei:salute rend="indent-50">Your</tei:salute>
+    <tei:signed rend="indent-20"><tei:handShift new="#WB"/><tei:rs key="entity-000089" type="person"
+      >Wilhelm Bopp</tei:rs></tei:signed>
+   </tei:closer>
+
+
+  </tei:div>
+ </sdo:record>
+</sdo:recordCollection>
