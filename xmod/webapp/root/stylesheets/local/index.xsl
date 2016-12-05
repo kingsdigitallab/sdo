@@ -270,7 +270,7 @@
                     <li>December brings a magnificent haul of new diary materials, including the
                       last eight months of Schenker's life, and material from 1912‒14 ‒ entries
                       concerning the Ninth Symphony monograph and beginning of the
-                      Erlaäuterungsausgabe and other matters. For more on this, see <a class="int"
+                      Erläuterungsausgabe and other matters. For more on this, see <a class="int"
                         title="Link to Latest Material"
                         href="/documents/overviews/latest_material.html">the following</a>.</li>
 
