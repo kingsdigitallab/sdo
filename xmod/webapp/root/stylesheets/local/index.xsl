@@ -264,19 +264,20 @@
                   <!-- COPY AND PASTE LINK BELOW TO DIRECT USERS TO THE 'OVERFLOW' PAGE FOR UPDATE NEWS -->
                   <!-- <a class="int" title="Link to Latest Material"
                         href="/documents/overviews/latest_material.html">More</a> -->
-                  <h4>What’s New? ‒ Weinberger, Hertzka, Willfort; new profiles</h4>
+                  <h4>What’s New? ‒ Diaries; Akademie, Hammer, Hoboken, Karpath, Universal
+                    Edition</h4>
                   <ul>
-                    <li>April brings correspondence illuminating Schenker's relationship with the
-                        <em>Josef Weinberger</em> company and the fledgling <em>Universal
-                        Edition</em> 1898-1908 (55 items). It also brings 13 letters from
-                        <em>Manfred Willfort</em>, Schenker Seminar member, spanning 1931 to 1935,
-                      and a letter from Schenker to <em>Valerie Violin</em> from 1917 with
-                      significant new biographical information. For more on this, see <a class="int"
+                    <li>December brings a magnificent haul of new diary materials, including the
+                      last eight months of Schenker's life, and material from 1912‒14 ‒ entries
+                      concerning the Ninth Symphony monograph and beginning of the
+                      Erlaäuterungsausgabe and other matters. For more on this, see <a class="int"
                         title="Link to Latest Material"
                         href="/documents/overviews/latest_material.html">the following</a>.</li>
 
-                    <li>Online now, too, are 12 new profiles and several significantly up-dated ones.
-                      For more, see <a class="int" title="Link to Latest Material"
+                    <li>New correspondence includes all of that with Universal Edition for 1909.
+                      It also includes correspondences with the Vienna Music Academy, Ludwig
+                      Karpath, a new installment of Hoboken, and the first letters from Victor
+                      Hammer. For more, see <a class="int" title="Link to Latest Material"
                         href="/documents/overviews/latest_material.html">the following</a>.</li>
                   </ul>
 
