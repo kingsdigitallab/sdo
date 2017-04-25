@@ -39,7 +39,7 @@ class ContainerAdmin(admin.ModelAdmin):
     list_display = ('__unicode__','get_collection_full_name', 'box','folder','series','description','content_type')
     list_filter = ('content_type','collection')
     inlines = [ContainerStatementInline]
-    search_fields = ['collection__name','collection__identification','box','folder','series','description']
+    search_fields = ['collection__name','collection__identifier','box','folder','series','description']
     fieldsets = [
         (None,               {'fields': ['collection','content_type']}),
         ('Container Identifiers', {'fields': ['series','box','folder']}),
