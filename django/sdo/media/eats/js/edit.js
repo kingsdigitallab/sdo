@@ -81,6 +81,7 @@ function set_entity_selector_fields () {
 function select_entity (entity_id, entity_name) {
   /* Set the selected entity_id and entity_name on the form in the
    * opening window. window is the popup window. */
+  set_entity_selector_fields();
   var id_field_id = window.document.getElementById('id_entity_id_widget_id').value;
   var name_field_id = window.document.getElementById('id_entity_name_widget_id').value;
   var id_field = opener.document.getElementById(id_field_id);
