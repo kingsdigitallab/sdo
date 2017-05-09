@@ -4,6 +4,7 @@ $(document).ready(function() {
 
   if ($("#id_authority_record_id_widget_id").val() == "")
   {
+    alert("test")
     $("#id_entity_id_widget_id").val(window.id_field);
     $("#id_entity_name_widget_id").val(window.name_field);
   }
