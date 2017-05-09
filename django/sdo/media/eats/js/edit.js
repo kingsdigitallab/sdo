@@ -2,9 +2,8 @@ $(document).ready(function() {
 	$("#id_authority_record_id_widget_id").val(window.id_field);
 	$("#id_authority_record_name_widget_id").val(window.name_field);
 
-  if ($("#id_authority_record_id_widget_id").val() == "")
+  if (window.id_field)
   {
-    alert("test")
     $("#id_entity_id_widget_id").val(window.id_field);
     $("#id_entity_name_widget_id").val(window.name_field);
   }
