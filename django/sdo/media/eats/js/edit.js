@@ -1,8 +1,8 @@
 $(document).ready(function() {
 	$("#id_authority_record_id_widget_id").val(window.id_field);
 	$("#id_authority_record_name_widget_id").val(window.name_field);
-	$("#id_entity_id_widget_id").val(window.id_field);
-	$("#id_entity_name_widget_id").val(window.name_field);
+	//$("#id_entity_id_widget_id").val(window.id_field);
+	//$("#id_entity_name_widget_id").val(window.name_field);
   set_entity_selector_fields();
   });
 
@@ -38,6 +38,8 @@ function set_authority_record_selector_fields () {
   if (window.id_field) {
     var id_field = window.document.getElementById('id_authority_record_id_widget_id');
     var name_field = window.document.getElementById('id_authority_record_name_widget_id');
+
+    if (!id_field.value && !name_field.value)
     id_field.value = window.id_field;
     name_field.value = window.name_field;
   }
@@ -71,7 +73,7 @@ function open_entity_selector (entity_id_widget_id, entity_name_widget_id) {
 function set_entity_selector_fields () {
   /* Assign the window variables set in open_entity_selector() to
    * form widgets, so that they will continue to exist through form submissions. */
-  if (window.id_field) {
+  if (window.id_field != 'undefined') {
     var id_field = window.document.getElementById('id_entity_id_widget_id');
     var name_field = window.document.getElementById('id_entity_name_widget_id');
     id_field.value = window.id_field;
