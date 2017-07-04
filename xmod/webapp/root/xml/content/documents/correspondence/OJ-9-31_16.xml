@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+
+    <sdo:source>
+      <sdo:correspondence mfID="1969" sdoID="OJ-9-31_16">OJ 9/31, [16]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="JGCsten" scope="major">J. G. Cotta's stenographer</tei:handNote>
+      <tei:handNote xml:id="RKr" scope="minor">Robert Kröner's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2005, 2017</tei:resp>
+      <tei:resp>Translation, 2005, 2017</tei:resp>
+      <tei:resp>XML Encoding, 2017</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-11-02" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+
+  </sdo:collectionDesc>
+  <sdo:record ID="r0001">
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002724">Cotta ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+      <dc:title>Stenographically handwritten letter from Cotta to Schenker, dated September 16,
+        1907</dc:title>
+      <dcterms:created>1907-09-16T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2017-07-04</dcterms:dateSubmitted>
+      <dc:description>Cotta hopes for the manuscript of Kontrapunkt [I] soon, and asserts that the
+        same terms of contract will apply as those for Harmonielehre.</dc:description>
+      <dc:subject>Manuskript; manuscript; Verlag; publication; Vertrag; contract; Bedingungen;
+        conditions</dc:subject>
+
+      <marcrel:correspondent key="entity-002405">Cotta</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/><tei:hi rend="bold">J. G. COTTA’SCHE
+              BUCHHANDLUNG NACHFOLGER</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-40"><tei:hi rend="bold">STUTTGART UND
+            BERLIN</tei:hi></tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:dateline rend="indent-50">STUTTGART, den <tei:handShift new="#JGCsten"/><tei:date
+            when="1907-09-16">16. September <tei:handShift new="#printed"/>190<tei:handShift
+              new="#JGCsten"/>7</tei:date>.</tei:dateline><tei:lb/>
+        <tei:address>
+
+          <tei:addrLine rend="indent-10">Herrn <tei:hi rend="lateinschr">Dr. Heinrich
+              Schenker</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-60"><tei:hi rend="lateinschr underline"
+            >Wien</tei:hi>.</tei:addrLine>
+        </tei:address>
+        <tei:salute rend="indent-20">Sehr geehrter <tei:rs type="person" key="entity-000632"
+            >Herr</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
+            this letter is not recorded in Schenker's diary. Cotta's carbon copy survives as CA 69:
+            it has "491" written in crayon and canceled.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Wir sind im Besitz Ihres gef. Schreibens vom <tei:date when="1907-09-13"
+          >13. ds.</tei:date><tei:note xml:id="r0001-fn02" type="editorial" place="foot">= <tei:ref
+            type="correspondence" cRef="CA-68">CA 68</tei:ref>.</tei:note> und haben von Ihren
+        freundlichen Ausführungen mit Interesse Kenntnis genommen. Es freut uns, daß wir das
+        Manuskript der Fortsetzung in nicht zu ferner Zeit erwarten können; den Verlag<tei:note
+          xml:id="r0001-fn03" type="editorial" place="foot">Of what was at the
+          time thought of as <tei:rs type="work" key="entity-001725"><tei:title level="m"
+              >Kontrapunkt</tei:title></tei:rs>, and would eventually be the first half-volume of
+          that work.</tei:note> würden wir, lt. Vertrag vom <tei:date when="1905-12">December
+          1905</tei:date>, wiederum unter denselben Bedingungen, wie sie für den <tei:rs type="work"
+          key="entity-001724">ersten Band</tei:rs> gegolten haben, übernehmen.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">Mit vorzüglicher Hochachtung</tei:salute>
+        <tei:signed rend="indent-10"><tei:handShift new="#RKr"/><tei:rs type="organization"
+            key="entity-002405">J.G. Cotta’sche Buchhandlg. Nachf.</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/><tei:hi rend="bold">SUCCESSORS TO J. G.
+              COTTA'S BOOK DEALERSHIP</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-40"><tei:hi rend="bold">STUTTGART AND
+            BERLIN</tei:hi></tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:dateline rend="indent-50">STUTTGART, <tei:handShift new="#JGCsten"/><tei:date
+            when="1907-09-16">September 16, <tei:handShift new="#printed"/>190<tei:handShift
+              new="#JGCsten"/>7</tei:date></tei:dateline><tei:lb/>
+        <tei:address>
+
+          <tei:addrLine rend="indent-10">Dr. Heinrich Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-60"><tei:hi rend="underline">Vienna</tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:salute rend="indent-20">Dear <tei:rs type="person" key="entity-000632"
+            >Sir</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">We are in receipt of your esteemed letter of the <tei:date
+          when="1907-09-13">13th of the month</tei:date>,<tei:ptr corresp="#r0001-fn02"
+          type="footnote"/> and have taken note with interest of your kind remarks. We are happy to
+        learn that we can expect the manuscript of the continuation in the not too distant future.
+        We would undertake publication<tei:ptr corresp="#r0001-fn03" type="footnote"/> in accordance
+        with the contract of <tei:date when="1905-12">December 1905</tei:date>, once again under the
+        same conditions as applied to the <tei:rs type="work" key="entity-001724">first
+          volume</tei:rs>.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">With kind regards</tei:salute>
+        <tei:signed rend="indent-10"><tei:handShift new="#RKr"/><tei:rs type="organization"
+            key="entity-002405">Successors to J. G. Cotta's Book Dealership</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
