@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+
+    <sdo:source>
+      <sdo:correspondence mfID="1993" sdoID="CA-74">CA 74</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="JGCunk" scope="minor">unknown hand (Cotta)</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2005, 2017</tei:resp>
+      <tei:resp>Translation, 2005, 2017</tei:resp>
+      <tei:resp>XML Encoding, 2017</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-11-02" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+
+  </sdo:collectionDesc>
+  <sdo:record ID="r0001">
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002724">Cotta ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+
+      <dc:title>Handwritten postcard from Schenker to Cotta, dated January 16, 1908</dc:title>
+      <dcterms:created>1908-01-16T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2017-09-13</dcterms:dateSubmitted>
+      <dc:description>Schenker asks for a copy of his Harmonielehre to be sent to
+        Busoni.</dc:description>
+      <dc:subject>Exemplar; copy</dc:subject>
+
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-002405">Cotta</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="envelope">
+          <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+              >Korrespondenz-Karte</tei:hi></tei:fw><tei:lb/>
+          <tei:address>
+            <tei:addrLine>Absender <tei:handShift new="#HS"/><tei:hi rend="lateinsch">H
+                Schenker</tei:hi>
+            </tei:addrLine>
+            <tei:addrLine><tei:hi rend="lateinschr">III Reisnerstr. 38</tei:hi></tei:addrLine>
+            <tei:addrLine><tei:hi rend="lateinschr">Wien</tei:hi></tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An</tei:supplied> Die <tei:hi
+                rend="lateinschr">J. G. Cotta'sche Buchh. Nfg.</tei:hi></tei:addrLine>
+            <tei:addrLine><tei:hi rend="lateinschr underline">Stuttgart</tei:hi>
+            </tei:addrLine>
+            <tei:addrLine><tei:hi rend="lateinschr">Deutschland</tei:hi></tei:addrLine>
+            <tei:lb/>
+          </tei:address>
+          <tei:add><tei:note type="editorial" place="inline">written sideways below sender
+              address:</tei:note>
+            <tei:handShift new="#JGCunk"/>Schenker 16/1</tei:add><tei:lb/>
+          <tei:fw type="postmark">|| WIEN 9 | 16. I. 08 | 3a ||</tei:fw>
+          <tei:fw type="postmark">|| STUTTGART | 17. I. O8 | * (55) * ||</tei:fw><tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#HS"/>Sehr geehrter <tei:rs key="entity-002405"
+            type="organization">Herr</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial"
+            place="foot">Writing of this postcard is not recorded in Schenker's
+          diary.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Wollen Sie die Freundlichkeit haben, ein Exemplar meiner <tei:rs type="work"
+          key="entity-001723">„<tei:title>N. Th. u. Ph.</tei:title>“</tei:rs>
+        <tei:hi rend="underline">auf meiner Rechnung</tei:hi> an die Adresse: <tei:hi
+          rend="lateinschr">Prof. <tei:rs key="entity-000116" type="person"><tei:hi rend="underline"
+              >Ferruccio Busoni</tei:hi></tei:rs>, Wien, Kärntnerring 1. <tei:rs type="place"
+            key="entity-002246"><tei:hi rend="underline">Hotel Bristol</tei:hi></tei:rs></tei:hi>,
+        senden zu wollen, wenn möglich, umgehend!</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">Mit bestem Dank u. ausgez. Hochachtung,</tei:salute>
+        <tei:signed rend="indent-50">
+          <tei:rs key="entity-000632" type="person"><tei:hi rend="lateinschr">H
+            Schenker</tei:hi></tei:rs>
+        </tei:signed>
+        <tei:dateline><tei:date when="1908-01-16">16. 1. 08</tei:date></tei:dateline><tei:lb/><tei:lb/>
+        <tei:add><tei:note type="editorial" place="inline">bottom left corner, in pencil:</tei:note>
+          <tei:handShift new="#JGCunk"/><tei:unclear reason="reading"><tei:hi
+              rend="double-underline">ebd.</tei:hi></tei:unclear>
+          <tei:date when="1908-01-17">17/I 08</tei:date></tei:add>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="envelope">
+          <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+              >Postcard</tei:hi></tei:fw><tei:lb/>
+          <tei:address>
+            <tei:addrLine>From <tei:handShift new="#HS"/>H. Schenker</tei:addrLine>
+            <tei:addrLine>Vienna III</tei:addrLine>
+            <tei:addrLine>Reisnerstraße 38</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">To</tei:supplied> The Successors to J. G.
+              Cotta's Book Dealership</tei:addrLine>
+            <tei:addrLine><tei:hi rend="underline">Stuttgart</tei:hi>
+            </tei:addrLine>
+            <tei:addrLine>Germany</tei:addrLine>
+            <tei:lb/>
+          </tei:address>
+          <tei:add><tei:note type="editorial" place="inline">written sideways below sender
+              address:</tei:note>
+            <tei:handShift new="#JGCunk"/>Schenker 16/1</tei:add><tei:lb/>
+          <tei:fw type="postmark">|| VIENNA 9 | 16. I. 08 | 3a ||</tei:fw>
+          <tei:fw type="postmark">|| STUTTGART | 17. I. O8 | * (55) * ||</tei:fw><tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#HS"/>Dear <tei:rs key="entity-002405" type="organization"
+            >Sir</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>Please would you be so kind as to send a copy of my <tei:rs type="work"
+          key="entity-001723"><tei:title level="m">New Theories and Fantasies</tei:title></tei:rs>,
+          <tei:hi rend="underline">to be charged to my account</tei:hi>, to the address: Prof.
+          <tei:rs key="entity-000116" type="person"><tei:hi rend="underline">Ferruccio
+            Busoni</tei:hi></tei:rs>, Vienna, Kärntnerring 1, <tei:rs type="place"
+          key="entity-002246"><tei:hi rend="underline">Hotel Bristol</tei:hi></tei:rs>, if possible
+        by return?</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">With best wishes, and kind regards,</tei:salute>
+        <tei:signed rend="indent-50">
+          <tei:rs key="entity-000632" type="person">H. Schenker</tei:rs>
+        </tei:signed>
+        <tei:dateline><tei:date when="1908-01-16">January 16, 1908</tei:date></tei:dateline><tei:lb/><tei:lb/>
+        <tei:add><tei:note type="editorial" place="inline">bottom left corner, in pencil:</tei:note>
+          <tei:handShift new="#JGCunk"/><tei:unclear reason="original_unclear"><tei:hi
+              rend="double-underline">received</tei:hi></tei:unclear>
+          <tei:date when="1908-01-17">17/I 08</tei:date></tei:add>
+      </tei:closer>
+
+
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
