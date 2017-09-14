@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+
+    <sdo:source>
+      <sdo:correspondence mfID="1996" sdoID="CA-79">CA 79</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="sole">Heinrich Schenker's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2005, 2017</tei:resp>
+      <tei:resp>Translation, 2005, 2017</tei:resp>
+      <tei:resp>XML Encoding, 2017</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-11-02" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+
+  </sdo:collectionDesc>
+  <sdo:record ID="r0001">
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002724">Cotta ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+      <dc:title>Handwritten letter from Schenker to Cotta, dated June 5, 1908</dc:title>
+      <dcterms:created>1908-06-05T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2017-09-14</dcterms:dateSubmitted>
+      <dc:description>Schenker gives permission to divulge his name as author of Harmonielehre to
+        Breithaupt.</dc:description>
+      <dc:subject>Anonymität; anonymity; Name; name; Autor; author; Technik; technique;
+        Klavierspiel; piano playing; Verbindung; contanc</dc:subject>
+
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-002405">Cotta</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:salute><tei:handShift new="#HS"/>Sehr geehrter <tei:rs key="entity-002405"
+            type="organization">Herr</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial"
+            place="foot">Writing of this letter is not recorded in Schenker's
+          diary.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Ich sehe ein, daß sich die <tei:hi rend="lateinschr">Anonymität</tei:hi> nicht mehr gut
+        aufrechterhalten läßt;<tei:note xml:id="r0001-fn02" type="editorial" place="foot">Schenker
+          is replying to <tei:ref type="correspondence" cRef="OJ-9-31_19">OJ 9/31, [19]</tei:ref>,
+          June 2, 1908.</tei:note> auch signiere ich den „<tei:rs key="entity-001725" type="work"
+            ><tei:title level="m">Cp.</tei:title></tei:rs>“ (den Sie, sofern nicht wieder irgend
+        eine bedeutendere Störung dazwischen kommt, in kürzester Frist haben sollen) bereits mit
+        vollem Namen. Wollen Sie daher H. <tei:rs type="person" key="entity-000099"><tei:hi
+            rend="lateinschr">R. M. Breithaupt</tei:hi></tei:rs> (nicht Breithausen, wie Sie
+        schrieben), dem Autor des sehr bekannt gewordenen Werkes über die Technik des Klavierspiels
+        meine Adresse u.s.w. angeben. Es wird mich interessieren, mit ihm in Verbindung zu
+        treten.</tei:p>
+
+      <tei:closer>
+        <tei:salute>Für Ihre Mühe besten, besten Dank</tei:salute>
+        <tei:salute rend="indent-50">Ir ergeb</tei:salute>
+        <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000632"><tei:hi
+              rend="lateinschr">H Schenker</tei:hi></tei:rs></tei:signed><tei:lb/>
+        <tei:dateline rend="indent-50"><tei:date when="1908-04-24">5. Juni
+          08</tei:date>.<tei:lb/>Wien —</tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:salute><tei:handShift new="#HS"/>Dear <tei:rs key="entity-002405" type="organization"
+            >Sir</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>I can see that it is no longer possible to sustain complete anonymity;<tei:ptr
+          corresp="#r0001-fn02" type="footnote"/> what is more, I am already going to put my full
+        name to <tei:rs key="entity-001725" type="work"><tei:title level="m"
+            >Counterpoint</tei:title></tei:rs> (which you should have in no time at all now, so long
+        as no futher major interruption intervenes). Accordingly, please give Mr. <tei:rs
+          type="person" key="entity-000099">R. M. Breithaupt</tei:rs> (not Breithausen, as you
+        write),‒ the author of the book on piano playing technique that has become very well-known ‒
+        my address etc. I will be interested to be in contact with him.</tei:p>
+
+      <tei:closer>
+        <tei:salute>Very, very many thanks for all your trouble,</tei:salute>
+        <tei:salute rend="indent-50">Your devoted</tei:salute>
+        <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000632">H.
+          Schenker</tei:rs></tei:signed><tei:lb/>
+        <tei:dateline rend="indent-50"><tei:date when="1908-04-24">June 5,
+          1908</tei:date><tei:lb/>Vienna —</tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
