@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+
+    <sdo:source>
+      <sdo:correspondence mfID="2002" sdoID="CA-89">CA 89</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="sole">Heinrich Schenker's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2005, 2017</tei:resp>
+      <tei:resp>Translation, 2005, 2017</tei:resp>
+      <tei:resp>XML Encoding, 2017</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-11-02" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+
+  </sdo:collectionDesc>
+  <sdo:record ID="r0001">
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002724">Cotta ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+      <dc:title>Handwritten letter from Schenker to Cotta, dated October 17, 1908</dc:title>
+      <dcterms:created>1908-10-17T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2017-09-21</dcterms:dateSubmitted>
+      <dc:description>Schenker confirms the terms of the Harmonielehre contract as applying to
+        Kontrapunkt.</dc:description>
+      <dc:subject>Bestimmung; conditions; Vertrag; contract; Kosten; costs; Werk; work</dc:subject>
+
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-002405">Cotta</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:salute><tei:handShift new="#HS"/>Sehr geehrter <tei:rs key="entity-002405"
+            type="organization">Herr</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial"
+            place="foot">Writing of this letter is not recorded in Schenker's
+          diary.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Ich beeile mich, Ihnen gegenüber noch einmal ausdrücklich die übrigens schon mehrmals
+        erwähnte Bestimmung des Vertrages vom <tei:date when="1905-12">Dezember 1905</tei:date> zu
+          bestätigen,<tei:note xml:id="r0001-fn02" type="editorial" place="foot">= <tei:ref
+            type="correspondence" cRef="CA_205">CA [205]</tei:ref>, December 5, 1905 (contract for
+          vol. I), as stipulated in Cotta’s letter of <tei:ref type="correspondence"
+            cRef="OJ-9-31_20">OJ 9/31, [20]</tei:ref>, October 15, to which this letter is a
+          response.</tei:note> wornach ich die Kosten auch des <tei:rs key="entity-001725"
+          type="work"><tei:title>II Band</tei:title></tei:rs>es meines <tei:rs key="entity-001723"
+          type="work"><tei:title>Werk</tei:title></tei:rs>es zu tragen habe.<tei:note
+          xml:id="r0001-fn03" type="editorial" place="foot">This sentence is marked with pencil
+          square brackets before and after, probably by a Cotta employee, corresponding with the
+          pencil bracketing in the carbon copy CA 88 of <tei:ref type="correspondence"
+            cRef="OJ-9-31_20">OJ 9/31, [20]</tei:ref>.</tei:note></tei:p>
+
+      <tei:p>Für das in Aussichtstellen des Bandes für <tei:date when="1908-03">März</tei:date>,
+        oder <tei:date when="1908-04">April</tei:date> danke ich bestens.</tei:p>
+
+
+      <tei:closer>
+        <tei:salute rend="inden-40">Mit ausgezeichneter Hochachtung</tei:salute>
+        <tei:signed rend="indent-50">
+          <tei:rs key="entity-000632" type="person"><tei:hi rend="lateinschr">H
+            Schenker</tei:hi></tei:rs>
+        </tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1908-10-17">17. 10. 08</tei:date>.</tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:salute><tei:handShift new="#HS"/>Dear <tei:rs key="entity-002405" type="organization"
+            >Sir</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>I hasten once again to confirm with you explicitly the terms of the contract of
+          <tei:date when="1905-12">December 1905</tei:date>,<tei:ptr corresp="#r0001-fn02"
+          type="footnote"/> which have in fact already been mentioned several times, according to
+        which I have to bear the costs also of <tei:rs key="entity-001725" type="work"
+            ><tei:title>volume II</tei:title></tei:rs> of my <tei:rs key="entity-001723" type="work"
+            ><tei:title>work</tei:title></tei:rs>.<tei:ptr corresp="#r0001-fn03" type="footnote"
+        /></tei:p>
+
+      <tei:p>Many thanks for the prognosis of <tei:date when="1908-03">March</tei:date> of <tei:date
+          when="1908-04">April</tei:date> for the volume.</tei:p>
+
+
+      <tei:closer>
+        <tei:salute rend="inden-40">With kind regards,</tei:salute>
+        <tei:signed rend="indent-50">
+          <tei:rs key="entity-000632" type="person">H. Schenker</tei:rs>
+        </tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1908-10-17">October 17, 1908</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
