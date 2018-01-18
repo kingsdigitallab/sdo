@@ -1,0 +1,233 @@
+<?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
+   xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+   <!--OJ-01-02_1898-12December, 1898 -  ( Diary Series A box: 01 folder: 02 date: Jan 1, 1898–Dec 31, 1898 pages: 5, 6, 7, 7a 7b, 8, 8c)
+                 
+             -->
+   <sdo:collectionDesc>
+      <sdo:source>
+         <!--Select an sdoID from the controlled list -->
+         <sdo:diary sdoID="OJ-01-02_1898-12"/>
+      </sdo:source>
+
+      <tei:handNotes>
+         <tei:handNote xml:id="JS" scope="major">Jeanette Schenker's hand</tei:handNote>
+         <tei:handNote xml:id="HS-pencil" scope="minor">Heinrich Schenker's hand in
+            pencil</tei:handNote>
+      </tei:handNotes>
+
+      <tei:respStmt xml:id="IB">
+         <tei:persName>Ian Bent</tei:persName>
+         <tei:resp>Transcription, 2017</tei:resp>
+         <tei:resp>Translation, 2017</tei:resp>
+         <tei:resp>XML Encoding, 2017</tei:resp>
+         <tei:resp>Footnotes, 2017</tei:resp>
+      </tei:respStmt>
+      <tei:respStmt xml:id="TL">
+         <tei:persName>Tamara Lopez</tei:persName>
+         <tei:resp>XML Encoding Model</tei:resp>
+      </tei:respStmt>
+      <!-- Add additional change elements below to note major changes to the document -->
+      <tei:revisionDesc>
+         <tei:change when="2012-10-03" who="#IB">Template Generated</tei:change>
+      </tei:revisionDesc>
+   </sdo:collectionDesc>
+
+   <sdo:record ID="r0001">
+      <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
+                         The   contains a series of Dublin Core elements. -->
+      <sdo:itemDesc>
+         <dc:title>Diary entry by Schenker November 1, 1898</dc:title>
+         <dcterms:created>1898-11-01T12:00:00Z</dcterms:created>
+         <dcterms:dateSubmitted>2018-01-18</dcterms:dateSubmitted>
+         <dc:description/>
+         <dc:subject/>
+      </sdo:itemDesc>
+
+      <tei:div type="transcription">
+         <tei:opener>
+            <tei:note type="editorial" place="inline">The five short essays below are undated as to
+               day or month (only as to year), and are not datable by internal evidence. They have
+               been assigned the above arbitrary date so as to preserve their position within the
+               diary.</tei:note><tei:lb/><tei:lb/>
+            <tei:hi rend="bold">Ser. A, <tei:pb n="7"/>b</tei:hi>
+         </tei:opener>
+
+         <tei:fw type="header" rend="center"><tei:handShift new="#HS-pencil"/>1898</tei:fw>
+         <tei:fw type="header" rend="center"><tei:handShift new="#JS"/><tei:hi rend="underline">„Die
+               Unmusikalischen“</tei:hi></tei:fw>
+
+         <tei:ab type="sub-entry" xml:id="r0001-se01">Man hat in der Verurteilung der <tei:hi
+               rend="underline">Musik</tei:hi> keinesfalls das Recht, weiter zu gehen, als das
+            schöne Wort <tei:rs type="person" key="entity-006724">Horaz</tei:rs>’ens reicht, der von
+            der Poesie meinte: „<tei:foreign xml:lang="lat">levis haec insania</tei:foreign>“
+               <tei:title>Ep.</tei:title> II., I, v. 118.<tei:note xml:id="r0001-fn01"
+               type="editorial" place="foot">Schenker previously used this phrase, abbreviated to
+               "levis insania," in a review of the granting of the Rubinstein Prize: <tei:title
+                  level="j">Die Zeit</tei:title> 4 (1895), p. 157, untitled:
+                     <tei:bibl><tei:editor>Hellmut Federhofer</tei:editor>, ed., <tei:title
+                     level="m">Heinrich Schenker als Essayist und Kritiker ...</tei:title>
+                  (Hildesheim: Georg Olms, 1900), p. 280</tei:bibl>.</tei:note>
+            <tei:note type="editorial" place="inline">draft in Heinrich's hand in Ser. B, p.
+               4</tei:note></tei:ab>
+
+         <tei:milestone unit="section" rend="block asterisk"/>
+
+         <tei:ab type="sub-entry" xml:id="r0001-se02"><tei:choice>
+               <tei:sic>Zu</tei:sic>
+               <tei:corr>In</tei:corr>
+            </tei:choice><tei:note xml:id="r0001-fn02" type="editorial" place="foot">Jeanette has
+               mistranscribed the "In" in Schenker's draft as "Zu."</tei:note>
+            <tei:hi rend="underline"><tei:rs type="person" key="entity-000554"
+               >Maeterlink</tei:rs>’s</tei:hi> Werken machen Symbole gleichsam ihre eigene Musik,
+            während das wirkliche Leben nur wenige abgerissene Worte dazwischenruft. <tei:note
+               type="editorial" place="inline">draft in Heinrich's hand in Ser. B, p.
+            5</tei:note></tei:ab>
+
+         <tei:milestone unit="section" rend="block asterisk"/>
+
+         <tei:ab type="sub-entry" xml:id="r0001-se03"><tei:note type="editorial" place="inline">in
+               left margin:</tei:note> cit. die II<tei:hi rend="supralinear">1</tei:hi>
+               Vorrede<tei:note xml:id="r0001-fn03" type="editorial" place="foot">From c.1910, the
+               abbreviation "II<tei:hi rend="supralinear">1</tei:hi>" designated Schenker's <tei:rs
+                  type="work" key="entity-001726"><tei:title level="m">Kontrapunkt
+                  I</tei:title></tei:rs> (i.e. the first half of volume II (<tei:rs type="work"
+                  key="entity-001725"><tei:title level="m">Kontrapunkt</tei:title></tei:rs>) of his
+               series <tei:rs type="work" key="entity-001723"><tei:title level="m">Neue musikalische
+                     Theorien und Phantasien</tei:title></tei:rs>). Since it was only in mid-1909
+               that agreement was reached to split <tei:title level="m">Kontrapunkt</tei:title>, and
+               furthermore since the first volume of the series (<tei:rs type="work"
+                  key="entity-001724"><tei:title level="m">Harmonielehre</tei:title></tei:rs>) was
+               not conceived until c.1905, it is impossible for Schenker to have been anticipating
+               his 1910 work in 1898. However, there is no doubt that the text of this entry <tei:hi
+                  rend="italic">was</tei:hi> written at the same time as its surrounding 1898
+               material, because the draft text in Ser. B., p. 5 is uniformly in Schenker's hand.
+               The marginalia to that draft, "cit. II<tei:hi rend="supralinear">1</tei:hi>,
+               Vorrede," is however written in pencil by Schenker, so could very well have been
+               added any time after October 1908, when Schenker first proposed the split. The
+               implication of this would be that Schenker combed through his early diaries for
+               material that could be repurposed.<tei:lb/> This situation may cast light on the
+               broader question of when and why Jeanette made fair copies of passages from the early
+               diaries as Series A. The two seem not to have met until around 1903 (personal
+               communication from Hellmut Federhofer), so there is at least a five-year gap between
+               Schenker's drafts and Jeanette's fair copies. If she added the marginalia at the time
+               of making the fair copy, then she could not have done this before the summer of 1909;
+               and may not have done so before she joined Schenker in Vienna in August 1910,
+               possibly not before she took over the writing of Schenker's diaries in August 1911.
+               Whichever chronology is true, this is an indication of the continuing value that
+               Schenker placed on his earliest diary writings. </tei:note>
+            <tei:note type="editorial" place="inline">main:</tei:note>Es verbieten im Leben wie in
+            der <tei:hi rend="underline">Kunst</tei:hi> die Gesetze mehr, als sie gewähren, weil,
+            was gestattet sein mag, zu man<tei:supplied reason="omission">n</tei:supplied>igfaltig
+            ist um in wenigen undifferenzierten Worten eingefangen werden zu können. Leider
+            empfangen aber daran unreife Köpfe den Eindruck, als ob die Regeln der Kunst nur
+            wirklich mehr in Ver- als Geboten bestünden! Und doch ist das Umgekehrte wahr: mehr ist
+            gestattet, als verboten. <tei:note type="editorial" place="inline">draft in Heinrich's
+               hand in Ser. B, p. 5</tei:note></tei:ab>
+
+         <tei:milestone unit="section" rend="block asterisk"/>
+
+         <tei:ab type="sub-entry" xml:id="r0001-se04">Der Inhalt der meisten Menschen reicht nur für
+            die Dauer von 10‒12 Jahren, u. nun sollen sie <tei:add place="interlinear-above"
+                  ><tei:handShift new="#HS-pencil"/>gar</tei:add>
+            <tei:handShift new="#JS"/>70‒80 Jahre leben! Kann dieses ohne Unglück abgehen?<tei:note
+               xml:id="r0001-fn04" type="editorial" place="foot">Schenker's draft initially read:
+               "Die meisten Menschen reichen inhaltlich für die Dauer von 10‒12 Jahren, u. sollen
+               nun 70‒80 leben! Kann so was ohne Unglück abgehen?" ("Most people last as regards
+               content for a duration of ten to twelve years, and should now live for 70 or 80? Can
+               such a situation continue without disaster?"). He subsequently edited it in pencil to
+               read as Jeanette's fair copy.</tei:note>
+            <tei:note type="editorial" place="inline">draft in Heinrich's hand in Ser. B, p.
+               6</tei:note></tei:ab>
+
+         <tei:milestone unit="section" rend="block asterisk"/>
+
+         <tei:ab type="sub-entry" xml:id="r0001-se05"><tei:rs type="person" key="entity-000612"
+                  ><tei:hi rend="underline">Mozart</tei:hi></tei:rs> ‒ „arm“ „unglücklich“? Wer wie
+            er schon in frühester Jugend das Handwerk seiner Kunst zu beherrschen gelernt, u.
+            hernach nur mehr die Wonnen des Schaffens schlürfen durfte, mag in der gemeinen u.
+            gemeinsten Sorge des Lebens weit weniger ein wirkliches Hindernis des Lebens, als
+            vielmehr nur die Witze einer bitteren Ironie empfinden. Um wieviel bedauernswerter doch
+            derjenige, der auch an der Kunst, wie am Leben, also doppelt zu leiden hat. <tei:note
+               type="editorial" place="inline">draft in Heinrich's hand in Ser. B, p.
+            6</tei:note></tei:ab>
+
+         <tei:milestone unit="section" rend="block asterisk"/>
+
+      </tei:div>
+
+      <tei:div type="translation">
+         <tei:opener>
+            <tei:note type="editorial" place="inline">The five short essays below are undated as to
+               day or month (only as to year), and are not datable by internal evidence. They have
+               been assigned the above arbitrary date so as to preserve their position within the
+               diary.</tei:note><tei:lb/><tei:lb/>
+            <tei:hi rend="bold">Ser. A, <tei:pb n="7"/>b</tei:hi>
+         </tei:opener>
+
+         <tei:fw type="header" rend="center"><tei:handShift new="#HS-pencil"/>1898</tei:fw>
+         <tei:fw type="header" rend="center"><tei:handShift new="#JS"/><tei:hi rend="underline">"The
+               Unmusical Ones"</tei:hi></tei:fw>
+
+         <tei:ab corresp="r0001-se01">In judging <tei:hi rend="underline">music</tei:hi>, one has no
+            right whatsoever to go further than <tei:rs type="person" key="entity-006724"
+               >Horace</tei:rs>'s elegant phrase when speaking of poetry: "<tei:foreign
+               xml:lang="lat">levis haec insania</tei:foreign>" <tei:supplied reason="translation"
+               >"this light madness"</tei:supplied>, <tei:title level="m">Epistles</tei:title>, Book
+            II, section I, verse 118.<tei:ptr corresp="#r0001-fn01" type="footnote"/>
+            <tei:note type="editorial" place="inline">draft in Heinrich's hand in Ser. B, p.
+               4</tei:note></tei:ab>
+
+         <tei:milestone unit="section" rend="block asterisk"/>
+
+         <tei:ab corresp="r0001-se02">In<tei:ptr corresp="#r0001-fn01" type="footnote"/>
+            <tei:hi rend="underline"><tei:rs type="person" key="entity-000554"
+               >Maeterlinck</tei:rs>'s</tei:hi> work, symbols create, so to speak, their own music,
+            while real life merely calls out from between the few, fragmentary words. <tei:note
+               type="editorial" place="inline">draft in Heinrich's hand in Ser. B, p.
+            5</tei:note></tei:ab>
+
+         <tei:milestone unit="section" rend="block asterisk"/>
+
+         <tei:ab corresp="r0001-se03"><tei:note type="editorial" place="inline">in left
+               margin:</tei:note>
+            <tei:supplied reason="clarity">for</tei:supplied> quot<tei:supplied
+               reason="abbreviation">ation in?</tei:supplied> II/1, Preface<tei:ptr
+               corresp="#r0001-fn03" type="footnote"/>
+            <tei:note type="editorial" place="inline">main:</tei:note>In life as in <tei:hi
+               rend="underline">art</tei:hi>, laws forbid more than they allow, because what may be
+            permitted is too diverse to be encapsulated in a few undifferentiated words. Sadly,
+            however, immature minds get the impression from it that the rules of art really consist
+            more of prohibitions than of precepts. In reality, the converse is true: more is
+            permitted than forbidden. <tei:note type="editorial" place="inline">draft in Heinrich's
+               hand in Ser. B, p. 5</tei:note></tei:ab>
+
+         <tei:milestone unit="section" rend="block asterisk"/>
+
+         <tei:ab corresp="r0001-se04">The content of most people lasts only for a duration of ten to
+            twelve years, and now they should live <tei:add place="interlinear-above"><tei:handShift
+                  new="#HS-pencil"/>even</tei:add>
+            <tei:handShift new="#JS"/>for 70 to 80 years! Can this continue without
+               disaster?<tei:ptr corresp="#r0001-fn04" type="footnote"/>
+            <tei:note type="editorial" place="inline">draft in Heinrich's hand in Ser. B, p.
+               6</tei:note></tei:ab>
+
+         <tei:milestone unit="section" rend="block asterisk"/>
+
+         <tei:ab corresp="r0001-se05"><tei:rs type="person" key="entity-000612"><tei:hi
+                  rend="underline">Mozart</tei:hi></tei:rs> — "impoverished," "unfortunate"? Anyone
+            who, like him, has already in his earliest youth mastered the craft of his art, and is
+            thereafter consigned to savoring only the delights of creation, may, when faced with the
+            most common troubles of life, feel only the quips of a bitter irony rather than any real
+            obstacle to living. How much more pitiable is someone who has to suffer in art as well
+            as in life, thus twice over. <tei:note type="editorial" place="inline">draft in
+               Heinrich's hand in Ser. B, p. 6</tei:note></tei:ab>
+
+         <tei:milestone unit="section" rend="block asterisk"/>
+
+      </tei:div>
+   </sdo:record>
+
+</sdo:recordCollection>
