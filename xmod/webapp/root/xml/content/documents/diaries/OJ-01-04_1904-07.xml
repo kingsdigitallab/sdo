@@ -1,0 +1,82 @@
+<?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
+   xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+   <!--OJ-01-04_1904-07July, 1904 -  ( Diary Series B box: 01 folder: 04 date: Jan 1, 1904–Dec 31, 1904 page: 11av)
+                 
+             -->
+   <sdo:collectionDesc>
+      <sdo:source>
+         <!--Select an sdoID from the controlled list -->
+         <sdo:diary sdoID="OJ-01-04_1904-07"/>
+      </sdo:source>
+
+      <tei:handNotes>
+         <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand, in gray
+            ink</tei:handNote>
+
+         <tei:handNote xml:id="HSblue" scope="minor">Heinrich Schenker's hand, in blue
+            crayon</tei:handNote>
+      </tei:handNotes>
+
+      <tei:respStmt xml:id="IB">
+         <tei:persName>Ian Bent</tei:persName>
+         <tei:resp>Transcription, 2017</tei:resp>
+         <tei:resp>Translation, 2017</tei:resp>
+         <tei:resp>XML Encoding, 2017</tei:resp>
+         <tei:resp>Footnotes, 2017</tei:resp>
+      </tei:respStmt>
+      <tei:respStmt xml:id="TL">
+         <tei:persName>Tamara Lopez</tei:persName>
+         <tei:resp>XML Encoding Model</tei:resp>
+      </tei:respStmt>
+      <!-- Add additional change elements below to note major changes to the document -->
+      <tei:revisionDesc>
+         <tei:change when="2012-10-03" who="#IB">Template Generated</tei:change>
+      </tei:revisionDesc>
+   </sdo:collectionDesc>
+
+   <sdo:record ID="r0001">
+      <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
+                         The   contains a series of Dublin Core elements. -->
+      <sdo:itemDesc>
+         <dc:title>Diary entry by Schenker, undated [July 1, 1904]</dc:title>
+         <dcterms:created>1904-07-01T12:00:00Z</dcterms:created>
+         <dcterms:dateSubmitted>2017-11-30</dcterms:dateSubmitted>
+         <dc:description/>
+         <dc:subject/>
+      </sdo:itemDesc>
+
+      <tei:div type="transcription">
+         <tei:opener>
+            <tei:note type="editorial" place="inline">There are no surviving diary-months for the
+               whole of 1904; but this single entry is taken as belonging to July because Schenker
+               frequently in later diaries gives his summer destination around June 30 or July
+               1.</tei:note><tei:lb/><tei:lb/>
+            <tei:pb n="11"/><tei:hi rend="bold">a <tei:hi rend="italic">verso</tei:hi></tei:hi>
+            <tei:dateline><tei:date when="1904-07-01"><tei:note type="editorial" place="inline"
+                     >undated</tei:note></tei:date></tei:dateline>
+         </tei:opener>
+         <tei:ab type="sub-entry" xml:id="r0001-se01"><tei:handShift new="#HSblue"/>Sommer
+               <tei:handShift new="#HS"/>1904 <tei:rs type="place" key="entity-006399"
+               >Toblach</tei:rs></tei:ab>
+      </tei:div>
+
+      <tei:div type="translation">
+         <tei:opener>
+            <tei:note type="editorial" place="inline">There are no surviving diary-months for the
+               whole of 1904; but this single entry is taken as belonging to July because Schenker
+               frequently in later diaries gives his summer destination around June 30 or July
+               1.</tei:note><tei:lb/><tei:lb/>
+            <tei:pb n="11"/><tei:hi rend="bold">a <tei:hi rend="italic">verso</tei:hi></tei:hi>
+            <tei:dateline><tei:date when="1904-07-01"><tei:note type="editorial" place="inline"
+                     >undated</tei:note></tei:date></tei:dateline>
+         </tei:opener>
+         <tei:ab corresp="r0001-se01"><tei:handShift new="#HSblue"/>Summer <tei:handShift new="#HS"
+            />1904 <tei:supplied reason="clarity">spent in</tei:supplied>
+            <tei:rs type="place" key="entity-006399">Toblach</tei:rs>.</tei:ab>
+      </tei:div>
+   </sdo:record>
+
+</sdo:recordCollection>
