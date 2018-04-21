@@ -264,21 +264,39 @@
                   <!-- COPY AND PASTE LINK BELOW TO DIRECT USERS TO THE 'OVERFLOW' PAGE FOR UPDATE NEWS -->
                   <!-- <a class="int" title="Link to Latest Material"
                         href="/documents/overviews/latest_material.html">More</a> -->
-                  <h4>What’s New? ‒ Diaries; Akademie, Hammer, Hoboken, Karpath, Universal
-                    Edition</h4>
+                  <h4>What’s new in 2018? ‒ Diaries ‒ Correspondence ‒ Profiles</h4>
                   <ul>
-                    <li>December brings a magnificent haul of new diary materials, including the
-                      last eight months of Schenker's life, and material from 1912‒14 ‒ entries
-                      concerning the Ninth Symphony monograph and beginning of the
-                      Erläuterungsausgabe and other matters. For more on this, see <a class="int"
-                        title="Link to Latest Material"
-                        href="/documents/overviews/latest_material.html">the following</a>.</li>
+                    <li><font style="bold">DIARIES:</font> The earliest diaries, 1896 to 1908, are
+                      now available. They span Schenker's work as a journalist (1896‒1901), as
+                      composer, pianist, and conductor, his initial music editing and arranging
+                      (concertos by CPE and JS Bach, Handel), the CPE Bach Klavierwerke and
+                      Ornamentik, the Harmonielehre, the Niedergang essay, the
+                      Instrumentations-Tabelle, and preparatory work for Kontrapunkt I. Featured
+                      also are his many visits to, and critiques of, plays and concerts, his private
+                      world, and the initial references to his future wife Jeanette. — Also 1913 to
+                      1914, charting work on the early volumes of the Erläuterungsausgabe, work on
+                      Beethoven manuscripts, troubles with patrons, early contacts with Vrieslander
+                      and Weisse, and concerns about impending war.</li>
 
-                    <li>New correspondence includes all of that with Universal Edition for 1909.
-                      It also includes correspondences with the Vienna Music Academy, Ludwig
-                      Karpath, a new installment of Hoboken, and the first letters from Victor
-                      Hammer. For more, see <a class="int" title="Link to Latest Material"
-                        href="/documents/overviews/latest_material.html">the following</a>.</li>
+                    <li><font style="bold">CORRESPONDENCE:</font> Communications with his chief
+                      publishers (Weinberger, UE, Cotta) up to 1908 ‒ now available ‒ not only
+                      expose the detailed publication history of his earlier works but also uncover
+                      attitudes towards his publishers ‒ reverential toward the ultra-German Cotta
+                      and the deeply suspicious, rising to antagonistic, toward the Jewish
+                      internationalist, commercially-minded Emil Hertzka. — Strong feelings about
+                      Wagner and Bruckner surface in his correspondences with music critic Karl
+                      Grunsky (1907‒10), with whom Schenker disagreed, and composer and friend of
+                      Brahms Ernst Rudorff (1908), with whom Schenker was largely of one mind. — Now
+                      embarked on are the correspondences with Der Kunstwart editor Hermann Rinn
+                      (1927‒29 now online) and painter-engraver-typographer Victor Hammer (1923 now
+                      online), who made the famous mezzotint portrait of Schenker in 1925. — The
+                      enormous correspondence with pupil, wealthy collector, and musicologist
+                      Anthony van Hoboken (stretching from1924 to 1935) is now all but complete, and
+                      makes a fascinating study in Schenker's conflicting feelings toward his
+                      primary patron.</li>
+
+                    <li><font style="bold">PROFILES:</font> 50 new profiles featuring people and
+                      institutions are now available.</li>
                   </ul>
 
                   <nav class="local" id="blogPosts">
