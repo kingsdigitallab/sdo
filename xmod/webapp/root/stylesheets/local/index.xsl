@@ -266,7 +266,7 @@
                         href="/documents/overviews/latest_material.html">More</a> -->
                   <h4>What’s new in 2018? ‒ Diaries ‒ Correspondence ‒ Profiles</h4>
                   <ul>
-                    <li><font style="bold">DIARIES:</font> The earliest diaries, 1896 to 1908, are
+                    <li><strong>DIARIES:</strong> The earliest diaries, 1896 to 1908, are
                       now available. They span Schenker's work as a journalist (1896‒1901), as
                       composer, pianist, and conductor, his initial music editing and arranging
                       (concertos by CPE and JS Bach, Handel), the CPE Bach Klavierwerke and
@@ -278,7 +278,7 @@
                       Beethoven manuscripts, troubles with patrons, early contacts with Vrieslander
                       and Weisse, and concerns about impending war.</li>
 
-                    <li><font style="bold">CORRESPONDENCE:</font> Communications with his chief
+                    <li><strong>CORRESPONDENCE:</strong> Communications with his chief
                       publishers (Weinberger, UE, Cotta) up to 1908 ‒ now available ‒ not only
                       expose the detailed publication history of his earlier works but also uncover
                       attitudes towards his publishers ‒ reverential toward the ultra-German Cotta
@@ -295,7 +295,7 @@
                       makes a fascinating study in Schenker's conflicting feelings toward his
                       primary patron.</li>
 
-                    <li><font style="bold">PROFILES:</font> 50 new profiles featuring people and
+                    <li><strong>PROFILES:</strong> 50 new profiles featuring people and
                       institutions are now available.</li>
                   </ul>
 
