@@ -282,7 +282,7 @@
                       publishers (Weinberger, UE, Cotta) up to 1908 ‒ now available ‒ not only
                       expose the detailed publication history of his earlier works but also uncover
                       attitudes towards his publishers ‒ reverential toward the ultra-German Cotta
-                      and the deeply suspicious, rising to antagonistic, toward the Jewish
+                      and deeply suspicious, rising to antagonistic, toward the Jewish
                       internationalist, commercially-minded Emil Hertzka. — Strong feelings about
                       Wagner and Bruckner surface in his correspondences with music critic Karl
                       Grunsky (1907‒10), with whom Schenker disagreed, and composer and friend of
@@ -291,7 +291,7 @@
                       (1927‒29 now online) and painter-engraver-typographer Victor Hammer (1923 now
                       online), who made the famous mezzotint portrait of Schenker in 1925. — The
                       enormous correspondence with pupil, wealthy collector, and musicologist
-                      Anthony van Hoboken (stretching from1924 to 1935) is now all but complete, and
+                      Anthony van Hoboken (stretching from 1924 to 1935) is now all but complete, and
                       makes a fascinating study in Schenker's conflicting feelings toward his
                       primary patron.</li>
 
