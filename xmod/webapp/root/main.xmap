@@ -635,27 +635,8 @@
 
  <map:pipeline type="caching">
     <!-- Entity display. -->
-    <!-- Indices of entities that have a profile XML file (ie, this
-           is not all entities!). ??? -->
-  <!--  
-      <map:match pattern="profiles/*/index.html">
-        <map:aggregate element="aggregation">
-          <map:part src="cocoon://_internal/menu/main.xml"/>
-          <map:part src="cocoon:/internal/profiles/indices.xml"/>
-          <map:part element="entity_list"
-            src="cocoon://_internal/solr/query/q=entity_key%3A*&amp;rows=0&amp;fl=entity_key&amp;facet=true&amp;facet.field=entity_key&amp;facet.sort=entity_key&amp;facet.limit=5000"/>
-          <map:part element="eats" src="cocoon://_internal/eats/entities.xml"/>
-        </map:aggregate>
-         <map:transform src="stylesheets/local/profiles/index-to-html.xsl">
-          <map:parameter name="filedir" value="profiles/{1}"/>
-          <map:parameter name="filename" value="{1}"/>
-          <map:parameter name="fileextension" value="html"/>
-          <map:parameter name="filter" value="'A'"/>
-        </map:transform>
-        <map:serialize type="xhtml"/>
-        
-      </map:match>-->
-      
+   
+    <!-- Indices of entities -->
       <map:match pattern="profiles/*/index.html">
         <map:redirect-to uri="/profiles/{1}/index/"/>
       </map:match>
@@ -665,6 +646,7 @@
           <map:part src="cocoon://_internal/menu/main.xml"/>
           <map:part src="xml/content/profiles/indices/{1}.xml"/>
       </map:aggregate>
+        <!--<map:serialize type="xml" /> -->
          <map:transform src="stylesheets/local/profiles/index-to-html.xsl">
           <map:parameter name="filedir" value="profiles/{1}"/>
           <map:parameter name="filename" value="{1}"/>
