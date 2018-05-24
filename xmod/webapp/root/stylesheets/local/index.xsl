@@ -59,7 +59,8 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"/>
 
         <!-- jquery tools from Flowplayer CDN -->
-        <script src="http://cdn.jquerytools.org/1.2.5/all/jquery.tools.min.js"/>
+        <!--<script src="http://cdn.jquerytools.org/1.2.5/all/jquery.tools.min.js"/>-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-tools/1.2.5/jquery.tools.min.js"/>
 
         <!-- mobile etc. devices: courtesy of 320+Up: http://stuffandnonsense.co.uk/projects/320andup/ -->
         <!-- For Nokia -->
@@ -428,7 +429,8 @@
         <!-- end wrapper -->
 
 
-      </body>
+      <script defer="defer" src="https://kdl.kcl.ac.uk/sla-acpp/js/sla.js" type="text/javascript">&#160;</script>
+</body>
     </html>
 
   </xsl:template>

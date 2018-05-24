@@ -529,7 +529,8 @@
           <xsl:otherwise><xsl:call-template name="xmv:footer"/></xsl:otherwise>
         </xsl:choose>        
       </div>
-    </body>
+    <script defer="defer" src="https://kdl.kcl.ac.uk/sla-acpp/js/sla.js" type="text/javascript">&#160;</script>
+</body>
   </xsl:template>
 
   <xsl:template name="xmv:banner">
