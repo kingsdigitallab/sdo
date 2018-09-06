@@ -1,0 +1,111 @@
+<?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
+   xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+   <!--OJ-01-09_1910-10October, 1910 -  (Diary Series A box: 01 folder: 09 date: Jan 1, 1910–Dec 31, 1910 pages: 110, 110bis, 111-119, 119a, 119b, 120, 120bis, 121, 122a, 122b, 123, 124a, 124b   )
+                 
+             -->
+   <sdo:collectionDesc>
+      <sdo:source>
+         <!--Select an sdoID from the controlled list -->
+         <sdo:diary sdoID="OJ-01-09_1910-10"/>
+      </sdo:source>
+
+      <tei:handNotes>
+         <tei:handNote xml:id="HS-ink" scope="major">Heinrich Schenker's hand, in ink</tei:handNote>
+         <tei:handNote xml:id="HS-pencil" scope="minor">Heinrich Schenker's hand, in
+            pencil</tei:handNote>
+         <tei:handNote xml:id="JK" scope="minor">Hand of Jenny Kornfeld (= Jeanette
+            Schenker)</tei:handNote>
+      </tei:handNotes>
+      <!-- Add additional or remove unnecessary statements of responsiblity as needed below -->
+      <tei:respStmt xml:id="IB">
+         <tei:persName>Ian Bent</tei:persName>
+         <tei:resp>Transcription</tei:resp>
+         <tei:resp>Translation</tei:resp>
+         <tei:resp>XML Encoding</tei:resp>
+         <tei:resp>Footnotes</tei:resp>
+      </tei:respStmt>
+      <tei:respStmt xml:id="TL">
+         <tei:persName>Tamara Lopez</tei:persName>
+         <tei:resp>XML Encoding Model</tei:resp>
+      </tei:respStmt>
+      <!-- Add additional change elements below to note major changes to the document -->
+      <tei:revisionDesc>
+         <tei:change when="2012-10-03" who="#IB">Template Generated</tei:change>
+      </tei:revisionDesc>
+   </sdo:collectionDesc>
+
+   <sdo:record ID="r0001">
+      <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
+                         The   contains a series of Dublin Core elements. -->
+      <sdo:itemDesc>
+         <dc:title>Diary entry by Schenker October 7, 1910</dc:title>
+         <dcterms:created>1910-10-07T12:00:00Z</dcterms:created>
+         <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
+            2018-09-05</dcterms:dateSubmitted>
+         <dc:description>A summary of the contents of the record (currently unused)</dc:description>
+         <dc:subject>A list of subjects (currently unused)</dc:subject>
+      </sdo:itemDesc>
+
+      <tei:div type="transcription">
+         <tei:opener>
+            <tei:hi rend="bold">Ser. A, </tei:hi><tei:pb n="119"/>
+            <tei:fw type="header" rend="center"><tei:handShift new="#HS-ink"/><tei:date when="1910"
+                     ><tei:hi rend="underline">1910</tei:hi></tei:date></tei:fw><tei:lb/><tei:lb/>
+            <tei:date when="1910-10-07">7/<tei:subst>
+                  <tei:del rend="overstrike">9</tei:del>
+                  <tei:add place="inline">10</tei:add>
+               </tei:subst></tei:date>
+         </tei:opener>
+         <tei:ab type="sub-entry" xml:id="r0001-se01"> </tei:ab>
+
+      </tei:div>
+
+      <tei:div type="translation">
+         <tei:opener>
+            <tei:hi rend="bold">Ser. A, </tei:hi><tei:pb n="119"/>
+            <tei:fw type="header" rend="center"><tei:handShift new="#HS-ink"/><tei:date when="1910"
+                     ><tei:hi rend="underline">1910</tei:hi></tei:date></tei:fw><tei:lb/><tei:lb/>
+            <tei:date when="1910-10-07">October 7</tei:date>
+         </tei:opener>
+         <tei:ab corresp="r0001-se01"> </tei:ab>
+
+      </tei:div>
+   </sdo:record>
+
+
+   <sdo:record ID="r0002">
+      <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
+                         The   contains a series of Dublin Core elements. -->
+      <sdo:itemDesc>
+         <dc:title>Diary entry by Schenker October 8, 1910</dc:title>
+         <dcterms:created>1910-10-08T12:00:00Z</dcterms:created>
+         <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
+            2018-09-05</dcterms:dateSubmitted>
+         <dc:description>A summary of the contents of the record (currently unused)</dc:description>
+         <dc:subject>A list of subjects (currently unused)</dc:subject>
+      </sdo:itemDesc>
+
+      <tei:div type="transcription">
+         <tei:opener>
+            <tei:date when="1910-10-08">8/10.</tei:date>
+         </tei:opener>
+         <tei:ab type="sub-entry" xml:id="r0002-se01"> </tei:ab>
+
+      </tei:div>
+
+      <tei:div type="translation">
+         <tei:opener>
+            <tei:date when="1910-10-08">October 8</tei:date>
+         </tei:opener>
+         <tei:ab corresp="r0002-se01"> </tei:ab>
+
+      </tei:div>
+   </sdo:record>
+
+
+
+
+</sdo:recordCollection>
