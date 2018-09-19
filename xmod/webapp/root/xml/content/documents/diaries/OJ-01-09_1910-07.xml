@@ -13,11 +13,7 @@
       </sdo:source>
 
       <tei:handNotes>
-         <tei:handNote xml:id="HS-ink" scope="major">Heinrich Schenker's hand, in ink</tei:handNote>
-         <tei:handNote xml:id="HS-pencil" scope="minor">Heinrich Schenker's hand, in
-            pencil</tei:handNote>
-         <tei:handNote xml:id="JK" scope="minor">Hand of Jenny Kornfeld (= Jeanette
-            Schenker)</tei:handNote>
+         <tei:handNote xml:id="HS-ink" scope="sole">Heinrich Schenker's hand, in ink</tei:handNote>
       </tei:handNotes>
       <!-- Add additional or remove unnecessary statements of responsiblity as needed below -->
       <tei:respStmt xml:id="IB">
@@ -44,7 +40,7 @@
          <dc:title>Diary entry by Schenker July 3, 1910</dc:title>
          <dcterms:created>1910-07-03T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            2018-09-05</dcterms:dateSubmitted>
+            2018-09-19</dcterms:dateSubmitted>
          <dc:description>A summary of the contents of the record (currently unused)</dc:description>
          <dc:subject>A list of subjects (currently unused)</dc:subject>
       </sdo:itemDesc>
@@ -52,7 +48,16 @@
       <tei:div type="transcription">
          <tei:opener>
             <tei:date when="1910-07-03"><tei:handShift new="#HS-ink"/>Juli 3</tei:date>. </tei:opener>
-         <tei:ab type="sub-entry" xml:id="r0001-se01"> </tei:ab>
+         <tei:ab type="sub-entry" xml:id="r0001-se01">Beendigung der „Einleitung“ zu <tei:rs
+               type="work" key="entity-001726"><tei:title><tei:hi rend="lateinschr">II<tei:hi
+                        rend="supralinear">1</tei:hi></tei:hi></tei:title></tei:rs>,<tei:note
+               xml:id="r0001-fn01" type="editorial" place="foot">The Introduction of the first
+               half-volume of his <tei:rs type="work" key="entity-001725"><tei:title level="m"
+                     >Kontrapunkt</tei:title></tei:rs>, with its denunciation of dilettantism in
+               20th-century society and pessimistic predictions as to the future of musical
+               culture.</tei:note> Absendung, u. Abreise nach dem <tei:rs type="place"
+               key="entity-004033"><tei:hi rend="lateinschr underline"
+            >Karerpass</tei:hi></tei:rs>.</tei:ab>
 
       </tei:div>
 
@@ -60,7 +65,11 @@
          <tei:opener>
             <tei:date when="1910-07-03"><tei:handShift new="#HS-ink"/>July 3</tei:date>
          </tei:opener>
-         <tei:ab corresp="r0001-se01"> </tei:ab>
+         <tei:ab corresp="r0001-se01">The "Introduction" to <tei:rs type="work" key="entity-001726"
+                  ><tei:title level="m">Counterpoint</tei:title> I</tei:rs><tei:ptr
+               corresp="#r0001-fn01" type="footnote"/> finished, sent off, and departure for the
+               <tei:rs type="place" key="entity-004033"><tei:hi rend="underline"
+               >Karerpass</tei:hi></tei:rs>.</tei:ab>
 
       </tei:div>
    </sdo:record>
