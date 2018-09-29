@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2128" sdoID="OJ-15-15_57">OJ 15/15, [57]</sdo:correspondence>
+    </sdo:source>
+
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HW" scope="major">Hans Weisse's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2008</tei:resp>
+      <tei:resp>Translation, 2008</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2018</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2013-09-12" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002737">Weisse ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002715">Weisse ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture
+        postcard</tei:rs>
+
+      <dc:title>Handwritten picture postcard from Weisse to Schenker, dated March 5, 1931</dc:title>
+
+      <dcterms:created>1931-03-05T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2018-09-29</dcterms:dateSubmitted>
+      <dc:description>Weisse describes the extraordinary success of his lecture on Bach's Prelude in
+        D minor, at the Society for Music Pedagogy in Vienna.</dc:description>
+      <dc:subject>Quellenangabe; source citation; Briefausgabe; correspondence edition; Vortrag;
+        lecture; Triumpf; triumph; Leute; people; Bedeutung; significance; Hörweise; method of
+        listening; Theorie; theory; Musikwissenschaft; musicology; Text; improvisatorisch;
+        extempore; Abwehre; defense</dc:subject>
+
+      <marcrel:correspondent key="entity-000951">Weisse</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+      <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postkarte</tei:hi>
+        </tei:fw>
+        <tei:lb/><tei:note type="editorial" place="inline">top-left, picture captioned: Maria Wörth,
+          Kärntnen</tei:note><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine rend="indent-10"><tei:supplied reason="clarity">An:</tei:supplied>
+              <tei:handShift new="#HW"/>Herrn D<tei:hi rend="supralinear">r.</tei:hi> Heinrich
+              Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-30">Keilgasse 8</tei:addrLine>
+            <tei:addrLine rend="indent-40">Wien III.</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| 13/1 WIEN 89 | 5.III.31‒6 | * 3a * || </tei:fw>
+        </tei:fw>
+        <tei:lb/><tei:lb/><tei:note type="editorial">for continuation of message from verso, see
+          below</tei:note><tei:lb/>
+        <tei:lb/><tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-70"><tei:date when="1931-02-25">5. III.
+          31</tei:date>.</tei:dateline>
+        <tei:salute>Lieber verehter <tei:rs key="entity-000632" type="person"
+            >Meister</tei:rs>,<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
+            this postcard is recorded in Schenker's diary at OJ 4/4, p. 3592: March 5, 1931: "Von
+            Weisse (K.): hatte großen Erfolg mit dem Kleinen Präludium; spricht noch ein viertes
+            Mal." ("From Weisse (postcard): he had great success with the Short Prelude; will speak
+            a fourth time").</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>besten Dank für die Quellenangabe.<tei:note xml:id="r0001-fn02" type="editorial"
+          place="foot">Weisse had asked Schenker for the source of a Mozart quotation in a postcard
+          dated February 13 (<tei:ref type="corrrespondence" cRef="OJ-15-15_55">OJ 15/15,
+            [55]</tei:ref>). Schenker's source was <tei:bibl><tei:author><tei:rs type="person"
+                key="entity-004931">Richard Benz</tei:rs></tei:author>, <tei:title level="a">Das
+              Spiel des Dämons,</tei:title>
+            <tei:title level="j">Deutsche Allgemeine Zeitung</tei:title>, January 25,
+            1931</tei:bibl> (preserved as OC 50/20).</tei:note> Zu der grossen Briefausgabe<tei:note
+          xml:id="r0001-fn03" type="editorial" place="foot"><tei:bibl><tei:title level="m">Die
+              Briefe W. A. Mozarts und seiner Familie</tei:title>, edited by <tei:editor>Ludwig
+              Schiedermair</tei:editor>, 5 vols. (Munich, 1914)</tei:bibl>.</tei:note> ist dieser
+        Brief nicht enthalten.<tei:note xml:id="r0001-fn04" type="editorial" place="foot">No
+          paragraph-break in original.</tei:note></tei:p>
+
+      <tei:p>Es gereicht mir zur besondern Freude, Ihnen mitzuteilen, dass ich mit meinem gestrigen
+        Vortrag Ihrer Lehre zum Triumpf verholfen habe. Die <tei:rs type="organization"
+          key="entity-002445">Leute</tei:rs> waren sprachlos. Ich stellte das <tei:rs
+          key="entity-004853"><tei:title>5. Kl. Pr.</tei:title></tei:rs> in Ihrer Darstellung
+          dar:<tei:note xml:id="r0001-fn05" type="editorial" place="foot">Schenker’s analysis of J.
+          S. Bach's <tei:title>Short Prelude No. 5, BWV 926, in D minor</tei:title>, was published
+          in <tei:rs type="work" key="entity-001744"><tei:title level="j">Tonwille
+            5</tei:title></tei:rs> (1923).</tei:note> liess aber zuvor zwei aus dem Zuhörerkreis
+          spielen,<tei:note xml:id="r0001-fn06" type="editorial" place="foot">The comparison of a
+          voice-leading analysis with performances of the work is a teaching technique that Weisse
+          was to develop further in New York, at the <tei:rs type="organization" key="entity-002454"
+            >Mannes Music School</tei:rs> and Columbia University.</tei:note> um dann zeigen zu
+        können, welche Bedeutung Ihre Hörweise für den Vortrag hat und dass sie als praktische Hörer
+        Kenntnis mit Theorie und Wissenschaft <tei:add place="interlinear-above">nichts</tei:add> zu
+        tun hat. Die <tei:rs type="organization" key="entity-002445">Leute</tei:rs> waren fasziniert
+        und so muss <tei:milestone unit="folio" n="recto"/> ich dann nochmals über <tei:add
+          place="interlinear-above">den</tei:add> Vortrag dieses Stückes reden. Für mich hat dies
+        alles noch dazu den Wert der Übung. Ich rede ganz frei und wirke jetzt erst, ohne an Text
+        gebunden zu sein, ganz improvisatorisch und mitreissend.</tei:p>
+
+      <tei:closer>
+        <tei:salute>Alles Liebe und Herzliche von uns beiden!</tei:salute>
+        <tei:salute rend="indent-50">Ihr</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs key="entity-000951" type="person"><tei:hi
+              rend="lateinschr">H</tei:hi></tei:rs>.</tei:signed><tei:lb/><tei:lb/>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:note type="editorial" place="inline">along the margin: first part cut off,
+          then:</tei:note>
+        <tei:p>versuche und deren Abwehr noch mündlich!</tei:p>
+      </tei:postscript>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postcard</tei:hi>
+        </tei:fw>
+        <tei:lb/><tei:note type="editorial" place="inline">top-left, picture captioned: Maria Wörth,
+          Carinthia</tei:note><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine rend="indent-10"><tei:supplied reason="clarity">To:</tei:supplied>
+              <tei:handShift new="#HW"/>Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-30">Keilgasse 8</tei:addrLine>
+            <tei:addrLine rend="indent-40">Vienna III</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| 13/1 VIENNA 89 | 5.III.31‒6 | * 3a * || </tei:fw>
+        </tei:fw>
+        <tei:lb/><tei:lb/><tei:note type="editorial">for continuation of message from verso, see
+          below</tei:note><tei:lb/>
+        <tei:lb/><tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-70"><tei:date when="1931-02-25">March 5,
+          1931</tei:date></tei:dateline>
+        <tei:salute>Dear, revered <tei:rs key="entity-000632" type="person">Master</tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>Many thanks for the source reference.<tei:ptr corresp="#r0001-fn02" type="footnote"/>
+        As for the big edition of the <tei:supplied reason="clarity"><tei:rs type="person"
+            key="entity-000612">Mozart</tei:rs> family</tei:supplied> correspondence,<tei:ptr
+          corresp="#r0001-fn03" type="footnote"/> this letter is not included.<tei:ptr
+          corresp="#r0001-fn04" type="footnote"/></tei:p>
+
+      <tei:p>It gives me great pleasure in telling you that my lecture yesterday about your theory
+        was a triumph. The <tei:rs type="organization" key="entity-002445">people</tei:rs> were
+        speechless. I gave an account of the <tei:rs type="composition" key="entity-004853"
+            ><tei:title>fifth short prelude</tei:title></tei:rs> in your presentation,<tei:ptr
+          corresp="#r0001-fn05" type="footnote"/> but first asked two members of the audience to
+        play it,<tei:ptr corresp="#r0001-fn06" type="footnote"/> so that I could then show what
+        significance your method of hearing has for performance, and that as practical listener
+        knowledge it has <tei:add place="interlinear-above">nothing</tei:add> to do with the usual
+        theory, or with musicology. The <tei:rs type="organization" key="entity-002445"
+          >people</tei:rs> were fascinated, and so <tei:milestone unit="folio" n="recto"/> I had
+        then to speak again about <tei:add place="interlinear-above">the</tei:add> performance of
+        this piece. For me, all of this had, in addition, the value of practice. I speak entirely
+        freely, and am only now effective without being bound to a text, entirely extempore and
+        spirited.</tei:p>
+
+      <tei:closer>
+        <tei:salute>All good wishes and cordial greetings from the two of us!</tei:salute>
+        <tei:salute rend="indent-50">Ihr</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs key="entity-000951" type="person"><tei:hi
+              rend="lateinschr">H</tei:hi></tei:rs>.</tei:signed><tei:lb/><tei:lb/>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:note type="editorial" place="inline">along the margin: first part cut off,
+          then:</tei:note>
+        <tei:p>attempt, and the defense against it in person!</tei:p>
+      </tei:postscript>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
