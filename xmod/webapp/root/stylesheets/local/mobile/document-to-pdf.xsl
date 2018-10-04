@@ -368,6 +368,8 @@
         </fo:block>
         
         <fo:block font-weight="bold" space-before="16pt" keep-with-next="always" font-size="12pt" space-after="6pt">Citation</fo:block>
+        
+        
         <fo:block>
             <xsl:text>Schenker Documents Online, </xsl:text>
             <xsl:choose>
@@ -375,18 +377,7 @@
                 <xsl:when test="$recordId"><xsl:value-of select="/aggregation/sdo:recordCollection/sdo:record[@ID=$recordId]/sdo:itemDesc/dc:title" /></xsl:when>
                 <xsl:otherwise><xsl:value-of select="/aggregation/sdo:recordCollection/sdo:record/sdo:itemDesc/dc:title" /></xsl:otherwise>
             </xsl:choose>  
-            <xsl:choose>
-                <xsl:when test="$docType = 'correspondence'">
-                    <xsl:text> (</xsl:text><xsl:value-of select="format-dateTime(/aggregation/sdo:recordCollection/sdo:record/sdo:itemDesc/dcterms:created, '[MNn] [D01], [Y0001]')"/>
-                    <xsl:text>), transcr. Christoph Hust, transl. Ian Bent. </xsl:text>
-                </xsl:when>
-                <xsl:when test="$docType = 'diaries'">
-                    <xsl:text>, transcr. Marko Deisinger, trans. Stephen Ferguson. </xsl:text>
-                </xsl:when>
-                <xsl:when test="$docType = 'lessonbooks'">
-                    <xsl:text>,  transcr. Robert Kosovsky, transl. Sigrun Heinzelmann. </xsl:text>
-                </xsl:when>
-                <xsl:otherwise>
+            
                     <xsl:text>,  </xsl:text>
                     <xsl:for-each select="/aggregation/sdo:recordCollection/sdo:collectionDesc/tei:respStmt[tei:resp[contains(text(), 'Trans')]]">
                         <xsl:for-each select="tei:resp[contains(text(), 'Trans')]">
@@ -398,10 +389,9 @@
                         <xsl:if test="position() != last()"><xsl:text>,</xsl:text></xsl:if>
                         <xsl:text> </xsl:text>
                     </xsl:for-each>
-                </xsl:otherwise>
-            </xsl:choose>
             <xsl:value-of select="$path"/> <xsl:text> Accessed: </xsl:text><xsl:value-of select="format-date(current-date(), '[D01] [MNn] [Y0001]')"/>
         </fo:block>
+        
     </xsl:template>
 
     <xsl:template name="footnotes">
