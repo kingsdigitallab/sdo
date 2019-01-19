@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+
+    <sdo:source>
+      <sdo:correspondence mfID="2177" sdoID="OJ-13-32_B">OJ 13/32, [B]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="AR" scope="major">Alphons Rothschild's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2008, 2019</tei:resp>
+      <tei:resp>Translation, 2008, 2019</tei:resp>
+      <tei:resp>XML Encoding, 2008, 2019</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-11-02" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+
+  </sdo:collectionDesc>
+  <sdo:record ID="r0001">
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-006971">RothschildA ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-003332">calling card</tei:rs>
+
+
+      <dc:title>Calling card from Alphons von Rothschild to Schenker, undated</dc:title>
+      <dcterms:created>1899-07-01T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2019-01-19</dcterms:dateSubmitted>
+      <dc:description>Alphons is keen to resume piano lessons, and sends a New Year
+        souvenir.</dc:description>
+      <dc:subject>Clavier; piano; Eifer; enthusiasm; Souvenir</dc:subject>
+
+      <marcrel:correspondent key="entity-000743">Alphons Mayer von
+        Rothschild</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:milestone unit="folio" n="verso"/>
+
+      <tei:opener>
+        <tei:salute><tei:handShift new="#AR"/>Lieber Herr <tei:rs type="person" key="entity-000632"
+            >Dr</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Alphons's
+            period of piano study with Schenker precedes November 1899, hence this calling card
+            presumably dates from somewhere in the 1890s or even late 1880s.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Leider war ich zur verabredeten Zeit über Land geflogen, jedoch ist mein Clavier Eifer
+        noch immer auf der selben Höhe; kommen Sie bald sonst könnte er erlahmen – <tei:milestone
+          unit="folio" n="recto"/> vielleicht Samstag gegen 2<tei:hi rend="supralinear"
+        >h</tei:hi>.</tei:p>
+
+      <tei:p>Anbei mit nachträgliche<tei:supplied reason="syntax">n</tei:supplied> Neujahrswünschen
+        ein klein unmusikalisches Souvenir.<tei:note xml:id="r0001-fn02" type="editorial"
+          place="foot">Souvenir: not preserved with card; unidentified.</tei:note></tei:p>
+
+      <tei:closer>
+        <tei:note type="editorial" place="inline">unsigned</tei:note><tei:lb/><tei:lb/>
+        <tei:handShift new="#printed"/><tei:rs key="entity-006993" type="person"><tei:hi rend="bold"
+            >Baron Alphonse de Rothschild</tei:hi></tei:rs>
+        <tei:address>
+          <tei:addrLine>IV Heugasse 24.</tei:addrLine>
+        </tei:address>
+      </tei:closer>
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:milestone unit="folio" n="verso"/>
+
+      <tei:opener>
+        <tei:salute><tei:handShift new="#AR"/>Dear Dr. <tei:supplied reason="identity"><tei:rs
+              type="person" key="entity-000632">Schenker</tei:rs></tei:supplied>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>Sadly, at the time in question I had flown the country, however, my enthusiasm for the
+        piano is as keen as ever. Come soon, or it could diminsh ‒ <tei:milestone unit="folio"
+          n="recto"/> perhaps Saturday around 2 p.m. </tei:p>
+
+      <tei:p>Enclosed, with belated best wishes for the New Year, a small unmusical
+          souvenir.<tei:ptr corresp="#r0001-fn02" type="footnote"/></tei:p>
+
+      <tei:closer>
+        <tei:note type="editorial" place="inline">unsigned</tei:note><tei:lb/><tei:lb/>
+        <tei:handShift new="#printed"/><tei:rs key="entity-006993" type="person"><tei:hi rend="bold"
+            >Baron Alphonse de Rothschild</tei:hi></tei:rs>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="identity">Vienna</tei:supplied> IV, Heugasse
+            24</tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
