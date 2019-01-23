@@ -1,0 +1,96 @@
+<?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
+   xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+   <!--OJ-01-10_1911-02February, 1911 -  ( Diary Series A box: 01 folder: 10 date: Jan 1, 1911–Dec 31, 1911 pages: 125-131, 131v, 131a, 132, 132a, 133, 133a, 134-135, 135a, 135b, 136-146, 146a, 147-152, 152a, 153, 153a, 153b, 154-161, 161a, 162-179, 162par-166par, 170-172, 173a-173b, 174-193, 194a, 194b, 195-197 )
+                 
+             -->
+   <sdo:collectionDesc>
+      <sdo:source>
+         <!--Select an sdoID from the controlled list -->
+         <sdo:diary sdoID="OJ-01-10_1911-02"/>
+      </sdo:source>
+
+      <tei:handNotes>
+         <tei:handNote xml:id="HS-ink" scope="major">Heinrich Schenker's hand, in ink</tei:handNote>
+      </tei:handNotes>
+      <!-- Add additional or remove unnecessary statements of responsiblity as needed below -->
+      <tei:respStmt xml:id="IB">
+         <tei:persName>Ian Bent</tei:persName>
+         <tei:resp>Transcription, 2019</tei:resp>
+         <tei:resp>Translation, 2019</tei:resp>
+         <tei:resp>XML Encoding, 2019</tei:resp>
+         <tei:resp>Footnotes</tei:resp>
+      </tei:respStmt>
+      <tei:respStmt xml:id="TL">
+         <tei:persName>Tamara Lopez</tei:persName>
+         <tei:resp>XML Encoding Model</tei:resp>
+      </tei:respStmt>
+      <!-- Add additional change elements below to note major changes to the document -->
+      <tei:revisionDesc>
+         <tei:change when="2012-10-03" who="#IB">Template Generated</tei:change>
+      </tei:revisionDesc>
+   </sdo:collectionDesc>
+
+   <sdo:record ID="r0001">
+      <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
+                         The   contains a series of Dublin Core elements. -->
+      <sdo:itemDesc>
+         <dc:title>Diary entry by Schenker February 2, 1911</dc:title>
+         <dcterms:created>1911-02-02T12:00:00Z</dcterms:created>
+         <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
+            2019-01-23</dcterms:dateSubmitted>
+         <dc:description>A summary of the contents of the record (currently unused)</dc:description>
+         <dc:subject>A list of subjects (currently unused)</dc:subject>
+      </sdo:itemDesc>
+
+      <tei:div type="transcription">
+         <tei:opener>
+            <tei:hi rend="bold">Ser. A, </tei:hi><tei:pb n="125"/><tei:lb/>
+            <tei:fw type="header" rend="center"><tei:handShift new="#HS-ink"/><tei:date when="1911"
+                  >1911</tei:date></tei:fw><tei:lb/><tei:lb/>
+            <tei:date when="1911-02-02">2. 2.</tei:date>
+         </tei:opener>
+         <tei:ab type="sub-entry" xml:id="r0001-se01">„Kantaten“ (<tei:hi rend="lateinschr"
+               >etc</tei:hi>. Conzert) mit <tei:rs type="person" key="entity-000913"><tei:hi
+                  rend="lateinschr">fl.</tei:hi></tei:rs>, <tei:rs type="person" key="entity-000138"
+                  ><tei:hi rend="lateinschr">de Conne</tei:hi></tei:rs> u. <tei:rs type="person"
+               key="entity-000274">Gärtner</tei:rs>, u. <tei:rs type="organization"
+               key="entity-003235"><tei:hi rend="lateinschr">phil</tei:hi>.
+            Orchester</tei:rs>.</tei:ab>
+
+         <tei:ab type="sub-entry" xml:id="r0001-se02">Erste Auff. des
+               <tei:title>Doppelkonz.</tei:title> von <tei:rs type="person" key="entity-000025"
+                  ><tei:hi rend="lateinschr">Ph. Em. Bach</tei:hi></tei:rs>. (Fdur).<tei:note
+               xml:id="r0001-fn01" type="editorial" place="foot">
+               <tei:bibl><tei:author>C. P. E. Bach</tei:author>, <tei:title>Double Concerto in F
+                     major</tei:title> for two keyboards, two horns, and strings, H410, W46
+                  (1740)</tei:bibl>.</tei:note></tei:ab>
+
+      </tei:div>
+
+      <tei:div type="translation">
+         <tei:opener>
+            <tei:hi rend="bold">Ser. A, </tei:hi><tei:pb n="125"/><tei:lb/>
+            <tei:fw type="header" rend="center"><tei:handShift new="#HS-ink"/><tei:date when="1911"
+                  >1911</tei:date></tei:fw><tei:lb/><tei:lb/>
+            <tei:date when="1911-02-02">February 2</tei:date>
+         </tei:opener>
+         <tei:ab corresp="r0001-se01">"Cantatas" (etc. concert) with <tei:rs type="person"
+               key="entity-000913">Floriz</tei:rs>, <tei:rs type="person" key="entity-000138">de
+               Conne</tei:rs>, and <tei:rs type="person" key="entity-000274">Gärtner</tei:rs>, and
+            the <tei:rs type="organization" key="entity-003235">Philharmonic
+            Orchestra</tei:rs>.</tei:ab>
+
+         <tei:ab corresp="r0001-se02">First performance of the <tei:title>Double
+               Concerto</tei:title> in F major by <tei:rs type="person" key="entity-000025">C. P. E.
+               Bach</tei:rs>.<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:ab>
+
+      </tei:div>
+   </sdo:record>
+
+
+
+
+</sdo:recordCollection>
