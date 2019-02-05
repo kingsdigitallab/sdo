@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2206" sdoID="OJ-10-18_11">OJ 10/18, [11]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="AE" scope="major">Angi Elias's hand</tei:handNote>
+      <tei:handNote xml:id="JS" scope="minor">Jeanette Schenker's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="MR-S">
+      <tei:persName>Michaela Rejack-Searforce</tei:persName>
+      <tei:resp>Transcription, 2006, 2019</tei:resp>
+      <tei:resp>Translation, 2006, 2019</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2019</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2011-03-05" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-007002">EliasA ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-005504">notecard</tei:rs>
+
+      <dc:title>Handwritten notecard from Elias to Jeanette Schenker, dated June 19, 1935</dc:title>
+      <dcterms:created>1935-06-19T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2019-02-05</dcterms:dateSubmitted>
+      <dc:description>Miss Elias sends Jeanette Schenker a photograph of Heinrich and will visit his
+        grave with Marianne Kahn.</dc:description>
+      <dc:subject>Erinnerung; memory; Bild; photograph; Grab; grave; Reise; journey; Erholung;
+        recuperation</dc:subject>
+
+
+      <marcrel:correspondent key="entity-000201">Angi Elias</marcrel:correspondent>
+      <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:fw type="envelope">
+          <tei:note type="editorial" place="inline"><tei:hi rend="bold">envelope <tei:hi
+                rend="italic">recto</tei:hi></tei:hi></tei:note><tei:lb/>
+          <tei:note type="editorial" place="inline">with black border</tei:note><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied>
+              <tei:handShift new="#AE"/>Wohlgeboren Frau Professor <tei:hi rend="lateinschr">Lie Lie
+                Schenker</tei:hi></tei:addrLine>
+            <tei:addrLine rend="indent-50"><tei:hi rend="underline">Wien</tei:hi> III</tei:addrLine>
+            <tei:addrLine rend="indent-40">Keilgasse 8.</tei:addrLine>
+          </tei:address>
+          <tei:add resp="Jeanette_Schenker" place="inline"><tei:handShift new="#JS"/>erledigt
+              <tei:date when="1935-06-21">21. VI-35</tei:date></tei:add><tei:lb/>
+          <tei:note type="editorial" place="inline">no postmark or postage stamps</tei:note><tei:lb/><tei:lb/>
+          <tei:note type="editorial" place="inline"><tei:hi rend="bold">envelope <tei:hi
+                rend="italic">verso</tei:hi></tei:hi></tei:note>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">Absender:</tei:supplied><tei:handShift
+                new="#AE"/>A. Elias</tei:addrLine>
+            <tei:addrLine>XIII Nikolausgasse 1</tei:addrLine>
+          </tei:address><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:note type="editorial" place="inline"><tei:hi rend="bold">notecard</tei:hi></tei:note>
+        <tei:salute>Liebe Frau <tei:rs type="person" key="entity-000771"
+            >Professor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">This
+            letter was written on Heinrich Schenker's birthday, thus the photograph and graveside visit
+            are tributes to his memory, although she does not mention the occasion. The absence of
+            postmark or postage stamps suggests that it was delivered by hand. As Jeanette's
+            annotation on the envelope tells us, she replied on June 21.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>In dankbarer Erinnerung vergangener schöner Tage sende ich Ihnen das Bild unseres
+        lieben <tei:rs type="person" key="entity-000632">Professor</tei:rs>s und hoffe Ihnen damit
+          <tei:milestone unit="folio" n="verso"/> eine kleine Freude zu machen. Das Grab<tei:note
+          xml:id="r0001-fn02" type="editorial" place="foot">Schenker's grave is in the
+          Zentralfriedhof in Vienna.</tei:note> werde ich um 5 Uhr mit <tei:rs type="person"
+          key="entity-000416">Marianne Kahn</tei:rs> besuchen.</tei:p>
+
+      <tei:p>Ihnen eine gute Reise und die beste Erholung<tei:note xml:id="r0001-fn03"
+          type="editorial" place="foot">Jeanette was going to the Kurhaus Dr. Loebel in Hof Gastein,
+        where she would remain until at least early August 1935. She would never return to the
+          Keilgasse.</tei:note> wünschend grüßt Sie in besonderer Herzlichkeit</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">Ihre</tei:salute>
+        <tei:signed rend="indent-60"><tei:rs key="entity-000201" type="person">Angi
+          Elias</tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1935-06-19">19/VI-35</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:fw type="envelope">
+          <tei:note type="editorial" place="inline"><tei:hi rend="bold">envelope <tei:hi
+                rend="italic">recto</tei:hi></tei:hi></tei:note><tei:lb/>
+          <tei:note type="editorial" place="inline">with black border</tei:note><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied>
+              <tei:handShift new="#AE"/>Mrs. Lie Lie Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-50"><tei:hi rend="underline">Vienna</tei:hi>
+              III</tei:addrLine>
+            <tei:addrLine rend="indent-40">Keilgasse 8</tei:addrLine>
+          </tei:address>
+          <tei:add resp="Jeanette_Schenker" place="inline"><tei:handShift new="#JS"/>dealt with
+              <tei:date when="1935-06-21">January 21, 1935</tei:date></tei:add><tei:lb/>
+          <tei:note type="editorial" place="inline">no postmark or postage stamps</tei:note><tei:lb/><tei:lb/>
+          <tei:note type="editorial" place="inline"><tei:hi rend="bold">envelope <tei:hi
+                rend="italic">verso</tei:hi></tei:hi></tei:note>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">From:</tei:supplied>
+              <tei:handShift new="#AE"/>A. Elias</tei:addrLine>
+            <tei:addrLine><tei:supplied reason="identity">Vienna</tei:supplied> XIII, Nikolausgasse
+              1</tei:addrLine>
+          </tei:address><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:note type="editorial" place="inline"><tei:hi rend="bold">notecard</tei:hi></tei:note>
+        <tei:salute>Dear Mrs. <tei:supplied reason="identity"><tei:rs type="person"
+              key="entity-000771">Schenker</tei:rs></tei:supplied>,<tei:ptr corresp="#r0001-fn01"
+            type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>In grateful memory of better days past, I send you the photograph of our dear <tei:rs
+          type="person" key="entity-000632">Professor</tei:rs> and hope thereby to give you
+          <tei:milestone unit="folio" n="verso"/> a little pleasure. I will visit his grave<tei:ptr
+          corresp="#r0001-fn02" type="footnote"/> at 5:00 with <tei:rs type="person"
+          key="entity-000416">Marianne Kahn</tei:rs>.</tei:p>
+
+      <tei:p>Wishing you a safe journey and a good rest,<tei:ptr corresp="#r0001-fn03"
+          type="footnote"/> I send my warmest greetings,</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">Your</tei:salute>
+        <tei:signed rend="indent-60"><tei:rs key="entity-000201" type="person">Angi
+          Elias</tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1935-06-19">June 19, 1935</tei:date></tei:dateline>
+      </tei:closer>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
