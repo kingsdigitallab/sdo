@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2212" sdoID="OJ-10-18_17">OJ 10/18, [17]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="AE" scope="major">Angi Elias's hand</tei:handNote>
+      <tei:handNote xml:id="RS" scope="minor">Rita Stein's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="MR-S">
+      <tei:persName>Michaela Rejack-Searforce</tei:persName>
+      <tei:resp>Transcription, 2007, 2019</tei:resp>
+      <tei:resp>Translation, 2007, 2019</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2019</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2011-03-05" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-007005">EliasA ~
+        JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-007008">SteinR ~
+        JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture
+        postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Angi Elias to Jeanette Schenker, dated October 21,
+        1938</dc:title>
+      <dcterms:created>1938-10-21T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2019-02-07</dcterms:dateSubmitted>
+      <dc:description>Elias inquires how Jeanette is, and invites her to visit her in Vienna or meet
+        in the city center.</dc:description>
+      <dc:subject/>
+
+
+      <marcrel:correspondent key="entity-000201">Angi Elias</marcrel:correspondent>
+      <marcrel:correspondent key="entity-007007">Rita Stein</marcrel:correspondent>
+      <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:note type="editorial">picture captioned:</tei:note>
+        <tei:byline> "Wien Abendstimmung an der „Alten Donau“"</tei:byline>
+        <tei:lb/><tei:lb/>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied>An:</tei:supplied>
+              <tei:handShift new="#AE"/>Wohlegeboren Frau D<tei:hi rend="supralinear">r.</tei:hi>
+              Heinrich Schenker</tei:addrLine>
+            <tei:addrLine><tei:handShift new="#RS"/><tei:hi rend="bold">Bei Herrn Hofrat
+                Mittler</tei:hi></tei:addrLine>
+            <tei:addrLine><tei:handShift new="#AE"/><tei:del rend="overstrike">Baden bei</tei:del>
+              Wien <tei:handShift new="#RS"/><tei:hi rend="bold">IV</tei:hi></tei:addrLine>
+            <tei:addrLine><tei:handShift new="#AE"/><tei:del rend="overstrike"
+                >Weilburgstrasse</tei:del></tei:addrLine>
+            <tei:addrLine><tei:handShift new="#RS"/><tei:hi rend="bold">Schwindgasse</tei:hi>
+              <tei:handShift new="#AE"/>Nr. <tei:handShift new="#RS"/><tei:hi rend="bold"
+              >4</tei:hi></tei:addrLine>
+            <tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| BADEN BEI WIEN 1 | 24.x.38.16 | 9c ||</tei:fw><tei:lb/>
+          <tei:fw type="postmark">|| <tei:gap reason="illegible"/> ||</tei:fw><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:dateline><tei:handShift new="#AE"/><tei:placeName>Wien</tei:placeName>, <tei:date
+            when="1938-10-21">21/X-38</tei:date></tei:dateline>
+        <tei:salute resp="indent-50">Liebe Frau <tei:rs type="person" key="entity-000771"
+            >Professor</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p>Weiß ich auch nicht, ob Sie noch in Baden<tei:note xml:id="r0001-fn01" type="editorial"
+          place="foot">Baden, a town fifteen miles south of Vienna. From the previous address we
+          have for her (February 27, 1938 (<tei:ref type="correspondence" cRef="OJ-10-18_15">OJ
+            10/18, [15]</tei:ref>), a guesthouse in Bolzano, South Tyrol), Jeanette Schenker seems
+          to have spent time out of Vienna, whereas the present card, redirected by Rita Stein to
+          the address in Vienna IV, marks a return (voluntary or enforced) to Vienna. Between the
+          two communications, the annexation of Austria took place, March 12–14, 1938, followed
+          shortly after by the beginning of the deportations, confiscation of Jewish businesses,
+          many Jews losing their jobs, and the movements of all Jews being restricted. Only three
+          weeks after this card (November 9/10), Kristallnacht occurred throughout Germany and
+          Austria.<tei:lb/>—The occupant of the address at which Jeanette was living at this time,
+          Schwindgasse 4, was Paul Mittler, Chamber Counselor, factory director.</tei:note> sind, so
+        will ich es doch versuchen, Ihnen einen Gruß dorthin zu senden und gleichzeitig anzufragen
+        wie es Ihnen geht. Hoffentlich sind Sie wohlauf und erhielten Sie von Ihren
+          Angehörigen<tei:note xml:id="r0001-fn02" type="editorial" place="foot">Jeanette had two
+          sons by previous marriage (Erich and Felix Kornfeld), two brothers (Victor Schiff; Paul
+          Schiff, wife Anna) and one sister (Rosa, husband Arnold Weil), and her Schenker relatives
+          by marriage, including Heinrich’s surviving brother (Wilhelm) and sister (Schifre/Sophie
+          Guttmann).</tei:note> gute Nachrichten. Sollten Sie wieder einmal nach Wien kommen, würde
+        es mich aufrichtig freuen, Sie bei mir zu sehen oder, falls Ihnen die weite Fahrt zu
+        zeitraubend u. ermudend ist <tei:note type="editorial" place="inline">continued upside-down
+          in top margin:</tei:note> mit Ihnen in der Stadt zusammenzutreffen.</tei:p>
+
+
+      <tei:closer>
+        <tei:salute>Alles herzliche von Ihrer</tei:salute>
+        <tei:signed><tei:rs type="person" key="entity-000201">Angi Elias</tei:rs></tei:signed><tei:lb/>
+        <tei:salute><tei:handShift new="#RS"/><tei:hi rend="bold">Beste Grüsse
+          sendet</tei:hi></tei:salute>
+        <tei:signed><tei:hi rend="bold">Rita Stein</tei:hi><tei:note xml:id="r0001-fn03"
+            type="editorial" place="foot">It is likely that Rita Stein was the housekeeper of the
+            Baden bei Wien address.</tei:note></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:note type="editorial">picture captioned:</tei:note>
+        <tei:byline> "Vienna Evening Atmosphere on the 'Old Danube'"</tei:byline>
+        <tei:lb/><tei:lb/>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied>To:</tei:supplied>
+              <tei:handShift new="#AE"/>Mrs. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine><tei:handShift new="#RS"/><tei:hi rend="bold">c/o Court Counselor
+                Mittler</tei:hi></tei:addrLine>
+            <tei:addrLine><tei:handShift new="#AE"/><tei:del rend="overstrike">Baden nr.</tei:del>
+              Vienna <tei:handShift new="#RS"/><tei:hi rend="bold">IV</tei:hi></tei:addrLine>
+            <tei:addrLine><tei:handShift new="#AE"/><tei:del rend="overstrike"
+                >Weilburgstrasse</tei:del></tei:addrLine>
+            <tei:addrLine><tei:handShift new="#RS"/><tei:hi rend="bold">Schwindgasse</tei:hi>
+              <tei:handShift new="#AE"/>No. <tei:handShift new="#RS"/><tei:hi rend="bold"
+              >4</tei:hi></tei:addrLine>
+            <tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| BADEN NR VIENNA 1 | 24.x.38.16 | 9c ||</tei:fw><tei:lb/>
+          <tei:fw type="postmark">|| <tei:gap reason="illegible"/> ||</tei:fw><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:dateline><tei:handShift new="#AE"/><tei:placeName>Vienna</tei:placeName>, <tei:date
+            when="1938-10-21">October 21, 1938</tei:date></tei:dateline>
+        <tei:salute resp="indent-50">Dear Mrs. <tei:supplied reason="identity"><tei:rs type="person"
+              key="entity-000771">Schenker</tei:rs></tei:supplied>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>Although I do not know whether you are still in Baden,<tei:ptr corresp="#r0001-fn01"
+          type="footnote"/> I want to try nevertheless to send you greetings there and at the same
+        time inquire how you are doing. I hope you are well and that you received good news from
+        your relatives.<tei:ptr corresp="#r0001-fn02" type="footnote"/> Were you to come to Vienna
+        again, I should be really delighted to see you at my house or, if the extensive traveling is
+        too time-consuming and tiring for you, <tei:note type="editorial" place="inline">continued
+          upside-down in top margin:</tei:note> to meet up with you in the city.</tei:p>
+
+
+      <tei:closer>
+        <tei:salute>Most cordially from your</tei:salute>
+        <tei:signed><tei:rs type="person" key="entity-000201">Angi Elias</tei:rs></tei:signed><tei:lb/>
+        <tei:salute><tei:handShift new="#RS"/><tei:hi rend="bold">Best greetings
+          from</tei:hi></tei:salute>
+        <tei:signed><tei:hi rend="bold">Rita Stein</tei:hi><tei:ptr corresp="#r0001-fn03"
+            type="footnote"/></tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
