@@ -14,14 +14,16 @@
 
       <tei:handNotes>
          <tei:handNote xml:id="HS-ink" scope="major">Heinrich Schenker's hand, in ink</tei:handNote>
+         <tei:handNote xml:id="HS-pencil" scope="minor">Heinrich Schenker's hand, in
+            pencil</tei:handNote>
          <tei:handNote xml:id="JS" scope="major">Jeanette Schenker's hand</tei:handNote>
       </tei:handNotes>
       <!-- Add additional or remove unnecessary statements of responsiblity as needed below -->
       <tei:respStmt xml:id="IB">
          <tei:persName>Ian Bent</tei:persName>
-         <tei:resp>Transcription</tei:resp>
-         <tei:resp>Translation</tei:resp>
-         <tei:resp>XML Encoding</tei:resp>
+         <tei:resp>Transcription, 2019</tei:resp>
+         <tei:resp>Translation, 2019</tei:resp>
+         <tei:resp>XML Encoding, 2019</tei:resp>
          <tei:resp>Footnotes</tei:resp>
       </tei:respStmt>
       <tei:respStmt xml:id="TL">
@@ -38,12 +40,187 @@
       <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
                          The   contains a series of Dublin Core elements. -->
       <sdo:itemDesc>
-         <dc:title>Diary entry by Schenker July 2, 1911</dc:title>
-         <dcterms:created>1911-07-02T12:00:00Z</dcterms:created>
+         <dc:title>Diary entry by Schenker July 1, 1911</dc:title>
+         <dcterms:created>1911-07-01T12:00:00Z</dcterms:created>
          <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
-            2019-01-23</dcterms:dateSubmitted>
-         <dc:description>A summary of the contents of the record (currently unused)</dc:description>
-         <dc:subject>A list of subjects (currently unused)</dc:subject>
+            2019-07-26</dcterms:dateSubmitted>
+         <dc:description/>
+         <dc:subject/>
+      </sdo:itemDesc>
+
+      <tei:div type="transcription">
+         <tei:opener>
+            <tei:hi rend="bold">Ser. A, </tei:hi><tei:pb n="135"/><tei:hi rend="bold">b</tei:hi><tei:lb/>
+            <tei:fw type="header" rend="center"><tei:handShift new="#HS-ink"/><tei:date
+                  when="1911-07">Juli 1911</tei:date></tei:fw><tei:lb/><tei:lb/>
+            <tei:handShift new="#HS-ink"/><tei:date when="1911-07-01">1 Juli.</tei:date>
+         </tei:opener>
+         <tei:ab type="sub-entry" xml:id="r0001-se01">In <tei:rs type="place" key="entity-002256"
+               >Sulden</tei:rs>. 2 je 2fenstrige Zimmer in wundervoller Lage bezogen. Essen
+               akzeptabel.<tei:note xml:id="r0001-fn01" type="editorial" place="foot">A postcard of
+               this date from Schenker to Moriz Violin (<tei:ref type="correspondence"
+                  cRef="OJ-8-1_4">OJ 8/1, [4]</tei:ref>) gives the name of the accommodation as
+               "Villa Dangl." It also gives a description of the journey.</tei:note>
+         </tei:ab>
+
+         <tei:ab type="sub-entry" xml:id="r0001-se02">Antwort von <tei:rs type="person"
+               key="entity-000356">Dir. Hertzka</tei:rs>: „Ich hoffe, daß wir bei <tei:rs
+               type="person" key="entity-000055"><tei:hi rend="lateinschr">Beeth.</tei:hi></tei:rs>
+            u. <tei:rs type="person" key="entity-000027"><tei:hi rend="lateinschr"
+               >Bach</tei:hi></tei:rs> noch zusammenkommen werden.“<tei:note xml:id="r0001-fn02"
+               type="editorial" place="foot">= <tei:ref type="correspondence" cRef="OC-52-445">OC
+                  52/445</tei:ref>, June 27, 1911: "[...] ich hoffe, dass wir doch noch bezüglich
+               der Beethoven-Sonaten und der Bach-Arbeit zusammen kommen." ("[...] I hope that we
+               will indeed yet reach agreement regarding the Beethoven Sonatas and the Bach
+               project.")</tei:note></tei:ab>
+
+         <tei:ab type="sub-entry" xml:id="r0001-se03">Inangriffnahme der Schrift: „<tei:rs
+               type="work" key="entity-001757"><tei:title>Kunst des
+            Vortrages</tei:title></tei:rs>.“</tei:ab>
+
+      </tei:div>
+
+      <tei:div type="translation">
+         <tei:opener>
+            <tei:hi rend="bold">Ser. A, </tei:hi><tei:pb n="135"/><tei:hi rend="bold">b</tei:hi><tei:lb/>
+            <tei:fw type="header" rend="center"><tei:handShift new="#HS-ink"/><tei:date
+                  when="1911-07">July 1911</tei:date></tei:fw><tei:lb/><tei:lb/>
+            <tei:handShift new="#HS-ink"/><tei:date when="1911-07-01">July 1</tei:date>
+         </tei:opener>
+         <tei:ab corresp="r0001-se01">In <tei:rs type="place" key="entity-002256">Sulden</tei:rs>.
+            Two rooms taken, each with two windows, in a wonderful location. Food
+               acceptable.<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:ab>
+
+         <tei:ab corresp="r0001-se02">Answer from <tei:rs type="person" key="entity-000356">Director
+               Hertzka</tei:rs>: I hope that we can still come to an agreement over <tei:rs
+               type="person" key="entity-000055">Beethoven</tei:rs> and <tei:rs type="person"
+               key="entity-000027">Bach</tei:rs>."<tei:ptr corresp="#r0001-fn02" type="footnote"
+            /></tei:ab>
+
+         <tei:ab corresp="r0001-se03">A start made on the work <tei:rs type="work"
+               key="entity-001757"><tei:title level="m">The Art of
+            Performance</tei:title></tei:rs>.</tei:ab>
+
+      </tei:div>
+   </sdo:record>
+
+   <sdo:record ID="r0002">
+      <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
+                         The   contains a series of Dublin Core elements. -->
+      <sdo:itemDesc>
+         <dc:title>Diary entry by Schenker July 10, 1911</dc:title>
+         <dcterms:created>1911-07-10T12:00:00Z</dcterms:created>
+         <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
+            2019-07-26</dcterms:dateSubmitted>
+         <dc:description/>
+         <dc:subject/>
+      </sdo:itemDesc>
+
+      <tei:div type="transcription">
+         <tei:opener>
+            <tei:hi rend="bold">Ser. A, </tei:hi><tei:pb n="135"/><tei:lb/>
+            <tei:handShift new="#HS-ink"/><tei:date when="1911-07-10">10. 7. 1911.</tei:date>
+         </tei:opener>
+         <tei:note type="editorial" place="inline">heavily edited by Heinrich himself: only final
+            reading given here</tei:note>
+         <tei:lb/>
+         <tei:lb/>
+         <tei:ab type="sub-entry" xml:id="r0002-se01"><tei:handShift new="#HS-ink"/>Wir begegnen auf
+            einer Berglehne einen Bauer, der ein 4-wöchentliches Kalb den Berg heranzieht. Darüber
+            befragt, <tei:sic>erwiedert</tei:sic> er, das Kälbchen müsse weiden „lernen“. Darauf
+               <tei:rs type="person" key="entity-000771"><tei:hi rend="lateinschr"
+               >Lie-Lie</tei:hi></tei:rs>: „Ach so, auch das Kälbchen muß in die Schule?!“ ‒ Da
+            lacht der Bauer hell auf, ‒ offenbar von der Wendung des Wortes entzückt. Hier sehe man
+            den Zauber einer Ideenassoziation, eines „Bildes“, u. deren Wirkung auf einen primitiven
+            Menschen: standen im Kopf des Bauers bis dahin „Weide“ u. „Schule“ niemals nebeneinander
+            so müßte daher das rasche Herbeiholen eines entlegeneren zweiten Begriffes mittels eines
+            durchsichtigen, faßlichen <tei:hi rend="lateinschr">medium
+               comperationis</tei:hi>,<tei:note xml:id="r0002-fn01" type="editorial" place="foot"
+                  ><tei:hi rend="italic">medium comperationis</tei:hi>: this line of thought pursues
+               that which was more fully expounded in the entry for the <tei:ref type="diaries"
+                  cRef="OJ-01-10_1911-06:r0006">end of June</tei:ref> in Schenker's comparison of
+               Rilke with Max Reger.</tei:note> der rasche Verkehr der Begriffe den trägen,
+            unfähigen, aber primitiven amüsieren!</tei:ab>
+
+      </tei:div>
+
+      <tei:div type="translation">
+         <tei:opener>
+            <tei:hi rend="bold">Ser. A, </tei:hi><tei:pb n="135"/><tei:lb/>
+            <tei:handShift new="#HS-ink"/><tei:date when="1911-07-10">July 10, 1911</tei:date>
+         </tei:opener>
+         <tei:note type="editorial" place="inline">heavily edited by Heinrich himself: only final
+            reading given here</tei:note>
+         <tei:lb/>
+         <tei:lb/>
+         <tei:ab corresp="r0002-se01"><tei:handShift new="#HS-ink"/>On a mountain slope, we come
+            across a farmer pulling a four-week-old calf up the mountain. Asked about it, he
+            responds: the baby calf has to "learn" to graze, to which <tei:rs type="person"
+               key="entity-000771">Lie-Lie</tei:rs>
+            <tei:supplied reason="clarity">rejoins</tei:supplied>: "Ah, so the baby calf has to go
+            to school?!" ‒ At this the farmer bursts out in shrill laughter ‒ clearly delighted at
+            the word substition. Here can be seen the magic of an association of ideas, of an
+            "image", and its effect upon a primitive person: in the head of a farmer, "graze" and
+            "school" have never until now occurred together. Thus the swift invoking of a distant
+            second term through the agency of a transparent, graspable <tei:hi rend="italic">medium
+               comparationis</tei:hi>,<tei:ptr corresp="#r0002-fn01" type="footnote"/> the rapid
+            exchange of terms, is what must have amused the slow-witted, ungifted, yet primitive
+            person!</tei:ab>
+
+      </tei:div>
+   </sdo:record>
+
+   <sdo:record ID="r0003">
+      <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
+                         The   contains a series of Dublin Core elements. -->
+      <sdo:itemDesc>
+         <dc:title>Diary entry by Schenker July 13, 1911</dc:title>
+         <dcterms:created>1911-07-13T12:00:00Z</dcterms:created>
+         <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
+            2019-07-26</dcterms:dateSubmitted>
+         <dc:description/>
+         <dc:subject/>
+      </sdo:itemDesc>
+
+      <tei:div type="transcription">
+         <tei:opener>
+            <tei:hi rend="bold">Ser. A, </tei:hi><tei:pb n="135"/><tei:hi rend="bold">a</tei:hi><tei:lb/>
+            <tei:fw type="header" rend="center"><tei:handShift new="#HS-ink"/><tei:date when="1911"
+                  >1911</tei:date></tei:fw><tei:lb/><tei:lb/>
+            <tei:handShift new="#HS-ink"/><tei:date when="1911-07-13">13. Juli.</tei:date>
+         </tei:opener>
+         <tei:ab type="sub-entry" xml:id="r0003-se01"><tei:handShift new="#HS-ink"/>Bis auf wenige
+            Notizen „<tei:rs type="work" key="entity-001757"><tei:title>Kunst des
+                  Vortrags</tei:title></tei:rs>“ zum 1<tei:hi rend="supralinear">mal</tei:hi> in
+            Ordnung gebracht. (Vorläufig!)</tei:ab>
+
+      </tei:div>
+
+      <tei:div type="translation">
+         <tei:opener>
+            <tei:hi rend="bold">Ser. A, </tei:hi><tei:pb n="135"/><tei:hi rend="bold">a</tei:hi><tei:lb/>
+            <tei:fw type="header" rend="center"><tei:handShift new="#HS-ink"/><tei:date when="1911"
+                  >1911</tei:date></tei:fw><tei:lb/><tei:lb/>
+            <tei:handShift new="#HS-ink"/><tei:date when="1911-07-13">July 13</tei:date>
+         </tei:opener>
+         <tei:ab corresp="r0003-se01"><tei:handShift new="#HS-ink"/><tei:rs type="work"
+               key="entity-001757"><tei:title level="m">The Art of Performance</tei:title></tei:rs>
+            put into order for the first time, right down to the last few slips of paper.
+            (Provisionally!)</tei:ab>
+
+      </tei:div>
+   </sdo:record>
+
+   <sdo:record ID="r0004">
+      <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
+                         The   contains a series of Dublin Core elements. -->
+      <sdo:itemDesc>
+         <dc:title>Diary entry by Schenker July 17, 1911</dc:title>
+         <dcterms:created>1911-07-17T12:00:00Z</dcterms:created>
+         <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
+            2019-07-26</dcterms:dateSubmitted>
+         <dc:description/>
+         <dc:subject/>
       </sdo:itemDesc>
 
       <tei:div type="transcription">
@@ -51,11 +228,11 @@
             <tei:hi rend="bold">Ser. A, </tei:hi><tei:pb n="125"/><tei:lb/>
             <tei:fw type="header" rend="center"><tei:handShift new="#HS-ink"/><tei:date when="1911"
                   >1911</tei:date></tei:fw><tei:lb/><tei:lb/>
-            <tei:date when="1911-07-02">2. 2.</tei:date>
+            <tei:date when="1911-07-17">17 Juli 1911</tei:date>
          </tei:opener>
-         <tei:ab type="sub-entry" xml:id="r0001-se01"> </tei:ab>
+         <tei:ab type="sub-entry" xml:id="r0004-se01"> </tei:ab>
 
-         <tei:ab type="sub-entry" xml:id="r0001-se02"> </tei:ab>
+         <tei:ab type="sub-entry" xml:id="r0004-se02"> </tei:ab>
 
       </tei:div>
 
@@ -64,11 +241,208 @@
             <tei:hi rend="bold">Ser. A, </tei:hi><tei:pb n="125"/><tei:lb/>
             <tei:fw type="header" rend="center"><tei:handShift new="#HS-ink"/><tei:date when="1911"
                   >1911</tei:date></tei:fw><tei:lb/><tei:lb/>
-            <tei:date when="1911-07-02">July 2</tei:date>
+            <tei:date when="1911-07-17">July 17, 1911</tei:date>
          </tei:opener>
-         <tei:ab corresp="r0001-se01"> </tei:ab>
+         <tei:ab corresp="r0004-se01"> </tei:ab>
 
-         <tei:ab corresp="r0001-se02"> </tei:ab>
+         <tei:ab corresp="r0004-se02"> </tei:ab>
+
+      </tei:div>
+   </sdo:record>
+
+   <sdo:record ID="r0005">
+      <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
+                         The   contains a series of Dublin Core elements. -->
+      <sdo:itemDesc>
+         <dc:title>Diary entry by Schenker July 19, 1911</dc:title>
+         <dcterms:created>1911-07-19T12:00:00Z</dcterms:created>
+         <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
+            2019-07-26</dcterms:dateSubmitted>
+         <dc:description/>
+         <dc:subject/>
+      </sdo:itemDesc>
+
+      <tei:div type="transcription">
+         <tei:opener>
+            <tei:hi rend="bold">Ser. A, </tei:hi><tei:pb n="125"/><tei:lb/>
+            <tei:fw type="header" rend="center"><tei:handShift new="#HS-ink"/><tei:date when="1911"
+                  >1911</tei:date></tei:fw><tei:lb/><tei:lb/>
+            <tei:date when="1911-07-19">Mittwoch 19. Juli 1911</tei:date>
+         </tei:opener>
+         <tei:ab type="sub-entry" xml:id="r0005-se01"> </tei:ab>
+
+         <tei:ab type="sub-entry" xml:id="r0005-se02"> </tei:ab>
+
+      </tei:div>
+
+      <tei:div type="translation">
+         <tei:opener>
+            <tei:hi rend="bold">Ser. A, </tei:hi><tei:pb n="125"/><tei:lb/>
+            <tei:fw type="header" rend="center"><tei:handShift new="#HS-ink"/><tei:date when="1911"
+                  >1911</tei:date></tei:fw><tei:lb/><tei:lb/>
+            <tei:date when="1911-07-19">Wednesday July 19</tei:date>
+         </tei:opener>
+         <tei:ab corresp="r0005-se01"> </tei:ab>
+
+         <tei:ab corresp="r0005-se02"> </tei:ab>
+
+      </tei:div>
+   </sdo:record>
+
+   <sdo:record ID="r0006">
+      <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
+                         The   contains a series of Dublin Core elements. -->
+      <sdo:itemDesc>
+         <dc:title>Diary entry by Schenker July [21], 1911</dc:title>
+         <dcterms:created>1911-07-21T12:00:00Z</dcterms:created>
+         <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
+            2019-07-26</dcterms:dateSubmitted>
+         <dc:description/>
+         <dc:subject/>
+      </sdo:itemDesc>
+
+      <tei:div type="transcription">
+         <tei:opener>
+            <tei:hi rend="bold">Ser. A, </tei:hi><tei:pb n="125"/><tei:lb/>
+            <tei:fw type="header" rend="center"><tei:handShift new="#HS-ink"/><tei:date when="1911"
+                  >1911</tei:date></tei:fw><tei:lb/><tei:lb/>
+            <tei:date when="1911-07-21">Juli 1911.</tei:date>
+         </tei:opener>
+         <tei:ab type="sub-entry" xml:id="r0006-se01"> </tei:ab>
+
+         <tei:ab type="sub-entry" xml:id="r0006-se02"> </tei:ab>
+
+      </tei:div>
+
+      <tei:div type="translation">
+         <tei:opener>
+            <tei:hi rend="bold">Ser. A, </tei:hi><tei:pb n="125"/><tei:lb/>
+            <tei:fw type="header" rend="center"><tei:handShift new="#HS-ink"/><tei:date when="1911"
+                  >1911</tei:date></tei:fw><tei:lb/><tei:lb/>
+            <tei:date when="1911-07-21">July 1911</tei:date>
+         </tei:opener>
+         <tei:ab corresp="r0006-se01"> </tei:ab>
+
+         <tei:ab corresp="r0006-se02"> </tei:ab>
+
+      </tei:div>
+   </sdo:record>
+
+   <sdo:record ID="r0007">
+      <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
+                         The   contains a series of Dublin Core elements. -->
+      <sdo:itemDesc>
+         <dc:title>Diary entry by Schenker July 23, 1911</dc:title>
+         <dcterms:created>1911-07-23T12:00:00Z</dcterms:created>
+         <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
+            2019-07-26</dcterms:dateSubmitted>
+         <dc:description/>
+         <dc:subject/>
+      </sdo:itemDesc>
+
+      <tei:div type="transcription">
+         <tei:opener>
+            <tei:hi rend="bold">Ser. A, </tei:hi><tei:pb n="125"/><tei:lb/>
+            <tei:fw type="header" rend="center"><tei:handShift new="#HS-ink"/><tei:date when="1911"
+                  >1911</tei:date></tei:fw><tei:lb/><tei:lb/>
+            <tei:date when="1911-07-23">23. Juli:</tei:date>
+         </tei:opener>
+         <tei:ab type="sub-entry" xml:id="r0007-se01"> </tei:ab>
+
+         <tei:ab type="sub-entry" xml:id="r0007-se02"> </tei:ab>
+
+      </tei:div>
+
+      <tei:div type="translation">
+         <tei:opener>
+            <tei:hi rend="bold">Ser. A, </tei:hi><tei:pb n="125"/><tei:lb/>
+            <tei:fw type="header" rend="center"><tei:handShift new="#HS-ink"/><tei:date when="1911"
+                  >1911</tei:date></tei:fw><tei:lb/><tei:lb/>
+            <tei:date when="1911-07-23">July 23</tei:date>
+         </tei:opener>
+         <tei:ab corresp="r0007-se01"> </tei:ab>
+
+         <tei:ab corresp="r0007-se02"> </tei:ab>
+
+      </tei:div>
+   </sdo:record>
+
+   <sdo:record ID="r0008">
+      <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
+                         The   contains a series of Dublin Core elements. -->
+      <sdo:itemDesc>
+         <dc:title>Diary entry by Schenker July 29, 1911</dc:title>
+         <dcterms:created>1911-07-29T12:00:00Z</dcterms:created>
+         <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
+            2019-07-26</dcterms:dateSubmitted>
+         <dc:description/>
+         <dc:subject/>
+      </sdo:itemDesc>
+
+      <tei:div type="transcription">
+         <tei:opener>
+            <tei:hi rend="bold">Ser. A, </tei:hi><tei:pb n="125"/><tei:lb/>
+            <tei:fw type="header" rend="center"><tei:handShift new="#HS-ink"/><tei:date when="1911"
+                  >1911</tei:date></tei:fw><tei:lb/><tei:lb/>
+            <tei:date when="1911-07-29">29.</tei:date>
+         </tei:opener>
+         <tei:ab type="sub-entry" xml:id="r0008-se01"> </tei:ab>
+
+         <tei:ab type="sub-entry" xml:id="r0008-se02"> </tei:ab>
+
+      </tei:div>
+
+      <tei:div type="translation">
+         <tei:opener>
+            <tei:hi rend="bold">Ser. A, </tei:hi><tei:pb n="125"/><tei:lb/>
+            <tei:fw type="header" rend="center"><tei:handShift new="#HS-ink"/><tei:date when="1911"
+                  >1911</tei:date></tei:fw><tei:lb/><tei:lb/>
+            <tei:date when="1911-07-29"><tei:supplied reason="date">July</tei:supplied>
+               29</tei:date>
+         </tei:opener>
+         <tei:ab corresp="r0008-se01"> </tei:ab>
+
+         <tei:ab corresp="r0008-se02"> </tei:ab>
+
+      </tei:div>
+   </sdo:record>
+
+   <sdo:record ID="r0009">
+      <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
+                         The   contains a series of Dublin Core elements. -->
+      <sdo:itemDesc>
+         <dc:title>Diary entry by Schenker July 30, 1911</dc:title>
+         <dcterms:created>1911-07-30T12:00:00Z</dcterms:created>
+         <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
+            2019-07-26</dcterms:dateSubmitted>
+         <dc:description/>
+         <dc:subject/>
+      </sdo:itemDesc>
+
+      <tei:div type="transcription">
+         <tei:opener>
+            <tei:hi rend="bold">Ser. A, </tei:hi><tei:pb n="125"/><tei:lb/>
+            <tei:fw type="header" rend="center"><tei:handShift new="#HS-ink"/><tei:date when="1911"
+                  >1911</tei:date></tei:fw><tei:lb/><tei:lb/>
+            <tei:date when="1911-07-30">30.</tei:date>
+         </tei:opener>
+         <tei:ab type="sub-entry" xml:id="r0009-se01"> </tei:ab>
+
+         <tei:ab type="sub-entry" xml:id="r0009-se02"> </tei:ab>
+
+      </tei:div>
+
+      <tei:div type="translation">
+         <tei:opener>
+            <tei:hi rend="bold">Ser. A, </tei:hi><tei:pb n="125"/><tei:lb/>
+            <tei:fw type="header" rend="center"><tei:handShift new="#HS-ink"/><tei:date when="1911"
+                  >1911</tei:date></tei:fw><tei:lb/><tei:lb/>
+            <tei:date when="1911-07-30"><tei:supplied reason="date">July</tei:supplied>
+               30</tei:date>
+         </tei:opener>
+         <tei:ab corresp="r0009-se01"> </tei:ab>
+
+         <tei:ab corresp="r0009-se02"> </tei:ab>
 
       </tei:div>
    </sdo:record>
