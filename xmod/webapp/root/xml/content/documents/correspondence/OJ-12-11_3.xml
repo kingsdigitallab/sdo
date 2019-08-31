@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2255" sdoID="OJ-12-11_3">OJ 12/11, [3]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="PvK" scope="sole">Paul von Klenau's hand</tei:handNote>
+    </tei:handNotes>
+
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2013</tei:resp>
+      <tei:resp>Translation, 2013</tei:resp>
+      <tei:resp>XML Encoding, 2019</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-26" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-007030">KlenauP ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">letter</tei:rs>
+
+      <dc:title>Handwritten letter from Klenau to Schenker, dated September 25, 1923</dc:title>
+      <dcterms:created>1923-09-25T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2019-08-31</dcterms:dateSubmitted>
+      <dc:description>Klenau thanks Schenker for their discussion on September 21.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000443">Paul von Klenau</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:salute><tei:handShift new="#PvK"/>Sehr verehrter lieber Herr <tei:rs
+            key="entity-000632" type="person">Professor</tei:rs>!‒<tei:note xml:id="r0001-fn01"
+            type="editorial" place="foot">Receipt of this letter is recorded in Schenker's diary at
+            OJ 3/4, pp. 2574‒2575, September 26, 1923: "Von Klenau (Br.): bedankt sich eigens aufs
+            wärmste für die Winke." ("From Klenau (letter): he thanks me warmly of his own accord
+            for the tips."). This letter is transcribed in
+                <tei:bibl><tei:author>Federhofer</tei:author>, <tei:title level="m">Heinrich
+                Schenker nach Tagebüchern und Briefen ...</tei:title> (1985), pp.
+            162‒63</tei:bibl>.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Ich <tei:hi rend="underline">muss</tei:hi> Ihnen noch mals auf diesem Wege meinen
+        herzlichsten Dank für die ausserordentlich anregenden Stunden die ich bei Ihnen verbringen
+        durfte <tei:add place="interlinear-above">sagen</tei:add>.<tei:note xml:id="r0001-fn02"
+          type="editorial" place="foot">The visit took place on September 21 from 10.30 a.m.: see
+            <tei:ref type="correspondence" cRef="OC-82-10">OC 82/10</tei:ref> for a record of part
+          of the meeting, and footnote to <tei:ref type="correspondence" cRef="OJ-12-11_1">OJ 12/11,
+            [1]</tei:ref> for Schenker's diary record of the event.</tei:note> Seien Sie überzeugt
+        dass ich diesen Besuch immer in Erinnerung behalten werde ‒ und nehmen Sie die Versicherung
+        entgegen dass Sie einem Menschen und Musiker ein wertvolles bleibendes Geschenk gemacht
+        haben.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">Ich bin mit der aufrichtigsten Verehrung</tei:salute>
+        <tei:salute rend="indent-40">Ihr herzlich und dankbar ergebener</tei:salute>
+        <tei:signed rend="indent-50"><tei:rs key="entity-000443" type="person"><tei:hi
+              rend="lateinschr">Paul v. Klenau</tei:hi></tei:rs></tei:signed><tei:lb/>
+        <tei:address>
+          <tei:addrLine>d. <tei:date when="1923-09-25">25 Sept. 23</tei:date></tei:addrLine>
+          <tei:addrLine rend="indent-10">Wien XIX</tei:addrLine>
+          <tei:addrLine>19 Kaasgraben</tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:salute><tei:handShift new="#PvK"/>Greatly revered, dear Professor <tei:supplied
+            reason="identity"><tei:rs key="entity-000632" type="person"
+            >Schenker</tei:rs></tei:supplied>,<tei:ptr corresp="#r0001-fn01" type="footnote"
+          /></tei:salute>
+      </tei:opener>
+
+      <tei:p>I <tei:hi rend="underline">must</tei:hi>
+        <tei:add place="interlinear-above">express</tei:add> my most heartfelt thanks to you once
+        again, by this means, for the extraordinarily stimulating hours that I was able to spend
+        with you.<tei:ptr corresp="#r0001-fn02" type="footnote"/> Believe me, I shall hold this
+        visit for ever in my memory. And be assured that you have given a human being and musician a
+        precious, lasting gift.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">I am, with sincerest admiration,</tei:salute>
+        <tei:salute rend="indent-40">Your cordially and gratefully devoted</tei:salute>
+        <tei:signed rend="indent-50"><tei:rs key="entity-000443" type="person">Paul v.
+            Klenau</tei:rs></tei:signed><tei:lb/>
+        <tei:address>
+          <tei:addrLine>d. <tei:date when="1923-09-25">September 25, 1923</tei:date></tei:addrLine>
+          <tei:addrLine rend="indent-10">Vienna XIX</tei:addrLine>
+          <tei:addrLine>Kaasgraben 19</tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
