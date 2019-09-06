@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="2267" sdoID="BNba-304g_1">BNba 304g, [1]</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+   <tei:handNote xml:id="unk" scope="minor">unknown hand</tei:handNote>
+   <tei:handNote xml:id="FAS" scope="minor">F. A. Schmidt's hand</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="JR">
+   <tei:persName>Nicholas Marston</tei:persName>
+   <tei:resp>Transcription, 2015</tei:resp>
+   <tei:resp>Translation, 2015</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>XML Encoding, 2019</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2011-02-07" who="#IB">revision of XML code</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-007031">SchmidtFA ~
+    HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">letter</tei:rs>
+
+
+   <dc:title>Handwritten letter from Schenker to F. A. Schmidt (Beethoven-Haus), dated November 27,
+    1913</dc:title>
+
+   <dcterms:created>1913-11-27T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2019-09-06</dcterms:dateSubmitted>
+   <dc:description>Schenker asks the Beethoven-Haus to prepare and supply him with photographs of
+    the autograph manuscript of the first movement of Beethoven's Piano Sonata in C minor, Op. 111,
+    and announces the publication of his Erläuterungsausgabe of Op. 109 and monograph on Beethoven's
+    Ninth Symphony.</dc:description>
+   <dc:subject>Autograph; Ausgabe; edition; Satz; movement; photographieren; to photograph; weiss
+    auf schwarz; white-on-black; Aufnahme; picture; Monographie; monograph; Erfolg;
+    success</dc:subject>
+
+
+
+   <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+   <marcrel:recipient key="entity-000791">SchmidtFA</marcrel:recipient>
+   <marcrel:recipient key="entity-004558">Beethoven-Haus</marcrel:recipient>
+  </sdo:itemDesc>
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:note type="editorial" place="inline"><tei:handShift new="#unk"/>H. Schenker,
+     Beeth.-Ausgaben</tei:note><tei:lb/>
+    <tei:address>
+     <tei:addrLine><tei:handShift new="#FAS"/><tei:hi rend="lateinschr underline">Wien III</tei:hi>
+      Reisnerstraße 38.</tei:addrLine>
+    </tei:address>
+    <tei:salute><tei:handShift new="#HS"/>Sehr geehrter Herr <tei:rs type="person"
+      key="entity-000791">Professor</tei:rs>![1]</tei:salute>
+   </tei:opener>
+
+   <tei:p>Am </tei:p>
+
+   <tei:p><tei:pb n="2"/> Nun </tei:p>
+
+   <tei:p>Bei</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-20">Mit vorzüglichster Hochachtung</tei:salute>
+    <tei:salute rend="indent-40">Ihr ergebener</tei:salute>
+    <tei:signed rend="indent-40">
+     <tei:hi rend="lateinschr"><tei:rs key="entity-000632" type="person"><tei:hi rend="lateinschr">H
+        Schenker</tei:hi></tei:rs></tei:hi>
+    </tei:signed><tei:lb/>
+    <tei:dateline><tei:date when="1913-11-27">27. XI. 1913</tei:date></tei:dateline>
+   </tei:closer>
+
+  </tei:div>
+
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:note type="editorial" place="inline"><tei:handShift new="#unk"/>H. Schenker, Beethoven
+     editions</tei:note><tei:lb/>
+    <tei:address>
+     <tei:addrLine><tei:handShift new="#FAS"/><tei:hi rend="underline">Vienna III</tei:hi>
+      Reisnerstraße 38</tei:addrLine>
+    </tei:address>
+    <tei:salute><tei:handShift new="#HS"/>Dear Professor <tei:supplied reason="identity"><tei:rs
+       type="person" key="entity-000791">Schmidt</tei:rs></tei:supplied>,[1]</tei:salute>
+   </tei:opener>
+
+   <tei:p>On </tei:p>
+
+   <tei:p><tei:pb n="2"/> Now </tei:p>
+
+   <tei:p>I take </tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-20">With very best regards,</tei:salute>
+    <tei:salute rend="indent-40">Your devoted</tei:salute>
+    <tei:signed rend="indent-40">
+     <tei:hi rend="lateinschr"><tei:rs key="entity-000632" type="person">H
+      Schenker</tei:rs></tei:hi>
+    </tei:signed><tei:lb/>
+    <tei:dateline><tei:date when="1913-11-27">November 27, 1913</tei:date></tei:dateline>
+   </tei:closer>
+
+  </tei:div>
+ </sdo:record>
+</sdo:recordCollection>
