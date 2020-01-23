@@ -36,11 +36,13 @@
     <sdo:itemDesc>
       <tei:rs role="correspondence" type="correspondence" key="entity-007034">SchmidtFA ~
         Beethoven-Haus (Bonn)</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-007470">SchmidtFA ~
+        EZitelmann</tei:rs>
       <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">letter</tei:rs>
 
 
-      <dc:title>Handwritten letter from F. A. Schmidt (Beethoven-Haus) to an unknown Privy
-        Councillor [?Ernst Zitelmann], dated March 2, 1914</dc:title>
+      <dc:title>Handwritten letter from F. A. Schmidt (Beethoven-Haus) to Ernst Zitelmann, dated
+        March 2, 1914</dc:title>
 
       <dcterms:created>1914-03-02T11:00:00Z</dcterms:created>
       <dcterms:dateSubmitted>2019-09-13</dcterms:dateSubmitted>
@@ -49,6 +51,7 @@
       <dc:subject>Vorstand; Board; Erklärung; declaration</dc:subject>
 
       <marcrel:correspondent key="entity-000791">SchmidtFA</marcrel:correspondent>
+      <marcrel:recipient key="entity-007035">ZitelmannE</marcrel:recipient>
       <marcrel:recipient key="entity-004558">Beethoven-Haus</marcrel:recipient>
     </sdo:itemDesc>
 
@@ -60,7 +63,8 @@
               <tei:del rend="overwritten">3</tei:del>
               <tei:add place="superimposed">4</tei:add>
             </tei:subst></tei:date></tei:dateline>
-        <tei:salute>Sehr verehrter Herr Geheimrat!</tei:salute>
+        <tei:salute>Sehr verehrter Herr <tei:rs type="person" key="entity-007035"
+          >Geheimrat</tei:rs>!</tei:salute>
       </tei:opener>
 
       <tei:p>Beifolgend übersende ich Ihnen die mir heute zugegangene und vom Vorstand gewünschte
@@ -93,7 +97,8 @@
               <tei:del rend="overwritten">3</tei:del>
               <tei:add place="superimposed">4</tei:add>
             </tei:subst></tei:date></tei:dateline>
-        <tei:salute>Greatly revered Privy Councillor,</tei:salute>
+        <tei:salute>Greatly revered <tei:rs type="person" key="entity-007035">Privy
+            Councillor</tei:rs>,</tei:salute>
       </tei:opener>
 
       <tei:p>Enclosed I am forwarding to you the "Declaration,"<tei:ptr corresp="#r0001-fn01"
