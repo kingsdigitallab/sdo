@@ -35,13 +35,15 @@
   <sdo:itemDesc>
    <tei:rs role="correspondence" type="correspondence" key="entity-007031">SchmidtFA ~
     HSchenker</tei:rs>
+   <tei:rs role="correspondence" type="correspondence" key="entity-007470">SchmidtFA ~
+    EZitelmann</tei:rs>
    <tei:rs role="correspondence" type="correspondence" key="entity-006961">Beethoven-Haus (Bonn) ~
     HSchenker</tei:rs>
    <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">letter</tei:rs>
 
 
-   <dc:title>Handwritten letter and declaration from Schenker to the Chairman of the Board of the
-    Beethoven-Haus, dated February 28, 1914</dc:title>
+   <dc:title>Handwritten letter and declaration from Schenker to Ernst Zitelmann, dated February 28,
+    1914</dc:title>
 
    <dcterms:created>1914-02-28T12:00:00Z</dcterms:created>
    <dcterms:dateSubmitted>2019-09-13</dcterms:dateSubmitted>
@@ -54,6 +56,7 @@
 
 
    <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+   <marcrel:recipient key="entity-007035">ZitelmannE</marcrel:recipient>
    <marcrel:recipient key="entity-000791">SchmidtFA</marcrel:recipient>
    <marcrel:recipient key="entity-004558">Beethoven-Haus</marcrel:recipient>
   </sdo:itemDesc>
@@ -61,11 +64,10 @@
   <tei:div type="transcription">
    <tei:div type="part_1">
     <tei:opener>
-     <tei:salute><tei:handShift new="#HS"/>Sehr geehrter Herr Vorstand!<tei:note xml:id="r0001-fn01"
-       type="editorial" place="foot">Writing of this letter appears not to be recorded in Schenker's
-       diary. The identity of the Chairman of the Boad (Vorstand) is unclear: Ernst Zitelmann is a
-       possibilty, Ferdinand August Schmidt (zweiter Vorstand: literally second Chairman)
-       another.</tei:note></tei:salute>
+     <tei:salute><tei:handShift new="#HS"/>Sehr geehrter Herr <tei:rs type="person"
+       key="entity-007035">Vorstand</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial"
+       place="foot">Writing of this letter appears not to be recorded in Schenker's
+       diary.</tei:note></tei:salute>
     </tei:opener>
 
     <tei:p>Über Wunsch lege ich eine „Erklärung“ für das <tei:rs type="organization"
@@ -123,8 +125,8 @@
   <tei:div type="translation">
    <tei:div type="part_1">
     <tei:opener>
-     <tei:salute><tei:handShift new="#HS"/>Dear Chairman,<tei:ptr corresp="#r0001-fn01"
-       type="footnote"/></tei:salute>
+     <tei:salute><tei:handShift new="#HS"/>Dear <tei:rs type="person" key="entity-007035"
+       >Chairman</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
     </tei:opener>
 
     <tei:p>At your request I surrender a "declaration" for the <tei:rs type="organization"
