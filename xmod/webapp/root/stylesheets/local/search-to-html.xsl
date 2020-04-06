@@ -45,6 +45,7 @@
   
   <xsl:variable name="start" select="number(/*/response/result/@start)" />
   <xsl:variable name="number-results" select="number(/*/response/result/@numFound)" />
+
   <xsl:variable name="current-page" select="floor($start div $rows)+1" />
   <xsl:variable name="total-pages" select="xs:integer(ceiling($number-results div $rows))" />
   <xsl:variable name="requestString" select="$inc" />
@@ -312,7 +313,7 @@
                 <xsl:when test="$kind = 'diaries' or $kind = 'correspondence' or $kind = 'lessonbooks' or $kind = 'other'"><xsl:text>../documents/</xsl:text></xsl:when>
                 <xsl:otherwise><xsl:text>../profiles/</xsl:text></xsl:otherwise>
               </xsl:choose>              
-              <xsl:value-of select="str[@name = 'url']" />          
+              <xsl:value-of select="arr[@name = 'url']/str" />          
         </xsl:variable>
         <xsl:variable name="doccode">
           <xsl:for-each select="tokenize($href, '/')">

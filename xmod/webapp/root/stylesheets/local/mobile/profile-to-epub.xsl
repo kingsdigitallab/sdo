@@ -100,9 +100,9 @@
           <!--
           <xsl:if test="$include">
           <xsl:for-each select="/aggregation/response/result/doc">
-              <xsl:variable name="supporting-doc"><xsl:value-of select="$xmp:context-path"/><xsl:text>/mobile/</xsl:text><xsl:value-of select="str[@name='url']"/><xsl:text>?type=epub</xsl:text></xsl:variable>
+              <xsl:variable name="supporting-doc"><xsl:value-of select="$xmp:context-path"/><xsl:text>/mobile/</xsl:text><xsl:value-of select="arr[@name='url']/str"/><xsl:text>?type=epub</xsl:text></xsl:variable>
               
-              <zip:entry name="OEBPS/Text/{str[@name='url']}.html" src="cocoon://{$supporting-doc}" /> 
+              <zip:entry name="OEBPS/Text/{arr[@name='url']/str}.html" src="cocoon://{$supporting-doc}" /> 
           </xsl:for-each> 
           </xsl:if>-->
           

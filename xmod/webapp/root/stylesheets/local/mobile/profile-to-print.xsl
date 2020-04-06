@@ -247,7 +247,7 @@
             <a href="{str[@name='fileId']}.html"><xsl:value-of select="normalize-space($doc-id)"/><xsl:text> </xsl:text><strong><xsl:value-of select="normalize-space($doc-title)" /></strong></a>
           </xsl:when>
           <xsl:otherwise>
-            <a href="{$xmp:context-path}/documents/{str[@name='url']}"><xsl:value-of select="normalize-space($doc-id)" /><xsl:text> </xsl:text><strong><xsl:value-of select="normalize-space($doc-title)" /></strong></a>    
+            <a href="{$xmp:context-path}/documents/{arr[@name='url']/str}"><xsl:value-of select="normalize-space($doc-id)" /><xsl:text> </xsl:text><strong><xsl:value-of select="normalize-space($doc-title)" /></strong></a>    
           </xsl:otherwise>
           <xsl:if test="arr[@name='author'] and arr[@name='author_key'] = $entity-key"><xsl:text> [Author]</xsl:text></xsl:if>
       </xsl:choose>
