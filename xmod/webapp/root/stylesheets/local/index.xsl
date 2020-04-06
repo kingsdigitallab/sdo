@@ -265,39 +265,39 @@
                   <!-- COPY AND PASTE LINK BELOW TO DIRECT USERS TO THE 'OVERFLOW' PAGE FOR UPDATE NEWS -->
                   <!-- <a class="int" title="Link to Latest Material"
                         href="/documents/overviews/latest_material.html">More</a> -->
-                  <h4>What’s new in 2018? ‒ Diaries ‒ Correspondence ‒ Profiles</h4>
+                  <h4>Additions to the site in 2020</h4>
                   <ul>
-                    <li><strong>DIARIES:</strong> The earliest diaries, 1896 to 1908, are
-                      now available. They span Schenker's work as a journalist (1896‒1901), as
-                      composer, pianist, and conductor, his initial music editing and arranging
-                      (concertos by CPE and JS Bach, Handel), the CPE Bach Klavierwerke and
-                      Ornamentik, the Harmonielehre, the Niedergang essay, the
-                      Instrumentations-Tabelle, and preparatory work for Kontrapunkt I. Featured
-                      also are his many visits to, and critiques of, plays and concerts, his private
-                      world, and the initial references to his future wife Jeanette. — Also 1913 to
-                      1914, charting work on the early volumes of the Erläuterungsausgabe, work on
-                      Beethoven manuscripts, troubles with patrons, early contacts with Vrieslander
-                      and Weisse, and concerns about impending war.</li>
+                    <li><b>DIARIES:</b> The Summer‒Fall 1911 diaries cover the early life
+                      of Heinrich and Jeanette together, and her involvement in his diary. — With
+                      that material, the diaries now run continuously from 1896 to Dec 1914 and from
+                      Oct 1917 to Jan 1935. The gap will be filled during the coming 18 months.</li>
 
-                    <li><strong>CORRESPONDENCE:</strong> Communications with his chief
-                      publishers (Weinberger, UE, Cotta) up to 1908 ‒ now available ‒ not only
-                      expose the detailed publication history of his earlier works but also uncover
-                      attitudes towards his publishers ‒ reverential toward the ultra-German Cotta
-                      and deeply suspicious, rising to antagonistic, toward the Jewish
-                      internationalist, commercially-minded Emil Hertzka. — Strong feelings about
-                      Wagner and Bruckner surface in his correspondences with music critic Karl
-                      Grunsky (1907‒10), with whom Schenker disagreed, and composer and friend of
-                      Brahms Ernst Rudorff (1908), with whom Schenker was largely of one mind. — Now
-                      embarked on are the correspondences with Der Kunstwart editor Hermann Rinn
-                      (1927‒29 now online) and painter-engraver-typographer Victor Hammer (1923 now
-                      online), who made the famous mezzotint portrait of Schenker in 1925. — The
-                      enormous correspondence with pupil, wealthy collector, and musicologist
-                      Anthony van Hoboken (stretching from 1924 to 1935) is now all but complete, and
-                      makes a fascinating study in Schenker's conflicting feelings toward his
-                      primary patron.</li>
+                    <li><b>"POLITICAL DIARY":</b> Schenker wrote a separate diary from Nov
+                      1918 to June 1919 reflecting the immediate post-war period and Versailles
+                      Treaty, now on site. </li>
 
-                    <li><strong>PROFILES:</strong> 50 new profiles featuring people and
-                      institutions are now available.</li>
+                    <li><b>CORRESPONDENCE:</b> Amidst their trivialities, Schenker's
+                      postcards and letters to <b>Moriz Violin</b> for 1910‒11 contain
+                      explosive material about the relationship between Schenker and Jenny Kornfeld
+                      (i.e. Jeanette). — The only letter from <b>Felix Kornfeld</b> and
+                      his mother <b>Jeanette</b> is heart-breaking, and the exchange
+                      between his son <b>Tomáš Kornfeld</b> and <b>Heribert
+                        Esser</b> illuminates the Kornfeld household after Jeanette left it in
+                      1910.</li>
+                    <li>The correspondence with the <b>Beethoven House, Bonn</b> for
+                      1913‒14 concerns Op. 111, in preparation for the <em>Erläuterungsausgabe</em>.
+                      — That with Danish conductor <b>Paul von Klenau</b>, whom Schenker
+                      considered a prospective exponent of his ideas, shows Schenker explaining
+                      editorial and performance principles in Beethoven's music, leading to the
+                      historical 1924 concert of the Ninth Symphony and part of the <em>Missa
+                        solemnis</em>. — The exchanges with <b>Victor Hammer</b> for 1924
+                      cover the beginning of Schenker's sittings for Hammer's famous 1925 mezzotint
+                      portrait and the conversations that occurred during those sittings.</li>
+
+                    <li><b>PROFILES:</b> 27 new profiles (including. e.g., Paul von
+                      Klenau, the Beethoven House, and Theresienstadt), and revisions of many others
+                      (including the Kornfeld family members, Fanny Violin, and Jeanette
+                      Schenker).</li>
                   </ul>
 
                   <nav class="local" id="blogPosts">
@@ -322,7 +322,7 @@
                             <xsl:value-of select="./title"/>
                           </a>
                           <p>
-                            <xsl:value-of select="substring-before(./description, ' &amp;#8230;')"/>
+                            <xsl:value-of select="substring-before(./description, ' &#8230;')"/>
                             <xsl:text>&#8230;</xsl:text>
                             <a>
                               <xsl:attribute name="href">
@@ -332,18 +332,7 @@
                         </li>
                       </xsl:for-each>
 
-                      <!--
-                      <li>
-                        <a class="navLink first" href="#">SDO Hat Trick at SMA TAGS</a>
-                        <p>The Schenker Documents Online project was well represented at the recent
-                          Society for Music Analysis's Theory and Analysis Graduate Students (TAGS)
-                          conference...</p>
-                      </li>
-                      <li>
-                        <a class="navLink" href="#">Hofrat Heinrich Schenker ??</a>
-                        <p>Under the Hapsburgs, public honors (Berufstitel) rewarded people for
-                          distinguished service to the state...</p>
-                      </li> -->
+
 
                       <li class="seeAll">
                         <a class="navLink" href="http://blog.schenkerdocumentsonline.org/">See all
@@ -429,8 +418,8 @@
         <!-- end wrapper -->
 
 
-      <script defer="defer" src="https://kdl.kcl.ac.uk/sla-acpp/js/sla.js" type="text/javascript">&#160;</script>
-</body>
+        <script defer="defer" src="https://kdl.kcl.ac.uk/sla-acpp/js/sla.js" type="text/javascript">&#160;</script>
+      </body>
     </html>
 
   </xsl:template>
