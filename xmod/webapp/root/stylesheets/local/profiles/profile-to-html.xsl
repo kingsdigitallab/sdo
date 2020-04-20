@@ -369,7 +369,7 @@
     <xsl:variable name="href">
       <xsl:value-of select="$xmp:context-path"/>
       <xsl:text>/documents/</xsl:text>
-      <xsl:value-of select="str[@name='url']"/>
+      <xsl:value-of select="arr[@name='url']/str"/>
     </xsl:variable>
 
     <xsl:variable name="doccode">
@@ -400,8 +400,8 @@
           <xsl:text> </xsl:text>
           <strong>
             <xsl:choose>
-              <xsl:when test="str[@name='title']">
-                <xsl:value-of select="str[@name='title']"/>
+              <xsl:when test="arr[@name='title']">
+                <xsl:value-of select="arr[@name='title']/str"/>
               </xsl:when>
               <xsl:otherwise>
                 <xsl:text>Diary entry by Schenker for </xsl:text>
