@@ -56,7 +56,7 @@
 </script>
 
         <!-- jquery from Google CDN -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"/>
 
         <!-- jquery tools from Flowplayer CDN -->
         <!--<script src="http://cdn.jquerytools.org/1.2.5/all/jquery.tools.min.js"/>-->
