@@ -284,8 +284,8 @@
           <xsl:text> </xsl:text>
           <fo:inline font-weight="bold">
             <xsl:choose>
-              <xsl:when test="str[@name='title']">
-                <xsl:value-of select="str[@name='title']" />
+              <xsl:when test="arr[@name='title']">
+                <xsl:value-of select="arr[@name='title']/str" />
               </xsl:when>
               <xsl:otherwise>
                 <xsl:text>Diary entry by Schenker for </xsl:text>
