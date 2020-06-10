@@ -332,7 +332,7 @@
             <xsl:otherwise><input type="checkbox" name="{$doccode}" value="1" /></xsl:otherwise>
           </xsl:choose>
           <a href="{$href}">
-            <xsl:value-of select="str[@name='title']" />
+            <xsl:value-of select="arr[@name='title']/str" />
             <xsl:if test="$kind = 'diaries'">
               <xsl:text>Diary entry for </xsl:text>
               <xsl:value-of select="str[@name='dateShort']" />
