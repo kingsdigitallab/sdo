@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2391" sdoID="WSLB-55">WSLB 55</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+      <tei:handNote xml:id="unk" scope="minor">unknown hand (UE)</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2005, 2020</tei:resp>
+      <tei:resp>Translation, 2005, 2020</tei:resp>
+      <tei:resp>XML Encoding, 2020</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-04" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002700">Hertzka ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002701">UE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002702">UE ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+      <dc:title>Handwritten letter from Schenker to Hertzka (UE), dated April 5, 1910</dc:title>
+
+      <dcterms:created>1910-04-05T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2020-07-02</dcterms:dateSubmitted>
+      <dc:description>Schenker presses again for proofs of the Chromatic Fantasy &amp; Fugue
+        edition, so as to coordinate them with his work on Kontrapunkt 1.</dc:description>
+      <dc:subject>Herausgabe; publication; Pression; pressure; Korrekturen; proofs</dc:subject>
+
+      <marcrel:correspondent key="entity-000632">Heinrich Schenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000356">Emil Hertzka</marcrel:recipient>
+      <marcrel:recipient key="entity-002408">Universal Edition</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:byline><tei:note type="editorial" place="inline">UE receipt:</tei:note>
+          <tei:handShift new="#stamp"/><tei:date when="1910-04-06">6. APR.
+          1910</tei:date></tei:byline><tei:lb/>
+        <tei:byline><tei:note type="editorial" place="inline">UE accession #:</tei:note>
+          <tei:handShift new="#stamp"/>0003</tei:byline><tei:lb/>
+        <tei:byline><tei:handShift new="#stamp"/>Eingegangen ...... / Beantwortet <tei:handShift
+            new="#unk"/><tei:date when="1910-04-09">9. IV.</tei:date></tei:byline>
+        <tei:salute rend="indent-10"><tei:handShift new="#HS"/>Sehr geehrter Herr <tei:rs
+            type="person" key="entity-000356">Direktor</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p>Aus Anlaß einer Pause, die sich <tei:add place="interlinear-above">mir</tei:add>
+        naturgemäß nach der bald bevorstehenden Herausgabe <tei:rs type="work" key="entity-001726"
+          >des ersten Halbbandes meines „<tei:title>Kontrapunkts</tei:title></tei:rs>“<tei:note
+          xml:id="r0001-fn01" type="editorial" place="foot">published by J. G. Cotta of Stuttgart,
+          and released on October 4, 1910.</tei:note> darbieten wird, erlaube ich mir Sie neuerdings
+        zu ersuchen, auf die Druckerei eine kleine Pression zu üben: vielleicht wird es doch
+        möglich, daß ich noch um die Mitte dieses Monats wenigstens den <tei:hi rend="underline"
+          >ersten Teil</tei:hi> der Korrekturen<tei:note xml:id="r0001-fn02" type="editorial"
+          place="foot">i.e. proofs of <tei:title level="m">Chromatische Fantasie und Fuge D moll:
+            Kritische Ausgabe mit Anhang von Heinrich Schenker</tei:title> (Vienna: UE, 1910), for
+          which Verlagsdruckbuch UE 2540 records the printing order as having been given on
+          September 20, and the edition as having been released to the publisher on October 21, 1910
+          in a print-run of 500 copies. Schenker is taking Hertzka up on his prediction, in <tei:ref
+            type="correspondence" cRef="OC-52-47">OC 52/47</tei:ref>, March 12, 1910, that proofs
+          would be available during April. In reality, they reached Schenker on June 3 (<tei:ref
+            type="correspondence" cRef="WSLB-61">WSLB 61</tei:ref>).</tei:note> erhalten.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">Mit besten Grüßen</tei:salute>
+        <tei:salute rend="indent-60">I<tei:supplied reason="omission">h</tei:supplied>r
+            erg<tei:supplied reason="omission">e</tei:supplied>b<tei:supplied reason="omission"
+            >ener</tei:supplied></tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:rs key="entity-000632" type="person"><tei:hi rend="lateinschr">H
+            Schenker</tei:hi></tei:rs>
+        </tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1910-04-05">5. 4. 10.</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:byline><tei:note type="editorial" place="inline">UE receipt:</tei:note>
+          <tei:handShift new="#stamp"/><tei:date when="1910-04-06">6. APR.
+          1910</tei:date></tei:byline><tei:lb/>
+        <tei:byline><tei:note type="editorial" place="inline">UE accession #:</tei:note>
+          <tei:handShift new="#stamp"/>0003</tei:byline><tei:lb/>
+        <tei:byline><tei:handShift new="#stamp"/>Received ...... / Answered <tei:handShift
+            new="#unk"/><tei:date when="1910-04-09">9. IV.</tei:date></tei:byline>
+        <tei:salute rend="indent-10"><tei:handShift new="#HS"/>Dear <tei:rs type="person"
+            key="entity-000356">Director</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>In anticipation that I shall, all being well, take a break afforded <tei:add
+          place="interlinear-above">me</tei:add> by the impending publication of <tei:rs type="work"
+          key="entity-001726">the first half-volume of my <tei:title level="m"
+            >Counterpoint</tei:title></tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/> I
+        take the liberty of asking you once again to try to exert a little pressure on the printers.
+        Perhaps it will be possible for me to get hold of at least the <tei:hi rend="underline"
+          >first part</tei:hi> of the proofs<tei:ptr corresp="#r0001-fn02" type="footnote"/> around
+        the middle of this month.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">With best wishes,</tei:salute>
+        <tei:salute rend="indent-60">Your devoted</tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:rs key="entity-000632" type="person">H. Schenker</tei:rs>
+        </tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1910-04-05">April 5, 1910</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
