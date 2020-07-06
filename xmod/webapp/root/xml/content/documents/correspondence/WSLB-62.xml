@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2398" sdoID="WSLB-62">WSLB 62</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+      <tei:handNote xml:id="unk" scope="minor">unknown hand (UE)</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2006, 2020</tei:resp>
+      <tei:resp>Translation, 2006, 2020</tei:resp>
+      <tei:resp>XML Encoding, 2020</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-04" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002700">Hertzka ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002701">UE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002702">UE ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+      <dc:title>Handwritten letter from Schenker to Hertzka (UE), dated June 10, 1910</dc:title>
+
+      <dcterms:created>1910-06-10T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2020-07-03</dcterms:dateSubmitted>
+      <dc:description>Schenker reports that he is busy correcting proofs of his Chromatic Fantasy
+        &amp; Fugue edition, and hopes to have returned them by the end of June, and even to correct
+        and approve the second proofs if available.</dc:description>
+      <dc:subject>Schüler; pupils; Noten; music; Erläuterung; elucidations; Text; Druckerei;
+        printers; Korrekturen; proofs; imprimatur; Ausgaben; editions</dc:subject>
+
+      <marcrel:correspondent key="entity-000632">Heinrich Schenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000356">Emil Hertzka</marcrel:recipient>
+      <marcrel:recipient key="entity-002408">Universal Edition</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:byline><tei:note type="editorial" place="inline">UE receipt:</tei:note>
+          <tei:handShift new="#stamp"/><tei:date when="1910-06-11">11. Juni
+          1910</tei:date></tei:byline><tei:lb/>
+        <tei:byline><tei:note type="editorial" place="inline">UE accession #:</tei:note>
+          <tei:handShift new="#stamp"/>0004</tei:byline>
+        <tei:salute rend="indent-10"><tei:handShift new="#HS"/>Sehr geehrter Herr <tei:rs
+            type="person" key="entity-000356">Direktor</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p>Das schöne Wetter hat seine Schuldigkeit, u. mehr Schüler verreisen schon, als ich es
+        erwartet habe. Somit gehe ich an die Arbeit u. will spätestens den <tei:date
+          when="1910-06-15">15<tei:hi rend="supralinear">dm.</tei:hi></tei:date> Ihnen den ersten
+          Theil,<tei:note xml:id="r0001-fn01" type="editorial" place="foot">i.e. of proofs of his
+          edition of the <tei:rs type="work" key="entity-001730"><tei:title level="m">Chromatic
+              Fantasy &amp; Fugue</tei:title></tei:rs>, received on June 3. Schenker is to leave for
+          the summer on July 3 (he actually leaves on July 5), so is under pressure of
+          time.</tei:note> umfassend <tei:hi rend="lateinschr underline">Noten</tei:hi> + <tei:hi
+          rend="lateinschr underline">Erläuterung</tei:hi> an der <tei:hi rend="lateinschr"
+          >Phantasie</tei:hi> selbst, übersenden. Und Anfang der zweitnächsten Woche, gegen
+          <tei:date when="1910-06-20">20<tei:hi rend="supralinear">dm.</tei:hi></tei:date> kann ich
+        vielleicht die <tei:hi rend="lateinschr">Fuge</tei:hi> : <tei:hi rend="lateinschr"
+          >Noten</tei:hi> + <tei:hi rend="lateinschr">Text</tei:hi> liefern.</tei:p>
+
+      <tei:p rend="first">Wenn die Druckerei frei wäre, so gienge es, in Anbetracht dessen, daß der
+        erste Theil nur wenig Korrekturen hat, vielleicht zu erreichen, daß die II. Korrektur
+        inzwischen gemacht würde, während ich die Fuge korrigiere. Bei glattem Ablauf stelle ich mir
+        als möglich vor, daß wir bis <tei:pb n="2"/> Ende des Monats Alles, das <tei:hi
+          rend="lateinschr">Inprimatur</tei:hi> inbegriffen, fertig kriegen. Wenigstens will ich es
+        meinerseits so fleißig machen, daß ich es nun mehr auf das <tei:hi rend="lateinschr"
+          >Inprimatur</tei:hi> ankommen lassen <tei:del rend="overstrike">Worte</tei:del> u. Ihnen
+        die vielen Ausgaben retournieren könnte.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">Mit ausg. Hochachtung</tei:salute>
+        <tei:salute rend="indent-60">I<tei:supplied reason="omission">h</tei:supplied>r
+            erg<tei:supplied reason="omission">e</tei:supplied>b<tei:supplied reason="omission"
+            >ener</tei:supplied></tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:rs key="entity-000632" type="person"><tei:hi rend="lateinschr">H
+            Schenker</tei:hi></tei:rs>
+        </tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1910-06-10">10. 6. 10</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:byline><tei:note type="editorial" place="inline">UE receipt:</tei:note>
+          <tei:handShift new="#stamp"/><tei:date when="1910-06-11">June 11,
+          1910</tei:date></tei:byline><tei:lb/>
+        <tei:byline><tei:note type="editorial" place="inline">UE accession #:</tei:note>
+          <tei:handShift new="#stamp"/>0004</tei:byline>
+        <tei:salute rend="indent-10"><tei:handShift new="#HS"/>Dear <tei:rs type="person"
+            key="entity-000356">Director</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>The fine weather must takes its share of the blame, and more pupils are already leaving
+        town than I was expecting. As a result, I am getting on with the work, and will send you by
+        the <tei:date when="1910-06-15">15th of the month</tei:date> at the latest the first
+          batch,<tei:ptr corresp="#r0001-fn01" type="footnote"/> comprising music + elucidations
+        just of the Fantasy. And at the beginning of the week after next, around the <tei:date
+          when="1910-06-20">20th of the month</tei:date>, I may perhaps be able to produce the
+        Fugue: music + text.</tei:p>
+
+      <tei:p rend="first">If the printers were free, it might perhaps be possible, in view of the
+        fact that the first batch has only a few corrections, for the second proofs to be made in
+        the meantime, while I am correcting the Fugue. If everything goes smoothly, I imagine it is
+        possible we will have it all done by the <tei:pb n="2"/> end of the month, including the
+          <tei:hi rend="italic">imprimatur</tei:hi>. At least, for my part I will work as hard to
+        make it possible for me to arrive at the <tei:hi rend="italic">imprimatur</tei:hi> stage,
+        and could return to you the many editions.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">With kind regards,</tei:salute>
+        <tei:salute rend="indent-60">Your devoted</tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:rs key="entity-000632" type="person">H. Schenker</tei:rs>
+        </tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1910-06-10">June 10, 1910</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
