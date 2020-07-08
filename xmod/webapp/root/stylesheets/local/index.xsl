@@ -267,40 +267,39 @@
                         href="/documents/overviews/latest_material.html">More</a> -->
                   <h4>Additions to the site in 2020</h4>
                   <ul>
-                    <li><b>DIARIES:</b> The Summer‒Fall 1911 diaries cover the early life
-                      of Heinrich and Jeanette together, and her involvement in his diary. — With
-                      that material, the diaries now run continuously from 1896 to Dec 1914 and from
-                      Oct 1917 to Jan 1935. The gap will be filled during the coming 18 months.</li>
-
-                    <li><b>"POLITICAL DIARY":</b> Schenker wrote a separate diary from Nov
-                      1918 to June 1919 reflecting the immediate post-war period and Versailles
-                      Treaty, now on site. </li>
-
-                    <li><b>CORRESPONDENCE:</b> Amidst their trivialities, Schenker's
-                      postcards and letters to <b>Moriz Violin</b> for 1910‒11 contain
-                      explosive material about the relationship between Schenker and Jenny Kornfeld
-                      (i.e. Jeanette). — The only letter from <b>Felix Kornfeld</b> and
-                      his mother <b>Jeanette</b> is heart-breaking, and the exchange
-                      between his son <b>Tomáš Kornfeld</b> and <b>Heribert
-                        Esser</b> illuminates the Kornfeld household after Jeanette left it in
-                      1910.</li>
-                    <li>The correspondence with the <b>Beethoven House, Bonn</b> for
-                      1913‒14 concerns Op. 111, in preparation for the <em>Erläuterungsausgabe</em>.
-                      — That with Danish conductor <b>Paul von Klenau</b>, whom Schenker
-                      considered a prospective exponent of his ideas, shows Schenker explaining
-                      editorial and performance principles in Beethoven's music, leading to the
-                      historical 1924 concert of the Ninth Symphony and part of the <em>Missa
-                        solemnis</em>. — The exchanges with <b>Victor Hammer</b> for 1924
-                      cover the beginning of Schenker's sittings for Hammer's famous 1925 mezzotint
-                      portrait and the conversations that occurred during those sittings.</li>
-
-                    <li><b>PROFILES:</b> 27 new profiles (including. e.g., Paul von
-                      Klenau, the Beethoven House, and Theresienstadt), and revisions of many others
-                      (including the Kornfeld family members, Fanny Violin, and Jeanette
-                      Schenker).</li>
+                    <li><b>DIARIES:</b> The Summer‒Fall 1911 diaries cover the early life of
+                      Heinrich and Jeanette together, and her involvement in his diary. — With that
+                      material, the diaries now run continuously from 1896 to Dec 1914 and from Oct
+                      1917 to Jan 1935. The gap will be filled during the coming 18 months.</li>
+                    <li><b>"POLITICAL DIARY":</b> Schenker wrote a separate diary from Nov 1918 to
+                      June 1919 reflecting the immediate post-war period and Versailles Treaty, now
+                      on site. </li>
+                    <li><b>CORRESPONDENCE:</b> Amidst their trivialities, Schenker's postcards and
+                      letters to <b>Moriz Violin</b> for 1910‒11 contain explosive material about
+                      the relationship between Schenker and Jenny Kornfeld (i.e. Jeanette). — The
+                      only letter from <b>Felix Kornfeld</b> and his mother <b>Jeanette</b> is
+                      heart-breaking, and the exchange between his son <b>Tomáš Kornfeld</b> and
+                        <b>Heribert Esser</b> illuminates the Kornfeld household after Jeanette left
+                      it in 1910.</li>
+                    <li>The correspondence with the <b>Beethoven House, Bonn</b> for 1913‒14
+                      concerns Op. 111, in preparation for the <em>Erläuterungsausgabe</em>. — That
+                      with Danish conductor <b>Paul von Klenau</b>, whom Schenker considered a
+                      prospective exponent of his ideas, shows Schenker explaining editorial and
+                      performance principles in Beethoven's music, leading to the historical 1924
+                      concert of the Ninth Symphony and part of the <em>Missa solemnis</em>. — The
+                      exchanges with <b>Victor Hammer</b> for 1924 cover the beginning of Schenker's
+                      sittings for Hammer's famous 1925 mezzotint portrait and the conversations
+                      that occurred during those sittings.</li>
+                    <li><b>LESSONBOOKS</b></li> Schenker's lessonbook for 1915/16 is now on site. It
+                    is instructive particularly in showing which students studied theory and exactly
+                    what materials they were taught.
+                    <li><b>PROFILES:</b> 27 new profiles
+                      (including. e.g., Paul von Klenau, the Beethoven House, and Theresienstadt),
+                      and revisions of many others (including the Kornfeld family members, Fanny
+                      Violin, and Jeanette Schenker).</li>
                   </ul>
 
-                  <nav class="local" id="blogPosts">
+                  <!--<nav class="local" id="blogPosts">
                     <h4>From the Blog</h4>
                     <ul>
 
@@ -340,7 +339,7 @@
                       </li>
 
                     </ul>
-                  </nav>
+                  </nav>-->
                 </div>
                 <!-- end column right -->
 
