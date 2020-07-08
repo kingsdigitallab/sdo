@@ -290,9 +290,9 @@
                       exchanges with <b>Victor Hammer</b> for 1924 cover the beginning of Schenker's
                       sittings for Hammer's famous 1925 mezzotint portrait and the conversations
                       that occurred during those sittings.</li>
-                    <li><b>LESSONBOOKS</b></li> Schenker's lessonbook for 1915/16 is now on site. It
-                    is instructive particularly in showing which students studied theory and exactly
-                    what materials they were taught.
+                    <li><b>LESSONBOOKS</b> Schenker's lessonbook for 1915/16 is now on site. It
+                      is instructive particularly in showing which students studied theory and exactly
+                      what materials they were taught.</li>
                     <li><b>PROFILES:</b> 27 new profiles
                       (including. e.g., Paul von Klenau, the Beethoven House, and Theresienstadt),
                       and revisions of many others (including the Kornfeld family members, Fanny
