@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="2468" sdoID="OJ-11-10_7">OJ 11/10, [7]</sdo:correspondence>
+  </sdo:source>
+
+
+  <tei:handNotes>
+   <tei:handNote xml:id="TF" scope="major">Theodor von Frimmel's hand</tei:handNote>
+   <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="HE">
+   <tei:persName>Heribert Esser</tei:persName>
+   <tei:resp>Transcription, 2019</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="JR">
+   <tei:persName>John Rothgeb</tei:persName>
+   <tei:resp>Translation, 2019</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>XML Encoding, 2020</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2013-08-29" who="#DB">XML code created</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-005688">FrimmelT ~
+    HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+   <dc:title>Handwritten postcard from Frimmel to Schenker, dated March 14, 1905</dc:title>
+
+   <dcterms:created>1905-03-14T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2020-07-22</dcterms:dateSubmitted>
+   <dc:description>The promised Handel Organ Concertos volume has not yet arrived. — Frimmel asks
+    for the score of the C. P. E. Bach concerto that Schenker played the previous fall. Tickets for
+    his Beethoven lectures will be sent soon.</dc:description>
+   <dc:subject>Konzert; concerto; Saison; season</dc:subject>
+
+   <marcrel:correspondent key="entity-000259">Theodor von Frimmel</marcrel:correspondent>
+   <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+  </sdo:itemDesc>
+
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/><tei:lb/>
+    <tei:fw type="header" rend="center">
+     <tei:handShift new="#printed"/><tei:hi rend="bold">Rohrpostkarte</tei:hi></tei:fw>
+    <tei:lb/>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:addrLine>Absender: <tei:note type="editorial" place="inline">left
+       blank</tei:note></tei:addrLine>
+     </tei:address>
+     <tei:address>
+      <tei:addrLine>An <tei:handShift new="#TF"/>Hochwohlgb. Herrn Prof. D<tei:hi rend="supralinear"
+        >r.</tei:hi> Heinr. Schenker</tei:addrLine>
+      <tei:addrLine rend="indent-10">Tonkünstler, Komponist<tei:supplied reason="punctuation"
+        >,</tei:supplied> Schriftsteller</tei:addrLine>
+      <tei:addrLine><tei:handShift new="#printed"/>In <tei:supplied reason="identity"
+        >Wien</tei:supplied></tei:addrLine>
+      <tei:addrLine rend="indent-40"><tei:handShift new="#TF"/>III. Reisnerstr. 38</tei:addrLine>
+     </tei:address><tei:lb/>
+     <tei:fw type="postmark">|| WIEN 3/3 | 7 30V 15 III 05 | 49 P ||</tei:fw>
+     <tei:fw type="postmark">|| 4/1 WIEN 50 | 15.III.05 VII‒ | * <tei:gap reason="illegible"/> *
+      ||</tei:fw>
+     <tei:lb/><tei:lb/>
+    </tei:fw>
+    <tei:milestone unit="folio" n="verso"/>
+    <tei:dateline><tei:handShift new="#TF"/><tei:placeName>Wien</tei:placeName>, <tei:date
+      when="1905-03-14">14.März 1905</tei:date></tei:dateline>
+    <tei:salute>Hochgeehrter Herr <tei:rs key="entity-000632" type="person">Doctor</tei:rs>!
+    </tei:salute>
+   </tei:opener>
+
+   <tei:p rend="first">Hätte Ihnen heute gerne persönlich für Ihren lieben Brief gedankt. Die
+     <tei:sic>Orgelsonaten</tei:sic> sind noch nicht da.<tei:note xml:id="r0001-fn01"
+     type="editorial" place="foot">In <tei:ref type="correspondence" cRef="BNba-Frimmel-Nachl_1"
+      >BNba Frimmel Nachl, [1]</tei:ref>, March 13, 1905, Schenker wrote saying that at his
+     instigation Universal Edition had sent Frimmel his <tei:rs type="work" key="entity-001722"
+       ><tei:title>Handel Organ Concertos</tei:title>, vol. I</tei:rs>.</tei:note></tei:p>
+
+   <tei:p>Dann wollte ich Ihnen die Bitte vorlegen um das <tei:rs type="person" key="entity-000025"
+     >Ph. Em. Bach</tei:rs> Konzert, das Sie in der Saison so grossartig gespielt haben, einer
+    Stelle wegen, die vielleicht <tei:rs type="person" key="entity-000055">Beethoven</tei:rs>
+    gekannt hat.<tei:note xml:id="r0001-fn02" type="editorial" place="foot">C. P. E. Bach wrote
+     three A minor keyboard concertos that are possible candidates for this: Helm 403, 424, and 430.
+     Schenker performed the concerto in question on November 7(?), 1904, see <tei:ref
+      type="correspondence" cRef="OJ-11-10_6">OJ 11/10, [6]</tei:ref>. — Schenker's diary for
+     October 12, 1903 records: "Im Archiv auf das herrliche Mcpt-Kl. Konz. A-moll von Ph. Em Bach
+     gestoßen." ("In the Archive the magnificent manuscript [of the] keyboard concerto in A minor by
+     C. P. E. Bach encountered."). None of the three appear to be in manuscript at the archive of
+     the Gesellschaft der Musikfreunde in Vienna.</tei:note> Die Sitze zu meinen <tei:rs
+     type="person" key="entity-000055">Beethoven</tei:rs>vorträgen für Sie, Herrn <tei:rs
+     type="person" key="entity-000913">Violin</tei:rs>, <tei:rs type="person" key="entity-000582"
+     >Frau <tei:sic>Meyerhofer</tei:sic></tei:rs> und Tochter <tei:add place="interlinear-above">u.
+      <tei:rs type="person" key="entity-000274">Prof.Gärtner</tei:rs></tei:add> folgen in den
+    nächsten Tagen. Die Adressen sind doch unverändert.</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-10">Mit freundlicher Begrüssung</tei:salute>
+    <tei:signed rend="indent-40"><tei:rs key="entity-000259" type="person">D<tei:hi
+       rend="supralinear">r.</tei:hi> Frimmel</tei:rs></tei:signed>
+   </tei:closer>
+
+  </tei:div>
+
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/><tei:lb/>
+    <tei:fw type="header" rend="center">
+     <tei:handShift new="#printed"/><tei:hi rend="bold">Pneumatic Postcard</tei:hi></tei:fw>
+    <tei:lb/>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:addrLine>Sender: <tei:note type="editorial" place="inline">left
+       blank</tei:note></tei:addrLine>
+     </tei:address>
+     <tei:address>
+      <tei:addrLine>To: <tei:handShift new="#TF"/>Prof. Heinrich Schenker, Esq.</tei:addrLine>
+      <tei:addrLine rend="indent-10">Musician, Composer, Writer on Music</tei:addrLine>
+      <tei:addrLine><tei:handShift new="#printed"/>In <tei:supplied reason="identity"
+        >Vienna</tei:supplied>
+       <tei:handShift new="#TF"/>III</tei:addrLine>
+      <tei:addrLine rend="indent-40">Reisnerstraße 38</tei:addrLine>
+     </tei:address><tei:lb/>
+     <tei:fw type="postmark">|| VIENNA 3/3 | 7 30V 15 III 05 | 49 P ||</tei:fw>
+     <tei:fw type="postmark">|| 4/1 VIENNA 50 | 15.III.05 VII‒ | * <tei:gap reason="illegible"/> *
+      ||</tei:fw>
+     <tei:lb/><tei:lb/>
+    </tei:fw>
+    <tei:milestone unit="folio" n="verso"/>
+    <tei:dateline><tei:handShift new="#TF"/><tei:placeName>Vienna</tei:placeName>, <tei:date
+      when="1905-03-14">March 14, 1905</tei:date></tei:dateline>
+    <tei:salute>Very dear Dr. <tei:supplied reason="identity"><tei:rs key="entity-000632"
+       type="person">Schenker</tei:rs></tei:supplied>,</tei:salute>
+   </tei:opener>
+
+   <tei:p rend="first">I would have liked today to thank you personally for your kind letter. The
+    organ <tei:sic>sonatas</tei:sic> have not yet arrived.<tei:ptr corresp="#r0001-fn01"
+     type="footnote"/></tei:p>
+
+   <tei:p>Then I wanted to ask you for the <tei:rs type="person" key="entity-000025">C. P. E.
+     Bach</tei:rs> concerto that you played so magnificently last season, because of a passage that
+     <tei:rs type="person" key="entity-000055">Beethoven</tei:rs> may have known.<tei:ptr
+     corresp="#r0001-fn02" type="footnote"/> The tickets to my <tei:rs type="person"
+     key="entity-000055">Beethoven</tei:rs> lectures for you, Mr. <tei:rs type="person"
+     key="entity-000913">Violin</tei:rs>, <tei:rs type="person" key="entity-000582">Mrs.
+     Mayerhofer</tei:rs> and her daughter <tei:add place="interlinear-above">and <tei:rs
+      type="person" key="entity-000274">Prof. Gärtner</tei:rs></tei:add> will follow in the coming
+    days. The addresses, I assume, are unchanged.</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-10">With friendly greetings,</tei:salute>
+    <tei:signed rend="indent-40"><tei:rs key="entity-000259" type="person">Dr.
+     Frimmel</tei:rs></tei:signed>
+   </tei:closer>
+
+
+  </tei:div>
+
+ </sdo:record>
+</sdo:recordCollection>
