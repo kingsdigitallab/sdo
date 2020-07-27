@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2478" sdoID="OJ-11-10_17">OJ 11/10, [17]</sdo:correspondence>
+    </sdo:source>
+
+
+    <tei:handNotes>
+      <tei:handNote xml:id="TF" scope="major">Theodor von Frimmel's hand</tei:handNote>
+      <tei:handNote xml:id="unk" scope="minor">unknown hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="HE">
+      <tei:persName>Heribert Esser</tei:persName>
+      <tei:resp>Transcription, 2019</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="JR">
+      <tei:persName>John Rothgeb</tei:persName>
+      <tei:resp>Translation, 2019</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2020</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2013-08-29" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005688">FrimmelT ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Frimmel to Schenker, dated July 6, 1923</dc:title>
+
+      <dcterms:created>1923-07-06T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2020-07-27</dcterms:dateSubmitted>
+      <dc:description>Frimmel makes a word-play on a feuilleton of the same date by Korngold
+        relating to Sigenfeld.</dc:description>
+      <dc:subject>Wortspiel; word-play; Chloralhydrat; chloral hydrate</dc:subject>
+
+      <marcrel:correspondent key="entity-000259">Theodor von Frimmel</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="header" rend="center">
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>Absender: <tei:handShift new="#TF"/>D<tei:hi rend="supralinear"
+                >r.</tei:hi> Th. Frimmel</tei:addrLine>
+            <tei:addrLine>III, Baumannstr 9.</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#printed"/>An <tei:handShift new="#TF"/>Herrn D<tei:hi
+                rend="supralinear">r.</tei:hi> H. Schenker</tei:addrLine>
+            <tei:addrLine>Tonkünstler</tei:addrLine>
+            <tei:addrLine rend="indent-40"><tei:handShift new="#printed"/>in <tei:handShift
+                new="#TF"/><tei:del rend="overstrike">Wien</tei:del></tei:addrLine>
+            <tei:addrLine><tei:del rend="overstrike">III, Keilgasse 8.</tei:del></tei:addrLine>
+            <tei:addrLine><tei:handShift new="#unk"/>Galtür</tei:addrLine>
+            <tei:addrLine>in Tirol</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark"> || 3 WIEN 40 | 6.VII.23 13 | * 4e * ||</tei:fw>
+          <tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-50"><tei:handShift new="#TF"
+          /><tei:placeName>Wien</tei:placeName>, <tei:date when="1923-07-06">6. Juli
+          1923</tei:date>.</tei:dateline>
+        <tei:salute>Hochverehrter Herr <tei:rs key="entity-000632" type="person"
+            >Doktor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot"> Receipt of
+            this postcard is recorded in Schenker's diary at p. 2532, July 10: "Von Frimmel (K.):
+            ruft mich zum Zeugen für das Wort Ch<tei:hi rend="underline">l</tei:hi>oralhydrat, das
+            kürzlich Korngold in einem Aufsatz gebraucht hat!" ("From Frimmel (postcard): calls on
+            me as a witness for the term ch<tei:hi rend="underline">l</tei:hi>oral hydrate, which
+            Korngold recently used in an article!"). — Schenker's reply (which is not known to
+            survive) is recorded the next day: "An Frimmel (K.): bestätige die Autorschaft, hebe
+            gleichzeitig Korngolds Verdienste hervor!" ("To Frimmel (postcard): confirm the
+            authorship and simultaneously emphasize Korngold's merits!").</tei:note>
+        </tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Sie erinnern sich wohl daran, dass ich das naheliegende Wortspiel mit dem
+          Ch<tei:hi rend="underline">or</tei:hi>alhydrat<tei:note xml:id="r0001-fn02"
+          type="editorial" place="foot">Choralhydrat: Julius Korngold (see the sentence following)
+          in a feuilleton for the <tei:title level="j">Neue freie Presse</tei:title> July 6, 1923,
+          pp. 1‒4, entitled <tei:title level="a">Neue Musik (Die Frankfurter
+            Kammermusikwoche),</tei:title> reviewed music by Krenek, Hindemith and others. His
+          discussion of Busoni's <tei:title level="m">Fantasia contrapuntistica</tei:title> (p. 4,
+          col. 1) concludes with: "Der Hörer wäre weniger schlaff geworden, wenn nicht so manche
+          weniger achtungsgebietende Musik zermürbend vorangegangen wäre. Ein einschläferndes Zuviel
+          an kontrapunktischen Choralwesen, Choralhydrat sozusagen. . . ." ("The listener might have
+          become less languid had not so much less concentration-demanding music wearisomely
+          preceded it. A soporific excess of contrapuntal choral entities, so to speak choral
+          hydrate. . . ."). Evidently, Frimmel's word-play ‒ not explained in the available
+          correspondence, but confirmed by the deleted "l" in Schenker's diary and by Korngold's
+          remarks ‒ involved Ch<tei:hi rend="underline">l</tei:hi>oralhydrat (chloral hydrate), a
+          soporific for use by insomniacs.</tei:note> schon Anno Siegenfeld<tei:note
+          xml:id="r0001-fn03" type="editorial" place="foot">Siegenfeld is a village northwest of
+          Baden bei Wien, 20km (12 miles) southwest of Vienna. Schenker spent the summer of 1902 in
+          Alexanderhof, near Baden bei Wien, and a letter of July 15, 1902 from Universal Edition is
+          addressed to him at "Alexanderhof nr. Siegenfeld." Schenker's letter to Frimmel of March
+          13, 1905 (<tei:ref type="correspondence" cRef="BNba-Frimmel-Nachl_1">BNba Frimmel Nachl.,
+            [1]</tei:ref>) reminisces about his and Frimmel's occasion "at the keyboard in
+          Alexanderhof" as the first of the "pleasant weeks back then."</tei:note> geprägt habe.
+        Heute steht es als Neuigkeit bei <tei:rs type="person" key="entity-000471">J.
+          Korngold</tei:rs>. — Nb. werden Sie bald wieder tönenden Willen von sich geben? — Bitte,
+        schöne Handküsse an die <tei:rs type="person" key="entity-000771">verehrte Gnädige</tei:rs>
+        und beste Wünsche für den Sommer!</tei:p>
+
+      <tei:closer>
+        <tei:salute>In alter Hochschatzung</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs key="entity-000259" type="person">D<tei:hi
+              rend="supralinear">r.</tei:hi> Frimmel</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="header" rend="center">
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>From: <tei:handShift new="#TF"/>Dr. Theodor Frimmel</tei:addrLine>
+            <tei:addrLine><tei:supplied reason="identity">Vienna</tei:supplied> III, Baumannstrasse
+              9</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#printed"/>To: <tei:handShift new="#TF"/>Dr. H.
+              Schenker</tei:addrLine>
+            <tei:addrLine>Musician</tei:addrLine>
+            <tei:addrLine rend="indent-40"><tei:handShift new="#printed"/>in <tei:handShift
+                new="#TF"/><tei:del rend="overstrike">Vienna III</tei:del></tei:addrLine>
+            <tei:addrLine><tei:del rend="overstrike">Keilgasse 8</tei:del></tei:addrLine>
+            <tei:addrLine><tei:handShift new="#unk"/>Galtür</tei:addrLine>
+            <tei:addrLine>in the Tyrol</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark"> || 3 VIENNA 40 | 6.VII.23 13 | * 4e * ||</tei:fw>
+          <tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-50"><tei:handShift new="#TF"
+            /><tei:placeName>Vienna</tei:placeName>, <tei:date when="1923-07-06">July 6,
+            1923</tei:date></tei:dateline>
+        <tei:salute>Highly revered Dr. <tei:supplied reason="identity"><tei:rs key="entity-000632"
+              type="person">Schenker</tei:rs></tei:supplied>,<tei:ptr corresp="#r0001-fn01"
+            type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">You probably recall that I coined the obvious word-play with Ch<tei:hi
+          rend="underline">or</tei:hi>alhydrat<tei:ptr corresp="#r0001-fn02" type="footnote"/>
+        already in the Siegenfeld year.<tei:ptr corresp="#r0001-fn03" type="footnote"/> Today it is
+        presented as a novelty by <tei:rs type="person" key="entity-000471">Julius
+        Korngold</tei:rs>. – NB. Will you soon again engage in tonal proclamations? – Please, convey
+        to your <tei:rs type="person" key="entity-000771">dear wife</tei:rs> my most affectionate
+        hand-kisses, and best wishes for the summer! </tei:p>
+
+      <tei:closer>
+        <tei:salute>In time-honored friendship,</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs key="entity-000259" type="person">Dr.
+          Frimmel</tei:rs></tei:signed>
+      </tei:closer>
+
+
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
