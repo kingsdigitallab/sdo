@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2480" sdoID="OJ-11-10_19">OJ 11/10, [19]</sdo:correspondence>
+    </sdo:source>
+
+
+    <tei:handNotes>
+      <tei:handNote xml:id="TF" scope="major">Theodor von Frimmel's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="HE">
+      <tei:persName>Heribert Esser</tei:persName>
+      <tei:resp>Transcription, 2019</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="JR-HE">
+      <tei:persName>John Rothgeb and Heribert Esser</tei:persName>
+      <tei:resp>Translation, 2019</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2020</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2013-08-29" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005688">FrimmelT ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture
+        postcard</tei:rs>
+
+      <dc:title>Handwritten picture postcard from Frimmel to Schenker, dated November 11,
+        1927</dc:title>
+
+      <dcterms:created>1927-11-11T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2020-07-28</dcterms:dateSubmitted>
+      <dc:description>Frimmel thanks Schenker for having had Meisterwerk II sent to
+        him.</dc:description>
+      <dc:subject>Arbeit; work; Altersmüde; age-weariness; Belehrung; instruction, Gesundheit;
+        health; molesta senectus; old age</dc:subject>
+
+      <marcrel:correspondent key="entity-000259">Theodor von Frimmel</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:note type="editorial" place="inline">photograph, captioned: "Hallstatt,
+          Oberösterr."</tei:note><tei:lb/>
+        <tei:fw type="header" rend="center">
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
+        <tei:lb/><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:handShift new="#TF"/><tei:placeName>Wien</tei:placeName>, <tei:date when="1927-11-11"
+            >11. Nov. 1927</tei:date>
+          <tei:address>
+            <tei:addrLine>Absender</tei:addrLine>
+            <tei:addrLine>D<tei:hi rend="supralinear">r.</tei:hi> Th. Frimmel Wien</tei:addrLine>
+            <tei:addrLine>III Baumannstr. 9</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine>Herrn D<tei:hi rend="supralinear">r.</tei:hi> Heinr.
+              Schenker</tei:addrLine>
+            <tei:addrLine>Professor der Musik etc etc etc</tei:addrLine>
+            <tei:addrLine rend="indent-40">Wien</tei:addrLine>
+            <tei:addrLine>III, Keilgasse</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| <tei:gap reason="illegible"/> WIEN 40 | 11.XI.27 X<tei:gap
+              reason="illegible"/> | <tei:gap reason="illegible"/> ||</tei:fw>
+          <tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-50"><tei:handShift new="#TF"
+          /><tei:placeName>Wien</tei:placeName>, <tei:date when="1927-11-11">11. Nov.
+            1927</tei:date>,</tei:dateline>
+        <tei:salute rend="indent-10">Sehr Geehrter Herr <tei:rs key="entity-000632" type="person"
+            >Doktor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
+            this picture postcard is recorded in Schenker's diary at p. 3132, November 11, 1927:
+            "Von Frimmel (K.): dankt für die <tei:rs type="work" key="entity-001751"
+                ><tei:title>Jhrb.</tei:title> II</tei:rs>, klagt über Altersbeschwerden." ("From
+            Frimmel (postcard): He thanks me for <tei:rs type="work" key="entity-001751"><tei:title
+                level="j">Yearbook</tei:title> II</tei:rs>, complains about the burdens of old
+            age.).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Bestens danke ich Ihnen für die Zuweisung Ihrer <tei:rs type="work"
+          key="entity-001751">neuesten Arbeit</tei:rs>, die mich freilich furchtbar Altersmüde
+        vorfindet, aber mir viele Belehrung für eingestreute bessere Gesundheit verspricht. Die
+          <tei:foreign xml:lang="lat">Molesta senectus</tei:foreign> drückt mich ungewöhnlich. Ich
+        hoffe, dass Sie frisch und arbeitsfähig sind.</tei:p>
+
+      <tei:closer>
+        <tei:salute>In alter Hochschätzung</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs key="entity-000259" type="person">D<tei:hi
+              rend="supralinear">r.</tei:hi> Th. Frimmel</tei:rs>.</tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:note type="editorial" place="inline">photograph, captioned: "Hallstatt, Upper
+          Austria"</tei:note><tei:lb/>
+        <tei:fw type="header" rend="center">
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+        <tei:lb/><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:handShift new="#TF"/><tei:placeName>Vienna</tei:placeName>, <tei:date
+            when="1927-11-11">November 11, 1927</tei:date>
+          <tei:address>
+            <tei:addrLine>Sender</tei:addrLine>
+            <tei:addrLine>Dr. Theodor Frimmel Vienna III</tei:addrLine>
+            <tei:addrLine>Baumannstrasse 9</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine>Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine>Professor of Music, etc., etc., etc.</tei:addrLine>
+            <tei:addrLine rend="indent-40">Vienna III</tei:addrLine>
+            <tei:addrLine>Keilgasse</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| <tei:gap reason="illegible"/> VIENNA 40 | 11.XI.27 X<tei:gap
+              reason="illegible"/> | <tei:gap reason="illegible"/> ||</tei:fw>
+          <tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-50"><tei:handShift new="#TF"
+            /><tei:placeName>Vienna</tei:placeName>, <tei:date when="1927-11-11">November 11,
+            1927</tei:date></tei:dateline>
+        <tei:salute rend="indent-10">Dear Dr. <tei:supplied reason="identity"><tei:rs
+              key="entity-000632" type="person">Schenker</tei:rs></tei:supplied>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Many thanks for sending me your <tei:rs type="work" key="entity-001751"
+          >most recent work</tei:rs>, which, indeed, finds me thoroughly age-wearied, but promises
+        much instruction for intermittent periods of better health. Burdensome old age oppresses me
+        uncommonly. I hope that you are refreshed and primed for work.</tei:p>
+
+      <tei:closer>
+        <tei:salute>With time-honored respect,</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs key="entity-000259" type="person">Dr. Theodor
+            Frimmel</tei:rs></tei:signed>
+      </tei:closer>
+
+
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
