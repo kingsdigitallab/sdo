@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2486" sdoID="OJ-70-35_1">OJ 70/35, [1]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="AS" scope="major">Arnold Schoenberg's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB-WD">
+      <tei:persName>Ian Bent &amp; William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2011, 2020</tei:resp>
+    </tei:respStmt>
+    <tei:respStmt xml:id="WD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Translation, 2011, 2020</tei:resp>
+    </tei:respStmt>
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2020</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2013-07-01" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-007495">ViolinM ~
+        ASchoenberg</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+
+
+      <dc:title>Handwritten postcard from Schoenberg to Moriz Violin, undated, postmarked March 9,
+        1902</dc:title>
+
+      <dcterms:created>1902-03-09T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2020-08-19</dcterms:dateSubmitted>
+      <dc:description>Schoenberg asks Violin to arrange the next day's reheasal.</dc:description>
+      <dc:subject>Zahnschmerzen; toothache; Probe; rehearsal; Orchester; orchestra; Antwort;
+        answer</dc:subject>
+
+
+
+      <marcrel:correspondent key="entity-000798">ASchoenberg</marcrel:correspondent>
+      <marcrel:recipient key="entity-000913">ViolinM</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:lb/>
+        <tei:add resp="AS"><tei:handShift new="#AS"/><tei:hi rend="underline"
+          >dringend</tei:hi></tei:add><tei:lb/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+            >Deutsche Reichspost</tei:hi></tei:fw>
+        <tei:fw type="header" rend="center"><tei:hi rend="bold"><tei:handShift new="#AS"/><tei:hi
+              rend="lateinschr underline">Rohr</tei:hi>-<tei:handShift new="#printed"
+            />Postkarte</tei:hi></tei:fw><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>An: <tei:handShift new="#AS"/>Herrn Capellmeister <tei:hi
+                rend="lateinschr">M. Violin</tei:hi></tei:addrLine>
+            <tei:addrLine rend="indent-10"><tei:hi rend="lateinschr">Wolzogens Buntes
+                Theater</tei:hi></tei:addrLine>
+            <tei:addrLine rend="indent-20"><tei:hi rend="lateinschr">Berlin S.
+              O.</tei:hi></tei:addrLine>
+            <tei:addrLine rend="indent-30">Köp<tei:supplied reason="omission"
+              >e</tei:supplied>nikerstraße 67 oder 68</tei:addrLine>
+            <tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| BERLIN.N. | -9. 3. 02 630 N | * 58 * ||</tei:fw>
+          <tei:fw type="postmark">|| BERLIN.S.O. | -9. 3. 02 <tei:gap reason="illegible"/> N | * 58
+            * ||</tei:fw><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:salute>Lieber <tei:rs type="person" key="entity-000913">Violin</tei:rs>!<tei:note
+            xml:id="r0001-fn01" type="editorial" place="foot">The document from which this edition
+            was made is a photocopy; the whereabouts of the original is not known. Schoenberg had
+            been providing music at Wolzogen's Buntes Theater, for its cabaret "Überbrettl," of
+            which Violin was the music director, since December 1901</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>ich habe rasende Zahnschmerzen und Kopfweh und bitte Sie daher, falls Atelierspuk ist,
+        denselben für mich zu machen. Sollte die Probe mit Orchester für morgen mit Fr.
+          Abarbanell<tei:note xml:id="r0001-fn02" type="editorial" place="foot"><tei:ref
+            type="external" target="http://jwa.org/encyclopedia/article/abarbanell-lina">Lina
+            Abarbanell</tei:ref> (born Berlin, Jan 3, 1879; died New York City, Jan 6, 1963),
+          operetta singer. Her father, Paul Abarbanell, was a leading theater conductor in Berlin,
+          and she made her debut with the Berlin Court Opera at the age of seven. Her papers are
+          preserved in the New York Public Library. </tei:note> nötig sein, so bitte für 11½
+          ‒12<tei:hi rend="supralinear">h</tei:hi> und Rohrpostverständigung.</tei:p>
+
+      <tei:p>Was ist mit <tei:unclear reason="reading">Röhr</tei:unclear>,<tei:note
+          xml:id="r0001-fn03" type="editorial" place="foot">Possibly the conductor Hans Rohr (died
+          Krakow, 1942), who directed the Krakow Philharmonic Orchestra for two years during the
+          German occupation of Poland. </tei:note> hat er geantwortet Bitte <tei:note
+          type="editorial" place="inline">deleted word</tei:note> eventuell Antwort.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-80">herzlichster Gruss</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000798">Schönberg</tei:rs>
+        </tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:lb/>
+        <tei:add resp="AS"><tei:handShift new="#AS"/><tei:hi rend="underline"
+          >urgent</tei:hi></tei:add><tei:lb/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold">Geman
+            Imperial Post</tei:hi></tei:fw>
+        <tei:fw type="header" rend="center"><tei:hi rend="bold"><tei:handShift new="#AS"/><tei:hi
+              rend="underline">Pneumatic</tei:hi>
+            <tei:handShift new="#printed"/>Postcard</tei:hi></tei:fw><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>To: <tei:handShift new="#AS"/>Music Director M. Violin</tei:addrLine>
+            <tei:addrLine rend="indent-10">Wolzogens Buntes Theater</tei:addrLine>
+            <tei:addrLine rend="indent-20">Berlin S. O.</tei:addrLine>
+            <tei:addrLine rend="indent-30">Köp<tei:supplied reason="omission"
+              >e</tei:supplied>nikerstraße 67 or 68</tei:addrLine>
+            <tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| BERLIN.N. | -9. 3. 02 630 N | * 58 * ||</tei:fw>
+          <tei:fw type="postmark">|| BERLIN.S.O. | -9. 3. 02 <tei:gap reason="illegible"/> N | * 58
+            * ||</tei:fw><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:salute>Dear <tei:rs type="person" key="entity-000913">Violin</tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>I have a severe toothache and headache and am therefore asking you, in case your studio
+        is haunted, to do the same for me. If tomorrow's rehearsal with orchestra with Mrs.
+          Abarbanell<tei:ptr corresp="#r0001-fn02" type="footnote"/> is necessary, then please make
+        it between 11:30 and 12 o'clock, and confirm by pneumatic post.</tei:p>
+
+      <tei:p>What is with <tei:unclear reason="original_unclear">Röhr</tei:unclear>?<tei:ptr
+          corresp="#r0001-fn03" type="footnote"/> Did he reply? Please reply if possible</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-80">Most cordial greetings</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000798">Schoenberg</tei:rs>
+        </tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
