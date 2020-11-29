@@ -6,17 +6,17 @@
   <xsl:import href="../default.xsl"/>
   <xsl:param name="filter"/>
 
-  <xsl:param name="subtype-name">Mary</xsl:param>
-  <xsl:param name="subtype-value">Poppins</xsl:param>
+  <xsl:param name="subtype-name"></xsl:param>
+  <xsl:param name="subtype-value"></xsl:param>
 
   <xsl:variable name="xmg:title">
     <xsl:text>Browse Lessonbooks by Pupil </xsl:text>
-    <!-- <xsl:if test="$subtype-name"> -->
+    <xsl:if test="$subtype-name">
       <xsl:text> for </xsl:text>
       <xsl:value-of select="$subtype-name" />
       <xsl:text> </xsl:text>
       <xsl:value-of select="$subtype-value" />
-    <!-- </xsl:if> -->
+    </xsl:if>
   </xsl:variable>
 
   <xsl:key match="/aggregation/response/result/doc/str[@name='pupil']" name="alpha-tags"
