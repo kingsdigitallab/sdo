@@ -29,5 +29,12 @@
         </li>
       </xsl:for-each-group>
     </ul>
+    <p>To read the entries for a saison in chronologial order, use the starting points listed below:</p>   
+    <ul>
+      <li>Saison 1915/16 - <a href="https://sdo3.kdl.kcl.ac.uk/documents/lessonbooks/OC-3-3_1915/r0001.html">Brunauer: lessons: Oct 1915</a></li>
+      <li>Saison 1917/18 - <a href="https://sdo3.kdl.kcl.ac.uk/documents/lessonbooks/OC-3-3_1917/r0001.html">Blum: lessons: 1st semester 1917/18</a></li>
+      <li>Saison 1918/19 - <a href="https://sdo3.kdl.kcl.ac.uk/documents/lessonbooks/OC-3-3_1918/r0001.html">Breisach: lessons: 1918/19</a></li>
+      <li>Saison 1919/20 - <a href="https://sdo3.kdl.kcl.ac.uk/documents/lessonbooks/OC-3-3_1919/r0001.html">Brunauer: lessons; Oct 1919-Jan 1920</a></li>
+    </ul>
   </xsl:template>
 </xsl:stylesheet>
