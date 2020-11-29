@@ -98,7 +98,7 @@
     <map:pipeline type="caching">
       <map:match pattern="">
         <!-- Redirect request to the root path to the index page. -->
-        <map:redirect-to uri="index.html"/>
+        <map:redirect-to uri="/index.html"/>
       </map:match>
 
       <map:match pattern="index.html">
@@ -335,19 +335,24 @@
 		 <map:redirect-to uri="/documents/lessonbooks/pupil/"/>	
       </map:match>
             
-      <map:match pattern="documents/lessonbooks/pupil/*">
+      <!-- browse lessonbooks pupils by saison. -->
+      <map:match pattern="documents/lessonbooks/pupil/*-*.html">
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
-          <map:part src="cocoon://_internal/solr/query/q=pupil%3A*&amp;rows=9999&amp;fl=pupil"/>
+          <map:part src="cocoon://_internal/solr/query/q=dateYear%3A{2}&amp;rows=9999&amp;fl=pupil"
+          />
         </map:aggregate>
         <map:transform src="stylesheets/local/documents/pupil-list-to-html.xsl">
-          <map:parameter name="filedir" value="documents/lessonbooks"/>
-          <map:parameter name="filename" value="pupil.xml"/>
+          <map:parameter name="filedir" value="documents/lessonbooks/pupil"/>
+          <map:parameter name="filename" value="{1}-{2}.xml"/>
           <map:parameter name="fileextension" value="html"/>
-          <map:parameter name="filter" value="{1}"/>
+          <map:parameter name="subtype-name" value="Saison"/>
+          <map:parameter name="subtype-value" value="{1}/{2}"/>
         </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
+
+
 
       <!-- Browse lessonbooks by saison. -->
       <map:match pattern="documents/lessonbooks/saison.html">
@@ -365,22 +370,36 @@
         <map:serialize type="xhtml"/>
       </map:match>
 
-      <!-- Browse lessonbooks pupils by saison. -->
-      <map:match pattern="documents/lessonbooks/pupil/*-*.html">
-        <map:aggregate element="aggregation">
-          <map:part src="cocoon://_internal/menu/main.xml"/>
-          <map:part src="cocoon://_internal/solr/query/q=dateYear%3A{2}&amp;rows=9999&amp;fl=pupil"
-          />
-        </map:aggregate>
-        <map:transform src="stylesheets/local/documents/pupil-list-to-html.xsl">
-          <map:parameter name="filedir" value="documents/lessonbooks/pupil"/>
-          <map:parameter name="filename" value="{1}-{2}.xml"/>
-          <map:parameter name="fileextension" value="html"/>
-          <map:parameter name="subtype-name" value="Saison"/>
-          <map:parameter name="subtype-value" value="{1}/{2}"/>
-        </map:transform>
-        <map:serialize type="xhtml"/>
-      </map:match>
+<map:match pattern="documents/lessonbooks/pupil/*">
+   <map:aggregate element="aggregation">
+     <map:part src="cocoon://_internal/menu/main.xml"/>
+     <map:part src="cocoon://_internal/solr/query/q=pupil%3A*&amp;rows=9999&amp;fl=pupil"/>
+   </map:aggregate>
+   <map:transform src="stylesheets/local/documents/pupil-list-to-html.xsl">
+     <map:parameter name="filedir" value="documents/lessonbooks"/>
+     <map:parameter name="filename" value="pupil.xml"/>
+     <map:parameter name="fileextension" value="html"/>
+     <map:parameter name="filter" value="{1}"/>
+   </map:transform>
+   <map:serialize type="xhtml"/>
+  </map:match>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <!-- Browse repositories by repositories. -->
       <map:match pattern="documents/repos/repos.html">
