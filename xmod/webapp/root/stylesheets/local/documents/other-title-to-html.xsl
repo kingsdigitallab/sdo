@@ -16,7 +16,7 @@
       <p>Download all selected files as <input type="submit" name="format" value="pdf" /> or <input type="submit" name="format" value="epub" /> or <input type="submit" name="format" value="both" /> (check files to select/deselect)<br />Where appropriate save: 
         <input type="radio" name="lang" value="all" checked="checked" /> English and German versions <input type="radio" name="lang" value="de" /> German version only <input type="radio" name="lang" value="en" /> English version only
       </p> <!-- <noscript> </noscript>-->
-    <xsl:for-each select="/aggregation/response/result/doc/str[@name='title']">
+    <xsl:for-each select="/aggregation/response/result/doc/arr[@name='title']/str">
       
       <ul>
         <li><input type="checkbox" name="do*ot*{parent::doc/str[@name='fileId']}" value="1" />
