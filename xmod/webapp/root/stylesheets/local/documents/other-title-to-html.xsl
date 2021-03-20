@@ -18,11 +18,11 @@
     <xsl:for-each select="/aggregation/response/result/doc/arr[@name='title']/str">
       
       <ul>
-        <li><input type="checkbox" name="do*ot*{parent::doc/arr[@name='fileId']/str}" value="1" />
+        <li><input type="checkbox" name="do*ot*{parent::doc/str[@name='fileId']}" value="1" />
           <a>
             <xsl:attribute name="href">
               <xsl:text>../../documents/other/</xsl:text>
-              <xsl:value-of select="parent::doc/arr[@name='fileId']/str" />
+              <xsl:value-of select="parent::doc/str[@name='fileId']" />
               <xsl:text>.html</xsl:text>
             </xsl:attribute>
             <xsl:value-of select="." />
