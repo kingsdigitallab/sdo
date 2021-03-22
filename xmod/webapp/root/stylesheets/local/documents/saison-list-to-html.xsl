@@ -20,12 +20,17 @@
         </xsl:variable>
 
         <li>
-          <a href="pupil/{$saison}.html">
-            <xsl:text>Saison </xsl:text>
-            <xsl:value-of select="substring-before($saison, '-')" />
-            <xsl:text>/</xsl:text>
-            <xsl:value-of select="substring-after($saison, '-19')" />
-          </a>
+          <xsl:choose>
+            <xsl:when test="$saison = '1912-1913'"><!-- do nothing --></xsl:when>
+            <xsl:otherwise>
+              <a href="pupil/{$saison}.html">
+              <xsl:text>Saison </xsl:text>
+              <xsl:value-of select="substring-before($saison, '-')" />
+              <xsl:text>/</xsl:text>
+              <xsl:value-of select="substring-after($saison, '-19')" />
+            </a>
+            </xsl:otherwise>
+          </xsl:choose>
         </li>
       </xsl:for-each-group>
     </ul>
