@@ -274,9 +274,6 @@
                       300 words per day, much of the time commenting on the conduct of the war and
                       its consequences for the lives of his pupils, friends, and ordinary
                       Austrians.</li>
-                    <li><b>"POLITICAL DIARY":</b> Schenker wrote a separate diary from Nov 1918 to
-                      June 1919 reflecting the immediate post-war period and Versailles Treaty, now
-                      on site. </li>
                     <li>
                       <b>CORRESPONDENCE:</b> That between Arnold Schoenberg and Moriz Violin (64
                       items) spans 1902–19, and 1938–50, the last 13 years covering Violin’s
