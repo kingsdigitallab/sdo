@@ -82,18 +82,7 @@
       <map:match pattern="private/**">
         <map:mount check-reload="yes" src="private.xmap" uri-prefix="private/"/>
       </map:match>
-    </map:pipeline>
-    
-    <!-- The error handling section needs to be commented out on DEV but left as live on STG and LIV-->
-    
-	<map:handle-errors>
-		<map:aggregate element="aggregation" label="content">
-			<map:part src="cocoon://_internal/menu/main.xml"/>
-      		<map:part label="tei" src="xml/content/http404.xml"/>
-      	</map:aggregate> 
-       <map:transform src="stylesheets/local/error-to-html.xsl"/>
-        <map:serialize status-code="404" type="xhtml"/>  
-  </map:handle-errors> 
+    </map:pipeline> 
 
     <map:pipeline type="caching">
       <map:match pattern="">
@@ -910,6 +899,18 @@
       <map:match pattern="**">
         <map:mount check-reload="yes" src="sitemap/xmod/mobile.xmap" uri-prefix=""/>
       </map:match>
+      
+      <!-- The error handling section needs to be commented out on DEV but left as live on STG and LIV-->
+      
+      <map:handle-errors>
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.xml"/>
+          <map:part label="tei" src="xml/content/http404.xml"/>
+        </map:aggregate> 
+        <map:transform src="stylesheets/local/error-to-html.xsl"/>
+        <map:serialize status-code="404" type="xhtml"/>  
+      </map:handle-errors>
+      
     </map:pipeline>
 
 
