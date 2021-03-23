@@ -262,41 +262,47 @@
                 </div>
                 <div class="unit size1of3 lastUnit">
                   <h3>Latest</h3>
-                  <!-- COPY AND PASTE LINK BELOW TO DIRECT USERS TO THE 'OVERFLOW' PAGE FOR UPDATE NEWS -->
+                  <!-- COPY AND PASTE LINK BELOW TO DIRECT USERS TO THE 'OVERFLOW' PAGE FOR UPDATE NEWS IF APPROPRFIATE -->
                   <!-- <a class="int" title="Link to Latest Material"
                         href="/documents/overviews/latest_material.html">More</a> -->
-                  <h4>Additions to the site in 2020</h4>
+                  <h4>Additions to the site in spring 2021</h4>
                   <ul>
-                    <li><b>DIARIES:</b> The Summer‒Fall 1911 diaries cover the early life of
-                      Heinrich and Jeanette together, and her involvement in his diary. — With that
-                      material, the diaries now run continuously from 1896 to Dec 1914 and from Oct
-                      1917 to Jan 1935. The gap will be filled during the coming 18 months.</li>
+                    <li><b>DIARIES:</b> The transcription and translation present 1915 and the first
+                      three months of 2016; this leaves just a year and a half (April 2016 to Sept
+                      2017) before the entire 4,000-page diary is completely edited. The war years
+                      show Schenker’s diary writing at its most prolific: on average, he wrote about
+                      300 words per day, much of the time commenting on the conduct of the war and
+                      its consequences for the lives of his pupils, friends, and ordinary
+                      Austrians.</li>
                     <li><b>"POLITICAL DIARY":</b> Schenker wrote a separate diary from Nov 1918 to
                       June 1919 reflecting the immediate post-war period and Versailles Treaty, now
                       on site. </li>
-                    <li><b>CORRESPONDENCE:</b> Amidst their trivialities, Schenker's postcards and
-                      letters to <b>Moriz Violin</b> for 1910‒11 contain explosive material about
-                      the relationship between Schenker and Jenny Kornfeld (i.e. Jeanette). — The
-                      only letter from <b>Felix Kornfeld</b> and his mother <b>Jeanette</b> is
-                      heart-breaking, and the exchange between his son <b>Tomáš Kornfeld</b> and
-                        <b>Heribert Esser</b> illuminates the Kornfeld household after Jeanette left
-                      it in 1910.</li>
-                    <li>The correspondence with the <b>Beethoven House, Bonn</b> for 1913‒14
-                      concerns Op. 111, in preparation for the <em>Erläuterungsausgabe</em>. — That
-                      with Danish conductor <b>Paul von Klenau</b>, whom Schenker considered a
-                      prospective exponent of his ideas, shows Schenker explaining editorial and
-                      performance principles in Beethoven's music, leading to the historical 1924
-                      concert of the Ninth Symphony and part of the <em>Missa solemnis</em>. — The
-                      exchanges with <b>Victor Hammer</b> for 1924 cover the beginning of Schenker's
-                      sittings for Hammer's famous 1925 mezzotint portrait and the conversations
-                      that occurred during those sittings.</li>
-                    <li><b>LESSONBOOKS</b> Schenker's lessonbook for 1915/16 is now on site. It
-                      is instructive particularly in showing which students studied theory and exactly
-                      what materials they were taught.</li>
-                    <li><b>PROFILES:</b> 27 new profiles
-                      (including. e.g., Paul von Klenau, the Beethoven House, and Theresienstadt),
-                      and revisions of many others (including the Kornfeld family members, Fanny
-                      Violin, and Jeanette Schenker).</li>
+                    <li>
+                      <b>CORRESPONDENCE:</b> That between Arnold Schoenberg and Moriz Violin (64
+                      items) spans 1902–19, and 1938–50, the last 13 years covering Violin’s
+                      migration to San Francisco, his struggle to make a living, and Schoenberg’s
+                      great kindness. — The adversarial 1910 Universal Edition correspondence (43
+                      items) covers preliminary dealings over the <em>Ninth Symphony</em> monograph
+                      and <em>The Last Five Sonatas of Beethoven</em>. — Schenker and Theodor von
+                      Frimmel performed together long before their cordial surviving correspondence
+                      (28 items: 1902–27), which provides background to Schenker’s C. P. E. Bach
+                      edition, <em>Ornamentation</em>, and Handel arrangements.</li>
+                    <li>
+                      <b>LESSONBOOKS:</b> The addition of three new years yields a 7-year run on the
+                      site, from Fall 1913 to Summer 1920. This allows us to inspect closely
+                      Schenker’s program of theory instruction, and his use of analysis for
+                      performance, especially in 1913/14, where Schenker’s notes are highly
+                      detailed.</li>
+                    <li>
+                      <b>AN ANALYSIS ...</b> Schenker’s analysis of Brahms’s C minor Piano Quartet,
+                      written in Oct 1913 in conjunction with teaching, and intended for
+                      publication, adds to our appreciation of his evolving analytical technique at
+                      the time of the Op. 109 and 110 elucidatory editions. (Locate this in “Browse
+                      Documents” under “Other Material.”)</li>
+                    <li>
+                      <b>PROFILES:</b> Among the latest batch of profiles is a detailed account of
+                      Guido Adler’s Seminar/Music-Historical Institute, and several of people and
+                      institutions in California in and after WW2.</li>
                   </ul>
 
                   <!--<nav class="local" id="blogPosts">
