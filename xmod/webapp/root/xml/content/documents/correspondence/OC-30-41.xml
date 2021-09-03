@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2550" sdoID="OC-30-41">OC 30/41</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="sole">Heinrich Schenker's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2021</tei:resp>
+      <tei:resp>Translation, 2021</tei:resp>
+      <tei:resp>XML Encoding, 2021</tei:resp>
+    </tei:respStmt>
+
+
+    <tei:revisionDesc>
+      <tei:change when="2011-03-05" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008061">Kaff ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">letter</tei:rs>
+      <dc:title>Handwritten letter from Schenker to Trude Kaff, undated [c. January 5,
+        1933]</dc:title>
+
+      <dcterms:created>1933-01-05T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2021-09-03</dcterms:dateSubmitted>
+      <dc:description>Unfinished, unsent letter of thanks from Schenker to Trude
+        Kaff.</dc:description>
+      <dc:subject>Dank; thanks; Erwiderung; reciprocation</dc:subject>
+
+
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000415">Trude Kaff</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:salute>Sehr geehrtes <tei:rs type="person" key="entity-000415">Frl.
+            Kaff</tei:rs><tei:note xml:id="r0001-fn01" type="editorial" place="foot">Writing of this
+            letter is not recorded in Schenker’s diary.”</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Herzlichsten Dank für Ihre so freundlichen Zeilen der Erinnerung u. Wünsche, die ich
+        bestens erwidere. Daß ich mit der Erwiderung so spät komme, liegt an der Fülle u. Schwere
+        der Arbeit u. Pflichten. Ein in den nächsten Wochen <tei:unclear reason="original"
+            >herauszu<tei:supplied reason="omission">ge</tei:supplied>bendes</tei:unclear>
+          Werk<tei:note xml:id="r0001-fn02" type="editorial" place="foot">If “herausgeben,” it must
+          refer to Schenker’s edition <tei:title level="m">Johannes Brahms, Oktaven und Quinten u.
+            A.</tei:title> (Vienna: Universal Edition, 1933), which was released in late April
+          1933.</tei:note> macht viel zu schaffen<tei:supplied reason="omission">.</tei:supplied>
+        <tei:note type="editorial" place="inline"><tei:hi rend="italic"
+          >unfinished</tei:hi></tei:note></tei:p>
+
+      <tei:closer/>
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:salute>Dear <tei:rs type="person" key="entity-000415">Miss Kaff</tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>Most cordial thanks for your very friendly words of recollection and good wishes, which
+        I fully reciprocate. That I am so tardy in replying is due to the intensity and weightiness
+        of my work and obligations. A work to be <tei:unclear reason="original_unclear"
+          >published</tei:unclear><tei:ptr corresp="#r0001-fn02" type="footnote"/> in the next few
+        weeks leaves me with much to do. <tei:note type="editorial" place="inline"><tei:hi
+            rend="italic">unfinished</tei:hi></tei:note></tei:p>
+
+      <tei:closer/>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
