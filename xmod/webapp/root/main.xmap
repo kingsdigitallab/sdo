@@ -153,8 +153,8 @@
           <map:parameter name="use-request-parameters" value="true"/>
           <map:parameter name="inc" value="{request:queryString}"/>
         </map:transform>
-        <map:serialize type="xhtml"/>
-          <!--<map:serialize type="xml" />--> 
+         <map:serialize type="xhtml"/>
+        <!-- <map:serialize type="xml" /> --> 
       </map:match>
 
     </map:pipeline>
@@ -357,6 +357,7 @@
           <map:parameter name="fileextension" value="html"/>
         </map:transform>
         <map:serialize type="xhtml"/>
+      <!--  <map:serialize type="xml" /> -->
       </map:match>
 
 <map:match pattern="documents/lessonbooks/pupil/*">
@@ -454,11 +455,11 @@
             <map:aggregate element="aggregation">
               <map:part src="cocoon://_internal/menu/main.xml"/>
               <map:part
-                src="cocoon://_internal/solr/query/q=kind%3A{1}&amp;rows=9999&amp;sort=dateFull%20asc"/>
+                src="cocoon://_internal/solr/query/q=kind%3A{1}&amp;rows=9999&amp;sort=dateFull%20asc"/> 
               <map:part src="xml/content/documents/{1}/{2}.xml"/>
               <!---->
               <map:part element="commentary" src="cocoon://internal/documents/commentary/{1}/{2}"/>
-              <map:part element="eats" src="cocoon://_internal/eats/entities.xml"/>
+               <map:part element="eats" src="cocoon://_internal/eats/entities.xml"/>
               <!---->
             </map:aggregate>
             <map:transform src="stylesheets/local/documents/{1}-to-html.xsl">
@@ -468,7 +469,7 @@
               <map:parameter name="printable" value="true"/>
             </map:transform>
             <map:serialize type="xhtml"/>
-            <!-- <map:serialize type="xml"/>-->
+            <!-- <map:serialize type="xml"/> -->
           </map:when>
           <map:otherwise>
             <map:generate src="xml/content/http404.xml"/>
@@ -835,8 +836,8 @@
       <map:match pattern="internal/documents/commentary/*/*">
         <map:generate src="xml/content/documents/{1}/{2}.xml"/>
         <map:transform src="stylesheets/local/documents/xinclude-commentary.xsl">
-          <map:parameter name="eats-server" value="{global:eats-server}"/>
-          <map:parameter name="document-url" value="../document/"/>
+          <map:parameter name="data-server" value="{global:data-server}"/>
+          <map:parameter name="document-url" value="document/"/>
         </map:transform>
         <map:transform type="xinclude"/>
         <map:serialize type="xml"/>
@@ -885,7 +886,7 @@
             src="cocoon://_internal/solr/query/q=entity_key%3A*&amp;rows=0&amp;fl=entity_key&amp;facet=true&amp;facet.field=entity_key&amp;facet.sort=entity_key&amp;facet.limit=9000"/>
           <map:part element="eats" src="cocoon://_internal/eats/entities.xml"/>
        </map:aggregate>
-        <map:transform src="stylesheets/local/profiles/generate-entries.xsl">
+     <map:transform src="stylesheets/local/profiles/generate-entries.xsl">
           <map:parameter name="filename" value="{1}"/>
         </map:transform>
         <map:serialize type="xml" /> 

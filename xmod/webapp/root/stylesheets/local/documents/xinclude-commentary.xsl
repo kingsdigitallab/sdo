@@ -10,14 +10,14 @@
     </xd:desc>
   </xd:doc>
 
-  <xsl:param name="eats-server" />
+  <xsl:param name="data-server" />
   <xsl:param name="document-url" />
 
   <xsl:template match="/">
     <xsl:variable name="mfid" select="/sdo:recordCollection/sdo:collectionDesc/sdo:source/sdo:correspondence/@mfID" />
     
     <xsl:if test="$mfid">
-      <xi:include href="{$eats-server}{$document-url}{$mfid}" />
+      <xi:include href="{$data-server}{$document-url}{$mfid}" />
     </xsl:if>
   </xsl:template>
 </xsl:stylesheet>
