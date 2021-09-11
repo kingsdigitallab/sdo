@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2553" sdoID="OJ-14-37_1">OJ 14/37, [1]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="PSz" scope="major">Paula Szalit's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2021</tei:resp>
+      <tei:resp>Translation, 2021</tei:resp>
+      <tei:resp>XML Encoding, 2021</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2011-03-05" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008062">SzalitP ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-003332">calling card</tei:rs>
+
+      <dc:title>Handwriten calling card from Paula Szalit to Schenker, undated</dc:title>
+      <dcterms:created>1905-03-01T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2021-09-11</dcterms:dateSubmitted>
+      <dc:description>Paul Szalit sends Schenker tickets for her forthcoming concert, and apologizes
+        for the poor seats.</dc:description>
+      <dc:subject>Karte; ticket; Platz; seat</dc:subject>
+
+
+      <marcrel:correspondent key="entity-000878">Paula Szalit</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:salute><tei:handShift new="#PSz"/>Lieber Herr <tei:rs type="person" key="entity-000632">Doctor</tei:rs>!<tei:note
+            xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this letter is not recorded
+            in Schenker’s diary.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p><tei:handShift new="#printed"/>Paula Szalit</tei:p>
+
+      <tei:p><tei:handShift new="#PSz"/>Ich habe leider keine besseren Karten zu Hause und hoffe,
+        dass Sie mir die schlechten Plätze <tei:milestone unit="folio" n="verso"/> nicht
+          übelnehmen.<tei:note xml:id="r0001-fn02" type="editorial" place="foot">Szalit is sending
+          Schenker “Karten“ (plural), and yet this cannot be dated after Jeanette Kornfeld joined
+          Schenker in Vienna in the Fall of 1910, since Szalit’s concert career collapsed in 1906
+          after she joined the faculty of the Lemberg Conservatory.</tei:note></tei:p>
+
+      <tei:closer>
+        <tei:salute>Besten Gruss</tei:salute>
+        <tei:salute>auch von <tei:rs type="person" key="entity-007722">Heinrich</tei:rs><tei:note
+            xml:id="r0001-fn3" type="editorial" place="foot">Heinrich Szalit, Paula’s brother, also
+            a pianist, lived at Vienna IX, Porzellangasse 54 in 1902, 1903, and
+          1904.</tei:note></tei:salute>
+        <tei:signed rend="indent-20"><tei:rs key="entity-000878" type="person">Paul
+          Szalit</tei:rs>.</tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:salute><tei:handShift new="#PSz"/>Dear Dr. <tei:supplied><tei:rs type="person" key="entity-000632"
+              >Schenker</tei:rs></tei:supplied>,<tei:ptr corresp="r0001-fn01" type="footnote"
+          /></tei:salute>
+      </tei:opener>
+
+      <tei:p><tei:handShift new="#printed"/>Paula Szalit</tei:p>
+
+      <tei:p><tei:handShift new="#PSz"/>I regret that I have no better tickets at home, and hope you
+        will <tei:milestone unit="folio" n="verso"/> not be offended at me for the poor seats.<tei:ptr corresp="r0001-fn02" type="footnote"/>
+        ></tei:p>
+
+      <tei:closer>
+        <tei:salute>Besten Gruss</tei:salute>
+        <tei:salute>auch von <tei:rs type="person" key="entity-007722">Heinrich</tei:rs><tei:note
+            xml:id="r0001-fn3" type="editorial" place="foot">Heinrich Szalit, Paula’s brother, also
+            a pianist, lived at Vienna IX, Porzellangasse 54 in 1902, 1903, and
+          1904.</tei:note></tei:salute>
+        <tei:signed rend="indent-20"><tei:rs key="entity-000878" type="person">Paul
+          Szalit</tei:rs>.</tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
