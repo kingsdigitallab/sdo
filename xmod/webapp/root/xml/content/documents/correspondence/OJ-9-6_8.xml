@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+    xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+    <sdo:collectionDesc>
+        <sdo:source>
+            <sdo:correspondence mfID="2582" sdoID="OJ-9-6_8">OJ 9/6, [8]</sdo:correspondence>
+        </sdo:source>
+
+        <tei:handNotes>
+            <tei:handNote xml:id="d-A" scope="sole">Eugen d'Albert's hand</tei:handNote>
+
+        </tei:handNotes>
+
+        <tei:respStmt xml:id="IDB">
+            <tei:persName>Ian Bent</tei:persName>
+            <tei:resp>Transcription, 2006, 2021</tei:resp>
+            <tei:resp>Translation, 2006, 2021</tei:resp>
+            <tei:resp>XML Encoding, 2021</tei:resp>
+        </tei:respStmt>
+
+        <tei:revisionDesc>
+            <tei:change when="2011-04-15" who="#DB">XML code created</tei:change>
+        </tei:revisionDesc>
+    </sdo:collectionDesc>
+    <sdo:record ID="r0001">
+
+        <sdo:itemDesc>
+            <tei:rs role="correspondence" type="correspondence" key="entity-008072">d'AlbertE ~
+                HSchenker</tei:rs>
+            <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+            <dc:title>Handwritten letter from Eugen d'Albert to Schenker, dated September 7,
+                1894</dc:title>
+
+            <dcterms:created>1894-09-07T12:00:00Z</dcterms:created>
+            <dcterms:dateSubmitted>2021-10-19</dcterms:dateSubmitted>
+            <dc:description>Eugen d'Albert asks for the piano reduction of his opera Ghismonda back
+                urgently.</dc:description>
+            <dc:subject>Clavierauszug; piano reduction; Einstudiren; study; Hoftheater; court
+                theater; Manuscript; zurückschicken; return</dc:subject>
+
+
+
+            <marcrel:correspondent key="entity-000150">d'AlbertE</marcrel:correspondent>
+            <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+        </sdo:itemDesc>
+
+
+        <tei:div type="transcription">
+            <tei:opener>
+                <tei:salute><tei:handShift new="#d-A"/>Sehr geehrter <tei:rs type="person"
+                        key="entity-000632">Herr</tei:rs>!</tei:salute>
+            </tei:opener>
+
+            <tei:p>Da es wünschenswert erscheint, sofort einige Clavierauszüge abschreiben zu
+                lassen, um das Einstudiren im hiesigen Hoftheater rechtzeitig zu ermöglichen, muss
+                ich Sie leider freundl. ersuchen, mir nach Empfang dieser Zeilen den Clavierauszug
+                meiner „<tei:title>Ghismonda</tei:title>“ sofort zurückschicken zu wollen. Es thut
+                mir herzlich leid, Ihnen das Manuscript nicht länger überlassen zu können, aber die
+                Gründe werden Sie wohl begreifen.<tei:note xml:id="r0001-fn01" type="editorial"
+                    place="foot">In <tei:ref type="correspondence" cRef="OJ-9-6_7">OJ 9/6,
+                        [7]</tei:ref> of September 2, 1894, d’Albert had asked for the piano
+                    reduction to be returned “within two weeks at the latest.”</tei:note>
+            </tei:p>
+
+            <tei:closer>
+                <tei:salute rend="indent-10">Mit herzlichen Grüssen</tei:salute>
+                <tei:salute rend="intend-30">Ihr ergebener</tei:salute>
+                <tei:signed rend="indent-50"><tei:rs type="person" key="entity-000150">Eugen
+                        d’Albert</tei:rs></tei:signed><tei:lb/>
+                <tei:address>
+                    <tei:addrLine><tei:placeName>Coswig i/Sa.</tei:placeName></tei:addrLine>
+                    <tei:addrLine><tei:date when="1894-09-07">7 Sept 1894</tei:date>.</tei:addrLine>
+                </tei:address>
+            </tei:closer>
+
+        </tei:div>
+
+        <tei:div type="translation">
+            <tei:opener>
+                <tei:salute><tei:handShift new="#d-A"/>Dear <tei:rs type="person"
+                        key="entity-000632">Sir</tei:rs>,</tei:salute>
+            </tei:opener>
+
+            <tei:p>Since it appears desirable to have several copies of the piano reduction made
+                immediately, in order to facilitate its being studied in good time at the local
+                court theater, I must alas ask you to return to me the piano reduction of my
+                    <tei:title level="m">Ghismonda</tei:title> promptly upon receipt of this letter.
+                I am genuinely sorry not to be able to leave the manuscript with you longer, but I
+                feel sure you will appreciate the reasons.<tei:ptr corresp="#r0001-fn01"
+                    type="footnote"/>
+            </tei:p>
+
+            <tei:closer>
+                <tei:salute rend="indent-10">With cordial greetings,</tei:salute>
+                <tei:salute rend="intend-30">Your devoted</tei:salute>
+                <tei:signed rend="indent-50"><tei:rs type="person" key="entity-000150">Eugen
+                        d’Albert</tei:rs></tei:signed><tei:lb/>
+                <tei:address>
+                    <tei:addrLine><tei:placeName>Coswig in Saxony</tei:placeName></tei:addrLine>
+                    <tei:addrLine><tei:date when="1894-09-07">September 7,
+                        1894</tei:date></tei:addrLine>
+                </tei:address>
+            </tei:closer>
+        </tei:div>
+    </sdo:record>
+</sdo:recordCollection>
