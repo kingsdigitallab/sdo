@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+    xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+    <sdo:collectionDesc>
+        <sdo:source>
+            <sdo:correspondence mfID="2617" sdoID="OJ-9-6_44">OJ 9/6, [44]</sdo:correspondence>
+        </sdo:source>
+
+        <tei:handNotes>
+            <tei:handNote xml:id="d-A" scope="major">Eugen d'Albert's hand</tei:handNote>
+            <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+
+        </tei:handNotes>
+
+        <tei:respStmt xml:id="IDB">
+            <tei:persName>Ian Bent</tei:persName>
+            <tei:resp>Transcription, 2021</tei:resp>
+            <tei:resp>Translation, 2021</tei:resp>
+            <tei:resp>XML Encoding, 2021</tei:resp>
+        </tei:respStmt>
+
+        <tei:revisionDesc>
+            <tei:change when="2011-04-15" who="#DB">XML code created</tei:change>
+        </tei:revisionDesc>
+    </sdo:collectionDesc>
+    <sdo:record ID="r0001">
+
+        <sdo:itemDesc>
+            <tei:rs role="correspondence" type="correspondence" key="entity-008072">d'AlbertE ~
+                HSchenker</tei:rs>
+            <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+            <dc:title>Handwritten letter from Eugen d'Albert to Schenker, dated November 8,
+                1905</dc:title>
+
+            <dcterms:created>1905-11-08T12:00:00Z</dcterms:created>
+            <dcterms:dateSubmitted>2021-11-03</dcterms:dateSubmitted>
+            <dc:description>In this significant letter, Eugen d'Albert agrees [to help Schenker find
+                a publisher for his Harmonielehre] and has already written to Brockhaus. He seeks to
+                interest Schenker in his new opera "Flauto Solo," the première of which, in Prague,
+                is in four days' time. </dc:description>
+            <dc:subject>Wunsch; wish; schreiben; to write; Verlag; publisher; Première; Oper; opera;
+                Werk; work; cultur-historisch; cultural-historical; Platz; seat</dc:subject>
+
+
+
+            <marcrel:correspondent key="entity-000150">d'AlbertE</marcrel:correspondent>
+            <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+        </sdo:itemDesc>
+
+
+        <tei:div type="transcription">
+
+            <tei:opener>
+                <tei:address>
+                    <tei:addrLine><tei:handShift new="#printed"/>HOTEL BLAUER STERN</tei:addrLine>
+                    <tei:addrLine>CARL BELTMANN</tei:addrLine>
+                    <tei:addrLine>TELEGRAMM-ADRESSE: Sternhotel Prag.</tei:addrLine>
+                    <tei:addrLine rend="indent-50">Prag, <tei:handShift new="#d-A"/><tei:date
+                            when="1905-07-11">8 Nov <tei:choice>
+                                <tei:sic>03</tei:sic>
+                                <tei:corr>05</tei:corr>
+                            </tei:choice></tei:date>.</tei:addrLine>
+                </tei:address>
+                <tei:salute>Lieber Herr <tei:rs type="person" key="entity-000632"
+                        >Doctor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot"
+                        >Federhofer gives this letter in full in <tei:bibl><tei:title level="m"
+                                >Heinrich Schenker nach Tagebüchern und Briefen</tei:title>
+                            (Hildesheim: Georg Olms Verlag, 1985)</tei:bibl>, pp.
+                    64–65.</tei:note></tei:salute>
+            </tei:opener>
+
+            <tei:p>Sehr gerne erfülle ich Ihren Wunsch<tei:note xml:id="r0001-fn02" type="editorial"
+                    place="foot">Schenker has asked d’Albert for help in finding a publisher for his
+                        <tei:rs type="work" key="entity-001724"><tei:title level="m"
+                            >Harmonielehre</tei:title></tei:rs>. He had already approached Universal
+                    Edition and received an initial discouraging response (April 13, 1905). He then
+                    approached Breitkopf &amp; Härtel, who had asked for the manuscript (June 26),
+                    received it and sent a rejection (September 6), after which he had gone back to
+                    Universal Edition, who had asked for sight of the manuscript (October 21).
+                    D’Albert has now agreed to intercede in support of his application. See <tei:ref
+                        type="correspondence" cRef="OJ-9-6_45">OJ 9/6, [45]</tei:ref>, November 14,
+                    for the reply from Brockhaus.<tei:lb/> More importantly, on the same day
+                    d’Albert also wrote to the publisher <tei:rs type="organization"
+                        key="entity-002405">J. G. Cotta</tei:rs> of <tei:rs type="place"
+                        key="entity-002317">Stuttgart</tei:rs> – successfully, as Cotta’s letter to
+                    him of November 14, <tei:ref type="correspondence" cRef="OJ-9-31_2">OJ 9/31,
+                        [2]</tei:ref>, attests: “The fact that you, highly revered Sir, have
+                    undertaken to intercede is for us a mark of its literary and artistic worth, and
+                    prompts us to ask Dr. Schenker to send us the manuscript ....” This step led to
+                    the eventual publication by Cotta of not only the <tei:rs type="work"
+                        key="entity-001724"><tei:title level="m">Harmonielehre</tei:title></tei:rs>
+                    (1906) but also <tei:rs type="work" key="entity-001726"><tei:title level="m"
+                            >Kontrapunkt</tei:title> I</tei:rs> (1910). </tei:note> – ich habe schon
+                gestern an Brockhaus geschrieben, vorläufig als Anfrage, denn der Verlag <tei:hi
+                    rend="underline">F.</tei:hi> Brockhaus<tei:note xml:id="r0001-fn03"
+                    type="editorial" place="foot">Friedrich Arnold Brockhaus (1772–1823) founded the
+                    firm F. A. Brockhaus in Leipzig in 1806. It was this firm that acquired the
+                        <tei:title level="m">Conversations-Lexikon</tei:title>, originated in
+                    1796–1808, which was renamed <tei:title level="m">Der Große
+                        Brockhaus</tei:title> in 1928 and <tei:title level="m">Brockhaus
+                        Enzyklopädie</tei:title> in 1966. — Max Brockhaus (1867–1957) founded the
+                    firm Musikverlag Max Brockhaus in Leipzig in 1893. He was the publisher of works
+                    by Humperdinck, Leoncavallo, d’Albert, Pfitzner, Siegfried Wagner, and others.
+                        (<tei:title level="m">MGG</tei:title>, 1973, and <tei:title level="m"
+                        >wikipedia</tei:title>)</tei:note> müßte die Sache übernehmen u. nicht mein
+                Verleger <tei:hi rend="underline">Max</tei:hi> Brockhaus.<tei:note
+                    xml:id="r0001-fn04" type="editorial" place="foot">No paragraph break at this
+                    point in source.</tei:note>
+            </tei:p>
+
+            <tei:p>Sonntag ist hier die Première meiner neuen Oper „<tei:title>Flauto
+                    solo</tei:title>“.<tei:note xml:id="r0001-fn05" type="editorial" place="foot"
+                        ><tei:title level="m">Flauto solo</tei:title>: musical comedy, libretto by
+                    H. von Wolzogen, first performance Prague, November 12, 1905.</tei:note> Das
+                Werk müßte Sie ganz besonders interessiren, da es viele cultur-historische Momente
+                aufweist. Ich würde mich ungeheuer freuen, wenn Sie kommen wollten. <tei:pb n="2"/>
+                Bitte um eine Zeile, damit ich Ihnen einen Platz reserviren lassen kann.<tei:note
+                    xml:id="r0001-fn06" type="editorial" place="foot">It is unclear whether Schenker
+                    attended. His diaries do not cover 1905 (other than to report his summer
+                    vacation whereabouts). Moreover, he was busy completing his <tei:rs type="work"
+                        key="entity-001724"><tei:title level="m">Harmonielehre</tei:title></tei:rs>
+                    at that time.</tei:note>
+            </tei:p>
+
+            <tei:closer>
+                <tei:salute rend="indent-10">Herzliche Grüße in rasender Eile</tei:salute>
+                <tei:salute rend="indent-30">Ihr</tei:salute>
+                <tei:signed rend="indent-50"><tei:rs type="person" key="entity-000150">Eugen
+                        d’Albert</tei:rs>.</tei:signed>
+            </tei:closer>
+
+            <tei:postscript>
+                <tei:lb/>
+                <tei:p>Première: <tei:date when="1905-11-12"><tei:hi rend="underline"
+                            >Sonntag</tei:hi> d. 12<tei:hi rend="supralinear"
+                        >ten</tei:hi></tei:date>! </tei:p>
+
+                <tei:p>Machen Sie es doch möglich, lieber Herr Doctor! </tei:p>
+            </tei:postscript>
+
+        </tei:div>
+
+        <tei:div type="translation">
+
+            <tei:opener>
+                <tei:address>
+                    <tei:addrLine><tei:handShift new="#printed"/>HOTEL BLAUER STERN</tei:addrLine>
+                    <tei:addrLine>CARL BELTMANN</tei:addrLine>
+                    <tei:addrLine>TELEGRAM ADDRESS: Sternhotel Prag</tei:addrLine>
+                    <tei:addrLine rend="indent-50">Prague, <tei:handShift new="#d-A"/><tei:date
+                            when="1905-07-11">November 8, 19<tei:choice>
+                                <tei:sic>03</tei:sic>
+                                <tei:corr>05</tei:corr>
+                            </tei:choice></tei:date></tei:addrLine>
+                </tei:address>
+                <tei:salute>Dear Dr. <tei:supplied reason="identity"><tei:rs type="person"
+                            key="entity-000632">Schenker</tei:rs></tei:supplied>,<tei:ptr
+                        corresp="#r0001-fn01" type="footnote"/></tei:salute>
+            </tei:opener>
+
+            <tei:p>I will be very happy to fulfil your wish:<tei:ptr corresp="#r0001-fn02"
+                    type="footnote"/> I wrote already yesterday to Brockhaus – as a preliminary
+                inquiry – for the publisher <tei:hi rend="underline">F.</tei:hi> Brockhaus<tei:ptr
+                    corresp="#r0001-fn03" type="footnote"/> would have to take up the matter, and
+                not my publisher, <tei:hi rend="underline">Max</tei:hi> Brockhaus.<tei:ptr
+                    corresp="#r0001-fn04" type="footnote"/></tei:p>
+
+            <tei:p>Sunday is the première here of my new opera, <tei:title level="m">Flauto
+                    solo</tei:title>.<tei:ptr corresp="#r0001-fn05" type="footnote"/> The work would
+                be bound to interest you especially, because it has many cultural-historical
+                elements to it. I would be hugely delighted if you were to come. <tei:pb n="2"/>
+                Please drop me a line so that I can have a seat reserved for you.<tei:ptr
+                    corresp="#r0001-fn06" type="footnote"/></tei:p>
+
+            <tei:closer>
+                <tei:salute rend="indent-10">Cordial greetings in frantic haste,</tei:salute>
+                <tei:salute rend="indent-30">Your</tei:salute>
+                <tei:signed rend="indent-50"><tei:rs type="person" key="entity-000150">Eugen
+                        d’Albert</tei:rs>.</tei:signed>
+            </tei:closer>
+
+            <tei:postscript>
+                <tei:lb/>
+                <tei:p>Première: <tei:date when="1905-11-12"><tei:hi rend="underline"
+                            >Sunday</tei:hi> the 12th</tei:date>!</tei:p>
+
+                <tei:p>Do work on it, dear Dr. <tei:supplied reason="identity"
+                        >Schenker</tei:supplied>!</tei:p>
+            </tei:postscript>
+
+
+        </tei:div>
+    </sdo:record>
+</sdo:recordCollection>
