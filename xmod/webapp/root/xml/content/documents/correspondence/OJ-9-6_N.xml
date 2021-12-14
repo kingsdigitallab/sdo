@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+    xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+    <sdo:collectionDesc>
+        <sdo:source>
+            <sdo:correspondence mfID="2638" sdoID="OJ-9-6_N">OJ 9/6, [N]</sdo:correspondence>
+        </sdo:source>
+
+        <tei:handNotes>
+            <tei:handNote xml:id="d-A" scope="sole">Eugen d'Albert's hand</tei:handNote>
+
+        </tei:handNotes>
+
+        <tei:respStmt xml:id="IDB">
+            <tei:persName>Ian Bent</tei:persName>
+            <tei:resp>Transcription, 2006, 2021</tei:resp>
+            <tei:resp>Translation, 2006, 2021</tei:resp>
+            <tei:resp>XML Encoding, 2021</tei:resp>
+        </tei:respStmt>
+
+        <tei:revisionDesc>
+            <tei:change when="2011-04-15" who="#DB">XML code created</tei:change>
+        </tei:revisionDesc>
+    </sdo:collectionDesc>
+    <sdo:record ID="r0001">
+
+        <sdo:itemDesc>
+            <tei:rs role="correspondence" type="correspondence" key="entity-008072">d'AlbertE ~
+                HSchenker</tei:rs>
+            <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+            <dc:title>Handwritten letter from Eugen d’Albert to Schenker, undated</dc:title>
+
+            <dcterms:created>1894-01-05T12:00:00Z</dcterms:created>
+            <dcterms:dateSubmitted>2021-12-14</dcterms:dateSubmitted>
+            <dc:description>Eugen d'Albert will try to free himself up for a meeting
+                tomorrow.</dc:description>
+            <dc:subject>eingelanden; invited; frei; free; Wohnung; residence; Bescheid; outcome;
+                gemütlich; leisurely</dc:subject>
+
+
+
+            <marcrel:correspondent key="entity-000150">d'AlbertE</marcrel:correspondent>
+            <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+        </sdo:itemDesc>
+
+
+        <tei:div type="transcription">
+
+            <tei:opener>
+                <tei:dateline rend="indent-40"><tei:date>Sonnabend</tei:date>
+                </tei:dateline>
+                <tei:salute>Verehrter Herr <tei:rs type="person" key="entity-000632"
+                    >Doctor</tei:rs>!</tei:salute>
+            </tei:opener>
+
+            <tei:p>Herzlichsten Dank! – heute Abend bin ich leider eingeladen, – ob ich morgen mich
+                frei machen kann, weiß ich nicht, – ich werde morgen im Laufe des Tages <tei:add
+                    place="interlinear-above">Ihnen</tei:add> in die Wohnung Bescheid sagen lassen.
+                Ich möchte gern mit Ihnen gemütlich zusammen kommen!</tei:p>
+
+            <tei:closer>
+                <tei:salute rend="indent-40">Mit besten Grüßen</tei:salute>
+                <tei:salute rend="intend-40">Ihr getr<tei:supplied reason="abbreviation"
+                        >euer</tei:supplied></tei:salute>
+                <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000150">Eugen
+                        d’Albert</tei:rs>.</tei:signed>
+            </tei:closer>
+
+        </tei:div>
+
+        <tei:div type="translation">
+
+            <tei:opener>
+                <tei:dateline rend="indent-40"><tei:date>Sunday evening</tei:date>
+                </tei:dateline>
+                <tei:salute>Revered Dr. <tei:supplied><tei:rs type="person" key="entity-000632"
+                            >Schenker</tei:rs></tei:supplied>,</tei:salute>
+            </tei:opener>
+
+            <tei:p>Very many thanks! – unfortunately I’m invited out for this evening. Whether I can
+                free myself up for tomorrow I don’t know. Tomorrow, in the course of the day, I will
+                let <tei:add place="interlinear-above">you</tei:add> know the outcome at the house.
+                I would very much like to get together with you in leisurely fashion.</tei:p>
+
+            <tei:closer>
+                <tei:salute rend="indent-40">With best greetings,</tei:salute>
+                <tei:salute rend="intend-40">Your devoted</tei:salute>
+                <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000150">Eugen
+                        d’Albert</tei:rs></tei:signed>
+            </tei:closer>
+
+        </tei:div>
+    </sdo:record>
+</sdo:recordCollection>
