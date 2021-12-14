@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+    xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+    <sdo:collectionDesc>
+        <sdo:source>
+            <sdo:correspondence mfID="2641" sdoID="OJ-9-6_45b">OJ 9/6, [45b]</sdo:correspondence>
+        </sdo:source>
+
+        <tei:handNotes>
+            <tei:handNote xml:id="d-A" scope="major">Eugen d'Albert's hand</tei:handNote>
+            <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+
+        </tei:handNotes>
+
+        <tei:respStmt xml:id="IDB">
+            <tei:persName>Ian Bent</tei:persName>
+            <tei:resp>Transcription, 2021</tei:resp>
+            <tei:resp>Translation, 2021</tei:resp>
+            <tei:resp>XML Encoding, 2021</tei:resp>
+        </tei:respStmt>
+
+        <tei:revisionDesc>
+            <tei:change when="2011-04-15" who="#DB">XML code created</tei:change>
+        </tei:revisionDesc>
+    </sdo:collectionDesc>
+    <sdo:record ID="r0001">
+
+        <sdo:itemDesc>
+            <tei:rs role="correspondence" type="correspondence" key="entity-008072">d'AlbertE ~
+                HSchenker</tei:rs>
+            <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+            <dc:title>Handwritten letter from Eugen d’Albert to Schenker, undated [Spring
+                1906]</dc:title>
+
+            <dcterms:created>1906-03-01T12:00:00Z</dcterms:created>
+            <dcterms:dateSubmitted>2021-12-14</dcterms:dateSubmitted>
+            <dc:description>Eugen d'Albert thanks Schenker for [Strauss's] "Salome" and finds it
+                execrable.</dc:description>
+            <dc:subject>scheußlich; execrable; Werk; work; Jungfrau; maiden; sinnlich; sensual;
+                Reiz; attraction</dc:subject>
+
+
+
+            <marcrel:correspondent key="entity-000150">d'AlbertE</marcrel:correspondent>
+            <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+        </sdo:itemDesc>
+
+
+        <tei:div type="transcription">
+
+            <tei:opener>
+                <tei:add><tei:handShift new="#printed"/><tei:note type="editorial" place="inline"
+                            ><tei:hi rend="italic">coat of arms: in scroll:</tei:hi></tei:note>
+                    HOTEL BRISTOL</tei:add>
+                <tei:address>
+                    <tei:addrLine>HOTEL BRISTOL</tei:addrLine>
+                    <tei:addrLine>WIEN</tei:addrLine>
+                </tei:address>
+                <tei:salute>Lieber Herr <tei:rs type="person" key="entity-000632"
+                    >Doctor</tei:rs>!</tei:salute>
+            </tei:opener>
+
+            <tei:p>Dank für „<tei:title>Salome</tei:title>“.<tei:note xml:id="r0001-fn01"
+                    type="editorial" place="foot">FFFF</tei:note> Ich finde sie scheußlich; – aber
+                das Werk wird auf zarte Jungfrauen gewiß einen stark sinnlichen Reiz ausüben. </tei:p>
+
+            <tei:p>Auf Wiedersehen und wünsche Hzle </tei:p>
+
+            <tei:closer>
+                <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000150">E.
+                        d’Albert</tei:rs>.</tei:signed>
+            </tei:closer>
+            <tei:postscript>
+                <tei:lb/>
+                <tei:p>Wir reisen nach <tei:hi rend="underline">Salzburg</tei:hi> (Hotel
+                    Bristol)</tei:p>
+            </tei:postscript>
+
+        </tei:div>
+
+        <tei:div type="translation">
+
+            <tei:opener>
+                <tei:add><tei:handShift new="#printed"/><tei:note type="editorial" place="inline"
+                            ><tei:hi rend="italic">coat of arms: in scroll:</tei:hi></tei:note>
+                    HOTEL BRISTOL</tei:add>
+                <tei:address>
+                    <tei:addrLine>HOTEL BRISTOL</tei:addrLine>
+                    <tei:addrLine>VIENNA</tei:addrLine>
+                </tei:address>
+                <tei:salute>Dear Dr. <tei:supplied><tei:rs type="person" key="entity-000632"
+                            >Schenker</tei:rs></tei:supplied>,</tei:salute>
+            </tei:opener>
+
+            <tei:p>Most cordial thanks for <tei:title level="m">Salome</tei:title>.<tei:ptr
+                    corresp="#r0001-fn01" type="footnote"/> I find it execrable. But the work will
+                certainly exert a strong sensual fascination upon tender maidens. </tei:p>
+
+            <tei:p>Until we next meet, and I send cordial best wishes,</tei:p>
+
+            <tei:closer>
+                <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000150">E.
+                        d’Albert</tei:rs></tei:signed>
+            </tei:closer>
+            <tei:postscript>
+                <tei:lb/>
+                <tei:p>We are off to <tei:hi rend="underline">Salzburg</tei:hi> (Hotel
+                    Bristol)</tei:p>
+            </tei:postscript>
+
+        </tei:div>
+    </sdo:record>
+</sdo:recordCollection>
