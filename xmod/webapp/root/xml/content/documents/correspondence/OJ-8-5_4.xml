@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2703" sdoID="OJ-8-5_4">OJ 8/5, [4]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2015</tei:resp>
+      <tei:resp>Translation, 2015</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2022</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2013-07-04" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002719">ViolinM ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002717">ViolinM+V ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002718">ViolinM+V+F ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture
+        postcard</tei:rs>
+
+
+      <dc:title>Handwritten picture postcard from Schenker to Violin, postmarked June 6,
+        1931</dc:title>
+
+      <dcterms:created>1931-06-06T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2022-03-02</dcterms:dateSubmitted>
+      <dc:description>Furtwängler has sent 3,000 Marks via Hans Weisse for the costs of Das
+        Meisterwerk 3, and Weisse will continue to seek the funds for Der freie
+        Satz.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000909">ViolinF</marcrel:recipient>
+      <marcrel:recipient key="entity-000913">ViolinM</marcrel:recipient>
+      <marcrel:recipient key="entity-000914">ViolinV</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline">
+          <tei:handShift new="#printed"/>Postkarte</tei:fw><tei:lb/>
+        <tei:lb/><tei:note type="editorial" place="inline">top-left, landscape photograph captioned:
+            "<tei:rs type="place" key="entity-002874">Paznauntal</tei:rs> – <tei:rs type="place"
+            key="entity-002334">Tirol</tei:rs>"</tei:note><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">Absender:</tei:supplied>
+              <tei:handShift new="#HS"/>Schenker, Wien</tei:addrLine>
+            <tei:addrLine>III, Keilgasse 8</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied> H Prof. M.
+              Violin</tei:addrLine>
+            <tei:addrLine rend="indent-10">Hamburg</tei:addrLine>
+            <tei:addrLine rend="indent-30">Haynstr. 13</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| 3 WIEN 40 | 6.VI.31 19 | * <tei:gap reason="illegible"/> *
+            ||</tei:fw>
+          <tei:lb/><tei:lb/>
+          <tei:note type="editorial">for continuation of message from verso, see
+          below</tei:note><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:salute><tei:rs key="entity-000913" type="person">Fl</tei:rs>!<tei:note
+            xml:id="r0001-fn01" type="editorial" place="foot">Writing of this postcard is recorded
+            in Schenker's diary for June 6, 1931: “An Floriz (K.): von Furtwängler M. 3000 erhalten;
+            der <tei:title>freie Satz</tei:title> ist fast gesichert.” (“To Floriz (postcard): 3,000
+            Marks received from Furtwängler; <tei:title level="m">Free Composition</tei:title> is
+            nearly secured.”). — On June 1, 1931, the diary records: “Von Weisse (Br. expr.):
+            Furtwängler sende 3000 M. — An Weisse (Br. express): sein (F.s) eigenes Geld habe ich
+            nie gemeint (?? LL.), jedenfalls nur dann, wenn Fremde versagen.” (“From Weisse (express
+            letter): Furtwängler is sending 3,000 marks. — To Weisse (express letter): I never meant
+            to take his (Furtwängler’s) own money (?? LL.) – at any rate, only in the event that
+            others fail.”). See also <tei:ref type="correspondence" cRef="OJ-15-16_77">OJ 15/16,
+              [77]</tei:ref>, June 1, 1931, from Weisse to Schenker.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Es geschehen Wunder! Gestern Abds überbrachte mir <tei:rs type="person"
+          key="entity-000951">Hans</tei:rs> 3000 Mk (zur Vergütung der letzten Arbeit),<tei:note
+          xml:id="r0001-fn02" type="editorial" place="foot"><tei:rs type="work" key="entity-001752"
+                ><tei:title><tei:hi rend="italic">Meisterwerk</tei:hi> 3</tei:title></tei:rs>, which
+          was devoted almost entirely to Schenker’s study of Beethoven’s “Eroica”
+          Symphony.</tei:note> die ihm <tei:rs type="person" key="entity-000268">F.</tei:rs> für
+        mich bereitgestellt hat. Er wird sich auch noch wegen des „<tei:rs type="work"
+          key="entity-001728"><tei:title>fr. S</tei:title></tei:rs>“ bemühen u. fast scheint es, als
+          <tei:add place="interlinear-above">wäre</tei:add> der „<tei:rs type="work"
+          key="entity-001728"><tei:title>fr. S</tei:title></tei:rs>“ dadurch <tei:add
+          place="interlinear-above">ganz</tei:add>
+        <tei:hi rend="underline">gesichert</tei:hi>.<tei:note xml:id="r0001-fn03" type="editorial"
+          place="foot">Eventually, Schenker received a gift of 4,000 Shillings from a Viennese
+          industrialist by the name of <tei:rs type="person" key="entity-005758">Paul
+            Khuner</tei:rs>, whose wife was a pupil of Weisse’s.</tei:note>
+        <tei:rs type="person" key="entity-000951">Hans</tei:rs> hat sich <tei:hi rend="underline"
+          >größte Verdienste in diesen Sachen</tei:hi> erworben, sehr, sehr freut mich aber <tei:rs
+          type="person" key="entity-000268">F</tei:rs>’s Teilnahme. </tei:p>
+
+      <tei:p>Nun, freue dich mit! Wir gehen am <tei:date when="1931-06-14">14. 6</tei:date>
+        <tei:milestone unit="folio" n="recto"/> ab,<tei:note xml:id="r0001-fn04" type="editorial"
+          place="foot">i.e. for their Summer vacation in the Tyrol.</tei:note> dann gilt es den
+          „<tei:rs type="work" key="entity-001728"><tei:title>fr. S</tei:title></tei:rs>“
+        fertigzustellen. Wie geht es dir, den l. Deinigen? In Gesundheit u. sonst? </tei:p>
+
+      <tei:closer>
+        <tei:salute>Viele Grüße u. Küsse von uns Beiden</tei:salute>
+        <tei:salute rend="indent-70">dein</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs key="entity-000632" type="person"
+          >H</tei:rs></tei:signed><tei:lb/>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:lb/>
+        <tei:p><tei:milestone unit="folio" n="verso"/>
+          <tei:note type="editorial" place="inline">along left side and bottom margins:</tei:note> 5
+          Schüler von <tei:rs type="person" key="entity-000951">Hans</tei:rs> werden bei mir die
+            <tei:rs type="organization" key="entity-002499">Seminar</tei:rs>istischen Übungen
+          fortsetzen, um meine Augen zu entlasten. </tei:p>
+      </tei:postscript>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline">
+          <tei:handShift new="#printed"/>Postcard</tei:fw><tei:lb/>
+        <tei:lb/><tei:note type="editorial" place="inline">top-left, landscape photograph captioned:
+            "<tei:rs type="place" key="entity-002874">Paznaun Valley</tei:rs> – <tei:rs type="place"
+            key="entity-002334">Tyrol</tei:rs>"</tei:note><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">From:</tei:supplied>
+              <tei:handShift new="#HS"/>Schenker, Vienna</tei:addrLine>
+            <tei:addrLine>III, Keilgasse 8</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied> Prof. M.
+              Violin</tei:addrLine>
+            <tei:addrLine rend="indent-10">Hamburg</tei:addrLine>
+            <tei:addrLine rend="indent-30">Haynstraße 13</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| 3 VIENNA 40 | 6.VI.31 19 | * <tei:gap reason="illegible"/> *
+            ||</tei:fw>
+          <tei:lb/><tei:lb/>
+          <tei:note type="editorial">for continuation of message from verso, see
+          below</tei:note><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:salute><tei:rs key="entity-000913" type="person">Floriz</tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>Miracles do happen. Yesterday evening <tei:rs type="person" key="entity-000951"
+          >Hans</tei:rs> brought me 3,000 Marks (as remuneration for my last work),<tei:ptr
+          corresp="#r0001-fn02" type="footnote"/> with which <tei:rs type="person"
+          key="entity-000268">Furtwängler</tei:rs> provided him. He will now continue to make an
+        effort with respect to <tei:rs type="work" key="entity-001728"><tei:title level="m">Free
+            Composition</tei:title></tei:rs>, and it seems almost certain that <tei:rs type="work"
+          key="entity-001728"><tei:title level="m">Free Composition</tei:title></tei:rs>
+        <tei:add place="interlinear-above">will</tei:add> thereby be <tei:add
+          place="interlinear-above">entirely</tei:add>
+        <tei:hi rend="underline">secured</tei:hi>.<tei:ptr corresp="#r0001-fn03" type="footnote"/>
+        <tei:rs type="person" key="entity-000951">Hans</tei:rs> has rendered <tei:hi
+          rend="underline">greatest service in these matters</tei:hi>; I am very, very pleased also
+        with <tei:rs type="person" key="entity-000268">Furtwängler</tei:rs>’s contribution.</tei:p>
+
+      <tei:p>Now you can share in my joy! We are leaving on <tei:date when="1931-06-14">June
+          14</tei:date>;<tei:ptr corresp="#r0001-fn04" type="footnote"/>
+        <tei:milestone unit="folio" n="recto"/> it will then be a question of completing <tei:rs
+          type="work" key="entity-001728"><tei:title level="m">Free
+        Composition</tei:title></tei:rs>. How are you, your lovely family? In respect of health, and
+        otherwise? </tei:p>
+
+      <tei:closer>
+        <tei:salute>Many greetings and kisses from the two of us. </tei:salute>
+        <tei:salute rend="indent-70">Your</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs key="entity-000632" type="person"
+          >H.</tei:rs></tei:signed><tei:lb/>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:lb/>
+        <tei:p><tei:milestone unit="folio" n="verso"/>
+          <tei:note type="editorial" place="inline">along left side and bottom margins:</tei:note>
+          Five pupils of <tei:rs type="person" key="entity-000951">Hans</tei:rs> will continue the
+            <tei:rs type="organization" key="entity-002499">seminar</tei:rs> exercises, to spare my
+          eyes.</tei:p>
+      </tei:postscript>
+
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
