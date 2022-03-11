@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2433" sdoID="OC-52-64">OC 52/63</sdo:correspondence>
+    </sdo:source>
+    <tei:handNotes>
+      <tei:handNote xml:id="TPue" scope="major">typist (UE)</tei:handNote>
+      <tei:handNote xml:id="AM" scope="minor">Aaron Mittelmann's hand?</tei:handNote>
+      <tei:handNote xml:id="printed" scope="major">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2006, 2020</tei:resp>
+      <tei:resp>Translation, 2006, 2020</tei:resp>
+      <tei:resp>XML Encoding, 2022</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-02-07" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002702">UE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002701">UE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002700">Hertzka ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">postcard</tei:rs>
+
+
+
+      <dc:title>Typewritten postcard from UE to Schenker, dated August 8, 1911</dc:title>
+
+      <dcterms:created>1911-08-08T14:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2022-03-11</dcterms:dateSubmitted>
+      <dc:description>UE requests personal data.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-002408">Universal Edition</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000356">Emil Hertzka</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:supplied reason="format">all in a rule-frame</tei:supplied><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>An <tei:handShift new="#TPue"/>Wohlgeboren
+            Herrn Prof. Dr. H. Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-40"><tei:handShift new="#printed"/>in <tei:handShift
+              new="#TPue"/><tei:del rend="overstrike"><tei:hi rend="sperr underline">Wien
+                III</tei:hi></tei:del></tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:del rend="overstrike">Reisnerstrasse
+            38</tei:del></tei:addrLine>
+          <tei:addrLine>p A. Frau <tei:rs type="person" key="entity-000599"
+            >Mittelmann</tei:rs></tei:addrLine>
+          <tei:addrLine><tei:supplied>Wien</tei:supplied> V/2</tei:addrLine>
+          <tei:addrLine>Albertgasse 33</tei:addrLine>
+        </tei:address>
+        <tei:fw type="postmark">|| <tei:gap reason="illegible"/> WIEN <tei:gap reason="illegible"/>
+          | <tei:gap reason="illegible"/> | * 3a * ||</tei:fw><tei:lb/><tei:lb/>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#TPue"/><tei:hi rend="underline">Wohlg. Herrn Prof.
+              Heinrich <tei:hi rend="sperr">Schenker</tei:hi></tei:hi></tei:addrLine>
+          <tei:addrLine><tei:hi rend="sperr underline">Wien</tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:salute>Sehr geehrter Herr <tei:rs type="person" key="entity-000632"
+          >Professor</tei:rs>!</tei:salute>
+      </tei:opener>
+
+
+      <tei:p rend="first">Sie würden uns zu Dank verpflichten, wenn Sie uns möglichst umgehend Ort
+        und Datum Ihrer Geburt bekannt geben wollten, da wir diese Daten für einen demnächst bei uns
+        erscheinenden Musik-Kalendar benötigen. </tei:p>
+
+      <tei:p>Im voraus bestens dankend, zeichnen wir</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-80"><tei:handShift new="#printed"/>Hochachtungsvoll</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs key="entity-002408" type="organization"
+            >„Universal-Edition“ A-G.</tei:rs><tei:lb/>(Jos. Aibl Verlag, G.m.b.H.)</tei:signed>
+        <tei:lb/>
+        <tei:dateline><tei:handShift new="#printed"/>Wien, am <tei:date when="1911-08-08"
+              ><tei:handShift new="#TPue"/>8. Aug. <tei:handShift new="#printed"/>191<tei:handShift
+              new="#TPue"/>1</tei:date></tei:dateline>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>I, Wipplingerstraße 32</tei:addrLine>
+          <tei:addrLine>Ab 1. Nov.: I, Reichsratstraße 9</tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+    </tei:div>
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:supplied reason="format">all in a rule-frame</tei:supplied><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>To <tei:handShift new="#TPue"/>Prof. Heinrich
+            Schenker, Esq.</tei:addrLine>
+          <tei:addrLine rend="indent-40"><tei:handShift new="#printed"/>in <tei:handShift
+              new="#TPue"/><tei:del rend="overstrike"><tei:hi rend="sperr underline">Vienna
+                III</tei:hi></tei:del></tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:del rend="overstrike">Reisnerstrasse
+            38</tei:del></tei:addrLine>
+          <tei:addrLine>c/o Mrs. <tei:rs type="person" key="entity-000599"
+            >Mittelmann</tei:rs></tei:addrLine>
+          <tei:addrLine><tei:supplied>Vienna</tei:supplied> V/2</tei:addrLine>
+          <tei:addrLine>Albertgasse 33</tei:addrLine>
+        </tei:address>
+        <tei:fw type="postmark">|| <tei:gap reason="illegible"/> VIENNA <tei:gap reason="illegible"
+          /> | <tei:gap reason="illegible"/> | * 3a * ||</tei:fw><tei:lb/><tei:lb/>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#TPue"/><tei:hi rend="underline">Prof. Heinrich <tei:hi
+                rend="sperr">Schenker</tei:hi></tei:hi></tei:addrLine>
+          <tei:addrLine><tei:hi rend="sperr underline">Vienna</tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:salute>Dear <tei:rs type="person" key="entity-000632">Professor</tei:rs>,</tei:salute>
+      </tei:opener>
+
+
+      <tei:p rend="first">We should be grateful if you could kindly let us know as soon as possible
+        by return your place and date of birth, since we need this information for a music calendar
+        that is to be issued by us in the near future. </tei:p>
+
+      <tei:p>Thanking you in advance, we remain,</tei:p>
+
+      <tei:closer>
+        <tei:salute><tei:handShift new="#printed"/>With kind regards,</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs key="entity-002408"
+            type="organization">Universal Edition &amp; Co.</tei:rs><tei:lb/>(Jos. Aibl Publisher
+          &amp; Co.)</tei:signed>
+        <tei:lb/>
+        <tei:dateline><tei:handShift new="#printed"/>Vienna, <tei:date when="1911-08-08"
+              ><tei:handShift new="#TPue"/>August 8, <tei:handShift new="#printed"
+              />191<tei:handShift new="#TPue"/>1</tei:date></tei:dateline>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="identity">Vienna</tei:supplied>
+            <tei:handShift new="#printed"/>I, Wipplingerstraße 32</tei:addrLine>
+          <tei:addrLine>From Nov. 1: <tei:supplied reason="identity">Vienna</tei:supplied> I,
+            Reichsratstraße 9</tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
