@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="2714" sdoID="OJ-9-5_1">OJ 9/5, [1]</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="GA" scope="sole">Gerhard Albersheim's hand</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="CH">
+   <tei:persName>Christoph Hust</tei:persName>
+   <tei:resp>Transcription, 2007</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>Translation, 2007</tei:resp>
+   <tei:resp>XML Encoding, 2022</tei:resp>
+  </tei:respStmt>
+
+
+  <tei:revisionDesc>
+   <tei:change when="2011-06-09" who="#IB">XML code created</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-008170">AlbersheimG ~
+    HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+   <dc:title>Handwritten letter from Gerhard Albersheim to Schenker, dated May 3, 1926</dc:title>
+
+   <dcterms:created>1926-05-03T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2022-03-22</dcterms:dateSubmitted>
+   <dc:description>Albersheim asks Schenker to take him on as pupil.</dc:description>
+   <dc:subject/>
+
+
+   <marcrel:correspondent key="entity-000007">AlbersheimG</marcrel:correspondent>
+   <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+  </sdo:itemDesc>
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:dateline><tei:handShift new="#GA"/><tei:rs type="place" key="entity-002604">Köln</tei:rs>,
+     den <tei:date when="1926-05-03">3. V. 26</tei:date>.</tei:dateline>
+    <tei:salute>Sehr geehrter Herr <tei:rs type="person" key="entity-000632">Dr.</tei:rs>,<tei:note
+      xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this letter is recorded in
+      Schenker's diary for May 6, 1926: “Von Albersheim (Br.): Anmeldung für den Herbst.” (“From
+      Albersheim (letter): Enrollment for the Fall.”).</tei:note></tei:salute>
+   </tei:opener>
+
+   <tei:p rend="indent-15">hierdurch möchte ich mir die Anfrage erlauben, ob Sie mich von Herbst an
+    als Schüler annehmen wollen.<tei:note xml:id="r0001-fn02" type="editorial" place="foot"
+     >Albersheim began lessons with Schenker on October 5, 1926, at twelve lessons a month, and
+     continued until June 14, 1929 (lessonbooks), at which point he got married, remaining in Vienna
+     but dropping his lessons. Schenker wrote him a letter of recommendation at his last lesson. His
+     place in Schenker’s schedule was given to Erich Voss (<tei:ref type="correspondence"
+      cRef="OJ-5-7a_23">OJ 5/7a, [23]</tei:ref>, May 15, 1929). — For further on Albersheim’s
+     pupillage, see <tei:bibl><tei:author>Ian Bent</tei:author>, <tei:title level="a">Schenker as
+       Teacher: The Case of Gerhard Albersheim,</tei:title>
+      <tei:title level="j">Journal of Schenkerian Studies</tei:title>, vol. 4 (2010),
+      35–68</tei:bibl>. </tei:note></tei:p>
+
+   <tei:p rend="indent-15">Ihre Adresse verdanke ich Herrn <tei:rs type="person" key="entity-000399"
+     >Felix Hupka</tei:rs>.<tei:note xml:id="r0001-fn03" type="editorial" place="foot">Felix Hupka
+     had been Schenker's pupil since a recommendation by Eugen d'Albert in 1912, cf.
+       <tei:bibl><tei:author>Hellmut Federhofer</tei:author>, <tei:title level="m">Heinrich Schenker
+       nach Tagebüchern und Briefen ...</tei:title> (Hildesheim: Georg Olms, 1985)</tei:bibl>, p.
+     68. He advised Albersheim to take lessons with Schenker (ibid., p. 35).</tei:note></tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-40">Hochachtungsvoll</tei:salute>
+    <tei:signed rend="indent-10"><tei:rs type="person" key="entity-000007">Gerhard
+      Albersheim</tei:rs></tei:signed><tei:lb/>
+   </tei:closer>
+
+  </tei:div>
+
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:dateline><tei:handShift new="#GA"/><tei:rs type="place" key="entity-002604"
+      >Cologne</tei:rs>, <tei:date when="1926-05-03">May 3, 1926</tei:date></tei:dateline>
+    <tei:salute>Dear Dr. <tei:supplied reason="identity"><tei:rs type="person" key="entity-000632"
+       >Schenker</tei:rs></tei:supplied>,<tei:ptr corresp="#r0001-fn01" type="footnote"
+     /></tei:salute>
+   </tei:opener>
+
+   <tei:p rend="indent-15">I should like to take the liberty hereby of inquiring whether you will
+    take me on as a pupil from next fall.<tei:ptr corresp="#r0001-fn02" type="footnote"/></tei:p>
+
+   <tei:p rend="indent-15">I am indebted to Mr. <tei:rs type="person" key="entity-000399">Felix
+     Hupka</tei:rs> for your address.<tei:ptr corresp="#r0001-fn03" type="footnote"/></tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-40">With kind regards,</tei:salute>
+    <tei:signed rend="indent-10"><tei:rs type="person" key="entity-000007">Gerhard
+      Albersheim</tei:rs></tei:signed><tei:lb/>
+   </tei:closer>
+
+  </tei:div>
+ </sdo:record>
+</sdo:recordCollection>
