@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2739" sdoID="OJ-15-26_3">OJ 15/26, [3]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HW" scope="major">Hans Wolf's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2022</tei:resp>
+      <tei:resp>Translation, 2022</tei:resp>
+      <tei:resp>XML Encoding, 2022</tei:resp>
+    </tei:respStmt>
+
+
+    <tei:revisionDesc>
+      <tei:change when="2011-06-09" who="#IB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008176">WolfH ~
+        JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="002751">Picture postcard</tei:rs>
+
+      <dc:title>Handwritten picture postcard from Hans Wolf to Jeanette Schenker, postmarked May 18,
+        1935</dc:title>
+
+      <dcterms:created>1935-05-18T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2022-04-18</dcterms:dateSubmitted>
+      <dc:description>Wolf sends greetings to Jeanette Schenker.</dc:description>
+      <dc:subject/>
+
+
+      <marcrel:correspondent key="entity-000973">Hans Wolf</marcrel:correspondent>
+      <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="envelope">
+          <tei:fw type="header" rend="center"><tei:handShift new="#printed"/>harbor scene,
+            captioned: “Blick von den Landungsbrücken auf den Hamburger Hafen”</tei:fw><tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+          <tei:address>
+            <tei:addrLine><tei:supplied>An:</tei:supplied><tei:handShift new="#HW"/>Frau <tei:rs
+                type="person" key="entity-000771">Prof. Lilly Schenker</tei:rs></tei:addrLine>
+            <tei:addrLine rend="indent-20"><tei:hi rend="underline">Wien
+              III.</tei:hi></tei:addrLine>
+            <tei:addrLine>Keilgasse 8</tei:addrLine>
+            <tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| HAMBURG | 18 <tei:gap reason="illegible"/> 35 | 17-10 | b
+            ||</tei:fw><tei:lb/><tei:lb/>
+          <tei:note type="editorial" place="inline">stamp, part obscured by postage stamp and
+            handwriting: "deine... / Muttertag / deutscher / ..olt..in threu!"</tei:note>
+          <tei:lb/>
+        </tei:fw>
+        <tei:salute>Sehr geehrte <tei:rs type="person" key="entity-000771">Frau Prf.
+            Schenker</tei:rs>,<tei:note xml:id="r0001-fn01" type="editorial" place="foot">In the
+            postmark, the month is obscured by a postage stamp. However, the stamp beside the
+            postage stamps on the <tei:hi rend="italic">recto</tei:hi> proclaiming Mother’s Day
+            establishes the month of the card as May, since Mother’s Day in Germany from 1934 on was
+            set as the third Sunday in May, which in 1935 was May 19.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Ich möchte Ihnen von meinen <tei:rs type="place" key="entity-002589">Hamburg</tei:rs>er
+        Ferien sehr herzliche Grüße senden. </tei:p>
+
+      <tei:closer>
+        <tei:salute>Ergebenst</tei:salute>
+        <tei:signed rend="indent-50"><tei:rs type="person" key="entity-000973">Hans
+          Wolf</tei:rs></tei:signed>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:lb/>
+        <tei:p><tei:note type="editorial" place="inline">in right margin, sideways:</tei:note> Meine
+          Eltern lassen herzlichst grüßen. </tei:p>
+      </tei:postscript>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="envelope">
+          <tei:fw type="header" rend="center"><tei:handShift new="#printed"/>harbor scene,
+            captioned: “View of the landing stages in Hamburg Harbor”</tei:fw><tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+          <tei:address>
+            <tei:addrLine><tei:supplied>To:</tei:supplied><tei:handShift new="#HW"/>Mrs <tei:rs
+                type="person" key="entity-000771">Lilly Schenker</tei:rs></tei:addrLine>
+            <tei:addrLine rend="indent-20"><tei:hi rend="underline">Vienna
+              III</tei:hi></tei:addrLine>
+            <tei:addrLine>Keilgasse 8</tei:addrLine>
+            <tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| HAMBURG | 18 <tei:gap reason="illegible"/> 35 | 17-10 | b
+            ||</tei:fw><tei:lb/><tei:lb/>
+          <tei:note type="editorial" place="inline">stamp, part obscured by postage stamp and
+            handwriting: "Your... / Mother's Day / German / ..olt..in threu!"</tei:note>
+          <tei:lb/>
+        </tei:fw>
+        <tei:salute>Dear <tei:rs type="person" key="entity-000771">Mrs Schenker</tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>I should like to send you cordial greetings from my <tei:rs type="place"
+          key="entity-002589">Hamburg</tei:rs> holidays.</tei:p>
+
+      <tei:closer>
+        <tei:salute>Most devotedly</tei:salute>
+        <tei:signed rend="indent-50"><tei:rs type="person" key="entity-000973">Hans
+          Wolf</tei:rs></tei:signed>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:lb/>
+        <tei:p><tei:note type="editorial" place="inline">in right margin, sideways:</tei:note> My
+          parents send their most heartfelt greetings.</tei:p>
+      </tei:postscript>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
