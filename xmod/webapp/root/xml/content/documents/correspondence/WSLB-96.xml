@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2777" sdoID="WSLB-96">WSLB 96</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="unkUE" scope="minor">unknown hand (UE)</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2006, 2022</tei:resp>
+      <tei:resp>Translation, 2006, 2022</tei:resp>
+      <tei:resp>XML Encoding, 2022</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-04" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002700">Hertzka ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002701">UE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002702">UE ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+      <dc:title>Handwritten letter from Schenker to Hertzka (UE), dated February 3, 1912</dc:title>
+
+      <dcterms:created>1912-02-03T13:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2022-06-27</dcterms:dateSubmitted>
+      <dc:description>Schenker returns page-proofs of Beethovens Neunte Sinfonie and the structural
+        diagram for movement 2.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000632">Heinrich Schenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000356">Emil Hertzka</marcrel:recipient>
+      <marcrel:recipient key="entity-002408">Universal Edition</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:salute rend="indent-10"><tei:handShift new="#HS"/>Sehr geehrter Herr <tei:rs
+            type="person" key="entity-000356">Direktor</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p>Anbei Bg. 8,<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Writing of this
+          letter is not recorded in Schenker’s diary. — Schenker's lessonbook for February 2, 1912
+          records: "Correktur des Bg. 8. [...]." ("Correcting proofs of gathering 8. [...]"); that
+          for February 3: "Absendung des 8. Bg." ("Gathering 8 mailed off."). — The gatherings
+          referred to are those of Schenker's <tei:rs type="work" key="entity-001731"><tei:title
+              level="m">Beethovens Neunte Sinfonie</tei:title></tei:rs>; gathering 8 = pp. 113-128
+          [Eng. transl., 114‒19]. </tei:note> der auch den Plan des zweiten Satzes enthält.<tei:note
+          xml:id="r0001-fn02" type="editorial" place="foot">The diagram for movement 2 falls in the
+          finished publication on p.136, which is in gathering 9 = pp. 129–144 [132‒45]. Schenker's
+          lessonbook for February 2, 1912 records: "[...] Plan des Scherzo." ("[...] Structural
+          diagram of the Scherzo.").</tei:note> Meine Anweisungen sind sehr genau u. deutlich
+        angegeben, u. so hoffe ich, daß es mit dem 2<tei:hi rend="supralinear">ten</tei:hi> Plan
+        besser als mit dem 1<tei:hi rend="supralinear">ten</tei:hi> gehen wird. </tei:p>
+
+      <tei:p><tei:note type="editorial" place="inline">overwritten across para. and valediction in
+          crayon:</tei:note>
+        <tei:handShift new="#unkUE"/>Erl / 6/II 1912</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-30">Mit ausgezeichneter Hochachtung</tei:salute>
+        <tei:salute rend="indent-60">I<tei:supplied reason="abbreviation">h</tei:supplied>r
+            erg<tei:supplied reason="abbreviation">ebener</tei:supplied></tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:rs key="entity-000632" type="person"><tei:hi rend="lateinschr">H
+            Schenker</tei:hi></tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1912-01-28">3. Febr. 1912</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:salute rend="indent-10"><tei:handShift new="#HS"/>Dear <tei:rs type="person"
+            key="entity-000356">Director</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>Enclosed is gathering 8,<tei:ptr corresp="#r0001-fn01" type="footnote"/> which also
+        contains the structural diagram of the second movement.<tei:ptr corresp="#r0001-fn02"
+          type="footnote"/> My instructions are given very precisely and clearly, so I hope that
+        things will go more smoothly with the second diagram than with the first.</tei:p>
+
+      <tei:p><tei:note type="editorial" place="inline">overwritten across para. and valediction in
+          crayon:</tei:note>
+        <tei:handShift new="#unkUE"/>Dealt with / February 6, 1912</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-30">With kind regards,</tei:salute>
+        <tei:salute rend="indent-60">Your devoted</tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:rs key="entity-000632" type="person">H. Schenker</tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1912-01-28">February 3, 1912</tei:date></tei:dateline>
+      </tei:closer>
+
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
