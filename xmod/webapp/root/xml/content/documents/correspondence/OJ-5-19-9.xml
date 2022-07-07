@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+    xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+    <sdo:collectionDesc>
+        <sdo:source>
+            <sdo:correspondence mfID="2799" sdoID="OJ-5-19-9">OJ 5/19, 9</sdo:correspondence>
+        </sdo:source>
+
+        <tei:handNotes>
+            <tei:handNote xml:id="HS" scope="sole">Heinrich Schenker's hand</tei:handNote>
+
+        </tei:handNotes>
+
+        <tei:respStmt xml:id="WP">
+            <tei:persName>William Pastille</tei:persName>
+            <tei:resp>Transcription, 2022</tei:resp>
+            <tei:resp>Translation, 2022</tei:resp>
+        </tei:respStmt>
+
+        <tei:respStmt xml:id="IDB">
+            <tei:persName>Ian Bent</tei:persName>
+            <tei:resp>XML Encoding, 2022</tei:resp>
+        </tei:respStmt>
+
+        <tei:revisionDesc>
+            <tei:change when="2011-04-15" who="#DB">XML code created</tei:change>
+        </tei:revisionDesc>
+    </sdo:collectionDesc>
+    <sdo:record ID="r0001">
+
+        <sdo:itemDesc>
+            <tei:rs role="correspondence" type="correspondence" key="entity-008335">KalbeckM ~
+                HSchenker</tei:rs>
+            <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+            <dc:title>Handwritten letter from Schenker to Kalbeck, dated November 14,
+                1899</dc:title>
+
+            <dcterms:created>1899-11-14T12:00:00Z</dcterms:created>
+            <dcterms:dateSubmitted>2022-07-07</dcterms:dateSubmitted>
+            <dc:description>Schenker reminds Kalbeck of their arrangement.</dc:description>
+            <dc:subject/>
+
+            <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+            <marcrel:recipient key="entity-000418">KalbeckM</marcrel:recipient>
+        </sdo:itemDesc>
+
+
+        <tei:div type="transcription">
+
+
+            <tei:opener>
+                <tei:dateline><tei:handShift new="#HS"/><tei:date when="1899-09-14">14. XI.
+                        1899</tei:date></tei:dateline>
+                <tei:salute>Sehr geehrter <tei:rs type="person" key="entity-000418"
+                        >Herr</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot"
+                        >This letter is written in response to <tei:ref type="correspondence"
+                            cRef="OJ-12-7-4">OJ 12/7, 4</tei:ref>, November 8,
+                    1899.</tei:note></tei:salute>
+            </tei:opener>
+
+            <tei:p>Heute ist Dienstag: somit wäre übermorgen Donnerstag, an dem Sie mich bei sich zu
+                sehen wünschen. Wahrscheinlich Vormittags? Ich nehme es an, wie das erste Mal. Ich
+                hoffe Ihnen neue musikalische Begriffe von einer <tei:hi rend="lateinschr"
+                        ><tei:foreign xml:lang="eng">Race</tei:foreign></tei:hi>,<tei:note
+                    xml:id="r0001-fn02" type="editorial" place="foot">Schenker means the Jewish
+                    “race,” reflected in the pieces that he and Moriz Violin are due to play before
+                    Kalbeck, his <tei:title level="m">Syrische Tänze für Pianoforte zu 4
+                        Händen</tei:title>, the earlier titles for which were <tei:title level="m"
+                        >Hebraische Tänze</tei:title> and <tei:title level="m">Tänze der
+                        Chassidim</tei:title>.</tei:note> von der Sie in Wien umgeben sind, durch
+                Sie Auffuhrung eines <tei:hi rend="lateinschr"><tei:foreign xml:lang="lat"
+                        >novum</tei:foreign></tei:hi> geben zu können. Besten Dank für Ihre
+                freundliche Honorarbeglückwünschung. Sie haben mir immer Gutes gewünscht u.
+                prophezeit. </tei:p>
+
+            <tei:closer>
+                <tei:salute rend="indent-30">In aufrichtigster Hochachtung,</tei:salute>
+                <tei:salute rend="indent-50">Ihr ergebenster</tei:salute>
+                <tei:signed rend="indent-50">
+                    <tei:rs type="person" key="entity-000632">D<tei:hi rend="supralinear"
+                            >r.</tei:hi> H. Schenker</tei:rs></tei:signed>
+            </tei:closer>
+
+        </tei:div>
+
+        <tei:div type="translation">
+
+            <tei:opener>
+                <tei:dateline><tei:handShift new="#HS"/><tei:date when="1899-09-14">November 14,
+                        1899</tei:date></tei:dateline>
+                <tei:salute>Dear <tei:rs type="person" key="entity-000418">Sir</tei:rs>,<tei:ptr
+                        corresp="#r0001-fn01" type="footnote"/></tei:salute>
+            </tei:opener>
+
+            <tei:p>Today is Tuesday: so the day after tomorrow, when you would like to see me at
+                your place, would be Thursday. Perhaps in the morning? I assume so, just as the
+                first time. I hope, through performance of a new piece, to be able to give you fresh
+                musical conceptions of a race<tei:ptr corresp="#r0001-fn02" type="footnote"/> by
+                which you are surrounded in Vienna. Thank you very much for your kind
+                congratulations concerning the honorarium. You have always desired and predicted
+                good things for me.</tei:p>
+
+            <tei:closer>
+                <tei:salute rend="indent-30">With sincerest respect,</tei:salute>
+                <tei:salute rend="indent-50">Your most devoted</tei:salute>
+                <tei:signed rend="indent-50">
+                    <tei:rs type="person" key="entity-000632">Dr. H. Schenker</tei:rs></tei:signed>
+            </tei:closer>
+
+
+
+        </tei:div>
+    </sdo:record>
+</sdo:recordCollection>
