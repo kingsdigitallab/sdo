@@ -31,10 +31,10 @@
             <tei:rs role="correspondence" type="correspondence" key="entity-008335">KalbeckM ~
                 HSchenker</tei:rs>
             <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
-            <dc:title>Handwritten letter from Schenker to Kalbeck, dated September 6,
-                1899</dc:title>
+            <dc:title>Handwritten letter from Schenker to Kalbeck, dated September [recte November?]
+                6, 1899</dc:title>
 
-            <dcterms:created>1899-09-06T12:00:00Z</dcterms:created>
+            <dcterms:created>1899-11-06T12:00:00Z</dcterms:created>
             <dcterms:dateSubmitted>2022-07-07</dcterms:dateSubmitted>
             <dc:description>Schenker asks to play his Syrische Tänze and Op. 10 to
                 Kalbeck.</dc:description>
@@ -49,7 +49,10 @@
 
             <tei:opener>
                 <tei:dateline><tei:handShift new="#HS"/><tei:placeName>Wien</tei:placeName>,
-                        <tei:date when="1899-09-06">6. IX. 1899</tei:date></tei:dateline>
+                        <tei:date when="1899-09-06">6. <tei:choice>
+                            <tei:sic>IX.</tei:sic>
+                            <tei:corr>XI.? or N.?</tei:corr>
+                        </tei:choice> 1899</tei:date></tei:dateline>
                 <tei:salute>Sehr geehrter <tei:rs type="person" key="entity-000418"
                         >Herr</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot"
                         >This letter is published in translation in <tei:bibl><tei:editor>Ian
@@ -60,7 +63,12 @@
                         ich … mein op. 2” is quoted in <tei:bibl><tei:author>Hellmut
                                 Federhofer</tei:author>, <tei:title level="m">Heinrich Schenker nach
                                 Tagebüchern und Briefen …</tei:title> (Hildesheim: Georg Olms,
-                            1985)</tei:bibl>, p. 17. </tei:note></tei:salute>
+                            1985)</tei:bibl>, p. 17. The sequence of letters that follow (<tei:ref
+                            type="correspondence" cRef="OJ-12-7-4">OJ 12/7, 4</tei:ref>, November 8,
+                        and <tei:ref type="correspondence" cRef="OJ-5-19-9">OJ 5/19, 9</tei:ref>,
+                        November 14, <tei:ref type="correspondence" cRef="OJ-12-7-5">OJ 12/7,
+                            5</tei:ref>, November 15) suggests that the date of this letter should
+                        be November 6.</tei:note></tei:salute>
             </tei:opener>
 
             <tei:p>Wenn Sie Ihre schöne Theilnahme an mir fortsetzen wollten, wäre es Ihnen
@@ -104,7 +112,10 @@
 
             <tei:opener>
                 <tei:dateline><tei:handShift new="#HS"/><tei:placeName>Vienna</tei:placeName>,
-                        <tei:date when="1899-09-06">September 6, 1899</tei:date></tei:dateline>
+                        <tei:date when="1899-09-06"><tei:choice>
+                            <tei:sic>September</tei:sic>
+                            <tei:corr>November?</tei:corr>
+                        </tei:choice> 6, 1899</tei:date></tei:dateline>
                 <tei:salute>Dear <tei:rs type="person" key="entity-000418">Sir</tei:rs>,<tei:ptr
                         corresp="#r0001-fn01" type="footnote"/></tei:salute>
             </tei:opener>
