@@ -265,41 +265,37 @@
                   <!-- COPY AND PASTE LINK BELOW TO DIRECT USERS TO THE 'OVERFLOW' PAGE FOR UPDATE NEWS IF APPROPRFIATE -->
                   <!-- <a class="int" title="Link to Latest Material"
                         href="/documents/overviews/latest_material.html">More</a> -->
-                  <h4>Additions to the site in spring 2021</h4>
+                  <h4>What's new in August 2022?</h4>
                   <ul>
-                    <li><b>DIARIES:</b> The transcription and translation present 1915 and the first
-                      three months of 2016; this leaves just a year and a half (April 2016 to Sept
-                      2017) before the entire 4,000-page diary is completely edited. The war years
-                      show Schenker’s diary writing at its most prolific: on average, he wrote about
-                      300 words per day, much of the time commenting on the conduct of the war and
-                      its consequences for the lives of his pupils, friends, and ordinary
-                      Austrians.</li>
+                    <li><b>DIARIES:</b> Schenker’s diaries are at last finished! The final 18 months
+                      (April 1916 to September 1917) are now up on the site, completing the 39-year
+                      run from 1896 to January 1935 in over 4,000 pages. A team of seven people, led
+                      by Marko Deisinger, carried out the work in 14 dedicated years.
+                      Congratulations to those contributors, and thanks to the Austrian Science Fund
+                      for financial support! The result is an indispensable foundation for all
+                      future biographical study of Schenker and his dealings with pupils,
+                      colleagues, friends, foes, and Viennese institutions.</li>
                     <li>
-                      <b>CORRESPONDENCE:</b> That between Arnold Schoenberg and Moriz Violin (64
-                      items) spans 1902–19, and 1938–50, the last 13 years covering Violin’s
-                      migration to San Francisco, his struggle to make a living, and Schoenberg’s
-                      great kindness. — The adversarial 1910 Universal Edition correspondence (43
-                      items) covers preliminary dealings over the <em>Ninth Symphony</em> monograph
-                      and <em>The Last Five Sonatas of Beethoven</em>. — Schenker and Theodor von
-                      Frimmel performed together long before their cordial surviving correspondence
-                      (28 items: 1902–27), which provides background to Schenker’s C. P. E. Bach
-                      edition, <em>Ornamentation</em>, and Handel arrangements.</li>
+                      <b>LESSONBOOKS:</b> Schenker recorded details of almost every lesson he gave
+                      between 1912 and 1931 in four books, written out by his wife Jeanette. The
+                      all-important first book, covering just January to March 1912, is now on the
+                      site, and gives us a good idea of how Schenker had been teaching piano and
+                      theory in the decade before 1912.</li>
                     <li>
-                      <b>LESSONBOOKS:</b> The addition of three new years yields a 7-year run on the
-                      site, from Fall 1913 to Summer 1920. This allows us to inspect closely
-                      Schenker’s program of theory instruction, and his use of analysis for
-                      performance, especially in 1913/14, where Schenker’s notes are highly
-                      detailed.</li>
+                      <b>CORRESPONDENCE:</b> This year completes all surviving correspondence with
+                      Schenker’s pupils, 64 pupils, 700 items in all. Correspondence with two senior
+                      figures in Schenker’s life, biographer/critic <b>Max Kalbeck</b> and
+                      composer/pianist <b>Eugen d’Albert</b>, illuminates Schenker’s career
+                      aspirations and dealings between the late 1880s and 1914. Correspondence with
+                      engraver/print maker <b>Victor Hammer</b> covers 1925, the year of his
+                      Schenker mezzotint; and that with <b>Moriz Violin</b> and <b>Josef Marx</b>
+                      portrays institutional politics in 1932–34. Schenker’s feisty exchanges with
+                        <b>Emil Hertzka</b> of Universal Edition for 1911 feature the production of
+                      the Beethoven Ninth Symphony monograph and the beginnings of the elucidatory
+                      editions of four of Beethoven’s last five piano sonatas.</li>
                     <li>
-                      <b>AN ANALYSIS ...</b> Schenker’s analysis of Brahms’s C minor Piano Quartet,
-                      written in Oct 1913 in conjunction with teaching, and intended for
-                      publication, adds to our appreciation of his evolving analytical technique at
-                      the time of the Op. 109 and 110 elucidatory editions. (Locate this in “Browse
-                      Documents” under “Other Material.”)</li>
-                    <li>
-                      <b>PROFILES:</b> Among the latest batch of profiles is a detailed account of
-                      Guido Adler’s Seminar/Music-Historical Institute, and several of people and
-                      institutions in California in and after WW2.</li>
+                      <b>PROFILES:</b> 25 new profiles featuring people, places, and institutions
+                      are now available, and many existing profiles have been revised.</li>
                   </ul>
 
                   <!--<nav class="local" id="blogPosts">
