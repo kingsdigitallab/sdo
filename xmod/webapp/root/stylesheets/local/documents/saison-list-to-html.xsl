@@ -9,6 +9,7 @@
 
   <xsl:template name="xms:content">
     <ul>
+      <li><a href="pupil/1912-1913.html">Saison 1911/12</a></li>
       <li><a href="pupil/1913-1914.html">Saison 1913/14</a></li>
       <li><a href="pupil/1914-1915.html">Saison 1914/15</a></li>
       <li><a href="pupil/1915-1916.html">Saison 1915/16</a></li>
@@ -23,6 +24,7 @@
     
     <p>To read the entries for a saison in chronologial order, use the starting points listed below:</p>   
     <ul>
+      <li>Saison 1911/12 - <a href="https://sdo3.kdl.kcl.ac.uk/documents/lessonbooks/OC-3-1_1911/r0001.html">Vrieslander: lesson: Jan 15, 1912</a></li>
       <li>Saison 1913/14 - <a href="https://sdo3.kdl.kcl.ac.uk/documents/lessonbooks/OC-3-2_1913/r0001.html">Elias: lesson: Oct 1, 1913</a></li>
       <li>Saison 1914/15 - <a href="https://sdo3.kdl.kcl.ac.uk/documents/lessonbooks/OC-3-3_1914/r0003.html">Elias: lesson: Oct 8, 1914</a></li>
       <li>Saison 1915/16 - <a href="https://sdo3.kdl.kcl.ac.uk/documents/lessonbooks/OC-3-3_1915/r0001.html">Brünauer: lessons: Oct 1915</a></li>
