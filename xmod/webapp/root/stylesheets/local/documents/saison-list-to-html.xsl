@@ -9,7 +9,7 @@
 
   <xsl:template name="xms:content">
     <ul>
-      <li><a href="pupil/1912-1913.html">Saison 1911/12</a></li>
+      <li><a href="pupil/1911-1912.html">Saison 1911/12</a></li>
       <li><a href="pupil/1913-1914.html">Saison 1913/14</a></li>
       <li><a href="pupil/1914-1915.html">Saison 1914/15</a></li>
       <li><a href="pupil/1915-1916.html">Saison 1915/16</a></li>
