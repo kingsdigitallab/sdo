@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2897" sdoID="OJ-14-23_6">OJ 14/23, [6]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="AFS" scope="major">A. F. Seligmann's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2022</tei:resp>
+      <tei:resp>Translation, 2022</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2022</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-28" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002735">Seligmann ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Seligmann to Schenker, postmarked July 25, 1903</dc:title>
+
+      <dcterms:created>1903-07-25T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2022-11-20</dcterms:dateSubmitted>
+      <dc:description>Seligmann congratulates Schenker on his Beitrag zur Ornamentik, which he finds
+        excellent. He hopes that Mahler will write him a letter of reference, and believes that
+        Guido Adler would also assist him in obtaining a teaching post at the Vienna
+        Conservatory.</dc:description>
+      <dc:subject/>
+
+
+
+      <marcrel:correspondent key="entity-000819">Adalbert Franz Seligmann</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">Heinrich Schenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:lb/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+            >Correspondenz-Karte.</tei:hi></tei:fw>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>An: <tei:handShift new="#AFS"/>Herrn D<tei:hi rend="supralinear"
+                >r</tei:hi> Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-30"><tei:handShift new="#printed"/>in <tei:handShift
+                new="#AFS"/>Esplanade 13.</tei:addrLine>
+            <tei:addrLine rend="indent-60"><tei:hi rend="underline">Gmunden</tei:hi></tei:addrLine>
+            <tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| 25. 7. 03 | ISCHL | 5–6 N ||</tei:fw>
+          <tei:fw type="postmark">|| GMUNDEN | 03 | <tei:gap reason="illegible"/> | <tei:gap
+              reason="illegible"/> ||</tei:fw><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:salute><tei:handShift new="#AFS"/>L. <tei:rs type="person" key="entity-000819"
+            >Fr.</tei:rs></tei:salute>
+      </tei:opener>
+
+      <tei:p>Ich habe Ihre Sendung gelesen finde die Schrift<tei:note xml:id="r0001-fn01"
+          type="editorial" place="foot"><tei:bibl><tei:author>Heinrich Schenker</tei:author>,
+              <tei:rs type="work" key="entity-001721"><tei:title level="m">Ein Beitrag zur
+                Ornamentik</tei:title></tei:rs> (Vienna: Universal Edition, 1st edn [1903]),
+            released on July 24, 1903</tei:bibl>.</tei:note> überhaupt interessant – allerdings
+        gerade <tei:hi rend="underline">Ihre</tei:hi> Ansichten im diametri<tei:supplied
+          reason="omission">s</tei:supplied>chen Gegensatz zu <tei:rs type="person"
+          key="entity-000556">M</tei:rs>’s<tei:note xml:id="r0001-fn02" type="editorial"
+          place="foot">Gustav Mahler is mentioned in the previous items of correspondence (<tei:ref
+            type="correspondence" cRef="WSLB-Hds-95664">WSLB-Hds 95664</tei:ref>, July 22, 1903) as
+          a possible referee for Schenker’s application for a post at the <tei:rs
+            type="organization" key="entity-002591">Vienna Conservatory</tei:rs>.</tei:note>
+        Compositions- und Bearbeitungsprincipien. Das würde mich nicht hindern, eine Empfehlung von
+        ihm zu erlangen – höchstens wird er es ablehnen (was ich aber doch nicht glaube). Wie steht
+        denn <tei:rs type="person" key="entity-000003">Guido Adler</tei:rs> oben angeschrieben? Er
+        würde sicher eine Empfehlung hergeben! Nochmals besten Dank für die wirklich ausgezeichnete
+        Arbeit und</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-30">herzl. Gruß </tei:salute>
+        <tei:salute rend="indent-50">von</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs type="person" key="entity-000819">A. F.
+            Seligmann</tei:rs>
+        </tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:lb/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+            >Postcard</tei:hi></tei:fw>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>To: <tei:handShift new="#AFS"/>Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-30"><tei:handShift new="#printed"/>in <tei:handShift
+                new="#AFS"/>Esplanade 13</tei:addrLine>
+            <tei:addrLine rend="indent-60"><tei:hi rend="underline">Gmunden</tei:hi></tei:addrLine>
+            <tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| 25. 7. 03 | ISCHL | 5–6 p.m. ||</tei:fw>
+          <tei:fw type="postmark">|| GMUNDEN | 03 | <tei:gap reason="illegible"/> | <tei:gap
+              reason="illegible"/> ||</tei:fw><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:salute><tei:handShift new="#AFS"/>Dear <tei:rs type="person" key="entity-000819"
+            >friend</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>I have read what you sent me and find your written work<tei:ptr corresp="#r0001-fn01"
+          type="footnote"/> thoroughly interesting – at any rate <tei:hi rend="underline"
+          >your</tei:hi> very points of view, in diametrical opposition to <tei:rs type="person"
+          key="entity-000556">M</tei:rs>’s<tei:ptr corresp="#r0001-fn02" type="footnote"/>
+        principles of composition and arrangement. That would not hinder me from obtaining a letter
+        of recommendation from him – at worst, he will turn you down (something which, however, I do
+        not believe). How then does <tei:rs type="person" key="entity-000003">Guido Adler</tei:rs>
+        stand with you? He would surely give you a letter of reference! Once again, best thanks for
+        your truly outstanding work, and </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-30">cordial greetings</tei:salute>
+        <tei:salute rend="indent-50">from</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs type="person" key="entity-000819">A. F.
+            Seligmann</tei:rs>
+        </tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
