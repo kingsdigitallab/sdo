@@ -1,4 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?><sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
  <sdo:collectionDesc>
 
   <sdo:source>
@@ -9,11 +14,15 @@
    <tei:handNote xml:id="printed" scope="sole">printed</tei:handNote>
   </tei:handNotes>
 
+  <tei:respStmt xml:id="WMD">
+   <tei:persName>William Drabkin</tei:persName>
+   <tei:resp>Transcription, 2022</tei:resp>
+   <tei:resp>Translation, 2022</tei:resp>
+  </tei:respStmt>
+
   <tei:respStmt xml:id="IB">
    <tei:persName>Ian Bent</tei:persName>
-   <tei:resp>Transcription, 2010</tei:resp>
-   <tei:resp>Translation, 2010</tei:resp>
-   <tei:resp>XML encoding, 2010</tei:resp>
+   <tei:resp>XML encoding, 2022</tei:resp>
   </tei:respStmt>
 
   <tei:revisionDesc>
@@ -24,32 +33,37 @@
 
  <sdo:record ID="r0001">
 
-  <sdo:itemDesc><tei:rs role="correspondence" type="correspondence" key="entity-002735">Seligmann ~ HSchenker</tei:rs><tei:rs role="corr-item-type" type="corr-item-type" key="entity-002749">Announcement</tei:rs>
-   
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-002735">Seligmann ~
+    HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002749">Announcement</tei:rs>
+
    <dc:title>Printed card of thanks from Adalbert Seligmann, dated April [29], 1918</dc:title>
-   
+
    <dcterms:created>1918-04-29T12:00:00Z</dcterms:created>
    <dcterms:dateSubmitted>2010-03-23</dcterms:dateSubmitted>
-   <dc:description>Thanks for sympathy.</dc:description>
+   <dc:description>A printed message thanking well-wishers for their sympathy.</dc:description>
    <dc:subject>thanks; Teilnahme; sympathy</dc:subject>
-   
-   
-   
-  <marcrel:correspondent key="entity-000819">Seligmann</marcrel:correspondent><marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient></sdo:itemDesc>
+
+
+
+   <marcrel:correspondent key="entity-000819">Seligmann</marcrel:correspondent>
+   <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+  </sdo:itemDesc>
 
 
   <tei:div type="transcription">
 
-   <tei:p rend="first">FÜR<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
-     this card is recorded in Schenker's diary at OJ 2/10, p. 883, April 30, 1918: " Von Seligmann
-     gedruckter Dank für Teilnahme (die ich aber gar nicht zum Ausdruck gebracht habe)." ("From
-     Seligmann printed thank you for participating (which, however, I did not at all express.").
-     <!-- XR --> The proposed date for this card is taken from this entry. </tei:note> DIE BEWIESENE
-    TEILNAHME DANKT WÄRMSTENS </tei:p>
+   <tei:p rend="first">FÜR DIE BEWIESENE TEILNAHME DANKT WÄRMSTENS</tei:p>
 
    <tei:closer>
     <tei:signed rend="indent-10">
-     <tei:hi rend="black">ADALBERT FRANZ SELIGMANN. </tei:hi>
+     <tei:hi rend="bold">ADALBERT FRANZ SELIGMANN.</tei:hi><tei:note xml:id="r0001-fn01" type="editorial"
+       place="foot">Receipt of this card is recorded in Schenker's diary for April 30, 1918: "Von
+       Seligmann gedruckter Dank für Teilnahme (die ich aber gar nicht zum Ausdruck gebracht habe)."
+       ("From Seligmann printed thank you for participating (which, however, I certainly did not
+       express."). The proposed date for this card is taken from this entry.</tei:note>
+
     </tei:signed>
     <tei:dateline><tei:placeName>WIEN,</tei:placeName>
      <tei:date when="1918-04-29">APRIL 1918</tei:date>.</tei:dateline>
@@ -61,12 +75,12 @@
 
   <tei:div type="translation">
 
-   <tei:p rend="first">WARMEST<tei:ptr corresp="#r0001-fn01" type="footnote"/> THANKS FOR THE
-    SYMPATHY DISPLAYED </tei:p>
+   <tei:p rend="first">WARMEST THANKS FOR THE SYMPATHY DISPLAYED </tei:p>
 
    <tei:closer>
     <tei:signed rend="indent-10">
-     <tei:hi rend="black">ADALBERT FRANZ SELIGMANN. </tei:hi>
+     <tei:hi rend="bold">ADALBERT FRANZ SELIGMANN.</tei:hi><tei:ptr corresp="#r0001-fn01" type="footnote"/>
+ 
     </tei:signed>
     <tei:dateline><tei:placeName>VIENNA,</tei:placeName>
      <tei:date when="1918-04-29">APRIL 1918</tei:date>.</tei:dateline>
