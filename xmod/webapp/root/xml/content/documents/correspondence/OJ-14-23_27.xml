@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2934" sdoID="OJ-14-23_27">OJ 14/23, [27]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="AFS" scope="major">A. F. Seligmann's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2022</tei:resp>
+      <tei:resp>Translation, 2022</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2022</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-28" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002735">Seligmann ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Seligmann to Schenker, postmarked March 27,
+        1933</dc:title>
+
+      <dcterms:created>1933-03-27T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2022-12-01</dcterms:dateSubmitted>
+      <dc:description>Seligmann agrees to pay a visit to the Schenkers the following
+        Wednesday.</dc:description>
+      <dc:subject/>
+
+
+
+      <marcrel:correspondent key="entity-000819">Adalbert Franz Seligmann</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">Heinrich Schenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:lb/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+            >Postkarte</tei:hi></tei:fw><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#AFS"/>HW Hrn D<tei:hi rend="supralinear">r</tei:hi>
+              H. Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-50">Wien III</tei:addrLine>
+            <tei:addrLine rend="indent-50">Keilgasse 8.</tei:addrLine>
+
+            <tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| 1 WIEN 1 | 14–15 | 27. III 1933 | * 4c *
+          ||</tei:fw><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:dateline><tei:date when="1933-03-27">Montag</tei:date></tei:dateline>
+        <tei:salute><tei:handShift new="#AFS"/>L. <tei:rs type="person" key="entity-000632"
+            >Fr</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p>Also dann <tei:date when="1933-03-29">Mittwoch</tei:date> – übermorgen – um 5
+          Uhr!<tei:note xml:id="r0001-fn01" type="editorial" place="foot"> Schenker’s diary for
+          March 27, 1933 records: “Seligmann (K.): kommt Mittwoch.” (“Seligmann (postcard): he will
+          come on Wednesday.”), resulting in a visit recorded in the diary for March 29: “Seligmann
+          von 5–½8<tei:hi rend="supralinear">h</tei:hi>: ‘. . das muß man organisieren’! Also auch
+          noch das sollte ich den Wienern draufgeben! Außer den Bänden noch Gesundheit, Geld u.
+          Ehre, Propaganda im Ausland! Ich zeige ihm allerlei u. spiele Schubert. Es wird noch
+          Quartett gespielt!” (“Seligmann from 5 to 7:30: "… that is something one has to organize"!
+          So, even that I must sacrifice to the Viennese! Besides the <tei:note type="editorial"
+            place="inline">theory</tei:note> volumes, my health, money and honor, publicity abroad!
+          I show him various things, and play Schubert. We even play "Quartett" <tei:note
+            type="editorial" place="inline">a card game equivalent to “Happy
+          Families”</tei:note>!”).</tei:note></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">Herzl. grüßend</tei:salute>
+        <tei:signed rend="indent-50"><tei:rs type="person" key="entity-000819">A. F. S.</tei:rs>
+        </tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:lb/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+            >Postcard</tei:hi></tei:fw><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#AFS"/>Dr. H. Schenker, Esq.</tei:addrLine>
+            <tei:addrLine rend="indent-50">Vienna III</tei:addrLine>
+            <tei:addrLine rend="indent-50">Keilgasse 8</tei:addrLine>
+
+            <tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| 1 VIENNA 1 | 14–15 | 27. III 1933 | * 4c *
+          ||</tei:fw><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:dateline><tei:date when="1933-03-27">Monday</tei:date></tei:dateline>
+        <tei:salute><tei:handShift new="#AFS"/>Dear <tei:rs type="person" key="entity-000632"
+            >friend</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>Okay, then, Wednesday – the day after tomorrow – at 5 o’clock!<tei:ptr
+          corresp="#r0001-fn01" type="footnote"/></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">With cordial greetings,</tei:salute>
+        <tei:signed rend="indent-50"><tei:rs type="person" key="entity-000819">A. F. S.</tei:rs>
+        </tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
