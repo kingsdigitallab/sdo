@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2958" sdoID="WSLB-108">WSLB 108</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="unkUE" scope="minor">unknown hand (UE)</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2006, 2023</tei:resp>
+      <tei:resp>Translation, 2006, 2023</tei:resp>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-04" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002700">Hertzka ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002701">UE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002702">UE ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+      <dc:title>Handwritten letter from Schenker to Hertzka (UE), dated April 19, 1912</dc:title>
+
+      <dcterms:created>1912-04-19T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-01-09</dcterms:dateSubmitted>
+      <dc:description>Schenker returns proofs for his Instrumentations-Tabelle and five gatherings
+        of Beethovens neunte Sinfonie, pointing out a serious error. He also responds on the title
+        of the latter.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000632">Heinrich Schenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000356">Emil Hertzka</marcrel:recipient>
+      <marcrel:recipient key="entity-002408">Universal Edition</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:salute rend="indent-10"><tei:handShift new="#HS"/>Sehr geehrter Herr <tei:rs
+            type="person" key="entity-000356">Direktor</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p>Mit heutiger Post übersende ich Ihnen <tei:hi rend="lateinschr">a)</tei:hi>
+        <tei:rs type="work" key="entity-001729"><tei:hi rend="underline">Niloff</tei:hi></tei:rs>
+        <tei:hi rend="underline">mit Imprimatur</tei:hi> versehen u. <tei:hi rend="lateinschr"
+          >b)</tei:hi> die Bogen 14, 15, 16, 17, 18,<tei:note xml:id="r0001-fn01" type="editorial"
+          place="foot">Schenker's monograph <tei:rs type="work" key="entity-001731"><tei:title
+              level="m">Beethovens Neunte Sinfonie</tei:title></tei:rs>: = pp. 209–88 [Eng. transl.,
+          pp. 196‒258].</tei:note> die ich vorsichtshalber noch nicht inprimiert habe. Bg 16 enthält
+        die gräßliche Umstellung des Planes an eine falsche Stelle, deren Ursache ich nicht
+          verstehe.<tei:note xml:id="r0001-fn02" type="editorial" place="foot">See <tei:ref
+            type="correspondence" cRef="WSLB-105">WSLB 105</tei:ref>, March 28: gathering 16 = pp.
+          241–56 [Eng. transl., pp. 221‒33]; the diagram of the fourth movement, ultimately on p.
+          244, was misplaced four pages late in the proofs.</tei:note></tei:p>
+
+      <tei:p>Die letzten Fahnen folgen in der allernächsten Tagen.</tei:p>
+
+      <tei:p><tei:note type="editorial" place="inline">overwritten across para. 2 and valediction in
+          crayon:</tei:note>
+        <tei:handShift new="#unkUE"/>Erl 20/IV</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20"><tei:handShift new="#HS"/>Mit ausgez. Hochachtung</tei:salute>
+        <tei:salute rend="indent-50">I<tei:supplied>h</tei:supplied>r
+            ergeb<tei:supplied>ener</tei:supplied></tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:rs key="entity-000632" type="person"><tei:hi rend="lateinschr">H
+            Schenker</tei:hi></tei:rs></tei:signed><tei:lb/><tei:lb/>
+        <tei:dateline><tei:date when="1912-04-19">19. April 1912</tei:date></tei:dateline>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p>P.S. Auch lege ich eine Fassung des <tei:hi rend="underline">Titels</tei:hi> bei, die
+          mir gut scheint; nur weiß ich nicht, wie sich die vielen Worte <tei:hi rend="underline"
+            >drucktechnisch</tei:hi> ausnehmen werden. Bei schöner Ausführung würde die Fassung
+          vielleicht die passendste sein. </tei:p>
+      </tei:postscript>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:salute rend="indent-10"><tei:handShift new="#HS"/>Dear <tei:rs type="person"
+            key="entity-000356">Director</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>I am sending over to you by today's post a) <tei:rs type="work" key="entity-001729"
+            ><tei:hi rend="underline">Niloff</tei:hi></tei:rs>, complete <tei:hi rend="underline"
+          >with imprimatur</tei:hi>, and b) gatherings 14, 15, 16, 17, and 18,<tei:ptr
+          corresp="#r0001-fn01" type="footnote"/> for none of which, in a spirit of caution, I have
+        yet given my imprimatur. Gathering 16 contains the dreadful misplacement of the formal
+        diagram, the cause of which is incomprehensible to me.<tei:ptr corresp="#r0001-fn02"
+          type="footnote"/></tei:p>
+
+      <tei:p>The last galley-proofs will be on their way in the next few days.</tei:p>
+
+      <tei:p><tei:note type="editorial" place="inline">overwritten across para. 2 and valediction in
+          crayon:</tei:note>
+        <tei:handShift new="#unkUE"/>Dealt with April 20</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20"><tei:handShift new="#HS"/>With kind regards,</tei:salute>
+        <tei:salute rend="indent-50">Your devoted</tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:rs key="entity-000632" type="person">H. Schenker</tei:rs></tei:signed><tei:lb/><tei:lb/>
+        <tei:dateline><tei:date when="1912-04-19">April 19, 1912</tei:date></tei:dateline>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p>PS I am also enclosing a version of the <tei:hi rend="underline">title-page</tei:hi>,
+          which looks good to me. I just do not know how so many words will be accommodated <tei:hi
+            rend="underline">typographically</tei:hi>. If elegantly done, this version will perhaps
+          prove the most appropriate</tei:p>
+      </tei:postscript>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
