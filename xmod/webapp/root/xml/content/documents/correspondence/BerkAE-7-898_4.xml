@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2988" sdoID="BerkAE-7-898_4">BerkAE 7/898, [4]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-19" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Schenker to Deutsch, dated January 16, 1927</dc:title>
+
+      <dcterms:created>1927-01-16T14:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-01-31</dcterms:dateSubmitted>
+      <dc:description>Schenker responds to Deutsch’s request for information about the recent
+        facsimile edition of Beethoven’s Ninth Symphony, and the new edition of the symphony
+        published by the Philharmonischer Verlag. He had made changes to the text of the first
+        movement, but subsequently withdrew from the editing.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000164">DeutschOE</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold"><tei:supplied reason="overstamped"
+              >Post</tei:supplied>ka<tei:supplied reason="overstamped"
+          >rte</tei:supplied></tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">Absender:</tei:supplied>
+              <tei:handShift new="#HS"/>Schenker</tei:addrLine>
+            <tei:addrLine>III., Keilgasse 8</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied>
+              <tei:handShift new="#HS"/>H Otto Erich Deutsch</tei:addrLine>
+            <tei:addrLine rend="indent-40">II, Böcklinstr. 26</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| <tei:supplied>T.</tei:supplied>A. WIEN 49 | 17. 1. 27 1.110 ||
+            * R/a * ||</tei:fw>
+          <tei:fw type="postmark">|| T.A.2 WIEN 27 | 17. I. 27.12 | * R/a *
+          ||</tei:fw><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:lb/>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:salute><tei:handShift new="#HS"/>Lieber Herr <tei:rs type="person" key="entity-000164"
+            >Deutsch</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Sending of
+            this postcard is recorded in Schenker’s diary for January 16, 1927: “An Deutsch (K.):
+            das Ergebnis: die facsimilierte Partitur dürfte die sein, die Beethoven zurückbehalten
+            hat, die er in zwei Briefen an <tei:sic>Riess</tei:sic> ‘meine Partitur’ nannte –
+            offenbar an Schott eine Reinschrift abgegangen, später an den König von Preussen noch
+            eine andere” (“To Deutsch (postcard): the result: the score published in facsimile is
+            probably the one that Beethoven kept himself, which he referred to in two letters to
+              <tei:supplied reason="identity">Ferdinand</tei:supplied> Ries as ‘my score’ –
+            evidently a fair copy <tei:supplied reason="clarity">was</tei:supplied> sent to Schott,
+            still another to the King of Prussia”). The postcard must have been passed on from
+            Deutsch to <tei:rs type="person" key="entity-000195">Alfred Einstein</tei:rs> who, as
+            Deutsch explains in <tei:ref type="correspondence" cRef="OJ-10-3_52">OJ 10/3,
+              [52]</tei:ref>, January 15, 1927, had asked about the source of the Schott edition of
+            Beethoven’s Ninth Symphony, hence the postcard’s survival among the Alfred Einstein
+            Papers at the Hargrove Music Library in the University of California at
+            Berkeley.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Die zur Facsimilierung gelangte Partitur der <tei:rs type="composition"
+          key="entity-001269">IX Sinf.</tei:rs> dürfte am ehesten die sein, die <tei:rs
+          type="person" key="entity-000055">B.</tei:rs>
+        <tei:hi rend="underline">zurückbehielt</tei:hi> und die er in den Briefen an <tei:hi
+          rend="lateinschr">Ries</tei:hi> von 19. 3. 25 u. 3. 4. 25 (vgl. <tei:hi rend="lateinschr"
+          >Thayer</tei:hi> S. 166–167) „<tei:hi rend="underline">meine</tei:hi>
+        <tei:hi rend="underline">Partitur</tei:hi>“ nennt. Für <tei:hi rend="lateinschr"
+          >Schott’s</tei:hi> Stecher war <tei:hi rend="underline">diese</tei:hi> Partitur gewiß
+        nicht bestimmt, weil aus äußeren u. inneren Gründen noch gar nicht geeignet. Ich nehme an,
+        daß an <tei:hi rend="lateinschr">Schott</tei:hi> eine <tei:hi rend="underline"
+          >Reinschrift</tei:hi> abgegangen ist, aber auch diese machte ein Einrücken „neuer Blätter“
+        nötig (<tei:hi rend="lateinschr">Thayer</tei:hi>, IV. S. 174 oben) – von eingerückten neuen
+        Blättern ist <tei:del rend="overstrike">es</tei:del>
+        <tei:add place="interlinear-above">aber</tei:add> in der facsimilierten Pt. keine Spur — ;
+        desgleichen muß eine Reinschrift (wieder eine andere) an den preussischen König abgegangen
+        sein. Trotz allem aber: der Erstdruck sowohl als die gegenwärtig ausgegebenen Partituren
+        hätten <tei:rs type="person" key="entity-000055">B</tei:rs>’s Partitur gegenüber (die er die
+        seine nennt u. die mit der Facs. zusammengefallen scheint) noch sehr viel Schönes
+        nachzuholen gehabt, das <tei:rs type="person" key="entity-000055">B.</tei:rs> durchgehen
+        ließ. Einiges davon wurde <tei:milestone unit="folio" n="recto"/> schon (durch meine
+        Mitwirkung) für die Ausgabe des <tei:rs type="organization" key="entity-003860">philh.
+          Verl.</tei:rs> (<tei:rs type="person" key="entity-000420"><tei:hi rend="lateinschr"
+            >Kalmus</tei:hi></tei:rs>) angebracht, aber nur im ersten Satz, dann mußte ich meine
+        Mitwirkung zurückziehen. </tei:p>
+
+      <tei:p>Auf Wiederhören im Rundfunk am <tei:date when="1927-01-18">18</tei:date>!<tei:note
+          xml:id="r0001-fn02" type="editorial" place="foot">Advertised for January 18 at 8.05 p.m.,
+          though without name of speaker or performer, was <tei:title level="a">Die zwölf Ständchen
+            von Schubert</tei:title> (<tei:title level="j">Neue freie Presse</tei:title>, January
+          17, 1927, p. 10).</tei:note></tei:p>
+
+      <tei:p>Viel Glück zum Ausflug nach Norden! </tei:p>
+
+      <tei:closer>
+        <tei:salute>Ihnen u. Ihrer <tei:rs type="person" key="entity-000163">Frau
+          Gemalin</tei:rs></tei:salute>
+        <tei:salute>unser Beide beste Grüße</tei:salute>
+        <tei:salute rend="indent-70">Ihr</tei:salute>
+        <tei:signed rend="indent-80">
+          <tei:rs key="entity-000632" type="person">H Sch</tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1927-01-16">16. 1. 27</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">From:</tei:supplied>
+              <tei:handShift new="#HS"/>Schenker</tei:addrLine>
+            <tei:addrLine><tei:supplied reason="identity">Vienna</tei:supplied> III, Keilgasse
+              8</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied>
+              <tei:handShift new="#HS"/>Mr. Otto Erich Deutsch</tei:addrLine>
+            <tei:addrLine rend="indent-40"><tei:supplied reason="identity">Vienna</tei:supplied>II,
+              Böcklinstraße 26</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| <tei:supplied>T.</tei:supplied>A. VIENNA 49 | 17. 1. 27 1.110
+            || * R/a * ||</tei:fw>
+          <tei:fw type="postmark">|| T.A.2 VIENNA 27 | 17. I. 27.12 | * R/a *
+          ||</tei:fw><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:lb/>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:salute><tei:handShift new="#HS"/>Dear Mr. <tei:rs type="person" key="entity-000164"
+            >Deutsch</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>The score of the <tei:rs type="composition" key="entity-001269">Ninth Symphony</tei:rs>
+        that has been published in facsimile is most likely the one that <tei:rs type="person"
+          key="entity-000055">Beethoven</tei:rs>
+        <tei:hi rend="underline">retained</tei:hi> and mentions in his letters to Ries of March 19,
+        1825, and April 3, 1825 (cf. Thayer, pp. 166–67), as “<tei:hi rend="underline">my
+          score</tei:hi>.” <tei:hi rend="underline">This</tei:hi> one was definitely not intended
+        for Schott’s engravers, because it was not suitable on external and internal grounds. I
+        assume that a <tei:hi rend="underline">fair copy</tei:hi> was sent to Schott, but even this
+        necessitated an insertion of “new leaves” (Thayer, vol. IV, p. 174 above). <tei:add
+          place="interlinear-above">But</tei:add> in the score published in facsimile there is no
+        trace of added new leaves; likewise, a fair copy (yet another one) must have been sent to
+        the King of Prussia. In spite of everything, however, the first edition and the contemporary
+        scores that were sent out, compared with <tei:rs type="person" key="entity-000055"
+          >Beethoven</tei:rs>’s score (which he calls his own and has been published in facsimile),
+        are missing many attractive things, which <tei:rs type="person" key="entity-000055"
+          >Beethoven</tei:rs> left out. Some of these were <tei:milestone unit="folio" n="recto"/>
+        already incorporated into the <tei:rs type="organization" key="entity-003860">Philharmonic
+          Edition</tei:rs> (<tei:rs type="person" key="entity-000420">Kalmus</tei:rs>), as a result
+        of my collaboration, but only in the first movement: thereafter I had to withdraw my
+        collaboration.</tei:p>
+
+      <tei:p>I look forward to hearing you on the radio on the <tei:date when="1927-01-18"
+          >18th</tei:date>!<tei:ptr corresp="#r0001-fn02" type="footnote"/></tei:p>
+
+      <tei:p>Best wishes for your trip to the north!</tei:p>
+
+      <tei:closer>
+        <tei:salute>to you and your <tei:rs type="person" key="entity-000163"
+          >wife</tei:rs>,</tei:salute>
+        <tei:salute>best greetings from the two of us,</tei:salute>
+        <tei:salute rend="indent-70">Your</tei:salute>
+        <tei:signed rend="indent-80">
+          <tei:rs key="entity-000632" type="person">H. Schenker</tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1927-01-16">January 16, 1927</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
