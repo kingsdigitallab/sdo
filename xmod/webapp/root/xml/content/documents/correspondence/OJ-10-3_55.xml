@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2995" sdoID="OJ-10-3_55">OJ 10/3, [55]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="TPhd" scope="major">Hanna Deutsch typist</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-19" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008379">DeutschH ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Typewritten postcard from Otto Erich and Hanna Deutsch to Schenker, dated January
+        18, 1927</dc:title>
+
+      <dcterms:created>1927-01-18T14:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-01-31</dcterms:dateSubmitted>
+      <dc:description>Deutsch asks Schenker not to mention his name in connection with the
+        “curiosity” about Schubert mentioned in his postcard of January 15.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000163">DeutschH</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postk<tei:supplied reason="overstamped"
+              >arte</tei:supplied></tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">Absender:</tei:supplied>
+              <tei:handShift new="#TPhd"/>O. E. Deutsch</tei:addrLine>
+            <tei:addrLine>Wien II. Böcklinstr. 26.</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied>
+              <tei:handShift new="#TPhd"/>Herrn Professor Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-10">Keilgasse 8</tei:addrLine>
+            <tei:addrLine rend="indent-20"><tei:hi rend="underline"><tei:hi rend="sperr"
+                  >Wien</tei:hi> III.</tei:hi></tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:lb/>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-40"><tei:handShift new="TPhd"/><tei:rs key="entity-002484"
+            type="place">Wien</tei:rs>, <tei:date when="1927-01-18">18. I.
+          1927</tei:date>.</tei:dateline>
+        <tei:salute>Sehr verehrter Herr <tei:rs type="person" key="entity-000632"
+            >Professor</tei:rs><tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt
+            of this postcard is recorded in Schenker’s diary for January 28, 1927: “Von Deutsch
+            (K.): ermächtigt mich, das Kuriosum Schubert ohne Namensnennung zu verwenden” (“from
+            Deutsch (postcard): authorises me to use the Schubert curiosity without naming
+            him.”) — This does not precisely reflect Deutsch’s message!.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Mein <tei:rs type="person" key="entity-000164">Mann</tei:rs> lässt Sie
+        bitten, das „Kuriosum“<tei:note xml:id="r0001-fn02" type="editorial" place="foot">In his
+          postcard <tei:ref type="correspondence" cRef="OJ-10-3_52">OJ 10/3, [52]</tei:ref>, January
+          15, Deutsch had remarked that Schubert was paid 500 marks as a music teacher to Prince
+          Esterházy for two summers, and that he (Deutsch) had recently valued two song manuscripts
+          belonging to the Estherházy family at 4,000 marks.</tei:note> nur <tei:hi rend="underline"
+          >ohne</tei:hi> Namensnennung zu verwenden! </tei:p>
+
+      <tei:p rend="first">Mit vielen schönen Grüssen für Sie und Ihre lb. <tei:rs type="person"
+          key="entity-000771">Frau Gemahlin</tei:rs></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Ihre ergebene</tei:salute>
+        <tei:note type="editorial" place="inline">unsigned</tei:note>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">From:</tei:supplied>
+              <tei:handShift new="#TPhd"/>O. E. Deutsch</tei:addrLine>
+            <tei:addrLine>Vienna II, Böcklinstrasse 26</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied>
+              <tei:handShift new="#TPhd"/>Professor Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-10">Keilgasse 8</tei:addrLine>
+            <tei:addrLine rend="indent-20"><tei:hi rend="underline"><tei:hi rend="sperr"
+                  >Vienna</tei:hi> III</tei:hi></tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:lb/>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-40"><tei:handShift new="TPhd"/><tei:rs key="entity-002484"
+            type="place">Vienna</tei:rs>, <tei:date when="1927-01-18">January 18,
+          1927</tei:date></tei:dateline>
+        <tei:salute>Much revered <tei:rs type="person" key="entity-000632"
+            >Professor</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">My <tei:rs type="person" key="entity-000164">husband</tei:rs> asks you to
+        use the “curiosity”<tei:ptr corresp="#r0001-fn02" type="footnote"/> only <tei:hi
+          rend="underline">without</tei:hi> mentioning his name.</tei:p>
+
+      <tei:p rend="first">With many cordial greetings to you and your dear <tei:rs type="person"
+          key="entity-000771">wife</tei:rs>,</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Your devoted</tei:salute>
+        <tei:note type="editorial" place="inline">unsigned</tei:note>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
