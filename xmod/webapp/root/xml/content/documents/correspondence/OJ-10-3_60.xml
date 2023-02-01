@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3000" sdoID="OJ-10-3_60">OJ 10/3, [60]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="TPoed" scope="major">Otto Erich Deutsch typist</tei:handNote>
+      <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+      <tei:handNote xml:id="HS" scope="minor">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+      <tei:handNote xml:id="unkPO" scope="minor">unknown hand (Post Office)</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-19" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Typewritten express postcard from Deutsch to Schenker, dated April 21,
+        1927</dc:title>
+
+      <dcterms:created>1927-04-21T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-02-01</dcterms:dateSubmitted>
+      <dc:description>Deutsch looks forwarded to seeing the Schenkers at Hoboken’s place. The
+        Society of the Friends of Music would like their print of a Haydn sketchleaf to be returned;
+        Eusebius Mandyczewki is unable to find a copy of Scarlatti’s Op. 1 (a collection of six
+        keyboard sonatas).</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline">
+          <tei:handShift new="#printed"/><tei:supplied reason="overstamped"><tei:hi rend="bold"
+              >Postkarte</tei:hi></tei:supplied>
+          <tei:note type="editorial" place="inline">obscured by postage stamps</tei:note></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">Absender:</tei:supplied><tei:handShift
+                new="#stamp"/>OTTO ERICH DEUTSCH</tei:addrLine>
+            <tei:addrLine>Wien, II. Böcklinstrasse 26,</tei:addrLine>
+            <tei:addrLine>Telefon-Nummer 42-8-22</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:note type="editorial" place="inline">Notes in Schenker's hand, unrelated to the
+            content of this postcard.</tei:note><tei:lb/>
+          <tei:add resp="Deutsch"><tei:handShift new="#unkPO"/>Rohrpost!</tei:add>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied>
+              <tei:handShift new="#TPoed"/>Herrn Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-50">WIEN III.</tei:addrLine>
+            <tei:addrLine rend="indent-40">Keilgasse 8</tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:lb/>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-30"><tei:handShift new="#TPoed"/><tei:rs key="entity-002484"
+            type="place">Wien</tei:rs>, <tei:date when="1927-04-21">21. April
+          27</tei:date></tei:dateline>
+        <tei:salute>Sehr verehrter Herr <tei:rs type="person" key="entity-000632"
+            >Doktor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
+            this postcard is recorded in Schenker’s diary for April 21, 1927: “Von Deutsch (expr.
+            K.): das Archiv fordert die Haydn-Skizze zurück” (“From Deutsch (express postcard): the
+            Archive asks for the return of the Haydn sketch”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Es hat uns sehr leid getan, dass Sie unserer Einladung nicht folgen
+          konnten;<tei:note xml:id="r0001-fn02" type="editorial" place="foot">See Deutsch’s postcard
+          of April 14 (<tei:ref type="correspondence" cRef="OJ-10-3_59">OJ 10/3, [59]</tei:ref>), an
+          invitation to tea. In his diary entry for April 15, Schenker notes that the engagement had
+          been cancelled on account of illness. </tei:note> aber der Grund lag ja auf unserer Seite,
+        und wir kannten ihn noch nicht, als wir Sie einluden. Nun freuen wir uns doppelt, Sie und
+        Ihre <tei:rs type="person" key="entity-000771">Frau Gemahlin</tei:rs> nächste Woche doch bei
+          <tei:rs type="person" key="entity-000380">Hoboken</tei:rs> sehen zu können.<tei:note
+          xml:id="r0001-fn03" type="editorial" place="foot">Schenker notes this invitation in the
+          diary entry for April 19.</tei:note></tei:p>
+
+      <tei:p rend="first">Die <tei:rs type="organization" key="entity-002430">G. d. M.
+          (Archiv)</tei:rs> bittet mich, den Abdruck des „<tei:title>Chaos</tei:title>“<tei:note
+          xml:id="r0001-fn04" type="editorial" place="foot">The autograph sketchleaf of <tei:title
+            level="a">The Representation of Chaos</tei:title> from Haydn’s <tei:rs
+            type="composition" key="entity-001551"><tei:title level="m">The
+            Creation</tei:title></tei:rs>.</tei:note> zurückzustellen. Am Ende ist das auf eine
+        Anfrage von Ihnen (nach der verschollenen Photographie) geschehen. Jedenfalls muss ich jetzt
+        bitten, die Vorlage vom <tei:rs type="organization" key="entity-002627">DMV</tei:rs>, der
+        das Klischee wohl schon angefertigt hat, zurückzuverlangen. </tei:p>
+
+      <tei:p rend="first">Dass <tei:rs type="person" key="entity-000562">Mand.</tei:rs> den <tei:rs
+          type="person" key="entity-000760">Scarlatti</tei:rs> op. 1<tei:note xml:id="r0001-fn05"
+          type="editorial" place="foot"><tei:title level="m">Sei Sonate per il cembalo solo,
+            composte da Sigre Don Domenico Scarlatti … Opera I<tei:hi rend="supralinear"
+            >ma</tei:hi></tei:title> (Nuremberg: Giovanni Ulrico Haffner, n.d.).</tei:note> nicht
+        findet, ist ausser Zweifel. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Ihr sehr ergebener</tei:salute>
+        <tei:signed rend="indent-80"><tei:handShift new="#OED"/>
+          <tei:rs key="entity-000164" type="person">O E Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline">
+          <tei:handShift new="#printed"/><tei:supplied reason="overstamped"><tei:hi rend="bold"
+              >Postcard</tei:hi></tei:supplied>
+          <tei:note type="editorial" place="inline">obscured by postage stamps</tei:note></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">From:</tei:supplied><tei:handShift
+                new="#stamp"/>OTTO ERICH DEUTSCH</tei:addrLine>
+            <tei:addrLine>Vienna II, Böcklinstrasse 26</tei:addrLine>
+            <tei:addrLine>Telephone number 42-8-22</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:note type="editorial" place="inline">Notes in Schenker's hand, unrelated to the
+            content of this postcard.</tei:note><tei:lb/>
+          <tei:add resp="Deutsch"><tei:handShift new="#unkPO"/>Pneumatic Post!</tei:add>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied>
+              <tei:handShift new="#TPoed"/>Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-40">Keilgasse 8</tei:addrLine>
+            <tei:addrLine rend="indent-50">VIENNA III</tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:lb/>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-30"><tei:handShift new="#TPoed"/><tei:rs key="entity-002484"
+            type="place">Vienna</tei:rs>, <tei:date when="1927-04-21">April 21,
+          1927</tei:date></tei:dateline>
+        <tei:salute>Much revered Dr. <tei:supplied reason="identity"><tei:rs type="person"
+              key="entity-000632">Schenker</tei:rs></tei:supplied><tei:ptr corresp="#r0001-fn01"
+            type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">We were very sorry that you were unable to accept our invitation;<tei:ptr
+          corresp="#r0001-fn02" type="footnote"/> but the fault indeed lay on our side; and we did
+        not yet know it at the time we invited you. Now we are doubly happy to see you and your
+          <tei:rs type="person" key="entity-000771">wife</tei:rs> next week at <tei:rs type="person"
+          key="entity-000380">Hoboken</tei:rs>’s.<tei:ptr corresp="#r0001-fn03" type="footnote"
+        /></tei:p>
+
+      <tei:p rend="first"><tei:rs type="organization" key="entity-002430">The Society of the Friends
+          of Music (Archive)</tei:rs> have asked me to return the print of
+          “<tei:title>Chaos</tei:title>”.<tei:ptr corresp="#r0001-fn04" type="footnote"/>
+        Ultimately, this happened as a result of a question from you (about the missing photograph).
+        In any event, I must now ask for the return of this source from <tei:rs type="organization"
+          key="entity-002627">Drei Masken Verlag</tei:rs>, which must have already prepared the
+        electrotype.</tei:p>
+
+      <tei:p rend="first">That <tei:rs type="person" key="entity-000562">Mandyczewski</tei:rs> will
+        not find <tei:rs type="person" key="entity-000760">Scarlatti</tei:rs>’s Opus 1<tei:ptr
+          corresp="#r0001-fn05" type="footnote"/> is beyond doubt.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Your very devoted</tei:salute>
+        <tei:signed rend="indent-80"><tei:handShift new="#OED"/>
+          <tei:rs key="entity-000164" type="person">O. E. Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
