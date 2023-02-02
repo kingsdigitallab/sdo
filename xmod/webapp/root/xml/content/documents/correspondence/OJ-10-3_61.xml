@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3001" sdoID="OJ-10-3_61">OJ 10/3, [61]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="TPoed" scope="major">Otto Erich Deutsch typist</tei:handNote>
+      <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-19" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Typewritten postcard from Deutsch to Schenker, dated May 9, 1927</dc:title>
+
+      <dcterms:created>1927-05-09T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-02-02</dcterms:dateSubmitted>
+      <dc:description>Deutsch asks Schenker to lend him the April 1927 issue of Der Schriftsteller.
+        He is grateful for having been introduced to the artist Viktor Hammer. He recommends that
+        Schenker visit the Beethoven exposition in the City Hall, and also the Planetarium, where an
+        “optical organ” is on display.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">Absender:</tei:supplied>
+              <tei:handShift new="#stamp"/>OTTO ERICH DEUTSCH</tei:addrLine>
+            <tei:addrLine>Wien, II. Böcklinstrasse 26,</tei:addrLine>
+            <tei:addrLine>Telefon-Nummer 42-8-22</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied>
+              <tei:handShift new="#TPoed"/>Herrn Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-30">WIEN III.</tei:addrLine>
+            <tei:addrLine rend="indent-30">Keilgasse 8</tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:lb/>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-30"><tei:handShift new="#TPoed"/><tei:rs key="entity-002484"
+            type="place">Wien</tei:rs>, <tei:date when="1927-05-09">9. Mai
+          27</tei:date></tei:dateline>
+        <tei:salute>Sehr verehrter Herr <tei:rs type="person" key="entity-000632"
+            >Doktor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
+            this postcard is recorded in Schenker’s diary for May 10, 1927: “Von Deutsch (K.): dankt
+            für die Vermittlung der Bekanntschaft mit Hammer, wird die entliehenen Stücke
+            zurücksenden” (“From Deutsch (postcard): thanks me for facilitating the acquaintence
+            with Hammer, will return the items that he has borrowed”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Für Ihren Brief vom <tei:date when="1927-05-04">4.</tei:date> und die
+        gütigen Sendungen,<tei:note xml:id="r0001-fn02" type="editorial" place="foot">In his diary
+          for May 4, 1927 Schenker records writing to Deutsch to say that the sketch for Haydn’s
+            <tei:title level="a">Chaos</tei:title> (<tei:rs type="composition" key="entity-001551"
+              ><tei:title level="m">The Creation</tei:title></tei:rs>) had been returned.</tei:note>
+        die ich bald zurückstellen werde, besten Dank. Ich bin nicht mehr Mitglied des <tei:rs
+          type="organization" key="entity-002458">Schutzverband</tei:rs>es und bitte Sie deshalb,
+        mir gelegentlich auch die Aprilnummer des Schriftstellers zu leihen. – Für die Bekanntschaft
+        mit <tei:rs type="person" key="entity-000327">Hammer</tei:rs> bin ich Ihnen neuerdings tief
+        verbunden. Wir waren beisammen und kommen wohl auch noch einmal zueinander. – Ich empfehle
+        Ihnen dringend, die <tei:rs type="person" key="entity-000055">Beethoven</tei:rs>-Ausstellung
+        (noch diese Woche) im Rathaus anzusehen. (Katalog.)<tei:note xml:id="r0001-fn03"
+          type="editorial" place="foot"><tei:bibl><tei:title level="m">Führer durch die
+              Beethoven-Zentenarausstellung der Stadt Wien: Beethoven und die Wiener Kultur seiner
+              Zeit</tei:title> (Vienna: Gemeinde Wien, 1927)</tei:bibl>.</tei:note> Und dann in
+        Bälde das <tei:rs type="place" key="entity-002412">Planetarium</tei:rs> – eine optische
+        Orgel, ein wissenschaftliches Wunderding mit hochkünstlerischen Eindrücken. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indelt-10">Schöne Grüsse von Haus zu Haus!</tei:salute>
+        <tei:salute rend="indent-50">Ihr sehr ergebener</tei:salute>
+        <tei:signed rend="indent-80"><tei:handShift new="#OED"/>
+          <tei:rs key="entity-000164" type="person">Otto Erich Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">From:</tei:supplied>
+              <tei:handShift new="#stamp"/>OTTO ERICH DEUTSCH</tei:addrLine>
+            <tei:addrLine>Vienna II, Böcklinstrasse 26</tei:addrLine>
+            <tei:addrLine>Telephone number: 42-8-22</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied>
+              <tei:handShift new="#TPoed"/>Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-30">Keilgasse 8</tei:addrLine>
+            <tei:addrLine rend="indent-30">VIENNA III</tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:lb/>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-30"><tei:handShift new="#TPoed"/><tei:rs key="entity-002484"
+            type="place">Vienna</tei:rs>, <tei:date when="1927-05-09">May 9,
+          1927</tei:date></tei:dateline>
+        <tei:salute>Much revered Dr. <tei:supplied reason="identity"><tei:rs type="person"
+              key="entity-000632">Schenker</tei:rs></tei:supplied>,<tei:ptr corresp="#r0001-fn01"
+            type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Best thanks for you letter of the <tei:date when="1927-05-04"
+          >4th</tei:date><tei:ptr corresp="#r0001-fn02" type="footnote"/> and the kind enclosures. I
+        am no longer a member of the <tei:rs type="organization" key="entity-002458">Association for
+          the Protection <tei:supplied reason="abbreviation">of German Authors in
+            Vienna</tei:supplied></tei:rs> and therefore am asking you to lend me the April issue,
+        too, when it is convenient. – For making the acquaintance of <tei:rs type="person"
+          key="entity-000327">Hammer</tei:rs> lately, I am deeply indebted to you. We were together
+        and will probably get together again. – I urgently recommend that you see the <tei:rs
+          type="person" key="entity-000055">Beethoven</tei:rs> exhibition in the City Hall, which is
+        still on this week (catalog).<tei:ptr corresp="#r0001-fn03" type="footnote"/> And soon after
+        that, the <tei:rs type="place" key="entity-002412">Planetarium</tei:rs>: an optical organ, a
+        marvel of science which makes highly artistic impressions. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indelt-10">Best greetings from our house to yours!</tei:salute>
+        <tei:salute rend="indent-50">Your very devoted</tei:salute>
+        <tei:signed rend="indent-80"><tei:handShift new="#OED"/>
+          <tei:rs key="entity-000164" type="person">Otto Erich Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
