@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2991" sdoID="OJ-71-19_1">OJ 71/19, [1]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+      <tei:handNote xml:id="TPwpv" scope="major">WPhV typist</tei:handNote>
+      <tei:handNote xml:id="AK" scope="minor">Alfred Kalmus's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-18" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008377">WPV ~
+        OEDeutsch</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008378">KalmusA ~
+        OEDeutsch</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+      <dc:title>Typewritten letter from Alfred Kalmus (WPhV) to Otto Erich Deutsch, dated November
+        30, 1927</dc:title>
+
+      <dcterms:created>1927-11-30T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-02-08</dcterms:dateSubmitted>
+      <dc:description>Kalmus thanks Deutsch for his recent help with a Schubert publication, then
+        reports that one of their editors mistakenly added changes to Schenker’s annotated copy of
+        the “Unfinished” Symphony which was to be used for the new edition. He apologizes for the
+        error, and is returning Schenker’s copy together with another copy of the score into which
+        Schenker’s original notations have been entered as accurately as possible.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000420">KalmusA</marcrel:correspondent>
+      <marcrel:correspondent key="entity-003860">Wiener Philharmonischer
+        Verlag</marcrel:correspondent>
+      <marcrel:recipient key="entity-000164">DeutschOE</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>WIENER PHILHARMONISCHER VERLAG A.
+            G.</tei:addrLine>
+          <tei:addrLine><tei:note type="editorial" place="inline">left:</tei:note>BANKKONTI:
+            ZENTRAL-EUROPÄISCHE LÄNDERBANK</tei:addrLine>
+          <tei:addrLine>NIEDERLASSUNG WIEN</tei:addrLine>
+          <tei:addrLine>LOMBARDBANK A. G., ZÜRICH</tei:addrLine>
+          <tei:addrLine><tei:note type="editorial" place="inline">center: logo in the shape of a
+              shield, with the initials "W PH V"</tei:note></tei:addrLine>
+          <tei:addrLine><tei:note type="editorial" place="inline"
+            >right:</tei:note>POSTSPARKASSEN-KONTO WIEN 193669</tei:addrLine>
+          <tei:addrLine>SCHECK-KONTO PRAG 79,853</tei:addrLine>
+          <tei:addrLine>POSTSCHECK-KONTO LEIPZIG 36,733</tei:addrLine>
+          <tei:addrLine>TELEGRAMM-ADRESSE: FILARMONIA</tei:addrLine>
+        </tei:address><tei:lb/><tei:lb/>
+        <tei:byline><tei:handShift new="#TPwpv"/>Dr. K/L.</tei:byline><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="printed"/>WIEN, <tei:handShift new="TPwpv"/>am 30.
+            November 1927</tei:addrLine>
+          <tei:addrLine><tei:handShift new="printed"/>I. BÖSENDORFERSTRASSE 12</tei:addrLine>
+          <tei:addrLine>TELEPHON 57-5-85</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine rend="indent-40"><tei:handShift new="TPwpv"/>Herrn Otto Erich
+            Deutsch</tei:addrLine>
+          <tei:addrLine rend="indent-70">Wien, II.,</tei:addrLine>
+          <tei:addrLine rend="indent-70">Böcklinstr. 26</tei:addrLine>
+        </tei:address>
+        <tei:salute><tei:handShift new="TPwpv"/>Sehr geehrter <tei:rs type="person"
+            key="entity-000164">Herr</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial"
+            place="foot">This letter was enclosed with Deutsch’s next letter to Schenker, <tei:ref
+              type="correspondence" cRef="OJ-10-3_75">OJ 10/3, [75]</tei:ref>, December 2, 1927, who
+            did not return it; it is now preserved separately in the Oswald Jonas Memorial
+            Collection. under “Other Correspondence.”</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Vielen herzlichen Dank für Ihre freundlichen Zeilen vom <tei:date
+          when="1927-11-28">28.d.M.</tei:date> die wir bei der Herstellung des <tei:rs type="person"
+          key="entity-000803">Schubert</tei:rs>büchleins <tei:note type="editorial" place="inline"
+          >cued from left margin:</tei:note>
+        <tei:handShift new="#OED"/>von <tei:rs type="person" key="entity-000661">B.
+          Paumgartner</tei:rs><tei:note xml:id="r0001-fn02" type="editorial" place="foot">The book
+          in question has not been identified. Paumgartner published a study of Mozart in 1927, but
+          his <tei:title level="m">Franz Schubert</tei:title> did not appear until
+          1943.</tei:note><tei:note type="editorial" place="inline">end cue</tei:note>
+        <tei:handShift new="TPwpv"/>sehr beherzigen werden. Ich bitte Sie, wenn wir Ihnen in
+        irgendeiner Hinsicht dienlich sein können, über uns stets zu verfügen. <tei:note
+          type="editorial" place="inline">cued from left margin:</tei:note>
+        <tei:handShift new="#OED"/>gutgeschrieben beim „Hause Oesterreich<tei:supplied
+          reason="omitted">.</tei:supplied>“ </tei:p>
+
+      <tei:p rend="first">Gleichzeitig erlaube ich mir, Ihnen auch das Exemplar der <tei:rs
+          type="composition" key="entity-001686"><tei:title>h-moll Symphonie</tei:title></tei:rs> zu
+        übersenden, welches von Ihnen und Herrn Professor Schenker korrigiert wurde. Da, wie ich
+        Ihnen schon telephonisch mitteilte, unser musikalischer Lektor<tei:note xml:id="r0001-fn03"
+          type="editorial" place="foot">“unser … Lektor” (“our … reader”): underlined by hand,
+          probably by Otto Erich Deutsch or Schenker.</tei:note> über die Angelegenheit durch ein
+        Versehen nicht genau informiert war, hat er in dem Exemplar Korrekturen vorgenommen,
+        weswegen ich Sie und Herrn Professor Schenker sehr um Entschuldigung bitte. Ich habe in
+        einem zweiten Exemplar, welches ich ebenfalls beilege, die Eintragungen (hoffentlich
+        fehlerlos!) wiederholen lassen und hoffe, dass Sie und Herr Professor Schenker uns wegen
+        dieses Versehens nicht böse sind. </tei:p>
+
+      <tei:p rend="first">Mit der Bitte, die Exemplare Herrn Professor Schenker freundlichst zur
+        Verfügung zu stellen, bleibe ich mit nochmaligem Danke </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Ihr sehr ergebener</tei:salute>
+        <tei:signed rend="indent-65"><tei:handShift new="#stamp"/><tei:rs type="organization"
+            key="entity-003860">„WIENER PHILHARMONISCHER VERLAG“
+          AKTIEN-GESELLSCHAFT</tei:rs></tei:signed>
+        <tei:signed rend="indent-80"><tei:handShift new="#AK"/><tei:rs type="person"
+            key="entity-000420">Dr. Kalmus</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>WIENER PHILHARMONISCHER PUBLISHING HOUSE
+            &amp; CO.</tei:addrLine>
+          <tei:addrLine><tei:note type="editorial" place="inline">left:</tei:note>BANK ACCOUNT:
+            CENTRAL EUROPEAN PROVINCIAL BANK</tei:addrLine>
+          <tei:addrLine>HEAD OFFICE VIENNA</tei:addrLine>
+          <tei:addrLine>LOMBARD BANK &amp; CO, ZÜRICH</tei:addrLine>
+          <tei:addrLine><tei:note type="editorial" place="inline">center: logo in the shape of a
+              shield, with the initials "W PH V"</tei:note></tei:addrLine>
+          <tei:addrLine><tei:note type="editorial" place="inline">right:</tei:note>POSTAL SAVINGS
+            BANK ACCOUNT VIENNA 193669</tei:addrLine>
+          <tei:addrLine>POSTCHECK ACCOUNT PRAGUE 79,853</tei:addrLine>
+          <tei:addrLine>POSTCHECK ACCOUNT LEIPZIG 36,733</tei:addrLine>
+          <tei:addrLine>TELEGRAM ADRESS: FILARMONIA</tei:addrLine>
+        </tei:address><tei:lb/><tei:lb/>
+        <tei:byline><tei:handShift new="#TPwpv"/>Dr. K/L.</tei:byline><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="printed"/>VIENNA, <tei:handShift new="TPwpv"/>November
+            30, 1927</tei:addrLine>
+          <tei:addrLine><tei:handShift new="printed"/>I, BÖSENDORFERSTRASSE 12</tei:addrLine>
+          <tei:addrLine>TELEPHONE 57-5-85</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine rend="indent-40"><tei:handShift new="TPwpv"/>Mr. Otto Erich
+            Deutsch</tei:addrLine>
+          <tei:addrLine rend="indent-70">Böcklinstrasse 26</tei:addrLine>
+          <tei:addrLine rend="indent-70">Vienna II</tei:addrLine>
+        </tei:address>
+        <tei:salute><tei:handShift new="TPwpv"/>Dear <tei:rs type="person" key="entity-000164"
+            >Sir</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Many cordial thanks for your kind words of the <tei:date when="1927-11-28"
+          >28th of this month</tei:date>, which we heeded when producing the little book about
+          <tei:rs type="person" key="entity-000803">Schubert</tei:rs>
+        <tei:note type="editorial" place="inline">cued from left margin:</tei:note>
+        <tei:handShift new="#OED"/>by <tei:rs type="person" key="entity-000661">Bernhard
+          Paumgartner</tei:rs><tei:ptr corresp="#r0001-fn02" type="footnote"/><tei:note
+          type="editorial" place="inline">end cue</tei:note>. <tei:handShift new="TPwpv"/>If we can
+        be of service to you in any way, please get in touch with us at any time. <tei:note
+          type="editorial" place="inline">cued from left margin:</tei:note>
+        <tei:handShift new="#OED"/>credited to your account at the “House of Austria”<tei:note
+          type="editorial" place="inline">end cue</tei:note>.</tei:p>
+
+      <tei:p rend="first">At the same time, permit me also to send you the copy of the <tei:rs
+          type="composition" key="entity-001686"><tei:title>B minor Symphony</tei:title></tei:rs>
+        which was corrected by you and Professor Schenker. As I already explained over the
+        telephone, our musical reader<tei:ptr corresp="#r0001-fn03" type="footnote"/> who, by
+        mistake, was not precisely informed about the matter entered corrections into the copy, on
+        account of which I beg your and Professor Schenker’s forgiveness. I have entered the
+        corrections (free of error, I hope!) into a second copy, which I am likewise enclosing here,
+        and hope that you and Professor Schenker are not angry with us for this oversight. </tei:p>
+
+      <tei:p rend="first">Requesting that you be so kind as to make these copies available to
+        Professor Schenker, I remain, with renewed gratitude,</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Your very devoted</tei:salute>
+        <tei:signed rend="indent-65"><tei:handShift new="#stamp"/><tei:rs type="organization"
+            key="entity-003860">WIENER PHILHARMONISCHER PUBLISHING HOUSE &amp; CO.
+          </tei:rs></tei:signed>
+        <tei:signed rend="indent-80"><tei:handShift new="#AK"/><tei:rs type="person"
+            key="entity-000420">Dr. Kalmus</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
