@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3040" sdoID="OJ-10-3_91">OJ 10/3, [91]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="TPoed" scope="major">Otto Erich Deutsch typist</tei:handNote>
+      <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-18" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+      <dc:title>Typewritten letter from Deutsch to Schenker, dated September 16, 1928</dc:title>
+
+      <dcterms:created>1928-09-16T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-02-22</dcterms:dateSubmitted>
+      <dc:description>Deutsch belatedly answers Schenker’s postcard greeting from the summer and
+        invites him to tea on Wednesday, September 19.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:fw type="header" rend="inline">
+          <tei:handShift new="#printed"/>OTTO ERICH DEUTSCH</tei:fw>
+        <tei:address>
+          <tei:addrLine rend="indent-75">WIEN II.</tei:addrLine>
+          <tei:addrLine rend="indent-75">Böcklinstrasse 26</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-50"><tei:handShift new="#TPoed"/><tei:date when="1928-09-16">16.
+            September 28</tei:date></tei:dateline>
+        <tei:salute>Lieber verehrter Herr <tei:rs type="person" key="entity-000632"
+            >Doktor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
+            this letter and writing of a reply are recorded in Schenker’s diary for September
+            17, 1928: “Von Deutsch (Br.): Einladung für Mittwoch 5<tei:hi rend="supralinear"
+              >h</tei:hi>. – An Deutsch (K.): Zusage” (“From Deutsch (letter): Invitation for
+            Wednesday at 5 o’clock. To Deutsch (postcard): acceptance”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Nachdem ich im Sommer schnöder Weise nichts von mir hören liess (das
+        Nichtschreiben ist ein Teil meiner Erholung) bitte ich Sie, jetzt meinen Dank für Ihr
+        freundliches Gedenken anzunehmen.<tei:note xml:id="r0001-fn02" type="editorial" place="foot"
+          >Schenker’s postcard, <tei:ref type="correspondence" cRef="WSLB-Hds-191-564">WSLB-Hds
+            191.564</tei:ref>, June 30, 1928, congratulating Deutsch on having the title of
+          Professor conferred on him.</tei:note> Ich sende Ihnen eine Ansicht unseres glücklichen
+        Sommersitzes. Wir sind wieder gesammelt, und ich glaube, Sie dürften auch gewohnheitsmässig
+        eingetroffen sein. Es wäre uns sehr liebe, wenn Sie den im Frühjahr verschobenen Besuch nun
+        nachholen wollten. Passt es Ihnen <tei:date when="1928-09-19">Mittwoch</tei:date><tei:note
+          xml:id="r0001-fn03" type="editorial" place="foot">September 19, 1928.</tei:note> um fünf
+        Uhr? Sonst, bitte, geben Sie uns einen anderen Tag an: <tei:del rend="overstrike">Freitag
+          oder</tei:del> Samstag etwa. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">Mit schönen Empfehlungen von Haus zu Haus</tei:salute>
+        <tei:salute rend="indent-60">Ihr sehr ergebener</tei:salute>
+        <tei:signed rend="indent-70"><tei:handShift new="#OED"/><tei:rs type="person"
+            key="entity-000164">O E Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:fw type="header" rend="inline">
+          <tei:handShift new="#printed"/>OTTO ERICH DEUTSCH</tei:fw>
+        <tei:address>
+          <tei:addrLine rend="indent-75">VIENNA II</tei:addrLine>
+          <tei:addrLine rend="indent-75">Böcklinstrasse 26</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-50"><tei:handShift new="#TPoed"/><tei:date when="1928-09-16"
+            >September 16, 1928</tei:date></tei:dateline>
+        <tei:salute>Dear Dr. <tei:supplied reason="identity"><tei:rs type="person"
+              key="entity-000632">Schenker</tei:rs></tei:supplied>,<tei:ptr corresp="#r0001-fn01"
+            type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Having unpardonably kept silent this summer (not writing is a part of my
+        recovery plan), I ask you now to accept my thanks for your kind thoughts.<tei:ptr
+          corresp="#r0001-fn02" type="footnote"/> I am sending you a picture of our delightful
+        summer home. We are all together again; and I believe that you have probably arrived back,
+        in your accustomed way. It would be very nice if you could now make good the postponed visit
+        from earlier this year. Would you be available on <tei:date when="1928-09-19"
+          >Wednesday</tei:date><tei:ptr corresp="#r0001-fn03" type="footnote"/> at 5 o’clock? If
+        not, suggest another day, perhaps <tei:del rend="overstrike">Friday or</tei:del>
+        Saturday.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">With best regards from our house to yours,</tei:salute>
+        <tei:salute rend="indent-60">Your very devoted</tei:salute>
+        <tei:signed rend="indent-70"><tei:handShift new="#OED"/><tei:rs type="person"
+            key="entity-000164">O. E. Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
