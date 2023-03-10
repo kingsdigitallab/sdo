@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3075" sdoID="OC-52-103">OC 52/103</sdo:correspondence>
+    </sdo:source>
+    <tei:handNotes>
+      <tei:handNote xml:id="unkUE1" scope="major">unknown hand 1 (UE)</tei:handNote>
+      <tei:handNote xml:id="unkUE2" scope="major">unknown hand 2 (UE)</tei:handNote>
+      <tei:handNote xml:id="TPue" scope="major">typist (UE)</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2006, 2023</tei:resp>
+      <tei:resp>Translation, 2006, 2023</tei:resp>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-02-07" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002702">UE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002701">UE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002700">Hertzka ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">postcard</tei:rs>
+
+
+
+      <dc:title>Handwritten and typewritten postcard from UE to Schenker, dated October 15,
+        1912</dc:title>
+
+      <dcterms:created>1912-10-15T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-03-10</dcterms:dateSubmitted>
+      <dc:description>Hertzka is out of town.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-002408">Universal Edition</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000356">Emil Hertzka</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:note type="editorial" place="inline">printed address in single frame:</tei:note>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>UNIVERSAL EDITION A.-G.</tei:addrLine>
+          <tei:addrLine>WIEN, I. REICHSRATSSTRASSE 9.</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#unkUE1"/><tei:hi rend="lateinschr">Wohlgeboren Herrn
+              Professor D<tei:hi rend="supralinear">r.</tei:hi> Heinr.
+            Schenker</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:hi rend="lateinschr">Wien III</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:hi rend="lateinschr">Reisnerstr.
+            38</tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:fw type="postmark">6 WIEN <tei:gap reason="illegible"/> | 16. X.12 VIII— | * 3 *
+          ||</tei:fw>
+        <tei:fw type="postmark">|| <tei:gap reason="illegible"/>
+          <tei:supplied>WIEN</tei:supplied> 19 | <tei:gap reason="illegible"/> X. 12–8 | * 3a *
+          ||</tei:fw><tei:lb/><tei:lb/>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:salute><tei:handShift new="#TPue"/>Sehr geehrter <tei:rs type="person"
+            key="entity-000632">Herr</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p>Nachdem unser Herr Direktor <tei:rs type="person" key="entity-000356">Hertzka</tei:rs>
+        gegenwärtig verreist ist, bitten wir Sie, sich mit der Erledigung Ihres Werten einige Zeit
+        gedulden zu wollen und zeichnen </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">hochachtungsvoll</tei:salute>
+        <tei:signed rend="indent-60"><tei:rs type="organization" key="entity-002408"
+            >Universal-Edition A.-G.</tei:rs></tei:signed><tei:lb/><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#TPue"/>Wien, <tei:handShift new="#unkUE1"/><tei:date
+              when="1912-10-15">1<tei:subst>
+                <tei:del rend="overwritten">6</tei:del>
+                <tei:add place="superimposed">5</tei:add>
+              </tei:subst>. X . 12</tei:date>.</tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p><tei:handShift new="#unkUE2"/>Herr Direktor dürfte Montag den <tei:date
+            when="1912-10-21">21. d.M.</tei:date> in Wien sein</tei:p>
+      </tei:postscript>
+
+    </tei:div>
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:note type="editorial" place="inline">printed address in single frame:</tei:note>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>UNIVERSAL EDITION &amp; Co.</tei:addrLine>
+          <tei:addrLine>VIENNA I, REICHSRATSSTRASSE 9</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#unkUE1"/>Professor Heinrich Schenker,
+            Esq.</tei:addrLine>
+          <tei:addrLine rend="indent-50">Vienna III</tei:addrLine>
+          <tei:addrLine rend="indent-50">Reisnerstrasse 38</tei:addrLine>
+        </tei:address>
+        <tei:fw type="postmark">6 VIENNA <tei:gap reason="illegible"/> | 16. X.12 VIII— | * 3 *
+          ||</tei:fw>
+        <tei:fw type="postmark">|| <tei:gap reason="illegible"/>
+          <tei:supplied>VIENNA</tei:supplied> 19 | <tei:gap reason="illegible"/> X. 12–8 | * 3a *
+          ||</tei:fw><tei:lb/><tei:lb/>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:salute><tei:handShift new="#TPue"/>Dear <tei:rs type="person" key="entity-000632"
+            >Sir</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>Since our Director <tei:rs type="person" key="entity-000356">Hertzka</tei:rs> is
+        currently away, we ask you please to bear with us for a while until your esteemed letter is
+        dealt with, and we remain</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">With kind regards,</tei:salute>
+        <tei:signed rend="indent-60"><tei:rs type="organization" key="entity-002408">Universal
+            Edition &amp; Co.</tei:rs></tei:signed><tei:lb/><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#TPue"/>Vienna, <tei:handShift new="#unkUE1"/><tei:date
+              when="1912-10-15">October 1<tei:subst>
+                <tei:del rend="overwritten">6</tei:del>
+                <tei:add place="superimposed">5</tei:add>
+              </tei:subst>. 1912</tei:date></tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p><tei:handShift new="#unkUE2"/>The Director should be back in Vienna on Monday the
+            <tei:date when="1912-10-21">21st of the month</tei:date>.</tei:p>
+      </tei:postscript>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
