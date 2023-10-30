@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3211" sdoID="OJ-10-3_180">OJ 10/3, [180]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="TPoed" scope="major">Otto Erich Deutsch typist</tei:handNote>
+      <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-18" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+      <dc:title>Typewritten letter from Deutsch to Schenker, dated September 15, 1932</dc:title>
+
+      <dcterms:created>1932-09-15T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-08-07</dcterms:dateSubmitted>
+      <dc:description>Deutsch asks Schenker to look at a draft letter to Hoboken and suggest changes
+        to it. He wants to leave open the possibility that Hoboken will retract his decision to
+        abandon his activities in Vienna.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>PROF. OTTO ERICH DEUTSCH</tei:addrLine>
+          <tei:addrLine>Tel. R 45–6–72</tei:addrLine>
+          <tei:addrLine rend="indent-80">WIEN II.</tei:addrLine>
+          <tei:addrLine rend="indent-80">Böcklinstraße 26</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-80"><tei:handShift new="#TPoed"/><tei:date when="1932-09-15">15.
+            Sept. 32</tei:date>.</tei:dateline>
+        <tei:salute>Lieber <tei:rs type="person" key="entity-000632">Verehrter</tei:rs>!<tei:note
+            xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this letter is recorded in
+            Schenker’s diary for September 16, 1932: “Von Deutsch ein Briefentwurf.”) (“From
+            Deutsch, a draft letter.”). The draft is not known to survive. Schenker’s response is
+              <tei:ref type="correspondence" cRef="WSLB-Hds-191-574">WSLB-Hds 191.574</tei:ref>,
+            September 6, 1932.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Ich bitte Sie, den beiliegenden Entwurf gütigst zu lesen und mir bald mit
+        Ihren Aenderungsvorschlägen zurückzuschicken. Leider scheint der Weg, <tei:rs type="person"
+          key="entity-000380">Hoboken</tei:rs> die Leihgabe der Bibliothek vorzuschlagen, nicht
+        gangbar, weil sich weder Bund noch Stadt auf so kurze oder auf unbestimmte Zeit zur
+        Uebernahme, mit Auslagen für Zins oder Neuafstellung, noch gar zur Anstellung eines neuen
+        Beamten verstehen würden. Das wäre nur bei einer Schenkung denkbar, wie man mir versichert.
+        Ich mache deshalb einen anderen Vorschlag, der ja ohne Mehrkosten für <tei:rs type="person"
+          key="entity-000380">Hoboken</tei:rs> einen Reuezug offen lässt. Ich glaube aber mit Ihnen
+        eher an den Raubzug.<tei:note xml:id="r0001-fn02" type="editorial" place="foot"
+          >“Reuezug”/“Raubzug”: a play on words.</tei:note></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50">Herzlichst ergeben Ihr</tei:salute>
+        <tei:signed rend="indent-90"><tei:handShift new="#OED"/><tei:rs type="person"
+            key="entity-000164">O E Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>PROF. OTTO ERICH DEUTSCH</tei:addrLine>
+          <tei:addrLine>Tel. R 45–6–72</tei:addrLine>
+          <tei:addrLine rend="indent-80">VIENNA II</tei:addrLine>
+          <tei:addrLine rend="indent-80">Böcklinstraße 26</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-80"><tei:handShift new="#TPoed"/><tei:date when="1932-09-15"
+            >September 15, 1932</tei:date></tei:dateline>
+        <tei:salute>Dear revered <tei:rs type="person" key="entity-000632">friend</tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Please be so kind as to read the enclosed draft and return it with your
+        suggested changes. Unfortunately the route by which <tei:rs type="person"
+          key="entity-000380">Hoboken</tei:rs> will make his library the object of a loan is not
+        viable, because neither the state nor the city will want to take it over for such a short
+        time, or for an indefinite period, if they have to pay rental costs for rehousing, to say
+        nothing of the employment of a new official. That would be possible only if it were a gift,
+        as was confirmed to me. I am therefore making another suggestion, which will leave open the
+        possibility of a retraction on <tei:rs type="person" key="entity-000380">Hoboken</tei:rs>’s
+        part, without any additional costs for him. But I believe, with you, that the predatory
+          attack<tei:ptr corresp="#r0001-fn02" type="footnote"/> is more likely.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50">Cordially, your devoted</tei:salute>
+        <tei:signed rend="indent-90"><tei:handShift new="#OED"/><tei:rs type="person"
+            key="entity-000164">O. E. Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

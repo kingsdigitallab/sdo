@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3268" sdoID="WSLB-Hds-191-575">WSLB-Hds 191.575</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamped</tei:handNote>
+    </tei:handNotes>
+
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-19" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Schenker to Deutsch, dated January 25, 1933</dc:title>
+
+      <dcterms:created>1933-01-25T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-08-23</dcterms:dateSubmitted>
+      <dc:description>Schenker comments on an English completion of the “Unfinished” Symphony. He is
+        waiting for a decision from a Mr. K. [Alfred Kalmus], concerning a proposed
+        publication.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000164">DeutschOE</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline">
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#printed"/>Absender:<tei:handShift new="#stamp"/>Dr.
+              HEINRICH SCHENKER</tei:addrLine>
+            <tei:addrLine>WIEN, III, Keilgasse 8</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied>
+              <tei:handShift new="#HS"/>H Prof. <tei:hi rend="lateinschr">O. E.
+              Deutsch</tei:hi></tei:addrLine>
+            <tei:addrLine rend="indent-20">Wien II</tei:addrLine>
+            <tei:addrLine rend="indent-20">Böcklinstr. 26</tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:lb/>
+        <tei:salute><tei:handShift new="#HS"/>Mein lieber Prof. <tei:rs type="person"
+            key="entity-000164">Deutsch</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial"
+            place="foot">Writing of this postcard is recorded in Schenker’s diary for January 25,
+            1933: “An Deutsch (K.): wegen des Engländers Fortsetzung der <tei:rs type="composition"
+              key="entity-001686">Hmoll-Sinfonie von Schubert</tei:rs>.” (“To Deutsch (letter):
+            concerning the Englishman’s continuation of <tei:rs type="composition"
+              key="entity-001686">Schubert’s B minor Symphony</tei:rs>.”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Das Scherzo gieng als Angehörtes ziemlich an. Das Rondo aber: hätte <tei:rs
+          type="person" key="entity-000808">Schumann</tei:rs> dieses Engländerstück<tei:note
+          xml:id="r0001-fn02" type="editorial" place="foot">Frank Merrick (1886–1981), English
+          pianist and composer, winner of the “English zone” of Columbia Records’ 1928 competition
+          for the best completion of <tei:rs type="composition" key="entity-001686">Schubert’s
+            Symphony in B minor</tei:rs>.</tei:note> gehört, dann erst hätte er – <tei:foreign
+          xml:lang="ita"><tei:hi rend="italic">e contrario</tei:hi></tei:foreign> – begriffen, daß,
+        was er etwa „himmlische Länge“ nannte, zum besonderen <tei:rs type="person"
+          key="entity-000803">Schubert</tei:rs>’chen Inhalt technisch gehört, d. h. ein solcher
+        Inhalt kann in das Sinfonische <tei:hi rend="underline">nur</tei:hi>
+        <tei:hi rend="underline">durch</tei:hi>
+        <tei:hi rend="underline">Länge</tei:hi> eingehen! Mündlich <tei:milestone unit="folio"
+          n="recto"/> klarer.</tei:p>
+
+      <tei:p>Von <tei:rs type="person" key="entity-000420">K.</tei:rs> liegt noch keine Entscheidung
+        vor. Ob er nicht mit überschussigen 20% an die <tei:rs type="organization"
+          key="entity-002430">G. d. M.</tei:rs> dachte?<tei:note xml:id="r0001-fn03"
+          type="editorial" place="foot">This wording suggests <tei:rs type="work"
+            key="entity-003331">Brahms’s <tei:title level="m">Oktaven und Quinten u.
+            A.</tei:title></tei:rs>, a manuscript owned by the Society of Friends of Music,
+          published by <tei:rs type="organization" key="entity-002408">Universal Edition</tei:rs> in
+          April 1933 with a commentary by Schenker. “K.” would then be Alfred Kalmus, the director
+          of Universal Edition.</tei:note></tei:p>
+
+      <tei:closer>
+        <tei:salute>Ihnen Beides Bestes</tei:salute>
+        <tei:salute>von uns Beiden</tei:salute>
+        <tei:salute rend="indent-80">Ihr</tei:salute>
+        <tei:signed rend="indent-50">
+          <tei:rs key="entity-000632" type="person"><tei:hi rend="lateinschr">H
+            Schenker</tei:hi></tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1933-01-25">25. 1. 33</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline">
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#printed"/>From:<tei:handShift new="#stamp"/>Dr.
+              HEINRICH SCHENKER</tei:addrLine>
+            <tei:addrLine>VIENNA III, Keilgasse 8</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied>
+              <tei:handShift new="#HS"/>Prof. O. E. Deutsch</tei:addrLine>
+            <tei:addrLine rend="indent-20">Vienna II</tei:addrLine>
+            <tei:addrLine rend="indent-20">Böcklinstraße 26</tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:lb/>
+        <tei:salute><tei:handShift new="#HS"/>My dear Prof. <tei:rs type="person"
+            key="entity-000164">Deutsch</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"
+          /></tei:salute>
+      </tei:opener>
+
+      <tei:p>The Scherzo proceeded rather as if it belonged. But the Rondo: had <tei:rs
+          type="person" key="entity-000808">Schumann</tei:rs> heard this Englishman’s<tei:ptr
+          corresp="#r0001-fn02" type="footnote"/> piece, only then would he have understood – by
+        reverse reasoning – what he called “heavenly length”, especially in <tei:rs type="person"
+          key="entity-000803">Schubert</tei:rs>ian content technically; that is to say, such a
+        content can fit into a symphonic context <tei:hi rend="underline">only by being
+          long</tei:hi>! I shall <tei:milestone unit="folio" n="recto"/> clarify this when we next
+        see each other.</tei:p>
+
+      <tei:p><tei:rs type="person" key="entity-000420">Kalmus</tei:rs> has not yet made a decision.
+        Perhaps he was thinking of the excessive 20% to the <tei:rs type="organization"
+          key="entity-002430">Society of the Friends of Music</tei:rs>?<tei:ptr
+          corresp="#r0001-fn03" type="footnote"/></tei:p>
+
+      <tei:closer>
+        <tei:salute>To the two of you, best wishes</tei:salute>
+        <tei:salute>from the two of us,</tei:salute>
+        <tei:salute rend="indent-80">Your</tei:salute>
+        <tei:signed rend="indent-50">
+          <tei:rs key="entity-000632" type="person">H. Schenker</tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1933-01-25">January 25, 1933</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

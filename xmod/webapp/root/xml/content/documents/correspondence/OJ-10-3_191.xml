@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3251" sdoID="OJ-10-3_191">OJ 10/3, [191]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamped</tei:handNote>
+      <tei:handNote xml:id="TPoed" scope="major">Otto Erich Deutsch typist</tei:handNote>
+      <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-19" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Typewritten postcard from Deutsch to Schenker, dated May 19, 1933</dc:title>
+
+      <dcterms:created>1933-05-19T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-08-24</dcterms:dateSubmitted>
+      <dc:description>Deutsch has discovered a fourth arrangement [of five] by Brahms of a Schubert
+        song with orchestral accompaniment. He is writing a lot for newspapers, which he enjoys
+        though it diverts him from more important work.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>Absender: <tei:handShift new="#stamp"/>Prof.
+            O. E. DEUTSCH</tei:addrLine>
+          <tei:addrLine>Wien II. Böcklinstrasse 26</tei:addrLine>
+          <tei:addrLine>Telefon-Nummer R 45–6–72</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied>
+            <tei:handShift new="#TPoed"/>Herrn Dr. Heinrich Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-40">Keilgasse 8</tei:addrLine>
+          <tei:addrLine rend="indent-60">Wien III.</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-40"><tei:handShift new="#TPoed"/>Wien, <tei:date
+            when="1933-05-19">19. Mai 33</tei:date></tei:dateline>
+        <tei:salute>Lieber <tei:rs type="person" key="entity-000632">Verehrter</tei:rs>!<tei:note
+            xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this postcard is not
+            recorded in Schenker’s diary.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first>">Ich wollte Ihnen gestern noch berichten, dass ich eine verschollen
+        geglaubte und ungedruckte Bearbeitung von <tei:rs type="person" key="entity-000094"
+          >Brahms</tei:rs> nach <tei:rs type="person" key="entity-000803">Schubert</tei:rs> wieder
+        gefunden habe: das Lied „<tei:title>Gruppe aus dem Tartarus</tei:title>“ mit
+        Orchesterbegleitung versehen.<tei:note xml:id="r0001-fn02" type="editorial" place="foot"
+          >This arrangement, for large orchestra, was first published in Vienna in 1937.</tei:note>
+        In <tei:rs type="place" key="entity-002463">London</tei:rs> ist nämlich soeben ein Heft mit
+        drei Liedern dieser Art (<tei:title>Memnon</tei:title>, <tei:title>Geheimes</tei:title>,
+          <tei:title>An Schwager Kronos</tei:title>) erschienen, deren Autographe früher bei <tei:rs
+          type="person" key="entity-003700">Heyer</tei:rs> waren. Nun fehlt von fünfen nur noch der
+          „<tei:title>Greisengesang</tei:title>“.<tei:note xml:id="r0001-fn03" type="editorial"
+          place="foot">All five Schubert arrangements are published in <tei:bibl><tei:title
+              level="m">Johannes Brahms: Neue Ausgabe sämtlicher Werke</tei:title>, Series ix, vol.
+            4 (Munich: Henle, 2022)</tei:bibl>.</tei:note> (1862, alle für Stockhausen<tei:note
+          xml:id="r0001-fn04" type="editorial" place="foot">Julius Stockhausen (1826–1906), German
+          baritone. In 1862, the year in which these arrangements were made, he was appointed
+          conductor of the Hamburg Philharmonic, a post to which Brahms had also applied.</tei:note>
+        gesetzt.) </tei:p>
+
+      <tei:p>Dann wollte ich auch zu Ihrer Orientierung noch sagen, dass ich jetzt mehr als je für
+        Zeitungen schreiben muss, was mir oft Spass macht (denn ich habe immer gute Themen), aber
+        mich stark abhält von wichtigeren Arbeiten. </tei:p>
+
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Herzlichst ergeben Ihr</tei:salute>
+        <tei:signed rend="indent-90"><tei:handShift new="#OED"/><tei:rs type="person"
+            key="entity-000164">O E Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p><tei:note type="editorial" place="inline">in upper right corner</tei:note>
+          <tei:handShift new="#OED"/><tei:hi rend="underline">NB.</tei:hi>
+          <tei:title>Kronos</tei:title> und <tei:title>Tartarus</tei:title> wurden seit ca. 1882 in
+          Wien auch für Männerchor unisono mit Orchester aufgeführt, von Ernst Frank<tei:note
+            xml:id="r0001-fn05" type="editorial" place="foot">Ernst Frank (1847–1889), German
+            conductor and composer. In the 1870s he worked as choral conductor at the Vienna Court
+            Opera.</tei:note> zuerst, der diese Einrichtung vielleicht (mit Zustimmung des Meisters)
+          selbst gemacht hat. </tei:p>
+      </tei:postscript>
+
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>From: <tei:handShift new="#stamp"/>Prof. O.
+            E. DEUTSCH</tei:addrLine>
+          <tei:addrLine>Vienna II, Böcklinstrasse 26</tei:addrLine>
+          <tei:addrLine>Telephone number R 45–6–72</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied>
+            <tei:handShift new="#TPoed"/>Dr. Heinrich Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-40">Keilgasse 8</tei:addrLine>
+          <tei:addrLine rend="indent-60">Vienna III</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-40"><tei:handShift new="#TPoed"/>Vienna, <tei:date
+            when="1933-05-19">May 19, 1933</tei:date></tei:dateline>
+        <tei:salute>Dear revered <tei:rs type="person" key="entity-000632">friend</tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first>">I wanted to report to you yesterday that I have rediscovered an
+        unpublished arrangement by <tei:rs type="person" key="entity-000094">Brahms</tei:rs> of a
+        work by <tei:rs type="person" key="entity-000803">Schubert</tei:rs>, which was believed to
+        have been lost: the song <tei:title level="m">Gruppe aus dem Tartarus</tei:title>, with
+        orchestral accompaniment.<tei:ptr corresp="#r0001-fn02" type="footnote"/> In <tei:rs
+          type="place" key="entity-002463">London</tei:rs>, a volume with three songs in this
+        arrangement (<tei:title level="m">Memnon</tei:title>, <tei:title level="m"
+          >Geheimes</tei:title>, <tei:title level="m">An Schwager Kronos</tei:title>), whose
+        autographs were previously owned by <tei:rs type="person" key="entity-003700"
+        >Heyer</tei:rs>, has in fact just been published; now all that remains of the five such
+        works is <tei:title level="m">Greisengesang</tei:title>.<tei:ptr corresp="#r0001-fn03"
+          type="footnote"/> (All the settings were made in 1862, for Stockhausen.<tei:ptr
+          corresp="#r0001-fn04" type="footnote"/>) </tei:p>
+
+      <tei:p>And then I also wanted to tell you, for your guidance, that I must now write more than
+        ever for newspapers; I often enjoy this (for I always have good topics), but it seriously
+        prevents me for doing more important work.</tei:p>
+
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Most cordially, your devoted</tei:salute>
+        <tei:signed rend="indent-90"><tei:handShift new="#OED"/><tei:rs type="person"
+            key="entity-000164">O E Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p><tei:note type="editorial" place="inline">in upper right corner</tei:note>
+          <tei:handShift new="#OED"/><tei:hi rend="underline">NB.</tei:hi>
+          <tei:title level="m">Kronos</tei:title> und <tei:title level="m">Tartarus</tei:title> have
+          been performed in Vienna since around 1882 for unison male choir with orchestra, initially
+          by Ernst Frank,<tei:ptr corresp="#r0001-fn05" type="footnote"/> who probably made this
+          arrangement himself (with the master’s approval). </tei:p>
+      </tei:postscript>
+
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3193" sdoID="OJ-10-3_162">OJ 10/3, [162]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="TPhd" scope="major">Hanna Deutsch typist</tei:handNote>
+      <tei:handNote xml:id="HD" scope="minor">Hanna Deutsch's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-19" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008379">DeutschH ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Typewritten postcard from Hanna Deutsch to Schenker, dated February 5,
+        1932</dc:title>
+
+      <dcterms:created>1932-02-05T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-08-03</dcterms:dateSubmitted>
+      <dc:description>Otto Erich Deutsch is unable to write at length now, but he will get in touch
+        with Schenker next week.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000163">DeutschH</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:address>
+          <tei:addrLine>Absender: <tei:note type="editorial" place="inline"
+            >blank</tei:note></tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied> Herrn Dr. H.
+            Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-40">Keilgasse 8</tei:addrLine>
+          <tei:addrLine rend="indent-40"><tei:hi rend="sperr underline">WIEN
+            III.</tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-50"><tei:handShift new="#TPhd"
+            /><tei:placeName>Wien</tei:placeName>, den <tei:date when="1932-02-05">5. Feber
+            1932</tei:date>.</tei:dateline>
+        <tei:salute>Lieber Herr <tei:rs type="person" key="entity-000632"
+            >Professor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt
+            of this postcard is recorded in Schenker’s diary for February 6, 1932: “Von Hanna
+            Deutsch (K.): kündigt einen Brief ihres Gatten an.” (“From Hanna Deutsch (postcard): she
+            announces a letter from her husband.”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Mein <tei:rs type="person" key="entity-000164">Mann</tei:rs> hat durch die
+        verfrühte Rückkehr des Herrn <tei:rs type="person" key="entity-000380">v. H.</tei:rs>, der
+        ja schon <tei:date when="1932-02-01">Montag</tei:date> wieder in Wien ist, noch so viel zu
+        tun, dass er jetzt unmöglich zu einem längeren Brief an Sie kommt. Er wird aber sicher in
+        der nächsten Woche von sich hören lassen, und begrüsst Sie und Ihre liebe <tei:rs
+          type="person" key="entity-000771">Frau Gemahlin</tei:rs> inzwischen <tei:add
+          place="interlinear-above">mit</tei:add> mir auf das Beste. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Ihre <tei:handShift new="#HD"/>ergebene</tei:salute>
+        <tei:signed rend="indent-60"><tei:handShift new="#HD"/>
+          <tei:rs key="entity-000163" type="person"><tei:hi rend="underline">Hanna
+            Deutsch</tei:hi></tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:address>
+          <tei:addrLine>From: <tei:note type="editorial" place="inline"
+            >blank</tei:note></tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied> Dr. H.
+            Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-40">Keilgasse 8</tei:addrLine>
+          <tei:addrLine rend="indent-40"><tei:hi rend="sperr underline">VIENNA
+            III</tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-50"><tei:handShift new="#TPhd"
+            /><tei:placeName>Vienna</tei:placeName>, <tei:date when="1932-02-05">February 5,
+            1932</tei:date></tei:dateline>
+        <tei:salute>Dear <tei:rs type="person" key="entity-000632">Professor</tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">As a result of the early return of Mr. <tei:rs type="person"
+          key="entity-000380">Hoboken</tei:rs>, who has in fact been in Vienna since <tei:date
+          when="1932-02-01">Monday</tei:date>, my <tei:rs type="person" key="entity-000164"
+          >husband</tei:rs> has had so much to do that he will not get around to writing a long
+        letter to you now. You will certainly hear from him next week; and, <tei:add
+          place="interlinear-above">with</tei:add> me, he sends his best wishes in the meantime to
+        you and your dear <tei:rs type="person" key="entity-000771">wife</tei:rs>.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Your <tei:handShift new="#HD"/>devoted</tei:salute>
+        <tei:signed><tei:rs key="entity-000163" type="person"><tei:hi rend="underline">Hanna
+              Deutsch</tei:hi></tei:rs></tei:signed>
+      </tei:closer>
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

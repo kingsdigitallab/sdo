@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3292" sdoID="OJ-10-3_216">OJ 10/3, [216]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="unk" scope="minor">unknown hand</tei:handNote>
+      <tei:handNote xml:id="OED" scope="major">Otto Erich Deutsch's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-19" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture
+        postcard</tei:rs>
+
+      <dc:title>Handwritten picture postcard from Deutsch to Schenker, dated August 21,
+        1934</dc:title>
+
+      <dcterms:created>1934-08-21T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-09-14</dcterms:dateSubmitted>
+      <dc:description>Deutsch recommends the place he is staying in Aigen, and also a hotel in
+        Salzburg. Hoboken will be in Salzburg at the beginning of September.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:note type="editorial" place="inline">picture: 3-storey house with garden, captioned:
+          “ERHOLUNGSHEIM DES R. K. T. V. SÜDOSTSEITE”</tei:note><tei:lb/>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/><tei:del rend="overstrike">Erholungsheim des
+              Reichsverbandes</tei:del></tei:addrLine>
+          <tei:addrLine><tei:del rend="overstrike">akad. Kriegsteilnehmer</tei:del></tei:addrLine>
+          <tei:addrLine>Aigen bei Salzburg</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied>
+            <tei:handShift new="#OED"/>Herrn Dr. Heinrich Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-40">Böckstein</tei:addrLine>
+          <tei:addrLine rend="indent-40">bei Gastein</tei:addrLine>
+          <tei:addrLine>Kurhaus</tei:addrLine>
+        </tei:address>
+        <tei:dateline><tei:handShift new="#OED"
+            /><tei:placeName>Doktorschlößl</tei:placeName>,<tei:date when="1934-08-21">21. 8.
+            34</tei:date></tei:dateline><tei:lb/>
+        <tei:salute>Lieber <tei:rs type="person" key="entity-000632">Verehrter</tei:rs>!<tei:note
+            xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this postcard is recorded
+            in Schenker’s diary for August 22, 1934: “Von Deutsch (Ansichtsk.): Gruß aus Aigen,
+            empfiehlt die Pension, bleibt bis 31. d.” (“From Deutsch (picture postcard): greetings
+            from Aigen, he recommends the guesthouse, is staying until the 31st of the
+            month”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Vielen Dank für beide Karten.<tei:note xml:id="r0001-fn02" type="editorial"
+          place="foot">Between the receipt of Deutsch’s previous letter on September 7 and the
+          writing of this postcard, Schenker’s diary records the writing of only one postcard, on
+          August 18, “über die Begebenheiten während v. H.<tei:hi rend="supralinear">s</tei:hi>
+          Besuch” (“on the events during Hoboken’s visit”).</tei:note></tei:p>
+
+      <tei:p>Ich kann das D.-Schl. nur warm empfehlen. Liegt in Aigen an der Bahn Gastein-<tei:rs
+          type="place" key="entity-002578">Salzburg</tei:rs> (Personenzüge-Station). Mit ganzer oder
+        teilweise genossener Pension. Wohlfeil, gut, aufmerksam. – In <tei:rs type="place"
+          key="entity-002578">Salzburg</tei:rs> würde ich Hotel Stein bei der Staats (Haupt) brücke
+        empfehlen. – <tei:rs type="person" key="entity-000380">Hoboken</tei:rs> dürfte um den
+          <tei:date when="1934-09-01">1. 9.</tei:date> in <tei:rs type="place" key="entity-002578"
+          >Salzburg</tei:rs> wegen <tei:rs type="person" key="entity-000991">St. Zweig</tei:rs>
+        verweilen. Ich bleibe bis etwa <tei:date when="1934-08-31">31. 8.</tei:date> Schönste Grüße
+        an Ihre <tei:rs type="person" key="entity-000771">Frau</tei:rs> und Sie! </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">Ihr treu ergebener</tei:salute>
+        <tei:signed rend="indent-80"><tei:handShift new="#OED"/><tei:rs type="person"
+            key="entity-000164">O E Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:note type="editorial" place="inline">picture: 3-storey house with garden, captioned:
+          “CONVALESCENT HOME OF THE R. K. T. V. SOUTH-EAST FACE”</tei:note><tei:lb/>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/><tei:del rend="overstrike">Convalescent Home
+              of the Imperial Association</tei:del></tei:addrLine>
+          <tei:addrLine><tei:del rend="overstrike">of Academic War Veterans</tei:del></tei:addrLine>
+          <tei:addrLine>Aigen near Salzburg</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied>
+            <tei:handShift new="#OED"/>Dr. Heinrich Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-40">Böckstein</tei:addrLine>
+          <tei:addrLine rend="indent-40">near Gastein</tei:addrLine>
+          <tei:addrLine>Kurhaus</tei:addrLine>
+        </tei:address>
+        <tei:dateline><tei:handShift new="#OED"
+            /><tei:placeName>Doktorschlößl</tei:placeName>,<tei:date when="1934-08-21">August 21,
+            1934</tei:date></tei:dateline><tei:lb/>
+        <tei:salute>Dear revered <tei:rs type="person" key="entity-000632">friend</tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>Many thanks for your two postcards.<tei:ptr corresp="#r0001-fn02" type="footnote"
+        /></tei:p>
+
+      <tei:p>I can only recommend the Doktorschlößel most warmly. It is located in Aigen, along the
+        railroad line between Gastein and <tei:rs type="place" key="entity-002578">Salzburg</tei:rs>
+        (local train station). With full or partial board. Inexpensive, good, attentive. – In
+          <tei:rs type="place" key="entity-002578">Salzburg</tei:rs> I would recommend the Hotel
+        Stein near the Staatsbrücke (main bridge). – <tei:rs type="person" key="entity-000380"
+          >Hoboken</tei:rs> is supposed to be in <tei:rs type="place" key="entity-002578"
+          >Salzburg</tei:rs> around the <tei:date when="1934-09-01">1st of September</tei:date>, on
+        account of <tei:rs type="person" key="entity-000991">Stefan Zweig</tei:rs>. I shall stay
+        until about the <tei:date when="1934-08-31">31st of August</tei:date>. Best greetings to
+        your <tei:rs type="person" key="entity-000771">wife</tei:rs>, and to you!</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">Your faithfully devoted</tei:salute>
+        <tei:signed rend="indent-80"><tei:handShift new="#OED"/><tei:rs type="person"
+            key="entity-000164">O. E. Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
