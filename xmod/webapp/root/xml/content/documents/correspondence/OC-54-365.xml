@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3227" sdoID="OC-54-365">OC 54/365</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HD" scope="major">Hanna Deutsch's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-19" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008379">DeutschH ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Hanna Deutsch to Schenker, dated April 22, 1932</dc:title>
+
+      <dcterms:created>1932-04-22T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-08-03</dcterms:dateSubmitted>
+      <dc:description>Deutsch may be late to his rendezvous with Schenker on Tuesday, April
+        26.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000163">DeutschH</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:address>
+          <tei:addrLine>Absender: <tei:handShift new="#HD"/>Deutsch II. Böcklinstr. 26 </tei:addrLine>
+
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied> Herrn Dr. Heinrich
+            Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-40">Keilgasse 8</tei:addrLine>
+          <tei:addrLine rend="indent-50">Wien III</tei:addrLine>
+        </tei:address>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-50"><tei:handShift new="#HD"
+          /><tei:placeName>Wien</tei:placeName>, <tei:date when="1932-04-22">22. IV.
+          1932</tei:date>.</tei:dateline>
+        <tei:salute>Lieber verehrter Herr <tei:rs type="person" key="entity-000632"
+            >Professor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt
+            of this postcard is recorded in Schenker’s diary for April 12, 1932: “Von Deutsch (K):
+            kann Dienstag erst um ¼6<tei:hi rend="supralinear">h</tei:hi> kommen.” (“From Deutsch
+            (postcard): he cannot come before 5:15 on Tuesday.”). </tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Mein <tei:rs type="person" key="entity-000164">Mann</tei:rs> muss
+          <tei:date when="1932-04-26">Dienstag</tei:date> Nachmittag zu einer Pressekonferenz und
+        bittet Sie deshalb, sich etwas zu gedulden, wenn er nicht um 5 Uhr schon da sein
+          kann;<tei:note xml:id="r0001-fn02" type="editorial" place="foot">See Deutsch’s letter of
+          April 20 (<tei:ref type="correspondence" cRef="OC-54-364">OC 54/364</tei:ref>) for the
+          initial arrangement of this meeting at the Café Aspang. Schenker’s diary confirms this in
+          a postcard to Deutsch written the following day, specifying a time of 4:30 (not 5
+          o’clock).</tei:note> er kommt aber zuverlässig um ¼6<tei:hi rend="supralinear">h</tei:hi>
+        etwa hin.<tei:note xml:id="r0001-fn03" type="editorial" place="foot">The meeting is recorded
+          in Schenker’s diary for April 26, 1932: “Jause im Café Aspang: Prof. Deutsch (¼6–8<tei:hi
+            rend="supralinear">h</tei:hi>!): über den Verlag des Urlinie-Heftes;
+          Urlinie-Handschriften-Klasse? Klassisch – romantisch bei Schubert?” (“Afternoon snack at
+          the Café Aspang: Prof. Deutsch (5:15 to 8 o’clock!): concerning the publisher of the
+          Urlinie volume. A class in <tei:supplied reason="clarity">preparing</tei:supplied> Urlinie
+          manuscripts? Classical–Romantic in Schubert?”).</tei:note></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">Mit vielen Grüssen von uns Beiden</tei:salute>
+        <tei:salute rend="indent-50">Ihre</tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:rs key="entity-000163" type="person"><tei:hi rend="underline">Hanna
+            Deutsch</tei:hi></tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:address>
+          <tei:addrLine>From: <tei:handShift new="#HD"/>Deutsch, <tei:supplied reason="identity"
+              >Vienna</tei:supplied> II, Böcklinstraße 26 </tei:addrLine>
+
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied> Dr. Heinrich
+            Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-40">Keilgasse 8</tei:addrLine>
+          <tei:addrLine rend="indent-50">Vienna III</tei:addrLine>
+        </tei:address>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-50"><tei:handShift new="#HD"
+            /><tei:placeName>Vienna</tei:placeName>, <tei:date when="1932-04-22">April 22,
+            1932</tei:date></tei:dateline>
+        <tei:salute>Much revered <tei:rs type="person" key="entity-000632"
+            >Professor</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">My <tei:rs type="person" key="entity-000164">husband</tei:rs> must go to a
+        press conference on <tei:date when="1932-04-26">Tuesday</tei:date> afternoon and therefore
+        asks you to be patient if he is not there on the stroke of 5 o’clock.<tei:ptr
+          corresp="#r0001-fn02" type="footnote"/> You can count on his arriving by about
+          5.15.<tei:ptr corresp="#r0001-fn03" type="footnote"/></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">With best greetings from us both,</tei:salute>
+        <tei:salute rend="indent-50">Your</tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:rs key="entity-000163" type="person"><tei:hi rend="underline">Hanna
+            Deutsch</tei:hi></tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
