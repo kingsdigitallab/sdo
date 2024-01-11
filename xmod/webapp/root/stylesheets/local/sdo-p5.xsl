@@ -1737,12 +1737,23 @@
 
  <xsl:template match="tei:table">
   <table>
+   <!--  
    <xsl:if test="starts-with(ancestor::tei:div/@type, 'trans')">
     <xsl:attribute name="class">tableInSource</xsl:attribute>
    </xsl:if>
    <xsl:if test="starts-with(ancestor::tei:TEI/@xml:id, 'entity')">
     <xsl:attribute name="class">tableInProfile</xsl:attribute>
    </xsl:if>
+    -->
+   <!-- PC: 11 Jan 2024, change to deal with instances like OC-54-357-358 -->
+   <xsl:choose>
+    <xsl:when test="starts-with(ancestor::tei:TEI/@xml:id, 'entity')">
+     <xsl:attribute name="class">tableInProfile</xsl:attribute>
+    </xsl:when>
+    <xsl:otherwise>
+     <xsl:attribute name="class">tableInSource</xsl:attribute>
+    </xsl:otherwise>
+   </xsl:choose>
    <xsl:apply-templates/>
   </table>
  </xsl:template>
