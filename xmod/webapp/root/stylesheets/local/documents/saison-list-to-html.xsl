@@ -25,8 +25,8 @@
     
     <p>To read the entries for a saison in chronologial order, use the starting points listed below:</p>   
     <ul>
-      <li>Saison 1911/12 - <a href="documents/lessonbooks/OC-3-1_1911/r0001.html">Vrieslander: lesson: Jan 15, 1912</a></li>
-      <li>Saison 1912/13 - <a href="documents/lessonbooks/OC-3-1_1912/r0001.html">Stirling: lesson: Oct 1, 1912</a></li>
+      <li>Saison 1911/12 - <a href="OC-3-1_1911/r0001.html">Vrieslander: lesson: Jan 15, 1912</a></li>
+      <li>Saison 1912/13 - <a href="/OC-3-1_1912/r0001.html">Stirling: lesson: Oct 1, 1912</a></li>
       <li>Saison 1913/14 - <a href="documents/lessonbooks/OC-3-2_1913/r0001.html">Elias: lesson: Oct 1, 1913</a></li>
       <li>Saison 1914/15 - <a href="documents/lessonbooks/OC-3-3_1914/r0003.html">Elias: lesson: Oct 8, 1914</a></li>
       <li>Saison 1915/16 - <a href="documents/lessonbooks/OC-3-3_1915/r0001.html">Brünauer: lessons: Oct 1915</a></li>
