@@ -6,11 +6,12 @@
  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
  <sdo:collectionDesc>
   <sdo:source>
-   <sdo:correspondence mfID="3359" sdoID="OJ-14-5_1">OJ 14/5, [1]</sdo:correspondence>
+   <sdo:correspondence mfID="3360" sdoID="OJ-14-5_2">OJ 14/5, [2]</sdo:correspondence>
   </sdo:source>
 
   <tei:handNotes>
-   <tei:handNote xml:id="MS" scope="sole">Moriz Schenker's hand</tei:handNote>
+   <tei:handNote xml:id="MS" scope="major">Moriz Schenker's hand</tei:handNote>
+   <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
   </tei:handNotes>
 
 
@@ -38,14 +39,14 @@
    <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
 
 
-   <dc:title>Handwritten letter from Moriz Schenker to Julia Schenker, dated February 29,
-    1912</dc:title>
+   <dc:title>Handwritten letter from Moriz Schenker to Julia Schenker, dated January 10,
+    1914</dc:title>
 
-   <dcterms:created>1912-02-29T12:00:00Z</dcterms:created>
+   <dcterms:created>1914-01-10T12:00:00Z</dcterms:created>
    <dcterms:dateSubmitted>2024-02-09</dcterms:dateSubmitted>
-   <dc:description>Moriz Schenker reports that he has established a monthly payment of 50 Kronen to
-    his mother Julia Schenker via Franz Einschenk; he is unable to visit her before summer, and
-    discusses family arrangements for the summer vacation.</dc:description>
+   <dc:description>Moriz Schenker apologizes for not visiting her while in Vienna, and hopes to do
+    so in March; he has arranged for 200 Kronen per month to come to her for her upkeep through
+    Franz Einschek; he reports how his family are; he has heard from Sophie.</dc:description>
    <dc:subject/>
 
 
@@ -56,13 +57,18 @@
   <tei:div type="transcription">
 
    <tei:opener>
-    <tei:dateline rend="indent-40">Bucarest <tei:date when="1912-02-29">29/2 1912</tei:date>
+    <tei:address>
+     <tei:addrLine><tei:handShift new="#printed"/>Banque de Crédit-Roumain</tei:addrLine>
+     <tei:addrLine>Société Anonyme</tei:addrLine>
+     <tei:addrLine>Bucarest</tei:addrLine>
+     <tei:addrLine>Succursales: Braila, Gablatz, Tassy, Constantza</tei:addrLine>
+     <tei:addrLine>Telegrammes Bancredit</tei:addrLine>
+    </tei:address>
+    
+    <tei:dateline rend="indent-40"><tei:handShift new="#MS"/>Bucarest <tei:date when="1914-01-10">10/1 1914</tei:date>
     </tei:dateline>
     <tei:salute rend="indent-10">Teure <tei:rs type="person" key="entity-entity-000773"
-      >Mutter</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Heinrich’s diary
-      contains no reference to this letter. — Moriz uses emdashes at various points in this letter.
-      Where he then embarks on a new topic, this edition has inserted a
-     paragraph-break.</tei:note></tei:salute>
+      >Mutter</tei:rs>![1]</tei:salute>
    </tei:opener>
 
    <tei:p>Durch den l. <tei:rs type="person" key="entity-000192">Onkel Einschenk</tei:rs><tei:note
