@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3192" sdoID="WSLB-Hds-191-573">WSLB-Hds 191.573</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-19" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture
+        postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Schenker to Deutsch, dated April 23, 1931</dc:title>
+
+      <dcterms:created>1931-04-23T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-07-26</dcterms:dateSubmitted>
+      <dc:description>Schenker explains to Deutsch how the text (as yet unwritten) of the Schubert
+        song fragment, D. 555, should fit into his completion. He has heard that Ludwig Karpath has
+        referred to him as Austria’s best music theorist.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000164">DeutschOE</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline">
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:note type="editorial" place="inline">picture: monastery with river, captioned:“Melk,
+          Niederösterr.”</tei:note><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">Absender:</tei:supplied><tei:handShift
+                new="#HS"/><tei:hi rend="lateinschr">Schenker</tei:hi>, III, Keilgasse
+              8</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied> Prof. <tei:hi
+                rend="lateinschr">O. E. Deutsch</tei:hi></tei:addrLine>
+            <tei:addrLine rend="indent-20">Wien, II</tei:addrLine>
+            <tei:addrLine rend="indent-20">Böcklinstr. 26</tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:lb/>
+        <tei:salute><tei:handShift new="#HS"/>Mein lieber Herr Prof. <tei:rs type="person"
+            key="entity-000164">Deutsch</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial"
+            place="foot">The writing of this letter is not recorded in Schenker’s
+          diary.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Ich weiß ja nicht, was Sie mit Ihrem <tei:rs type="person" key="entity-000803"
+          >Schubert</tei:rs>-Lied<tei:note xml:id="r0001-fn02" type="editorial" place="foot">An
+          incomplete, untexted song by Schubert, D. 555, which Deutsch had identified and was keen
+          to promote: cf. Schenker’s letter of April 13, 1931, <tei:ref type="correspondence"
+            cRef="WSLB-Hds-191-572">WSLB-Hds 191.572</tei:ref>, Deutsch’s reaction of April 21,
+            <tei:ref type="correspondence" cRef="OJ-10-3_146">OJ 10/3, [146]</tei:ref>, and
+          Schenker’s reaction of April 22 in footnote 1 of the latter. Deutsch apologized to
+          Schenker on April 25 (diary).</tei:note> vorhaben, sollten Sie aber einen Dichter einladen
+        u. sollte gerade meine <tei:del rend="overstrike">pr</tei:del>
+        <tei:hi rend="italic">secunda volta</tei:hi> (ernstlich) in Frage kommen,<tei:note
+          xml:id="r0001-fn03" type="editorial" place="foot">Schenker composed a second ending to the
+          song and enclosed it in his letter to Deutsch of April 13, 1931, <tei:ref
+            type="correspondence" cRef="WSLB-Hds-191-572">WSLB-Hds 191.572</tei:ref>.</tei:note> so
+        wollen Sie ihm ausdrücklich sagen, daß sie die gleiche Silbenzahl wie die <tei:hi
+          rend="italic">prima volta</tei:hi> voraussetzt, da die <tei:term>Dehnung</tei:term> nur
+        eine rein musikalische <tei:add place="interlinear-above">ist</tei:add> (bei gleichem
+        Versmaß <tei:add place="interlinear-above">längere Athemzüge</tei:add> usw.), wie sie
+          <tei:add place="interlinear-above">eben</tei:add> schlußüblich ist. – Seitdem ich durch
+          <tei:rs type="person" key="entity-000951">Dr. Weisse</tei:rs>, der nun nach <tei:rs
+          type="place" key="entity-002510">Amerika</tei:rs> geht, gestern erfahren habe, daß mich
+        unser lieber <tei:rs type="person" key="entity-000424">Hofrat L. <tei:subst>
+            <tei:del rend="overstrike">K.</tei:del>
+            <tei:add place="interlinear-above">(Karp…)</tei:add>
+          </tei:subst></tei:rs> auf einem öffentlichen Schriftstück <tei:add
+          place="interlinear-above">als</tei:add> „den besten <tei:milestone unit="folio" n="recto"
+        /> Theoretiker <tei:rs type="place" key="entity-002506">Österreich</tei:rs>s“ bezeichnet
+        hat, bin ich genug beglückt (<tei:rs type="person" key="entity-000268">Furtwängler</tei:rs>
+        schrieb freilich noch anders, aber für <tei:rs type="person" key="entity-000424">L.
+          K.</tei:rs> ist das schon sehr, sehr viel.)<tei:note xml:id="r0001-fn04" type="editorial"
+          place="foot">Ludwig Karpath was a pupil of Schenker’s from 1899 to c.1907, and a strong
+          supporter of him on several later occasions.</tei:note></tei:p>
+
+      <tei:closer>
+        <tei:salute>Mit besten Grüßen Ihnen Beiden</tei:salute>
+        <tei:salute rend="indent-80">Ihr</tei:salute>
+        <tei:signed rend="indent-40">
+          <tei:rs key="entity-000632" type="person"><tei:hi rend="lateinschr">H
+            Schenker</tei:hi></tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1931-04-23">23. 4. 31</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline">
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:note type="editorial" place="inline">picture: monastery with river, captioned:“Melk,
+          Lower Austria”</tei:note><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">From:</tei:supplied><tei:handShift
+                new="#HS"/>Schenker, <tei:supplied reason="identity">Vienna</tei:supplied> III,
+              Keilgasse 8</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied> Prof. O. E.
+              Deutsch</tei:addrLine>
+            <tei:addrLine rend="indent-20">Böcklinstraße 26</tei:addrLine>
+            <tei:addrLine rend="indent-20">Vienna II</tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:lb/>
+        <tei:salute><tei:handShift new="#HS"/>My dear Prof. <tei:rs type="person"
+            key="entity-000164">Deutsch</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"
+          /></tei:salute>
+      </tei:opener>
+
+      <tei:p>I really do not know what you have in mind with your <tei:rs type="person"
+          key="entity-000803">Schubert</tei:rs> song;<tei:ptr corresp="#r0001-fn02" type="footnote"
+        /> but if you are to invite a poet, and if my very own <tei:hi rend="italic">secunda
+          volta</tei:hi> is (seriously) to be considered,<tei:ptr corresp="#r0001-fn03"
+          type="footnote"/> then please tell him explicitly that it requires the exact same number
+        of syllables as the <tei:hi rend="italic">prima volta</tei:hi>, since the
+          <tei:term>expansion</tei:term>
+        <tei:add place="interlinear-above">is</tei:add> only a purely musical
+          <tei:term>expansion</tei:term> (<tei:add place="interlinear-above">longer
+          breaths</tei:add> of air on the same quantity of text, etc.), as is <tei:add
+          place="interlinear-above">actually</tei:add> quite typical of endings. – Since I learned
+        from <tei:rs type="person" key="entity-000951">Dr. Weisse</tei:rs>, who is now going to
+          <tei:rs type="place" key="entity-002510">America</tei:rs>, that our dear <tei:rs
+          type="person" key="entity-000424">Court Councillor Ludwig Karpath</tei:rs> has described
+        me in an official communication <tei:add place="interlinear-above">as</tei:add>
+        <tei:milestone unit="folio" n="recto"/> “<tei:rs type="place" key="entity-002506"
+          >Austria</tei:rs>’s best music theorist,” I am sufficiently happy. (<tei:rs type="person"
+          key="entity-000268">Furtwängler</tei:rs> of course wrote differently, but for <tei:rs
+          type="person" key="entity-000424">L. K.</tei:rs> that is already a very great
+          deal.)<tei:ptr corresp="#r0001-fn04" type="footnote"/></tei:p>
+
+      <tei:closer>
+        <tei:salute>Best greetings to the two of you.</tei:salute>
+        <tei:salute rend="indent-80">Your</tei:salute>
+        <tei:signed rend="indent-40">
+          <tei:rs key="entity-000632" type="person">H. Schenker</tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1931-04-23">April 23, 1931</tei:date></tei:dateline>
+      </tei:closer>
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2903" sdoID="OJ-14-23_10">OJ 14/23, [10]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="AFS" scope="major">A. F. Seligmann's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2022</tei:resp>
+      <tei:resp>Translation, 2022</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2022</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-28" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002735">Seligmann ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Seligmann to Schenker, postmarked November 21,
+        1906</dc:title>
+
+      <dcterms:created>1906-11-21T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2022-11-22</dcterms:dateSubmitted>
+      <dc:description>Seligmann thanks Schenker for an act of kindness.</dc:description>
+      <dc:subject/>
+
+
+
+      <marcrel:correspondent key="entity-000819">Adalbert Franz Seligmann</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">Heinrich Schenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:lb/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+            >Korrespondenz-Karte.</tei:hi></tei:fw>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>An: <tei:handShift new="#AFS"/>Herrn D<tei:hi rend="supralinear"
+                >r</tei:hi> Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-50"><tei:handShift new="#printed"/>in <tei:handShift
+                new="#AFS"/>III Reisnerstrasse 38.</tei:addrLine>
+            <tei:addrLine rend="indent-50">Wien</tei:addrLine>
+            <tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| 9/4 WIEN <tei:gap reason="illegible"/> | 21. XI. 06 – <tei:gap
+              reason="illegible"/> | * a * ||</tei:fw>
+          <tei:fw type="postmark">|| 3/3 WIEN 49 | 22. XI. 06 VIII | BESTELLT
+          ||</tei:fw><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:salute><tei:handShift new="#AFS"/>L. <tei:rs type="person" key="entity-000632"
+            >Fr.</tei:rs></tei:salute>
+      </tei:opener>
+
+      <tei:p>Herzlichen, schönsten Dank für Ihre Freundlichkeit. Ich habe zwar jetzt so viel zu
+        thun, dass ich nicht aus noch ein weiß, habe aber doch schon genascht und mich delektiert.
+        Nächstens mehr!</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">Nochmals besten Dank von</tei:salute>
+        <tei:salute rend="intend-50">Ihrem ergebenen </tei:salute>
+        <tei:signed rend="indent-70"><tei:rs type="person" key="entity-000819">Seligmann</tei:rs>
+        </tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:lb/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+            >Postcard</tei:hi></tei:fw>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>To: <tei:handShift new="#AFS"/>Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-50"><tei:handShift new="#printed"/>in <tei:handShift
+                new="#AFS"/>Reisnerstrasse 38</tei:addrLine>
+            <tei:addrLine rend="indent-50">Vienna III</tei:addrLine>
+            <tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| 9/4 VIENNA <tei:gap reason="illegible"/> | 21. XI. 06 –
+              <tei:gap reason="illegible"/> | * a * ||</tei:fw>
+          <tei:fw type="postmark">|| 3/3 VIENNA 49 | 22. XI. 06 VIII | DELIVERED
+          ||</tei:fw><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:salute><tei:handShift new="#AFS"/>Dear <tei:rs type="person" key="entity-000632"
+            >friend</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>Cordial, most grateful thanks for your kindness. I have, in fact, so much to do now
+        that I do not know where to begin. But I have already had a snack and enjoyed myself. More
+        next time!</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">Once again, best thanks from</tei:salute>
+        <tei:salute rend="intend-50">your devoted</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs type="person" key="entity-000819">Seligmann</tei:rs>
+        </tei:signed>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1255" sdoID="OJ-10-3_13">OJ 10/3, [13]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="TPunk" scope="major">unknown typist</tei:handNote>
+      <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="DB">
+      <tei:persName>David Bretherton</tei:persName>
+      <tei:resp>Transcription, 2014</tei:resp>
+      <tei:resp>Translation, 2014</tei:resp>
+      <tei:resp>XML Encoding, 2014</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2014-06-18" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Typewritten postcard from Otto Erich Deutsch to Schenker, dated August 5,
+        1920</dc:title>
+
+      <dcterms:created>1920-08-05T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2014-06-18</dcterms:dateSubmitted>
+      <dc:description>The photograph of Speyer's sketchleaves is still forthcoming. Deutsch has
+        discovered that a Dr. Wilhelm Kux possesses a further sketchleaf of the "Moonlight" Sonata,
+        and asks Schenker if he wants Deutsch to try secure a reproduction of it.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000163">DeutschH</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+      <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/>Postka<tei:supplied reason="covered"
+          >rte</tei:supplied></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>Absender: <tei:handShift new="#TPunk"/>Otto Erich Deutsch</tei:addrLine>
+            <tei:addrLine>Wien, II. Valeriestr. 26</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#printed"/>An <tei:handShift new="#TPunk"/>Dr. Heinr.
+              SCHENEKR</tei:addrLine>
+            <tei:addrLine rend="indent-10">Pension Wetterstein</tei:addrLine>
+            <tei:addrLine><tei:handShift new="#printed"/>in <tei:handShift new="#TPunk"
+                />derz<tei:supplied reason="clarity">ei</tei:supplied>t: Senfeld</tei:addrLine>
+            <tei:addrLine rend="indent-30">Tirol</tei:addrLine>
+          </tei:address>
+          <tei:lb/><tei:fw type="postmark">|| 1 <tei:gap reason="illegible" unit="chars"
+              extent="few"/> WIEN 11<tei:note type="editorial">?</tei:note> | 6. VIII. 20 IX | * 3e
+            * ||</tei:fw>
+        </tei:fw>
+        <tei:lb/><tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-55"><tei:rs key="entity-002484" type="place">Wien</tei:rs>, am
+            <tei:date when="1920-08-05">5. August 20</tei:date></tei:dateline>
+        <tei:salute rend="indent-10">Sehr geehrter Herr <tei:rs type="person" key="entity-000632"
+            >Doktor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
+            this postcard is recorded in Schenker's diary at OJ 3/1, p. 2266 (August 7, 1920): "Von
+            Otto Erich Deutsch (Br.): Speyer stimme zu; eine Skizze sei bei Direktor Kux." ("From
+            Otto Erich Deutsch (letter): Speyer agrees; Director Kux has a sketch.")</tei:note>
+        </tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Ich teile Ihnen mit, dass mir Herr <tei:rs key="entity-005466"
+          type="person">SPEYER</tei:rs> in <tei:rs key="entity-002643" type="place">London</tei:rs>
+        die Aufnahme seiner Skizzenblätter für die nächste Zeit in Aussicht gestellt hat, und dass,
+        wie ich aus einem Aufsatz von <tei:rs key="entity-000259" type="person">FRIMMEL</tei:rs> in
+        der <tei:add place="inline" hand="#OED">„</tei:add><tei:rs key="entity-003346"
+          type="journal"><tei:title>
+            <tei:subst>
+              <tei:del rend="overwritten" hand="#TPunk">o</tei:del>
+              <tei:add place="superimposed" hand="#OED">Ö</tei:add>
+            </tei:subst>sterreichischen Rundschau</tei:title></tei:rs><tei:add place="inline"
+          hand="#OED">“</tei:add> eben ersehe, <tei:rs key="entity-000562" type="person"
+          >MANDYCZEWSKI</tei:rs> vor einiger Zeit ein anderes Skizzenblatt zur <tei:rs
+          key="entity-001212" type="composition">Mondschein-Sonate</tei:rs> aus dem Besitze des
+        Herrn Dr. <tei:rs key="entity-000498" type="person">Wilhelm <tei:hi rend="underline"
+            >Kux</tei:hi></tei:rs><tei:note xml:id="r0001-fn02" type="editorial" place="foot"
+          >Wilhelm Kux (1864–1965): Austrian banker and philanthropist, collector of musical
+          autograph manuscripts and instruments.</tei:note> in <tei:rs key="entity-002484"
+          type="place">Wien</tei:rs> veröffentlicht oder besprochen hat. Bevor ich mich auch um die
+        Reproduktion dieses Blattes bemühe, bitte ich Sie, mir zu sagen ob Sie es kennen, und
+        aufgenommen wissen wollen.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">Mit besten Grüssen</tei:salute>
+        <tei:salute rend="indent-60">Ihr ergebener</tei:salute>
+        <tei:signed rend="indent-85"><tei:rs key="entity-000164" type="person"
+          >Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/>Postcard</tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>sender: <tei:handShift new="#TPunk"/>Otto Erich Deutsch</tei:addrLine>
+            <tei:addrLine>Vienna II, Valeriestrasse 26</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#printed"/>to <tei:handShift new="#TPunk"/>Dr.
+              Heinrich SCHENEKR</tei:addrLine>
+            <tei:addrLine rend="indent-10">Pension Wetterstein</tei:addrLine>
+            <tei:addrLine><tei:handShift new="#printed"/>in <tei:handShift new="#TPunk"/>presently:
+              Senfeld</tei:addrLine>
+            <tei:addrLine rend="indent-30">Tirol</tei:addrLine>
+          </tei:address>
+          <tei:lb/><tei:fw type="postmark">|| 1 <tei:gap reason="illegible" unit="chars"
+              extent="few"/> WIEN 11<tei:note type="editorial">?</tei:note> | 6. VIII. 20 IX | * 3e
+            * ||</tei:fw>
+        </tei:fw>
+        <tei:lb/><tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-55"><tei:rs key="entity-002484" type="place">Vienna</tei:rs>,
+            <tei:date when="1920-08-05">August 5, 1920 </tei:date></tei:dateline>
+        <tei:salute rend="indent-10">Very honored <tei:rs type="person" key="entity-000632"
+            >Doctor</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/>
+        </tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">I can inform you that Mr. <tei:rs key="entity-005466" type="person"
+          >SPEYER</tei:rs> of <tei:rs key="entity-002643" type="place">London</tei:rs> has promised
+        me the photographs of his sketchleaves in the near future. Additionally, I have just seen,
+        in an article by <tei:rs key="entity-000259" type="person">FRIMMEL</tei:rs> in the <tei:rs
+          key="entity-003346" type="journal"><tei:title level="j">Österreichische
+            Rundschau</tei:title></tei:rs>, that some time ago <tei:rs key="entity-000562"
+          type="person">MANDYCZEWSKI</tei:rs> published or spoke about another <tei:rs
+          key="entity-001212" type="composition">"Moonlight" Sonata</tei:rs> sketchleaf, in the
+        possession of Dr. <tei:rs key="entity-000498" type="person">Wilhelm <tei:hi rend="underline"
+            >Kux</tei:hi></tei:rs> in <tei:rs key="entity-002484" type="place"
+          >Vienna</tei:rs>.<tei:ptr corresp="#r0001-fn02" type="footnote"/> Before I try to get a
+        reproduction of this page too, I ask whether you know it, and want it included.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">With best wishes,</tei:salute>
+        <tei:salute rend="indent-60">Yours truly,</tei:salute>
+        <tei:signed rend="indent-85"><tei:rs key="entity-000164" type="person"
+          >Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

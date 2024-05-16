@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2734" sdoID="OC-44-45">OC 44/45</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HW" scope="major">Hans Wolf's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="unk" scope="minor">unknown hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2006, 2022</tei:resp>
+      <tei:resp>Translation, 2006, 2022</tei:resp>
+      <tei:resp>XML Encoding, 2022</tei:resp>
+    </tei:respStmt>
+
+
+    <tei:revisionDesc>
+      <tei:change when="2011-06-09" who="#IB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005843">WolfH ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008176">WolfH ~
+        JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="002751">Picture postcard</tei:rs>
+
+      <dc:title>Handwritten picture postcard from Hans Wolf to Schenker, dated August 28,
+        1934</dc:title>
+
+      <dcterms:created>1934-08-28T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2022-04-18</dcterms:dateSubmitted>
+      <dc:description>Wolf has read to the end of the C. P. E. Bach chapter on thoroughbass, and is
+        going to reread it now: it is "magnificent."</dc:description>
+      <dc:subject/>
+
+
+      <marcrel:correspondent key="entity-000973">Hans Wolf</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+      <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="envelope">
+          <tei:fw type="header" rend="center"><tei:handShift new="#printed"/>portrait, labeled:
+              “HIERONIM<tei:supplied reason="abbreviation">US</tei:supplied> HOLTZSCHVER ANNO
+              D<tei:supplied reason="contraction">OMI</tei:supplied>NI 1526 / ETATIS SVE. 57”
+            captioned below: “A. DÜRER Hieronimus Holtzschuher”</tei:fw><tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+          <tei:address>
+            <tei:addrLine>
+              <tei:handShift new="#HW"/>Abs<tei:supplied reason="abbreviation">ender</tei:supplied>:
+              Hans Wolf</tei:addrLine>
+            <tei:addrLine><tei:unclear reason="reading">Teilid</tei:unclear>igstraße
+              89</tei:addrLine>
+            <tei:addrLine><tei:note type="editorial" place="inline">a line deleted and
+                indecipherable</tei:note></tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied>An:</tei:supplied><tei:handShift new="#HW"/>Herrn Prof. Dr.
+                <tei:hi rend="lateinschr">Heinrich Schenker</tei:hi></tei:addrLine>
+            <tei:addrLine rend="indent-20">aus Wien</tei:addrLine>
+            <tei:addrLine><tei:subst>
+                <tei:del rend="overstrike"><tei:hi rend="lateinschr">Bad Gastein</tei:hi></tei:del>
+                <tei:add place="interlinear-above"><tei:handShift new="#unk"/>ztw Hamburg</tei:add>
+              </tei:subst></tei:addrLine>
+            <tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| HAMBURG | 28.8.34 9 | <tei:gap reason="illegible"/> ||</tei:fw><tei:lb/>
+          <tei:fw type="postmark">|| BAD <tei:supplied reason="faint">GASTEIN</tei:supplied> |
+              30.VIII.3<tei:supplied reason="overstamped">4</tei:supplied> | 50 ||</tei:fw>
+          <tei:lb/><tei:lb/>
+          <tei:note type="editorial" place="inline">stamp:"<tei:hi rend="underline"
+              >Unbekannt</tei:hi>! <tei:del rend="overstrike">Nicht behoben! / <tei:foreign
+                xml:lang="fre">Inconnu! Non reclamé</tei:foreign>! / Abgereist Adresse ungenügend. /
+                <tei:foreign xml:lang="fre">Parti! Adresse
+            insuffisante</tei:foreign>!</tei:del>"</tei:note>
+        </tei:fw>
+        <tei:salute>Sehr verehrter Herr Prf. <tei:rs type="person" key="entity-000632"
+            >Schenker</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt
+            of this picture postcard is not recorded in Schenker’s diary.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Meine Ferien verlaufen so <tei:note type="editorial" place="inline">indecipherable
+          word</tei:note>, wie ich es mir so recht gedacht habe. Mit dem <tei:rs type="person"
+          key="entity-000025">Ph. E. Bach</tei:rs><tei:note xml:id="r0001-fn02" type="editorial"
+          place="foot">Wolf has presumably spent his vacation reading a long chapter of <tei:bibl>
+            <tei:author>C. P. E. Bach</tei:author>’s <tei:title level="m">Versuch über die wahre Art
+              das Clavier zu spielen</tei:title> (Berlin, 1753, 1759, 1762)</tei:bibl>. $21 (“The
+          Five-four Chord” marks the end of chapter V, “Thoroughbass,” from which Wolf returns to
+          the beginning of that chapter, §1 (“Intervals and their Signatures”). Schenker owned the
+          one-volume edition by <tei:bibl><tei:editor>Gustav Schilling</tei:editor> (5th edn,
+            Berlin: Stage, 1856</tei:bibl>), which could well be what Wolf was reading.</tei:note>
+        bin ich bei §21 gelandet u. fange gleich nochmal bei §1 an, um es jetzt gründlich zu
+        studieren; es ist dies ein herrliches Werk u. ich glaube gesehen zu haben, daß die Ge- u.
+        Verbote zwischen <tei:term>strengem</tei:term> u. <tei:term>freiem Satz</tei:term> schweben
+        u. glaube auch jetzt den Grund der Reihenfolge der einzelnen großen Lehrgebiete klar zu
+        sehen. <tei:note xml:id="r0001-fn03" type="editorial" place="foot">Schenker inserts an
+          emdash and continues without paragraph-break.</tei:note></tei:p>
+
+      <tei:p>Ich wünsche Ihnen u. Ihrer verehrten <tei:rs type="person" key="entity-000771">Frau
+          Gemahlin</tei:rs> noch eine schöne Zeit u. eine volle Erholung. </tei:p>
+
+      <tei:closer>
+        <tei:salute>Ihr sehr ergebener</tei:salute>
+        <tei:signed><tei:rs type="person" key="entity-000973">Hans Wolf</tei:rs></tei:signed><tei:lb/><tei:lb/>
+        <tei:note type="editorial" place="inline">Postcard accreditation at bottom of <tei:hi
+            rend="italic">verso</tei:hi>: “F. A. Ackermanns Kunstverlag GmbH München /
+          Universal-Galerie Reihe 3(a) — (12 Gemälde von A. DÜRER)”</tei:note>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="envelope">
+          <tei:fw type="header" rend="center"><tei:handShift new="#printed"/>portrait, labeled:
+              “HIERONIM<tei:supplied reason="abbreviation">US</tei:supplied> HOLTZSCHVER ANNO
+              D<tei:supplied reason="contraction">OMI</tei:supplied>NI 1526 / ETATIS SVE. 57”
+            captioned below: “A. DÜRER Hieronimus Holtzschuher”</tei:fw><tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+          <tei:address>
+            <tei:addrLine>
+              <tei:handShift new="#HW"/>From:: Hans Wolf</tei:addrLine>
+            <tei:addrLine><tei:unclear reason="original_unclear">Teilid</tei:unclear>igstraße
+              89</tei:addrLine>
+            <tei:addrLine><tei:note type="editorial" place="inline">a line deleted and
+                indecipherable</tei:note></tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied>To:</tei:supplied><tei:handShift new="#HW"/>Prof. Heinrich
+              Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-20">of Vienna</tei:addrLine>
+            <tei:addrLine><tei:subst>
+                <tei:del rend="overstrike">Bad Gastein</tei:del>
+                <tei:add place="interlinear-above"><tei:handShift new="#unk"/>pro tem
+                  Hamburg</tei:add>
+              </tei:subst></tei:addrLine>
+            <tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| HAMBURG | 28.8.34 9 | <tei:gap reason="illegible"/> ||</tei:fw><tei:lb/>
+          <tei:fw type="postmark">|| BAD <tei:supplied reason="faint">GASTEIN</tei:supplied> |
+              30.VIII.3<tei:supplied reason="overstamped">4</tei:supplied> | 50 ||</tei:fw>
+          <tei:lb/><tei:lb/>
+          <tei:note type="editorial" place="inline">stamp:"<tei:hi rend="underline"
+            >Unknown</tei:hi>! <tei:del rend="overstrike">Unclaimed! / <tei:foreign xml:lang="fre"
+                >Inconnu! Non reclamé</tei:foreign>! / Gone away! Insufficient address! /
+                <tei:foreign xml:lang="fre">Parti! Adresse
+            insuffisante</tei:foreign>!</tei:del>"</tei:note>
+        </tei:fw>
+        <tei:salute>Greatly revered Professor <tei:rs type="person" key="entity-000632"
+            >Schenker</tei:rs>!<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>My vacation is passing <tei:note type="editorial" place="inline">indecipherable
+          word</tei:note> as I rightly imagined it would. With the <tei:rs type="person"
+          key="entity-000025">C. P. E. Bach</tei:rs>,<tei:ptr corresp="#r0001-fn02" type="footnote"
+        /> I have arrived at §21, and am starting all over again from §1 in order now to study it in
+        depth; this is a magnificent work, and I believe I have seen that the precepts and
+        prohibitions fluctuate between <tei:term>strict counterpoint</tei:term> and <tei:term>free
+          composition</tei:term>, and I believe also that I now see clearly the basis of the
+        sequence of the individual large fields of study.<tei:ptr corresp="#r0001-fn03"
+          type="footnote"/></tei:p>
+
+      <tei:p>I wish you and your <tei:rs type="person" key="entity-000771">wife</tei:rs> a happy
+        time and a complete rest.</tei:p>
+
+      <tei:closer>
+        <tei:salute>Your very devoted </tei:salute>
+        <tei:signed><tei:rs type="person" key="entity-000973">Hans Wolf</tei:rs></tei:signed><tei:lb/><tei:lb/>
+        <tei:note type="editorial" place="inline">Postcard accreditation at bottom of <tei:hi
+            rend="italic">verso</tei:hi>: “F. A. Ackermann’s Art Publishing House &amp; Co., Munich
+          / Universal Gallery Series 3(a) — (12 pictures by A. DÜRER)”</tei:note>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

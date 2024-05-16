@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3053" sdoID="OJ-10-3_94">OJ 10/3, [94]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="TPoed" scope="major">Otto Erich Deutsch typist</tei:handNote>
+      <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-19" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Typewritten postcard from Deutsch to Schenker, dated October 3, 1928</dc:title>
+
+      <dcterms:created>1928-10-03T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-02-24</dcterms:dateSubmitted>
+      <dc:description>Deutsch apologies for being late to his meeting with Schenker, because his
+        clock was running 10 minutes slow.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#printed"/>Absender: <tei:handShift new="#stamp"
+              />Prof. O. E. DEUTSCH</tei:addrLine>
+            <tei:addrLine>Wien II. Böcklinstrasse 26</tei:addrLine>
+            <tei:addrLine>Telefon-Nummer R 42-8-22</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied>
+              <tei:handShift new="#TPoed"/>Herrn Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-50"><tei:hi rend="underline"><tei:hi rend="sperr"
+                  >Wien</tei:hi> III.</tei:hi></tei:addrLine>
+            <tei:addrLine rend="indent-50">Keilgasse 8</tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:lb/>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-50"><tei:handShift new="#TPoed"/><tei:rs key="entity-002484"
+            type="place">Wien</tei:rs>, <tei:date when="1928-10-03">3. Oktober
+          1928</tei:date>.</tei:dateline>
+        <tei:salute>Lieber verehrter Herr <tei:rs type="person" key="entity-000632"
+            >Doktor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot"> Receipt of
+            this letter is recorded in Schenker’s diary for October 4, 1928: “Von Deutsch (K.):
+            entschuldigt sich, da er wegen seiner falschgehender Uhr sich verspätet zu haben glaubt”
+            (“From Deutsch (postcard): apologizes for having thought he was late, on account of his
+            clock, which was slow”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Gestern abend erst bemerkte ich, dass meine Uhr um 10 Minuten
+        zurückgeblieben war. Ich hatte angenommen, knapp aber pünktlich gekommen zu sein, und bitte
+        Sie deshalb nachträglich um Entschuldigung.<tei:note xml:id="r0001-fn02" type="editorial"
+          place="foot">See Deutsch’s letter, <tei:ref type="correspondence" cRef="OJ-10-3_93">OJ
+            10/3, [93]</tei:ref>, September 29: he had arranged to meet Schenker at Hoboken’s
+          library at 3 pm on Tuesday, October 2. </tei:note></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indelt-30">Mit den besten Empfehlungen</tei:salute>
+        <tei:salute rend="indent-50">Ihr sehr ergebener</tei:salute>
+        <tei:signed rend="indent-70"><tei:handShift new="#OED"/>
+          <tei:rs key="entity-000164" type="person">O E Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#printed"/>From: <tei:handShift new="#stamp"/>Prof. O.
+              E. DEUTSCH</tei:addrLine>
+            <tei:addrLine>Vienna II, Böcklinstrasse 26</tei:addrLine>
+            <tei:addrLine>Telephone Number R 42-8-22</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied>
+              <tei:handShift new="#TPoed"/>Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-50">Keilgasse 8</tei:addrLine>
+            <tei:addrLine rend="indent-50"><tei:hi rend="underline"><tei:hi rend="sperr"
+                  >Vienna</tei:hi> III</tei:hi></tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:lb/>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-50"><tei:handShift new="#TPoed"/><tei:rs key="entity-002484"
+            type="place">Vienna</tei:rs>, <tei:date when="1928-10-03">October 3,
+          1928</tei:date></tei:dateline>
+        <tei:salute>Dear revered Dr. <tei:supplied reason="identiy"><tei:rs type="person"
+              key="entity-000632">Schenker</tei:rs></tei:supplied>,<tei:ptr corresp="#r0001-fn01"
+            type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">I noticed only yesterday evening that my clock was running 10 minutes
+        late. I had expected to arrive <tei:supplied reason="clarity">at the library</tei:supplied>
+        on time, albeit tightly, and I am therefore belatedly begging your pardon <tei:supplied
+          reason="clarity">for arriving late</tei:supplied>.<tei:ptr corresp="#r0001-fn02"
+          type="footnote"/></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indelt-30">With best regards, </tei:salute>
+        <tei:salute rend="indent-50">Your very devoted</tei:salute>
+        <tei:signed rend="indent-70"><tei:handShift new="#OED"/>
+          <tei:rs key="entity-000164" type="person">O. E. Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

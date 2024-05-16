@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1445" sdoID="OC-B-260">OC B/260</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="GRa" scope="minor">Gustav Rapp employee's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="NM">
+      <tei:persName>Nicholas Marston</tei:persName>
+      <tei:resp>Transcription, 2014</tei:resp>
+      <tei:resp>Translation, 2014</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2015</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-26" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005578">RappG ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">letter</tei:rs>
+
+      <dc:title>Handwritten letter from Gustav Rapp &amp; Co. to Schenker, dated March 9,
+        1920</dc:title>
+      <dcterms:created>1920-03-09T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2015-02-17</dcterms:dateSubmitted>
+      <dc:description>Rapp encloses invoice.</dc:description>
+      <dc:subject>Rechnung; invoice; Platte; plate; Abzug; print; Papier; paper</dc:subject>
+
+
+
+      <marcrel:correspondent key="entity-000687">Gustav Rapp &amp; Co.</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+      <tei:opener>
+        <tei:address rend="indent-50">
+          <tei:addrLine><tei:handShift new="#printed"/>FRANKFURT a. M., den <tei:date
+              when="1920-03-09"><tei:handShift new="#GRa"/>9. Maerz <tei:handShift new="#printed"
+                />19<tei:del rend="overstrike">1</tei:del><tei:handShift new="#GRa"
+            />20</tei:date></tei:addrLine>
+          <tei:addrLine><tei:handShift new="#printed"/>Krögerstr. 2 — Bleichstr. 58</tei:addrLine>
+          <tei:addrLine>Telefon: Hansa 2943</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine>Gustav Rapp &amp; Co.</tei:addrLine>
+          <tei:addrLine>Handlung photographischer Artikel</tei:addrLine>
+          <tei:addrLine>——</tei:addrLine>
+          <tei:addrLine>Photochemisches Laboratorium</tei:addrLine>
+          <tei:addrLine>——</tei:addrLine>
+          <tei:addrLine>Photographische Anstalt für Kunst und Industrie</tei:addrLine>
+          <tei:addrLine>——</tei:addrLine>
+          <tei:addrLine>Wissenschaftliche photographische Aufnahmen</tei:addrLine>
+          <tei:addrLine><tei:note type="editorial" place="inline">ornamental
+            device</tei:note></tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:address>
+          <tei:addrLine rend="indent-40"><tei:handShift new="#GRa"/>Herrn <tei:hi rend="lateinschr"
+              >Dr. H. Schenker</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-60"><tei:hi rend="underline"><tei:hi rend="lateinschr">Wien
+                III</tei:hi></tei:hi></tei:addrLine>
+          <tei:lb/>
+          <tei:lb/>
+        </tei:address>
+      </tei:opener>
+
+      <tei:p rend="first">Im Auftrag des Herrn <tei:rs key="entity-000454" type="person"
+          >Hofjuweliers Koch</tei:rs> senden wir Ihnen beiliegende Rechnung.<tei:note
+          xml:id="r0001-fn01" type="editorial" place="foot">= <tei:ref type="correspondence"
+            cRef="OC-B-261">OC B/261</tei:ref>.</tei:note> Sollten Sie von den Platten weitere
+        Abzüge wünschen, so wurden wir Ihnen dieselben mit Mk 1, 80 pr. Stück berechnen, solange
+        sich die Preise der Papiere, welche zum kopieren benutzt werden, nicht ändern.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">Hochachtungsvollst</tei:salute>
+        <tei:signed rend="indent-50"><tei:handShift new="#GRa"/><tei:rs key="entity-000687"
+            type="organization"><tei:hi rend="lateinschr"><tei:hi rend="underline">Gus Rapp</tei:hi> u.
+              Co</tei:hi></tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+      <tei:opener>
+        <tei:address rend="indent-50">
+          <tei:addrLine><tei:handShift new="#printed"/>FRANKFURT am Main, <tei:date
+              when="1920-03-09"><tei:handShift new="#GRa"/>March 9, <tei:handShift new="#printed"
+                />19<tei:del rend="overstrike">1</tei:del><tei:handShift new="#GRa"
+            />20</tei:date></tei:addrLine>
+          <tei:addrLine><tei:handShift new="#printed"/>Krögerstrasse 2 — Bleichstrasse
+            58</tei:addrLine>
+          <tei:addrLine>Telephone: Hansa 2943</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine>Gustav Rapp &amp; Co.</tei:addrLine>
+          <tei:addrLine>Suppliers of photographic goods</tei:addrLine>
+          <tei:addrLine>——</tei:addrLine>
+          <tei:addrLine>Photochemical laboratory</tei:addrLine>
+          <tei:addrLine>——</tei:addrLine>
+          <tei:addrLine>Photographic firm for art and industry</tei:addrLine>
+          <tei:addrLine>——</tei:addrLine>
+          <tei:addrLine>Scholarly photographic reproductions</tei:addrLine>
+          <tei:addrLine><tei:note type="editorial" place="inline">ornamental
+            device</tei:note></tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:address>
+          <tei:addrLine rend="indent-40"><tei:handShift new="#GRa"/>Dr. H. Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-60"><tei:hi rend="underline">Vienna III</tei:hi></tei:addrLine>
+        </tei:address><tei:lb/><tei:lb/>
+      </tei:opener>
+
+      <tei:p rend="first">We send you the enclosed invoice<tei:ptr corresp="#r0001-fn01"
+          type="footnote"/> on behalf of the <tei:rs key="entity-000454" type="person">Court Jeweler
+            <tei:supplied reason="identity">Louis</tei:supplied> Koch</tei:rs>. Should you require
+        further prints from the plates, we would charge these to you at 1 Mark 80 Pfennig each,
+        provided that there is no alteration in the cost of the papers that will be used for the
+        copying.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">Most respectfully,</tei:salute>
+        <tei:signed rend="indent-50"><tei:handShift new="#GRa"/><tei:rs key="entity-000687"
+            type="organization"><tei:hi rend="underline">Gustav Rapp</tei:hi> &amp;
+          Co.</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

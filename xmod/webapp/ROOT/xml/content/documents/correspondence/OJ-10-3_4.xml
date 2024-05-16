@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?><sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="88" sdoID="OJ-10-3_4">OJ 10/3, [4]</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="unk" scope="major">unknown stenographic hand</tei:handNote>
+   <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+   <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="CH">
+   <tei:persName>Christoph Hust</tei:persName>
+   <tei:resp>Transcription, 2009</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>Translation, 2009</tei:resp>
+   <tei:resp>XML Encoding, 2010</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="BOT">
+   <tei:name>Automated Script</tei:name>
+   <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2010-04-23" who="#IB">XML code revised</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~ H+JSchenker</tei:rs>
+   <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~ HSchenker</tei:rs>
+   <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~ H+JSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+   <dc:title>Handwritten letter from Otto Erich Deutsch to Schenker, dated November 15, 1919</dc:title>
+
+   <dcterms:created>1919-11-15T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2009-06-21</dcterms:dateSubmitted>
+   <dc:description>Deutsch announces that he has taken over a book dealership, and seeks custom. </dc:description>
+   <dc:subject>Buchhandlung; book dealership; Sortiment; retail store</dc:subject>
+
+   
+   
+  <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent><marcrel:correspondent key="entity-000163">DeutschH</marcrel:correspondent><marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient><marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient></sdo:itemDesc>
+
+
+  <tei:div type="transcription">
+   <tei:opener>
+    <tei:fw type="header" rend="inline">
+     <tei:note type="editorial">printed letterhead:</tei:note>
+     <tei:handShift new="#printed"/>OTTO ERICH DEUTSCH</tei:fw>
+    <tei:dateline rend="indent-50"><tei:handShift new="#unk"/>Wien <tei:date when="1919-11-15">15. XI.
+     1919.</tei:date></tei:dateline>
+    <tei:salute>Sehr geehrter Herr <tei:rs type="person" key="entity-000632">Doktor</tei:rs>!</tei:salute>
+   </tei:opener>
+
+   <tei:p rend="first">Ich<tei:note xml:id="r0001-fn01" type="editorial" place="foot"> Schenker records in his diary at
+     OJ 3/1, p. 2180, November 20, 1919: "Herr Figdor überbringt einen Gruß von Otto Erich Deutsch u. erzählt, dieser
+     habe eine Buchhandlung am Graben angekauft; er habe sich auch ausdrücklich als unwissend in Musik einbekannt u.
+     Karpath habe ihm geraten vom Studium abzusehen u. zwar wegen vorgerückten Alters!" ("Mr. Figdor brings me greetings
+     from Otto Erich Deutsch, and reports that the latter has purchased a bookdealership in the Graben; that he has also
+     expressly acknowledged that he is uninformed in music, and that Karpath has advised him to refrain from study, all
+     the more so on account of advanced age!").<!-- XR --> Schenker reports receipt of the letter himself at OJ 3/1, p.
+     2193, December 16, 1919: "Von Otto Erich Deutsch (Br.): Ankündigung der Uebernahme eines Buchhandelgeschäftes."
+     ("From Otto Erich Deutsch (letter): announcement of the taking over of a bookdealer business.")<!-- XR -->
+    </tei:note> erlaube mir, Ihnen mitzuteilen, daß ich die 1848 gegründete Buchhandlung. <tei:quote rend="block"><tei:rs type="organization" key="entity-002462">L. W. Seidel &amp; Sohn</tei:rs>, I. Graben 13.</tei:quote>
+    übernommen habe und bemüht bin, sie in ein modernes Sortiment umzugestalten. Es sollte mich freuen, wenn Sie Ihren
+    Bedarf an schöngeistiger oder wissenschaftlicher Literatur versuchsweise dort decken wollten.</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-25">In vorzüglicher Hochachtung</tei:salute>
+    <tei:signed rend="indent-50"><tei:handShift new="#OED"/><tei:rs type="person" key="entity-000164">Otto Erich
+      Deutsch</tei:rs></tei:signed>
+    <tei:address>
+     <tei:addrLine>(Telefon 1288.)</tei:addrLine>
+    </tei:address>
+   </tei:closer>
+
+  </tei:div>
+
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:fw type="header" rend="inline">
+     <tei:note type="editorial">printed letterhead:</tei:note>
+     <tei:handShift new="#printed"/>OTTO ERICH DEUTSCH</tei:fw>
+    <tei:dateline rend="indent-50"><tei:handShift new="#unk"/>Vienna <tei:date when="1919-11-15">November 15,
+      1919</tei:date></tei:dateline>
+    <tei:salute>Dear <tei:rs type="person" key="entity-000632">Doctor</tei:rs>,</tei:salute>
+   </tei:opener>
+
+   <tei:p>I<tei:ptr corresp="#r0001-fn01" type="footnote"/> take the liberty of informing you that I have taken over the
+    book dealership <tei:quote rend="block"><tei:rs type="organization" key="entity-002462">L. W. Seidel &amp;
+      Son</tei:rs>, Vienna I, Graben 13,</tei:quote> founded in 1848, and am endeavoring to convert it into a modern
+    retail store. I should be very pleased if you were to entrust your desiderata in aesthetic or academic literature on
+    a trial basis there.</tei:p>
+
+
+   <tei:closer>
+    <tei:salute rend="indent-25">With kind regards,</tei:salute>
+    <tei:signed rend="indent-50"><tei:handShift new="#OED"/><tei:rs type="person" key="entity-000164">Otto Erich
+      Deutsch</tei:rs></tei:signed>
+    <tei:address>
+     <tei:addrLine>(Telephone 1288)</tei:addrLine>
+    </tei:address>
+   </tei:closer>
+
+  </tei:div>
+ </sdo:record>
+</sdo:recordCollection>

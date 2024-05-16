@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="1867" sdoID="OJ-9-18_4">OJ 9/18, [4]</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="TPamdk" scope="major">Typist of Akademie für Musik</tei:handNote>
+   <tei:handNote xml:id="WB" scope="minor">Wilhelm Bopp's hand</tei:handNote>
+   <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>Transcription, 2016</tei:resp>
+   <tei:resp>Translation, 2016</tei:resp>
+   <tei:resp>XML Encoding, 2016</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2011-03-11" who="#IB">revision of XML code</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+
+   <tei:rs role="correspondence" type="correspondence" key="entity-006195">AMdK ~ HSchenker</tei:rs>
+   <tei:rs role="correspondence" type="correspondence" key="entity-006214">BoppW ~
+    HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+   <dc:title>Typewritten letter from Wilhelm Bopp (Akademie für Musik) to Schenker, dated March 27,
+    1911</dc:title>
+
+   <dcterms:created>1911-03-27T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2016-11-01</dcterms:dateSubmitted>
+   <dc:description>Bopp warns Schenker of his unavailability one day.</dc:description>
+   <dc:subject>Bureau; office</dc:subject>
+
+
+
+   <marcrel:correspondent key="entity-000089">Wilhelm Bopp</marcrel:correspondent>
+   <marcrel:correspondent key="entity-002591">Akademie für Musik und darstellende
+    Kunst</marcrel:correspondent>
+   <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+  </sdo:itemDesc>
+
+
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:note type="editorial" place="inline">printed letterhead:</tei:note>
+    <tei:address>
+     <tei:addrLine><tei:handShift new="#printed"/>DER DIREKTOR</tei:addrLine>
+     <tei:addrLine>DER</tei:addrLine>
+     <tei:addrLine>K. K. AKADEMIE FÜR MUSIK</tei:addrLine>
+     <tei:addrLine>UND DARSTELLENDE KUNST</tei:addrLine>
+    </tei:address><tei:lb/>
+    <tei:dateline rend="indent-50"><tei:handShift new="#TPamdk"
+     /><tei:placeName>Wien</tei:placeName>, am <tei:date when="1911-03-24">27. März
+     1911</tei:date>.</tei:dateline><tei:lb/>
+    <tei:salute rend="indent-10"><tei:hi rend="sperr">Sehr geehrter</tei:hi> Herr <tei:rs
+      key="entity-000632" type="person"><tei:hi rend="sperr">DOKTOR</tei:hi></tei:rs>!<tei:note
+      xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this letter is not recorded in
+      Schenker's diary.</tei:note></tei:salute>
+   </tei:opener>
+
+   <tei:p rend="first">Ich erlaube mir mitzuteilen, dass ich morgen Dienstag, den <tei:date
+     when="1911-03-28">28. März</tei:date> leider verhindert hin, in meinem Bureau zu
+    erscheinen.</tei:p>
+
+   <tei:p rend="first">An den übrigen EUER HOCHWOHLGEBOREN bereits mitgeteilten Tagen stehe ich
+    selbstverständlich zur Verfügung. </tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-50">Hochachtungsvoll</tei:salute>
+    <tei:signed rend="indent-40"><tei:handShift new="#WB"/><tei:rs key="entity-000089" type="person"
+      >Wilhelm Bopp</tei:rs></tei:signed>
+   </tei:closer>
+
+  </tei:div>
+
+
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:note type="editorial" place="inline">printed letterhead:</tei:note>
+    <tei:address>
+     <tei:addrLine><tei:handShift new="#printed"/>THE DIRECTOR</tei:addrLine>
+     <tei:addrLine>OF THE</tei:addrLine>
+     <tei:addrLine>IMP.-ROYAL ACADEMY FOR MUSIC</tei:addrLine>
+     <tei:addrLine>AND PERFORMING ART</tei:addrLine>
+    </tei:address><tei:lb/>
+    <tei:dateline rend="indent-50"><tei:handShift new="#TPamdk"
+      /><tei:placeName>Vienna</tei:placeName>, <tei:date when="1911-03-27">March 27,
+     1911</tei:date></tei:dateline><tei:lb/>
+    <tei:salute rend="indent-10"><tei:hi rend="sperr">Dear</tei:hi> Dr. <tei:supplied
+      reason="identity"><tei:rs key="entity-000632" type="person"><tei:hi rend="sperr"
+        >SCHENKER</tei:hi></tei:rs></tei:supplied>,<tei:ptr corresp="#r0001-fn01" type="footnote"
+     /></tei:salute>
+   </tei:opener>
+
+   <tei:p rend="first">I take the liberty of letting you know that I shall unfortunately be
+    prevented from putting in an appearance at my office tomorrow, Tuesday <tei:date
+     when="1911-03-28">March 28</tei:date>.</tei:p>
+
+   <tei:p rend="first">I shall of course be at your disposal on all the other days of which YOUR
+    EXCELLENCY has been notified.</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-50">With kind regards,</tei:salute>
+    <tei:signed rend="indent-40"><tei:handShift new="#WB"/><tei:rs key="entity-000089" type="person"
+      >Wilhelm Bopp</tei:rs></tei:signed>
+   </tei:closer>
+
+
+  </tei:div>
+ </sdo:record>
+</sdo:recordCollection>

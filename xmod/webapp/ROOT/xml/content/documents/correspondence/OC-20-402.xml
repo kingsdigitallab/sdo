@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+
+    <sdo:source>
+      <sdo:correspondence mfID="2137" sdoID="OC-20-402">OC 20/402</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HW" scope="major">Hans Weisse's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2008</tei:resp>
+      <tei:resp>Translation, 2008</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2018</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2013-10-01" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002737">Weisse ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002715">Weisse ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+      <dc:title>Handwritten letter from Weisse to Schenker, dated February 20, 1931</dc:title>
+
+      <dcterms:created>1931-02-20T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2018-09-28</dcterms:dateSubmitted>
+      <dc:description>Weisse describes the extraordinary success of his second lecture (at the
+        Society for Music Pedagogy in Vienna). He asks his teacher's opinion about his rhythmic
+        interpretation of the Bach's Prelude in D minor, BWV 926, and of the third movement of
+        Brahms's String Quartet in C minor, Op. 51, No. 2.</dc:description>
+      <dc:subject>Vortrag; lecture; Wirkung; effect; Zitat; quotation; Besprechung; study; Rhythmus;
+        rhythm; Spannung; tension; Betonung; stress; Verhältnis; relationship</dc:subject>
+
+
+
+      <marcrel:correspondent key="entity-000951">Weisse</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+      <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:lb/><tei:note type="editorial">printed letterhead:</tei:note>
+        <tei:address>
+          <tei:addrLine rend="indent-10"><tei:handShift new="#printed"/>WIEN</tei:addrLine>
+          <tei:addrLine>XIII., WATTMANNGASSE 5</tei:addrLine>
+        </tei:address>
+        <tei:lb/><tei:dateline rend="indent-70"><tei:handShift new="#HW"/><tei:date
+            when="1932-02-20">20. II. 31</tei:date>.</tei:dateline>
+        <tei:salute>Lieber verehrter <tei:rs key="entity-000632" type="person"
+            >Meister</tei:rs>,<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
+            this letter is recorded in Schenker's diary at OJ 4/4, p. 3582, February 20, 1931: "Von
+            Weisse (Br.)<tei:supplied reason="punctuation">:</tei:supplied> Cubes u. Braunfels’
+            Briefe zurück; werde im Pädagogischen Verband ein drittes Mal sprechen u. zwar über das
+            Mozart-Zitat – wie geschickt habe ich da vorgearbeitet! Außerdem stellt er zwei Fragen,
+            die ins Gebiet der Metrik u. Rhythmik gehören: die eine betrifft das kleine Präludium
+            Dm, Tw. 5 u. Brahms’ Streichquartett Cm, Allegretto." ("From Weisse (letter): Cube's and
+            Braunfels' letters returned; he will speak for a third time at the Pedagogical Society,
+            and in fact on the Mozart quotation – how cleverly I prepared the way to this! In
+            addition, he poses two questions that belong to the field of meter and rhythm: one
+            concerns the <tei:title>Short Prelude in D minor</tei:title>
+            <tei:supplied reason="clarity">discussed in</tei:supplied>
+            <tei:title level="j">Tonwille 5</tei:title>, the other the Allegretto from Brahms's
+              <tei:title>String Quartet in C minor</tei:title>.").</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Anbei Brief und Beilage von <tei:rs type="person" key="entity-000143">Cube</tei:rs> mit
+        bestem Dank.</tei:p>
+
+      <tei:p>Der Vortrag<tei:note xml:id="r0001-fn02" type="editorial" place="foot">Weisse’s second
+          lecture to the <tei:rs type="organization" key="entity-002445">Society for Music Pedagogy
+            in Vienna</tei:rs>, given on February 18, 1931.</tei:note> begegnete wiederum starkem
+        Interesse, das Zimmer war bis auf den letzten Platz gefüllt, etwa <tei:subst>
+          <tei:del rend="overstrike">5</tei:del>
+          <tei:add place="inline">30</tei:add>
+        </tei:subst> Personen; ich sprach vollkommen frei<tei:supplied reason="punctuation"
+          >,</tei:supplied> was entschieden die allerstärkste Wirkung machte (ich machte dabei für
+        mich allerhand wichtige Erfahrungen.) In 14 Tagen halte ich den 3. und letzten Vortrag. Das
+          <tei:rs type="person" key="entity-000612">Mozart</tei:rs>zitat verfehlte seine<tei:del
+          rend="overstrike">n</tei:del> Wirkung nicht, aber den ganzen nächsten Vortrag lege ich
+        daraufhin an, das Zitat zu deuten, indem ich zeige was damit gemeint ist. (Denn verstanden
+        habe es ja doch nur meine Schüler, die drin waren<tei:supplied reason="punctuation"
+          >.</tei:supplied>)</tei:p>
+
+      <tei:p><tei:pb n="2"/> Hier zwei Fragen, für deren ganz kurze schlagwortartige Beantwortung
+        ich Ihnen sehr dankbar wäre.</tei:p>
+
+      <tei:p>Sie sprechen bei Besprechung des <tei:rs type="composition" key="entity-004853"
+            ><tei:title>5. Kl. Präludium</tei:title></tei:rs>s im „<tei:rs type="work"
+          key="entity-001744"><tei:title>Tonwille</tei:title></tei:rs>n“<tei:note
+          xml:id="r0001-fn03" type="editorial" place="foot">The analysis of Bach's <tei:title>Short
+            Prelude in D minor, BWV 926</tei:title>, published in <tei:title level="j">Tonwille
+            5</tei:title>, pp.8–9 (Eng. transl., vol. 1, pp.180–81). Weisse used this as the basis
+          of his lecture (see <tei:ref type="correspondence" cRef="OJ-15-15_57">OJ 15/15,
+            [57]</tei:ref>, a postcard from Weisse to Schenker dated February 25, 1931.</tei:note>
+        erst gegen Schluss von den rhythmischen Verhältnissen, von dem <tei:lb/><tei:lb/><tei:figure
+          type="musical_example">
+          <tei:graphic url="OC-20-402-ex1.png" mimeType="image/png" n="thumb"/>
+        </tei:figure>
+      </tei:p>
+
+      <tei:p>Nun liegt doch eigentlich von den ersten Takten an dieses Rhythmus dem Stück zugrunde,
+        dadurch dass, die zweimailge <tei:term>Wiederkehr</tei:term> der aus 3 Achteln bestehenden
+          <tei:term>Figur</tei:term> in den 3 Vierteltakt gezwängt ist <tei:lb/><tei:lb/><tei:figure
+          type="musical_example">
+          <tei:graphic url="OC-20-402-ex2.png" mimeType="image/png" n="thumb"/>
+        </tei:figure>
+        <tei:lb/><tei:lb/>es entsteht so eine Spannung zwischen <tei:term>Motiv</tei:term> und
+          <tei:term>Takt</tei:term><tei:supplied reason="punctuation">,</tei:supplied> der letztere
+        verlangt seine Rechte, so dass eine leichte Betonung des 5<tei:supplied reason="punctuation"
+          >.</tei:supplied> Achtels <tei:del rend="overstrike">mittels</tei:del> mithin aber grade
+        der für die <tei:term>Stimmführung</tei:term> bedeutsamen <tei:subst>
+          <tei:del rend="overstrike">Achtel</tei:del>
+          <tei:add place="interlinear-above">Note</tei:add>
+        </tei:subst> für den <tei:term>Vortrag</tei:term> notwendig wird. <tei:note type="editorial"
+          place="inline">cued from lower margin:</tei:note> Zu vergleichen etwa mit: <tei:note
+          type="editorial" place="inline">with scansion symbols</tei:note>
+        <tei:supplied reason="punctuation">„</tei:supplied>Heraus in eure Schatten rege Wipfel…..
+          <tei:hi rend="double-underline">Tret</tei:hi> ich noch jetzt mit schauderndem
+          Gefühl.<tei:supplied reason="punctuation">”</tei:supplied> An dieser Stelle müsste ein
+        verständnisvoller Regisseur die Iphigenie stehen bleiben lasse.<tei:note xml:id="r0001-fn04"
+          type="editorial" place="foot">These lines are taken from Goethe's play <tei:title
+            level="m">Iphigenia auf Tauris</tei:title>. Weisse has parsed them in different ways, to
+          show their ambiguous rhythm.</tei:note> Bis zu dieser Stelle schreitet sie vor dem
+          Tempel.<tei:note type="editorial" place="inline">end cue</tei:note></tei:p>
+
+      <tei:p>Haben Sie diese Verhältnisse mit Absicht nicht erwähnt?</tei:p>
+
+      <tei:p><tei:pb n="3"/> Die zweite Frage.</tei:p>
+
+      <tei:p><tei:rs type="person" key="entity-000094">Brahms</tei:rs>
+        <tei:title>Cmollquartett</tei:title>, 3. Satz Allegretto molto moderato liegen die rhythm.
+        Verhältnisse äusserst merkwürdig. <tei:hi rend="underline">Weshalb</tei:hi> schreibt <tei:rs
+          type="person" key="entity-000094">Brahms</tei:rs> den Einfall auftaktig. Er hätte doch
+        auch auf <tei:hi rend="underline">eins</tei:hi> beginnen können. Werden da bei der Notierung
+        die Gewichtsverhältnisse <tei:sic>berücksicht</tei:sic>, dass der
+          <tei:term>Hauptklang</tei:term> f nur ein, der <tei:term>Nebennotenklang</tei:term>
+        dagegen 3 Achtel beansprücht; ist das der Grund<tei:supplied reason="punctuation"
+          >,</tei:supplied> der <tei:rs type="person" key="entity-000094">Brahms</tei:rs>
+          bestimmte<tei:supplied reason="punctuation">,</tei:supplied> auftaktig zu schreiben? Noch
+        merkwürdiger: von Takt 15 an liegt alles falsch, man hört doch:<tei:lb/><tei:lb/><tei:figure
+          type="musical_example">
+          <tei:graphic url="OC-20-402-ex3.png" mimeType="image/png" n="thumb"/>
+        </tei:figure>
+        <tei:lb/><tei:lb/>und <tei:rs type="person" key="entity-000094">Brahms</tei:rs> notiert auch
+          <tei:g type="crescdim"/> zum es auf dem zweiten Achtel.</tei:p>
+
+      <tei:p>Ist folgende Erklärung richtig:</tei:p>
+
+      <tei:p>Takt 8 fällt der <tei:term>Schluss</tei:term> auf c auf das 3<tei:supplied
+          reason="punctuation">.</tei:supplied> Achtel: hier hätte Takt 15 anschliessen können, so
+        zwar, dass <tei:lb/><tei:lb/><tei:figure type="musical_example">
+          <tei:graphic url="OC-20-402-ex4.png" mimeType="image/png" n="thumb"/>
+        </tei:figure>
+        <tei:lb/><tei:lb/><tei:del rend="overstrike">dass</tei:del> das Achtel c noch das 4. Viertel
+        des Taktes 8 in Anspruch genommen hätte, dann wäre “es” auf eins gefallen. <tei:rs
+          type="person" key="entity-000094">Brahms</tei:rs> hat <tei:pb n="4"/> aber aus Grunden der
+          <tei:term>Synthese</tei:term> ein Interesse daran<tei:supplied reason="punctuation"
+          >,</tei:supplied> den C Klang auf einen starken <tei:term>Taktteil</tei:term> zu bekommen,
+        daher die Einschaltung der Takte 9–15, deren Ende den Abschluss von Takt 8
+          <tei:lb/><tei:lb/><tei:figure type="musical_example">
+          <tei:graphic url="OC-20-402-ex5.png" mimeType="image/png" n="thumb"/>
+        </tei:figure>
+        <tei:lb/><tei:lb/>so dehnt <tei:lb/><tei:lb/><tei:note type="editorial" place="inline"
+            ><tei:hi rend="bold">music example 6:</tei:hi> eighth-notes g<tei:hi rend="supralinear"
+            >1</tei:hi> e(<tei:g type="flat"/>)<tei:hi rend="supralinear">1</tei:hi>, dotted eighth
+            d<tei:hi rend="supralinear">1</tei:hi>, sixteenth-note c<tei:hi rend="supralinear"
+            >1</tei:hi> | eighth-note c<tei:hi rend="supralinear">1</tei:hi></tei:note>
+        <tei:lb/><tei:lb/>dass c auf den starken <tei:term>Taktteil</tei:term> kommt. Deswegen aber
+        liegt alles nachfolgende falsch.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">Viele herzliche Grüsse und besten Dank von</tei:salute>
+        <tei:salute rend="indent-30">Ihrem</tei:salute>
+        <tei:signed rend="indent-60"><tei:rs key="entity-000951" type="person"><tei:hi
+              rend="lateinschr">H</tei:hi></tei:rs>.</tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:lb/><tei:note type="editorial">printed letterhead:</tei:note>
+        <tei:address>
+          <tei:addrLine rend="indent-10"><tei:handShift new="#printed"/>VIENNA</tei:addrLine>
+          <tei:addrLine>XIII., WATTMANNGASSE 5</tei:addrLine>
+        </tei:address>
+        <tei:lb/><tei:dateline rend="indent-70"><tei:handShift new="#HW"/><tei:date
+            when="1932-02-20">February 20, 1931</tei:date></tei:dateline>
+        <tei:salute>Dear, revered <tei:rs key="entity-000632" type="person">Master</tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>Enclosed is the letter, and the supplementary material, from <tei:rs type="person"
+          key="entity-000143">Cube</tei:rs>, for which I send my best thanks.</tei:p>
+
+      <tei:p>The lecture<tei:ptr corresp="#r0001-fn02" type="footnote"/> met once again with great
+        interest; the room was filled to the last seat, approximately <tei:subst>
+          <tei:del rend="overstrike">5</tei:del>
+          <tei:add place="inline">30</tei:add>
+        </tei:subst> persons. I spoke entirely without prepared text, which was crucial for making
+        the strongest possible effect. (This gave me important experiences of all sorts.) In two
+        weeks I shall give the third and last lecture. The <tei:rs type="person" key="entity-000612"
+          >Mozart</tei:rs> quotation did not fail in its effect, but in the next lecture I shall
+        make a special point of interpreting the quotation, so as to show what is implied by it.
+        (For only my pupils understood what was contained in it.)</tei:p>
+
+      <tei:p><tei:pb n="2"/> I have two questions to which I would be most grateful for very short
+        answers, in the form of key words.</tei:p>
+
+      <tei:p>In your study of <tei:supplied reason="identity"><tei:rs type="person"
+            key="entity-000027">J. S. Bach</tei:rs>'s</tei:supplied>
+        <tei:rs type="composition" key="entity-004853"><tei:title>Fifth Short
+          Prelude</tei:title></tei:rs> in <tei:rs type="work" key="entity-001744"><tei:title
+            level="j">Der Tonwille</tei:title></tei:rs>, <tei:ptr corresp="#r0001-fn03"
+          type="footnote"/> you spoke about rhythmic relationships only towards the end, of the
+          <tei:lb/><tei:lb/><tei:figure type="musical_example">
+          <tei:graphic url="OC-20-402-ex1.png" mimeType="image/png" n="thumb"/>
+        </tei:figure>
+        <tei:lb/><tei:lb/>sense of the sixteenth-note runs.</tei:p>
+
+      <tei:p>In fact, however, this rhythm underlies the piece from the first bar, in such a way
+        that the two-fold <tei:term>repeat</tei:term> of the <tei:term>figure</tei:term> comprising
+        three eighth-notes is squeezed into the three-quarter measure <tei:lb/><tei:lb/><tei:figure
+          type="musical_example">
+          <tei:graphic url="OC-20-402-ex2.png" mimeType="image/png" n="thumb"/>
+        </tei:figure>
+        <tei:lb/><tei:lb/>There thus arises a tension between <tei:term>motive</tei:term> and
+          <tei:term>measure</tei:term>; the latter demands its due, so that a gentle accent on the
+        fifth eighth-note, <tei:del rend="overstrike">by way of</tei:del> together with the <tei:subst>
+          <tei:del rend="overstrike">eighth</tei:del>
+          <tei:add place="interlinear-above">note</tei:add>
+        </tei:subst> that is significant for the <tei:term>voice-leading</tei:term> is essential for
+        the <tei:term>performance</tei:term>. <tei:note type="editorial" place="inline">cued from
+          lower margin:</tei:note> Compare, for instance, <tei:note type="editorial" place="inline"
+          >with scansion symbols</tei:note> "Heraus in eure Schatten rege Wipfel….. <tei:hi
+          rend="double-underline">Tret</tei:hi> ich noch jetzt mit schauderndem Gefühl." In this
+        passage, an intelligent director would have Iphigenia stop moving.<tei:ptr
+          corresp="#r0001-fn04" type="footnote"/> Up to this point, she is moving in front of the
+          temple.<tei:note type="editorial" place="inline">end cue</tei:note></tei:p>
+
+      <tei:p>Did you intentionally refrain from mentioning these relationships?</tei:p>
+
+      <tei:p><tei:pb n="3"/> My second question:</tei:p>
+
+      <tei:p><tei:rs type="person" key="entity-000094">Brahms</tei:rs>’s <tei:title>String Quartet
+          in C minor</tei:title>, third movement (Allegretto molto moderato), in which the rhythmic
+        relationships are extremely striking. <tei:hi rend="underline">Why indeed</tei:hi> does
+          <tei:rs type="person" key="entity-000094">Brahms</tei:rs> write the first note as an
+        upbeat? He could indeed have begun on <tei:hi rend="underline">the downbeat</tei:hi>. In the
+        notation are the relationships of weight considered, so that the <tei:term>principal
+          chord</tei:term> of F minor takes up only one eighth note, while the <tei:term>auxiliary
+          chord</tei:term> takes up three? Is that the reason that determined that <tei:rs
+          type="person" key="entity-000094">Brahms</tei:rs> should begin on an upbeat? Even more
+        striking: from measure 15 onward, everything appears to be wrong. One surely hears as
+        follows: <tei:lb/><tei:lb/><tei:figure type="musical_example">
+          <tei:graphic url="OC-20-402-ex3.png" mimeType="image/png" n="thumb"/>
+        </tei:figure><tei:lb/><tei:lb/>and <tei:rs type="person" key="entity-000094">Brahms</tei:rs>
+        applies <tei:g type="crescdim"/> to the E<tei:g type="flat"/> on the second eighth. </tei:p>
+
+      <tei:p>Is the following explanation correct?</tei:p>
+
+      <tei:p>In m. 8 the<tei:term> cadence</tei:term> in C minor falls on the third eighth: here the
+        music could have been continued with m. 15, in such away that <tei:lb/><tei:lb/><tei:figure
+          type="musical_example">
+          <tei:graphic url="OC-20-402-ex4.png" mimeType="image/png" n="thumb"/>
+        </tei:figure>
+        <tei:lb/><tei:lb/><tei:del rend="overstrike">that</tei:del> the eighth-note C would have
+        still made use of the fourth quarter of m. 8, with "E<tei:g type="flat"/>" then falling on
+        beat 1. For reasons of the <tei:term>synthesis</tei:term>, however, <tei:pb n="4"/>
+        <tei:rs type="person" key="entity-000094">Brahms</tei:rs> was interested in having the chord
+        on C come on a strong <tei:term>beat</tei:term>, hence the insertion of mm. 9–15, whose end
+        expands the conclusion at m. 8 in such a way <tei:lb/><tei:lb/><tei:figure
+          type="musical_example">
+          <tei:graphic url="OC-20-402-ex5.png" mimeType="image/png" n="thumb"/>
+        </tei:figure>
+        <tei:lb/><tei:lb/>that C comes on a strong <tei:term>beat</tei:term>.
+          <tei:lb/><tei:lb/><tei:note type="editorial" place="inline"><tei:hi rend="bold">music
+            example 6:</tei:hi> eighth-notes g<tei:hi rend="supralinear">1</tei:hi> e(<tei:g
+            type="flat"/>)<tei:hi rend="supralinear">1</tei:hi>, dotted eighth d<tei:hi
+            rend="supralinear">1</tei:hi>, sixteenth-note c<tei:hi rend="supralinear">1</tei:hi> |
+          eighth-note c<tei:hi rend="supralinear">1</tei:hi></tei:note>
+        <tei:lb/><tei:lb/> On account of this, however, everything that follows is in the wrong
+        position.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">Many cordial greetings and best thanks from</tei:salute>
+        <tei:salute rend="indent-30">Your</tei:salute>
+        <tei:signed rend="indent-60"><tei:rs key="entity-000951" type="person"
+          >H</tei:rs>.</tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

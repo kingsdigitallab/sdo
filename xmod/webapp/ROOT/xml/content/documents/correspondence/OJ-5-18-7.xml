@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="1535" sdoID="OJ-5-18-7">OJ 5/18, 7</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+   <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="JR">
+   <tei:persName>John Rothgeb</tei:persName>
+   <tei:resp>Transcription, 2006</tei:resp>
+   <tei:resp>Translation, 2006</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>XML Encoding, 2015</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2011-02-07" who="#IB">revision of XML code</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-002713">Jonas ~
+    H+JSchenker</tei:rs>
+   <tei:rs role="correspondence" type="correspondence" key="entity-002714">Jonas ~
+    HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture postcard</tei:rs>
+
+
+   <dc:title>Handwritten picture postcard from Schenker to Jonas, undated [c.April 2,
+    1931(?)]</dc:title>
+
+   <dcterms:created>1931-04-02T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2015-04-23</dcterms:dateSubmitted>
+   <dc:description>Schenker asks for reprint of essay.</dc:description>
+   <dc:subject>Aufsatz; essay; article; Abdruck; reprint</dc:subject>
+
+
+
+   <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+   <marcrel:recipient key="entity-000412">Jonas</marcrel:recipient>
+  </sdo:itemDesc>
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/>
+    <tei:fw type="envelope">
+     <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+       >Postkarte</tei:hi></tei:fw><tei:lb/>
+     <tei:note type="editorial">top left: picture captioned: "Wien‒Belvedere"</tei:note><tei:lb/>
+     <tei:address>
+      <tei:addrLine>
+       <tei:supplied reason="clarity">Absender: </tei:supplied><tei:handShift new="#HS"/>
+       <tei:hi rend="lateinschr">Schenker,</tei:hi>
+      </tei:addrLine>
+      <tei:addrLine>Wien, III</tei:addrLine>
+      <tei:addrLine>Keilgasse 38</tei:addrLine>
+     </tei:address>
+     <tei:address>
+      <tei:addrLine><tei:supplied reason="clarity">An: </tei:supplied> H <tei:hi rend="lateinschr"
+         >D<tei:hi rend="supralinear">r</tei:hi> Oswald Jonas</tei:hi>
+      </tei:addrLine>
+      <tei:addrLine><tei:hi rend="lateinschr">Berlin-Schöneberg</tei:hi></tei:addrLine>
+      <tei:addrLine>Mühlenstr. 2</tei:addrLine>
+     </tei:address><tei:lb/>
+     <tei:fw type="postmark">|| 3 WIEN 40 | <tei:gap reason="illegible"/> 19 | * 4f * ||</tei:fw>
+    </tei:fw>
+    <tei:lb/><tei:lb/>
+    <tei:milestone unit="folio" n="verso"/>
+    <tei:salute>Sehr geehrter Herr <tei:hi rend="lateinschr">D<tei:hi rend="supralinear">r</tei:hi>
+      <tei:rs type="person" key="entity-000412">Jonas</tei:rs></tei:hi>!<tei:note
+      xml:id="r0001-fn01" type="editorial" place="foot">There is no record of this postcard having
+      been written in Schenker's diary between April 2 and 19. This suggested dateframe is based
+      only on the number "7" that has been written in the top-left corner of the <tei:hi
+       rend="italic">verso</tei:hi>.</tei:note></tei:salute>
+   </tei:opener>
+
+   <tei:p>Wenn ich nicht irre, vergaß ich Sie eigens zu bitten, mir den Aufsatz<tei:note
+     xml:id="r0001-fn02" type="editorial" place="foot">Presumably the one recently mentioned in
+      <tei:ref type="correspondence" cRef="OJ-12-6_8">12/6, [8].</tei:ref></tei:note> zukommen zu
+    lassen, falls er hier oder dort zum Abdruck gelangt.</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-40">Mit bestem Gruß</tei:salute>
+    <tei:salute rend="indent-60">Ihr</tei:salute>
+    <tei:signed rend="indent-60">
+     <tei:hi rend="lateinschr"><tei:rs key="entity-000632" type="person">H
+      Schenker</tei:rs></tei:hi>
+    </tei:signed>
+   </tei:closer>
+
+   <tei:postscript>
+    <tei:lb/>
+    <tei:p>Hat mich kürzlich <tei:hi rend="lateinschr">Hofrath</tei:hi>
+     <tei:rs key="entity-000577" type="person"><tei:hi rend="lateinschr">Marx</tei:hi></tei:rs>
+     namenlos („ “) angeführt, gleich drauf <tei:hi rend="lateinschr">Reitler</tei:hi><tei:note
+      xml:id="r0001-fn03" type="editorial" place="foot">Possibly Josef Reitler (1915‒38), writer on
+      music, and one of the directors of the Neues Wiener Konservatorium.</tei:note> (ohne „ “), so
+     gestern wieder <tei:hi rend="lateinschr">J.K.</tei:hi><tei:note xml:id="r0001-fn04"
+      type="editorial" place="foot">Identity unknown: perhaps <tei:rs key="entity-000471"
+       type="person">Julius Korngold</tei:rs>?</tei:note> mit „ “. Es wird immer lustiger, die
+     Herrschaften schämen sich . . . . </tei:p>
+   </tei:postscript>
+
+  </tei:div>
+
+
+  <tei:div type="translation">
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/>
+    <tei:fw type="envelope">
+     <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+       >Postcard</tei:hi></tei:fw><tei:lb/>
+     <tei:note type="editorial">top left: picture captioned: "Vienna‒Belvedere"</tei:note><tei:lb/>
+     <tei:address>
+      <tei:addrLine>
+       <tei:supplied reason="clarity">From: </tei:supplied><tei:handShift new="#HS"
+       />Schenker</tei:addrLine>
+      <tei:addrLine>Vienna III</tei:addrLine>
+      <tei:addrLine>Keilgasse 38</tei:addrLine>
+     </tei:address>
+     <tei:address>
+      <tei:addrLine><tei:supplied reason="clarity">To: </tei:supplied>Dr. Oswald
+       Jonas</tei:addrLine>
+      <tei:addrLine>Berlin-Schöneberg</tei:addrLine>
+      <tei:addrLine>Mühlenstraße 2</tei:addrLine>
+     </tei:address><tei:lb/>
+     <tei:fw type="postmark">|| 3 VIENNA 40 | <tei:gap reason="illegible"/> 19 | * 4f * ||</tei:fw>
+    </tei:fw>
+    <tei:lb/><tei:lb/>
+    <tei:milestone unit="folio" n="verso"/>
+    <tei:salute>Dear Dr. <tei:rs type="person" key="entity-000412">Jonas</tei:rs>,<tei:ptr
+      corresp="#r0001-fn01" type="footnote"/></tei:salute>
+   </tei:opener>
+
+   <tei:p>If I am not mistaken, I forgot to ask you particularly to have the essay<tei:ptr
+     corresp="#r0001-fn02" type="footnote"/> sent me in case it gets reprinted here or
+    there.</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-40">With best greetings</tei:salute>
+    <tei:salute rend="indent-60">Your</tei:salute>
+    <tei:signed rend="indent-60"><tei:rs key="entity-000632" type="person">H.
+     Schenker</tei:rs></tei:signed>
+   </tei:closer>
+
+   <tei:postscript>
+    <tei:lb/>
+    <tei:p>Court Counsellor <tei:rs key="entity-000577" type="person">Marx</tei:rs> recently cited
+     me namelessly (" ") and immediately afterward Reitler<tei:ptr corresp="#r0001-fn03"
+      type="footnote"/> (without " "), then yesterday again J.K.<tei:ptr corresp="#r0001-fn04"
+      type="footnote"/> with " ". It gets funnier all the time, the gentlemen shame themselves . . .
+     . </tei:p>
+   </tei:postscript>
+
+  </tei:div>
+ </sdo:record>
+</sdo:recordCollection>

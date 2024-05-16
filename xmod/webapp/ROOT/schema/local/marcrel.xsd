@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+    targetNamespace="http://www.loc.gov/loc.terms/relators/" 
+    elementFormDefault="qualified"
+    xmlns="http://www.loc.gov/loc.terms/relators/" 
+  
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    
+    xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+    
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      
+    <xs:element name="author"><!-- used in "other material" to record who was responsible for the article, dictionary entry, etc. -->
+        <xs:annotation>
+            <xs:documentation>The person or organization chiefly responsible for the intellectual or artistic content of a work, usually printed text.</xs:documentation>
+        </xs:annotation>         
+        <xs:complexType  mixed="true" >
+            <xs:attribute name="key">
+                <xs:simpleType >
+                    <xs:restriction base="xs:NCName"/>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>       
+    </xs:element>
+    <xs:element name="correspondent">
+        <xs:annotation>
+            <xs:documentation>The correspondent (as writer) of a piece of correspondence.</xs:documentation>
+        </xs:annotation>         
+        <xs:complexType  mixed="true" >
+            <xs:attribute name="key">
+                <xs:simpleType >
+                    <xs:restriction base="xs:NCName"/>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>       
+    </xs:element>
+    <xs:element name="recipient">
+        <xs:annotation>
+            <xs:documentation>The recipient of a piece of correspondence.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType mixed="true">
+            <xs:attribute name="key">
+                <xs:simpleType >
+                    <xs:restriction base="xs:NCName"/>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>    
+
+</xs:schema>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:marcrel="http://www.loc.gov/loc.terms/relators/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
+  xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1565" sdoID="OJ-10-3_45">OJ 10/3, [45]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="TPunk" scope="major">unknown typist</tei:handNote>
+      <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="DB">
+      <tei:persName>David Bretherton</tei:persName>
+      <tei:resp>Transcription, 2015</tei:resp>
+      <tei:resp>Translation, 2015</tei:resp>
+      <tei:resp>XML Encoding, 2015</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-18" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~ H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~ HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~ H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Typewritten postcard from Deutsch to Schenker, dated December 9, 1925</dc:title>
+
+      <dcterms:created>1925-12-09T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2015-09-18</dcterms:dateSubmitted>
+      <dc:description>Deutsch sends Schenker a dedication copy of the Schubert special issue of Moderne Welt, to which
+        Schenker contributed an article. Deutsch had already requested a copy to be sent to Schenker from the publisher,
+        but this has gone missing.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline">printed:</tei:note>
+          <tei:handShift new="#printed"/>Postkarte</tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">Absender:</tei:supplied>
+              <tei:handShift new="#TPunk"/>Otto Erich Deutsch</tei:addrLine>
+            <tei:addrLine>Wien II. Böcklinstr. 26</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied> Herrn</tei:addrLine>
+            <tei:addrLine>Prof. Dr. Heinrich</tei:addrLine>
+            <tei:addrLine rend="indent-15"><tei:hi><!-- spaced out -->Schenker</tei:hi></tei:addrLine>
+            <tei:addrLine rend="indent-45">WIEN III.</tei:addrLine>
+            <tei:addrLine rend="indent-40">Keilgasse 8</tei:addrLine>
+          </tei:address>
+          <tei:lb/><tei:fw type="postmark">|| <tei:gap reason="illegible" unit="chars" extent="few"/> WIEN 45 | -9. XII.
+            25 -4 | *<tei:note type="editorial">?</tei:note> 4c * ||</tei:fw>
+        </tei:fw>
+        <tei:lb/>
+        <tei:lb/><tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-30"><tei:rs key="entity-002484" type="place">Wien</tei:rs>, <tei:date
+            when="1925-12-09">9. Dezember 25</tei:date></tei:dateline>
+        <tei:salute>Sehr geehrter Herr <tei:rs type="person" key="entity-000632">Professor</tei:rs>!<tei:note
+            xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this postcard is recorded in Schenker's diary
+            at OJ 3/8, p. 2900 (December 9, 1925): "Von Deutsch ein zweites Schubertheft mit Widmung u. eine Karte:
+            erbittet das erste Heft zurück." ("From Deutsch a second Schubert volume, with dedication, and a card: asks
+            for the return of the first volume.").</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Indem ich Ihnen für die freundliche Rohrpostkarte noch nachträglich danke,<tei:note
+          xml:id="r0001-fn02" type="editorial" place="foot">This postcard is not known to survive, but its sending is
+          recorded in Schenker's diary at OJ 3/8, p. 2899 (December 7, 1925): "An Deutsch (K.): wo bleibt das Heft?"
+          ("To Deutsch (postcard): what has happened to the volume?").</tei:note> erlaube ich mir, Ihnen heute auf Ihre
+        Urgenz einer Belegnummer der <tei:rs key="entity-005694" type="journal">"<tei:title>Modernen
+          Welt</tei:title>"</tei:rs>,<tei:note xml:id="r0001-fn03" type="editorial" place="foot">Schenker had
+          contributed to <tei:bibl>Otto Erich Deutsch, ed., <tei:title level="m">Moderne Welt</tei:title> [Schubert
+            special issue] (December 1, 1925)</tei:bibl>.</tei:note> die ich dem (wie immer) Verlag aufgetragen ha<tei:subst>
+          <tei:del rend="overwritten" hand="TPunk">be</tei:del>
+          <tei:add place="superimposed" hand="TPunk">tt</tei:add>
+        </tei:subst>e, <tei:del rend="overstrike" hand="#OED">heute</tei:del> ein Widmungsexemplar zu senden,und bitte
+        Sie, mir jenes zur Verfügung zu stellen, wenn es doch noch kommen sollte. Wenn Sie aber einen Ausschnitt nur vom
+        Verlag bekommen haben, so bitte ich Sie, mich auch das für<tei:add place="inline" hand="#OED">|</tei:add>den
+        üblichen Rechtsstreit wissen zu lassen. -<tei:note xml:id="r0001-fn04" type="editorial" place="foot"
+          >Paragraph-break added.</tei:note></tei:p>
+
+      <tei:p>Mit Herrn <tei:rs key="entity-000380" type="person">v. H.</tei:rs> habe ich heute eine längere Konferenz.
+        Er wird Ihnen wohl von unseren Aktionen erzählen. -<tei:note xml:id="r0001-fn05" type="editorial" place="foot"
+          >Paragraph-break added.</tei:note></tei:p>
+
+      <tei:closer>
+        <tei:salute>Mit schönen Grüssen von Haus zu Haus verbleibe ich Ihr</tei:salute>
+        <tei:salute rend="indent-45">ganz ergebener</tei:salute>
+        <tei:signed rend="indent-70"><tei:handShift new="#OED"/>
+          <tei:rs key="entity-000164" type="person">Otto Erich Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline">printed:</tei:note>
+          <tei:handShift new="#printed"/>Postcard</tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">sender:</tei:supplied>
+              <tei:handShift new="#TPunk"/>Otto Erich Deutsch</tei:addrLine>
+            <tei:addrLine>Vienna II, Böcklinstrasse 26</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">to:</tei:supplied> Prof. Dr. Heinrich</tei:addrLine>
+            <tei:addrLine rend="indent-15"><tei:hi><!-- spaced out -->Schenker</tei:hi></tei:addrLine>
+            <tei:addrLine rend="indent-45">VIENNA III.</tei:addrLine>
+            <tei:addrLine rend="indent-40">Keilgasse 8</tei:addrLine>
+          </tei:address>
+          <tei:lb/><tei:fw type="postmark">|| <tei:gap reason="illegible" unit="chars" extent="few"/> WIEN 45 | -9. XII.
+            25 -4 | *<tei:note type="editorial">?</tei:note> 4c * ||</tei:fw>
+        </tei:fw>
+        <tei:lb/>
+        <tei:lb/><tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-30"><tei:rs key="entity-002484" type="place">Vienna</tei:rs>, <tei:date
+            when="1925-12-09">December 9, 1925</tei:date></tei:dateline>
+        <tei:salute>Very honored <tei:rs type="person" key="entity-000632">Professor <tei:supplied reason="clarity"
+              >Schenker</tei:supplied></tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">While sending you my belated thanks for your friendly postcard sent by pneumatic mail,<tei:ptr
+          corresp="#r0001-fn02" type="footnote"/> allow me to present to you today, at your prompting, an issue of
+          <tei:rs key="entity-005694" type="journal"><tei:title level="m">Moderne Welt</tei:title></tei:rs>;<tei:ptr
+          corresp="#r0001-fn03" type="footnote"/> I had (as always) instructed the publisher to send a dedication copy
+          <tei:supplied reason="clarity">to you</tei:supplied>, and please supply me with that if should it still come.
+        But if you have only got an excerpt <tei:supplied reason="clarity">of the issue</tei:supplied> from the
+        publisher, I kindly ask you to let me know that too, for the customary dispute. —<tei:ptr corresp="#r0001-fn04"
+          type="footnote"/></tei:p>
+
+      <tei:p>I have a long meeting today with Mr. <tei:rs key="entity-000380" type="person">Hoboken</tei:rs>. He will
+        probably tell you about our activities. —<tei:ptr corresp="#r0001-fn05" type="footnote"/></tei:p>
+
+      <tei:closer>
+        <tei:salute>With best greetings from house to house I remain yours</tei:salute>
+        <tei:salute rend="indent-45">very truly,</tei:salute>
+        <tei:signed rend="indent-70"><tei:handShift new="#OED"/>
+          <tei:rs key="entity-000164" type="person">Otto Erich Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

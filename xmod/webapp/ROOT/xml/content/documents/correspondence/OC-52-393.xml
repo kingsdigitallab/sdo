@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1676" sdoID="OC-52-393">OC 52/393</sdo:correspondence>
+    </sdo:source>
+    <tei:handNotes>
+      <tei:handNote xml:id="ARo" scope="minor">Adolf Robitschek's hand</tei:handNote>
+      <tei:handNote xml:id="TPue" scope="major">typist for Universal Edition</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2004, 2016</tei:resp>
+      <tei:resp>Translation, 20004, 2016</tei:resp>
+      <tei:resp>XML Encoding, 2016</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-02-07" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-006165">RobitschekA ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-006164">WeinbergerJ ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002702">UE ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+      <dc:title>Typewritten letter from Robitschek and Weinberger (UE) to Schenker, dated June 22,
+        1904</dc:title>
+
+      <dcterms:created>1904-06-22T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2016-02-18</dcterms:dateSubmitted>
+      <dc:description>UE confirms transfer of revised honorarium for Handel Organ Concertos, vol.
+        I.</dc:description>
+      <dc:subject>Notenstecherei; music engraving department; Vertrag; contract; Revisions-Honorar;
+        revised honorarium; Empfangsbestaetigung; confirmation of receipt; Correctur-Abzügen;
+        proofs</dc:subject>
+
+      <marcrel:correspondent key="entity-002720">Adolf Robitschek</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000946">Josef Weinberger</marcrel:correspondent>
+      <marcrel:correspondent key="entity-002408">Universal Edition</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>Universal-Edition
+            Actiengesellschaft</tei:addrLine>
+          <tei:addrLine>Maximilianstrasse No.11.</tei:addrLine>
+          <tei:addrLine>TELEPHON N<tei:hi rend="supralinear">o.</tei:hi> 3364</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-50">
+          <tei:placeName>Wien, am </tei:placeName><tei:handShift new="#TPue"/>
+          <tei:date when="1904-06-22">22. Juni 1904</tei:date></tei:dateline>.<tei:lb/>
+        <tei:address>
+          <tei:addrLine>
+            <tei:persName>Wolgeboren Herrn Prof. Heinrich Schenker,</tei:persName>
+          </tei:addrLine>
+          <tei:addrLine rend="indent-60">
+            <tei:hi rend="underline sperr">WIEN</tei:hi>
+          </tei:addrLine>
+        </tei:address>
+        <tei:salute>Sehr geehrter <tei:rs type="person" key="entity-000632"
+          >Herr</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Die Notenstecherei teilt uns mit, dass der an uns abgelieferte Band
+          "<tei:rs key="entity-001722" type="work"><tei:title>Haendel, Orgel
+          Concerte</tei:title></tei:rs>" Band I. 4 ms.<tei:note xml:id="r0001-fn01" type="editorial"
+          place="foot">i.e. "4 mains" = four-handed.</tei:note> 94 Platten umfasst; vertragsgemäss
+        senden wir Ihnen heute durch die k.k.priv. oesterr. <tei:rs key="entity-002467"
+          type="organization">Laenderbank</tei:rs> die Hälfte<tei:note xml:id="r0001-fn02"
+          type="editorial" place="foot">i.e., the second moiety of the honorarium for vol.
+          I.</tei:note> des vereinbarten Revisions-Honorars im Betrage von <tei:cit>
+          <tei:q>Kronen 141.–<tei:note xml:id="r0001-fn03" type="editorial" place="foot">141 x 2 =
+              282 Kr. 282 ÷ 6 (Kr.) = 47; 47 x 2 = 94 plates. The price, as stated in <tei:ref
+                type="correspondence" cRef="OC-52-391">OC 52/391</tei:ref>, is thus 6 Kronen per
+              double-plate: 94 ÷ 2 = 47; 47 x 6 = 282 ÷ 2 = 141
+            (half-honorarium).</tei:note></tei:q>
+        </tei:cit> und bitten um Empfangsbestaetigung nach Eingang. </tei:p>
+
+      <tei:p rend="first">Wir hoffen auch, Ihnen in den <tei:sic>näachsten</tei:sic><tei:note
+          xml:id="r0001-fn04" type="editorial" place="foot">Note that the typewriter does have "ä"
+          on its typebar, despite that fact that the typist more often types "ae".</tei:note> Tagen
+        mit Correctur-Abzügen dienen zu können und zeichnen </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Hochachtungsvoll</tei:salute>
+        <tei:signed rend="indent-60"><tei:handShift new="#stamp"/>„<tei:rs key="entity-002408"
+            type="organization">Universal-Edition</tei:rs>“ Actiengesellschaft</tei:signed>
+        <tei:signed rend="indent-40"><tei:handShift new="#ARo"/><tei:rs key="entity-000720"
+            type="person">Adolf Robitschek</tei:rs>
+          <tei:handShift new="#stamp"/>
+          <tei:rs key="entity-000946" type="person">Josef Weinberger</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>Universal Edition &amp; Co.</tei:addrLine>
+          <tei:addrLine>Maximilianstrasse 11</tei:addrLine>
+          <tei:addrLine>TELEPHONE N<tei:hi rend="supralinear">o.</tei:hi> 3364</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-50">
+          <tei:placeName>Vienna </tei:placeName><tei:handShift new="#TPue"/>
+          <tei:date when="1904-06-22">June 22, 1904</tei:date></tei:dateline><tei:lb/>
+        <tei:address>
+          <tei:addrLine>
+            <tei:persName>Prof. Heinrich Schenker, Esq.</tei:persName>
+          </tei:addrLine>
+          <tei:addrLine rend="indent-60">
+            <tei:hi rend="underline sperr">VIENNA</tei:hi>
+          </tei:addrLine>
+        </tei:address>
+        <tei:salute>Dear Mr. <tei:supplied reason="identity"><tei:rs type="person"
+              key="entity-000632">Schenker</tei:rs></tei:supplied>,</tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Our music engraving department informs us that the volume <tei:rs
+          key="entity-001722" type="work"><tei:title>Handel Organ Concertos</tei:title></tei:rs>,
+        vol. I, delivered to us, comprises 4 ms<tei:ptr corresp="#r0001-fn01" type="footnote"/> 94
+        plates. As per contract, we are today sending via the Austrian Imperial-Royal Private
+          <tei:rs key="entity-002467" type="organization">Provincial Bank</tei:rs> half<tei:ptr
+          corresp="#r0001-fn02" type="footnote"/> the total editor's honorarium in the sum of <tei:cit>
+          <tei:q>141.– Kroner,<tei:ptr corresp="#r0001-fn03" type="footnote"/></tei:q>
+        </tei:cit> and request your confirmation upon receipt.</tei:p>
+
+      <tei:p rend="first">We also hope to be able to supply you with proofs in the next<tei:ptr
+          corresp="#r0001-fn04" type="footnote"/> few days, and remain</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">With kind regards,</tei:salute>
+        <tei:signed rend="indent-60"><tei:handShift new="#stamp"/><tei:rs key="entity-002408"
+            type="organization">Universal Edition</tei:rs> &amp; Co.</tei:signed>
+        <tei:signed rend="indent-40"><tei:handShift new="#ARo"/><tei:rs key="entity-000720"
+            type="person">Adolf Robitschek</tei:rs>
+          <tei:handShift new="#stamp"/>
+          <tei:rs key="entity-000946" type="person">Josef Weinberger</tei:rs></tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

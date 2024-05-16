@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+    xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+    <sdo:collectionDesc>
+        <sdo:source>
+            <sdo:correspondence mfID="2614" sdoID="OJ-9-6_41">OJ 9/6, [41]</sdo:correspondence>
+        </sdo:source>
+
+        <tei:handNotes>
+            <tei:handNote xml:id="d-A" scope="major">Eugen d'Albert's hand</tei:handNote>
+            <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+
+        </tei:handNotes>
+
+        <tei:respStmt xml:id="IDB">
+            <tei:persName>Ian Bent</tei:persName>
+            <tei:resp>Transcription, 2021</tei:resp>
+            <tei:resp>Translation, 2021</tei:resp>
+            <tei:resp>XML Encoding, 2021</tei:resp>
+        </tei:respStmt>
+
+        <tei:revisionDesc>
+            <tei:change when="2011-04-15" who="#DB">XML code created</tei:change>
+        </tei:revisionDesc>
+    </sdo:collectionDesc>
+    <sdo:record ID="r0001">
+
+        <sdo:itemDesc>
+            <tei:rs role="correspondence" type="correspondence" key="entity-008072">d'AlbertE ~
+                HSchenker</tei:rs>
+            <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+            <dc:title>Handwritten letter from Eugen d'Albert to Schenker, dated June 15,
+                1905</dc:title>
+
+            <dcterms:created>1905-06-15T12:00:00Z</dcterms:created>
+            <dcterms:dateSubmitted>2021-11-02</dcterms:dateSubmitted>
+            <dc:description>Eugen d'Albert gives reasons why he cannot use "Amor und Psyche" as a
+                basis for a composition. He asks whether Schenker will be in Prague for the première
+                of his opera "Flauto Solo."</dc:description>
+            <dc:subject>Composition; Symbolik; symbolism; Dramatik; drama; Ballet; Ausstellung;
+                production; Freundesdienst; act of friendship; Première; kultur-historisch;
+                cultural-historical</dc:subject>
+
+
+
+            <marcrel:correspondent key="entity-000150">d'AlbertE</marcrel:correspondent>
+            <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+        </sdo:itemDesc>
+
+
+        <tei:div type="transcription">
+
+            <tei:opener>
+                <tei:address>
+                    <tei:addrLine><tei:handShift new="#printed"/>MEINA</tei:addrLine>
+                    <tei:addrLine rend="indent-10">Lago Maggiore</tei:addrLine>
+                    <tei:addrLine rend="indent-20">VILLA ERMINIA</tei:addrLine>
+                    <tei:addrLine rend="indent-50"><tei:handShift new="#d-A"/><tei:date
+                            when="1905-06-15">15 Juni 05</tei:date>.</tei:addrLine>
+                </tei:address>
+                <tei:salute>Lieber Herr <tei:rs type="person" key="entity-000632"
+                    >Doctor</tei:rs>!</tei:salute>
+            </tei:opener>
+
+            <tei:p>Mit bestem Dank sende ich Ihnen anbei „<tei:title>Amor und Psyche</tei:title>“
+                    zurück.<tei:note xml:id="r0001-fn01" type="editorial" place="foot"><tei:ref
+                        type="correspondence" cRef="OJ-9-6_40">OJ 9/6, [40]</tei:ref>, June 3,
+                    acknowledged receipt of a “book,” libretto, or scenario of this title for an
+                    opera or ballet.</tei:note> Ich kann mich zur Composition doch nicht
+                entscheiden. Die Symbolik – die Feinde der Dramatik <tei:supplied
+                    reason="punctuation">–</tei:supplied> liegt mir fern u. möchte ich <tei:note
+                    type="editorial" place="inline">deleted word</tei:note> selbst in einen Ballet
+                nicht begegnen. Ausserdem verlangt das Ballet eine derartige Ausstellung, daß nur
+                Wien oder <tei:rs type="place" key="entity-002501">Berlin</tei:rs> in der Lage
+                wären, sie zu bewerkstelligen. </tei:p>
+
+            <tei:p><tei:pb n="2"/> Es freut mich sehr, daß Sie gleich an mich gedacht haben u. bitte
+                ich Sie <tei:add place="interlinear-above">mir</tei:add> diesen Freundesdienst auch
+                künftighin erweisen zu wollen.<tei:note xml:id="r0001-fn02" type="editorial"
+                    place="foot">No paragraph-break in source.</tei:note></tei:p>
+
+            <tei:p>Werden Sie nach <tei:rs type="place" key="entity-002892">Prag</tei:rs> zur
+                Première von meinem „kultur-historischen“ <tei:title>Flauto Solo</tei:title> kommen?
+                (in November). Hoffentlich.<tei:note xml:id="r0001-fn03" type="editorial"
+                    place="foot"><tei:title level="m">Flauto solo</tei:title>: musical comedy,
+                    libretto by H. von Wolzogen, first performance Prague, November 12, 1905.
+                    Whether Schenker attended is unclear. His diaries do not cover 1905 (other than
+                    the whereabouts of his summer vacation). However, the undated letter <tei:ref
+                        type="correspondence" cRef="OJ-9-6_45a">OJ 9/6, [45a]</tei:ref> suggests
+                    strongly that he did so.</tei:note></tei:p>
+
+            <tei:closer>
+                <tei:salute rend="indent-30">Viele herzliche Grüße, auch von meiner <tei:rs
+                        type="person" key="entity-000151">Frau</tei:rs></tei:salute>
+                <tei:salute rend="indent-30">Ihr</tei:salute>
+                <tei:signed rend="indent-40"><tei:rs type="person" key="entity-000150">Eugen
+                        d’Albert</tei:rs>.</tei:signed>
+            </tei:closer>
+
+        </tei:div>
+
+        <tei:div type="translation">
+
+            <tei:opener>
+                <tei:address>
+                    <tei:addrLine><tei:handShift new="#printed"/>MEINA</tei:addrLine>
+                    <tei:addrLine rend="indent-10">Lago Maggiore</tei:addrLine>
+                    <tei:addrLine rend="indent-20">VILLA ERMINIA</tei:addrLine>
+                    <tei:addrLine rend="indent-50"><tei:handShift new="#d-A"/><tei:date
+                            when="1905-06-15">June 15, 1905</tei:date></tei:addrLine>
+                </tei:address>
+                <tei:salute>Dear Dr. <tei:supplied reason="identity"><tei:rs type="person"
+                            key="entity-000632">Schenker</tei:rs></tei:supplied>,</tei:salute>
+            </tei:opener>
+
+            <tei:p>With many thanks, I return herewith <tei:title level="m">Amor and
+                    Psyche</tei:title>.<tei:ptr corresp="#r0001-fn01" type="footnote"/> I definitely
+                cannot bring myself to make it into a composition. Symbolism – the enemy of drama –
+                is alien to me, and I would not want to involve myself with a ballet. What’s more,
+                the ballet requires the sort of production that only Vienna or <tei:rs type="place"
+                    key="entity-002501">Berlin</tei:rs> would be in a position to do justice
+                to.</tei:p>
+            <tei:p><tei:pb n="2"/> I am very happy that you straight way thought of me; and I ask
+                you to continue to render <tei:add place="interlinear-above">me</tei:add> this act
+                of friendship in the future.<tei:ptr corresp="#r0001-fn02" type="footnote"/></tei:p>
+
+            <tei:p>Will you be coming to <tei:rs type="place" key="entity-002892">Prague</tei:rs>
+                for the première of my “cultural-historical” <tei:title level="m">Flauto
+                    Solo</tei:title> (in November)? I do hope so.<tei:ptr corresp="#r0001-fn03"
+                    type="footnote"/></tei:p>
+
+            <tei:closer>
+                <tei:salute rend="indent-30">Cordial greetings, also from my <tei:rs type="person"
+                        key="entity-000151">wife</tei:rs>,</tei:salute>
+                <tei:salute rend="indent-30">Your</tei:salute>
+                <tei:signed rend="indent-40"><tei:rs type="person" key="entity-000150">Eugen
+                        d’Albert</tei:rs></tei:signed>
+            </tei:closer>
+
+
+        </tei:div>
+    </sdo:record>
+</sdo:recordCollection>

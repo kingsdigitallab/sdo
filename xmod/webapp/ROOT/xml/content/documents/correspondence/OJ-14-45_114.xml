@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?><sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1019" sdoID="OJ-14-45_114">OJ 14/45, [114]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="MV" scope="major">Moriz Violin's hand</tei:handNote>
+      <tei:handNote xml:id="KV" scope="minor">Karl Violin's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2013</tei:resp>
+      <tei:resp>Translation, 2013</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="DB">
+      <tei:persName>David Bretherton</tei:persName>
+      <tei:resp>XML Encoding, 2013</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2013-07-23" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002719">ViolinM ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002717">ViolinM+V ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002718">ViolinM+V+F ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+
+
+      <dc:title>Handwritten picture postcard from Moriz and Karl Violin to Schenker, undated,
+        postmarked July 16, [1929]</dc:title>
+
+      <dcterms:created>1929-07-16T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2013-07-23</dcterms:dateSubmitted>
+      <dc:description>Violin and his son have taken a bus to Brocken in the Harz mountains, the
+        highest point in northern Germany.</dc:description>
+      <dc:subject/>
+
+    <marcrel:correspondent key="entity-000909">ViolinF</marcrel:correspondent><marcrel:correspondent key="entity-000913">ViolinM</marcrel:correspondent><marcrel:correspondent key="entity-000914">ViolinV</marcrel:correspondent><marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient></sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:note type="editorial">Picture, captioned: <tei:rs key="entity-004838" type="place">BROCKEN</tei:rs>, 1142 m u. M. Teufelskanzel</tei:note>
+        <tei:lb/><tei:lb/>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline">printed:</tei:note>
+          <tei:handShift new="#printed"/>Brocken-Postkarte</tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">Absender:</tei:supplied>
+              <tei:handShift new="#MV"/>Violin, Hohegeiß:/Harz</tei:addrLine>
+            <tei:addrLine>Langestrasse 54</tei:addrLine>
+          </tei:address>
+          <tei:lb/>
+          <tei:handShift new="#stamp"/>BROCKEN HOTEL | OFFICIELLE ANSICHSTSKARTE BROCKEN <tei:note type="editorial" place="inline">drawing of a witch with broom</tei:note> | 1142 Meter
+          ü.Meeresspiegel <tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied>
+              <tei:handShift new="#MV"/>Dr</tei:addrLine>
+            <tei:addrLine>Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-30">Galtür</tei:addrLine>
+            <tei:addrLine rend="indent-30">Tirol</tei:addrLine>
+          </tei:address>
+          <tei:lb/><tei:fw type="postmark">|| BROCKEN | 16. 7. <tei:gap reason="illegible" extent="few characters"/> | * * <tei:gap reason="illegible" extent="few characters"/>
+            ||</tei:fw>
+          <tei:lb/>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#MV"/>L. <tei:rs key="entity-000632" type="person">H.</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this
+            postcard is recorded in Schenker's diary at OJ 4/2, p. 3354 (July 18, 1929): "Von Fl.
+            (Ansichtsk.): Gruß vom Brocken, Karli schreibt an." ("From Floriz (picture postcard):
+            greetings from Brocken, little Karl adds a note.")</tei:note>
+        </tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Ein erster Versuch mit <tei:rs key="entity-000912" type="person">Karli</tei:rs> per Autobus auf den <tei:rs key="entity-004838" type="place">Brocken</tei:rs>. Hoffentlich ist er bald hergestellt. Ich selbst bin mäßig gesund, aber
+        erhoffe viel! Am <tei:date when="1929-08-01">1. August</tei:date> wieder in <tei:rs key="entity-002589" type="place">Hamburg</tei:rs>. Gleich Vollbetrieb. Am <tei:date when="1929-09-11">11. September</tei:date> muss ich schon spielen.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Innigst Euer</tei:salute>
+        <tei:signed rend="indent-85"><tei:rs key="entity-000913" type="person">Floriz</tei:rs></tei:signed>
+        <tei:salute><tei:handShift new="#KV"/>Herzliche <tei:lb/>Grüße</tei:salute>
+        <tei:signed rend="indent-50"><tei:rs key="entity-000912" type="person">Carli</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:note type="editorial">Picture, captioned: <tei:rs key="entity-004838" type="place">BROCKEN</tei:rs>, 1142 meters above sea level: Devil's Pulpit</tei:note>
+        <tei:lb/><tei:lb/>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline">printed:</tei:note>
+          <tei:handShift new="#printed"/>Brocken Postcard</tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">sender:</tei:supplied>
+              <tei:handShift new="#MV"/>Violin, Hohegeiß in the Harz</tei:addrLine>
+            <tei:addrLine>Langestrasse 54</tei:addrLine>
+          </tei:address>
+          <tei:lb/>
+          <tei:handShift new="#stamp"/>BROCKEN HOTEL | OFFICIAL PICTURE POSTCARD OF BROCKEN
+            <tei:note type="editorial" place="inline">drawing of a witch with broom</tei:note> |
+          1142 meters above sea level <tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">to:</tei:supplied>
+              <tei:handShift new="#MV"/>Dr</tei:addrLine>
+            <tei:addrLine>Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-30">Galtür</tei:addrLine>
+            <tei:addrLine rend="indent-30">Tirol</tei:addrLine>
+          </tei:address>
+          <tei:lb/><tei:fw type="postmark">|| BROCKEN | 16. 7. <tei:gap reason="illegible" extent="few characters"/> | * * <tei:gap reason="illegible" extent="few characters"/>
+            ||</tei:fw>
+          <tei:lb/>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#MV"/>Dearest <tei:rs key="entity-000632" type="person">Heinrich</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/>
+        </tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">A first attempt with little <tei:rs key="entity-000912" type="person">Karl</tei:rs> by bus to the <tei:rs key="entity-004838" type="place">Brocken</tei:rs>. I
+        hope that he will soon be in good shape I myself am moderately well, but have high
+        expections! On <tei:date when="1929-08-01">August 1</tei:date>, back in <tei:rs key="entity-002589" type="place">Hamburg</tei:rs>. Full operation imediately. I must
+        perform already on <tei:date when="1929-09-11">September 11</tei:date>.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Most intimately yours,</tei:salute>
+        <tei:signed rend="indent-85"><tei:rs key="entity-000913" type="person">Floriz</tei:rs></tei:signed>
+        <tei:salute><tei:handShift new="#KV"/>Affectionate <tei:lb/>greetings</tei:salute>
+        <tei:signed rend="indent-50"><tei:rs key="entity-000912" type="person">Carli</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

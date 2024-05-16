@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1696" sdoID="OC-52-384">OC 52/384</sdo:correspondence>
+    </sdo:source>
+    <tei:handNotes>
+      <tei:handNote xml:id="TPue" scope="major">typist of Universal Edition</tei:handNote>
+      <tei:handNote xml:id="EH" scope="major">Emil Hertzka's hand</tei:handNote>
+      <tei:handNote xml:id="HS" scope="minor">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2004, 2016</tei:resp>
+      <tei:resp>Translation, 2004, 2016</tei:resp>
+      <tei:resp>XML Encoding, 2016</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-02-07" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002702">UE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002701">UE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002700">Hertzka ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">postcard</tei:rs>
+
+
+
+      <dc:title>Typewritten postcard (book slip) from Hertzka (UE) to Schenker, dated March 26,
+        1908</dc:title>
+
+      <dcterms:created>1908-03-26T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2016-03-09</dcterms:dateSubmitted>
+      <dc:description>UE asks for additions to Beitrag zur Ornamentik by the beginning of the
+        following week.</dc:description>
+      <dc:subject>Herstellung; production; Neuauflage; new edition</dc:subject>
+
+      <marcrel:correspondent key="entity-002408">Universal Edition</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000356">Emil Hertzka</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:supplied reason="format">all in decorative rule-frame</tei:supplied>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+            >Bücherzettel.</tei:hi></tei:fw><tei:lb/>
+        <tei:address>
+          <tei:addrLine>An <tei:handShift new="#TPue"/>Herrn Professor Dr. Heinrich
+            Schenker,</tei:addrLine>
+          <tei:addrLine><tei:handShift new="#printed"/>in <tei:handShift new="#TPue"/><tei:hi
+              rend="underline sperr">WIEN</tei:hi>
+          </tei:addrLine>
+          <tei:addrLine>III. Reisnerstrasse 38</tei:addrLine>
+        </tei:address>
+        <tei:fw type="postmark">|| WIEN | 13 | 26.3.08 | 7-8N ||</tei:fw><tei:lb/><tei:lb/>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:address>
+          <tei:addrLine><tei:persName>Herrn Prof. Dr. Heinr. Schenker</tei:persName>
+          </tei:addrLine>
+          <tei:addrLine rend="indent-50">
+            <tei:hi rend="underline sperr">Wien.</tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:salute>Sehr geehrter Herr <tei:rs key="entity-000632" type="person"
+          >Professor</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Mit Vergnügen nehmen wir zur Kenntnis,<tei:note xml:id="r0001-fn01"
+          type="editorial" place="foot">This acknowledges <tei:ref type="correspondence"
+            cRef="WSLB-1">WSLB 1</tei:ref>, March 25, 1908.</tei:note> dass Sie in der neuen Auflage
+        einige Zusätze wünschen. Wir bitten Sie uns diese so rasch als möglich<tei:note
+          xml:id="r0001-fn02" type="editorial" place="foot">"so rasch als möglich" ("as quickly as
+          possible") underlined by Schenker.</tei:note>
+        <tei:note type="editorial" place="inline">cued from below
+          valedictions:</tei:note><tei:handShift new="#EH"/>möglichst bis Anfang der nächsten
+          Woche<tei:note type="editorial" place="inline">end cue</tei:note>
+        <tei:handShift new="#TPue"/>zukommen zu lassen, da die Neuauflage sehr dringend
+          ist.<tei:note xml:id="r0001-fn03" type="editorial" place="foot">"Neuaflage sehr drigend
+          ist" ("new edition is very urgent") underlined by Schenker.</tei:note></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">Wir zeichnen mit</tei:salute>
+        <tei:salute rend="indent-10">vorzüglicher Hochachtung</tei:salute><tei:lb/><tei:lb/>
+        <tei:note type="editorial" place="inline">right side:</tei:note>
+        <tei:salute><tei:handShift new="#printed"/>Hochachtungsvoll</tei:salute>
+        <tei:signed><tei:rs key="entity-002408" type="organization">„Universal-Edition“
+            A-G.</tei:rs><tei:lb/>(Jos. Aibl Verlag, G.m.b.H.)</tei:signed>
+        <tei:signed><tei:handShift new="#EH"/><tei:rs key="entity-000356" type="person">Emil
+            Hertzka</tei:rs></tei:signed><tei:lb/><tei:lb/>
+        <tei:note type="editorial" place="inline">left side:</tei:note>
+        <tei:dateline><tei:handShift new="#printed"/>Wien, am <tei:handShift new="#EH"/>26. III
+            <tei:handShift new="#printed"/>190<tei:handShift new="#EH"/>8</tei:dateline>
+        <tei:address>
+          <tei:addrLine>I. Maximilianstraße 11.</tei:addrLine>
+          <tei:addrLine>(Telefon 4921, lokal u. interurban).</tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+
+    </tei:div>
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:supplied reason="format">all in decorative rule-frame</tei:supplied>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold">Book
+            Slip</tei:hi></tei:fw><tei:lb/>
+        <tei:address>
+          <tei:addrLine>To: <tei:handShift new="#TPue"/>Professor Heinrich Schenker,</tei:addrLine>
+          <tei:addrLine><tei:handShift new="#printed"/>in <tei:handShift new="#TPue"/><tei:hi
+              rend="underline sperr">VIENNA</tei:hi> III </tei:addrLine>
+          <tei:addrLine>Reisnerstrasse 38</tei:addrLine>
+        </tei:address>
+        <tei:fw type="postmark">|| VIENNA | 13 | 26.3.08 | 7-8PM ||</tei:fw><tei:lb/><tei:lb/>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:address>
+          <tei:addrLine><tei:persName>Prof. Heinr. Schenker</tei:persName>
+          </tei:addrLine>
+          <tei:addrLine rend="indent-50">
+            <tei:hi rend="underline sperr">Vienna</tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:salute>Dear <tei:rs key="entity-000632" type="person">Professor</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">We note with pleasure<tei:ptr corresp="#r0001-fn01" type="footnote"/> that
+        you wish to make some additions for the new edition. Please let us have these as quickly as
+          possible,<tei:ptr corresp="#r0001-fn02" type="footnote"/>
+        <tei:note type="editorial" place="inline">cued from below
+          valedictions:</tei:note><tei:handShift new="#EH"/>if at all possible by the beginning of
+        next week<tei:note type="editorial" place="inline">end cue</tei:note>
+        <tei:handShift new="#TPue"/>since the new edition is very urgent.<tei:ptr
+          corresp="#r0001-fn03" type="footnote"/></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">We remain</tei:salute>
+        <tei:salute rend="indent-10">With kind regards,</tei:salute><tei:lb/><tei:lb/>
+        <tei:note type="editorial" place="inline">right side:</tei:note>
+        <tei:salute><tei:handShift new="#printed"/>Yours truly,</tei:salute>
+        <tei:signed><tei:rs key="entity-002408" type="organization">Universal Edition &amp;
+            Co.</tei:rs><tei:lb/>(Jos. Aibl Verlag Publisher, &amp; Co.)</tei:signed>
+        <tei:signed><tei:handShift new="#EH"/><tei:rs key="entity-000356" type="person">Emil
+            Hertzka</tei:rs></tei:signed><tei:lb/><tei:lb/>
+        <tei:note type="editorial" place="inline">left side:</tei:note>
+        <tei:dateline><tei:handShift new="#printed"/>Vienna, <tei:handShift new="#EH"/>March 26,
+            <tei:handShift new="#printed"/>190<tei:handShift new="#EH"/>8</tei:dateline>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="location ">Vienna</tei:supplied> I, Maximilianstraße
+            11</tei:addrLine>
+          <tei:addrLine>(Telephone 4921, local and interurban)</tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

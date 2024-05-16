@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3115" sdoID="OJ-10-3_130">OJ 10/3, [130]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="OED" scope="major">Otto Erich Deutsch's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-19" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture
+        postcard</tei:rs>
+
+      <dc:title>Handwritten picture postcard from Deutsch to Schenker, dated June 7, 1930</dc:title>
+
+      <dcterms:created>1930-06-07T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-03-26</dcterms:dateSubmitted>
+      <dc:description>Deutsch comments on the Beethoven military march (tattoo) he came across; he
+        is still looking for an arranger for Schubert’s marches for piano.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:note type="editorial" place="inline">picture: monastery, snow-capped mountains,
+          captioned: “Admont, Steiermark”</tei:note><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:supplied>Absender:</tei:supplied>
+            <tei:handShift new="#OED"/>Deutsch Böcklinstr. 26</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied> Herrn Dr. Heinrich
+            Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-50">Wien III.</tei:addrLine>
+          <tei:addrLine rend="indent-50">Keilgasse 8</tei:addrLine>
+        </tei:address>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-70"><tei:handShift new="#OED"
+            /><tei:placeName>Wien</tei:placeName>, <tei:date when="1930-06-07">7. VI.
+          30</tei:date></tei:dateline>
+        <tei:salute>Lieber verehrter Herr <tei:rs type="person" key="entity-000632"
+            >Doktor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
+            this postcard is recorded in Schenker’s diary for June 7, 1930: “Von Deutsch (K.): der
+            Zapfenstreich von Beethoven eine Entdeckung aus Verlegenheit; fragt nach einem
+            Bearbeiter für einige Schubert-Märsche” (“from Deutsch (postcard): the military tattoo
+            by Beethoven was an unexpected(?) discovery; he inquires about an arranger for some
+            Schubert marches”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Unsere Rohre<tei:note xml:id="r0001-fn02" type="editorial" place="foot"
+          >Deutsch’s letter of June 6 (<tei:ref type="correspondence" cRef="OJ-10-3_129">OJ 10/3,
+            [129]</tei:ref>) and Schenker’s postcard (not surviving), recorded in the diary for June
+          5: “An Deutsch (K. expreß): frage nach der Wiener Adresse des Verlags; über die Serenade”
+          (“To Deutsch (express postcard): I ask him for the Viennese address of the publishers;
+          concerning the evening concert”).</tei:note> haben sich gestern gekreuzt wie Schwerter.
+        Ich hatte also vergessen: der <tei:rs type="organization" key="entity-002627">DMV</tei:rs>
+        hat in Wien keine verlagerische Vertretung mehr, nur eine Auslieferung. –<tei:note
+          xml:id="r0001-fn03" type="editorial" place="foot">Deutsch inserts a dash then continues
+          writing without paragraph-break.</tei:note></tei:p>
+
+      <tei:p>Den Zapfenstreich<tei:note xml:id="r0001-fn04" type="editorial" place="foot">Beethoven,
+            <tei:title level="m">Zapfenstreich</tei:title> in C major, WoO 20; it was performed on
+          June 2, in the first of Deutsch’s “Serenades” in the Leopoldplatz.</tei:note> habe ich
+        leider nur gefunden, nicht aber gefunden. Das heißt: ich wollte einen der Märsche bringen
+        und stieß zufällig auf diesen, weil ein anderer den <tei:rs type="organization"
+          key="entity-003235">Philharmoniker</tei:rs>n Besetzungs-Schwierigkeiten machte, ein
+        dritter Stimmungs-Nöten. –<tei:note xml:id="r0001-fn05" type="editorial" place="foot"
+          >Deutsch inserts a dash then continues writing without paragraph-break.</tei:note></tei:p>
+
+      <tei:p>Nun suche ich jemand, der besser als <tei:rs type="person" key="entity-003893"
+          >Herbeck</tei:rs><tei:del rend="overstrike">, <tei:rs type="person" key="entity-000610"
+            >Mottl</tei:rs></tei:del><tei:note xml:id="r0001-fn06" type="editorial" place="foot"
+          >FFFF</tei:note>
+        <tei:rs type="person" key="entity-000533">Liszt</tei:rs> alle Märsche (4 hd.) von <tei:rs
+          type="person" key="entity-000803">Schubert</tei:rs> bearbeitet, brauchbar auch: für Bläser
+        oder Orchester. <tei:rs type="person" key="entity-000533">Liszt</tei:rs> hat nur vier, und
+        die sehr kompliziert besetzt. <tei:rs type="person" key="entity-003893">Herbeck</tei:rs> ist
+        schwach. <tei:rs type="person" key="entity-000871">Richard Strauß</tei:rs> wird zu teuer
+        sein. <tei:rs type="person" key="entity-000470">Korngold</tei:rs> hätte, scheint es, Lust
+        dazu. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">2:2!</tei:salute>
+        <tei:salute rend="indent-70">Ihr sehr ergebener</tei:salute>
+        <tei:signed rend="indent-80">
+          <tei:rs key="entity-000164" type="person">O E Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:note type="editorial" place="inline">picture: monastery, snow-capped mountains,
+          captioned: “Admont, Styria”</tei:note><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:supplied>From:</tei:supplied>
+            <tei:handShift new="#OED"/>Deutsch Böcklinstraße 26</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied> Dr. Heinrich
+            Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-50">Keilgasse 8</tei:addrLine>
+          <tei:addrLine rend="indent-50">Wien III</tei:addrLine>
+        </tei:address>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-70"><tei:handShift new="#OED"
+            /><tei:placeName>Vienna</tei:placeName>, <tei:date when="1930-06-07">June 7,
+            1930</tei:date></tei:dateline>
+        <tei:salute>Dear revered Dr. <tei:supplied reason="identity"><tei:rs type="person"
+              key="entity-000632">Schenker</tei:rs></tei:supplied>,<tei:ptr corresp="#r0001-fn01"
+            type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Our express messages<tei:ptr corresp="#r0001-fn02" type="footnote"/>
+        crossed yesterday, like swords. I had forgotten to tell you: <tei:rs type="organization"
+          key="entity-002627">Drei Masken Verlag</tei:rs> no longer has a publishing representative
+        in Vienna, only a distributor. –<tei:ptr corresp="#r0001-fn03" type="footnote"/></tei:p>
+
+      <tei:p>Unfortunately, I merely found the military tattoo,<tei:ptr corresp="#r0001-fn04"
+          type="footnote"/> I didn’t discover it. That is, I wanted to use one of the marches and
+        hit upon this one by chance, because another one was causing problems for the <tei:rs
+          type="organization" key="entity-003235">Philharmonic</tei:rs> in the allocation of parts,
+        and the third created difficulties of tuning. –<tei:ptr corresp="#r0001-fn05"
+          type="footnote"/></tei:p>
+
+      <tei:p>Now I am looking for someone who can arrange all four <tei:rs type="person"
+          key="entity-000803">Schubert</tei:rs> marches (for piano four hands) better than <tei:rs
+          type="person" key="entity-003893">Herbeck</tei:rs><tei:del rend="overstrike">, <tei:rs
+            type="person" key="entity-000610">Mottl</tei:rs>,</tei:del><tei:ptr
+          corresp="#r0001-fn06" type="footnote"/> and <tei:rs type="person" key="entity-000533"
+          >Liszt</tei:rs>, which would be usable also for wind band or orchestra. <tei:rs
+          type="person" key="entity-000533">Liszt</tei:rs> did only four, and these are scored in a
+        complicated way. <tei:rs type="person" key="entity-003893">Herbeck</tei:rs>’s are weak.
+          <tei:rs type="person" key="entity-000871">Richard Strauss</tei:rs> will be too expensive.
+          <tei:rs type="person" key="entity-000470">Korngold</tei:rs>, it seems, is not interested
+        in them.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">From the two of us to the two of you,</tei:salute>
+        <tei:salute rend="indent-70">Your very devoted</tei:salute>
+        <tei:signed rend="indent-80">
+          <tei:rs key="entity-000164" type="person">O. E. Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

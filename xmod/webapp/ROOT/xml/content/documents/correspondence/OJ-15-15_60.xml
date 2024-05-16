@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2131" sdoID="OJ-15-15_60">OJ 15/15, [60]</sdo:correspondence>
+    </sdo:source>
+
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HW" scope="major">Hans Weisse's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2008</tei:resp>
+      <tei:resp>Translation, 2008</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2018</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2013-09-12" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002737">Weisse ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002715">Weisse ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture
+        postcard</tei:rs>
+
+      <dc:title>Handwritten picture postcard from Weisse to Schenker, dated April 21,
+        1931</dc:title>
+
+      <dcterms:created>1931-04-21T10:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2018-10-04</dcterms:dateSubmitted>
+      <dc:description>Weisse suggests possible dates and times for a meeting between himself and
+        Schenker, without Furtwängler.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000951">Weisse</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+      <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postkarte</tei:hi>
+        </tei:fw>
+        <tei:lb/><tei:note type="editorial" place="inline">top-left, picture captioned: Steyr,
+          Oberösterreich</tei:note><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">Absender:</tei:supplied>
+              <tei:handShift new="#HW"/>D<tei:hi rend="supralinear">r</tei:hi> H
+              Weisse</tei:addrLine>
+            <tei:addrLine>Wattmanng 5.</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine rend="indent-10"><tei:supplied reason="clarity">An:</tei:supplied> Herrn
+                D<tei:hi rend="supralinear">r.</tei:hi> Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-30">Keilgasse 8</tei:addrLine>
+            <tei:addrLine rend="indent-40">Wien III.</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:add resp="#HW">Rohrpost.</tei:add><tei:lb/>
+          <tei:fw type="postmark">|| 13/1 WIEN 89 | 21.IV.31‒11 | * 3c * || <tei:note
+              type="editorial" place="inline">twice</tei:note></tei:fw>
+          <tei:fw type="postmark">|| 3 WIEN 128 | 21.IV.31‒<tei:gap reason="illegible"/> | * R *
+            ||</tei:fw><tei:lb/>
+        </tei:fw>
+        <tei:lb/><tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-70"><tei:date when="1931-04-21">21. IV.
+          31</tei:date>.</tei:dateline>
+        <tei:salute>Lieber verehter <tei:rs key="entity-000632" type="person"
+            >Meister</tei:rs>,<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
+            this postcard is recorded in Schenker's diary at OJ 4/4, p. 3608, April 21, 1931: "Von
+            Weisse (K. expreß): wäre bereit Donnerstag oder Samstag zu kommen." ("From Weisse
+            (express postcard): he would be ready to come on Thursday or
+          Saturday.").</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p><tei:rs type="person" key="entity-000268">F.</tei:rs> hatte ich bereits vergangenen
+        Freitag express geschrieben.<tei:note xml:id="r0001-fn02" type="editorial" place="foot">See
+            <tei:ref type="correspondence" cRef="OJ-15-15_59">OJ 15/15, [59]</tei:ref>, in which
+          Weisse had hoped that he and Furtwängler would visit Schenker together.</tei:note></tei:p>
+
+      <tei:p>Sehr gerne käme ich zu Ihnen. Wann passt es Ihnen am besten? <tei:date
+          when="1931-04-26">Sonntag</tei:date> vormittag könnte ich diesmal nicht. Eventuell
+          <tei:date when="1931-04-23">Donnerstag</tei:date> oder <tei:date when="1931-04-25"
+          >Samstag</tei:date> abends? <tei:date when="1931-04-23">Donnerstag</tei:date> habe ich
+        allerdings bis ½7 Unterricht.</tei:p>
+
+
+      <tei:closer>
+        <tei:salute rend="indent-10">Allerherzlichstes Ihnen beiden.</tei:salute>
+        <tei:salute rend="indent-50">Ihr</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs key="entity-000951" type="person"><tei:hi
+              rend="lateinschr">H</tei:hi></tei:rs>.</tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postcard</tei:hi>
+        </tei:fw>
+        <tei:lb/><tei:note type="editorial" place="inline">top-left, picture captioned: Steyr, Upper
+          Austria</tei:note><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">From:</tei:supplied>
+              <tei:handShift new="#HW"/>Dr. H Weisse</tei:addrLine>
+            <tei:addrLine>Wattmanngasse 5</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine rend="indent-10"><tei:supplied reason="clarity">To:</tei:supplied> Dr.
+              Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-30">Keilgasse 8</tei:addrLine>
+            <tei:addrLine rend="indent-40">Vienna III</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:add resp="#HW">by pneumatic post</tei:add><tei:lb/>
+          <tei:fw type="postmark">|| 13/1 VIENNA 89 | 21.IV.31‒11 | * 3c * || <tei:note
+              type="editorial" place="inline">twice</tei:note></tei:fw>
+          <tei:fw type="postmark">|| 3 VIENNA 128 | 21.IV.31‒<tei:gap reason="illegible"/> | * R *
+            ||</tei:fw><tei:lb/>
+        </tei:fw>
+        <tei:lb/><tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-70"><tei:date when="1931-04-21">April 21,
+          1931</tei:date></tei:dateline>
+        <tei:salute>Dear, revered <tei:rs key="entity-000632" type="person">Master</tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>I had in fact written an express letter to <tei:rs type="person" key="entity-000268"
+          >F.</tei:rs> last Friday.<tei:ptr corresp="#r0001-fn02" type="footnote"/>
+      </tei:p>
+
+      <tei:p>I would be delighted to come to your place. When is the most suitable time for you?
+        This time I could not come <tei:date when="1931-04-26">Sunday</tei:date> morning; possibly
+          <tei:date when="1931-04-23">Thursday</tei:date> or <tei:date when="1931-04-25"
+          >Saturday</tei:date> evening. On <tei:date when="1931-04-23">Thursday</tei:date> I must,
+        at any rate, teach until half past six.</tei:p>
+
+
+      <tei:closer>
+        <tei:salute rend="indent-10">Most cordial greetings to the two of you.</tei:salute>
+        <tei:salute rend="indent-50">Your</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs key="entity-000951" type="person"
+          >H</tei:rs>.</tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

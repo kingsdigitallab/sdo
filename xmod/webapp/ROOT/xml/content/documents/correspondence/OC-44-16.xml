@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="2558" sdoID="OC-44-16">OC 44/16</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="RB" scope="major">Robert Brünauer's hand</tei:handNote>
+   <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>Transcription, 2009, 2022</tei:resp>
+   <tei:resp>Translation, 2009, 2022</tei:resp>
+   <tei:resp>XML Encoding, 2022</tei:resp>
+  </tei:respStmt>
+
+
+  <tei:revisionDesc>
+   <tei:change when="2011-06-09" who="#IB">XML code created</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-008064">BrünauerR ~
+    HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+   <dc:title>Handwritten letter from Robert Brünauer to Schenker, dated August 8, 1934</dc:title>
+
+   <dcterms:created>1934-08-08T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2022-03-19</dcterms:dateSubmitted>
+   <dc:description>Brünauer reacts favorably to Oswald Jonas's newly published
+    book.</dc:description>
+   <dc:subject/>
+
+
+   <marcrel:correspondent key="entity-000107">BrünauerR</marcrel:correspondent>
+   <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+  </sdo:itemDesc>
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:dateline rend="indent-60"><tei:handShift new="#RB"/><tei:placeName>Wien</tei:placeName>
+     <tei:date when="1934-08-08"> 8. August 34</tei:date></tei:dateline><tei:lb/>
+    <tei:address>
+     <tei:addrLine><tei:note type="editorial" place="inline">monogram:</tei:note>
+      <tei:handShift new="#printed"/>HI</tei:addrLine>
+
+     <tei:addrLine>HOTEL IMPERIAL</tei:addrLine>
+     <tei:addrLine>WIEN</tei:addrLine>
+    </tei:address><tei:lb/>
+    <tei:salute><tei:handShift new="#RB"/>Verehrter <tei:rs type="person" key="entity-000632"
+      >Meister</tei:rs><tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this
+      letter is recorded in Schenker's diary for August 12, 1934: "Von Brünauer (Br.): Lob Jonas'
+      u.s.w." ("From Brünauer (letter): praise of Jonas, etc."). — Editorial note: In the absence of
+      many comparative examples of Brünauer’s handwriting, there is an unusually high incidence of
+      illegible words and uncertain transcription and translation of words in the editing of this
+      letter.</tei:note></tei:salute>
+   </tei:opener>
+
+   <tei:p>Verzeihen Sie, daß ich Ihre liebe Karte<tei:note xml:id="r0001-fn02" type="editorial"
+     place="foot">Schenker's postcard is not known to survive, but its writing is recorded in
+     Schenker's diary for July 13, 1934: "An Brünauer (K.): Hinweis auf Jonas. Buch." ("To Brünauer
+     (postcard): notification of Jonas's book."). </tei:note> erst heute <tei:unclear
+     reason="reading">beantworte</tei:unclear>. </tei:p>
+
+   <tei:p>Die Ereignisse hier haben mich ganz aus der Sammlung u. Ruhe gebracht, seien Sie froh, daß
+    Sie nicht hier<tei:note xml:id="r0001-fn03" type="editorial" place="foot">The Schenkers were on
+     summer vacation in Böckstein at this time. </tei:note> waren. Die Aufregungen waren
+    entsetzlich. Hoffentlich sind Sie persönlich nicht gestört worden, nun weiß ja von den
+    ungünstigen Details nichts, von den localen Ereignissen. Es ist entsetzlich, was sich die
+     <tei:hi rend="lateinschr">Horden</tei:hi> samt Führern <tei:unclear reason="reading">ge<tei:subst>
+      <tei:del rend="overwritten">b</tei:del>
+      <tei:add place="superimposed">l</tei:add>
+     </tei:subst>eistet</tei:unclear> haben.<tei:note xml:id="r0001-fn04" type="editorial"
+     place="foot">The abortive July putsch, in which Austrian Nazis and the German SS mounted a coup
+     against the Austrian government of Engelbert Dollfuss, took place between 25 and 30 July,
+     resulting in many deaths, including the assassination of Dollfuss himself.</tei:note> — </tei:p>
+
+   <tei:p>Veehrter Meister, über das <tei:rs type="person" key="entity-000412"
+     >Jonas</tei:rs>buch<tei:note xml:id="r0001-fn05" type="editorial" place="foot"
+       ><tei:bibl><tei:author>Oswald Jonas</tei:author>, <tei:title level="m">Das Wesen des
+       musikalischen Kunstwerks: Einführung in die Lehre Heinrich Schenkers</tei:title> (Vienna:
+      Saturn-Verlag, 1934)</tei:bibl>, which had been released c. July 1, and of which Schenker had
+     received his five copies from <tei:rs type="organization" key="entity-003103"
+      >Saturn-Verlag</tei:rs> on July 11, at a cost of 50 Schillings. </tei:note> war ich ganz
+    erschüttert. Ich kann es gar nicht <tei:pb n="2"/> verstehen, mit welcher Sicherheit,
+    Geschicklichkeit u. Verständnis er alles in's Werk gesetzt hat. Ich mache dafür Propaganda, wo
+    ich es kann. Es hat treffende Gelehrsamkeit u. begierdenswerthe Einfühlung bewiesen. <tei:del
+     rend="overstrike">das</tei:del> Die Litteraturkenntnis ist erstaunlich. Das Aufnehmen u.
+     <tei:hi rend="lateinschr">Wiedergeben</tei:hi> ist voller Tact u. frei von jeder
+    Unbescheidenheit. Gerade dies ist ein enormer, anziehender Vorzug des Buches, wie er es
+     <tei:note type="editorial" place="inline">illeg. word</tei:note>, neben Ihre Persönlichkeit zu
+    treten. Ich wäre froh, wenn Sie mich prüften, vielleicht über die eine oder andere Stelle, die
+    mir zweifelhaft erscheint, doch verzeihlich, wenn man bedenkt, daß nur Sie allein nicht <tei:add
+     place="interlinear-above">nur</tei:add> die <tei:hi rend="lateinschr">Räthsel</tei:hi>
+    auflösen, sondern <tei:add place="interlinear-above">überhaupt</tei:add> erst zeigen können. Daß
+    Sie <tei:rs type="person" key="entity-000412">Jonas</tei:rs> Ihre Aeußerung zeigen, ist der
+    grösste Beweis seines Leistungswerths. </tei:p>
+
+   <tei:p><tei:pb n="3"/> Ich würde mich besonders freuen, wenn Sie mir Ziel über Ihr u. Ihre w.
+     <tei:rs type="person" key="entity-000771">Frau</tei:rs> Befinden zu kommen lassen würden. Ich
+    hoffe, daß ich Sie im September bald aufsuchen darf u. Sie mit allerherzlichsten Wünschen für
+    Ihr Wohlbefinden und <tei:note type="editorial" place="inline">illeg. word</tei:note>
+    <tei:unclear reason="reading">Ferien</tei:unclear> an Ihre <tei:rs type="person"
+     key="entity-000771">Frau</tei:rs> u. Sie<tei:note xml:id="r0001-fn06" type="editorial"
+     place="foot">The final sentence is somewhat garbled.</tei:note></tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-40">Ihr dankbarst ergebener</tei:salute>
+    <tei:signed rend="indent-50"><tei:rs type="person" key="entity-000107"><tei:hi rend="lateinschr"
+       >Robert Brünauer</tei:hi></tei:rs></tei:signed>
+   </tei:closer>
+
+  </tei:div>
+
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:dateline rend="indent-60"><tei:handShift new="#RB"/><tei:placeName>Vienna</tei:placeName>,
+      <tei:date when="1934-08-08">August 8, 1934</tei:date></tei:dateline><tei:lb/>
+    <tei:address>
+     <tei:addrLine><tei:note type="editorial" place="inline">monogram:</tei:note>
+      <tei:handShift new="#printed"/>HI</tei:addrLine>
+
+     <tei:addrLine>HOTEL IMPERIAL</tei:addrLine>
+     <tei:addrLine>VIENNA</tei:addrLine>
+     <tei:lb/>
+    </tei:address>
+    <tei:salute><tei:handShift new="#RB"/>Revered <tei:rs type="person" key="entity-000632"
+      >Master</tei:rs><tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+   </tei:opener>
+
+   <tei:p>Forgive me for not <tei:unclear reason="original_unclear">answering</tei:unclear> your
+    welcome postcard<tei:ptr corresp="#r0001-fn02" type="footnote"/> before today.</tei:p>
+
+   <tei:p>The events here have totally shaken me out of my composure and peace of mind. Be thankful
+    that you were not here.<tei:ptr corresp="#r0001-fn03" type="footnote"/> The disturbances were
+    horrific. I hope that you have not personally been upset – I myself know nothing of the
+    inauspicious details – by the local happenings. What the mobs and their leaders have
+     <tei:unclear reason="original_unclear">permitted themselves</tei:unclear> to do is
+     appalling.<tei:ptr corresp="#r0001-fn04" type="footnote"/> –</tei:p>
+
+   <tei:p>Revered Master, I was deeply moved by the <tei:rs type="person" key="entity-000412"
+     >Jonas</tei:rs> book.<tei:ptr corresp="#r0001-fn05" type="footnote"/> I can’t begin <tei:pb
+     n="2"/> to comprehend how he has put it all into the work with such sure-footedness, skill and
+    understanding. I am spreading the word about it wherever I can. It has demonstrated appropriate
+    erudition combined with enviable empathy. His knowledge of the literature is astonishing. His
+    assimilation and exposition is full of tact and free of any immodesty. Precisely one enormous
+    advantage, one great attraction of the book, is how he <tei:unclear reason="meaning_uncertain"
+     >contrives</tei:unclear> to come close to your personality. I should be happy if you were to
+    check for me, perhaps one or two of the passages that seem to me doubtful, <tei:supplied
+     reason="clarity">which</tei:supplied> can after all be excused considering that you <tei:add
+     place="interlinear-above">alone</tei:add> are not only able to solve the riddles but <tei:add
+     place="interlinear-above">actually</tei:add> able to show them in the first place. That you
+    give <tei:rs type="person" key="entity-000412">Jonas</tei:rs> your expression <tei:supplied
+     reason="clarity">of approval</tei:supplied> is the clearest evidence of the value of his
+    achievement.</tei:p>
+
+   <tei:p><tei:pb n="3"/> I would be especially pleased if you would let me have me an account of
+    your and your esteemed <tei:rs type="person" key="entity-000771">wife</tei:rs>’s health. I hope
+    that early in September I may call on you, and <tei:supplied reason="omission">extend
+     to</tei:supplied> you my most cordial best wishes for your welfare and <tei:unclear
+     reason="original_illegible">remaining</tei:unclear>
+    <tei:unclear reason="original_unclear">holiday</tei:unclear> to your <tei:rs type="person"
+     key="entity-000771">wife</tei:rs> and you,<tei:ptr corresp="#r0001-fn06" type="footnote"
+    /></tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-40">Your most gratefully devoted </tei:salute>
+    <tei:signed rend="indent-50"><tei:rs type="person" key="entity-000107">Robert
+     Brünauer</tei:rs></tei:signed>
+   </tei:closer>
+
+
+  </tei:div>
+ </sdo:record>
+</sdo:recordCollection>

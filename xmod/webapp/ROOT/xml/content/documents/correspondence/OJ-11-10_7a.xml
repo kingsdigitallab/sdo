@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2482" sdoID="OJ-11-10_7a">OJ 11/10, [7a]</sdo:correspondence>
+    </sdo:source>
+
+
+    <tei:handNotes>
+      <tei:handNote xml:id="TF" scope="major">Theodor von Frimmel's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="HE">
+      <tei:persName>Heribert Esser</tei:persName>
+      <tei:resp>Transcription, 2019</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Translation, 2020</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2020</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2013-08-29" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005688">FrimmelT ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-003332">Calling card</tei:rs>
+
+      <dc:title>Handwritten calling card from Frimmel to Schenker, undated [March 17 or 18,
+        1905]</dc:title>
+
+      <dcterms:created>1905-03-17T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2020-07-28</dcterms:dateSubmitted>
+      <dc:description>Frimmel encloses ticket for his Beethoven lectures.</dc:description>
+      <dc:subject>Eintrittkarte; ticket of admission</dc:subject>
+
+      <marcrel:correspondent key="entity-000259">Theodor von Frimmel</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="center">
+          <tei:handShift new="#printed"/><tei:hi rend="bold">D<tei:hi rend="supralinear">r.</tei:hi>
+            <tei:rs type="person" key="entity-000259">Theodor von Frimmel</tei:rs>
+          </tei:hi><tei:lb/><tei:hi rend="bold">gräfl. Schönborn-Wiesentheid’scher
+            Galeriedirektor</tei:hi></tei:fw><tei:lb/><tei:lb/>
+      </tei:opener>
+
+      <tei:p><tei:handShift new="#TF"/>Eintrittskarte zum <tei:rs type="person" key="entity-000055"
+          >Beethoven</tei:rs>kurs.<tei:note xml:id="r0001-fn01" type="editorial" place="foot"
+          >Schenker was notified that the ticket was forthcoming in Frimmel's postcard <tei:ref
+            type="correspondence" cRef="OJ-11-10_7">OJ 11/10, [7]</tei:ref>, March 14, acknowledged
+          by Schenker in <tei:ref type="correspondence" cRef="BNba-Frimmel-Nachl_2">NBba Frimmel
+            Nachl, [2]</tei:ref>, March 18, 1905. The ticket must have been enclosed with this
+          calling card and probably delivered by hand. Tickets went also to <tei:rs type="person"
+            key="entity-000913">Moriz Violin</tei:rs>, <tei:rs type="person" key="entity-000582"
+            >Irene Mayerhofer</tei:rs> and her daughter, and <tei:rs type="person"
+            key="entity-000274">Eduard Gärtner</tei:rs>.</tei:note></tei:p>
+
+      <tei:closer>
+        <tei:signed rend="indent-40"><tei:rs key="entity-000259" type="person"
+          >Fri.</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="center">
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Dr. <tei:rs type="person"
+              key="entity-000259">Theodor von Frimmel</tei:rs>
+          </tei:hi><tei:lb/><tei:hi rend="bold">Director of the Count Schönborn-Wiesentheid
+            Gallery</tei:hi></tei:fw><tei:lb/><tei:lb/>
+      </tei:opener>
+
+      <tei:p><tei:handShift new="#TF"/>Ticket of admission to the <tei:rs type="person"
+          key="entity-000055">Beethoven</tei:rs> course.<tei:ptr corresp="#r0001-fn01"
+          type="footnote"/></tei:p>
+
+      <tei:closer>
+        <tei:signed rend="indent-40"><tei:rs key="entity-000259" type="person"
+          >Fri.</tei:rs></tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

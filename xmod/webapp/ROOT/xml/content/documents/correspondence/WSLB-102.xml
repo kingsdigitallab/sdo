@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2946" sdoID="WSLB-102">WSLB 102</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="unkUE" scope="minor">unknown hand (UE)</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2006, 2023</tei:resp>
+      <tei:resp>Translation, 2006, 2023</tei:resp>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-04" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002700">Hertzka ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002701">UE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002702">UE ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+      <dc:title>Handwritten letter from Schenker to Hertzka (UE), dated March 17, 1912</dc:title>
+
+      <dcterms:created>1912-03-17T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-01-04</dcterms:dateSubmitted>
+      <dc:description>Schenker returns proofs of gather 16 of his monograph Beethovens neunte
+        Sinfonie.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000632">Heinrich Schenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000356">Emil Hertzka</marcrel:recipient>
+      <marcrel:recipient key="entity-002408">Universal Edition</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:salute rend="indent-10"><tei:handShift new="#HS"/>Sehr geehrter Herr <tei:rs
+            type="person" key="entity-000356">Direktor</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p>Anbei Bg. 16; der letzte Bg., den ich zur Zeit besitze, Bg. 17, geht Mitte der Woche an
+        Sie ab.<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Gatherings of <tei:rs
+            type="work" key="entity-001731"><tei:title level="m">Beethovens neunte
+              Sinfonie</tei:title></tei:rs>; 16 = pp. 241–56; 17 = pp. 257–72 [Eng. transl., pp.
+          221‒33, 233‒46]. There thus remain seven gatherings still to proof. </tei:note></tei:p>
+
+      <tei:p>Inzwischen haben Sie bereits die „<tei:hi rend="underline">Vorbemerkungen</tei:hi>“ zur
+          <tei:rs type="work" key="entity-001729"><tei:title>Tabelle</tei:title></tei:rs><tei:note
+            xml:id="r0001-fn02" type="editorial" place="foot">Niloff, <tei:title level="m">Instrumentations-Tabelle</tei:title>: see <tei:ref type="correspondence" cRef="WSLB-100">WSLB 100</tei:ref>, March 13, and <tei:ref type="correspondence" cRef="WSLB-101">WSLB 101</tei:ref>, March 14 (dispatch), of which a limited schools edition was issued in 1908, the first public edition February 6, 1909 (2,000 copies, for which the material now being submitted for the second time was rejected as too extensive), and the second edition May 7 and August 23, 1912 (2,000 copies).  Later editions were 1917, 1920, 1922, 1925, 1928 (each 1,000 copies), and many post-World War II editions. It continues in print to the present day.</tei:note> erhalten, wofür mir noch
+        bis heute Bestätigung in <tei:hi rend="underline">Wort</tei:hi> u. <tei:hi rend="underline"
+          >Münze</tei:hi> fehlt. </tei:p>
+
+      <tei:p><tei:note type="editorial" place="inline">overwritten across para. 2 and the
+          valediction in crayon:</tei:note>
+        <tei:handShift new="#unkUE"/>Erl 18/III</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20"><tei:handShift new="#HS"/>Mit ausgez. Hochachtung</tei:salute>
+        <tei:salute rend="indent-60">I<tei:supplied reason="abbreviation">h</tei:supplied>r
+            erg<tei:supplied reason="abbreviation">ebener</tei:supplied></tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:rs key="entity-000632" type="person"><tei:hi rend="lateinschr">H
+            Schenker</tei:hi></tei:rs></tei:signed><tei:lb/><tei:lb/>
+        <tei:dateline><tei:date when="1912-03-17">17. März 1912</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:salute rend="indent-10"><tei:handShift new="#HS"/>Dear <tei:rs type="person"
+            key="entity-000356">Director</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>Enclosed is gathering 16. The last gathering that is with me at the moment, gathering
+        17, will be dispatched to you by the middle of the week<tei:ptr corresp="#r0001-fn01"
+          type="footnote"/></tei:p>
+
+      <tei:p>Meanwhile, you will already have received the "<tei:hi rend="underline">Preliminary
+          Remarks</tei:hi>" for the <tei:rs type="work" key="entity-001729">><tei:title level="m"
+            >Instrumentation Table</tei:title></tei:rs>,<tei:ptr corresp="#r0001-fn02"
+          type="footnote"/> for which up to today I have received confirmation neither in <tei:hi
+          rend="underline">words</tei:hi> nor in <tei:hi rend="underline">coin</tei:hi>.</tei:p>
+
+      <tei:p><tei:note type="editorial" place="inline">overwritten across para. 2 and the
+          valediction in crayon:</tei:note>
+        <tei:handShift new="#unkUE"/>Dealt with March 18.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20"><tei:handShift new="#HS"/>With kind regards,</tei:salute>
+        <tei:salute rend="indent-60">Your devoted</tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:rs key="entity-000632" type="person">H. Schenker</tei:rs></tei:signed><tei:lb/><tei:lb/>
+        <tei:dateline><tei:date when="1912-03-17">March 17, 1912</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

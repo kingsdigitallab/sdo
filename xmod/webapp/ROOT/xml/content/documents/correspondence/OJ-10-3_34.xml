@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:marcrel="http://www.loc.gov/loc.terms/relators/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
+  xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1281" sdoID="OJ-10-3_34">OJ 10/3, [34]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="TPunk" scope="major">unknown typist</tei:handNote>
+      <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="DB">
+      <tei:persName>David Bretherton</tei:persName>
+      <tei:resp>Transcription, 2015</tei:resp>
+      <tei:resp>Translation, 2015</tei:resp>
+      <tei:resp>XML Encoding, 2015</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-03" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~ H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~ HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~ H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+      <dc:title>Typewritten letter from Deutsch to Schenker, dated April 26, 1922</dc:title>
+
+      <dcterms:created>1922-04-26T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2015-09-03</dcterms:dateSubmitted>
+      <dc:description>Deutsch reports that Universal Edition has agreed to publish facsimile editions of Beethoven's
+        Piano Sonatas Opp. 109 and 110; he asks what sources Schenker could make available. Deutsch would also like to
+        know which Beethoven string quartet Schenker would recommend for a further facsimile edition.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000163">DeutschH</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+      <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:fw type="header" rend="inline">
+          <tei:note type="editorial">printed letterhead:</tei:note>
+          <tei:handShift new="#printed"/>OTTO ERICH DEUTSCH</tei:fw>
+        <tei:address>
+          <tei:addrLine rend="indent-75">WIEN II.</tei:addrLine>
+          <tei:addrLine rend="indent-75">Böcklinstrasse 26</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-50"><tei:handShift new="#TPunk"/><tei:rs key="entity-002484" type="place"
+            >Wien</tei:rs>, <tei:date when="1922-04-26">26. April 1922</tei:date>.</tei:dateline>
+        <tei:lb/><tei:address>
+          <tei:addrLine rend="indent-05"><tei:supplied reason="clarity">An:</tei:supplied> Herrn</tei:addrLine>
+          <tei:addrLine rend="indent-15">Dr. <tei:rs key="entity-000632" type="person">Heinrich
+            Schenker</tei:rs>,</tei:addrLine>
+          <tei:addrLine rend="indent-70"><tei:hi rend="underline"><tei:hi><!-- spaced out --><tei:rs key="entity-002484"
+                  type="place">Wien</tei:rs></tei:hi></tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:salute rend="indent-15">Sehr geehrter Herr <tei:rs type="person" key="entity-000632"
+            >Doktor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this letter is
+            recorded in Schenker's diary at OJ 3/3, p. 2428 (April 27, 1922): "Von Deutsch (Br.): bezüglich op. 109 u.
+            110 u. Streichquartett." ("From Deutsch (letter): regarding Opp. 109 and 110 and string
+            quartet.").</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Ich erlaube mir Ihnen mitzuteilen, daß die <tei:rs key="entity-002408" type="organization"
+          >Universal-Edition</tei:rs> sich entschlossen hat<tei:add place="inline" hand="#OED">,</tei:add> Opus <tei:rs
+          key="entity-001216" type="composition">109</tei:rs> und <tei:rs key="entity-001203" type="composition"
+          >110</tei:rs> in Faksimile zu reproduzieren.</tei:p>
+
+      <tei:p rend="first">Bitte teilen Sie mir gütigst mit, ob Sie die nötigen Schritte bei den 3 Besitzern unternehmen
+        wollen, und welche Vorlagen Sie etwa zur Verfügung stellen könnten. Außerdem, welches Streich-Quartett von
+          <tei:rs key="entity-000055" type="person">Beethoven</tei:rs> Sie nach einem leicht erreichbaren Manuskript zur
+        Reproduktion empfehlen, da der Verlag auch ein solches <tei:add place="inline" hand="#OED"
+          >(</tei:add>bedeutendes<tei:add place="inline" hand="#OED">)</tei:add> Stück bringen will.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-30">Mit den besten Grüßen</tei:salute>
+        <tei:salute rend="indent-55">Ihr ergebener</tei:salute>
+        <tei:signed rend="indent-80"><tei:handShift new="#OED"/><tei:rs type="person" key="entity-000164"
+            >Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:fw type="header" rend="inline">
+          <tei:note type="editorial">printed letterhead:</tei:note>
+          <tei:handShift new="#printed"/>OTTO ERICH DEUTSCH</tei:fw>
+        <tei:address>
+          <tei:addrLine rend="indent-75">VIENNA II</tei:addrLine>
+          <tei:addrLine rend="indent-75">Böcklinstrasse 26</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-50"><tei:handShift new="#TPunk"/><tei:rs key="entity-002484" type="place"
+            >Vienna</tei:rs>, <tei:date when="1922-04-26">April 26, 1922</tei:date></tei:dateline>
+        <tei:lb/><tei:address>
+          <tei:addrLine rend="indent-15"><tei:supplied reason="clarity">to:</tei:supplied> Dr. <tei:rs
+              key="entity-000632" type="person">Heinrich Schenker</tei:rs>,</tei:addrLine>
+          <tei:addrLine rend="indent-70"><tei:hi rend="underline"><tei:hi><!-- spaced out --><tei:rs key="entity-002484"
+                  type="place">Vienna</tei:rs></tei:hi></tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:salute rend="indent-15">Very honored <tei:rs type="person" key="entity-000632">Doctor <tei:supplied
+              reason="clarity">Schenker</tei:supplied></tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"
+          /></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Allow me to inform you that <tei:rs key="entity-002408" type="organization">Universal
+          Edition</tei:rs> has decided to reproduce Opuses <tei:rs key="entity-001216" type="composition">109</tei:rs>
+        and <tei:rs key="entity-001203" type="composition">110</tei:rs> in facsimile.</tei:p>
+
+      <tei:p rend="first">Please kindly let me know whether you want to take the necessary steps with the three owners,
+        and roughly what sources you could make available. In addition, specify which string quartet by <tei:rs
+          key="entity-000055" type="person">Beethoven</tei:rs> you recommend for reproduction, on account of the
+        manuscript's easy accessibility, since the publisher also wants to bring out such an <tei:add place="inline"
+          hand="#OED">(</tei:add>important<tei:add place="inline" hand="#OED">)</tei:add> piece.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-30">With the best wishes,</tei:salute>
+        <tei:salute rend="indent-55">Yours truly,</tei:salute>
+        <tei:signed rend="indent-80"><tei:handShift new="#OED"/><tei:rs type="person" key="entity-000164"
+            >Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1497" sdoID="OC-B-168">OC B/168</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="TPwa" scope="major">Wilhelm Altmann's typist</tei:handNote>
+      <tei:handNote xml:id="WA" scope="minor">Wilhelm Altmann's hand</tei:handNote>
+      <tei:handNote xml:id="unk" scope="minor">unknown hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="NM">
+      <tei:persName>Nicholas Marston</tei:persName>
+      <tei:resp>Transcription, 2014</tei:resp>
+      <tei:resp>Translation, 2014</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2015</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-26" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005596">AltmannW ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005534">Königliche Bibliothek
+        ~ HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005534">Preussische
+        Staatsbibliothek ~ HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Typewritten postcard from Wilhelm Altmann to Schenker, dated February 5,
+        1920</dc:title>
+      <dcterms:created>1920-02-05T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2015-05-25</dcterms:dateSubmitted>
+      <dc:description>The photographs of Op. 101 are ready and will be sent.</dc:description>
+      <dc:subject>Skizze; sketch; Garantie; guarantee; Skizzenbuch; sketchbook</dc:subject>
+
+
+
+      <marcrel:correspondent key="entity-000013">Wilhelm Altmann</marcrel:correspondent>
+      <marcrel:correspondent key="entity-003292">Königliche Bibliothek zu
+        Berlin</marcrel:correspondent>
+      <marcrel:correspondent key="entity-003292">Preussische
+        Staatsbibliothek</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/>Postkarte</tei:fw>
+        <tei:fw type="header" rend="center">Weltpostverein</tei:fw>
+        <tei:fw type="header" rend="center">Carte postale</tei:fw>
+        <tei:fw type="header" rend="center">Union postale universelle</tei:fw><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An: </tei:supplied>
+              <tei:handShift new="#unk"/>Herrn Dr. Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-10"><tei:hi rend="underline">Wien III</tei:hi></tei:addrLine>
+            <tei:addrLine rend="indent-10">Reisnerstr. 38.</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark"> || <tei:supplied reason="illegible">BERLIN ...</tei:supplied> |
+            -6. 2 <tei:gap reason="illegible"/> | * 8 <tei:gap reason="illegible"/> || </tei:fw>
+          <tei:fw type="postmark"> || <tei:supplied reason="illegible">BERLIN ...</tei:supplied> |
+            -6. 2. 20 4- | * 8 <tei:gap reason="illegible"/> || </tei:fw><tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#printed"/><tei:del rend="overstrike">KÖNIGLICHE
+                BIBLIOTHEK</tei:del></tei:addrLine>
+            <tei:addrLine>PREUSSISCHE STAATSBIBLIOTHEK</tei:addrLine>
+            <tei:addrLine><tei:handShift new="#unk"/>S.-Nr. 1786</tei:addrLine>
+            <tei:addrLine rend="indent-50"><tei:handShift new="#printed"/>BERLIN NW7, den
+                <tei:handShift new="#TPwa"/><tei:date when="1920-02-05">5. 2.
+              1920</tei:date></tei:addrLine>
+            <tei:addrLine rend="indent-50"><tei:handShift new="#printed"/>Unter den Linden
+              38</tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#TPwa"/>Sehr geehrter Herr <tei:rs key="entity-000632"
+            type="person">Doktor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial"
+            place="foot">Receipt of this postcard is recorded in Schenker's diary at OJ 3/1, p.
+            2214, February 12, 1920: "Von Dr. Altmann (K.): Skizzen zu <tei:hi rend="italic">op.
+              101</tei:hi> seien auf dem Wege." ("From Dr Altmann (postcard): Op. 101 sketches are
+            on the way.")</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Unsere photographische Werkstätte hat jetzt die Skizzen zum letzten Satze der <tei:rs
+          key="entity-001201" type="composition">Sonate op. 101</tei:rs><tei:note
+          xml:id="r0001-fn02" type="editorial" place="foot">Sketches for the finale of Beethoven's
+          Piano Sonata in A, Op. 101 are found in the sketchbook Staatsbibliothek zu Berlin, Mus.
+          ms. autogr. Beethoven 11/1: see <tei:bibl><tei:author>Hans-Günter Klein</tei:author>,
+              <tei:title level="m">Ludwig van Beethoven: Autographe und Abschriften</tei:title>
+            (Berlin: Staatsbibliothek Preussischer Kulturbesitz, 1975), pp. 49–52</tei:bibl>; also
+              <tei:bibl><tei:author>Douglas Johnson</tei:author>, <tei:author>Alan
+              Tyson</tei:author>, and <tei:author>Robert Winter</tei:author>, <tei:title level="m"
+              >The Beethoven Sketchbooks: History, Reconstruction, Inventory</tei:title>, ed.
+              <tei:editor>Douglas Johnson</tei:editor> (Oxford: OUP, 1985), pp. 247–52</tei:bibl>.
+        </tei:note> fertig gemacht. Sie werden Jhnen sehr bald zugehen. Ich kann aber keine Garantie
+        dafür übernehmen, dass nicht auch einige andere Skizzen mitphotographiert worden sind. Es
+        ist furchtbar schwer zu sagen, was zu <tei:rs key="entity-001201" type="composition">op.
+          101</tei:rs> gehört. Das von Jhnen gewünschte Skizzenbuch aus dem Jahre 1817<tei:note
+          xml:id="r0001-fn03" type="editorial" place="foot">This is the so-called "Boldrini"
+          sketchbook, the largest of Beethoven's pocket sketchbooks. Studied by Nottebohm in the
+          late 19th century it has been lost since then. See <tei:bibl><tei:author>Gustav
+              Nottebohm</tei:author>, <tei:title level="a">Ein Skizzenbuch aus dem Jahre
+              1817,</tei:title> in <tei:title level="m">Zweite Beethoveniana: nachgelassene
+              Aufsätze</tei:title>, ed. <tei:editor>E. Mandyczewski</tei:editor> (Leipzig: C. F.
+            Peters, 1887), pp. 349–55</tei:bibl>, and <tei:bibl><tei:title level="m">The Beethoven
+              Sketchbooks</tei:title>, ed. <tei:editor>Johnson</tei:editor>, pp.
+          347–50</tei:bibl>.</tei:note> haben wir von <tei:rs key="entity-002413"
+          type="organization">Artaria</tei:rs><tei:note xml:id="r0001-fn04" type="editorial"
+          place="foot">On the Artaria Collection see <tei:bibl><tei:author>Douglas
+              Johnson</tei:author>, <tei:title level="a">The Artaria Collection of Beethoven
+              Manuscripts: A New Source,</tei:title> in <tei:title level="j">Beethoven
+              Studies</tei:title> 1, ed. <tei:editor>Alan Tyson</tei:editor> (Oxford: OUP, and New
+            York: Norton, 1973), pp. 174–236</tei:bibl>, and <tei:bibl><tei:title level="m">The
+              Beethoven Sketchbooks</tei:title>, ed. <tei:editor>Johnson</tei:editor>, pp.
+            13–31</tei:bibl>.</tei:note> leider nicht miterhalten. Wer es jetzt besitzt, vermag ich
+        leider nicht anzugeben. Es tut mir sehr leid, Jhnen nicht besser dienen zu können.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">Mit ausgezeichneter Hochachtung</tei:salute>
+        <tei:signed rend="indent-70"><tei:handShift new="#WA"/><tei:rs key="entity-000013"
+            type="person">Altmann</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/>Postcard</tei:fw>
+        <tei:fw type="header" rend="center">World postal union</tei:fw>
+        <tei:fw type="header" rend="center">Carte postale</tei:fw>
+        <tei:fw type="header" rend="center">Union postale universelle</tei:fw><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">To: </tei:supplied>
+              <tei:handShift new="#unk"/>Dr. Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-10"><tei:hi rend="underline">Vienna
+              III</tei:hi></tei:addrLine>
+            <tei:addrLine rend="indent-10">Reisnerstraße 38</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark"> || <tei:supplied reason="illegible">BERLIN ...</tei:supplied> |
+            -6. 2 <tei:gap reason="illegible"/> | * 8 <tei:gap reason="illegible"/> || </tei:fw>
+          <tei:fw type="postmark"> || <tei:supplied reason="illegible">BERLIN ...</tei:supplied> |
+            -6. 2. 20 4- | * 8 <tei:gap reason="illegible"/> || </tei:fw><tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#printed"/><tei:del rend="overstrike">ROYAL
+                LIBRARY</tei:del></tei:addrLine>
+            <tei:addrLine>PRUSSIAN STATE LIBRARY</tei:addrLine>
+            <tei:addrLine><tei:handShift new="#unk"/>Correspondence No. 1786</tei:addrLine>
+            <tei:addrLine rend="indent-50"><tei:handShift new="#printed"/>BERLIN NW7, <tei:handShift
+                new="#TPwa"/><tei:date when="1920-02-05">February 5, 1920</tei:date></tei:addrLine>
+            <tei:addrLine rend="indent-50"><tei:handShift new="#printed"/>Unter den Linden
+              38</tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#TPwa"/>Dear Dr. <tei:supplied reason="identity"><tei:rs
+              key="entity-000632" type="person">Schenker</tei:rs></tei:supplied>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>Our photographic workshop has now completed the sketches for the last movement of the
+          <tei:rs key="entity-001201" type="composition">Sonata Op. 101</tei:rs>.<tei:ptr
+          corresp="#r0001-fn02" type="footnote"/> They will shortly be sent to you. But I cannot
+        guarantee that a few other sketches also have not been photographed alongside them. It is
+        terribly difficult to say what belongs to <tei:rs key="entity-001201" type="composition">Op.
+          101</tei:rs>. The sketchbook of 1817<tei:ptr corresp="#r0001-fn03" type="footnote"/> which
+        you require did not come to us from <tei:rs key="entity-002413" type="organization"
+          >Artaria</tei:rs>.<tei:ptr corresp="#r0001-fn04" type="footnote"/> I am unfortunately
+        unable to say who presently owns it. I much regret that I am unable to be of better service
+        to you.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">With kindest regards</tei:salute>
+        <tei:signed rend="indent-70"><tei:handShift new="#WA"/><tei:rs key="entity-000013"
+            type="person">Altmann</tei:rs></tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

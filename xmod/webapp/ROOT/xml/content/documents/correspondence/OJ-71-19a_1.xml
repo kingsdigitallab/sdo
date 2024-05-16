@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="1767" sdoID="OJ-71-19a_1">OJ 71/19a, [1]</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="TPek" scope="major">Emil Kammerer's typist</tei:handNote>
+   <tei:handNote xml:id="LK" scope="major">Ludwig Karpath's hand</tei:handNote>
+   <tei:handNote xml:id="unk" scope="minor">unknown hand (Schmitz?)</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="ME">
+   <tei:persName>Martin Eybl</tei:persName>
+   <tei:resp>Transcription, 2013</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>Translation, 2016</tei:resp>
+   <tei:resp>XML Encoding, 2016</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2010-05-16" who="#IB">revision of XML code</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-002733">Karpath ~
+    HSchenker</tei:rs>
+   <tei:rs role="correspondence" type="correspondence" key="entity-006189">Karpath ~
+    Kammerer</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+   <dc:title>Fragment of a typewritten letter from Emil Kammerer to Ludwig Karpath, undated;
+    Handwritten letter from Ludwig Karpath to Schenker, dated March 6, 1916</dc:title>
+
+   <dcterms:created>1916-03-06T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2016-08-31</dcterms:dateSubmitted>
+   <dc:description>Karpath forwards a letter from the attorney Kammerer's office saying that the
+    conclusion of the case against Mittelmann is expected soon.</dc:description>
+   <dc:subject>Einstellung; dismissal; Polizei; police</dc:subject>
+
+
+   <marcrel:correspondent key="entity-006188">Kammerer</marcrel:correspondent>
+   <marcrel:correspondent key="entity-000424">Karpath</marcrel:correspondent>
+   <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+  </sdo:itemDesc>
+
+
+  <tei:div type="transcription">
+   <tei:div type="part_1">
+    <tei:note type="editorial" place="inline">First page of letter from Kammerer not on
+     file</tei:note>
+    <tei:lb/>
+    <tei:lb/>
+
+    <tei:p rend="first"><tei:handShift new="#TPek"/>Ich bitte dies zur Kenntnis zu nehmen und Herrn
+     Dr. Schenker mitzuteilen.</tei:p>
+
+    <tei:p rend="first">Mit dem Ausdrucke der vorzüglichen</tei:p>
+
+    <tei:closer>
+     <tei:salute rend="indent-60">Hochachtung</tei:salute>
+     <tei:salute rend="indent-60"><tei:handShift new="#unk"/>I.<tei:supplied reason="abbreviation"
+       >n</tei:supplied> V.<tei:supplied reason="abbreviation">ertretung</tei:supplied></tei:salute>
+     <tei:signed rend="indent-70">D <tei:unclear reason="reading">Schmitz</tei:unclear></tei:signed>
+    </tei:closer>
+   </tei:div>
+
+   <tei:div type="part_2">
+    <tei:opener><tei:lb/><tei:lb/>
+     <tei:note type="editorial" place="inline">Written on lower half of sheet</tei:note><tei:lb/>
+     <tei:dateline rend="indent-20"><tei:handShift new="#LK"/><tei:placeName>Wien</tei:placeName>,
+       <tei:date when="1916-03-06">6/III 1916</tei:date></tei:dateline>
+     <tei:salute>Lieber <tei:rs key="entity-000632" type="person">Freund</tei:rs>!<tei:note
+       xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this letter and Schenker's
+       response are recorded in Schenker's diary at OJ 2/1, p. 155, March 7, 1916: "Von Karpath gute
+       Auskunft bezüglich M. — An Karpath (K.) Dank." ("From Karpath, good news regarding
+       Mittelmann. — To Karpath (postcard): Thanks."). — At the top right of this sheet is written
+       in pencil in Oswald Jonas's hand: "original: filed in Box 71 / Kammerer, Emil to Karpath";
+       above the second message, mid-sheet: "[Karpath to Schenker]".</tei:note></tei:salute>
+    </tei:opener>
+
+    <tei:p>Wie Sie aus diesem Schreiben ersehen, geht die Sache nun doch ihrem Ende entgegen. Ob
+      <tei:hi rend="underline">endgiltig</tei:hi>, ist die grosse Frage. Wenn schon nicht
+     Einstellung, so mindestens – Gott geb´s? – Polizei. Hier lässt sich schon etwas
+     ausrichten.</tei:p>
+
+    <tei:closer>
+     <tei:salute rend="indent-20">Herzlichst grüßt Ihr</tei:salute>
+     <tei:signed rend="indent-60"><tei:rs key="entity-000424" type="person"
+      >Karpath</tei:rs></tei:signed>
+    </tei:closer>
+   </tei:div>
+  </tei:div>
+
+
+  <tei:div type="translation">
+   <tei:div type="part_1">
+    <tei:note type="editorial" place="inline">First page of letter from Kammerer not on
+     file</tei:note>
+    <tei:lb/>
+    <tei:lb/>
+
+    <tei:p rend="first"><tei:handShift new="#TPek"/>Please take note of this and inform Dr.
+     Schenker.</tei:p>
+
+    <tei:p rend="first">With expression of kindest </tei:p>
+
+    <tei:closer>
+     <tei:salute rend="indent-60">Regards</tei:salute>
+     <tei:salute rend="indent-60"><tei:handShift new="#unk"/>by proxy</tei:salute>
+     <tei:signed rend="indent-70">D <tei:unclear reason="reading">Schmitz</tei:unclear></tei:signed>
+    </tei:closer>
+   </tei:div>
+
+   <tei:div type="part_2">
+    <tei:opener><tei:lb/><tei:lb/>
+     <tei:note type="editorial" place="inline">Written on lower half of sheet</tei:note><tei:lb/>
+     <tei:dateline rend="indent-20"><tei:handShift new="#LK"/><tei:placeName>Vienna</tei:placeName>,
+       <tei:date when="1916-03-06">March 6, 1916</tei:date></tei:dateline>
+     <tei:salute>Dear <tei:rs key="entity-000632" type="person">Friend</tei:rs>,<tei:ptr
+       corresp="#r0001-fn01" type="footnote"/></tei:salute>
+    </tei:opener>
+
+    <tei:p>As you can see from this letter, the case is now definitely moving to a conclusion. The
+     big question is whether it will be a <tei:hi rend="underline">definitive</tei:hi>
+     <tei:supplied reason="clarity">verdict</tei:supplied>. If not a dismissal, then at least ‒ and
+     there's probably some hope of this ‒ his being passed on to the police. If so, we can arrange
+     something.</tei:p>
+
+    <tei:closer>
+     <tei:salute rend="indent-20">With most cordial greetings, Your</tei:salute>
+     <tei:signed rend="indent-60"><tei:rs key="entity-000424" type="person"
+      >Karpath</tei:rs></tei:signed>
+    </tei:closer>
+   </tei:div>
+
+  </tei:div>
+ </sdo:record>
+</sdo:recordCollection>

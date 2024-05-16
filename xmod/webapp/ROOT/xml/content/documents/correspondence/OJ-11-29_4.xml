@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1987" sdoID="OJ-11-29_4">OJ 11/29, [4]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="KG" scope="major">Karl Grunsky's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="LR-IB">
+      <tei:persName>Lee Rothfarb and Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2007, 2017</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="LR">
+      <tei:persName>Lee Rothfarb</tei:persName>
+      <tei:resp>Translation, 2007, 17</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2017</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-26" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-006264">GrunskyK ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Grunsky to Schenker, postmarked November 5,
+        1908</dc:title>
+      <dcterms:created>1908-11-05T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2017-09-07</dcterms:dateSubmitted>
+      <dc:description>Grunsky hopes to meet Schenker at the Haydn festival in Vienna. He urges
+        Schenker to read Halm on Bruckner.</dc:description>
+      <dc:subject>Musikfest; music festival; Moderne; moderns; Mannigfaltigkeit; diversity;
+        Klarheit; clarity; Einfachheit; simplicity</dc:subject>
+
+      <marcrel:correspondent key="entity-000311">Karl Grunsky</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">Heinrich Schenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+            >Postkarte</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#KG"/>An Herrn Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-20">Wien III</tei:addrLine>
+            <tei:addrLine>Reisnerstrasse 38</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| STUTTGART J <tei:gap reason="illegible" unit="chars" extent="3"
+            /> 8 | 5 | NOV | 08 | 4-5N | h . ||</tei:fw><tei:lb/><tei:lb/>
+          <tei:note type="editorial" place="inline"> for message-continuation, see below</tei:note><tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#KG"/>Sehr geehrter Herr <tei:rs type="person"
+            key="entity-000632">Doctor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial"
+            place="foot">Receipt of this postcard is not recorded in Schenker's
+          diary.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Ich freue mich über Ihren schönen und offenen Brief.<tei:note xml:id="r0001-fn02"
+          type="editorial" place="foot">Probably <tei:ref type="correspondence" cRef="OJ-5-15_4">OJ
+            5/15, [4]</tei:ref>, undated, presumably dating from after September 23 and December 31
+          1908.</tei:note> Vielleicht habe ich Gelegenheit beim <tei:rs type="person"
+          key="entity-000344">Haydn</tei:rs>fest<tei:note xml:id="r0001-fn03" type="editorial"
+          place="foot">Haydn died on May 31, 1809; Grunsky is presumably referring to the Haydn
+          Centenary Festival being organized by Guido Adler for 1909.</tei:note> mündlich mit Ihnen
+        zu sprechen. Brieflich sind wir einander, so viel ich verstehe, so nahe wie möglich. Ich
+        schätzte <tei:rs key="entity-000094" type="person">Brahms</tei:rs> immer mehr als Anhalt
+        gegen die <tei:sic>Moderne</tei:sic>, und bin ganz einverstanden, dass die Musik sowenig wie
+        eine Pflanze, ins Unendliche, Gestaltlose sich entwickeln kann. <tei:rs key="entity-000104"
+          type="person">Bru.</tei:rs> ist mir aber ursprünglicher. Ich schätzte Mannigfaltigkeit
+        ebenso wie Klarheit und Einfachheit. Bitte <tei:hi rend="underline">lesen Sie doch</tei:hi>,
+        was <tei:rs key="entity-000326" type="person">Halm</tei:rs> über <tei:rs key="entity-000104"
+          type="person">Bruckner</tei:rs> schrieb.</tei:p>
+
+      <tei:p><tei:milestone unit="folio" n="recto"/> Wenn ich nach Wien komme, nehme ich an, dass
+        Sie <tei:rs key="entity-000326" type="person">Halm</tei:rs> gelesen haben! Wenn Sie diesen
+          <tei:hi rend="underline">sachlichen</tei:hi> Mann (der <tei:rs key="entity-000104"
+          type="person">Bru.</tei:rs> so wenig wie ich kannte) widerlegen, bin ich
+        geschlagen.</tei:p>
+
+      <tei:closer>
+        <tei:salute>Dankbar</tei:salute>
+        <tei:salute rend="ident-60">Ihr</tei:salute>
+        <tei:signed rend="ident-70"><tei:rs key="entity-000500" type="person"><tei:rs type="person"
+              key="entity-000311">K Grunsky</tei:rs></tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+            >Postcard</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#KG"/>To Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-20">Vienna III</tei:addrLine>
+            <tei:addrLine>Reisnerstrasse 38</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| STUTTGART J <tei:gap reason="illegible" unit="chars" extent="3"
+            /> 8 | 5 | NOV | 08 | 4-5 p.m. | h . ||</tei:fw><tei:lb/><tei:lb/>
+          <tei:note type="editorial" place="inline"> for message-continuation, see below</tei:note><tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#KG"/>Dear Dr. <tei:supplied reason="identity"><tei:rs
+              type="person" key="entity-000632">Schenker</tei:rs></tei:supplied>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>I am delighted at your kind and forthright letter.<tei:ptr corresp="#r0001-fn02"
+          type="footnote"/> Perhaps I will have the opportunity at the <tei:rs type="person"
+          key="entity-000344">Haydn</tei:rs> festival<tei:ptr corresp="#r0001-fn03" type="footnote"
+        /> to speak with you in person. In correspondence, we are as close as is possible, as far as
+        I understand. I value <tei:rs key="entity-000094" type="person">Brahms</tei:rs> ever more as
+        a stronghold against modernity, and am fully agreed that music can as little develop
+        indefinitely, formlessly, as can a plant. However, <tei:rs key="entity-000104" type="person"
+          >Bruckner</tei:rs> is to me more primal. I value diversity as well as clarity and
+        simplicity. <tei:hi rend="underline">Please do read</tei:hi> what <tei:rs
+          key="entity-000326" type="person">Halm</tei:rs> wrote about <tei:rs key="entity-000104"
+          type="person">Bruckner</tei:rs>. </tei:p>
+
+      <tei:p><tei:milestone unit="folio" n="recto"/> When I come to Vienna, I will assume that you
+        have read <tei:rs key="entity-000326" type="person">Halm</tei:rs>! If you can refute this
+          <tei:hi rend="underline">objective</tei:hi> man (who knew <tei:rs key="entity-000104"
+          type="person">Bruckner</tei:rs> as little as I), I am defeated. </tei:p>
+
+      <tei:closer>
+        <tei:salute>Gratefully,</tei:salute>
+        <tei:salute rend="ident-60">Your</tei:salute>
+        <tei:signed rend="ident-70"><tei:rs key="entity-000500" type="person"><tei:rs type="person"
+              key="entity-000311">K. Grunsky</tei:rs></tei:rs></tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

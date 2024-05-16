@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2901" sdoID="WSLB-Hds-95662">WSLB-Hds 95662</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="AFS-pencil" scope="minor">A. F. Seligmann's hand, in
+        pencil</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2022</tei:resp>
+      <tei:resp>Translation, 2022</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2022</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-28" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002735">Seligmann ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-entity-002745"
+        >postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Schenker to Seligmann, dated August 29, 1906</dc:title>
+
+      <dcterms:created>1906-08-29T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2022-11-21</dcterms:dateSubmitted>
+      <dc:description>In this amusing message congratulating Seligmann on his latest feuilleton,
+        Schenker comments on the proper speed for the “little duet” between Giovanni and Zerlina and
+        notes the gulf separating the performance of Don Giovanni at the Salzburg Festival (the
+        conductor is not named) and the Mozart performances conducted by Mahler (at the Vienna State
+        Opera).</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000632">Heinrich Schenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000819">Adalbert Franz Seligmann</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:lb/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+            >Korrespondenz-Karte.</tei:hi></tei:fw>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:note type="editorial" place="inline">written diagonally:</tei:note>
+            <tei:lb/>
+            <tei:addrLine>Absender <tei:handShift new="#HS"/>H Schenker</tei:addrLine>
+            <tei:addrLine>Wien, III., Reisnerstr. 38</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#printed"/>An: <tei:handShift new="#HS"/>Herrn Prof.
+              Ad. Fr. Seligmann</tei:addrLine>
+            <tei:addrLine><tei:rs type="place" key="entity-002339">Ischl</tei:rs></tei:addrLine>
+            <tei:addrLine rend="indent-40">Ahorngasse 3.</tei:addrLine>
+            <tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| 3/3 WIEN 49 | 29 VIII 06 – 9 | * a * ||</tei:fw>
+          <tei:fw type="postmark">30. 8. 06 | ISCHL | 7–8 V ||</tei:fw><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:lb/>
+        <tei:salute>L. <tei:rs type="person" key="entity-000819">Fr.</tei:rs></tei:salute>
+      </tei:opener>
+
+      <tei:p>Abgesehen vom Meineid betreffs des „<tei:hi rend="lateinschr">Duett<tei:hi
+            rend="double-underline">ino</tei:hi></tei:hi>“ (Don Juan x Zerline), dessen <tei:hi
+          rend="lateinschr">Tempo</tei:hi> nicht nur vom musik., sondern auch dram. Standpunkt ganz
+        ausgez. aggresiv war, haben Sie sich ein schönes Verdienst um so manchen Festspielbesucher
+        erworben, da Sie gerade in der „<tei:rs type="journal" key="entity-002559"><tei:title>N. Fr.
+            Presse</tei:title></tei:rs>“<tei:note xml:id="r0001-fn01" type="editorial" place="foot"
+              ><tei:bibl><tei:author>A. F. S.</tei:author>, <tei:title level="a">Salzburger
+              Festspiele,</tei:title> feuilleton, <tei:title level="j">Neue Freie
+            Presse</tei:title>, August 28, 1906, pp. 1–3</tei:bibl>. Seligmann had written (p. 2,
+          column 3): “He [Don Giovanni] sang the duet with Zerlina and his “champagne aria” – I
+          swear it – in a much too fast, thus in a false, tempo.”</tei:note> einige sehr wesentliche
+        Korrekturen gegenüber der Darstellung <tei:rs type="person" key="entity-005766"
+          >Rochlitz</tei:rs>ens*) zum Besten gegeben.<tei:note xml:id="r0001-fn02" type="editorial"
+          place="foot">Friedrich Rochlitz (1769–1842), German writer and composer, whose translation
+          of the libretto for Mozart’s <tei:title level="m">Don Giovanni</tei:title> (1801) was for
+          a long time the standard text of the opera in German opera houses. Seligmann’s pencil
+          annotation suggests that Schenker was using “Rochlitz” as a codename for the Viennese
+          music critic <tei:rs type="person" key="entity-000471">Julius
+          Korngold</tei:rs>.</tei:note> Um wie viel höher stand die <tei:rs type="composition"
+          key="entity-001615"><tei:title>D. J<tei:supplied reason="punctuation"
+            >.</tei:supplied></tei:title></tei:rs> Auffg. über der <tei:rs type="composition"
+          key="entity-001618"><tei:title>Figar</tei:title>.</tei:rs>-Auff. von <tei:rs type="person"
+          key="entity-000556"><tei:hi rend="lateinschr">Mahler</tei:hi></tei:rs>!<tei:note
+          xml:id="r0001-fn03" type="editorial" place="foot">Schenker recorded in his diary for April
+          5, 1906: “<tei:title level="m">Marriage of Figaro</tei:title> at the Opera under Mahler:
+          The comic element seems to have been cut out altogether; indeed, it can almost no longer
+          be called ‘the crazy day.’ The performance was exaggeratedly serious.”</tei:note> Ist das
+        nicht seltsam, daß, trotz scheinbar gesteigerter dramatischer Einsicht, <tei:rs
+          type="person" key="entity-000556"><tei:hi rend="lateinschr">Mahler</tei:hi></tei:rs> das
+        unmittelbare, warme Leben im „tollen Tag“(!)<tei:note xml:id="r0001-fn04" type="editorial"
+          place="foot"><tei:title level="m">La folle journée, ou Le mariage de Figaro</tei:title>,
+          the French play by Beaumarchais on which the libretto of Mozart’s opera is based (see also
+          footnote 3).</tei:note> nicht wiedererzeugen kann, u. ebensowenig im „<tei:rs
+          type="composition" key="entity-001615"><tei:title>D. J.</tei:title></tei:rs>“? Der tolle
+        Tag als Jom Kipor, u. <tei:rs type="composition" key="entity-001615"><tei:title>D.
+            J.</tei:title></tei:rs> als <tei:rs type="composition" key="entity-003175"
+            ><tei:title>Fliegender Holländer</tei:title></tei:rs>, pfui Teufel! Wie erst sinnlich,
+        u. hell war aber <tei:rs type="person" key="entity-000612">Mozart</tei:rs>! Was sagt aber
+          <tei:rs type="person" key="entity-005766">Rochlitz</tei:rs> dazu? </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50">Bestens grüßend</tei:salute>
+        <tei:salute rend="indent-70">Ihr</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000632">H Schenker</tei:rs>
+        </tei:signed><tei:lb/>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p><tei:handShift new="#AFS-pencil"/>*) <tei:unclear reason="reading"
+            >Spottensinn</tei:unclear> Sch.’s für <tei:rs type="person" key="entity-000471"
+            >Korngold</tei:rs>
+        </tei:p>
+      </tei:postscript>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:lb/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+            >Postcard</tei:hi></tei:fw>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:note type="editorial" place="inline">written diagonally:</tei:note>
+            <tei:lb/>
+            <tei:addrLine>From <tei:handShift new="#HS"/>H. Schenker</tei:addrLine>
+            <tei:addrLine>Vienna III, Reisnerstraße 38</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#printed"/>To: <tei:handShift new="#HS"/>Prof. Ad. Fr.
+              Seligmann</tei:addrLine>
+            <tei:addrLine><tei:rs type="place" key="entity-002339">Ischl</tei:rs></tei:addrLine>
+            <tei:addrLine rend="indent-40">Ahorngasse 3</tei:addrLine>
+            <tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| 3/3 VIENNA 49 | 29 VIII 06 – 9 | * a * ||</tei:fw>
+          <tei:fw type="postmark">30. 8. 06 | ISCHL | 7–8 a.m. ||</tei:fw><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:lb/>
+        <tei:salute>Dear <tei:rs type="person" key="entity-000819">friend</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>Apart from the perjury concerning the “<tei:hi rend="double-underline">Little</tei:hi>
+        Duet” (Don Giovanni and Zerlina), the tempo of which was markedly aggressive not only from a
+        musical but also from a dramatic standpoint, you have done a great service to so many
+        Festival visitors by offering readers of the <tei:rs type="journal" key="entity-002559"
+            ><tei:title level="j">Neue Freie Presse</tei:title></tei:rs><tei:ptr
+          corresp="#r0001-fn01" type="footnote"/> several very significant corrections to <tei:rs
+          type="person" key="entity-005766">Rochlitz</tei:rs>’s*)<tei:ptr corresp="#r0001-fn02"
+          type="footnote"/> depiction. How much higher did the performance of <tei:rs
+          type="composition" key="entity-001615"><tei:title level="m">Don
+          Giovanni</tei:title></tei:rs> stand above <tei:rs type="person" key="entity-000556"
+          >Mahler</tei:rs>’s performance of <tei:rs type="composition" key="entity-001618"
+            ><tei:title level="m">Figaro</tei:title></tei:rs>!<tei:ptr corresp="#r0001-fn03"
+          type="footnote"/> Is it not strange that, in spite of his apparently enhanced dramatic
+        insight, <tei:rs type="person" key="entity-000556">Mahler</tei:rs> cannot reproduce the
+        immediate, warm life in “The Mad Day”(!),<tei:ptr corresp="#r0001-fn04" type="footnote"/>
+        and just as little in <tei:rs type="composition" key="entity-001615"><tei:title level="m"
+            >Don Giovanni</tei:title></tei:rs>? The mad day as Yom Kippur, and <tei:rs
+          type="composition" key="entity-001615"><tei:title level="m">Don
+          Giovanni</tei:title></tei:rs> as the <tei:rs type="composition" key="entity-003175"
+            ><tei:title level="m">Flying Dutchman</tei:title></tei:rs>, ugh! How sensuous and
+        bright, however, <tei:rs type="person" key="entity-000612">Mozart</tei:rs> was! But what
+        does <tei:rs type="person" key="entity-005766">Rochlitz</tei:rs> say to that?</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50">With best greetings, </tei:salute>
+        <tei:salute rend="indent-70">Your</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000632">H. Schenker</tei:rs>
+        </tei:signed><tei:lb/>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p><tei:handShift new="#AFS-pencil"/>*) Schenker’s expression of <tei:unclear
+            reason="original_unclear">mockery</tei:unclear> for <tei:rs type="person"
+            key="entity-000471">Korngold</tei:rs>.</tei:p>
+      </tei:postscript>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1440" sdoID="OC-B-270">OC B/270</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="TPlko" scope="major">Louis Koch as typist</tei:handNote>
+      <tei:handNote xml:id="LKo" scope="minor">Louis Koch's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="NM">
+      <tei:persName>Nicholas Marston</tei:persName>
+      <tei:resp>Transcription, 2014</tei:resp>
+      <tei:resp>Translation, 2014</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2015</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-26" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005575">KochL ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">letter</tei:rs>
+
+      <dc:title>Typewritten letter from Louis Koch to Schenker, dated November 29, 1915</dc:title>
+      <dcterms:created>1915-11-29T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2015-02-16</dcterms:dateSubmitted>
+      <dc:description>Koch thanks Schenker for a copy of his elucidatory edition of Op. 111, and
+        reports his Chopin holdings.</dc:description>
+      <dc:subject>Album</dc:subject>
+
+
+
+      <marcrel:correspondent key="entity-000454">Louis Koch</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine rend="indent-50"><tei:handShift new="#printed"/><tei:placeName>FRANKFURT A.
+              M.</tei:placeName>
+            <tei:handShift new="#TPlko"/><tei:date when="1915-11-29">29. Nov.
+            1915</tei:date></tei:addrLine>
+          <tei:addrLine rend="indent-60"><tei:handShift new="#printed"/>KAISERSTRASSE
+            25</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#TPlko"/>Hochwohlgeboren Herrn Dr. <tei:hi rend="sperr"
+              >Heinrich Schenker</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-50">Reisnerstr. 38,</tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:hi rend="underline"><tei:hi rend="sperr">Wien
+              </tei:hi>III.</tei:hi></tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:salute rend="indent-20">Sehr geehrter <tei:rs key="entity-000632" type="person"
+            >Herr</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
+            this letter is recorded in Schenker's diary at OJ 1/19, p. 57, December 9, 1915: "Von
+            Koch, Frankfurt, Antwort, die deutlich die Verlegenheit des Briefschreibers weist,
+            sowohl in dem, was er zu op. 110 sagt, als auch in dem, was er <tei:add
+              place="interlinear-above">in</tei:add> punkt<tei:unclear><tei:subst>
+                <tei:del rend="overwritten">ens</tei:del>
+                <tei:add place="superimposed">o</tei:add>
+              </tei:subst></tei:unclear> Bekker verschweigt." ("From Koch, Frankfurt, reply which
+            shows clearly the writer's embarrassment as much in what he says about Op. 110 as in
+            what he passes over in silence in re Bekker.")</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Von einer kleinen Reise hierher zurückgekehrt, finde ich Ihre sehr
+        geschätzten Zeilen vom <tei:date when="1915-11-14">14. ds.</tei:date>,<tei:note
+          xml:id="r0001-fn02" type="editorial" place="foot">Writing of this letter is recorded in
+          Schenker's diary at OJ 1/19, p. 34, November 14, 1915: "Brief u. Exemplar an Louis Koch in
+          Frankfurt. Im Brief ohne Scheu den häßlichen Zug des Verlegers gebrandmarkt u. um Dispens
+          für meine eigene Person gebeten. Die Gelegenheit, daß der Adressat in Frankfurt lebt, nahm
+          ich wahr, um auf den Fall Bekker–Museumsgesellschaft zurückzukommen u. der letzteren in
+          dieser Form Succurs zu leisten. Endlich bitte ich um Bekanntgabe eventueller Autographe
+          von Chopin." ("Letter and copy to Louis Koch in Frankfurt. In the letter I unreservedly
+          denounced the publisher's hateful disposition and begged dispensation for myself. That the
+          addressee lives in Frankfurt I took as opportunity to revert to the matter of the Bekker
+          Museum Society and to lend aid to the latter in this form. Lastly I asked to know of any
+          Chopin autographs he might have.").</tei:note> nebst Ihrer <tei:rs key="entity-001736"
+          type="work"><tei:title>Erläuterungsausgabe zu Beethoven’s letzter
+          Sonate</tei:title></tei:rs>, vor, für die ich Ihnen meinen verbindlichsten Dank abstatte.
+        Ich habe das interessante Werk eingehend gelesen und mich über viel Neues darin sehr
+        gefreut.</tei:p>
+
+      <tei:p rend="first">Von <tei:rs key="entity-000129" type="person">Chopin</tei:rs> besitze ich
+        nur einige Briefe und in dem musikalischen Album von <tei:rs key="entity-000264"
+          type="person">Alois Fuchs</tei:rs><tei:note xml:id="r0001-fn03" type="editorial"
+          place="foot">This incomplete presentation copy of the Mazurka in F minor, Op. 7 No. 3, is
+          now in a private collection.</tei:note> unter dem Datum Wien, 20/6. 1831 eine hübsche
+          <tei:pb n="2"/>
+        <tei:sic>sche</tei:sic> eigenhändige <tei:term>Mazurka</tei:term>.</tei:p>
+
+      <tei:p rend="first">Den übrigen Inhalt Ihrer werten Zeilen hoffe ich, gelegentlich einmal
+        persönlich mit Ihnen besprechen zu können und empfehle mich inzwischen</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">mit vorzüglicher Hochachtung!</tei:salute>
+        <tei:signed rend="indent-60"><tei:handShift new="#LKo"/><tei:rs key="entity-000454"
+            type="person">Louis Koch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine rend="indent-50"><tei:handShift new="#printed"/><tei:placeName>FRANKFURT AM
+              MAIN</tei:placeName>
+            <tei:handShift new="#TPlko"/><tei:date when="1915-11-29">November 29,
+            1915</tei:date></tei:addrLine>
+          <tei:addrLine rend="indent-60"><tei:handShift new="#printed"/>KAISERSTRASSE
+            25</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#TPlko"/>Dr. <tei:hi rend="sperr">Heinrich
+              Schenker</tei:hi>, Esq.,</tei:addrLine>
+          <tei:addrLine rend="indent-50">Reisnerstraße 38,</tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:hi rend="underline"><tei:hi rend="sperr">Vienna
+              </tei:hi>III</tei:hi></tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:salute rend="indent-20">Dear <tei:rs key="entity-000632" type="person"
+            >Sir</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">On returning here from a brief trip I have found your very valued lines of
+        the <tei:date when="1915-11-14">14th</tei:date>,<tei:ptr corresp="#r0001-fn02"
+          type="footnote"/> together with your <tei:rs key="entity-001736" type="work"
+            ><tei:title>elucidatory edition of Beethoven's last sonata</tei:title></tei:rs>, for
+        which I offer you my most sincere thanks. I have read the interesting work thoroughly and
+        have greatly enjoyed many new things it contains.</tei:p>
+
+      <tei:p rend="first">Of <tei:rs key="entity-000129" type="person">Chopin</tei:rs>, I possess
+        only a few letters and a pretty <tei:pb n="2"/> autograph <tei:term>mazurka</tei:term> dated
+        Vienna, June 20, 1831, in the musical album of <tei:rs key="entity-000264" type="person"
+          >Alois Fuchs</tei:rs>.<tei:ptr corresp="#r0001-fn03" type="footnote"/></tei:p>
+
+      <tei:p rend="first">I hope to be able to discuss the remaining contents of your kind lines
+        with you in person at some point, and meanwhile offer my compliments</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">with kind regards!</tei:salute>
+        <tei:signed rend="indent-60"><tei:handShift new="#LKo"/><tei:rs key="entity-000454"
+            type="person">Louis Koch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

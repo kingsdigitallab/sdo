@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2082" sdoID="OJ-13-37-10a">OJ 13/37, 10a</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="printed" scope="major">printed</tei:handNote>
+      <tei:handNote xml:id="EFR" scope="major">Ernst Friedrich Rudorff's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2018</tei:resp>
+      <tei:resp>Translation, 2018</tei:resp>
+      <tei:resp>XML Encoding, 2018</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-26" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-006280">RudorffE ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">letter</tei:rs>
+
+      <dc:title>Printed form letter from Rudorff to Schenker, dated January, 1910</dc:title>
+      <dcterms:created>1910-10-20T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2018-07-21</dcterms:dateSubmitted>
+      <dc:description>Rudorff thanks all his birthday well-wishers.</dc:description>
+      <dc:subject>Geburtstag; birthday; danken; to thank</dc:subject>
+
+      <marcrel:correspondent key="entity-000750">Ernst Rudorff</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">Heinrich Schenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine rend="indent-50"><tei:handShift new="#printed"/>Grosslichterfelde im
+              <tei:date when="1910-01">Januar 1910</tei:date>.</tei:addrLine>
+        </tei:address>
+      </tei:opener>
+
+      <tei:p rend="first">So sehr es mir widerstrebt, persönlichsten Empfindungen in gedruckten
+        Worten Ausdruck zu geben, so zwingt mich doch der Augenblick, von diesem Notbehelf Gebrauch
+        zu machen.<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this letter
+          is not recorded in Schenker's diary.</tei:note></tei:p>
+
+      <tei:p rend="first">Zu meinem 70. Geburtstag<tei:note xml:id="r0001-fn02" type="editorial"
+          place="foot">Rudorff was born on January 18, 1840.</tei:note> sind mir Beweise treuer,
+        liebevoller Gesinnung von nah und fern, von Verwandten, ältesten wie jüngsten Freunden und
+        Bekannten, Schülern, Kunstgenossen, Vereinen und Verbänden Mitstrebender in einer solchen,
+        mich tief bewegenden Fülle zu Theil geworden, daß es mir völlig unmöglich ist, jedem
+        Einzelnen so eingehend zu danken, wie es sich nicht nur gebühren, sondern vor Allem dem
+        dringenden Wunsch meines Herzens allein genügen würde. So bleibt mir denn Nichts übrig, als
+        diese so nüchtern und allgemein aussehenden Druckzeilen für mich reden zu lassen, zugleich
+        aber zu versichern, daß kein Wort und kein Symbol des Gedenkens an mich gelangt ist, das ich
+        nicht in seiner Besonderheit voll gewürdigt und mit innigstem Dank mir zum Bewußtsein
+        gebracht hätte.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20"><tei:handShift new="#EFR"/>Herzlichst dankt Ihnen</tei:salute>
+        <tei:salute rend="indent-40">Ihr getreuer</tei:salute>
+        <tei:signed rend="indent-50"><tei:rs type="person" key="entity-000750"><tei:hi
+              rend="lateinschr">Ernst Rudorff</tei:hi></tei:rs></tei:signed>
+      </tei:closer>
+    </tei:div>
+
+
+    <tei:div type="translation">
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine rend="indent-50"><tei:handShift new="#printed"/>Grosslichterfelde in
+              <tei:date when="1910-01">January 1910</tei:date></tei:addrLine>
+        </tei:address>
+      </tei:opener>
+
+      <tei:p rend="first">As greatly as it goes against the grain for me to express my most personal
+        feelings through the medium of the printed word, the moment compels me to make use of this
+          expedient.<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:p>
+
+      <tei:p rend="first">For my 70th birthday,<tei:ptr corresp="#r0001-fn02" type="footnote"/>
+        tokens of loyal and affectionate sentiments have come in from near and far, from relatives,
+        from my oldest and newest friends and acquaintances, from pupils, devotees of art, and
+        societies and associations of fellow campaigners, in so great an abundance as has left me
+        deeply moved, such that it is wholly impossible for me to thank every single one
+        individually as not only is their due but above all would alone satisfy my heartfelt wish.
+        So I have no alternative but to allow these empty and generalized printed lines to speak for
+        me, but at the same time to give assurance that no word and no symbol of remembrance has
+        reached me that I have not wholeheartedly appreciated for its particular content and
+        absorbed with most sincere gratitude.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20"><tei:handShift new="#EFR"/>With most cordial thanks to
+          you,</tei:salute>
+        <tei:salute rend="indent-40">Your faithful</tei:salute>
+        <tei:signed rend="indent-50"><tei:rs type="person" key="entity-000750">Ernst
+            Rudorff</tei:rs></tei:signed>
+      </tei:closer>
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

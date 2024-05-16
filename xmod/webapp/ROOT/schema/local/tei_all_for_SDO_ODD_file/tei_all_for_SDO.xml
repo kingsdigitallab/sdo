@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0"
+        xml:lang="en">
+        <teiHeader>
+                <fileDesc>
+                        <titleStmt>
+                                <title>TEI with maximal setup for SDO</title>
+                                <author>Paul Caton</author>
+                        </titleStmt>
+                        <publicationStmt>
+                                <publisher>Schenker Documents Online</publisher>
+                                <availability status="free">
+                                        <p>This template file is freely available and you are hereby
+                                                authorised to copy, modify, and redistribute it in
+                                                any way without further reference or
+                                                permissions.</p>
+                                        <p>When making such modifications, you are strongly
+                                                recommended to change the present text to include an
+                                                accurate statement of the licencing conditions
+                                                applicable to your modified text.</p>
+                                </availability>
+                        </publicationStmt>
+                        <notesStmt>
+                                <note type="ns">http://www.example.org/ns/nonTEI</note>
+                        </notesStmt>
+                        <sourceDesc>
+                                <p>Written from scratch.</p>
+                        </sourceDesc>
+                </fileDesc>
+        </teiHeader>
+        <text>
+                <body>
+                        <head>TEI Complete</head>
+                        <p> of the TEI (P5) modules. This is a very useful starting place for
+                                manually creating&#13; your own customizations — it is much easier
+                                to delete the modules you do not want&#13; than to add the modules
+                                you do. Furthermore this customization often proves helpful&#13; for
+                                testing TEI software.This TEI customization describes a schema that
+                                includes all&#13; of the TEI (P5) modules. The list of values for
+                                the place attribute has been&#13; customized for SDOThis TEI
+                                customization describes a schema that includes all of the&#13; TEI
+                                (P5) modules. The list of values for the place attribute has been
+                                customized for&#13; SDO</p>
+                        <p>However, this particular TEI customization is <emph>not
+                                        recommended</emph> for actual use for encoding documents. It
+                                produces schemas and reference documentation that will be much
+                                larger, and include many more elements, than almost anyone could
+                                conceivably ever need. Tempting though it may be simply to have
+                                absolutely everything, and <q>just ignore</q> elements not required,
+                                experience has shown that their presence makes the documentation
+                                harder to read and use, and makes a schema that is far more lax than
+                                desired.</p>
+                        <schemaSpec ident="tei_all_for_SDO" start="TEI teiCorpus" prefix=""
+                                docLang="en">
+                                <moduleRef key="tei"/>
+                                <!-- required -->
+                                <moduleRef key="core"/>
+                                <!-- required -->
+                                <moduleRef key="analysis"/>
+                                <moduleRef key="certainty"/>
+                                <moduleRef key="corpus"/>
+                                <moduleRef key="dictionaries"/>
+                                <moduleRef key="drama"/>
+                                <moduleRef key="figures"/>
+                                <moduleRef key="gaiji"/>
+                                <moduleRef key="header"/>
+                                <!-- required -->
+                                <moduleRef key="iso-fs"/>
+                                <moduleRef key="linking"/>
+                                <moduleRef key="msdescription"/>
+                                <moduleRef key="namesdates"/>
+                                <moduleRef key="nets"/>
+                                <moduleRef key="spoken"/>
+                                <moduleRef key="textcrit"/>
+                                <moduleRef key="textstructure"/>
+                                <!-- required -->
+                                <moduleRef key="transcr"/>
+                                <moduleRef key="verse"/>
+                                <moduleRef key="tagdocs"/>
+                                <classSpec ident="att.placement" type="atts" mode="change"
+                                        module="tei">
+                                        <attList>
+                                                <attDef ident="place" mode="change">
+                                                  <desc>Value list for SDO documents</desc>
+                                                  <valList type="closed" mode="replace">
+                                                  <valItem ident="foot"/>
+                                                  <valItem ident="infralinear"/>
+                                                  <valItem ident="inline"/>
+                                                  <valItem ident="interlinear-above"/>
+                                                  <valItem ident="interlinear-below"/>
+                                                  <valItem ident="margin-bot"/>
+                                                  <valItem ident="margin-left"/>
+                                                  <valItem ident="margin-right"/>
+                                                  <valItem ident="margin-top"/>
+                                                  <valItem ident="pre-text"/>
+                                                  <valItem ident="superimposed"/>
+                                                  <valItem ident="supralinear"/>
+                                                  </valList>
+                                                </attDef>
+                                        </attList>
+                                </classSpec>
+                        </schemaSpec>
+                </body>
+        </text>
+</TEI>

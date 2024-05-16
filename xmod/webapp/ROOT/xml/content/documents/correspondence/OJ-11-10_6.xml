@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="2467" sdoID="OJ-11-10_6">OJ 11/10, [6]</sdo:correspondence>
+  </sdo:source>
+
+
+  <tei:handNotes>
+   <tei:handNote xml:id="TF" scope="major">Theodor von Frimmel's hand</tei:handNote>
+   <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="HE">
+   <tei:persName>Heribert Esser</tei:persName>
+   <tei:resp>Transcription, 2019</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="WMD">
+   <tei:persName>William Drabkin</tei:persName>
+   <tei:resp>Translation, 2020</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>XML Encoding, 2020</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2013-08-29" who="#DB">XML code created</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-005688">FrimmelT ~
+    HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+   <dc:title>Handwritten postcard from Frimmel to Schenker, postmarked November 10, 1904</dc:title>
+
+   <dcterms:created>1904-11-10T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2020-07-22</dcterms:dateSubmitted>
+   <dc:description>Frimmel sends congratulations for Schenker's (and Violin's) great
+    success.</dc:description>
+   <dc:subject>Erfolg; success; Kränklichkeit; sickliness</dc:subject>
+
+   <marcrel:correspondent key="entity-000259">Theodor von Frimmel</marcrel:correspondent>
+   <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+  </sdo:itemDesc>
+
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/><tei:lb/>
+    <tei:fw type="header" rend="center">
+     <tei:handShift new="#printed"/><tei:hi rend="bold">Rohrpostkarte</tei:hi></tei:fw>
+    <tei:lb/>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:addrLine>Absender: <tei:note type="editorial" place="inline">left
+       blank</tei:note></tei:addrLine>
+     </tei:address>
+     <tei:address>
+      <tei:addrLine>An <tei:handShift new="#TF"/>Herrn D<tei:hi rend="supralinear">r.</tei:hi> H.
+       Schenker</tei:addrLine>
+      <tei:addrLine rend="indent-10">Tonkünstler, Professor etc etc etc</tei:addrLine>
+      <tei:addrLine><tei:handShift new="#printed"/>In <tei:supplied reason="identity"
+        >Wien</tei:supplied></tei:addrLine>
+      <tei:addrLine rend="indent-40"><tei:handShift new="#TF"/>III. Reisnerstr. 38</tei:addrLine>
+     </tei:address><tei:lb/>
+     <tei:fw type="postmark">|| WIEN <tei:gap reason="illegible"/> | 5 20N 10 XI 04 | *15*r
+      ||</tei:fw>
+     <tei:fw type="postmark">|| WIEN 3/3 | 5 30N 10 XI 04 | *49*r ||</tei:fw>
+     <tei:lb/><tei:lb/>
+    </tei:fw>
+    <tei:milestone unit="folio" n="verso"/>
+    <tei:salute><tei:handShift new="#TF"/>Hochgeehrter Herr <tei:rs key="entity-000632"
+      type="person">Doctor</tei:rs>! </tei:salute>
+   </tei:opener>
+
+   <tei:p rend="first">Gerne hätte ich Ihnen ebenso rasch zu Ihrem wohlverdienten grossartigen
+    Erfolg Glück gewünscht, wie ich es bei <tei:rs type="person" key="entity-000913">Violin</tei:rs>
+    getan habe.<tei:note xml:id="r0001-fn01" type="editorial" place="foot">The first chamber music
+     concert of the season by the Violin–Fischer–Klengel trio took place on November 7(?), the
+     program including the keyboard concerto in A minor by C. P. E. Bach with Schenker directing
+     from the keyboard, Beethoven's Variations on Mozart's "Bei Männern, welche Liebe fühlen" for
+     cello and piano, WoO 46, and Mozart's Serenade in C minor for wind octet, K384a (<tei:title
+      level="j">Neue freie Presse</tei:title>, November 8, 1904).</tei:note> Aber ich ringe mit
+    Ungemach und Kränklichkeit und muss doch meinen Kurs aufrecht erhalten und die „Bl.
+     f<tei:supplied reason="abbrev">.</tei:supplied> G.“ fortsetzen.</tei:p>
+
+   <tei:p>Ich sende Ihnen in etwa zwei Wochen Neues.</tei:p>
+
+   <tei:closer>
+    <tei:salute>Herzlichst grüßend</tei:salute>
+    <tei:signed rend="indent-80"><tei:rs key="entity-000259" type="person">D<tei:hi
+       rend="supralinear">r.</tei:hi> Frimmel</tei:rs></tei:signed>
+   </tei:closer>
+
+  </tei:div>
+
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/><tei:lb/>
+    <tei:fw type="header" rend="center">
+     <tei:handShift new="#printed"/><tei:hi rend="bold">Pneumatic Postcard</tei:hi></tei:fw>
+    <tei:lb/>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:addrLine>Sender: <tei:note type="editorial" place="inline">left
+       blank</tei:note></tei:addrLine>
+     </tei:address>
+     <tei:address>
+      <tei:addrLine>To: <tei:handShift new="#TF"/>Dr. H. Schenker</tei:addrLine>
+      <tei:addrLine rend="indent-10">Musician, Professor etc., etc., etc.</tei:addrLine>
+      <tei:addrLine><tei:handShift new="#printed"/>In <tei:supplied reason="identity"
+        >Vienna</tei:supplied>
+       <tei:handShift new="#TF"/>III</tei:addrLine>
+      <tei:addrLine rend="indent-40">Reisnerstraße 38</tei:addrLine>
+     </tei:address><tei:lb/>
+     <tei:fw type="postmark">|| VIENNA <tei:gap reason="illegible"/> | 5 20N 10 XI 04 | *15*r
+      ||</tei:fw>
+     <tei:fw type="postmark">|| VIENNA 3/3 | 5 30N 10 XI 04 | *49*r ||</tei:fw>
+     <tei:lb/><tei:lb/>
+    </tei:fw>
+    <tei:milestone unit="folio" n="verso"/>
+    <tei:salute><tei:handShift new="#TF"/>Highly revered Dr. <tei:supplied reason="identity"><tei:rs
+       key="entity-000632" type="person">Schenker</tei:rs></tei:supplied>, </tei:salute>
+   </tei:opener>
+
+   <tei:p rend="first">I would have gladly wished you joy on your well-deserved, magnificent success
+    as quickly as I had done for <tei:rs type="person" key="entity-000913">Violin</tei:rs>.<tei:ptr
+     corresp="#r0001-fn01" type="footnote"/> But I am struggling with adversity and sickliness; and
+    yet must keep a straight course and continue preparing the <tei:title level="m">Blätter für
+     Gemäldekunde</tei:title>.</tei:p>
+
+   <tei:p>I shall send them to you in about two weeks.</tei:p>
+
+   <tei:closer>
+    <tei:salute>With most cordial greetings,</tei:salute>
+    <tei:signed rend="indent-80"><tei:rs key="entity-000259" type="person">Dr.
+     Frimmel</tei:rs></tei:signed>
+   </tei:closer>
+
+
+  </tei:div>
+
+ </sdo:record>
+</sdo:recordCollection>

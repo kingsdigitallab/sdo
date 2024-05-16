@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="2136" sdoID="OJ-5-45_7">OJ 5/45, [7]</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="HS" scope="sole">Heinrich Schenker's hand</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="WD">
+   <tei:persName>William Drabkin</tei:persName>
+   <tei:resp>Transcription, 2008</tei:resp>
+   <tei:resp>Translation, 2008</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>XML Encoding, 2018</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2011-10-28" who="#IB">XML code revised</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-006959">Mannes Music School ~
+    HSchenker</tei:rs>
+   <tei:rs role="correspondence" type="correspondence" key="entity-002737">Weisse ~
+    H+JSchenker</tei:rs>
+   <tei:rs role="correspondence" type="correspondence" key="entity-002715">Weisse ~
+    HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+   <dc:title>Handwritten draft letter of recommendation by Schenker for Hans Weisse, dated April 15,
+    1931</dc:title>
+
+   <dcterms:created>1931-04-15T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2018-10-03</dcterms:dateSubmitted>
+   <dc:description>In the second draft of a letter of recommendation Schenker praises Weisse's
+    creativity and pedagogical skill, his qualifications as a teacher of composition, and declares
+    him the best representative of his own theory.</dc:description>
+   <dc:subject>Jugend; youth; Leitung; direction; supervision; Meister; master; Persönlichkeit;
+    personality; schaffend; creative; lehrend; pedagogical; Komposition; composition; Tonschöpfung;
+    composition; Künstler; artist; Vertreter; exponent; representative; Lehre; theory</dc:subject>
+
+
+
+   <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+   <marcrel:correspondent key="entity-000771">JSchenker</marcrel:correspondent>
+   <marcrel:recipient key="entity-002454">Mannes Music School</marcrel:recipient>
+   <marcrel:recipient key="entity-000951">Weisse</marcrel:recipient>
+
+  </sdo:itemDesc>
+
+
+  <tei:div type="transcription">
+
+   <tei:opener/>
+
+   <tei:p><tei:handShift new="#HS"/>Die musikalische Jugend Amerikas kann sich glücklich preisen,
+    daß sie unter der Leitung des bekannten Wiener Musikers D<tei:hi rend="supralinear">r.</tei:hi>
+    <tei:rs type="person" key="entity-000951"><tei:hi rend="lateinschr">Hans
+     Weisse</tei:hi></tei:rs> ihre Studien wird machen können.<tei:note xml:id="r0001-fn01"
+     type="editorial" place="foot">Writing of the first draft of this letter of recommendation is
+     recorded in Schenker's diary at OJ 4/4, p. 3606, April 13, 1931: "Lie-Liechen verfaßt die
+     „Reklame“ für Weisse! Ich schreibe sie ab u. einige Worte dazu" ("Lie-Liechen writes the
+     "advertisement" for Weisse! I copy it out, and add a few words to it"). — For Weisse's
+     requested changes, see <tei:ref type="correspondence" cRef="OJ-15-16_74">OJ 15/16,
+      [74]</tei:ref>; the present draft responds to those requests. The sending off of the final
+     version to Weisse is not recorded in Schenker's diary.</tei:note></tei:p>
+
+   <tei:p>D<tei:hi rend="supralinear">r.</tei:hi>
+    <tei:rs type="person" key="entity-000951"><tei:hi rend="lateinschr">Hans
+     Weisse</tei:hi></tei:rs> ist trotz seiner Jugend eine wirkliche Persönlichkeit, schaffend und
+    lehrend ein Künstler von höchstem Rang: seine <tei:subst>
+     <tei:del rend="overstrike">Kompositionen</tei:del>
+     <tei:add place="interlinear-above">Tonschöpfungen</tei:add>
+    </tei:subst> berechtigen <tei:add place="interlinear-above">ihn</tei:add> zum Unterricht in
+    Komposition ganz besonders und als Vertreter meiner neuen Lehre kann ich mir überhaupt keinen
+    besseren denken. </tei:p>
+
+   <tei:closer>
+    <tei:signed rend="intend-40"><tei:rs type="person" key="entity-000632"><tei:hi rend="lateinschr"
+       >H. Schenker</tei:hi></tei:rs></tei:signed><tei:lb/><tei:lb/>
+    <tei:dateline rend="indent-20">Wien, <tei:date when="1931-04-15"><tei:add
+       place="interlinear-above">(15.)</tei:add> April 1931</tei:date></tei:dateline>
+   </tei:closer>
+
+  </tei:div>
+
+
+
+  <tei:div type="translation">
+
+   <tei:opener/>
+
+   <tei:p><tei:handShift new="#HS"/>The musical youth of America can consider itself fortunate that
+    it will be able to undertake its studies under the supervision of the well-known Viennese
+    musician, Dr. <tei:rs type="person" key="entity-000951">Hans Weisse</tei:rs>.<tei:ptr
+     corresp="#r0001-fn01" type="footnote"/></tei:p>
+
+   <tei:p>Dr. <tei:rs type="person" key="entity-000951">Hans Weisse</tei:rs> is, despite his youth,
+    a true personality, creatively and pedagogically an artist of the highest rank. His <tei:subst>
+     <tei:del rend="overstrike">compositions</tei:del>
+     <tei:add place="interlinear-above">musical works</tei:add>
+    </tei:subst> justify <tei:add place="interlinear-above">his</tei:add> teaching composition most
+    particularly; and as an exponent of my new theory, I can think of no one whatsoever
+    better.</tei:p>
+
+   <tei:closer>
+    <tei:signed rend="intend-40"><tei:rs type="person" key="entity-000632">H.
+     Schenker</tei:rs></tei:signed><tei:lb/><tei:lb/>
+    <tei:dateline rend="indent-20">Vienna, <tei:date when="1931-04-15">April <tei:add
+       place="interlinear-above">15</tei:add>, 1931</tei:date></tei:dateline>
+   </tei:closer>
+
+  </tei:div>
+
+ </sdo:record>
+</sdo:recordCollection>

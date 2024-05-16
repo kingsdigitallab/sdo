@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2027" sdoID="OJ-11-54_45-46">OJ 11/54, [45]-[46]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="EvH" scope="major">Eva van Hoboken's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="HE">
+      <tei:persName>Heribert Esser</tei:persName>
+      <tei:resp>Transcription, 2018</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="JR">
+      <tei:persName>John Rothgeb</tei:persName>
+      <tei:resp>Translation, 2018</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2018</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2013-02-16" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-entity-003298"
+        >Envelope</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-006873">BoyE ~
+        JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-006874">BoyE ~
+        H+JSchenker</tei:rs>
+
+      <dc:title>Handwritten letter, with envelope, from Eva van Hoboken to Jeanette Schenker, dated
+        December 15, 1935</dc:title>
+
+      <dcterms:created>1935-12-15T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2018-07-19</dcterms:dateSubmitted>
+      <dc:description>Eva van Hoboken sends 200 shillings for a copy of "Brahms
+        Erinnerungen."</dc:description>
+      <dc:subject>Entgelt; remuneration; Nachlass; estate</dc:subject>
+
+      <marcrel:correspondent key="entity-000093">Eva Boy</marcrel:correspondent>
+      <marcrel:recipient key="entity-000771">Jeanette Schenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+      <tei:opener>
+        <tei:fw type="envelope">
+          <tei:note type="editorial" place="inline"><tei:hi rend="bold">envelope: <tei:hi
+                rend="italic">recto</tei:hi></tei:hi></tei:note><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#EvH"/>Frau Dr. Heinrich Schenker<tei:note
+                xml:id="r0001-fn01" type="editorial" place="foot">The envelope has no stamp or
+                franking and no sender address, so was presumably delivered by
+              hand.</tei:note></tei:addrLine>
+            <tei:addrLine>Pension Dr. Scheidl</tei:addrLine>
+            <tei:addrLine>Cottagegasse 21</tei:addrLine>
+            <tei:addrLine>XVIII</tei:addrLine>
+          </tei:address><tei:lb/>
+        </tei:fw><tei:lb/>
+        <tei:note type="editorial" place="inline"><tei:hi rend="bold">letter</tei:hi></tei:note><tei:lb/>
+        <tei:note type="editorial" place="inline">Monogram of the Wiener Cottage-Sanatorium,
+          comprising stylized letters "W" "C" "S" superimposed</tei:note><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>WIENER COTTAGE-SANATORIUM</tei:addrLine>
+          <tei:addrLine>TELEPHON A-12-5-30</tei:addrLine>
+        </tei:address>
+        <tei:address rend="indent-70">
+          <tei:addrLine>WIEN, <tei:handShift new="#EvH"/>15.12. <tei:handShift new="#printed"
+              />19<tei:handShift new="#EvH"/>35</tei:addrLine>
+          <tei:addrLine><tei:handShift new="#printed"/>XVIII., STERNWARTESTRASSE 74</tei:addrLine>
+        </tei:address>
+        <tei:salute><tei:handShift new="#EvH"/>Liebe, verehrte <tei:rs type="person"
+            key="entity-000771">Frau Dr. Schenker</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Darf ich Ihnen die inliegenden 200 S.<tei:supplied reason="denomination"
+          >chilling</tei:supplied> als kleinen materiellen Entgelt für die <tei:rs type="work"
+          key="entity-005899"><tei:title>Brahms Erinnerungen</tei:title></tei:rs><tei:note
+          xml:id="r0001-fn02" type="editorial" place="foot">Schenker’s <tei:title level="a"
+            >Erinnerung an Brahms,</tei:title>
+          <tei:title level="j">Deutsche Zeitschrift</tei:title>
+          <tei:note type="editorial" place="inline">formerly <tei:title level="j">Der
+              Kunstwart</tei:title></tei:note> 46 (May 1933), 475‒82, two copies of which are
+          preserved as OJ 17/4 together with a leaf in Schenker's hand, and an excerpt from the
+          article also in OJ 20/10. Handwritten notes entitled "Zu Erinnerungen [an] Brahms" are
+          also preserved as OC 30/42‒47.</tei:note> aus dem Nachlass schicken.</tei:p>
+
+      <tei:p rend="first">Ich glaube, mein <tei:rs type="person" key="entity-000380">Mann</tei:rs>
+        wird sich viel darüber freuen und er wird sie in gutem Andenken bestens verwahren.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">Ihnen Alles Liebe und Gute</tei:salute>
+        <tei:salute rend="indent-10">Ihre</tei:salute>
+        <tei:signed rend="indent-20"><tei:rs type="person" key="entity-000093">Eva van
+            Hoboken</tei:rs></tei:signed>
+      </tei:closer>
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+      <tei:opener>
+        <tei:fw type="envelope">
+          <tei:note type="editorial" place="inline"><tei:hi rend="bold">envelope: <tei:hi
+                rend="italic">recto</tei:hi></tei:hi></tei:note><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#EvH"/>Mrs. Heinrich Schenker<tei:ptr
+                corresp="#r0001-fn01" type="footnote"/></tei:addrLine>
+            <tei:addrLine rend="indent-60">Guesthouse Dr. Scheidl</tei:addrLine>
+            <tei:addrLine rend="indent-40">Cottagegasse 21</tei:addrLine>
+            <tei:addrLine><tei:supplied reason="place">Vienna</tei:supplied> XVIII</tei:addrLine>
+          </tei:address><tei:lb/>
+        </tei:fw><tei:lb/>
+        <tei:note type="editorial" place="inline"><tei:hi rend="bold">letter</tei:hi></tei:note><tei:lb/>
+        <tei:note type="editorial" place="inline">Monogram of the Wiener Cottage-Sanatorium,
+          comprising stylized letters "W" "C" "S" superimposed</tei:note><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>VIENNESE COTTAGE SANATORIUM</tei:addrLine>
+          <tei:addrLine>TELEPHONE A-12-5-30</tei:addrLine>
+        </tei:address>
+        <tei:address rend="indent-70">
+          <tei:addrLine>VIENNA, <tei:handShift new="#EvH"/>December 15, <tei:handShift
+              new="#printed"/>19<tei:handShift new="#EvH"/>35</tei:addrLine>
+          <tei:addrLine><tei:handShift new="#printed"/><tei:supplied reason="place"
+              >Vienna</tei:supplied> XVIII, STERNWARTESTRASSE 74</tei:addrLine>
+        </tei:address>
+        <tei:salute><tei:handShift new="#EvH"/>Dear, revered <tei:rs type="person"
+            key="entity-000771">Mrs. Schenker</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">May I send you the enclosed 200 shillings as a small material remuneration
+        for the <tei:rs type="work" key="entity-005899"><tei:title>Brahms
+          Recollections</tei:title></tei:rs><tei:ptr corresp="#r0001-fn02" type="footnote"/> from
+        the <tei:supplied reason="identity">Schenker</tei:supplied> estate.</tei:p>
+
+      <tei:p rend="first">I believe my <tei:rs type="person" key="entity-000380">husband</tei:rs>
+        will enjoy them very much, and will in fond memory give them the best of care.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">With every wish of love and esteem,</tei:salute>
+        <tei:salute rend="indent-10">Your</tei:salute>
+        <tei:signed rend="indent-20"><tei:rs type="person" key="entity-000093">Eva van
+            Hoboken</tei:rs></tei:signed>
+      </tei:closer>
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

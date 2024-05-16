@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2503" sdoID="LC-ASC-27-45_10">LC ASC 27/45, [10]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="MV" scope="sole">Moriz Violin's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2020</tei:resp>
+      <tei:resp>XML Encoding, 2020</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Translation, 2020</tei:resp>
+
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2013-07-01" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-007495">ViolinM ~
+        ASchoenberg</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+
+
+      <dc:title>Handwritten postcard from Moriz Violin to Schoenberg, dated July 7, 1939</dc:title>
+
+      <dcterms:created>1939-07-07T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2020-08-26</dcterms:dateSubmitted>
+      <dc:description>Violin informs Schoenberg of his route from New York to
+        California.</dc:description>
+      <dc:subject>Juden; jews; Comité; committee; Bus; Geld; money; Ankunft; arrival</dc:subject>
+
+
+
+      <marcrel:correspondent key="entity-000913">ViolinM</marcrel:correspondent>
+      <marcrel:recipient key="entity-000798">ASchoenberg</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:lb/>
+        <tei:add resp="MV"><tei:handShift new="#MV"/>By <tei:hi rend="underline">Air
+          Mail</tei:hi></tei:add><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>Prof. Arnold Schoenberg</tei:addrLine>
+            <tei:addrLine>116 North Rockingham Av.</tei:addrLine>
+            <tei:addrLine>Brentwood Park</tei:addrLine>
+            <tei:addrLine><tei:hi rend="underline">Los Angeles</tei:hi></tei:addrLine>
+            <tei:addrLine rend="indent-30">Calif.</tei:addrLine>
+            <tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| NEW YORK N. Y. | JUL 7 | 930 PM | 1939 | STA. W. ||</tei:fw>
+          <tei:fw type="postmark">|| NEW YORK N. Y. | JUL 7 | 930 PM | 1939 | STA. W.
+          ||</tei:fw><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline><tei:placeName>N. Y.</tei:placeName>
+          <tei:date when="1939-07-07">7. Juli 39</tei:date>.</tei:dateline>
+        <tei:salute>Verehrtester <tei:rs type="person" key="entity-000798"
+          >Freund</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Die Juden gehen so lange zu einem Comité, bis sie für ihr eigenes Geld mit
+        dem Bus fahren müssen.<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Violin is
+          traveling from New York to San Francisco via Los Angeles. This postcard is the only
+          insight we have into his mode of transport, circumstances, and route.</tei:note> Ich fahre
+        morgen 8<tei:hi rend="supralinear">ten</tei:hi> weg, komme 9<tei:hi rend="supralinear"
+          >ten</tei:hi> nachmittags in <tei:rs type="place" key="entity-007400">Chikago</tei:rs> an,
+        will dort übernachten, dasselbe in Salt Lake City versuchen. Meine genaue Ankunft kann ich
+        erst von Salt Lake City <tei:choice>
+          <tei:sic>drathen</tei:sic>
+          <tei:corr>drahten</tei:corr>
+        </tei:choice>. Werden Sie mich gütigst erwarten können? Ich wäre sonst so verloren!! Mit
+        schönsten Empfehlungen an Ihre w. <tei:rs type="person" key="entity-007657">Frau
+          Gemalin</tei:rs>,</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-80">getreuest</tei:salute>
+        <tei:salute rend="indent-50">Ihr</tei:salute>
+        <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000913">M Violin</tei:rs>
+        </tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:lb/>
+        <tei:add resp="MV"><tei:handShift new="#MV"/>By <tei:hi rend="underline">Air
+          Mail</tei:hi></tei:add><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>Prof. Arnold Schoenberg</tei:addrLine>
+            <tei:addrLine>116 North Rockingham Avenue</tei:addrLine>
+            <tei:addrLine>Brentwood Park</tei:addrLine>
+            <tei:addrLine><tei:hi rend="underline">Los Angeles</tei:hi></tei:addrLine>
+            <tei:addrLine rend="indent-30">California</tei:addrLine>
+            <tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| NEW YORK N. Y. | JUL 7 | 930 PM | 1939 | STA. W. ||</tei:fw>
+          <tei:fw type="postmark">|| NEW YORK N. Y. | JUL 7 | 930 PM | 1939 | STA. W.
+          ||</tei:fw><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline><tei:placeName>N. Y.</tei:placeName>
+          <tei:date when="1939-07-07">July 7, 1939</tei:date></tei:dateline>
+        <tei:salute>Most revered <tei:rs type="person" key="entity-000798"
+          >Friend</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">The Jews go to a committee until they must travel by bus for their own
+          money.<tei:ptr corresp="#r0001-fn01" type="footnote"/> I am leaving tomorrow morning, the
+        8th, arriving <tei:rs type="place" key="entity-007400">Chicago</tei:rs> on the afternoon of
+        the 9th. I will stay overnight there and try to do the same in Salt Lake City. My exact
+        arrival time I can only cable from Salt Lake City. Would you be so kind as to await me? I
+        would otherwise be so lost!! With my best regards to your dear <tei:rs type="person"
+          key="entity-007657">wife</tei:rs>,</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-80">most faithfully </tei:salute>
+        <tei:salute rend="indent-50">your</tei:salute>
+        <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000913">M. Violin</tei:rs>
+        </tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

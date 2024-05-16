@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2644" sdoID="OJ-9-6_57a">OJ 9/6, [57a]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="d-A" scope="sole">Eugen d'Albert's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2021</tei:resp>
+      <tei:resp>Translation, 2021</tei:resp>
+      <tei:resp>XML Encoding, 2021</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2013-07-23" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008072">d'AlbertE ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+
+
+      <dc:title>Handwritten postcard from Eugen d’Albert to Schenker, undated [July/August
+        1912]</dc:title>
+
+      <dcterms:created>1912-08-01T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2021-12-14</dcterms:dateSubmitted>
+      <dc:description>Schenker has sent Eugen d'Albert a text as a possible basis for an opera
+        libretto, and d'Albert explains his reasons for rejecting it.</dc:description>
+      <dc:subject>Büchelchen; booklet; Stoff; material; dürftig; meager; Oper; opera;
+        Schauspieldichter; playwright; opernlibrettist; opera librettist; arm; weak; Gedanke; idea;
+        bequem; idle; Ergänzung; addition; Lektüre; reading</dc:subject>
+
+      <marcrel:correspondent key="entity-000150">d'AlbertE</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#d-A"/>Herrn Dr Heinrich <tei:hi rend="underline"
+                >Schenker</tei:hi></tei:addrLine>
+            <tei:addrLine>Hotel Paneveggio</tei:addrLine>
+            <tei:addrLine><tei:hi rend="underline">Paneveggio</tei:hi></tei:addrLine>
+            <tei:addrLine><tei:hi rend="underline">Südtirol</tei:hi>.</tei:addrLine>
+          </tei:address>
+          <tei:lb/>
+          <tei:fw type="postmark">|| SPITAL | <tei:gap reason="illegible"/> | [AM] SEMMERING
+            ||</tei:fw>
+          <tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:salute><tei:handShift new="#d-A"/>Sehr geehrter Herr <tei:rs type="person"
+            key="entity-000632">Doctor</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p>ich erhielt erst vorgestern das Büchelchen vom <tei:unclear reason="reading"
+        >Uni</tei:unclear>verlag u. schreibe Ihnen daher erst jetzt. Ich finde den Stoff für die
+        Oper doch zu dürftig – ein Schauspieldichter (Sie erwähnen ja <tei:rs type="person"
+          key="entity-000797">Schnitzler</tei:rs>) würde daraus etwas machen können; unsere
+        Opernlibrettisten sind aber alle zu arm an Gedanken oder zu bequem um die notwendigen
+        ausführlichen Ergänzungen zu erfinden. Ich danke Ihnen nochmals für die interessante
+        Lektüre. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-30">Mit freund<tei:supplied reason="abbreviation"
+            >lichen</tei:supplied> G<tei:supplied reason="elision">rü</tei:supplied>ßen</tei:salute>
+        <tei:salute rend="indent-60">Ihr</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs key="entity-000150" type="person">Eugen
+            d’Albert</tei:rs>.</tei:signed><tei:lb/>
+        <tei:add>Spital <tei:hi rend="supralinear">a</tei:hi>/S.</tei:add>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:lb/>
+        <tei:p>Vom <tei:date when="1912-09-05">5 Sept</tei:date> ab: <tei:hi rend="underline"
+            >Wien</tei:hi>. XIII. Elßlergaße 20<tei:note xml:id="r0001-fn01" type="editorial"
+            place="foot">On May 11, 1912 (<tei:ref type="correspondence" cRef="OJ-9-6_56">OJ 9/6,
+              [56]</tei:ref>), d‘Albert, having previously invited Schenker to his new Vienna home
+            at Elßlergaße 20, had to “disinvite” him because the house was not ready. By December 4
+              <tei:ref type="correspondence" cRef="OJ-9-6_58">OJ 9/6, [58]</tei:ref> d’Albert wrote
+            from that address on headed notepaper. Evidently therefore the house was, on current
+            predictions, due to be ready by September. D’Albert does not appear in Lehmann’s Street
+            Directory of Vienna for 1912, but does so for 1913.</tei:note></tei:p>
+      </tei:postscript>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#d-A"/>Dr. Heinrich <tei:hi rend="underline"
+                >Schenker</tei:hi></tei:addrLine>
+            <tei:addrLine>Hotel Paneveggio</tei:addrLine>
+            <tei:addrLine><tei:hi rend="underline">Paneveggio</tei:hi></tei:addrLine>
+            <tei:addrLine><tei:hi rend="underline">South Tyrol</tei:hi>.</tei:addrLine>
+          </tei:address>
+          <tei:lb/>
+          <tei:fw type="postmark">|| SPITAL | <tei:gap reason="illegible"/> | [AM] SEMMERING
+            ||</tei:fw>
+          <tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:salute><tei:handShift new="#d-A"/>Dear Dr. <tei:supplied><tei:rs type="person"
+              key="entity-000632">Schenker</tei:rs></tei:supplied>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>I didn’t receive your booklet from the <tei:unclear reason="original_unclear"
+          >Uni</tei:unclear> publishing house until the day before yesterday, and am accordingly
+        only now writing to you. I find the material too meager for opera – a playwright (you indeed
+        mention <tei:rs key="entity-000797">Schnitzler</tei:rs>) would be able to make something of
+        it; our opera librettists are, however, all too lacking in ideas or too idle to provide the
+        extensive additional detail necessary. Thank you again for the interesting reading.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-30">With cordial greetings,</tei:salute>
+        <tei:salute rend="indent-60">Your</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs key="entity-000150" type="person">Eugen
+            d’Albert</tei:rs>.</tei:signed><tei:lb/>
+        <tei:add>Spital a<tei:supplied reason="abbreviation">m</tei:supplied> S<tei:supplied
+            reason="abbreviation">emmering</tei:supplied></tei:add>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:lb/>
+        <tei:p>From <tei:date when="1912-09-05">September 5</tei:date> on: <tei:hi rend="underline"
+            >Vienna</tei:hi> XIII, Elßlergaße 20<tei:ptr corresp="#r0001-fn01" type="footnote"
+          /></tei:p>
+      </tei:postscript>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2453" sdoID="WSLB-86">WSLB 86</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2006, 2020</tei:resp>
+      <tei:resp>Translation, 2006, 2020</tei:resp>
+      <tei:resp>XML Encoding, 2022</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-04" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002700">Hertzka ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002701">UE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002702">UE ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+      <dc:title>Handwritten letter from Schenker to Hertzka (UE), dated November 30, 1911</dc:title>
+
+      <dcterms:created>1911-11-30T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2022-03-15</dcterms:dateSubmitted>
+      <dc:description>Schenker acknowledges receipt of the first galley-proofs of Beethovens neunte
+        Sinfonie and asks for return of his copy of Grove's book on the Beethoven
+        symphonies.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000632">Heinrich Schenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000356">Emil Hertzka</marcrel:recipient>
+      <marcrel:recipient key="entity-002408">Universal Edition</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:add rend="indent-80"><tei:handShift new="#stamp"/><tei:note type="editorial"
+            place="inline">UE receipt stamp:</tei:note> Erledigt</tei:add>
+        <tei:salute rend="indent-10">Sehr geehrter Herr <tei:rs type="person" key="entity-000356"
+            >Direktor</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p>Besten Dank für die Zusendung der 1sten Fahnen,<tei:note xml:id="r0001-fn01"
+          type="editorial" place="foot">First proofs of
+            <tei:bibl><tei:author>Schenker</tei:author>’s <tei:rs type="work" key="entity-001731"
+                ><tei:title level="m">Beethovens neunte Sinfonie</tei:title></tei:rs> (Vienna:
+            Universal Edition, 1912)</tei:bibl>. No covering note or delivery slip from this package
+          of proofs is known to have survived, nor does Schenker’s diary of this time record receipt
+          of proofs.</tei:note> die wirklich in den <tei:hi rend="lateinschr">Monat
+          November</tei:hi> noch gefallen, u. Sie gestatten, daß ich auch Ihnen eine Freude mit dem
+        letzten Passus, vielmehr Postscriptum des beiliegenden <tei:rs type="person"
+          key="entity-000150"><tei:hi rend="lateinschr">d’Albert</tei:hi></tei:rs>schen Briefes
+          mache.<tei:note xml:id="r0001-fn02" type="editorial" place="foot">= <tei:ref
+            type="correspondence" cRef="OJ-9-6_52">OJ 9/6, [52]</tei:ref>, dated November 27, 1911,
+          of which the PS reads: "Von Ihrer Ausgabe der <tei:rs type="work" key="entity-001730"
+              ><tei:title>chromatischen Fantasie</tei:title></tei:rs> bin ich <tei:hi
+            rend="underline">entzückt</tei:hi>!" ("I am <tei:hi rend="underline">enchanted</tei:hi>
+          by your edition of the <tei:rs type="work" key="entity-001730"><tei:title level="m"
+              >Chromatic Fantasy</tei:title></tei:rs>").</tei:note></tei:p>
+
+      <tei:p>Bei Gelegenheit der Rücksendung des Briefes wollen Sie auch das Buch „<tei:hi
+          rend="underline lateinschr">Grove</tei:hi>“,<tei:note xml:id="r0001-fn03" type="editorial"
+          place="foot">Schenker had previously referred to <tei:bibl><tei:author>Sir George
+              Grove</tei:author>'s <tei:title level="m">Beethoven and His Nine
+              Symphonies</tei:title> (London: Novello, 1896)</tei:bibl>, of which he possessed a
+          copy of the German translation by Max Hehmann (London 1906) (see <tei:bibl><tei:title
+              level="m">Musik und Theater, enthaltend die Bibliothek des Herrn Dr. Heinrich
+              Schenker, Wien</tei:title> (Vienna: Antiquariat Heinrich Hinterberger,
+          n.d.</tei:bibl>), item 40), in <tei:ref type="correspondence" cRef="WSLB-47">WSLB
+            47</tei:ref>, November 9, 1909, and <tei:ref type="correspondence" cRef="WSLB-77">WSLB
+            77</tei:ref>, June 21, 1911. Since Schenker was dismissive of the book, the PS is surely
+          a mere device for procuring the return of the volume. </tei:note> das ich Ihnen im
+        Vorjahre zu Modellzwecken zukommen ließ, beilegen. </tei:p>
+
+
+      <tei:closer>
+        <tei:salute rend="indent-10">Mit ausgezeichneter Hochachtung</tei:salute>
+        <tei:salute rend="indent-60">I<tei:supplied reason="omission">h</tei:supplied>r
+            ergeb<tei:supplied reason="abbreviation">ener</tei:supplied></tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:rs key="entity-000632" type="person"><tei:hi rend="lateinschr">H
+            Schenker</tei:hi></tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1911-11-30">30. 11. 1911</tei:date></tei:dateline>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:lb/>
+        <tei:p><tei:hi rend="lateinschr">Grove</tei:hi> ist bei den Korrekturen unentbehrlich.
+        </tei:p>
+      </tei:postscript>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:add rend="indent-80"><tei:handShift new="#stamp"/><tei:note type="editorial"
+            place="inline">UE receipt stamp:</tei:note> Dealt with</tei:add>
+        <tei:salute rend="indent-10">Dear <tei:rs type="person" key="entity-000356"
+            >Director</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>Many thanks for delivery of the first galley-proofs,<tei:ptr corresp="#r0001-fn01"
+          type="footnote"/> which really did occur in the month of November. Allow me to bring you a
+        little cheer with the final passage, or rather the postcript, of the enclosed letter from
+          <tei:rs type="person" key="entity-000150">d’Albert</tei:rs>.<tei:ptr corresp="#r0001-fn02"
+          type="footnote"/></tei:p>
+
+      <tei:p>When you return the letter, please also enclose the book <tei:hi rend="underline"
+          >Grove</tei:hi>,<tei:ptr corresp="#r0001-fn03" type="footnote"/> which I sent you last
+        year to serve as a model.</tei:p>
+
+
+      <tei:closer>
+        <tei:salute rend="indent-10">With kind regards,</tei:salute>
+        <tei:salute rend="indent-60">Your devoted</tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:rs key="entity-000632" type="person">H. Schenker</tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1911-11-30">November 30, 1911</tei:date></tei:dateline>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:lb/>
+        <tei:p>Grove is indispensable for correcting the proofs.</tei:p>
+      </tei:postscript>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1465" sdoID="OC-B-228">OC B/228</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="TPvah" scope="major">V. A. Heck's typist</tei:handNote>
+      <tei:handNote xml:id="VAH" scope="minor">V. A. Heck's hand</tei:handNote>
+      <tei:handNote xml:id="unk" scope="minor">unknown hand (V. A. Heck's?)</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="NM">
+      <tei:persName>Nicholas Marston</tei:persName>
+      <tei:resp>Transcription, 2015</tei:resp>
+      <tei:resp>Translation, 2015</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2015</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-26" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005586"> HeckVA ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">letter</tei:rs>
+
+      <dc:title>Typewritten letter from V. A. Heck to Schenker, dated February 21, 1927</dc:title>
+      <dcterms:created>1927-02-21T11:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2015-03-04</dcterms:dateSubmitted>
+      <dc:description>Heck informs Schenker of a Beethoven manuscript in his hands.</dc:description>
+      <dc:subject>eigenhändig; autograph; corrigiert; corrected; Manuskript; manuscript; Besitzer;
+        owner</dc:subject>
+
+
+
+      <marcrel:correspondent key="entity-000345">V. A. Heck</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>BUCH- UND KUNSTANTIQUARIAT</tei:addrLine>
+          <tei:addrLine>AUTOGRAPHEN-HANDLUNG</tei:addrLine>
+          <tei:addrLine><tei:hi rend="bold">V. A. HECK</tei:hi></tei:addrLine>
+          <tei:addrLine>WIEN I, KÄRNTNERRING 12</tei:addrLine>
+          <tei:addrLine>____________________</tei:addrLine>
+          <tei:addrLine>KATALOGE AUF VERLANGEN GRATIS</tei:addrLine>
+          <tei:addrLine>____________________</tei:addrLine>
+          <tei:addrLine>ÖSTERR. POSTSPARK.-KTO. 3.845</tei:addrLine>
+          <tei:addrLine>TELEPHON 51-2-61</tei:addrLine>
+          <tei:addrLine>WECHSELSTUBE DER UNIONBANK</tei:addrLine>
+          <tei:addrLine>WIEN I., KÄRNTNERRING 12</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-60"><tei:placeName>WIEN</tei:placeName>, <tei:handShift
+            new="#TPvah"/>am <tei:date when="1927-02-21">21. Februar 1927</tei:date>.</tei:dateline><tei:lb/>
+        <tei:address>
+          <tei:addrLine rend="indent-20">Herrn Dr. Heinrich <tei:hi rend="sperr"
+            >Schenker</tei:hi>,</tei:addrLine>
+          <tei:addrLine rend="indent-70"><tei:hi rend="underline"><tei:hi rend="sperr"
+              >Wien</tei:hi>, III.</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-65">Keilgasse 8.</tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:salute rend="indent-20">Sehr geehrter Herr <tei:rs key="entity-000632" type="person"
+            >Doktor</tei:rs>,<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
+            this letter is not specifically recorded in Schenker’s diary; however, see OC B/229,
+            fn1.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Mir wird eben angeboten: <tei:lb/>eine von <tei:rs key="entity-000055"
+          type="person"><tei:hi rend="sperr">Beethoven</tei:hi></tei:rs> eigenhändig corrigiertes
+          <tei:term>Manuskript</tei:term> seiner <tei:title>Leonore-Fidelio</tei:title>,<tei:note
+          xml:id="r0001-fn02" type="editorial" place="foot">The manuscript is today Bonn,
+          Beethovenhaus, HCB Mh 47; for provenance and details, see <tei:bibl><tei:title level="m"
+              >Ludwig van Beethoven: Thematisch-bibliographisches Werkverzeichnis</tei:title>, ed.
+              <tei:editor>Kurt Dorfmüller</tei:editor>, <tei:editor>Norbert Gertsch</tei:editor> and
+              <tei:editor>Julia Ronge</tei:editor>, 2 vols (Munich: Henle, 2014), I, 423, 425,
+            431–33, 444 –46</tei:bibl>.</tei:note> das <tei:rs key="entity-000632" type="person">E.
+          H-</tei:rs><tei:note xml:id="r0001-fn03" type="editorial" place="foot">"E. H." = "Eure
+          Hoheit". Heck’s lofty tone may have been adopted with humourous intent, although the
+          generally deferential tone of his prose in these letters is striking.</tei:note> sicher
+        interessieren dürfte und ich erlaube mir Sie höfl. einzuladen, sich dasselbe bei mir zu
+        besichtigen.</tei:p>
+
+      <tei:p rend="first">Da das <tei:term>Manuskript</tei:term> nicht mir gehört und es möglich
+        ist, dass der Besitzer es rasch wieder zurückfordert, so wäre ich Ihnen dankbar, wenn
+          <tei:rs key="entity-000632" type="person">E. H.</tei:rs> dasselbe heute noch bei mir
+        einsehen könnten.</tei:p>
+
+      <tei:p rend="first"><tei:hi rend="underline">Ich bin natürlich auch gerne bereit, es Ihnen zur
+          Ansicht zu senden</tei:hi>, <tei:add place="inline"><tei:handShift new="#unk"/>wenn Sie
+          dies vorziehen.</tei:add><tei:note xml:id="r0001-fn04" type="editorial" place="foot">Ink
+          underlining and handwritten extension presumably both in the hand of V. A.
+          Heck.</tei:note></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40"><tei:handShift new="#TPvah"/>Mit dem Ausdruck aller
+          Hochachtung</tei:salute>
+        <tei:signed rend="indent-60"><tei:handShift new="#VAH"/><tei:rs key="entity-000345"
+            type="person">V A Heck</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>ANTIQUARIAN BOOKS AND ART</tei:addrLine>
+          <tei:addrLine>AUTOGRAPH DEALERS</tei:addrLine>
+          <tei:addrLine><tei:hi rend="bold">V. A. HECK</tei:hi></tei:addrLine>
+          <tei:addrLine>VIENNA I, KÄRNTNERRING 12</tei:addrLine>
+          <tei:addrLine>____________________</tei:addrLine>
+          <tei:addrLine>CATALOGUES FREE ON REQUEST</tei:addrLine>
+          <tei:addrLine>____________________</tei:addrLine>
+          <tei:addrLine>AUSTRIAN POSTAL SAVINGS BANK ACCOUNT 3. 845</tei:addrLine>
+          <tei:addrLine>TELEPHONE 51-2-61</tei:addrLine>
+          <tei:addrLine>UNION BANK EXCHANGE</tei:addrLine>
+          <tei:addrLine>VIENNA I, KÄRNTNERRING 12</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-60"><tei:placeName>VIENNA</tei:placeName>, <tei:handShift
+            new="#TPvah"/><tei:date when="1927-02-21">February 21, 1927</tei:date></tei:dateline><tei:lb/>
+        <tei:address>
+          <tei:addrLine rend="indent-20">Dr. Heinrich <tei:hi rend="sperr"
+            >Schenker</tei:hi>,</tei:addrLine>
+          <tei:addrLine rend="indent-70"><tei:hi rend="underline"><tei:hi rend="sperr"
+                >Vienna</tei:hi> III</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-65">Keilgasse 8</tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:salute rend="indent-20">Dear Dr. <tei:rs key="entity-000632" type="person"
+            >Schenker</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">I have just been offered: a <tei:term>manuscript</tei:term> of <tei:rs
+          key="entity-000055" type="person"><tei:hi rend="sperr">Beethoven</tei:hi></tei:rs>’s
+          <tei:title level="m">Leonore-Fidelio</tei:title> with autograph corrections<tei:ptr
+          corresp="#r0001-fn02" type="footnote"/> which would surely be of interest to <tei:rs
+          key="entity-000632" type="person">Your Highness</tei:rs>,<tei:ptr corresp="#r0001-fn03"
+          type="footnote"/> and I take the liberty of politely inviting you to view it at my
+        premises.</tei:p>
+
+      <tei:p rend="first">Since the <tei:term>manuscript</tei:term> does not belong to me and it is
+        possible that the owner will want it back again quickly, I would be grateful if <tei:rs
+          key="entity-000632" type="person">Your Highness</tei:rs> could come to look through it
+        here this very day.</tei:p>
+
+      <tei:p rend="first"><tei:hi rend="underline">I am of course also quite prepared to send it to
+          you for inspection</tei:hi>
+        <tei:add place="inline"><tei:handShift new="#unk"/>if you prefer.</tei:add><tei:ptr
+          corresp="#r0001-fn04" type="footnote"/></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40"><tei:handShift new="#TPvah"/>With the highest expression of
+          regard,</tei:salute>
+        <tei:signed rend="indent-60"><tei:handShift new="#VAH"/><tei:rs key="entity-000345"
+            type="person">V A Heck</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

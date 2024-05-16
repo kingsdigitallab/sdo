@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1347" sdoID="OJ-11-42_2">OJ 11/42, [2]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="MH" scope="major">Maximilian Harden's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WP">
+      <tei:persName>William Pastille</tei:persName>
+      <tei:resp>Transcription, 2006</tei:resp>
+      <tei:resp>Translation, 2006</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2014</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-26" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005539">HardenM ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005540">ZukunftD ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Maximilian Harden to Schenker, dated November 29,
+        1892</dc:title>
+      <dcterms:created>1892-11-29T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2014-12-04</dcterms:dateSubmitted>
+      <dc:description>One of Schenker's articles will be published in an upcoming issue of Die
+        Zukunft; Harden asks for further submissions; agrees with Schenker's positive assessment of
+        the Italian soprano Gemma Bellincioni.</dc:description>
+      <dc:subject>Neues; something new; Urtheil; judgement</dc:subject>
+
+
+
+      <marcrel:correspondent key="entity-000333">Maximilian Harden</marcrel:correspondent>
+      <marcrel:correspondent key="entity-002566">Die Zukunft</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/>Deutsche
+          Reichspost</tei:fw>
+        <tei:fw type="header" rend="center">Postkarte</tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>An: <tei:handShift new="#MH"/>Herrn D<tei:hi rend="supralinear"
+                >r.</tei:hi>
+              <tei:hi rend="lateinschr">Heinrich Schenker</tei:hi></tei:addrLine>
+            <tei:addrLine rend="indent-10"><tei:handShift new="#printed"/>in <tei:handShift
+                new="#MH"/><tei:hi rend="lateinschr">Wien</tei:hi> III</tei:addrLine>
+            <tei:addrLine rend="indent-10"><tei:handShift new="#printed"/>Wohnung <tei:handShift
+                new="#MH"/>Traungasse 1</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| BERLIN W. a | 3011 | 92 | 4½-5N. ||</tei:fw>
+          <tei:fw type="postmark">|| WIEN 3/3 | 49 | BESTELLT | 1 -12.92 | 6N. ||</tei:fw>
+          <tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+        </tei:fw>
+        <tei:address>
+          <tei:addrLine rend="indent-40">Berlin W.9. Koethenerstr. 27 II.</tei:addrLine>
+          <tei:addrLine rend="indent-40"><tei:date when="1892-11-29"><tei:hi rend="underline"
+                >29.11.92.</tei:hi></tei:date></tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:salute><tei:handShift new="#MH"/>Sehr geehrter <tei:rs key="entity-000632"
+            type="person">Herr</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p> mit bestem Dank theile ich Ihnen mit, daß der Artikel in Nr. 10 erscheint.<tei:note
+          xml:id="r0001-fn01" type="editorial" place="foot">Schenker's second article for Harden,
+          "Eine jung-italienische Schule?", Die Zukunft, December 3, 1892, reprinted
+              <tei:bibl><tei:editor>Hellmut Federhofer</tei:editor>, <tei:title level="m">Heinrich
+              Schenker als Essayist und Kritiker</tei:title> (Hildesheim: Olms, 1990), pp.
+            31–34</tei:bibl>.</tei:note> Es wird mich sehr interessiren, wenn Sie mir Neues senden
+        wollen; was Sie andeuten, klingt ja verlockend genug.</tei:p>
+
+      <tei:p>Ihr Urtheil<tei:note xml:id="r0001-fn02" type="editorial" place="foot">In <tei:title
+            level="a">Mascagni in Wien,</tei:title> Schenker does not himself compare Bellincioni
+          with Duse, but he notes a comparison made by the Vienna opera audiences: "The significance
+          of genius manifested by this young lady (our public dubbed her ‘the singing Duse') can
+          hardly be measured today."; reprinted in <tei:bibl><tei:editor>Hellmut
+              Federhofer</tei:editor>, <tei:title level="m">Heinrich Schenker als Essayist und
+              Kritiker</tei:title> (Hildesheim: Olms, 1990), p. 29</tei:bibl>.) The critical
+          judgment about Duse must have occurred in some other correspondence from Schenker to
+          Harden.</tei:note> über die <tei:rs key="entity-005541" type="person">Bellincioni</tei:rs>
+        unterschreibe ich; sie ist im kleinen Finger genialer als die ganze <tei:rs
+          key="entity-005542" type="person">Duse</tei:rs>.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50">In ausgezeichneter Hochachtung</tei:salute>
+        <tei:salute rend="indent-70">Ihr ergebener</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs key="entity-000333" type="person">
+          Harden</tei:rs></tei:signed>
+        <tei:signed>DER HERAUSGEBER DER „ZUKUNFT“</tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/>German Imperial
+          Post</tei:fw>
+        <tei:fw type="header" rend="center">Postcard</tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>To: <tei:handShift new="#MH"/>Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-10"><tei:handShift new="#printed"/>in: <tei:handShift
+                new="#MH"/>Vienna III</tei:addrLine>
+            <tei:addrLine rend="indent-10"><tei:handShift new="#printed"/>Address: <tei:handShift
+                new="#MH"/>Traungasse 1</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| BERLIN W. a | 3011 | 92 | 4½-5 P.M. ||</tei:fw>
+          <tei:fw type="postmark">|| VIENNA 3/3 | 49 | DELIVERED | 1 -12.92 | 6 P.M. ||</tei:fw>
+          <tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+        </tei:fw>
+        <tei:address>
+          <tei:addrLine rend="indent-40">Berlin W.9., Koethenerstraße 27 II</tei:addrLine>
+          <tei:addrLine rend="indent-40"><tei:date when="1892-11-29"><tei:hi rend="underline"
+                >November 29, 1892</tei:hi></tei:date></tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:salute><tei:handShift new="#MH"/>Dear <tei:rs key="entity-000632" type="person"
+            >Sir</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>With many thanks I am letting you know that the article will appear in No. 10.<tei:ptr
+          corresp="#r0001-fn01" type="footnote"/> I would be very interested if you wished to send
+        me something new; what you suggest certainly sounds intriguing enough.</tei:p>
+
+      <tei:p>I concur with your judgment<tei:ptr corresp="#r0001-fn02" type="footnote"/> about
+          <tei:rs key="entity-005541" type="person">Bellincioni</tei:rs>; she has more talent in her
+        little finger than <tei:rs key="entity-005542" type="person">Duse</tei:rs> has in her whole
+        body.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50">In highest esteem,</tei:salute>
+        <tei:salute rend="indent-70">Yours truly,</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs key="entity-000333" type="person">
+          Harden</tei:rs></tei:signed>
+        <tei:signed>THE EDITOR OF "DIE ZUKUNFT"</tei:signed>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

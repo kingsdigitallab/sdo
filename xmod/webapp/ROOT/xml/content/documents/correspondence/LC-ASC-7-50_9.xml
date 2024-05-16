@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2516" sdoID="LC-ASC-7-50_9">LC ASC 7/50, [9]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="AS-pencil" scope="sole">Arnold Schoenberg's hand, in pencil
+      </tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2020</tei:resp>
+      <tei:resp>Translation, 2020</tei:resp>
+      <tei:resp>XML Encoding, 2020</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2013-07-01" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-007495">ViolinM ~
+        ASchoenberg</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002748">Telegram</tei:rs>
+
+
+
+      <dc:title>Handwritten telegram draft from Schoenberg to Moriz Violin, dated January 23,
+        1940</dc:title>
+
+      <dcterms:created>1940-01-23T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2020-08-31</dcterms:dateSubmitted>
+      <dc:description>Schoenberg has wrongly addressed LC ASC 7/50, [8] and asks Violin to check
+        with the Post Office to recover the letter.</dc:description>
+      <dc:subject>mistaken address</dc:subject>
+
+
+
+      <marcrel:correspondent key="entity-000798">ASchoenberg</marcrel:correspondent>
+      <marcrel:recipient key="entity-000913">ViolinM</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:note type="editorial" place="inline">This draft is written in English.</tei:note>
+      <tei:lb/>
+      <tei:lb/>
+
+      <tei:p><tei:handShift new="#AS-pencil"/><tei:subst>
+          <tei:del rend="overstrike">Air</tei:del>
+          <tei:add place="interlinear-above">My</tei:add>
+        </tei:subst> airmail letter<tei:note xml:id="r0001-fn01" type="editorial" place="foot">=
+            <tei:ref type="correspondence" cRef="LC-ASC-7-50_8">LC ASC 7/50, [8]</tei:ref>, January
+          16, 1940.</tei:note> was <tei:subst>
+          <tei:del rend="overstrike">wrongly</tei:del>
+          <tei:add place="interlinear-above">mistakenly</tei:add>
+        </tei:subst> adressed to 115 Divisadero Street stop ask Post office to give you the
+        letter</tei:p>
+
+      <tei:closer>
+        <tei:signed rend="indent-70"><tei:rs type="person" key="entity-000798"
+          >Schoenberg</tei:rs></tei:signed><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:rs type="person" key="entity-000913">Moriz
+            Violin</tei:rs></tei:addrLine>
+          <tei:addrLine rend="indent-50">1115 Divisadero Street</tei:addrLine>
+          <tei:addrLine rend="indent-80">San Francisco</tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:dateline><tei:date when="1940-01-23">I/23 1940</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+    <tei:div type="translation"/>
+
+  </sdo:record>
+</sdo:recordCollection>

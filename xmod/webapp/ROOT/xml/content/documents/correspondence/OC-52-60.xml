@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2424" sdoID="OC-52-60">OC 52/60</sdo:correspondence>
+    </sdo:source>
+    <tei:handNotes>
+      <tei:handNote xml:id="TPue" scope="major">Universal Edition's typist</tei:handNote>
+      <tei:handNote xml:id="EH" scope="minor">Emil Hertzka's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2006, 2020</tei:resp>
+      <tei:resp>Translation, 2006, 2020</tei:resp>
+      <tei:resp>XML Encoding, 2020</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-02-07" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002702">UE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002701">UE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002700">Hertzka ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+      <dc:title>Typewritten letter from Hertzka (UE) to Schenker, dated November 5, 1910</dc:title>
+
+      <dcterms:created>1910-11-05T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2020-07-15</dcterms:dateSubmitted>
+      <dc:description>Hertzka is pleased that Schenker's conversation with Wilhelm Bopp has gone
+        promisingly, and that Schenker is agreeable to the alternating publication of Beethoven and
+        Bach. — He is sending a new draft contract for Beethovens neunte Sinfonie.</dc:description>
+      <dc:subject>Rezensionsexemplar; complimentary copy; Besprechung; conversation; Anregung;
+        suggestion; Lieferung; batch; Vertragsentwurf; draft contract</dc:subject>
+
+      <marcrel:correspondent key="entity-002408">Universal Edition</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000356">Emil Hertzka</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>„Universal-Edition“ A.-G.</tei:addrLine>
+          <tei:addrLine>(Jos. Aibl Verlag, G.m.b.H.)</tei:addrLine>
+          <tei:addrLine>Leipzig <tei:supplied reason="spacer">/</tei:supplied> Sternwartestrasse
+            1520.</tei:addrLine>
+          <tei:addrLine>Wien <tei:supplied reason="spacer">/</tei:supplied> 1., Wipplingerstrasse
+            32.</tei:addrLine>
+          <tei:addrLine><tei:note type="editorial" place="inline"><tei:hi rend="italic"
+                >etc.</tei:hi></tei:note></tei:addrLine>
+        </tei:address>
+        <tei:byline><tei:handShift new="#TPue"/>R</tei:byline>
+        <tei:dateline rend="indent-60"><tei:handShift new="#printed"/>
+          <tei:placeName>Wien</tei:placeName>, <tei:handShift new="#TPue"/><tei:date
+            when="1910-11-05">5. Nov. 1910</tei:date>.</tei:dateline><tei:lb/>
+        <tei:address>
+          <tei:addrLine rend="ident-20">Hochwohlgeboren Herrn Prof. Dr. <tei:persName>Heinrich
+                <tei:hi rend="sperr">Schenker</tei:hi></tei:persName></tei:addrLine>
+          <tei:addrLine rend="indent-70">
+            <tei:hi rend="sperr underline">Wien</tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:salute>Sehr verehrter Herr <tei:rs key="entity-000632" type="person"
+          >Professor</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Aus <tei:rs type="place" key="entity-002501">Berlin</tei:rs>
+        zurückgekehrt, finde ich Ihre frdl. Zuschrift<tei:note xml:id="r0001-fn01" type="editorial"
+          place="foot">= <tei:ref type="correspondence" cRef="WSLB-69-71">WSLB 69/71</tei:ref>,
+          November 1, 1910.</tei:note> vor und lasse nunmehr an alle in Betracht kommenden
+        musikalischen Blätter Rezensionsexemplare Ihrer <tei:rs type="work" key="entity-001730"
+          >Bach-Bearbeitung</tei:rs> mit der von Ihnen verfassten Notiz<tei:note xml:id="r0001-fn02"
+          type="editorial" place="foot">i.e. the copy for the blurb supplied by Schenker on November
+          1 and enclosed with <tei:ref type="correspondence" cRef="WSLB-69-71">WSLB
+          69/71</tei:ref>.</tei:note> abgehen.</tei:p>
+
+      <tei:p rend="first">Mit grosser Freude habe ich aus Ihren Bemer<tei:supplied
+          reason="mistyping">k</tei:supplied>ungen ersehen, dass Ihre Besprechung mit Direktor
+          <tei:rs type="person" key="entity-000089">Bopp</tei:rs> aussichtsvoll verlaufen ist. Auch
+        Ihre Aeusserung, dass Sie sich mit meiner Anregung, je eine <tei:rs type="person"
+          key="entity-000055">Beethoven</tei:rs>-Sonate und eine <tei:rs type="person"
+          key="entity-000027">Bach</tei:rs>-Lieferung jährlich herauszugeben befreunden
+          wollen,<tei:note xml:id="r0001-fn03" type="editorial" place="foot">The plan devised with
+          Hertzka in conjunction with Bopp was to publish one of the last five piano sonatas of
+          Beethoven and a batch of preludes and fugues from the <tei:title level="m">Well-tempered
+            Clavier</tei:title>, Book II in alternating years in Schenker's editions.</tei:note>
+        erscheint mir recht erwünscht.</tei:p>
+
+      <tei:p rend="first">Ueber die formellen Festlegungen werden wir uns ja mündlich leicht
+        verständigen können. Ich lasse Ihnen gleichzeitig den neuen Vertragsentwurf über die <tei:rs
+          type="work" key="entity-001731"><tei:title>Neunte</tei:title></tei:rs> zugehen<tei:note
+          xml:id="r0001-fn04" type="editorial" place="foot">The contract was sent on November 6, and
+          is preserved as <tei:ref type="correspondence" cRef="OC-52-431">OC
+          52/431</tei:ref>.</tei:note> und hoffe, dass derselbe nunmehr Ihren Wünschen
+        entspricht.</tei:p>
+
+      <tei:p rend="first">Sie bald wieder bei sich begrüssen zu können, hofft</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Ihr Sie hochschätzender</tei:salute>
+        <tei:signed rend="indent-80"><tei:handShift new="#EH"/><tei:rs key="entity-000356"
+            type="person">Hertzka</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>Universal Edition &amp; Co.</tei:addrLine>
+          <tei:addrLine>(Jos. Aibl Publisher &amp; Co.)</tei:addrLine>
+          <tei:addrLine>Leipzig <tei:supplied reason="spacer">/</tei:supplied> Sternwartestrasse
+            1520</tei:addrLine>
+          <tei:addrLine>Vienna <tei:supplied reason="spacer">/</tei:supplied> I, Wipplingerstrasse
+            32</tei:addrLine>
+          <tei:addrLine><tei:note type="editorial" place="inline"><tei:hi rend="italic"
+                >etc.</tei:hi></tei:note></tei:addrLine>
+        </tei:address>
+        <tei:byline><tei:handShift new="#TPue"/>R</tei:byline>
+        <tei:dateline rend="indent-60"><tei:handShift new="#printed"/>
+          <tei:placeName>Vienna</tei:placeName>, <tei:handShift new="#TPue"/><tei:date
+            when="1910-11-05">November 5, 1910</tei:date></tei:dateline><tei:lb/>
+        <tei:address>
+          <tei:addrLine rend="ident-20">Prof. <tei:persName>Heinrich <tei:hi rend="sperr"
+                >Schenker</tei:hi></tei:persName>, Esq.</tei:addrLine>
+          <tei:addrLine rend="indent-70">
+            <tei:hi rend="sperr underline">Vienna</tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:salute>Most revered <tei:rs key="entity-000632" type="person"
+          >Professor</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Hotfoot from <tei:rs type="place" key="entity-002501">Berlin</tei:rs>, I
+        have your kind letter<tei:ptr corresp="#r0001-fn01" type="footnote"/> before me and shall
+        arrange for review copies of your <tei:rs type="work" key="entity-001730">Bach
+          edition</tei:rs> from now on to go out to all the musical periodicals in question with the
+        notice worded by you.<tei:ptr corresp="#r0001-fn02" type="footnote"/></tei:p>
+
+      <tei:p rend="first">I was delighted to see from your remarks that your conversation with
+        Director <tei:rs type="person" key="entity-000089">Bopp</tei:rs> has gone promisingly. Also
+        your comment that you wish to associate yourself with my suggestion that one <tei:rs
+          type="person" key="entity-000055">Beethoven</tei:rs> sonata and one installment of <tei:rs
+          type="person" key="entity-000027">Bach</tei:rs> be published each year<tei:ptr
+          corresp="#r0001-fn03" type="footnote"/> strikes me as most welcome.</tei:p>
+
+      <tei:p rend="first">We will surely be able to reach agreement easily on the formal terms when
+        we talk. Simultaneously, I am having the new draft contract for the <tei:rs type="work"
+          key="entity-001731"><tei:title level="m">Ninth Symphony</tei:title></tei:rs> sent to
+          you,<tei:ptr corresp="#r0001-fn04" type="footnote"/> and I hope that the latter will meet
+        with your wishes.</tei:p>
+
+      <tei:p rend="first">Hoping to able to greet you soon at my office</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Yours in high esteem,</tei:salute>
+        <tei:signed rend="indent-80"><tei:handShift new="#EH"/><tei:rs key="entity-000356"
+            type="person">Hertzka</tei:rs></tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

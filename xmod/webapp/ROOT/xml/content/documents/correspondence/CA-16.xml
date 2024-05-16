@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+
+    <sdo:source>
+      <sdo:correspondence mfID="1932" sdoID="CA-16">CA 16</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="sole">Heinrich Schenker's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2005, 2017</tei:resp>
+      <tei:resp>Translation, 2005, 2017</tei:resp>
+      <tei:resp>XML Encoding, 2017</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-11-02" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+
+  </sdo:collectionDesc>
+  <sdo:record ID="r0001">
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002724">Cotta ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+      <dc:title>Handwritten letter from Schenker to Cotta, dated February 26, 1906</dc:title>
+      <dcterms:created>1906-02-26T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2017-06-23</dcterms:dateSubmitted>
+      <dc:description>Covering letter enclosing manuscript pages and music examples, and summarizing
+        the state of play.</dc:description>
+      <dc:subject>Manuskriptseite; manuscript page; Beispiel; example; Revision; revised proof;
+        Bogen; gathering; Correctur; proof</dc:subject>
+
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-002405">Cotta</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:dateline rend="indent-40">Wien, <tei:date when="1906-02-26">26. II.
+          06</tei:date>.</tei:dateline>
+        <tei:salute>Sehr geehrter <tei:rs type="organization" key="entity-002405"
+          >Herr</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p>Ich übersende hiemit die Manuskriptseiten 212 u. 394 somit den Beispielen 09.155,
+        09.156 u. endlich 09.379<tei:hi rend="supralinear">a</tei:hi>.<tei:note xml:id="r0001-fn01"
+          type="editorial" place="foot">For these and their corresponding example numbers, see
+            <tei:ref type="correspondence" cRef="OJ-9-31_6">OJ 9/31, [6]</tei:ref>, January 27,
+          1906.</tei:note> Dazu die <tei:hi rend="lateinschr">Revision</tei:hi> der Bogen 1 u.
+          2.<tei:note xml:id="r0001-fn02" type="editorial" place="foot">Gathering 1 = pp.1–16 ;
+          gathering 2 = pp. 17–32.</tei:note> — der Bogen 3<tei:note xml:id="r0001-fn03"
+          type="editorial" place="foot">Gathering 3 = pp. 33–48.</tei:note> ist heute angekommen, u.
+        wird ehebaldigst <tei:add place="interlinear-above">redivirt</tei:add> folgen. Die <tei:hi
+          rend="lateinschr">Correctur</tei:hi> des Bogens 4<tei:note xml:id="r0001-fn04"
+          type="editorial" place="foot">Gathering 4 = pp. 49–64.</tei:note> ist bereits abgegangen.
+        Augenblicklich besitze ich also nur die <tei:hi rend="lateinschr">Revision</tei:hi> des
+        Bogens 3.</tei:p>
+
+
+      <tei:closer>
+        <tei:salute rend="indent-40">Ihr Hochachtungsvoll ergebener</tei:salute>
+        <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000632"><tei:hi
+              rend="lateinschr">H Schenker</tei:hi></tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:dateline rend="indent-40">Vienna, <tei:date when="1906-02-26">February 26,
+            1906</tei:date></tei:dateline>
+        <tei:salute>Dear <tei:rs type="organization" key="entity-002405">Sir</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>I am sending herewith pp. 212 and 394 of the manuscript, along with examples 09.155,
+        09.156, and last of all 09.379<tei:hi rend="supralinear">a</tei:hi>.<tei:ptr
+          corresp="#r0001-fn01" type="footnote"/> In addition, the revised proofs of gatherings 1
+        and 2<tei:ptr corresp="#r0001-fn02" type="footnote"/> ‒ gathering 3<tei:ptr
+          corresp="#r0001-fn03" type="footnote"/> has arrived today and will follow <tei:add
+          place="interlinear-above">revised</tei:add> as soon as possible. The proofs of gathering
+          4<tei:ptr corresp="#r0001-fn04" type="footnote"/> have already been dispatched. Thus, at
+        the moment I have only the revised proofs of gathering 3 in my hands.</tei:p>
+
+
+      <tei:closer>
+        <tei:salute rend="indent-40">With kind regards, Your devoted</tei:salute>
+        <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000632">H.
+          Schenker</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

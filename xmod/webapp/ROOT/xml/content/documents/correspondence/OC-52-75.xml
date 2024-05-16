@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2779" sdoID="OC-52-75">OC 52/75</sdo:correspondence>
+    </sdo:source>
+    <tei:handNotes>
+      <tei:handNote xml:id="TPueR" scope="major">UE's typist "R"</tei:handNote>
+      <tei:handNote xml:id="EH" scope="minor">Emil Hertzka's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2006, 2022</tei:resp>
+      <tei:resp>Translation, 2006, 2022</tei:resp>
+      <tei:resp>XML Encoding, 2022</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-02-07" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002702">UE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002701">UE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002700">Hertzka ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+      <dc:title>Typewritten letter from Hertzka (UE) to Schenker, dated January 5, 1912</dc:title>
+
+      <dcterms:created>1912-01-05T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2022-06-22</dcterms:dateSubmitted>
+      <dc:description>Hertkza encloses a letter from Breitkopf.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-002408">Universal Edition</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000356">Emil Hertzka</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>„Universal-Edition“ A.-G.</tei:addrLine>
+          <tei:addrLine>(Jos. Aibl Verlag, G.m.b.H.)</tei:addrLine>
+          <tei:addrLine>Leipzig <tei:supplied reason="spacer">/</tei:supplied> Sternwartestrasse
+            1520.</tei:addrLine>
+          <tei:addrLine><tei:del rend="overstrike">Wien <tei:supplied reason="spacer"
+                >/</tei:supplied> I., Wipplingerstrasse 32.</tei:del></tei:addrLine>
+          <tei:addrLine><tei:handShift new="#stamp"/>Wien <tei:supplied reason="spacer"
+              >/</tei:supplied> I., Reichstratstrasse 8</tei:addrLine>
+          <tei:addrLine><tei:note type="editorial" place="inline"><tei:hi rend="italic"
+                >etc.</tei:hi></tei:note></tei:addrLine>
+          <tei:lb/>
+        </tei:address>
+        <tei:byline><tei:handShift new="#TPueR"/>
+          <tei:persName type="typist">R</tei:persName></tei:byline><tei:lb/>
+        <tei:dateline rend="indent-70"><tei:handShift new="#printed"/>
+          <tei:placeName>Wien</tei:placeName>, <tei:handShift new="#TPueR"/><tei:date
+            when="1912-01-05">5 Jänner 1912</tei:date>.</tei:dateline><tei:lb/>
+        <tei:address>
+          <tei:addrLine rend="ident-20">Wohlgeboren Herrn Prof. <tei:persName>Heinrich <tei:hi
+                rend="sperr">Schenker</tei:hi></tei:persName></tei:addrLine>
+          <tei:addrLine rend="indent-80">
+            <tei:hi rend="underline sperr">Wien</tei:hi>.</tei:addrLine>
+        </tei:address><tei:lb/><tei:lb/>
+      </tei:opener>
+
+      <tei:p rend="first">Auf unsere letzte Zuschrift an die Firma <tei:rs type="organization"
+          key="entity-002890">Breitkopf &amp; Härtel</tei:rs> in welcher wir mitteilten, dass einige
+        Verstösse seitens der Setzer vorgekommen sind, erhielten wir die mitfolgende
+          Antwort,<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of Hertzka’s
+          letter is not recorded in Schenker's diary. The enclosed letter was returned, so is not on
+          file. Breitkopf &amp; Härtel, Leipzig, was type-setting Schenker's <tei:rs type="work"
+            key="entity-001731"><tei:title level="m">Beethovens Neunte Sinfonie</tei:title></tei:rs>
+          at this time.</tei:note> die wir uns nach freundl. Kenntnisnahme wieder retour erbitten. </tei:p>
+
+      <tei:p rend="first">Uns bestens empfehlend, zeichnen wir</tei:p>
+
+
+      <tei:closer>
+        <tei:salute rend="indent-80">hochachtungsvoll</tei:salute>
+        <tei:salute rend="indent-85">ergeben</tei:salute>
+        <tei:signed rend="indent-75"><tei:handShift new="#stamp"/><tei:rs type="organization"
+            key="entity-002408">Universal-Edition Actiengesellschaft</tei:rs></tei:signed>
+        <tei:signed rend="indent-90"><tei:handShift new="#EH"/><tei:rs key="entity-000356"
+            type="person">Hertzka</tei:rs></tei:signed><tei:lb/>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:lb/>
+        <tei:p>1 Anlage</tei:p>
+      </tei:postscript>
+
+    </tei:div>
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>Universal Edition &amp; Co.</tei:addrLine>
+          <tei:addrLine>(Josef Aibl Publishers &amp; Co.)</tei:addrLine>
+          <tei:addrLine>Leipzig <tei:supplied reason="spacer">/</tei:supplied> Sternwartestrasse
+            1520</tei:addrLine>
+          <tei:addrLine><tei:del rend="overstrike">Vienna <tei:supplied reason="spacer"
+                >/</tei:supplied> I, Wipplingerstrasse 32</tei:del></tei:addrLine>
+          <tei:addrLine><tei:handShift new="#stamp"/>Vienna <tei:supplied reason="spacer"
+              >/</tei:supplied> I, Reichstratstrasse 8</tei:addrLine>
+          <tei:addrLine><tei:note type="editorial" place="inline"><tei:hi rend="italic"
+                >etc.</tei:hi></tei:note></tei:addrLine>
+          <tei:lb/>
+        </tei:address>
+        <tei:byline><tei:handShift new="#TPueR"/>
+          <tei:persName type="typist">R</tei:persName></tei:byline><tei:lb/>
+        <tei:dateline rend="indent-70"><tei:handShift new="#printed"/>
+          <tei:placeName>Vienna</tei:placeName>, <tei:handShift new="#TPueR"/><tei:date
+            when="1912-01-05">January 5, 1912</tei:date></tei:dateline><tei:lb/>
+        <tei:address>
+          <tei:addrLine rend="ident-20">Prof. <tei:persName>Heinrich <tei:hi rend="sperr"
+                >Schenker</tei:hi></tei:persName>, Esq.</tei:addrLine>
+          <tei:addrLine rend="indent-80">
+            <tei:hi rend="underline sperr">Vienna</tei:hi></tei:addrLine>
+        </tei:address><tei:lb/><tei:lb/>
+      </tei:opener>
+
+      <tei:p rend="first">We are in receipt of the following answer<tei:ptr corresp="#r0001-fn01"
+          type="footnote"/> to our latest letter to the firm of <tei:rs type="organization"
+          key="entity-002890">Breitkopf &amp; Härtel</tei:rs> informing them of some slips that have
+        come to light on the part of the typesetters. Kindly note its contents and return to
+        us.</tei:p>
+
+      <tei:p rend="first">With best wishes, we remain</tei:p>
+
+
+      <tei:closer>
+        <tei:salute rend="indent-80">With kind regards,</tei:salute>
+        <tei:salute rend="indent-85"><tei:supplied>Your</tei:supplied> devoted</tei:salute>
+        <tei:signed rend="indent-75"><tei:handShift new="#stamp"/><tei:rs type="organization"
+            key="entity-002408">Universal Edition &amp; Co.</tei:rs></tei:signed>
+        <tei:signed rend="indent-90"><tei:handShift new="#EH"/><tei:rs key="entity-000356"
+            type="person">Hertzka</tei:rs></tei:signed><tei:lb/>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:lb/>
+        <tei:p>1 enclosure</tei:p>
+      </tei:postscript>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

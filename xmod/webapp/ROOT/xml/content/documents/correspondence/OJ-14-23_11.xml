@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2905" sdoID="OJ-14-23_11">OJ 14/23, [11]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="AFS" scope="major">A. F. Seligmann's hand</tei:handNote>
+      <tei:handNote xml:id="unk1" scope="minor">unknown hand 1 (Post Office)</tei:handNote>
+      <tei:handNote xml:id="unk2" scope="minor">unknown hand 2 (Post Office)</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2022</tei:resp>
+      <tei:resp>Translation, 2022</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2022</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-28" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002735">Seligmann ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Seligmann to Schenker, postmarked June 4, 1908</dc:title>
+
+      <dcterms:created>1908-06-04T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2022-11-22</dcterms:dateSubmitted>
+      <dc:description>Seligmann gives the travel arrangements for their excursion (planned for
+        Sunday, June 7) and asks Schenker to meet him to discuss final
+        arrangements.</dc:description>
+      <dc:subject/>
+
+
+
+      <marcrel:correspondent key="entity-000819">Adalbert Franz Seligmann</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">Heinrich Schenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#printed"/>Absender: <tei:handShift new="#AFS"/>A. F.
+              Seligmann</tei:addrLine>
+            <tei:addrLine>IX/3 Schwarzspanierstr. 15</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#AFS"/>Herrn D<tei:hi rend="supralinear">r</tei:hi>
+              Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-30">Musiker</tei:addrLine>
+            <tei:addrLine rend="indent-30">III Reisnerstrasse 38.</tei:addrLine>
+            <tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| 9/4 WIEN 99 | 4. VI. 08 2<tei:hi rend="supralinear">30</tei:hi>
+            | <tei:gap reason="illegible"/> | <tei:gap reason="illegible"/> ||</tei:fw>
+          <tei:fw type="postmark">|| 9/4 WIEN <tei:gap reason="illegible"/> | 4. VI. 08 2<tei:hi
+              rend="supralinear">30</tei:hi> | <tei:gap reason="illegible"/> | * P * ||</tei:fw>
+          <tei:fw type="postmark">|| 3/3 WIEN 49 | 4 VI 08 3 | * P * ||</tei:fw><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:add resp="unknown"><tei:note type="editorial" place="inline">overwritten
+            diagonally:</tei:note><tei:handShift new="#unk1"/> pneumatisch<tei:note
+            xml:id="r0001-fn01" type="editorial" place="foot">i.e., the underground pneumatic tube
+            system throughout Vienna, for express delivery. This is matched by the “P” decipherable
+            in the last line of two of the three postmarks.</tei:note>
+          <tei:handShift new="#unk2"/>49</tei:add><tei:lb/>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:salute><tei:handShift new="#AFS"/>L. <tei:rs type="person" key="entity-000632"
+            >Fr.</tei:rs></tei:salute>
+      </tei:opener>
+
+      <tei:p>Den Wagen kann man auch in <tei:rs type="place" key="entity-007336">Korneuburg</tei:rs>
+        nehmen, wo wir essen werden.<tei:note xml:id="r0001-fn02" type="editorial" place="foot"
+          >Seligmann had planned an excursion to Kreuzenstein Castle: see his postcard of June 7,
+          1908 (<tei:ref type="correspondence" cRef="OJ-14-23_12">OJ 14/23, [12]</tei:ref>) and
+          letter of ?June 1908 (<tei:ref type="correspondence" cRef="OJ-14-23_13">OJ 14/23,
+            [13]</tei:ref>).</tei:note> Der Zug geht, so viel ich mich erinnere, vom Nordwestbahnhof
+        um 10 - 20 ab. Uebrigens möchte ich das alles mit Ihnen noch besprechen. Ich bin heute und
+        Samstag zw. 7–8 Uhr im <tei:rs type="place" key="entity-003997"><tei:hi rend="lateinschr"
+            >Cafe Imp</tei:hi></tei:rs>. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">Herzl. Gruß.</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000819">Seligmann</tei:rs>
+        </tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#printed"/>From: <tei:handShift new="#AFS"/>A. F.
+              Seligmann</tei:addrLine>
+            <tei:addrLine><tei:supplied reason="identity">Vienna</tei:supplied> IX/3,
+              Schwarzspanierstrasse 15</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#AFS"/>Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-30">Musician</tei:addrLine>
+            <tei:addrLine rend="indent-30"><tei:supplied reason="identity">Vienna</tei:supplied>
+              III, Reisnerstrasse 38.</tei:addrLine>
+            <tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| 9/4 VIENNA 99 | 4. VI. 08 2<tei:hi rend="supralinear"
+              >30</tei:hi> | <tei:gap reason="illegible"/> | <tei:gap reason="illegible"/>
+            ||</tei:fw>
+          <tei:fw type="postmark">|| 9/4 VIENNA <tei:gap reason="illegible"/> | 4. VI. 08 2<tei:hi
+              rend="supralinear">30</tei:hi> | <tei:gap reason="illegible"/> | * P * ||</tei:fw>
+          <tei:fw type="postmark">|| 3/3 VIENNA 49 | 4 VI 08 3 | * P * ||</tei:fw><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:add resp="unknown"><tei:note type="editorial" place="inline">overwritten
+            diagonally:</tei:note><tei:handShift new="#unk1"/> by pneumatic mail<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/>
+          <tei:handShift new="#unk2"/>49</tei:add><tei:lb/>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:salute><tei:handShift new="#AFS"/>Dear <tei:rs type="person" key="entity-000632"
+            >friend</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>We can also take a coach in <tei:rs type="place" key="entity-007336"
+          >Korneuburg</tei:rs>, where we shall eat.<tei:ptr corresp="#r0001-fn02" type="footnote"/>
+        As best I can remember, the train departs from the Northwest Railway Station at 10:20.
+        Moreover, I should still like to discuss all of this with you. I shall be at the <tei:rs
+          type="place" key="entity-003997">Café Imperial</tei:rs> today and Saturday, between 7 and
+        8 o’clock.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">Cordial greetings, </tei:salute>
+        <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000819">Seligmann</tei:rs>
+        </tei:signed>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

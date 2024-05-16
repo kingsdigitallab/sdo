@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="2813" sdoID="OJ-6-3_6">OJ 6/3, [6]</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="HS" scope="sole">Heinrich Schenker's hand</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>Transcription, 2022</tei:resp>
+   <tei:resp>Translation, 2022</tei:resp>
+   <tei:resp>XML Encoding, 2022</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2011-09-23" who="#IB">XML code revised</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-002719">ViolinM ~
+    HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-003298">envelope</tei:rs>
+
+
+
+   <dc:title>Handwritten envelope from Schenker to Moriz Violin, postmarked May 8, 1899, morning</dc:title>
+
+   <dcterms:created>1899-05-08T07:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2022-09-12</dcterms:dateSubmitted>
+   <dc:description>envelope only</dc:description>
+   <dc:subject/>
+
+   <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+   <marcrel:recipient key="entity-000913">ViolinM</marcrel:recipient>
+  </sdo:itemDesc>
+
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:fw type="envelope"><tei:lb/>
+     <tei:note type="editorial" place="inline"><tei:hi rend="bold">envelope:</tei:hi></tei:note><tei:lb/>
+     <tei:milestone unit="folio" n="recto"/><tei:lb/>
+     <tei:address>
+      <tei:addrLine><tei:handShift new="#HS"/>Herrn Floriz Violin<tei:note xml:id="r0001-fn01"
+        type="editorial" place="foot">This is probably another phrase from a piece of music –
+        unidentified – quoted on the <tei:hi rend="italic">verso</tei:hi> of the calling card
+         <tei:ref type="correspondence" cRef="OJ-6-3_3">OJ 6/3, [3]</tei:ref>, May 22, 1897. Its
+        placement here on the line that would normally contain the designation “Komponist”
+        (“Composer”) or “Tonkünstler” (“Musician”) suggests that the composer was Violin
+        himself.</tei:note></tei:addrLine>
+      <tei:lb/>
+      <tei:note type="editorial" place="inline">musical notation in Schenker's hand</tei:note>
+      <tei:lb/>
+      <tei:figure type="musical_example">
+       <tei:graphic url="OJ-6-3_6_mus_ex1.png" n="thumb" rend="left-img" width="160px" height="37px"
+        mimeType="image/png"/>
+      </tei:figure>
+      <tei:lb/>
+      <tei:addrLine rend="indent-10">VI. Gumpendorferstr. 124</tei:addrLine>
+     </tei:address><tei:lb/>
+     <tei:fw type="postmark">|| WIEN 3/3 | 49 | 8. 5. 99 | 6–7 V ||</tei:fw>
+    </tei:fw>
+   </tei:opener>
+
+
+
+  </tei:div>
+
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:fw type="envelope"><tei:lb/>
+     <tei:note type="editorial" place="inline"><tei:hi rend="bold">envelope:</tei:hi></tei:note><tei:lb/>
+     <tei:milestone unit="folio" n="recto"/><tei:lb/>
+     <tei:address>
+      <tei:addrLine><tei:handShift new="#HS"/>Mr. Floriz Violin<tei:ptr corresp="#r0001-fn01"
+        type="footnote"/></tei:addrLine>
+      <tei:lb/>
+      <tei:note type="editorial" place="inline">musical notation in Schenker's hand</tei:note>
+      <tei:lb/>
+      <tei:figure type="musical_example">
+       <tei:graphic url="OJ-6-3_6_mus_ex1.png" n="thumb" rend="left-img" width="160px" height="37px"
+        mimeType="image/png"/>
+      </tei:figure>
+      <tei:lb/>
+      <tei:addrLine rend="indent-10"><tei:supplied reason="identity">Vienna</tei:supplied> VI,
+       Gumpendorferstrasse 124</tei:addrLine>
+     </tei:address><tei:lb/>
+     <tei:fw type="postmark">|| VIENNA 3/3 | 49 | 8. 5. 99 | 6–7 a.m. ||</tei:fw>
+    </tei:fw>
+   </tei:opener>
+
+  </tei:div>
+ </sdo:record>
+</sdo:recordCollection>

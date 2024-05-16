@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1833" sdoID="OC-52-422">OC 52/422</sdo:correspondence>
+    </sdo:source>
+    <tei:handNotes>
+      <tei:handNote xml:id="TPue" scope="major">Universal Edition's typist</tei:handNote>
+      <tei:handNote xml:id="EH" scope="minor">Emil Hertzka's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2005, 2016</tei:resp>
+      <tei:resp>Translation, 2005, 2016</tei:resp>
+      <tei:resp>XML Encoding, 2016</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-02-07" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002702">UE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002701">UE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002700">Hertzka ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+      <dc:title>Typewritten letter from Hertzka (UE) to Schenker, dated June 24, 1909</dc:title>
+
+      <dcterms:created>1909-06-24T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2016-09-12</dcterms:dateSubmitted>
+      <dc:description>Hertzka confirms the agreed edition of the Chromatic Fantasy &amp; Fugue, and
+        will send the required editions.</dc:description>
+      <dc:subject>analytisch; analytical; Herausgabe; edition; Honorar; honorarium; Ausgabe;
+        edition; Besprechung; conversation; Einteilung; layout</dc:subject>
+
+      <marcrel:correspondent key="entity-002408">Universal Edition</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000356">Emil Hertzka</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>„Universal-Edition“ A.-G.</tei:addrLine>
+          <tei:addrLine>(Jos. Aibl Verlag, G.m.b.H.)</tei:addrLine>
+          <tei:addrLine>Leipzig <tei:supplied reason="spacer">/</tei:supplied> Sternwartestrasse
+            1520.</tei:addrLine>
+          <tei:addrLine>Wien <tei:supplied reason="spacer">/</tei:supplied> I., Wipplingerstrasse
+            32.</tei:addrLine>
+          <tei:addrLine><tei:note type="editorial" place="inline"><tei:hi rend="italic"
+                >etc.</tei:hi></tei:note></tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-60">
+          <tei:placeName>Wien</tei:placeName>, <tei:handShift new="#TPue"/><tei:date
+            when="1909-06-24">24. Juni 09</tei:date>.</tei:dateline><tei:lb/>
+        <tei:address>
+          <tei:addrLine rend="ident-20">Herrn Professor <tei:persName><tei:hi rend="sperr">Heinrich
+                Schenker,</tei:hi></tei:persName></tei:addrLine>
+          <tei:addrLine rend="indent-60">
+            <tei:hi rend="sperr">Wien</tei:hi>.</tei:addrLine>
+        </tei:address>
+        <tei:salute>Sehr geehrter Herr <tei:rs key="entity-000632" type="person"
+            >Professor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt
+            of this letter is not recorded in Schenker's diary.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Im Besitze Ihrer gesch. Zuschrift v. <tei:date when="1909-06-23">23.
+          ds.</tei:date><tei:note xml:id="r0001-fn02" type="editorial" place="foot"><tei:ref
+            type="correspondence" cRef="WSLB-39">WSLB 39</tei:ref>.</tei:note> bestätige ich Ihnen
+        zunächst, daß wir uns dahin geeinigt haben, daß Sie für uns eine analytische
+          Herausgabe<tei:note xml:id="r0001-fn03" type="editorial" place="foot">"analytische
+          Herausgabe" ("analytical edition"): double-underlined in crayon by Schenker.</tei:note>
+        von <tei:rs key="entity-000027" type="person">Bach</tei:rs>s „<tei:rs key="entity-001730"
+          type="work"><tei:title>chromatischer Phantasie und Fuge</tei:title></tei:rs>“ gegen ein
+        Honorar von 200 Kr.<tei:note xml:id="r0001-fn04" type="editorial" place="foot">"200 K.":
+          underlined in crayon by Schenker. — The "K." is written by hand (probably Hertzka's) over
+          indecipherable typing.</tei:note> fertigstellen und bis zum Herbst dieses Jahres
+          abliefern.<tei:note xml:id="r0001-fn05" type="editorial" place="foot">In <tei:ref
+            type="correspondence" cRef="WSLB-42">WSLB 42</tei:ref>, September 20, 1909, Schenker
+          wrote that he was ready to deliver the manuscript of his edition of the <tei:title
+            level="m">Chromatic Fantasy &amp; Fugue</tei:title>.</tei:note></tei:p>
+
+      <tei:p rend="first">Wir werden Ihnen die gewünschte Ausgabe aus den Verlägen <tei:rs
+          key="entity-002890" type="organization">Breitkopf &amp; Härtel</tei:rs> und <tei:rs
+          key="entity-004170" type="organization">Steingräber</tei:rs> ehestens zugehen lassen u.
+        sehen wir Ihrem freundlichen Besuch nach fertiggestellter Arbeit behufs Besprechung der
+        Einteilung etc. mit Vergnügen entgegen.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">Mit den besten Empfehlungen</tei:salute>
+        <tei:salute rend="indent-60">Ihr</tei:salute>
+        <tei:salute rend="indent-40">In vorzüglicher Hochschätzung</tei:salute>
+        <tei:salute rend="indent-60">ergebenster</tei:salute>
+        <tei:signed rend="indent-70"><tei:handShift new="#EH"/><tei:rs key="entity-000356"
+            type="person">Emil Hertzka</tei:rs></tei:signed>
+        <tei:lb/><tei:lb/>
+        <tei:note type="editorial" place="inline">initialed illegibly in bottom-left
+          corner</tei:note>
+      </tei:closer>
+
+    </tei:div>
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>Universal Edition &amp; Co.</tei:addrLine>
+          <tei:addrLine>(Jos. Aibl Publisher &amp; Co.)</tei:addrLine>
+          <tei:addrLine>Leipzig <tei:supplied reason="spacer">/</tei:supplied> Sternwartestrasse
+            1520</tei:addrLine>
+          <tei:addrLine>Vienna <tei:supplied reason="spacer">/</tei:supplied> I, Wipplingerstrasse
+            32</tei:addrLine>
+          <tei:addrLine><tei:note type="editorial" place="inline"><tei:hi rend="italic"
+                >etc.</tei:hi></tei:note></tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-60">
+          <tei:placeName>Vienna</tei:placeName>, <tei:handShift new="#TPue"/><tei:date
+            when="1909-06-24">June 24 1909</tei:date></tei:dateline><tei:lb/>
+        <tei:address>
+          <tei:addrLine rend="ident-20">Professor <tei:persName><tei:hi rend="sperr">Heinrich
+                Schenker,</tei:hi></tei:persName></tei:addrLine>
+          <tei:addrLine rend="indent-60">
+            <tei:hi rend="sperr">Vienna</tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:salute>Dear <tei:rs key="entity-000632" type="person">Professor</tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">In receipt of your esteemed letter of the <tei:date when="1909-06-23">23rd
+          of the month</tei:date>,<tei:ptr corresp="#r0001-fn02" type="footnote"/> I confirm to you
+        first that we have agreed that you will prepare for us an analytical edition<tei:ptr
+          corresp="#r0001-fn03" type="footnote"/> of <tei:rs key="entity-000027" type="person"
+          >Bach</tei:rs>’s <tei:rs key="entity-001730" type="work"><tei:title level="m">Chromatic
+            Fantasy &amp; Fugue</tei:title></tei:rs> for an honorarium of 200 Kr.,<tei:ptr
+          corresp="#r0001-fn04" type="footnote"/> and deliver it by Fall of this year.<tei:ptr
+          corresp="#r0001-fn05" type="footnote"/></tei:p>
+
+      <tei:p rend="first">We will provide you with the editions that you need from the publishers
+          <tei:rs key="entity-002890" type="organization">Breitkopf &amp; Härtel</tei:rs> and
+          <tei:rs key="entity-004170" type="organization">Steingräber</tei:rs> as soon as possible,
+        and look forward with pleasure to a visit from you for the purpose of discussing the layout,
+        etc. after the work is completed.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">I remain</tei:salute>
+        <tei:salute rend="indent-60">Your</tei:salute>
+        <tei:salute rend="indent-40">with kind regards</tei:salute>
+        <tei:salute rend="indent-60">most devoted</tei:salute>
+        <tei:signed rend="indent-70"><tei:handShift new="#EH"/><tei:rs key="entity-000356"
+            type="person">Emil Hertzka</tei:rs></tei:signed>
+        <tei:lb/><tei:lb/>
+        <tei:note type="editorial" place="inline">initialed illegibly in bottom-left
+          corner</tei:note>
+      </tei:closer>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

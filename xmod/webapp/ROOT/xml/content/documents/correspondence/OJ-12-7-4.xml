@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+    xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+    <sdo:collectionDesc>
+        <sdo:source>
+            <sdo:correspondence mfID="2798" sdoID="OJ-12-7-4">OJ 12/7, 4</sdo:correspondence>
+        </sdo:source>
+
+        <tei:handNotes>
+            <tei:handNote xml:id="MK" scope="sole">Max Kalbeck's hand</tei:handNote>
+
+        </tei:handNotes>
+
+        <tei:respStmt xml:id="WP">
+            <tei:persName>William Pastille</tei:persName>
+            <tei:resp>Transcription, 2022</tei:resp>
+            <tei:resp>Translation, 2022</tei:resp>
+        </tei:respStmt>
+
+        <tei:respStmt xml:id="IDB">
+            <tei:persName>Ian Bent</tei:persName>
+            <tei:resp>XML Encoding, 2022</tei:resp>
+        </tei:respStmt>
+
+        <tei:revisionDesc>
+            <tei:change when="2011-04-15" who="#DB">XML code created</tei:change>
+        </tei:revisionDesc>
+    </sdo:collectionDesc>
+    <sdo:record ID="r0001">
+
+        <sdo:itemDesc>
+            <tei:rs role="correspondence" type="correspondence" key="entity-008335">KalbeckM ~
+                HSchenker</tei:rs>
+            <tei:rs role="corr-item-type" type="corr-item-type" key="entity-005504"
+                >Notecard</tei:rs>
+            <dc:title>Handwritten notecard from Kalbeck to Schenker, dated November 8,
+                1899</dc:title>
+
+            <dcterms:created>1899-11-08T12:00:00Z</dcterms:created>
+            <dcterms:dateSubmitted>2022-07-07</dcterms:dateSubmitted>
+            <dc:description>Kalbeck welcomes what Schenker may bring him, and suggests a
+                date.</dc:description>
+            <dc:subject/>
+
+            <marcrel:correspondent key="entity-000418">KalbeckM</marcrel:correspondent>
+            <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+        </sdo:itemDesc>
+
+
+        <tei:div type="transcription">
+
+            <tei:opener>
+                <tei:dateline><tei:handShift new="#MK"/><tei:placeName>Wien</tei:placeName> d.
+                        <tei:date when="1899-11-08">8 Nobr. 1899</tei:date>.</tei:dateline>
+                <tei:salute>Verehrter <tei:rs type="person" key="entity-000632"
+                        >Herr</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot"
+                        >This notecard appears to be the response to <tei:ref
+                            target="correspondence" cRef="OJ-5-19-8">OJ 5/19, 8</tei:ref>, <tei:choice>
+                            <tei:sic>September</tei:sic>
+                            <tei:corr>November?</tei:corr>
+                        </tei:choice> 6, 1899.</tei:note></tei:salute>
+            </tei:opener>
+
+            <tei:p>Was Sie mir Altes und Neues bringen, soll mir schönstens willkommen sein. In
+                dieser Woche aber habe ich keine freie Stunde mehr. Fassen wir den Mittwoch
+                Nachmittag der nächsten ins Auge ‒ doch das ist St. Leopold<tei:note
+                    xml:id="r0001-fn02" type="editorial" place="foot">St. Leopold’s Day: a national
+                    holiday in Austria, falling on November 15, celebrating the death of Leopold
+                    III, Margrave of Austria, in 1136.</tei:note> ‒ also sagen wir Donnerstag. </tei:p>
+
+            <tei:p><tei:milestone unit="folio" n="verso"/> Und haben Sie die Freundlichkeit mich
+                noch einmal, etwa am Montag oder Dienstag, daran zu erinnern; denn ich vergesse oft
+                den gegenwärtigen Tag.<tei:note xml:id="r0001-fn03" type="editorial" place="foot">=
+                        <tei:ref type="correspondence" cRef="OJ-5-19-9">OJ 5/19, 9</tei:ref>,
+                    November 14, 1899.</tei:note></tei:p>
+
+            <tei:p>Jetzt gratulire ich nur noch zum ersten Honorar<tei:note xml:id="r0001-fn04"
+                    type="editorial" place="foot"> “honorarium”: that for his <tei:title level="m"
+                        >Syrische Tänze</tei:title>, released in October 1899.</tei:note> mit einem
+                fröhlichen <tei:foreign xml:lang="lat">vivat sequens</tei:foreign>!<tei:note
+                    xml:id="r0001-fn05" type="editorial" place="foot"><tei:hi rend="italic">vivat
+                        sequens</tei:hi>: “here’s to the next one.” — This paragraph is quoted in
+                            <tei:bibl><tei:author>Hellmut Federhofer</tei:author>, <tei:title
+                            level="m">Heinrich Schenker nach Tagebüchern und Briefen …</tei:title>
+                        (Hildesheim: Georg Olms, 1985)</tei:bibl>, p. 17.</tei:note></tei:p>
+
+            <tei:closer>
+                <tei:salute>ich bin</tei:salute>
+                <tei:salute rend="indent-45">herzlich grüßend</tei:salute>
+                <tei:salute rend="indent-80">Ihr</tei:salute>
+                <tei:signed rend="indent-50"><tei:rs type="person" key="entity-000418">Max
+                        Kalbeck</tei:rs></tei:signed>
+            </tei:closer>
+
+        </tei:div>
+
+        <tei:div type="translation">
+
+            <tei:opener>
+                <tei:dateline><tei:handShift new="#MK"/><tei:placeName>Vienna</tei:placeName>
+                    <tei:date when="1899-11-08">November 8, 1899</tei:date></tei:dateline>
+                <tei:salute>Revered <tei:rs type="person" key="entity-000632">Sir</tei:rs>,<tei:ptr
+                        corresp="#r0001-fn01" type="footnote"/></tei:salute>
+            </tei:opener>
+
+            <tei:p>Whatever you bring me, old and new, will be most warmly welcome. But I do not
+                have a free hour this week. Let us have in mind the Wednesday afternoon of next week
+                – oh! but that is St. Leopold's Day<tei:ptr corresp="#r0001-fn02" type="footnote"/>
+                – so let us say the Thursday.</tei:p>
+
+            <tei:p><tei:milestone unit="folio" n="verso"/> And do be kind enough to remind me about
+                this again, perhaps on Monday or Tuesday; for I often forget what day it is.<tei:ptr
+                    corresp="#r0001-fn03" type="footnote"/></tei:p>
+
+            <tei:p>Now it only remains to congratulate you on your first honorarium<tei:ptr
+                    corresp="#r0001-fn04" type="footnote"/> with a convivial <tei:foreign
+                    xml:lang="lat"><tei:hi rend="italic">vivat
+                    sequens</tei:hi></tei:foreign>!<tei:ptr corresp="#r0001-fn05" type="footnote"
+                /></tei:p>
+
+            <tei:closer>
+                <tei:salute>I am</tei:salute>
+                <tei:salute rend="indent-45">with cordial greetings,</tei:salute>
+                <tei:salute rend="indent-80">your</tei:salute>
+                <tei:signed rend="indent-50"><tei:rs type="person" key="entity-000418">Max
+                        Kalbeck</tei:rs></tei:signed>
+            </tei:closer>
+
+
+
+
+        </tei:div>
+    </sdo:record>
+</sdo:recordCollection>

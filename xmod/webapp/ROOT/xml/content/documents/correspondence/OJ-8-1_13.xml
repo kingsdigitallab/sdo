@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2242" sdoID="OJ-8-1_13">OJ 8/1, [13]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS-pencil" scope="sole">Heinrich Schenker's hand, in
+        pencil</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2019</tei:resp>
+      <tei:resp>Translation, 2019</tei:resp>
+      <tei:resp>XML Encoding, 20109</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-02-10" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002718">ViolinM+V+F ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002719">ViolinM ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+
+
+      <dc:title>Handwritten postcard from Heinrich Schenker to Moriz Violin, dated October 29,
+        1911</dc:title>
+
+      <dcterms:created>1911-10-29T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2019-12-11</dcterms:dateSubmitted>
+      <dc:description>Schenker has booked four seats for the theater [for Wedekind:
+        Erdgeist].</dc:description>
+      <dc:subject>Sitze; seats; Theater; Rendezvous; meeting place</dc:subject>
+
+
+
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000913">ViolinM</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:note type="editorial" place="inline"><tei:hi rend="italic">All in a decorated
+            rule-frame</tei:hi></tei:note><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>
+              <tei:supplied reason="clarity">Absender:</tei:supplied>
+              <tei:handShift new="#HS-pencil"/><tei:hi rend="lateinschr">H Schenker</tei:hi>
+            </tei:addrLine>
+            <tei:addrLine>III, <tei:hi rend="lateinschr">Reisnerstr.</tei:hi> 38</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied> H. Prof. <tei:hi
+                rend="lateinschr">M. Violin</tei:hi></tei:addrLine>
+            <tei:addrLine>XIV, <tei:hi rend="lateinschr">Sechshauserstr</tei:hi> 126.</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| 14 WIEN 127 | 29.X.11 <tei:gap reason="illegible"/> | * 3a *
+            ||</tei:fw>
+          <tei:fw type="postmark">|| 1/1 WIEN <tei:gap reason="illegible"/> | 29.X.11X | * 12b *
+            ||</tei:fw>
+          <tei:fw type="postmark">|| <tei:gap reason="illegible"/> | 29.X.11X | * 12b *
+          ||</tei:fw><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:salute><tei:rs type="person" key="entity-000913"><tei:hi rend="lateinschr"
+            >Fl</tei:hi></tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p>Soeben habe ich 4 Sitze für morgen<tei:supplied reason="punctuation">,</tei:supplied>
+        <tei:date when="1911-10-30"><tei:hi rend="underline">Montag</tei:hi></tei:date>,
+          besorgt.<tei:note xml:id="r0001-fn01" type="editorial" place="foot">October 29 was a
+          Sunday, so he has reserved tickets for Monday 30th. Schenker's diary for October 30
+          critiques Wedekind's play <tei:title level="m">Erdgeist</tei:title>, which had been
+          running at the Residenzbühne since October 25 (see <tei:rs type="journal"
+            key="entity-002559"><tei:title level="j">Neue freie Presse</tei:title></tei:rs> for
+          notices, and review on October 26): see <tei:ref type="diaries"
+            cRef="OJ-01-10_1911-10:r0007">Wedekind critique</tei:ref>.</tei:note>
+        <tei:date when="1911-12-01">Mittwoch</tei:date> ist bereits ein anderes Stück, da Steinrück
+        nach <tei:rs type="place" key="entity-002286">München</tei:rs> zurück muß,<tei:note
+          xml:id="r0001-fn02" type="editorial" place="foot">Albert Steinrück played Dr. Schön and
+          Eveline Landing Lulu.</tei:note> u. <tei:date when="1911-10-31">Dienstag</tei:date> kann
+        ich ja überhaupt nicht fort; so blieb nichts anderes übrig.</tei:p>
+
+      <tei:p>Hoffentlich geht es sich. Vor dem Theater ‒ <tei:hi rend="lateinschr"
+          >Rendezvous</tei:hi> erboten.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">Gruß dir u. <tei:rs type="person" key="entity-000909"
+            >Fanny</tei:rs> von mir u. <tei:rs type="person" key="entity-000771"
+            >Lie-liechen</tei:rs></tei:salute>
+        <tei:salute rend="indent-70">Dein</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000632"><tei:hi
+              rend="lateinschr">H.</tei:hi></tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:note type="editorial" place="inline"><tei:hi rend="italic">All in a decorated
+            rule-frame</tei:hi></tei:note><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>
+              <tei:supplied reason="clarity">From:</tei:supplied>
+              <tei:handShift new="#HS-pencil"/>H. Schenker </tei:addrLine>
+            <tei:addrLine><tei:supplied reason="location">Vienna</tei:supplied> III, Reisnerstraße
+              38</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied> Prof. M.
+              Violin</tei:addrLine>
+            <tei:addrLine><tei:supplied reason="location">Vienna</tei:supplied> XIV,
+              Sechshauserstraße 126</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| 14 VIENNA 127 | 29.X.11 <tei:gap reason="illegible"/> | * 3a *
+            ||</tei:fw>
+          <tei:fw type="postmark">|| 1/1 VIENNA <tei:gap reason="illegible"/> | 29.X.11X | * 12b *
+            ||</tei:fw>
+          <tei:fw type="postmark">|| <tei:gap reason="illegible"/> | 29.X.11X | * 12b *
+          ||</tei:fw><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:salute><tei:rs type="person" key="entity-000913">Floriz</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>I have just procured four seats for tomorrow, <tei:date when="1911-10-30"><tei:hi
+            rend="underline">Monday</tei:hi></tei:date>.<tei:ptr corresp="#r0001-fn01"
+          type="footnote"/>
+        <tei:date when="1911-12-01">Wednesday</tei:date> is completely out of the question since
+        Steinrück has to return to <tei:rs type="place" key="entity-002286">Munich</tei:rs>,<tei:ptr
+          corresp="#r0001-fn02" type="footnote"/> and <tei:date when="1911-10-31">Tuesday</tei:date>
+        I absolutely cannot get away; so there was no alternative.</tei:p>
+
+      <tei:p>I hope that is OK with you. Let's meet up before the performance.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">Greetings to you and <tei:rs type="person" key="entity-000909"
+            >Fanny</tei:rs> from me and <tei:rs type="person" key="entity-000771"
+            >Lie-liechen</tei:rs></tei:salute>
+        <tei:salute rend="indent-70">Your</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000632"
+          >H.</tei:rs></tei:signed>
+      </tei:closer>
+
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

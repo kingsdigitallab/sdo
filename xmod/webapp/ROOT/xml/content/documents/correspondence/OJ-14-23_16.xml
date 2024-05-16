@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2917" sdoID="OJ-14-23_16">OJ 14/23, [16]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="AFS" scope="sole">A. F. Seligmann's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2022</tei:resp>
+      <tei:resp>Translation, 2022</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2022</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-28" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002735">Seligmann ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002845">lettercard</tei:rs>
+
+      <dc:title>Handwritten lettercard from Seligmann to Schenker, postmarked June 1,
+        1911</dc:title>
+
+      <dcterms:created>1911-06-01T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2022-11-25</dcterms:dateSubmitted>
+      <dc:description>Seligmann gives Schenker a revised version of his newspaper notice, which he
+        thinks will be published in the next two days.</dc:description>
+      <dc:subject/>
+
+
+
+      <marcrel:correspondent key="entity-000819">Adalbert Franz Seligmann</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">Heinrich Schenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>Hrn D<tei:hi rend="supralinear">r</tei:hi>. Heinrich
+              Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-30">Musiker</tei:addrLine>
+            <tei:addrLine rend="indent-30">III. Reisnerstrasse 38.</tei:addrLine>
+            <tei:addrLine rend="indent-60">Wien</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| 9/3 WIEN 72 | –1. VI. 11 – 8 | * 4c *
+          ||</tei:fw><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:salute><tei:handShift new="#AFS"/>L. <tei:rs type="person" key="entity-000819"
+            >Fr.</tei:rs></tei:salute>
+      </tei:opener>
+
+      <tei:p>Ich habe Ihre Notiz<tei:note xml:id="r0001-fn01" type="editorial" place="foot">A notice
+          about lectures that Schenker was planning (or feigning) to give in the autumn; in his two
+          previous letters (<tei:ref type="correspondence" cRef="WSLB-Hds-94478">WSLB-Hds
+            94478</tei:ref>, May 1911, and <tei:ref type="correspondence" cRef="WSLB-Hds-95665"
+            >WSLB-Hds 95665</tei:ref>, May 31, 1911), he had asked Seligmann to help him place it in
+          the <tei:rs type="journal" key="entity-002559"><tei:title level="j">Neue Freie
+              Presse</tei:title></tei:rs> and other newspapers.</tei:note> etwas konstruiert (glaube
+        auch nicht, daß sie im Originalzustande von <tei:rs type="person" key="entity-000303"
+          >Graf</tei:rs> u. <tei:rs type="person" key="entity-000528">Liebstöckl</tei:rs> gebracht
+        werden wird!) ohne jedoch den Sinn zu ändern u. hoffe, daß sie in 2 Tagen längstens
+        erscheint. </tei:p>
+
+      <tei:p>Ich reise erst gegen den <tei:date when="1911-06-20">20. Juni</tei:date> nach <tei:rs
+          type="place" key="entity-002339">Ischl</tei:rs>, bin sehr geplagt u. gesetzt u. brauche
+        schon sehr Erholung. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">Herzl. Grüße einstweilen </tei:salute>
+        <tei:salute rend="indent-80">von Ihrem </tei:salute>
+        <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000819"
+          >Seligmann</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-30">Musician</tei:addrLine>
+            <tei:addrLine rend="indent-30">Reisnerstrasse 38</tei:addrLine>
+            <tei:addrLine rend="indent-60">Vienna III</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| 9/3 VIENNA 72 | –1. VI. 11 – 8 | * 4c *
+          ||</tei:fw><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:salute><tei:handShift new="#AFS"/>Dear <tei:rs type="person" key="entity-000819"
+            >friend</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>I have somewhat revised your notice<tei:ptr corresp="#r0001-fn01" type="footnote"/> (I
+        don’t believe that it would have been published by <tei:rs type="person" key="entity-000303"
+          >Graf</tei:rs> or <tei:rs type="person" key="entity-000528">Liebstöckl</tei:rs> in its
+        original form) without, however, changing the meaning; and I hope that it will be published
+        in two days’ time, at the latest.</tei:p>
+
+      <tei:p>I am not departing for <tei:rs type="place" key="entity-002339">Ischl</tei:rs> until
+        toward <tei:date when="1911-06-20">June 20</tei:date>, and I am harassed and bothered, and
+        already in need a great deal of rest.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">In the meantime, cordial greetings,</tei:salute>
+        <tei:salute rend="indent-80">from your</tei:salute>
+        <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000819"
+          >Seligmann</tei:rs></tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

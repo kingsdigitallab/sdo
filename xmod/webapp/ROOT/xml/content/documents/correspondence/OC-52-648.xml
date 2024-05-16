@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?><sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1030" sdoID="OC-52-648">OC 52/648</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="MV" scope="sole">Moriz Violin's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2013</tei:resp>
+      <tei:resp>Translation, 2013</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="DB">
+      <tei:persName>David Bretherton</tei:persName>
+      <tei:resp>XML Encoding, 2013</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2013-07-24" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002719">ViolinM ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002717">ViolinM+V ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002718">ViolinM+V+F ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+      <dc:title>Handwritten letter from Moriz Violin to Schenker, dated March 5, 1925</dc:title>
+
+      <dcterms:created>1925-03-05T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2013-07-24</dcterms:dateSubmitted>
+      <dc:description>Violin sends Schenker receipts for the purchase of Der
+        Tonwille.</dc:description>
+      <dc:subject/>
+
+    <marcrel:correspondent key="entity-000909">ViolinF</marcrel:correspondent><marcrel:correspondent key="entity-000913">ViolinM</marcrel:correspondent><marcrel:correspondent key="entity-000914">ViolinV</marcrel:correspondent><marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient></sdo:itemDesc>
+
+    <!-- This letter was encoded without access to a copy of the original document, 
+      thus indents etc. (currently guessed) may subsequently need to be revised. 
+    ALSO CHECK GERMAN INVERTED COMMAS ETC. -->
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:dateline><tei:rs key="entity-002589" type="place">Hamburg</tei:rs>, <tei:date when="1925-03-05">5 März 25</tei:date></tei:dateline>
+        <tei:salute>Liebster <tei:rs type="person" key="entity-000632">H.</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this letter is recorded in
+            Schenker's diary at OJ 3/7, p. 2795, March 9, 1925: "Von Violin (Br.): Belege von Frl.
+            Bekker u. Fischer; verspricht, andere folgen zu lassen." ("From Violin (letter):
+            receipts from Miss Becker and Fischer; he promises that others will follow.")</tei:note>
+        </tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Du mußt leider mit meiner momentanen Verfassung rechnen. Etwas zerüttete
+        Gesundheit, zerüttete Finanzen, viel Beileidsbeantwortungen u. s. w. Ich sage das nur, weil
+        ich Dir beiliegendes nur <tei:hi rend="underline">die</tei:hi> Belege sende, die ich bei der
+        Hand habe. In nächster Zeit werde ich mir noch einige verschaffen u. sie Dir senden. Mir
+        scheinen vorläufig aber diese Belege als typisch u. wichtig, 1.) weil eine Rechnung über 2
+        Mk Preis, 2.) eine Auskunft, daß erst <tei:hi rend="double-underline"><tei:date when="1924-10">Oktober</tei:date></tei:hi> der Preis auf 1.50 M. herabgesetzt
+        wurde.</tei:p>
+
+      <tei:p rend="first">Ein paar Tage nur dauerte bis ich die übrigen habe u. ich sende sie Dir
+        dann einfach ein.</tei:p>
+
+      <tei:closer>
+        <tei:salute>Bleibt gesund <tei:lb/>u. seid innigst <tei:lb/>gegrüßt</tei:salute>
+        <tei:salute>von Eurem getreuen</tei:salute>
+        <tei:signed><tei:rs type="person" key="entity-000913">Floriz</tei:rs></tei:signed>
+        <tei:salute>u. den Seinen!</tei:salute></tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:dateline><tei:rs key="entity-002589" type="place">Hamburg</tei:rs>, <tei:date when="1925-03-05">March 5, 1925</tei:date></tei:dateline>
+        <tei:salute>Dearest <tei:rs type="person" key="entity-000632">Heinrich</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/>
+        </tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">You must, unfortunately, put up with my present constitution. Shattered
+        health, shattered finances, many responses to letters of sympathy, etc. I say this only
+        because the <tei:hi rend="underline">enclosures</tei:hi> are only those receipts that I have
+        to hand. In the near future I shall obtain more and send them to you. For the time being,
+        these receipts see to me typical and important, firstly because a payment of 2 marks has
+        been made, 2) the price was not lowered to 1.50 marks until <tei:hi rend="double-underline"><tei:date when="1924-10">October</tei:date></tei:hi>.</tei:p>
+
+      <tei:p rend="first">It will take a few days until I have the remaining ones, and I shall
+        simply send them on to you.</tei:p>
+
+      <tei:closer>
+        <tei:salute>Stay well and accept our most intimate greetings</tei:salute>
+        <tei:salute>from your faithful</tei:salute>
+        <tei:signed><tei:rs type="person" key="entity-000913">Floriz</tei:rs></tei:signed>
+        <tei:salute>and his family!</tei:salute></tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

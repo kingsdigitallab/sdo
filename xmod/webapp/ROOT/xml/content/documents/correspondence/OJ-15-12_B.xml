@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1680" sdoID="OJ-15-12_B">OJ 15/12, [B]</sdo:correspondence>
+    </sdo:source>
+    <tei:handNotes>
+      <tei:handNote xml:id="JW" scope="major">Josef Weinberger's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="major">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2004, 2016</tei:resp>
+      <tei:resp>Translation, 2004, 2016</tei:resp>
+      <tei:resp>XML Encoding, 2016</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-02-07" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-006163">WeinbergerCo ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-006164">WeinbergerJ ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-003332">Calling card</tei:rs>
+
+
+
+      <dc:title>Handwritten calling card from Weinberger to Schenker, undated</dc:title>
+
+      <dcterms:created>1899-10-01T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2016-02-15</dcterms:dateSubmitted>
+      <dc:description>Thanks (unspecified)</dc:description>
+      <dc:subject/>
+
+
+
+
+      <marcrel:correspondent key="entity-006149">WeinbergerCo</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000946">WeinbergerJ</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:salute><tei:handShift new="#JW"/>Sehr geehrter Herr <tei:rs type="person"
+            key="entity-000632">Doctor</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Besten Dank für Ihr freundl. <tei:unclear reason="reading"
+          >Anerbieten</tei:unclear>, von dem ich in allernächster Zeit mit <tei:unclear
+          reason="reading">Zuneigungen</tei:unclear> Gebrauch machen will. — Ich verreise morgen
+        früh, komme Montag wieder nur für einen Tag nach <tei:rs key="entity-002484" type="place"
+          >Wien</tei:rs> – sobald ich aber von meiner nächsten ordentlichen Reise zurück bin, werde
+          <tei:milestone unit="folio" n="recto"/> ich Ihren schätzbaren Besuch erbitten.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indend-40">In Hochachtung</tei:salute>
+        <tei:salute rend="indent-50">ergebenster</tei:salute><tei:lb/>
+        <tei:note type="editorial" place="inline">unsigned</tei:note><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/><tei:rs key="entity-000946" type="person"
+              >Josef Weinberger</tei:rs></tei:addrLine>
+
+          <tei:addrLine>Präsident der Gesellschaft der Autoren Componisten</tei:addrLine>
+
+          <tei:addrLine>u. Musik-Verleger<tei:note xml:id="r0001-fn01" type="editorial" place="foot"
+              >Founded 1897 by Weinberger. At its inaugural meeting on December 5, 1897 Weinberger
+              was made its President.</tei:note></tei:addrLine>
+
+          <tei:addrLine>Musikalien-Verleger</tei:addrLine>
+
+          <tei:addrLine>Leipzig <tei:supplied reason="spacer">—</tei:supplied> Wien <tei:supplied
+              reason="spacer">—</tei:supplied> Paris</tei:addrLine>
+
+          <tei:addrLine>Querstrasse 13 <tei:supplied reason="spacer">—</tei:supplied> Kohlmarkt
+              8<tei:note xml:id="r0001-fn02" type="editorial" place="foot">The Weinberger company
+              moved from Kohlmarkt 8 to Maximilianstraße 11 at about the turn of the century, so
+              this calling card can be dated roughly to 1898 or 1899.</tei:note>
+            <tei:supplied reason="spacer">—</tei:supplied> 40 Boulevard Haussmann</tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+    </tei:div>
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:salute><tei:handShift new="#JW"/>Dear Dr. <tei:supplied reason="identity"><tei:rs
+              type="person" key="entity-000632">Schenker</tei:rs></tei:supplied>,</tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Many thanks for the <tei:unclear reason="original_unclear"
+          >offering</tei:unclear> you kindly sent, of which I shall avail myself with <tei:unclear
+          reason="original_unclear">dedication</tei:unclear> at the earliest opportunity. — I am
+        leaving tomorrow morning, return to Vienna again on Monday just for one day ‒ but as soon as
+        I am back from my next business trip I will <tei:milestone unit="folio" n="recto"/> invite
+        you to call on me.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">With kind regards,</tei:salute>
+        <tei:salute rend="indent-50"><tei:supplied reason="clarity">Your</tei:supplied> most
+          devoted,</tei:salute><tei:lb/>
+        <tei:note type="editorial" place="inline">unsigned</tei:note><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/><tei:rs key="entity-000946" type="person"
+              >Josef Weinberger</tei:rs></tei:addrLine>
+
+          <tei:addrLine>President of the Society of Authors, Composers,</tei:addrLine>
+
+          <tei:addrLine>and Music Publishers<tei:ptr corresp="#r0001-fn01" type="footnote"
+            /></tei:addrLine>
+
+          <tei:addrLine>Sheet Music Publisher</tei:addrLine>
+
+          <tei:addrLine>Leipzig <tei:supplied reason="spacer">—</tei:supplied> Vienna <tei:supplied
+              reason="spacer">—</tei:supplied> Paris</tei:addrLine>
+
+          <tei:addrLine>Querstrasse 13 <tei:supplied reason="spacer">—</tei:supplied> Kohlmarkt
+              8<tei:ptr corresp="#r0001-fn02" type="footnote"/>
+            <tei:supplied reason="spacer">—</tei:supplied> 40 Boulevard Haussmann</tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

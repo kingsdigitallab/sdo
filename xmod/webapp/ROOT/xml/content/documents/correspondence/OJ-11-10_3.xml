@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2464" sdoID="OJ-11-10_3">OJ 11/10, [3]</sdo:correspondence>
+    </sdo:source>
+
+
+    <tei:handNotes>
+      <tei:handNote xml:id="TF" scope="major">Theodor von Frimmel's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="unk" scope="minor">unknown hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="HE">
+      <tei:persName>Heribert Esser</tei:persName>
+      <tei:resp>Transcription, 2019</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="JR">
+      <tei:persName>John Rothgeb</tei:persName>
+      <tei:resp>Translation, 2019</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2020</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2013-08-29" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005688">FrimmelT ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002845">Lettercard</tei:rs>
+
+      <dc:title>Handwritten lettercard from Frimmel to Schenker, dated November 29, 1902</dc:title>
+
+      <dcterms:created>1902-11-29T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2020-07-21</dcterms:dateSubmitted>
+      <dc:description>Frimmel issues an invitation to tea.</dc:description>
+      <dc:subject>Thee; tea; Kunstgelehrter; art scholar</dc:subject>
+
+      <marcrel:correspondent key="entity-000259">Theodor von Frimmel</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:fw type="header" rend="center">
+          <tei:handShift new="#printed"/><tei:hi rend="bold">KARTEN-BRIEF</tei:hi></tei:fw>
+        <tei:fw type="header" rend="center">
+          <tei:hi rend="bold">zur penumatischen Expressbeförderung. <tei:supplied reason="clarity"
+                ><tei:hi rend="italic">etc</tei:hi></tei:supplied></tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>An <tei:handShift new="#TF"/>Hochwohlgb. Herren D<tei:hi
+                rend="supralinear">r.</tei:hi>
+              <tei:sic>Hugo</tei:sic> Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-20">Tonkünstler, etc. etc. etc.</tei:addrLine>
+            <tei:addrLine rend="indent-40"><tei:handShift new="#printed"/>in <tei:handShift
+                new="#TF"/>Wien</tei:addrLine>
+            <tei:addrLine rend="indent-20">Reisnerstr. <tei:subst>
+                <tei:del rend="overstrike">37</tei:del>
+                <tei:add place="interlinear-above"><tei:handShift new="#unk"/>38</tei:add>
+              </tei:subst></tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| WIEN <tei:gap reason="illegible"/> | 10V 29 <tei:gap
+              reason="illegible"/> | <tei:gap reason="illegible"/> ||</tei:fw>
+          <tei:fw type="postmark">|| WIEN <tei:gap reason="illegible"/> | 1030 A29.XI02 | * 15 *
+            ||</tei:fw>
+          <tei:fw type="postmark">|| WIEN 9/4 | 1130V 29 XI02 | * 49 * ||</tei:fw>
+          <tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:address>
+          <tei:addrLine><tei:pb n="2"/><tei:handShift new="#TF"/>Adr. IV. Paniglg. 1</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-40"><tei:date when="1902-11-29">Samstg
+          Früh</tei:date></tei:dateline>
+        <tei:salute>Hochgeehrter Herr <tei:rs key="entity-000632" type="person"
+            >Doctor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">References
+            to Frimmel in Schenker's diary occur at November 2 and December 2, 1902, p.9a: "Besuch
+              D<tei:hi rend="supralinear">r.</tei:hi> Th. v. <tei:hi rend="lateinschr"
+              >Frimmel</tei:hi>s, der seine Schrift „<tei:title>Vom Sehen in der
+              Kunstwissenschaft</tei:title>“ mitbringt. [...] Bei Frimmel’s zu einem Theeabend."
+            ("Visit from Dr. Theodore von Frimmel, who brings with him his book <tei:title level="m"
+              >Perception in the Study of Art</tei:title>. [...] At Frimmel's place for a tea
+            evening.")</tei:note>
+        </tei:salute>
+      </tei:opener>
+
+      <tei:p>Meine <tei:rs type="person" key="entity-000258">Frau</tei:rs> und ich, wir würden uns
+        sehr freuen , Sie <tei:date when="1902-12-02"><tei:hi rend="underline"
+          >Dienstag</tei:hi></tei:date> zum 5 Uhr-Thee bei uns zu sehen. Ganz kleiner Kreis <tei:add
+          place="interlinear-above">keinerlei Kleiderzwang</tei:add>. Ein junger schwedischer
+        Kunstgelehrter Osw. Siren<tei:note xml:id="r0001-fn02" type="editorial" place="foot">Osvald
+          Siren (1897‒1966), Finnish-born Swedish art historian, enjoyed a distinguished career in
+          the field of art history.</tei:note> wird da sein. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">Herzlich grüssend, bittet um Antwort Ihr</tei:salute>
+        <tei:salute rend="indent-20">hochachtungsvollst ergeb<tei:supplied reason="abbreviation"
+            >ener</tei:supplied></tei:salute>
+        <tei:signed rend="indent-40"><tei:rs key="entity-000259" type="person">D<tei:hi
+              rend="supralinear">r.</tei:hi> Frimmel</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:fw type="header" rend="center">
+          <tei:handShift new="#printed"/><tei:hi rend="bold">LETTERCARD</tei:hi></tei:fw>
+        <tei:fw type="header" rend="center">
+          <tei:hi rend="bold">for pneumatic express delivery <tei:supplied reason="clarity"><tei:hi
+                rend="italic">etc</tei:hi></tei:supplied></tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>To: <tei:handShift new="#TF"/>Dr. <tei:sic>Hugo</tei:sic> Schenker,
+              Esq.</tei:addrLine>
+            <tei:addrLine rend="indent-20">Musician, etc., etc., etc.</tei:addrLine>
+            <tei:addrLine rend="indent-40"><tei:handShift new="#printed"/>in <tei:handShift
+                new="#TF"/>Vienna</tei:addrLine>
+            <tei:addrLine rend="indent-20">Reisnerstrasse <tei:subst>
+                <tei:del rend="overstrike">37</tei:del>
+                <tei:add place="interlinear-above"><tei:handShift new="#unk"/>38</tei:add>
+              </tei:subst></tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| VIENNA <tei:gap reason="illegible"/> | 10V 29 <tei:gap
+              reason="illegible"/> | <tei:gap reason="illegible"/> ||</tei:fw>
+          <tei:fw type="postmark">|| VIENNA <tei:gap reason="illegible"/> | 1030 A29.XI02 | * 15 *
+            ||</tei:fw>
+          <tei:fw type="postmark">|| VIENNA 9/4 | 1130V 29 XI02 | * 49 * ||</tei:fw>
+          <tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:address>
+          <tei:addrLine><tei:pb n="2"/><tei:handShift new="#TF"/>Address: <tei:supplied
+              reason="identity">Vienna</tei:supplied> IV, Paniglgasse 1</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-40"><tei:date when="1902-11-29">Saturday
+          morning</tei:date></tei:dateline>
+        <tei:salute>Very dear Dr. <tei:supplied reason="identity"><tei:rs key="entity-000632"
+              type="person">Schenker</tei:rs></tei:supplied>,<tei:ptr corresp="#r0001-fn01"
+            type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>My <tei:rs type="person" key="entity-000258">wife</tei:rs> and I would enjoy very much
+        having you join us <tei:date when="1902-12-02"><tei:hi rend="underline"
+          >Tuesday</tei:hi></tei:date> for 5-o'clock tea. A very small circle <tei:add
+          place="interlinear-above">without any dress code</tei:add>. A young Swedish art scholar,
+        Oswald Sirén,<tei:ptr corresp="#r0001-fn02" type="footnote"/> will be here.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">Greeting you cordially, and most respectfully
+          requesting</tei:salute>
+        <tei:salute rend="indent-20">your response, I remain your devoted</tei:salute>
+        <tei:signed rend="indent-40"><tei:rs key="entity-000259" type="person">D<tei:hi
+              rend="supralinear">r.</tei:hi> Frimmel</tei:rs></tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

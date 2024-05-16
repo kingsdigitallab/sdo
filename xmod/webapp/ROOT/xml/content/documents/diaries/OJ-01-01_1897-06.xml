@@ -1,0 +1,116 @@
+<?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
+   xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+   <!--OJ-01-01_1897-06June, 1897 -  ( Diary Series A box: 01 folder: 01 date: Jan 1, 1897–Dec 31, 1897 pages: 1b, 2b, 3, 3b, 4)
+                 
+             -->
+   <sdo:collectionDesc>
+      <sdo:source>
+         <!--Select an sdoID from the controlled list -->
+         <sdo:diary sdoID="OJ-01-01_1897-06"/>
+      </sdo:source>
+
+      <tei:handNotes>
+         <tei:handNote xml:id="JS" scope="major">Jeanette Schenker's hand</tei:handNote>
+         <tei:handNote xml:id="HS-black" scope="major">Heinrich Schenker's hand, in black
+            ink</tei:handNote>
+      </tei:handNotes>
+
+      <tei:respStmt xml:id="IB">
+         <tei:persName>Ian Bent</tei:persName>
+         <tei:resp>Transcription, 2017</tei:resp>
+         <tei:resp>Translation, 2017</tei:resp>
+         <tei:resp>XML Encoding, 2017</tei:resp>
+         <tei:resp>Footnotes, 2017</tei:resp>
+      </tei:respStmt>
+      <tei:respStmt xml:id="TL">
+         <tei:persName>Tamara Lopez</tei:persName>
+         <tei:resp>XML Encoding Model</tei:resp>
+      </tei:respStmt>
+      <!-- Add additional change elements below to note major changes to the document -->
+      <tei:revisionDesc>
+         <tei:change when="2012-10-03" who="#IB">Template Generated</tei:change>
+      </tei:revisionDesc>
+   </sdo:collectionDesc>
+
+   <sdo:record ID="r0001">
+      <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
+                         The   contains a series of Dublin Core elements. -->
+      <sdo:itemDesc>
+         <dc:title>Diary entry by Schenker June 7, 1897</dc:title>
+         <dcterms:created>1897-06-07T12:00:00Z</dcterms:created>
+         <dcterms:dateSubmitted>2018-01-17</dcterms:dateSubmitted>
+         <dc:description/>
+         <dc:subject/>
+      </sdo:itemDesc>
+
+      <tei:div type="transcription">
+         <tei:opener>
+            <tei:note type="editorial" place="inline">The following two entries are undated. They
+               have been assigned the following date so as to preserve their position between other,
+               fully dated, items, namely those of May 31 and September 12, bearing in mind that
+               Schenker was probably on vacation from the middle of June to early
+               September.</tei:note><tei:lb/><tei:lb/>
+            <tei:hi rend="bold">Ser. B, {1}</tei:hi>
+            <tei:dateline><tei:supplied reason="editorial_dating"><tei:date when="1897-06-07">7.
+                     Juni</tei:date></tei:supplied></tei:dateline>
+         </tei:opener>
+
+         <tei:ab type="sub-entry" xml:id="r0001-se01"><tei:handShift new="#HS-black"/>In modernen
+            Kompositionen sammeln sich <tei:add place="interlinear-above">zuweilen die
+               sog.</tei:add> Stimmungen, wie an verschiedenen Stellen der Erdoberfläche ‒ die
+               Wasser.<tei:note xml:id="r0001-fn01" type="editorial" place="foot">This item is taken
+               from Series B (Schenker's drafts), p. 1. It is entirely undated: all that can be said
+               is that it appears before the first item dated to 1898, on Series B, p. 2 (item 3:
+               Gerhard Hauptmann). Its placement after May 31, 1897 links it to the item of that
+               date by virtue of their shared opposition to "modern" music ‒ a theme that will recur
+               constantly throughout his diaries.</tei:note></tei:ab>
+
+         <tei:milestone unit="section" rend="block asterisk"/>
+
+         <tei:ab type="sub-entry" xml:id="r0001-se02"><tei:hi rend="bold">Ser. A, <tei:pb n="3"
+               /></tei:hi><tei:lb/><tei:rs type="person" key="entity-000878">Paula Szalit</tei:rs>
+            für Conzerte vorbereitet, u. a.: <tei:rs type="person" key="entity-000027">S.
+               Bach</tei:rs>s <tei:rs type="composition" key="entity-001041"><tei:title>Fuge
+                     cis<tei:hi rend="supralinear">m</tei:hi> (5stm)</tei:title></tei:rs> u. <tei:rs
+               type="composition" key="entity-001105"><tei:title>es<tei:hi rend="supralinear"
+                     >moll</tei:hi></tei:title></tei:rs>. </tei:ab>
+
+      </tei:div>
+
+      <tei:div type="translation">
+         <tei:opener>
+            <tei:note type="editorial" place="inline">The following two entries are undated. They
+               have been assigned the following date so as to preserve their position between other,
+               fully dated, items, namely those of May 31 and September 12, bearing in mind that
+               Schenker was probably on vacation from the middle of June to early
+               September.</tei:note><tei:lb/><tei:lb/>
+            <tei:hi rend="bold">Ser. B, {1}</tei:hi>
+            <tei:dateline><tei:supplied reason="editorial_dating"><tei:date when="1897-06-07">June
+                     7</tei:date></tei:supplied></tei:dateline>
+         </tei:opener>
+
+         <tei:ab corresp="r0001-se01"><tei:handShift new="#HS-black"/>In modern compositions are
+            gathered together <tei:add place="interlinear-above">from time to time
+               so-called</tei:add> moods, as at different places on the surface of the earth are ‒
+            the waters.<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:ab>
+
+         <tei:milestone unit="section" rend="block asterisk"/>
+
+         <tei:ab corresp="r0001-se02"><tei:hi rend="bold">Ser. A, <tei:pb n="3"/></tei:hi><tei:lb/>
+            <tei:rs type="person" key="entity-000878">Paula Szalit</tei:rs> prepared for concerts,
+            among other things, <tei:rs type="person" key="entity-000027">J. S. Bach</tei:rs>'s
+               <tei:rs type="composition" key="entity-001041"><tei:title>Fugues in C<tei:g
+                     type="sharp"/> minor (5-voiced)</tei:title></tei:rs> and <tei:rs
+               type="composition" key="entity-001105"><tei:title>E<tei:g type="flat"/>
+                  minor</tei:title></tei:rs>.<tei:lb/>
+         </tei:ab>
+
+      </tei:div>
+   </sdo:record>
+
+
+
+</sdo:recordCollection>

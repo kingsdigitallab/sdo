@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2068" sdoID="OJ-13-37-9">OJ 13/37, 9</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="EFR" scope="major">Ernst Friedrich Rudorff's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2018</tei:resp>
+      <tei:resp>Translation, 2018</tei:resp>
+      <tei:resp>XML Encoding, 2018</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-26" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-006280">RudorffE ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Ernst Rudorff to Schenker, dated November 15,
+        1909</dc:title>
+      <dcterms:created>1909-11-15T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2018-05-24</dcterms:dateSubmitted>
+      <dc:description>Rudorff asks Schenker not to give Jakob Fischer the score of his Herbstlied if
+        asked.</dc:description>
+      <dc:subject>Partitur; score; Exemplar; copy</dc:subject>
+
+      <marcrel:correspondent key="entity-000750">Ernst Rudorff</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">Heinrich Schenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+            >Postkarte</tei:hi></tei:fw>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">Am: </tei:supplied><tei:handShift
+                new="#EFR"/>Herrn Professor D<tei:hi rend="supralinear">r.</tei:hi>
+              <tei:hi rend="lateinschr">Heinrich Schenker</tei:hi></tei:addrLine>
+            <tei:addrLine><tei:hi rend="lateinschr">Wien</tei:hi>.</tei:addrLine>
+            <tei:addrLine><tei:hi rend="lateinschr">Reisnerstrasse 38</tei:hi>.</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark">|| <tei:supplied reason="unclear">GR.LICHTER</tei:supplied>FELDE |
+            15. 11. 09 2-3N. | * <tei:gap reason="illegible"/> * ||</tei:fw><tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+          <tei:address>
+            <tei:addrLine><tei:hi rend="lateinschr">Grosslichterfelde</tei:hi> d. <tei:date
+                when="1910-10-11">15 Nov. 1909</tei:date></tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:salute>Verehrter Herr <tei:rs type="person" key="entity-000632"
+            >Schenker</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt
+            of this postcard is not recorded in Schenker's diary.</tei:note></tei:salute>
+      </tei:opener>
+
+
+      <tei:p>Soeben trifft ein Brief von <tei:rs type="person" key="entity-000228"><tei:hi
+            rend="lateinschr">J. Fischer</tei:hi></tei:rs> an mich ein, aus dem hervorgeht, daß er
+        zwar meinen Brief aus <tei:rs type="place" key="entity-006871"><tei:hi rend="lateinschr"
+            >Lauenstein</tei:hi></tei:rs> erhalten hat, daß aber die Partitur des <tei:title
+          level="m">Herbstlied</tei:title>es<tei:note xml:id="r0001-fn02" type="editorial"
+          place="foot"><tei:bibl><tei:author>Ernst Rudorff</tei:author>, <tei:title level="m"
+              >Herbstlied</tei:title> [Autumn Song] (Groth), Op. 43, for 6-voiced chorus and
+            orchestra (pubd A. Stahl)</tei:bibl>.</tei:note> nicht in seine Hand gelangen ist. Er
+        will Sie sich just von Ihnen leihen. Bitte, geben Sie sie ihm nicht! Ich schicke ihm
+        natürlich ein anderes Exemplar.</tei:p>
+
+
+      <tei:closer>
+        <tei:salute rend="indent-40">Herzlichst</tei:salute>
+        <tei:salute rend="indent-50">Ihr</tei:salute>
+        <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000750"><tei:hi
+              rend="lateinschr">E. Rudorff</tei:hi></tei:rs>.</tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+            >Postcard</tei:hi></tei:fw>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">To: </tei:supplied><tei:handShift
+                new="#EFR"/>Professor Heinrich Schenker</tei:addrLine>
+            <tei:addrLine>Vienna</tei:addrLine>
+            <tei:addrLine>Reisnerstrasse 38</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark">|| <tei:supplied reason="unclear">GR.LICHTER</tei:supplied>FELDE |
+            15. 11. 09 2-3P.M. | * <tei:gap reason="illegible"/> * ||</tei:fw><tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+          <tei:address>
+            <tei:addrLine><tei:hi rend="lateinschr">Grosslichterfelde</tei:hi>
+              <tei:date when="1910-10-11">November 15, 1909</tei:date></tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:salute>Revered Mr. <tei:rs type="person" key="entity-000632">Schenker</tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+
+      <tei:p>A letter to me from <tei:rs type="person" key="entity-000228">J. Fischer</tei:rs> has
+        just arrived, from which it emerges that he has indeed received my letter from <tei:rs
+          type="place" key="entity-006871">Lauenstein</tei:rs>, but that the score of my <tei:title
+          level="m">Herbstlied</tei:title><tei:ptr corresp="#r0001-fn02" type="footnote"/> has not
+        reached him. He just wants to borrow it from you. Please do not give it to him! I will of
+        course send him another copy.</tei:p>
+
+
+      <tei:closer>
+        <tei:salute rend="indent-40">Most cordially</tei:salute>
+        <tei:salute rend="indent-50">Your</tei:salute>
+        <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000750"><tei:hi
+              rend="lateinschr">E. Rudorff</tei:hi></tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

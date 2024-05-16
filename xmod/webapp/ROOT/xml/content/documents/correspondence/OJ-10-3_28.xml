@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:marcrel="http://www.loc.gov/loc.terms/relators/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
+  xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1273" sdoID="OJ-10-3_28">OJ 10/3, [28]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="TPunk" scope="major">unknown typist</tei:handNote>
+      <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="DB">
+      <tei:persName>David Bretherton</tei:persName>
+      <tei:resp>Transcription, 2015</tei:resp>
+      <tei:resp>Translation, 2015</tei:resp>
+      <tei:resp>XML Encoding, 2015</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-11" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~ H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~ HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~ H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+      <dc:title>Typewritten letter from Deutsch to Schenker, dated February 14, 1922</dc:title>
+
+      <dcterms:created>1922-02-14T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2015-09-11</dcterms:dateSubmitted>
+      <dc:description>Deutsch offers to provide several books to Schenker instead of two or three hardback copies of the
+        "Moonlight" Sonata edition, and then details several misprints and factual errors in Romain Rolland's biography
+        of Beethoven.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000163">DeutschH</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+      <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:fw type="header" rend="inline">
+          <tei:note type="editorial">printed letterhead:</tei:note>
+          <tei:handShift new="#printed"/>OTTO ERICH DEUTSCH</tei:fw>
+        <tei:address>
+          <tei:addrLine>WIEN, II., BÖCKLINSTRASSE 26</tei:addrLine>
+          <tei:addrLine>TELEPHON-NUMMER 1288</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-60"><tei:handShift new="#TPunk"/><tei:rs key="entity-002484" type="place"
+            >Wien</tei:rs>, <tei:date when="1922-02-14">14. Februar 1922</tei:date></tei:dateline>
+        <tei:lb/><tei:address>
+          <tei:addrLine rend="indent-10"><tei:supplied reason="clarity">An:</tei:supplied> Herrn</tei:addrLine>
+          <tei:addrLine rend="indent-20">Professor Dr. <tei:rs key="entity-000632" type="person">Heinrich
+                <tei:hi><!-- spaced out -->Schenker</tei:hi></tei:rs>,</tei:addrLine>
+          <tei:addrLine rend="indent-75"><tei:hi rend="underline"><tei:hi><!-- spaced out --><tei:rs key="entity-002484"
+                  type="place">Wien</tei:rs></tei:hi></tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:salute rend="indent-25">Sehr geehrter Herr <tei:rs type="person" key="entity-000632"
+            >Doktor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this letter is
+            recorded in Schenker's diary at OJ 3/3, p. 2416 (February 17, 1922): "Von Deutsch (Br.): über das
+            Tauschexemplar, Verrechnung u. die Verstöße Rollands wider die Wahrheit." ("From Deutsch (letter): about the
+            bartered copy, bill, and Rolland's violations against truth.").</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Auf Ihren Brief vom <tei:date when="1922-02-08">8.</tei:date> und Ihre Karte von <tei:date
+          when="1922-02-10">10. d. M.</tei:date> erlaube ich mir folgendes zu erwidern:</tei:p>
+
+      <tei:p rend="first">Es ist mir nicht gelungen, bei der <tei:rs key="entity-002408" type="organization"
+          >Universal-Edition</tei:rs> für meine Mitarbeiter auch je 1 Luxus-Exemplar durchzusetzen. Ich bin gerne
+        bereit, Ihnen für 2 oder 3 Exemplare der <tei:rs key="entity-001754" type="work">"Mondschein-Sonate"</tei:rs> in
+        Pappe gegen Verrechnung der Differenz von <tei:rs key="entity-002462" type="organization">Seidel</tei:rs>
+        folgende Werke liefern zu lassen: <tei:lb/>1.) <tei:rs key="entity-000027" type="person">Bach</tei:rs> - Kantate
+        <tei:lb/>2.) <tei:rs key="entity-000612" type="person">Mozart</tei:rs> - Trio (beide in Pappe) <tei:lb/>3.)
+          <tei:rs key="entity-003482" type="person">Spengler</tei:rs>, 1.und 2.Band brosch<tei:subst>
+          <tei:del rend="overwritten" hand="#TPunk">ü</tei:del>
+          <tei:add place="superimposed" hand="#OED">ie</tei:add>
+        </tei:subst>rt.<tei:note xml:id="r0001-fn02" type="editorial" place="foot"><tei:bibl>Oswald Spengler, <tei:title
+              level="m">Der Untergang des Abendlandes</tei:title>, 2 vols (Munich: C. H. Bech, 1918,
+          1922).</tei:bibl></tei:note></tei:p>
+
+      <tei:p rend="first">Ich übersende Ihnen gleichzeitig die beiden Tausch- stücke 1 und 2 und den <tei:rs
+          key="entity-000094" type="person">Brahms</tei:rs>-Band.<tei:note xml:id="r0001-fn03" type="editorial"
+          place="foot">See delivery note from Seidel'sche Buchhandlung to Schenker, dated February 15, 1922, <tei:ref
+            type="correspondence" cRef="OJ-14-21_3">OJ 14/21, [3]</tei:ref>.</tei:note></tei:p>
+
+      <tei:p rend="first">Es ware sehr schön, wenn Sie im <tei:rs key="entity-001739" type="work">"<tei:title><tei:subst>
+              <tei:del hand="#TPunk" rend="overwritten">t</tei:del>
+              <tei:add hand="#TPunk" place="superimposed">T</tei:add>
+            </tei:subst>onwillen</tei:title>"</tei:rs> über die beiden <tei:rs key="entity-001754" type="work"
+          >Faksimile-Ausgaben</tei:rs> schreiben wollten.</tei:p>
+
+      <tei:p rend="first">Infolge Ihrer Karte merke ich S<tei:subst>
+          <tei:del hand="#TPunk" rend="overwritten">o</tei:del>
+          <tei:add hand="#TPunk" place="superimposed">i</tei:add>
+        </tei:subst>e vorläufig nicht <tei:choice>
+          <tei:sic>endgiltig</tei:sic>
+          <tei:corr>endgültig</tei:corr>
+        </tei:choice> für <tei:rs key="entity-003482" type="person">Spengler</tei:rs> 1 und 2 vor. Der Preis von der
+        Landstrasse ist sicher falsch; die beiden Bände des <tei:rs key="entity-003482" type="person">Spengler</tei:rs>
+        Werkes dürften in <tei:rs key="entity-002506" type="place">Oesterreich</tei:rs> ca. Mark 200.- , oder heute K
+        6200.- kosten. W<tei:subst>
+          <tei:del hand="#TPunk" rend="overwritten">e</tei:del>
+          <tei:add hand="#OED" place="superimposed">a</tei:add>
+        </tei:subst>nn das Werk eintrifft, werden wir Sie verständigen.</tei:p>
+
+      <tei:p rend="first">Für Ihre freundlichen Ratschläge zu unserem <tei:rs key="entity-000612" type="person"
+          >Mozart</tei:rs>-Heft sage ich Ihnen besten Dank; ich hoffe aber, das <tei:rs key="entity-005684"
+          type="composition">Rondo in D-dur</tei:rs> doch noch zu finden, und vermute es bei einem <tei:rs
+          key="entity-002482" type="place">Deutschland</tei:rs> lebenden Musik-Historiker.</tei:p>
+
+      <tei:p rend="first"><tei:pb n="2"/> Zu <tei:rs key="entity-000722" type="person">Rolland</tei:rs>: Ich bat <tei:rs
+          key="entity-000259" type="person">Frimmel</tei:rs> um seine Unterstützung für historische Korrekturen. <tei:subst>
+          <tei:del hand="#OED" rend="overwritten">i</tei:del>
+          <tei:add hand="#OED" place="superimposed">I</tei:add>
+        </tei:subst>n der deutschen Ausgabe von <tei:rs key="entity-005685" type="person">Rascher</tei:rs> (6.Tausend
+          1918)<tei:note xml:id="r0001-fn04" type="editorial" place="foot"><tei:bibl>Romain Rolland, <tei:title
+              level="m">Ludwig van Beethoven</tei:title> trans. Lisbeth Langnese-Hug (Zurich: M. Rascher,
+            1918).</tei:bibl></tei:note> str<tei:subst>
+          <tei:del hand="#TPunk" rend="overwritten">o</tei:del>
+          <tei:add hand="#TPunk" place="superimposed">i</tei:add>
+        </tei:subst>ch ich mir an: Seite 17-Die frivole Grosstadt in ihren traurigen Vorstädten (gesehen um <tei:date
+          when="1910">1910</tei:date> ohne <tei:subst>
+          <tei:del rend="overstrike" hand="#OED">Nennung</tei:del>
+          <tei:add place="interlinear-above" hand="#OED">Ahnung</tei:add>
+        </tei:subst> von den Vororten des alten <tei:rs key="entity-002484" type="place">Wien</tei:rs>, die ganz
+        ländlich und gewiss nicht traurig waren); Seite 51, Fussnote 2 - <tei:rs key="entity-000803" type="person"
+          >Schubert</tei:rs><tei:add place="inline" hand="#OED">,</tei:add> nicht begeistert von den Freiheitskriegen
+        (verfasste tatsächlich ein Gedicht auf den Sieg von <tei:rs key="entity-002479" type="place">Leipzig</tei:rs>,
+        das er komponierte), hat <tei:date when="1807">1807</tei:date> (10 jährig) auch ein Gelegenheitswerk <tei:rs
+          key="entity-000621" type="person">Napoleon dem Grossen</tei:rs> zu Ehren<tei:subst>
+          <tei:del hand="#OED" rend="overwritten">,</tei:del>
+          <tei:add hand="#OED" place="superimposed"> (</tei:add>
+        </tei:subst> den er, nach jenem Gedicht, hasste) geschrieben, und sein Werk bei der Aufführun<tei:add
+          place="inline" hand="#OED">g</tei:add> vor dem Kaiser (der <tei:date when="1809">1809</tei:date> erst in
+          <tei:rs key="entity-002484" type="place">Wien</tei:rs> war, <tei:add place="interlinear-above" hand="#OED"
+            ><tei:rs key="entity-000803" type="person">Sch.</tei:rs></tei:add> als Hofsängerknabe) dirigiert<tei:subst>
+          <tei:del hand="#OED" rend="overwritten">.</tei:del>
+          <tei:add hand="#OED" place="superimposed">,</tei:add>
+        </tei:subst>
+        <tei:subst>
+          <tei:del hand="#OED" rend="overwritten">D</tei:del>
+          <tei:add hand="#OED" place="superimposed">d</tei:add>
+        </tei:subst>ieser Unsinn ist besonders <tei:subst>
+          <tei:del hand="#OED" rend="overwritten">b</tei:del>
+          <tei:add hand="#OED" place="superimposed">B</tei:add>
+        </tei:subst>lühend, und es gibt gar keinen Anhaltspunkt dafür, wie er entstanden sein kann; Seite 53 - Die Stadt
+        in ihrer mondainen mit Mittelmässigkeit gesättigten Luft; ebenso Fussnote: <tei:rs key="entity-000306"
+          type="person">Grillparzer</tei:rs> schrieb<tei:add place="inline" hand="#OED">,</tei:add> es sei ein Unglück
+        als Oesterreicher geboren zu werden (zu untersuchen); Seite 55,-Fussnote ebenso bei <tei:rs key="entity-005693"
+          type="person">Bauernfel<tei:subst>
+            <tei:del hand="#TPunk" rend="overwritten">f</tei:del>
+            <tei:add hand="#TPunk" place="superimposed">d</tei:add>
+          </tei:subst></tei:rs>, von dem aus dem Jahre <tei:date when="1816">1816</tei:date> natürlich noch keine
+        Tagebücher bekannt sind; Seite 78, Fussnote 1 - Nicht der Ritter sehnt sich nach der Freiheit, sondern Melusine
+        selbst; Seite 84, Fussnote - Anselm (statt Anton) <tei:rs key="entity-005686" type="person"
+          >Hüttenbrenner</tei:rs>; Seite 116,Mitte - Deinige (statt Meinige); Seite 132 - <tei:subst>
+          <tei:del hand="#OED" rend="overstrike">Kl</tei:del>
+          <tei:add hand="#OED" place="interlinear-above">S</tei:add>
+        </tei:subst>ering (statt Ve<tei:del hand="#OED" rend="overstrike">h</tei:del>ring). Ob die Dokumente am Schluss na<tei:subst>
+          <tei:del hand="#TPunk" rend="overwritten">h</tei:del>
+          <tei:add hand="#TPunk" place="superimposed">c</tei:add>
+        </tei:subst>h dem Original abgedruckt sind, oder nach der französischen Uebersetzung verdeutscht, konnte ich
+        noch ni<tei:subst>
+          <tei:del hand="#TPunk" rend="overwritten">x</tei:del>
+          <tei:add hand="#TPunk" place="superimposed">c</tei:add>
+        </tei:subst>ht überall untersuchen; das Heiligenstädter Testament ist jedenfalls richtig abgedruckt.- Ich habe
+        auch die französische Ausgabe (37.Tausend 1921)<tei:note xml:id="r0001-fn05" type="editorial" place="foot">This
+          particular edition cannot be identified, but the first edition was <tei:bibl>Romain Rolland, <tei:title
+              level="m">Beethoven</tei:title> (Paris: Imprimerie de Suresnes, 1903)</tei:bibl> (entitled <tei:title
+            level="m">Vie de Beethoven</tei:title> in later editions).</tei:note> vor mir, die eventuell zu vergleichen
+        wäre. Die <tei:rs key="entity-000803" type="person">Schubert</tei:rs>-Fussnote ist <tei:subst>
+          <tei:del hand="#OED" rend="overstrike">jedenfalls</tei:del>
+          <tei:add hand="#OED" place="interlinear-above">z.B.</tei:add>
+        </tei:subst> genau nach dem Originale übersetzt.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-25">Mit den besten Grüssen</tei:salute>
+        <tei:salute rend="indent-75">Ihr ergebener</tei:salute>
+        <tei:signed rend="indent-85"><tei:handShift new="#OED"/><tei:rs type="person" key="entity-000164"
+            >Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:fw type="header" rend="inline">
+          <tei:note type="editorial">printed letterhead:</tei:note>
+          <tei:handShift new="#printed"/>OTTO ERICH DEUTSCH</tei:fw>
+        <tei:address>
+          <tei:addrLine>VIENNA, II, BÖCKLINSTRASSE 26</tei:addrLine>
+          <tei:addrLine>TELEPHONE NUMBER 1288</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-60"><tei:handShift new="#TPunk"/><tei:rs key="entity-002484" type="place"
+            >Vienna</tei:rs>, <tei:date when="1922-02-14">February 14, 1922</tei:date></tei:dateline>
+        <tei:lb/><tei:address>
+          <tei:addrLine rend="indent-20"><tei:supplied reason="clarity">to:</tei:supplied> Professor Dr. <tei:rs
+              key="entity-000632" type="person">Heinrich
+            <tei:hi><!-- spaced out -->Schenker</tei:hi></tei:rs>,</tei:addrLine>
+          <tei:addrLine rend="indent-75"><tei:hi rend="underline"><tei:hi><!-- spaced out --><tei:rs key="entity-002484"
+                  type="place">Vienna</tei:rs></tei:hi></tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:salute rend="indent-25">Very honored <tei:rs type="person" key="entity-000632">Doctor</tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">To your letter of the <tei:date when="1922-02-08">8th</tei:date> and your card of the
+          <tei:date when="1922-02-10">10th of the month</tei:date>, allow me to reply as follows:</tei:p>
+
+      <tei:p rend="first">I did not succeed in persuading <tei:rs key="entity-002408" type="organization">Universal
+          Edition</tei:rs> to offer even just 1 luxury copy for my contributors. I am happy to provide you the following
+        works from <tei:rs key="entity-002462" type="organization">Seidel's</tei:rs>, in place of 2 or 3 hardback copies
+        of the <tei:rs key="entity-001754" type="work">"Moonlight" Sonata <tei:supplied reason="clarity"
+            >edition</tei:supplied></tei:rs>, against payment of the difference: <tei:lb/>1.) <tei:rs
+          key="entity-000027" type="person">Bach</tei:rs> – Cantata <tei:lb/>2.) <tei:rs key="entity-000612"
+          type="person">Mozart</tei:rs> – Trio (both in hardback) <tei:lb/>3.) <tei:rs key="entity-003482" type="person"
+          >Spengler</tei:rs>, volumes 1 and 2 in paperback.<tei:ptr corresp="#r0001-fn02" type="footnote"/></tei:p>
+
+      <tei:p rend="first">I will send at the same time the two exchange items 1 and 2, and the <tei:rs
+          key="entity-000094" type="person">Brahms</tei:rs> volume.<tei:ptr corresp="#r0001-fn03" type="footnote"
+        /></tei:p>
+
+      <tei:p rend="first">It would be very nice if you would write in <tei:rs key="entity-001739" type="work"><tei:title
+            level="m"><tei:subst>
+              <tei:del rend="overwritten" hand="#TPunk">t</tei:del>
+              <tei:add place="superimposed" hand="#OED">T</tei:add>
+            </tei:subst>onwille</tei:title></tei:rs> about the two <tei:rs key="entity-001754" type="work">facsimile
+          editions</tei:rs>.</tei:p>
+
+      <tei:p rend="first">As a result of your card I reserve you provisionally, not definitely, <tei:rs
+          key="entity-003482" type="person">Spengler</tei:rs> 1 and 2. The price from Landstrasse is certainly wrong:
+        the two volumes of <tei:rs key="entity-003482" type="person">Spengler</tei:rs>'s work should cost about 200
+        marks – or today 6200 kronen – in <tei:rs key="entity-002506" type="place">Austria</tei:rs>. When the work
+        arrives we will contact you.</tei:p>
+
+      <tei:p rend="first">Thank you for your kind advice about our <tei:rs key="entity-000612" type="person"
+          >Mozart</tei:rs> book; I hope, however, still to find the <tei:rs key="entity-005684" type="composition">Rondo
+          in D major</tei:rs>, and suspect it is with a music-historian living in <tei:rs key="entity-002482"
+          type="place">Germany</tei:rs>.</tei:p>
+
+      <tei:p rend="first"><tei:pb n="2"/> Regarding <tei:rs key="entity-000722" type="person">Rolland</tei:rs>: I asked
+          <tei:rs key="entity-000259" type="person">Frimmel</tei:rs> for his support for historical corrections. <tei:subst>
+          <tei:del hand="#OED" rend="overwritten">i</tei:del>
+          <tei:add hand="#OED" place="superimposed">I</tei:add>
+        </tei:subst>n <tei:rs key="entity-005685" type="person">Rascher</tei:rs>'s German edition (6th thousand,
+          1918)<tei:ptr corresp="#r0001-fn04" type="footnote"/> I marked: page 17 – the sad suburbs of the frivolous
+        metropolis (as viewed at around <tei:date when="1910">1910</tei:date> without any <tei:subst>
+          <tei:del rend="overstrike" hand="#OED">mention</tei:del>
+          <tei:add place="interlinear-above" hand="#OED">awareness</tei:add>
+        </tei:subst> of the suburbs of old <tei:rs key="entity-002484" type="place">Vienna</tei:rs>, which were quite
+        rural and certainly not sad); page 51, footnote 2 – <tei:rs key="entity-000803" type="person"
+          >Schubert</tei:rs><tei:add place="inline" hand="#OED">,</tei:add> not enthusiastic about the wars of
+        liberation (actually having written a poem on the Battle of <tei:rs key="entity-002479" type="place"
+          >Leipzig</tei:rs>, which he set to music), wrote in <tei:date when="1807">1807</tei:date> (aged 10) an
+        occasional piece in honor of <tei:rs key="entity-000621" type="person">Napoleon the Great</tei:rs><tei:subst>
+          <tei:del hand="#OED" rend="overwritten">,</tei:del>
+          <tei:add hand="#OED" place="superimposed"> (</tei:add>
+        </tei:subst> whom he, according to the poem, hated), and conducted his work in a performance before the Emperor
+        (first in <tei:date when="1809">1809</tei:date> in <tei:rs key="entity-002484" type="place">Vienna</tei:rs>,
+          <tei:add place="interlinear-above" hand="#OED"><tei:rs key="entity-000803" type="person"
+          >Schubert</tei:rs></tei:add> was a court chorister)<tei:subst>
+          <tei:del hand="#OED" rend="overwritten">.</tei:del>
+          <tei:add hand="#OED" place="superimposed">,</tei:add>
+        </tei:subst>
+        <tei:subst>
+          <tei:del hand="#OED" rend="overwritten">T</tei:del>
+          <tei:add hand="#OED" place="superimposed">t</tei:add>
+        </tei:subst>his nonsense is especially flowery, and there is no clue as to how it could have come about; page 53
+        – the city's sophisticated atmosphere saturated by mediocrity; also footnote: <tei:rs key="entity-000306"
+          type="person">Grillparzer</tei:rs> wrote that it was a calamity to be born an Austrian (to examine); page 55,
+        footnote – of course, as with <tei:rs key="entity-005693" type="person">Bauernfel<tei:subst>
+            <tei:del hand="#TPunk" rend="overwritten">f</tei:del>
+            <tei:add hand="#TPunk" place="superimposed">d</tei:add>
+          </tei:subst></tei:rs>, no diaries from the year <tei:date when="1816">1816</tei:date> are known; page 78,
+        footnote 1 – it is not the knight who longs for freedom, but Melusine herself; page 84, footnote – Anselm
+        (rather than Anton) <tei:rs key="entity-005686" type="person">Hüttenbrenner</tei:rs>; page 116, middle – yours
+        (rather than mine), page 132, <tei:subst>
+          <tei:del hand="#OED" rend="overstrike">Kl</tei:del>
+          <tei:add hand="#OED" place="interlinear-above">S</tei:add>
+        </tei:subst>ering (rather than Ve<tei:del hand="#OED" rend="overstrike">h</tei:del>ring). Whether the documents
+        were printed in the end according to the original, or the German translation of the French, I still could not
+        investigate thoroughly; the Heiligenstadt Testament is in any case printed correctly. – I have the French
+        edition in front of me (37th thousand, 1921),<tei:ptr corresp="#r0001-fn05" type="footnote"/> which could be
+        used for comparison. The <tei:rs key="entity-000803" type="person">Schubert</tei:rs> footnote is <tei:subst>
+          <tei:del hand="#OED" rend="overstrike">anyway</tei:del>
+          <tei:add hand="#OED" place="interlinear-above">e.g.</tei:add>
+        </tei:subst> translated exactly according to the original.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-25">With best wishes,</tei:salute>
+        <tei:salute rend="indent-75">Yours truly,</tei:salute>
+        <tei:signed rend="indent-85"><tei:handShift new="#OED"/><tei:rs type="person" key="entity-000164"
+            >Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

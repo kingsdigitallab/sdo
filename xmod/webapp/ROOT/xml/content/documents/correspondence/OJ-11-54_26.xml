@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="317" sdoID="OJ-11-54_26">OJ 11/54, [26]</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="TPavh" scope="major">typist: Anthony van Hoboken</tei:handNote>
+   <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+   <tei:handNote xml:id="AvH" scope="minor">Anthony van Hoboken's hand</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="JR-HE">
+   <tei:persName>John Rothgeb &amp; Heribert Esser</tei:persName>
+   <tei:resp>Transcription, 2014</tei:resp>
+   <tei:resp>Translation, 2014</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>XML Encoding, 2014</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2013-02-16" who="#IB">revision of XML code</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+   <tei:rs role="correspondence" type="correspondence" key="entity-005495">Hoboken ~ Oppel</tei:rs>
+   <dc:title>Typewritten letter from Hoboken to [Reinhard Oppel], dated August 30, 1929</dc:title>
+
+   <dcterms:created>1929-08-30T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2014-10-29</dcterms:dateSubmitted>
+   <dc:description>Hoboken advises Oppel on ordering materials from the Photogrammarchiv for study
+    purposes. — He hopes to see him in Kiel in late September.</dc:description>
+   <dc:subject>Anfrage; request; order; Studienzwecke; study purposes; leihweise; on loan; Kosten;
+    costs; Photographie; photograph; Urheberrecht; copyright; besuchen; visit</dc:subject>
+
+   <marcrel:correspondent key="entity-000380">Hoboken</marcrel:correspondent>
+   <marcrel:recipient key="entity-000643">Reinhard Oppel</marcrel:recipient>
+  </sdo:itemDesc>
+
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:note type="editorial" place="inline">printed letterhead:</tei:note>
+    <tei:address>
+     <tei:addrLine rend="indent-10"><tei:handShift new="#printed"/>A. van HOBOKEN</tei:addrLine>
+     <tei:addrLine rend="indent-80">WIEN</tei:addrLine>
+     <tei:addrLine rend="indent-60">IV., WIEDNER HAUPTSTRASSE 63</tei:addrLine>
+     <tei:addrLine rend="indent-80">TEL. U 58-403</tei:addrLine>
+    </tei:address>
+    <tei:dateline rend="indent-70"><tei:handShift new="#TPavh"/><tei:date when="1929-08-30">30
+      August 1929</tei:date></tei:dateline><tei:lb/>
+    <tei:salute rend="indent-10">Sehr geehrter Herr <tei:rs type="person" key="entity-000643"
+      >Professor</tei:rs>,<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
+      this letter is not recorded in Schenker's diary.</tei:note></tei:salute>
+   </tei:opener>
+
+   <tei:p rend="first">Vielen Dank für Ihr freundliches Schreiben vom <tei:date when="1929-08-15"
+     >15en</tei:date>.<tei:note xml:id="r0001-fn02" type="editorial" place="foot">The writing of no
+     letter of August 15 (on which day the Schenkers arrived back in Vienna from vacation) is
+     recorded in Schenker's diary.</tei:note> Ich habe bereits veranlasst, dass Ihnen die
+    gewünschten Stücke vom <tei:rs key="entity-002452" type="organization">Archiv</tei:rs> zugesandt
+    werden sofern sie da sind. Nun bitte ich Sie noch, dem <tei:rs key="entity-002452"
+     type="organization">Archiv für Photogramme</tei:rs> an der <tei:rs key="entity-002686"
+     type="organization">National Bibliothek</tei:rs>, <tei:rs key="entity-002484" type="place"
+     >Wien</tei:rs> I, Augustinerbastei 6, in Ihrer Eigenschaft als Professor am <tei:rs
+     key="entity-002591" type="organization">Konservatorium</tei:rs> eine direkte Anfrage wegen
+    dieser Stücke zu richten. Das ist eine blosse Formalität, weil wir Abzüge lediglich zu
+    Studienzwecke, leihweise, meist nur auf amtlichem Wege abgeben. Leihweise heisst in Ihrem Falle,
+    dass die Abzüge nicht in Ihrem Besitz übergehen. Sie können sie aber so lange wie Sie wollen
+    behalten. Die Kosten gehen zu Ihren Lasten; sie werden etwa einen Schilling pro Seite betragen.
+    Es liegt ein Urheberrecht auf <tei:choice>
+     <tei:sic>die</tei:sic>
+     <tei:corr>den</tei:corr>
+    </tei:choice> Photographien an sich; falls Sie also eine Arbeit darüber schreiben wollen (was
+    wir natürlich auf das lebhafteste begrüssen würden) müssten Sie uns zuvor
+    benachrichtigen.</tei:p>
+
+   <tei:p rend="first">Wir haben vor, unsere Rückfahrt nach <tei:rs key="entity-002484" type="place"
+     >Wien</tei:rs> Ende September im Auto diesmal über <tei:rs key="entity-002757" type="place"
+     >Kiel</tei:rs> zu machen und hoffen dann Gelegenheit zu haben, Sie zu besuchen. Ich werde
+     <tei:sic>im</tei:sic> dem Fall noch Näheres von mir hören lassen.</tei:p>
+
+   <tei:p rend="first">Beste Grüsse,</tei:p>
+
+
+   <tei:closer>
+    <tei:salute rend="indent-50">Ihr ergebener</tei:salute>
+    <tei:signed rend="indent-70"><tei:handShift new="#AvH"/><tei:rs type="person"
+      key="entity-000380">AvHoboken</tei:rs></tei:signed>
+   </tei:closer>
+
+  </tei:div>
+
+
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:note type="editorial" place="inline">printed letterhead:</tei:note>
+    <tei:address>
+     <tei:addrLine rend="indent-10"><tei:handShift new="#printed"/>A. van HOBOKEN</tei:addrLine>
+     <tei:addrLine rend="indent-80">VIENNA IV</tei:addrLine>
+     <tei:addrLine rend="indent-60">WIEDNER HAUPTSTRASSE 63</tei:addrLine>
+     <tei:addrLine rend="indent-80">Tel. U 58-403</tei:addrLine>
+    </tei:address>
+    <tei:dateline rend="indent-70"><tei:handShift new="#TPavh"/><tei:date when="1929-08-30">August
+      30, 1929</tei:date></tei:dateline><tei:lb/>
+    <tei:salute rend="indent-10">Dear <tei:rs type="person" key="entity-000643"
+      >Professor</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+   </tei:opener>
+
+   <tei:p rend="first">Thank you for your kind letter of the <tei:date when="1929-08-15"
+     >15th</tei:date>.<tei:ptr corresp="#r0001-fn02" type="footnote"/> I have already directed that
+    the desired items from the <tei:rs key="entity-002452" type="organization">Archive</tei:rs>, to
+    the extent that they are there, be sent to you. Now I ask further that you, in your capacity as
+    Professor at the <tei:rs key="entity-002591" type="organization">Conservatory</tei:rs>, send a
+    direct request for these items to the <tei:rs key="entity-002452" type="organization">Archive
+     for Photograms</tei:rs> at the <tei:rs key="entity-002686" type="organization">National
+     Library</tei:rs>, <tei:rs key="entity-002484" type="place">Vienna</tei:rs> I, Augustinerbastei
+    6. That is a mere formality, because we provide prints only for study purposes, on loan, and
+    mostly through official channels. "On loan" means in your case that the prints do not become
+    your property. You can, however, keep them as long as you wish. The costs are your
+    responsibility; they will amount to about one shilling per page. The photographs are
+    automatically protected by copyright; therefore, should you wish to write a work on them (which
+    we naturally would welcome most enthusiastically), you would need to notify us in
+    advance.</tei:p>
+
+   <tei:p rend="first">We plan to make our return trip to <tei:rs key="entity-002484" type="place"
+     >Vienna</tei:rs> at the end of September by automobile via <tei:rs key="entity-002757"
+     type="place">Kiel</tei:rs> this time, and hope then to have an opportunity to visit you. In
+    that case I will send more detailed information.</tei:p>
+
+   <tei:p rend="first">With best greetings,</tei:p>
+
+
+   <tei:closer>
+    <tei:salute rend="indent-50">Yours sincerely,</tei:salute>
+    <tei:signed rend="indent-70"><tei:handShift new="#AvH"/><tei:rs type="person"
+      key="entity-000380">A. v. Hoboken</tei:rs></tei:signed>
+   </tei:closer>
+
+
+  </tei:div>
+ </sdo:record>
+</sdo:recordCollection>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2419" sdoID="OC-52-55">OC 52/55</sdo:correspondence>
+    </sdo:source>
+    <tei:handNotes>
+      <tei:handNote xml:id="unk1" scope="major">unknown hand (UE)</tei:handNote>
+      <tei:handNote xml:id="EH" scope="minor">Emil Hertzka's hand?</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2006, 2020</tei:resp>
+      <tei:resp>Translation, 2006, 2020</tei:resp>
+      <tei:resp>XML Encoding, 2020</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-02-07" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002702">UE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002701">UE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002700">Hertzka ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">postcard</tei:rs>
+
+
+
+      <dc:title>Handwritten postcard from UE to Schenker, dated August 17, 1910</dc:title>
+
+      <dcterms:created>1910-08-17T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2020-07-14</dcterms:dateSubmitted>
+      <dc:description>UE acknowledge return of the [second] proofs of the Chromatic Fantasy &amp;
+        Fugue edition, but request that Schenker return the "original."</dc:description>
+      <dc:subject>Korrektur; proofs; vermissen; to miss; Original; Einsendung; sending</dc:subject>
+
+      <marcrel:correspondent key="entity-002408">Universal Edition</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000356">Emil Hertzka</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:supplied reason="format">all in decorative rule-frame</tei:supplied>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>An <tei:handShift new="#unk1"/><tei:hi
+              rend="lateinschr">Hochwohlg. Herrn Prof. Heinrich Schenker</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-40"><tei:handShift new="#printed"/>in <tei:handShift
+              new="#unk1"/><tei:hi rend="lateinschr">Karer Pass</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:hi rend="lateinschr">Karer
+            Hotel</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-20"><tei:hi rend="lateinschr">Tirol</tei:hi></tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:address>
+          <tei:note type="editorial" place="inline">left margin, written sideways:</tei:note>
+          <tei:addrLine><tei:handShift new="#stamp"/>„Universal-Edition“
+            Actiengesellschaft</tei:addrLine>
+          <tei:addrLine><tei:handShift new="#unk1"/>I Wipplingerstr 32 Wien</tei:addrLine>
+        </tei:address>
+        <tei:fw type="postmark">|| 1/1 WIEN <tei:gap reason="illegible"/> | 17.VIII.10 | * 3a *
+          ||</tei:fw><tei:lb/><tei:lb/>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:salute>Sehr geehrter Herr <tei:rs key="entity-000632" type="person"
+          >Professor</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p>Wir sind i. Besitze der frdl. rückgesandten Korrektur zur <tei:rs type="work"
+          key="entity-001730">UE 2540</tei:rs>, vermissen jedoch das Ihnen jzt gleichzeitig
+        zugegangene Original.</tei:p>
+
+
+      <tei:p>Es dürfen dieses versehentlich bei Ihnen zurück geblieben sein und ersuchen hiemit um
+        gefl. Einsendung des obigenannten Originales</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-80"><tei:handShift new="#printed"/>Hochachtungsvoll</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs key="entity-002408" type="organization"
+            >„Universal-Edition“ A-G.</tei:rs><tei:lb/>(Jos. Aibl Verlag, G.m.b.H.)</tei:signed>
+        <tei:signed rend="indent-90"><tei:handShift new="#EH"/>H</tei:signed><tei:lb/>
+        <tei:dateline><tei:handShift new="#printed"/>Wien, am <tei:date when="1910-08-17"
+              ><tei:handShift new="#unk1"/>17. VIII <tei:handShift new="#printed"/>191<tei:handShift
+              new="#unk1"/>0</tei:date></tei:dateline>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>I, Wipplingerstraße 32.</tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+
+    </tei:div>
+
+    <tei:div type="translation">
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:supplied reason="format">all in decorative rule-frame</tei:supplied>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>To <tei:handShift new="#unk1"/>Prof. Heinrich
+            Schenker, Esq.</tei:addrLine>
+          <tei:addrLine rend="indent-40"><tei:handShift new="#printed"/>in <tei:handShift
+              new="#unk1"/>Karer Pass</tei:addrLine>
+          <tei:addrLine rend="indent-50">Karer Hotel</tei:addrLine>
+          <tei:addrLine rend="indent-20">Tyrol</tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:address>
+          <tei:note type="editorial" place="inline">left margin, written sideways:</tei:note>
+          <tei:addrLine><tei:handShift new="#stamp"/>Universal Edition &amp; Co.</tei:addrLine>
+          <tei:addrLine><tei:handShift new="#unk1"/>Vienna I, Wipplingerstraße 32</tei:addrLine>
+        </tei:address>
+        <tei:fw type="postmark">|| 1/1 VIENNA <tei:gap reason="illegible"/> | 17.VIII.10 | * 3a *
+          ||</tei:fw><tei:lb/><tei:lb/>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:salute>Dear <tei:rs key="entity-000632" type="person">Professor</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>We are in receipt of the proofs of <tei:rs type="work" key="entity-001730">UE
+          2540</tei:rs> that you kindly returned, but are missing the original that was sent to you
+        at the same time. </tei:p>
+
+
+      <tei:p>This must inadvertently have been retained by you, and we ask you kindly to send the
+        above-mentioned original.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-80"><tei:handShift new="#printed"/>Respectfully,</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs key="entity-002408" type="organization">Universal
+            Edition &amp; Co.</tei:rs><tei:lb/>(Jos. Aibl Publisher &amp; Co.)</tei:signed>
+        <tei:signed rend="indent-90"><tei:handShift new="#EH"/>H</tei:signed><tei:lb/>
+        <tei:dateline><tei:handShift new="#printed"/>Vienna, <tei:date when="1910-08-17"
+              ><tei:handShift new="#unk1"/>August 17, <tei:handShift new="#printed"
+              />191<tei:handShift new="#unk1"/>0</tei:date></tei:dateline>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/><tei:supplied reason="identity"
+              >Vienna</tei:supplied> I, Wipplingerstraße 32</tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

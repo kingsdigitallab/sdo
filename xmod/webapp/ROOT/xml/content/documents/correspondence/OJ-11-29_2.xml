@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1985" sdoID="OJ-11-29_2">OJ 11/29, [2]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="KG" scope="major">Karl Grunsky's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="LR">
+      <tei:persName>Lee Rothfarb</tei:persName>
+      <tei:resp>Transcription, 2007</tei:resp>
+      <tei:resp>Translation, 2007</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2017</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-26" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-006264">GrunskyK ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Grunsky to Schenker, postmarked June 5, 1908</dc:title>
+      <dcterms:created>1908-06-05T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2017-09-06</dcterms:dateSubmitted>
+      <dc:description>Grunsky will reply as soon as possible.</dc:description>
+      <dc:subject>Musikfest; music festival</dc:subject>
+
+      <marcrel:correspondent key="entity-000311">Karl Grunsky</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">Heinrich Schenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+            >Postkarte</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied>
+              <tei:handShift new="#KG"/>Herrn Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-20">Wien III</tei:addrLine>
+            <tei:addrLine rend="indent-20">Reisnerstrasse 38</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| STUTTGART J <tei:gap reason="illegible" unit="chars" extent="3"
+            /> 8 | 5 | JUN | 08 | 10-12N | h . ||</tei:fw><tei:lb/><tei:lb/>
+          <tei:note type="editorial" place="inline"> for message-continuation, see below</tei:note><tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#KG"/>Sehr geehrter Herr <tei:rs type="person"
+            key="entity-000632">Doctor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial"
+            place="foot">Receipt of this postcard is not recorded in Schenker's
+          diary.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Ihr ausführliches Schreiben<tei:note xml:id="r0001-fn02" type="editorial" place="foot"
+          >Probably the letter of which <tei:ref type="correspondence" cRef="OJ-5-15_2-3">OJ 5/15,
+            [2]-[3]</tei:ref> is the draft.</tei:note> erhielt ich <tei:add
+          place="interlinear-above">dankend</tei:add>, im Begriff nach <tei:rs type="place"
+          key="entity-002763">Nürnberg</tei:rs> zum Musikfest zu reisen. Entschuldigen Sie, wenn ich
+        mit der Erwiderung ein wenig warte. Ich überlege mir alles und Ihr Widerspruch ist mir
+        äusserst willkommen.</tei:p>
+
+      <tei:closer>
+        <tei:salute>Fröhliche Pfingsten!</tei:salute>
+        <tei:salute rend="ident-60">Ihr erg.</tei:salute>
+        <tei:signed rend="ident-70"><tei:rs key="entity-000500" type="person"><tei:rs type="person"
+              key="entity-000311">K Grunsky</tei:rs></tei:rs></tei:signed><tei:lb/><tei:lb/>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:lb/><tei:lb/>
+        <tei:p><tei:note type="editorial" place="inline">in pencil:</tei:note> Meine
+            <tei:title>Musikästhetik</tei:title> (<tei:rs type="organization" key="entity-002487"
+            >Goeschen</tei:rs>sche Sammg.) kostet nur 80 Pfennige.<tei:note xml:id="r0001-fn03"
+            type="editorial" place="foot"><tei:bibl><tei:author>Karl Grunsky</tei:author>,
+                <tei:title level="m">Musikästhetik</tei:title> (Leipzig: <tei:rs type="organization"
+                key="entity-002487">Göschen</tei:rs>, 1907)</tei:bibl>, requested by Schenker in
+              <tei:ref type="correspondence" cRef="OJ-5-15_2-3">OJ 5/15, [2]-[3]</tei:ref>.
+            Schenker's library at his death contained a copy of this work (See <tei:bibl><tei:title
+                level="m">Musik und Theater, enthaltend die Bibliothek des Herrn Dr. Heinrich
+                Schenker, Wien</tei:title> (Antiquariat Heinrich Hinterberger, n.d.), item
+              129</tei:bibl>.)</tei:note> Ich mag deshalb dem Verlag nicht mehr schreiben u. meine
+          Handexemplare sind vergriffen. Verzeihen Sie! <tei:note type="editorial" place="inline"
+            >upside down, top margin:</tei:note> Ihrem Werk sehe ich gerne entgegen!</tei:p>
+      </tei:postscript>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+            >Postcard</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied>
+              <tei:handShift new="#KG"/>Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-20">Vienna III</tei:addrLine>
+            <tei:addrLine rend="indent-20">Reisnerstrasse 38</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| STUTTGART J <tei:gap reason="illegible" unit="chars" extent="3"
+            /> 8 | 5 | JUN | 08 | 10-12 p.m. | h . ||</tei:fw><tei:lb/><tei:lb/>
+          <tei:note type="editorial" place="inline"> for message-continuation, see below</tei:note><tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#MV"/>Dear Dr. <tei:supplied reason="identity"><tei:rs
+              type="person" key="entity-000632">Schenker</tei:rs></tei:supplied>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p><tei:add place="interlinear-above">With thanks,</tei:add> I received your detailed
+          letter<tei:ptr corresp="#r0001-fn02" type="footnote"/> while preparing to travel to
+          <tei:rs type="place" key="entity-002763">Nuremberg</tei:rs> to the music festival. Forgive
+        me if I delay a bit with a reply. I am thinking over everything and heartily welcome your
+        opposition. </tei:p>
+
+      <tei:closer>
+        <tei:salute>Whitsuntide greetings! </tei:salute>
+        <tei:salute rend="ident-60">Your devoted</tei:salute>
+        <tei:signed rend="ident-70"><tei:rs key="entity-000500" type="person"><tei:rs type="person"
+              key="entity-000311">K. Grunsky</tei:rs></tei:rs></tei:signed><tei:lb/><tei:lb/>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:lb/><tei:lb/>
+        <tei:p><tei:note type="editorial" place="inline">in pencil:</tei:note> My <tei:title
+            level="m">Music Aesthetics</tei:title> (<tei:rs type="organization" key="entity-002487"
+            >Göschen</tei:rs> series) costs only 80 Pfennig.<tei:ptr corresp="#r0001-fn03"
+            type="footnote"/> I therefore may not write for the publisher any more, and my personal
+          copies are all gone. <tei:note type="editorial" place="inline">upside down, top
+            margin:</tei:note> I look forward to seeing your work!</tei:p>
+      </tei:postscript>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

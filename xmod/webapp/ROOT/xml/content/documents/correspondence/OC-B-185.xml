@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1516" sdoID="OC-B-185">OC B/185</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="WA" scope="minor">Wilhelm Altmann's hand</tei:handNote>
+      <tei:handNote xml:id="unk" scope="major">unknown hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamped</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="NM">
+      <tei:persName>Nicholas Marston</tei:persName>
+      <tei:resp>Transcription, 2014</tei:resp>
+      <tei:resp>Translation, 2014</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2015</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-26" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005596">AltmannW ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005534">Preussische
+        Staatsbibliothek ~ HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Wilhelm Altmann to Schenker, dated October 30,
+        1924</dc:title>
+      <dcterms:created>1924-10-30T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2015-06-09</dcterms:dateSubmitted>
+      <dc:description>Altmann is about to send Schenker the autograph parts of J. S. Bach's St
+        Matthew Passion, and asks for remittance.</dc:description>
+      <dc:subject>abphotographieren; to photograph; Porto; postage costs; Goldmark; gold
+        Mark</dc:subject>
+
+
+
+      <marcrel:correspondent key="entity-000013">Wilhelm Altmann</marcrel:correspondent>
+      <marcrel:correspondent key="entity-003292">Preussische
+        Staatsbibliothek</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+            >Postkarte</tei:hi></tei:fw><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An: </tei:supplied>
+              <tei:handShift new="#unk"/>Herrn Dr. H. Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-10"><tei:hi rend="underline">Wien III</tei:hi></tei:addrLine>
+            <tei:addrLine rend="indent-10">Keilgasse 8</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="stamp"><tei:note type="editorial" place="inline">circular stamp, around
+              eagle crest:</tei:note>PREUSSISCHE STAATSBIBLIOTHEK * BERLIN *</tei:fw><tei:lb/>
+          <tei:fw type="postmark">|| BERLIN NW | 31. 10. 24 5–6N | * 7 s ||</tei:fw><tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+          <tei:address>
+            <tei:addrLine rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+                >Preussische Staatsbibliothek : Musikabteilung</tei:hi></tei:addrLine>
+            <tei:addrLine>TAGEB. NR <tei:handShift new="#unk"/>1733/24</tei:addrLine>
+            <tei:addrLine rend="indent-50"><tei:handShift new="#printed"/>BERLIN NW7, den <tei:date
+                when="1924-10-30"><tei:handShift new="#unk"/>30. 10. <tei:handShift new="#printed"
+                  />192<tei:handShift new="#unk"/>4</tei:date></tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:salute rend="indent-20"><tei:handShift new="#unk"/>Sehr verehrter Herr <tei:rs
+            key="entity-000632" type="person">Professor</tei:rs>.<tei:note xml:id="r0001-fn01"
+            type="editorial" place="foot">Receipt of this postcard is recorded in Schenker's dairy
+            at OJ 3/7, p. 2750, November 3, 1924: "Von Altmann (K.): sendet die versprochenen
+            autographen Blätter, bittet nur um Vergütung des Portos, 2.15 GM. (ohne Nennung seines
+            Namens!?)." ("From Altmann (postcard): he sends the promised autograph leaves, asks only
+            for reimbursement of the postage, 2.15 gold Marks (without saying his name!?).").
+            Receipt of the photographs is recorded at OJ 3/7, p. 2752, November 7, 1924: "Von der
+            preuss. Staatsbibliothek kommen die Blätter: 171000 aufgerundet auf 180000 Kronen."
+            ("The pages arrive from the Prussian State Library: 171,000 rounded up to 180,000
+            Kronen.") See also <tei:ref cRef="OC-B-186">OC B/186</tei:ref>, November 6,
+            1924.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Endlich kann ich Ihnen die versprochenen, abphotographierten
+          <tei:term>Stimme</tei:term>n von <tei:rs key="entity-000027" type="person">Bach</tei:rs>’s
+          „<tei:rs key="entity-001172" type="composition"
+          ><tei:title>Matthäus-Passion</tei:title></tei:rs>“ zusenden. Dürfte ich Sie bitten das
+        verauslagte Porto von 2, 15 Goldmark an die Musik-Abteilung der <tei:rs key="entity-004623"
+          type="organization">Preuss. Staatsbibliothek</tei:rs> (ohne Nennung meines Namens)
+        einzusenden.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-30">Mit vorzüglichster Hochachtung <tei:handShift new="#WA"/>und
+          bestem Gruß</tei:salute>
+        <tei:signed rend="indent-50"><tei:handShift new="#stamp"/>Der Direktor der
+          Musikabteilung.</tei:signed>
+        <tei:signed rend="indent-60"><tei:handShift new="#WA"/><tei:rs key="entity-000013"
+            type="person">Altmann</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+            >Postcard</tei:hi></tei:fw><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">To: </tei:supplied>
+              <tei:handShift new="#unk"/>Dr. H. Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-10"><tei:hi rend="underline">Vienna
+              III</tei:hi></tei:addrLine>
+            <tei:addrLine rend="indent-10">Keilgasse 8</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="stamp"><tei:note type="editorial" place="inline">circular stamp, around
+              eagle crest:</tei:note>PRUSSIAN STATE LIBRARY * BERLIN *</tei:fw><tei:lb/>
+          <tei:fw type="postmark">|| BERLIN NW | 31. 10. 24 5–6 PM | * 7 s ||</tei:fw><tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+          <tei:address>
+            <tei:addrLine rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold">Prussian
+                State Library : Music Department</tei:hi></tei:addrLine>
+            <tei:addrLine>DAYBOOK NO. <tei:handShift new="#unk"/>1733/24</tei:addrLine>
+            <tei:addrLine rend="indent-50"><tei:handShift new="#printed"/>BERLIN NW7, <tei:date
+                when="1924-10-30"><tei:handShift new="#unk"/>October 30, <tei:handShift
+                  new="#printed"/>192<tei:handShift new="#unk"/>4</tei:date></tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:salute rend="indent-20"><tei:handShift new="#unk"/>Highly revered <tei:rs
+            key="entity-000632" type="person">Professor</tei:rs>,<tei:ptr corresp="#r0001-fn01"
+            type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">At last I am able to send you the promised photographed
+          <tei:term>part</tei:term>s of <tei:rs key="entity-000027" type="person">Bach</tei:rs>'s
+          <tei:rs key="entity-001172" type="composition"><tei:title level="m">St Matthew
+            Passion</tei:title></tei:rs>. Might I please ask you to remit the incurred postage costs
+        of 2. 15 gold Marks to the Music Department of the <tei:rs key="entity-004623"
+          type="organization">Prussian State Library</tei:rs> (without mentioning my name).</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-30">With kindest regards <tei:handShift new="#WA"/>and best
+          greetings,</tei:salute>
+        <tei:signed rend="indent-50"><tei:handShift new="#stamp"/>The Director of the Music
+          Department</tei:signed>
+        <tei:signed rend="indent-60"><tei:handShift new="#WA"/><tei:rs key="entity-000013"
+            type="person">Altmann</tei:rs></tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

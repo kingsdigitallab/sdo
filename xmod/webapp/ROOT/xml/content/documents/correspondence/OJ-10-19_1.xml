@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2202" sdoID="OJ-10-19_1">OJ 10/19, [1]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="ME" scope="sole">Manolo Elias's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="MR-S">
+      <tei:persName>Michaela Rejack-Searforce</tei:persName>
+      <tei:resp>Transcription, 2006, 2019</tei:resp>
+      <tei:resp>Translation, 2006, 2019</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2019</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2011-03-05" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-007004">EliasM ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-005504">notecard</tei:rs>
+
+      <dc:title>Handwritten notecard from Manolo Elias to Schenker, dated August 23, 1934</dc:title>
+      <dcterms:created>1934-08-23T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2019-02-04</dcterms:dateSubmitted>
+      <dc:description>Dr. Manolo Elias thanks Schenker for his letter of
+        condolence.</dc:description>
+      <dc:subject>Teilnahme; sympathy; Katastrophe; catastrophe</dc:subject>
+
+
+      <marcrel:correspondent key="entity-000203">Manolo Elias</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:dateline rend="indent-70"><tei:handShift new="#ME"
+          /><tei:placeName>Wien</tei:placeName>, <tei:date when="1934-08-16">23. August
+            1934</tei:date>.</tei:dateline>
+        <tei:salute>Hochverehrter Herr <tei:rs type="person" key="entity-000632"
+            >Doktor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
+            this notecard is recorded in Schenker's diary at OJ 4/7, p. 3937, August 25, 1934: "Von
+            Dr. Elias (Billet): dankt für die Teilnahme." ("From Dr. Elias (notecard): thanks for my
+            sympathy.").</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Für Ihre warmen Worte der Teilnahme,<tei:note xml:id="r0001-fn02" type="editorial"
+          place="foot">The writing of Schenker's letter of condolence is recorded in Schenker's
+          diary at OJ 4/7, p. 3935, August 18, 1934: "Beileidschreiben an Frl. Elias, Dr. Elias u.
+          Frau Albrecht." ("Letters of condolence to Miss Elias, Dr. Elias, and Mrs. Albrecht.").
+          (Receipt of note of thanks from Mrs. Albrecht is recorded on August 29.)</tei:note> die
+        mich aufrichtig bewegt haben, spreche ich Ihnen meinen innigsten Dank aus. Die
+          Katastrophe<tei:note xml:id="r0001-fn03" type="editorial" place="foot">The death of the
+          mother of Manolo and his sister <tei:rs type="person" key="entity-000201">Angi
+            Elias</tei:rs>: see <tei:ref type="correspondence" cRef="OJ-10-18_9">OJ 10/18,
+            [9]</tei:ref>.</tei:note> kam so rasch und unerwartet, dass ich ihr <tei:milestone
+          unit="folio" n="verso"/> heute noch fassunglos gegenüberstehe.</tei:p>
+
+      <tei:p>Ich verbleibe mit den herzlichsten Grüssen an Sie, hochverehrter Herr Doktor, und Ihre
+        werte <tei:rs type="person" key="entity-000771">Frau Gemahlin</tei:rs></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50">Ihr ergebener</tei:salute>
+        <tei:signed rend="indent-50"><tei:rs key="entity-000203" type="person">Manolo
+          Elias</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:dateline rend="indent-70"><tei:handShift new="#ME"
+            /><tei:placeName>Vienna</tei:placeName>, <tei:date when="1934-08-16">August 23,
+            1934</tei:date></tei:dateline>
+        <tei:salute>Highly revered Dr. <tei:supplied reason="identiy"><tei:rs type="person"
+              key="entity-000632">Schenker</tei:rs></tei:supplied>,<tei:ptr corresp="#r0001-fn01"
+            type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>For your warm words of sympathy,<tei:ptr corresp="#r0001-fn02" type="footnote"/> which
+        have sincerely moved me, I express my most heartfelt thanks. This catastrophe<tei:ptr
+          corresp="#r0001-fn03" type="footnote"/> happened so quickly and unexpectedly that
+          <tei:milestone unit="folio" n="verso"/> today I still face it uncomprehendingly.</tei:p>
+
+      <tei:p>I remain with the most cordial greetings to you, most highly revered Dr. <tei:supplied
+          reason="identity">Schenker</tei:supplied>, and your dear <tei:rs type="person"
+          key="entity-000771">wife</tei:rs>.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50">Your devoted</tei:salute>
+        <tei:signed rend="indent-50"><tei:rs key="entity-000203" type="person">Manolo
+          Elias</tei:rs></tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

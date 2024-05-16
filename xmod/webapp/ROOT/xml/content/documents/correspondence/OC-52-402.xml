@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1832" sdoID="OC-52-402">OC 52/402</sdo:correspondence>
+    </sdo:source>
+    <tei:handNotes>
+      <tei:handNote xml:id="TPue" scope="major">Universal Edition's typist</tei:handNote>
+      <tei:handNote xml:id="EH" scope="minor">Emil Hertzka's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2005, 2016</tei:resp>
+      <tei:resp>Translation, 2005, 2016</tei:resp>
+      <tei:resp>XML Encoding, 2016</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-02-07" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002702">UE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002701">UE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002700">Hertzka ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+      <dc:title>Typewritten letter from Hertzka (UE) to Schenker, dated March 21, 1909</dc:title>
+
+      <dcterms:created>1909-03-21T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2016-08-25</dcterms:dateSubmitted>
+      <dc:description>Hertzka raises several possibilities for amplifying the
+        Instrumentations-Tabelle, and calls for a meeting.</dc:description>
+      <dc:subject>Reisen; travels; sprechen; to talk; Bearbeitung; arrangement; work; Katalog;
+        catalog; Verständigung; agreement; Ausgestaltung; make-up; Anregung; suggestion;
+        Herstellungsspesen; production costs; Neuauflage; new edition; Vervollkommung; improvement;
+        Blatt; sheet; Besetzungstyp; ensemble type; Entwicklung; development; Orchester; orchestra;
+        Vergleichtabelle; comparative table; Besetzung; make-up; composition; Fachmann; expert;
+        Arrangeur; arranger; Ausdruck; term; Honorar; honorarium; Besuch; visit</dc:subject>
+
+      <marcrel:correspondent key="entity-002408">Universal Edition</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000356">Emil Hertzka</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>„Universal-Edition“ A.-G.</tei:addrLine>
+          <tei:addrLine>(Jos. Aibl Verlag, G.m.b.H.)</tei:addrLine>
+          <tei:addrLine>Leipzig <tei:supplied reason="spacer">/</tei:supplied> Sternwartestrasse
+            1520.</tei:addrLine>
+          <tei:addrLine>Wien <tei:supplied reason="spacer">/</tei:supplied> I., Wipplingerstrasse
+            32.</tei:addrLine>
+          <tei:addrLine><tei:note type="editorial" place="inline"><tei:hi rend="italic"
+                >etc.</tei:hi></tei:note></tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-60">
+          <tei:placeName>Wien</tei:placeName>, <tei:handShift new="#TPue"/><tei:date
+            when="1909-01-30">2<tei:subst>
+              <tei:del rend="overwritten">0</tei:del>
+              <tei:add place="superimposed" hand="#EH">1</tei:add>
+            </tei:subst>. März 1909</tei:date></tei:dateline><tei:lb/>
+        <tei:address>
+          <tei:addrLine rend="ident-20">Wohlgeboren Herrn Professor D<tei:add place="inline"
+              hand="#EH">r.</tei:add>
+            <tei:persName>Heinrich Schenker</tei:persName></tei:addrLine>
+          <tei:addrLine rend="indent-70">
+            <tei:hi rend="sperr">Wien</tei:hi>.</tei:addrLine>
+        </tei:address>
+        <tei:salute>Sehr geehrter Herr <tei:rs key="entity-000632" type="person"
+            >Professor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt
+            of this letter is not recorded in Schenker's diary.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Nachdem ich nun eine ganze Serie von <tei:rs key="entity-002501"
+          type="place">Berlin</tei:rs>er, <tei:rs key="entity-002479" type="place"
+        >Leipzig</tei:rs>er und anderen Reisen hinter mir habe und in der nächsten Zeit
+        voraussichtlich in <tei:rs key="entity-002484" type="place">Wien</tei:rs> werde bleiben
+        können, wäre ich Ihnen dankbar verbunden, wenn Sie mir Gelegenheit geben wollten, Sie zu
+          sprechen.<tei:note xml:id="r0001-fn02" type="editorial" place="foot">Cf. <tei:ref
+            type="correspondence" cRef="OC-52-919">OC 52/919</tei:ref>, January 11, 1909. A meeting
+          took place on April 1. See <tei:ref type="correspondence" cRef="WSLB-37">WSLB
+          37</tei:ref>, March 28, and <tei:ref type="correspondence" cRef="OC-52-920">OC
+            52/920</tei:ref>, April 1, 1909. Schenker does not record the meeting in his
+          diary.</tei:note></tei:p>
+
+      <tei:p rend="first">Ich möchte doch für den nächsten Herbst eine Bearbeitung aus Ihrer
+          Feder<tei:note xml:id="r0001-fn03" type="editorial" place="foot">"eine Bearbeitung aus
+          Ihrer Feder" ("something from your pen"): this could mean another arrangement such as that
+          of the Handel Organ Concertos, a new edition, or a new prose "treatment," so I have left
+          it deliberately open. The letter gives no clue.</tei:note> in unseren neuen Katalog
+        aufnehmen und versuchen, im persönlichen Verkehr diesbezüglich zu einer Verständigung zu
+          kommen.<tei:note xml:id="r0001-fn04" type="editorial" place="foot">This paragraph is
+          heavily sidelined by Schenker in crayon.</tei:note></tei:p>
+
+      <tei:p rend="first">Auch die Frage der Ausgestaltung<tei:note xml:id="r0001-fn05"
+          type="editorial" place="foot">"Ausgestaltung" (lit. "outward shaping"): in a publication,
+          external appearance, i.e. the cover design, nature of the binding, physical make-up, etc.
+          We know from the Verlagsdruckbuch (UE Archive) that UE had already taken possession of the
+          new edition (2,000 copies) from the printers on February 6, so Hertzka is presumably
+          thinking of evolution of the <tei:title level="m">Tabelle</tei:title> in future editions
+          of what Hertzka sees as a high-volume educational seller. Hertzka is writing against the
+          background of his embarrassment over additional material that he had sought from Schenker
+            (<tei:ref type="correspondence" cRef="OC-52-29">OC 52/29</tei:ref>, November 23, 1908;
+            <tei:ref type="correspondence" cRef="WSLB-28">WSLB 28</tei:ref>, December 9; <tei:ref
+            type="correspondence" cRef="OC-52-30">OC 52/30</tei:ref>, December 16; <tei:ref
+            type="correspondence" cRef="WSLB-29">WSLB 29</tei:ref>, December 16; <tei:ref
+            type="correspondence" cRef="WSLB-30">WSLB 30</tei:ref>, December 18; and Hertzka's
+          horrified reaction, <tei:ref type="correspondence" cRef="OC-52-399-401">OC
+            52/399–401</tei:ref>, December 18; <tei:ref type="correspondence" cRef="WSLB-31">WSLB
+            31</tei:ref>, December 22; return of material <tei:ref type="correspondence"
+            cRef="OC-52-32">OC 52/32</tei:ref>, December 23). In fact, the next edition was not to
+          be made until 1912 (500 + 1,500 copies), when Schenker's additional material was included,
+          and none of the "outward" changes mooted by Hertzka were implemented.</tei:note> der
+          <tei:rs key="entity-001729" type="work"
+          ><tei:title>Instrumentationstabelle</tei:title></tei:rs> lässt mich nicht ruhen; es kommen
+        mir doch hie und da nebst eigenen Ideen auch von anderer Seite<tei:note xml:id="r0001-fn06"
+          type="editorial" place="foot">"von anderer Seite" (singular, rather than "von anderen
+          Seiten"): Hertzka, while going on to enumerate suggestions from a number of people, is
+          perhaps broaching the subject diplomatically.</tei:note> Anregungen diesbezüglich zu und
+        könnten wir vielleicht doch einen Modus finden der, ohne die Herstellungsspesen nennenswert
+        zu erhöhen, bei einer etwaigen Neuauflage eine Vervollkommung <tei:add
+          place="interlinear-above"><tei:handShift new="#EH"/> der Ausgestaltung</tei:add>
+        <tei:handShift new="#TPue"/>bedeutet.<tei:note xml:id="r0001-fn07" type="editorial"
+          place="foot">This paragraph is heavily sidelined by Schenker in crayon.</tei:note></tei:p>
+
+      <tei:p rend="first">Wie denken Sie z. B. über ein separates Blatt, welches die
+        Besetzungstypen, resp. die Entwicklung des Orchesters <tei:pb n="2"/> seit <tei:rs
+          key="entity-000027" type="person">Bach</tei:rs>’s Zeiten behandeln würde. Es könnte da
+        kurz und trocken etwas, das viele Leute interessiert, geboten werden.</tei:p>
+
+      <tei:p rend="first">Eine mir kürzlich zugekommene Anregung geht dahin, dass wir der <tei:rs
+          key="entity-001729" type="work"><tei:title>Instrumentationstabelle</tei:title></tei:rs>
+        eine Vergleichtabelle der Militär-<tei:subst>
+          <tei:del rend="overstrike">Orchesters</tei:del>
+          <tei:add place="interlinear-above"><tei:handShift new="#EH"/> Musik</tei:add>
+        </tei:subst><tei:note xml:id="r0001-fn08" type="editorial" place="foot">Hertzka first
+          dictates "Militär-Orchester-Besetzungen," then when checking and signing the letter
+          deletes "Orchester" and substitutes above by hand "Musik," perhaps expecting Schenker to
+          react unfavorably to his use of what Schenker would regard as a purely Classical
+          term.</tei:note><tei:handShift new="#TPue"/>-Besetzungen in <tei:rs key="entity-002506"
+          type="place"><tei:country>Oesterreich</tei:country></tei:rs>, <tei:rs key="entity-003300"
+          type="place"><tei:region>Preussen</tei:region></tei:rs>, <tei:rs key="entity-003329"
+          type="place"><tei:region>Bayern</tei:region></tei:rs>, <tei:rs key="entity-003369"
+          type="place"><tei:country>Belgien</tei:country></tei:rs> und <tei:rs key="entity-002520"
+          type="place"><tei:country>Frankreich</tei:country></tei:rs> beigeben sollen. Der
+        betreffende Fachmann meint, dass dies überaus lehrreich und für sehr viele vom grössten
+        Nutzen wäre. Ich muss offen gestehen, dass in den verschiedenen
+          Militärorchesterbesetzungen<tei:note xml:id="r0001-fn09" type="editorial" place="foot"
+          >"Militärorchesterbesetzungen" ("make-up of ... military orchestras"): Hertzka does not
+          alter the formation here, as he did earlier in the paragraph.</tei:note> eine derartige
+        Verschiedenheit existiert und dadurch für die verschiedenen <tei:foreign xml:lang="fre"
+          >Arrangeur</tei:foreign>e ein solcher Wirrwarr herrscht, dass es sehr interessant wäre
+        hierüber in Form eines Anhanges Belehrung zu finden.</tei:p>
+
+      <tei:p rend="first">Von einer anderen Seite würde angefragt, warum in der <tei:rs
+          key="entity-001729" type="work"><tei:title>Instrumentationstabelle</tei:title></tei:rs>
+        der Ausdruck "Flauto traverso" fehlt.<tei:note xml:id="r0001-fn10" type="editorial"
+          place="foot">It is true that the term does not appear on the <tei:title level="m"
+            >Tabelle</tei:title>. Item 1 is the flageolet (an end-blown flute); items 2‒7 are all
+          side-blown flutes, given with separate labels, but without any indication that they are
+          all transverse. Nor was it added to the next edition!</tei:note></tei:p>
+
+      <tei:p rend="first">Sie werden fragen, was noch alles in dieser <tei:rs key="entity-001729"
+          type="work"><tei:title>Tabelle</tei:title></tei:rs> für MK 1.– hineinkommen soll und was
+        Sie für das bisher <tei:add place="inline" hand="#EH">„</tei:add>nicht mehr
+          bedeutende<tei:add place="inline" hand="#EH">“</tei:add> Honorar<tei:note
+          xml:id="r0001-fn11" type="editorial" place="foot">"für ... Honorar" ("for ...
+          honorarium"): underlined in crayon by Schenker. The double-quotation-marks around "nicht
+          mehr bedeutend" appear to have been added by Hertzka. The phrase does not seem to appear
+          in any of Schenker's recent letters.</tei:note> noch liefern sollen; all diese Fragen sind
+        jedoch im persönlichem Wege leichter zu erledigen und verbleibe ich daher, in der angenehmen
+        Erwartung, dass Sie mir sehr bald das Vergnügen Ihres Besuches schenken werden</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">in vorzüglicher Hochschätzung</tei:salute>
+        <tei:salute rend="indent-60">Ihr ergebenster</tei:salute>
+        <tei:signed rend="indent-70"><tei:handShift new="#EH"/><tei:rs key="entity-000356"
+            type="person">Emil Hertzka</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>Universal Edition &amp; Co.</tei:addrLine>
+          <tei:addrLine>(Jos. Aibl Publisher &amp; Co.)</tei:addrLine>
+          <tei:addrLine>Leipzig <tei:supplied reason="spacer">/</tei:supplied> Sternwartestrasse
+            1520</tei:addrLine>
+          <tei:addrLine>Vienna <tei:supplied reason="spacer">/</tei:supplied> I, Wipplingerstrasse
+            32</tei:addrLine>
+          <tei:addrLine><tei:note type="editorial" place="inline"><tei:hi rend="italic"
+                >etc.</tei:hi></tei:note></tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-60">
+          <tei:placeName>Vienna</tei:placeName>, <tei:handShift new="#TPue"/><tei:date
+            when="1909-01-30">March 2<tei:subst>
+              <tei:del rend="overwritten">0</tei:del>
+              <tei:add place="superimposed" hand="#EH">1</tei:add>
+            </tei:subst>, 1909</tei:date></tei:dateline><tei:lb/>
+        <tei:address>
+          <tei:addrLine rend="ident-20">Professor <tei:persName>Heinrich
+            Schenker</tei:persName></tei:addrLine>
+          <tei:addrLine rend="indent-70">
+            <tei:hi rend="sperr">Vienna</tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:salute>Dear <tei:rs key="entity-000632" type="person">Professor</tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Now that I have a whole string of visits, to <tei:rs key="entity-002501"
+          type="place">Berlin</tei:rs>, <tei:rs key="entity-002479" type="place">Leipzig</tei:rs>,
+        and other places, behind me, and expect to be able to remain in <tei:rs key="entity-002484"
+          type="place">Vienna</tei:rs> for the near future, I shall be much indebted to you if you
+        would give me the opportunity of speaking to you.<tei:ptr corresp="#r0001-fn02"
+          type="footnote"/></tei:p>
+
+      <tei:p rend="first">I should particularly like to include something from your pen<tei:ptr
+          corresp="#r0001-fn03" type="footnote"/> in our new catalogue for next Fall, and to try to
+        reach an agreement over this through face-to-face conversation.<tei:ptr
+          corresp="#r0001-fn04" type="footnote"/></tei:p>
+
+      <tei:p rend="first">Also, the question of the make-up<tei:ptr corresp="#r0001-fn05"
+          type="footnote"/> of the <tei:rs key="entity-001729" type="work"><tei:title level="m"
+            >Instrumentation Table</tei:title></tei:rs> still troubles me. In addition to my own
+        ideas, I have from time to time had suggestions put to me on this from elsewhere,<tei:ptr
+          corresp="#r0001-fn06" type="footnote"/> and we could perhaps find a happy medium that,
+        without appreciably raising the production costs, represents an improvement <tei:add
+          place="interlinear-above"><tei:handShift new="#EH"/>in the make-up</tei:add>
+        <tei:handShift new="#TPue"/>in a possible new edition.<tei:ptr corresp="#r0001-fn07"
+          type="footnote"/></tei:p>
+
+      <tei:p rend="first">What do you think, for example, of a separate sheet dealing with the
+        different ensemble types, i.e. the development of the orchestra <tei:pb n="2"/> since
+          <tei:rs key="entity-000027" type="person">Bach</tei:rs>'s time? We could offer people
+        something brief and to-the-point that would be of interest to them.</tei:p>
+
+      <tei:p rend="first">One suggestion put to me recently is that we could give alongside the
+          <tei:rs key="entity-001729" type="work"><tei:title level="m">Instrumentation
+            Table</tei:title></tei:rs> a comparative table showing the make-up of the military <tei:subst>
+          <tei:del rend="overstrike">orchestra</tei:del>
+          <tei:add place="interlinear-above"><tei:handShift new="#EH"/>band</tei:add>
+        </tei:subst><tei:ptr corresp="#r0001-fn08" type="footnote"/>
+        <tei:handShift new="#TPue"/>in <tei:rs key="entity-002506" type="place"
+            ><tei:country>Austria</tei:country></tei:rs>, <tei:rs key="entity-003300" type="place"
+            ><tei:region>Prussia</tei:region></tei:rs>, <tei:rs key="entity-003329" type="place"
+            ><tei:region>Bavaria</tei:region></tei:rs>, <tei:rs key="entity-003369" type="place"
+            ><tei:country>Belgium</tei:country></tei:rs>, and <tei:rs key="entity-002520"
+          type="place"><tei:country>France</tei:country></tei:rs>. The authority in question feels
+        that this would be exceedingly instructive and of the greatest utility to very many people.
+        I must openly admit that there does exist a certain differentiation in the make-up of the
+        various military orchestras,<tei:ptr corresp="#r0001-fn09" type="footnote"/> and that such
+        confusion reigns in the minds of the different arrangers that it would be very interesting
+        to find information about all of this in the form of a supplement.</tei:p>
+
+      <tei:p rend="first">From another quarter came the question as to why in the <tei:rs
+          key="entity-001729" type="work"><tei:title level="m">Instrumentation
+          Table</tei:title></tei:rs> the term "Flauto traverso" is absent.<tei:ptr
+          corresp="#r0001-fn10" type="footnote"/></tei:p>
+
+      <tei:p rend="first">You will ask whatever else has still got to be accommodated in this
+          <tei:rs key="entity-001729" type="work"><tei:title level="m">Table</tei:title></tei:rs>
+        for 1 Mark, and what more you are supposed to provide for your already <tei:add
+          place="inline" hand="#EH">"</tei:add>paltry<tei:add place="inline" hand="#EH">"</tei:add>
+          honorarium.<tei:ptr corresp="#r0001-fn11" type="footnote"/> All these questions are,
+        however, easier to resolve on a personal footing, and I therefore remain, with the pleasing
+        prospect that you will grant me the pleasure of a visit very soon,</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">With kind regards,</tei:salute>
+        <tei:salute rend="indent-60">Your most devoted</tei:salute>
+        <tei:signed rend="indent-70"><tei:handShift new="#EH"/><tei:rs key="entity-000356"
+            type="person">Emil Hertzka</tei:rs></tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

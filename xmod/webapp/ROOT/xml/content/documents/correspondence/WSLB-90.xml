@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2772" sdoID="WSLB-90">WSLB 90</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="unkUE" scope="minor">unknown hand (UE)</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2006, 2022</tei:resp>
+      <tei:resp>Translation, 2006, 2022</tei:resp>
+      <tei:resp>XML Encoding, 2022</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-04" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002700">Hertzka ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002701">UE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002702">UE ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+      <dc:title>Handwritten letter from Schenker to Hertzka (UE), dated January 1, 1912</dc:title>
+
+      <dcterms:created>1912-01-01T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2022-06-21</dcterms:dateSubmitted>
+      <dc:description>Schenker returns proofs of Beethovens Neunte Sinfonie corrected, and draws
+        attention to errors on the part of the typesetters.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000632">Heinrich Schenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000356">Emil Hertzka</marcrel:recipient>
+      <marcrel:recipient key="entity-002408">Universal Edition</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:salute rend="indent-10"><tei:handShift new="#HS"/>Sehr geehrter Herr <tei:rs
+            type="person" key="entity-000356">Direktor</tei:rs>!<tei:note xml:id="r0001-fn01"
+            type="editorial" place="foot">Writing of this letter is not recorded in Schenker's
+            diary.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Hiemit retourniere ich Bg. 1, 2 (<tei:hi rend="lateinschr">II. Corr.</tei:hi>) u. Bog.
+        4 (<tei:hi rend="lateinschr">I. Korr.</tei:hi>);<tei:note xml:id="r0001-fn02"
+          type="editorial" place="foot">i.e. of Schenker's monograph <tei:rs type="work"
+            key="entity-001731"><tei:title level="m">Beethovens Neunte
+          Sinfonie</tei:title></tei:rs>: gathering 1 = pp. 1–16 [Eng. transl., 29‒42]; gathering 2 =
+          pp. 17–32 [42‒55]; gathering 4 = pp. 49–64 [69‒81].</tei:note> außerdem der „Plan“ u. die
+          „Hornskizze“.<tei:note xml:id="r0001-fn03" type="editorial" place="foot">"Plan": the
+          formal diagram of the first movement (p. [2]); at that time, the diagrams of movements 2‒4
+          had still not been created, see <tei:ref type="correspondence" cRef="OC-52-76">OC
+            52/76</tei:ref>, January 12. "Hornskizze": possibly Fig. 164 (p. 130 [Eng. transl.,
+          133]), marked "Corno I.", or Fig. 209 (p. 172 [166]), marked "Corni," both taken from
+          Nottebohm's transcriptions of Beethoven's sketchbooks.</tei:note> Mit der Bitte, von Bg. 1
+        u. 2 <tei:add place="interlinear-above">noch</tei:add> eine Korrektur mir zukommen zu
+        lassen. Die in der <tei:hi rend="lateinschr">2 Korr.</tei:hi> vorkommenden Fehler sind zum
+        größeren Teile auf Rechnung der Setzer zu stellen. </tei:p>
+
+      <tei:p>Insbesondere wundert es mich, daß sie – sehen Sie nur den „<tei:hi rend="underline"
+          >Plan</tei:hi>“!– nicht so peinlich genau u. geschmackvoll (wie z.B. hier oder in <tei:rs
+          type="place" key="entity-002317">Stuttgart</tei:rs>)<tei:note xml:id="r0001-fn04"
+          type="editorial" place="foot">By “Stuttgart” is meant Schenker’s other principal
+          publisher, <tei:rs type="organization" key="entity-002405">J. G. Cotta</tei:rs> of that
+          city.</tei:note> die Linien einhalten, u. so ungeschickt die Marginalzahlen auf der zu
+        bindenden Seite anbringen. Nun <tei:supplied reason="cut-off">da</tei:supplied>s Alles giebt
+        sich nach den ersten Erfahrungen u. die weiteren Bg. dürften in <tei:foreign xml:lang="lat"
+            ><tei:hi rend="lateinschr">dulci jubilo</tei:hi></tei:foreign> erledigt werden. </tei:p>
+
+      <tei:p>(Auch kommt es öfter vor, daß mich die Setzter mit völlig neuen Fehlern überraschen, an
+        Stellen, die außerhalb jeder Korrektur standen!) Indessen, wie gesagt, nur Geduld.<tei:note
+          xml:id="r0001-fn05" type="editorial" place="foot">"wie gesagt": or possibly "as you say,"
+          referring to Universal Edition's letter <tei:ref type="correspondence" cRef="OC-52-65">OC
+            52/65</tei:ref>, September 14, 1911, asking patience for a day or so, or perhaps to a
+          recent conversation.</tei:note></tei:p>
+
+      <tei:p><tei:note type="editorial" place="inline">overwritten across all 3 paragraphs in
+          crayon:</tei:note>
+        <tei:handShift new="#unkUE"/>Erl / <tei:date when="1912-01-02">2/I 1912</tei:date></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-30">Mit ausgezeichneter Hochachtung</tei:salute>
+        <tei:salute rend="indent-60">I<tei:supplied reason="omission">h</tei:supplied>r
+            erg<tei:supplied reason="abbreviation">ebener</tei:supplied></tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:rs key="entity-000632" type="person"><tei:hi rend="lateinschr">H
+            Schenker</tei:hi></tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1912-01-01">1. 1. 1912</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:salute rend="indent-10"><tei:handShift new="#HS"/>Dear <tei:rs type="person"
+            key="entity-000356">Director</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"
+          /></tei:salute>
+      </tei:opener>
+
+      <tei:p>I return herewith gatherings 1 and 2 (second proof) and gathering 4 (first
+          proof);<tei:ptr corresp="#r0001-fn02" type="footnote"/> in addition, the structural
+        diagram and the "horn sketch"<tei:ptr corresp="#r0001-fn03" type="footnote"/> with the
+        request that you let me have a <tei:add place="interlinear-above">further</tei:add> proof of
+        gatherings 1 and 2. The errors that occur on the second proofs are for the greater part to
+        be accounted to the typesetters.</tei:p>
+
+      <tei:p>I am particularly surprised that they ‒ just take a look at the <tei:hi
+          rend="underline">structural diagram</tei:hi>! ‒ have not adhered to the lines with such
+        scrupulous accuracy and so tastefully (as e.g. here or in <tei:rs type="place"
+          key="entity-002317">Stuttgart</tei:rs><tei:ptr corresp="#r0001-fn04" type="footnote"/>),
+        and have inserted the marginal numbers so clumsily on the inside edge of the page. Now all
+        of this will come right on the basis of initial experience, and the remaining gatherings
+        should go through like a dose of salts.</tei:p>
+
+      <tei:p>(Still, the typesetters frequently surprise me with totally new kinds of errors nowhere
+        near any existing corrections!) However, as they say: just have patience.<tei:ptr
+          corresp="#r0001-fn05" type="footnote"/></tei:p>
+
+      <tei:p><tei:note type="editorial" place="inline">overwritten across all 3 paragraphs in
+          crayon:</tei:note>
+        <tei:handShift new="#unkUE"/>Dealt with / <tei:date when="1912-01-02">January 2,
+          1912</tei:date></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-30">With kind regards,</tei:salute>
+        <tei:salute rend="indent-60">Your devoted</tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:rs key="entity-000632" type="person">H. Schenker</tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1912-01-01">January 1, 1912</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

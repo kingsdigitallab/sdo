@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1290" sdoID="OJ-9-10a_2">OJ 9/10a, [2]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HB" scope="major">Hermann Bahr's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="ME">
+      <tei:persName>Martin Eybl</tei:persName>
+      <tei:resp>Transcription, 2006</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="GC">
+      <tei:persName>Geoffrey A. Chew</tei:persName>
+      <tei:resp>Translation, 2006</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2014</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2011-03-05" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005502">BahrH ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+      <dc:title>Handwritten letter from Hermann Bahr to Schenker, dated July 25, 1895</dc:title>
+
+      <dcterms:created>1895-07-25T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2014-11-03</dcterms:dateSubmitted>
+      <dc:description>Bahr apologizes for misunderstanding Schenker, and requests an article by
+        him on music education.</dc:description>
+      <dc:subject>Leser; reader; Publikum; public; Erziehung; education </dc:subject>
+
+
+      <marcrel:correspondent key="entity-000031">Hermann Bahr</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+      <tei:opener>
+        <tei:fw type="header" rend="inline">
+          <tei:note type="editorial">printed letterhead:</tei:note>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#printed"/>„Die Zeit“</tei:addrLine>
+            <tei:addrLine>Wiener Wochenschrift.</tei:addrLine>
+            <tei:addrLine>Herausgeber:</tei:addrLine>
+            <tei:addrLine>Professor Dr. J. Singer,</tei:addrLine>
+            <tei:addrLine>Hermann Bahr, Dr. Heinrich Kanner.</tei:addrLine>
+            <tei:lb/>
+          </tei:address></tei:fw>
+        <tei:address rend="indent-50">
+          <tei:addrLine><tei:placeName>Wien</tei:placeName>, den <tei:handShift new="#HB"/><tei:date
+              when="1895-07-25">25. Juli <tei:handShift new="#printed"/>189<tei:handShift new="#HB"
+              />5</tei:date></tei:addrLine>
+          <tei:addrLine>IX/3, Günthergasse 1.</tei:addrLine>
+        </tei:address>
+        <tei:salute rend="indent-30">Geehrter Herr <tei:rs type="person" key="entity-000632"
+            >Dr</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p>Ich bedaure aufrichtig, Sie anscheinend misverstanden zu haben.<tei:note
+          xml:id="r0001-fn01" type="editorial" place="foot">In response to a letter from Schenker
+          that is not known to survive.</tei:note> Aber wenn schon ich Sie misverstehe, der doch
+        genauer u. nachdenklicher liest als der gewöhnliche Leser, wie würde erst das Publikum Sie
+        misverstehen! Also nichts für ungut und senden Sie mir nur bald musikalische
+          Erziehung.<tei:note xml:id="r0001-fn02" type="editorial" place="foot"
+              ><tei:bibl><tei:author>Heinrich Schenker</tei:author>, <tei:title level="a">Zur
+              musikalischen Erziehung,</tei:title>
+            <tei:title level="j">Die Zeit</tei:title>, 4/51–2 (September 21 and 28, 1895), 185–86,
+            200–02</tei:bibl>; transcr. <tei:bibl><tei:author>Federhofer</tei:author>, <tei:title
+              level="m">Heinrich Schenker als Essayist …</tei:title> (Hildesheim: Olms, 1990), pp.
+            154–66</tei:bibl>.</tei:note></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">Bestens grüßt</tei:salute>
+        <tei:signed rend="indent-50"><tei:rs key="entity-000031" type="person">Hermann
+          Bahr</tei:rs></tei:signed><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:persName>Herrn Dr <tei:rs key="entity-000632" type="person">Heinrich
+                Schenker</tei:rs></tei:persName></tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+      <tei:opener>
+        <tei:fw type="header" rend="inline">
+          <tei:note type="editorial">printed letterhead:</tei:note>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#printed"/>„Die Zeit“</tei:addrLine>
+            <tei:addrLine>Wiener Wochenschrift.</tei:addrLine>
+            <tei:addrLine>Editors:</tei:addrLine>
+            <tei:addrLine>Professor Dr. J. Singer,</tei:addrLine>
+            <tei:addrLine>Hermann Bahr, Dr. Heinrich Kanner.</tei:addrLine>
+            <tei:lb/>
+          </tei:address></tei:fw>
+        <tei:address rend="indent-50">
+          <tei:addrLine><tei:placeName>Vienna</tei:placeName>, <tei:handShift new="#HB"/><tei:date
+              when="1895-07-25">July 25, <tei:handShift new="#printed"/>189<tei:handShift new="#HB"
+              />5</tei:date></tei:addrLine>
+          <tei:addrLine>IX/3, Günthergasse 1</tei:addrLine>
+        </tei:address>
+        <tei:salute rend="indent-30">Dear Dr. <tei:supplied reason="identity"><tei:rs type="person"
+              key="entity-000632">Schenker</tei:rs></tei:supplied>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>I sincerely regret that I have apparently misunderstood you.<tei:ptr
+          corresp="#r0001-fn01" type="footnote"/> But if even I, who after all read you more closely
+        and thoughtfully than the average reader, can misunderstand you, how will you be
+        misunderstood when the public sees it? So I mean no offence, and do send me your <tei:title
+          level="a">Musical Education</tei:title><tei:ptr corresp="#r0001-fn02" type="footnote"/>
+        very soon.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">With best wishes,</tei:salute>
+        <tei:signed rend="indent-50"><tei:rs key="entity-000031" type="person">Hermann
+          Bahr</tei:rs></tei:signed><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:persName>Dr. <tei:rs key="entity-000632" type="person">Heinrich
+                Schenker</tei:rs></tei:persName></tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

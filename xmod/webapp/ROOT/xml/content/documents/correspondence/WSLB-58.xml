@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2394" sdoID="WSLB-58">WSLB 58</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+      <tei:handNote xml:id="unk" scope="minor">unknown hand (UE)</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2005, 2020</tei:resp>
+      <tei:resp>Translation, 2005, 2020</tei:resp>
+      <tei:resp>XML Encoding, 2020</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-04" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002700">Hertzka ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002701">UE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002702">UE ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+      <dc:title>Handwritten letter from Schenker to Hertzka (UE), dated April 12, 1910</dc:title>
+
+      <dcterms:created>1910-04-12T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2020-07-02</dcterms:dateSubmitted>
+      <dc:description>Schenker thanks Hertzka for his help</dc:description>
+      <dc:subject>Hilfeleistung; assistance</dc:subject>
+
+      <marcrel:correspondent key="entity-000632">Heinrich Schenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000356">Emil Hertzka</marcrel:recipient>
+      <marcrel:recipient key="entity-002408">Universal Edition</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:byline><tei:note type="editorial" place="inline">UE receipt:</tei:note>
+          <tei:handShift new="#stamp"/><tei:date when="1910-04-13">13. APR.
+          1910</tei:date></tei:byline><tei:lb/>
+        <tei:byline><tei:note type="editorial" place="inline">UE accession #:</tei:note>
+          <tei:handShift new="#stamp"/>0006</tei:byline>
+        <tei:salute rend="indent-10"><tei:handShift new="#HS"/>Sehr geehrter Herr <tei:rs
+            type="person" key="entity-000356">Direktor</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p>In Eile meinen herzlichsten Dank für Ihre Hilfeleistung!<tei:note xml:id="r0001-fn01"
+          type="editorial" place="foot">See <tei:ref target="correspondence" cRef="OC-52-49">OC
+            52/49</tei:ref>, April 11, 1910.</tei:note></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">Mit besten Grüßen</tei:salute>
+        <tei:salute rend="indent-60">I<tei:supplied reason="omission">h</tei:supplied>r
+            ergeb<tei:supplied reason="omission">ener</tei:supplied></tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:rs key="entity-000632" type="person"><tei:hi rend="lateinschr">H
+            Schenker</tei:hi></tei:rs>
+        </tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1910-04-12">12. 4. 10.</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:byline><tei:note type="editorial" place="inline">UE receipt:</tei:note>
+          <tei:handShift new="#stamp"/><tei:date when="1910-04-13">13. APR.
+          1910</tei:date></tei:byline><tei:lb/>
+        <tei:byline><tei:note type="editorial" place="inline">UE accession #:</tei:note>
+          <tei:handShift new="#stamp"/>0006</tei:byline>
+        <tei:salute rend="indent-10"><tei:handShift new="#HS"/>Dear <tei:rs type="person"
+            key="entity-000356">Director</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>In haste, my warmest thanks for your assistance.<tei:ptr corresp="#r0001-fn01"
+          type="footnote"/></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">With best wishes,</tei:salute>
+        <tei:salute rend="indent-70">Your devoted</tei:salute>
+        <tei:signed rend="indent-70">
+          <tei:rs key="entity-000632" type="person">H. Schenker</tei:rs>
+        </tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1910-04-12">April 12, 1910</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

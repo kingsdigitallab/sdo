@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1804" sdoID="WSLB-36">WSLB 36</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="unk" scope="minor">unknown hand</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2005, 2016</tei:resp>
+      <tei:resp>Translation, 2005, 2016</tei:resp>
+      <tei:resp>XML Encoding, 2016</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-01" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002700">Hertzka ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002701">UE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002702">UE ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+      <dc:title>Handwritten letter from Schenker to Hertzka (UE), January 29, 1909</dc:title>
+
+      <dcterms:created>1909-01-29T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2016-08-25</dcterms:dateSubmitted>
+      <dc:description>Schenker requests two copies of his Instrumenten-Tabelle, one for Alphons
+        Rothschild.</dc:description>
+      <dc:subject>Exemplar; copy; cadeau; present; Geburtstag; birthday; binden; to bind; Erbe;
+        heir; Instrumentensammlung; instrument collection</dc:subject>
+
+
+
+
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000356">Hertzka</marcrel:recipient>
+      <marcrel:recipient key="entity-002408">UE</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+
+      <tei:opener>
+        <tei:note type="editorial" place="inline">UE: date stamp with pencil annotation:</tei:note><tei:lb/>
+        <tei:byline>Eingegangen ......<tei:lb/>Beantwortet <tei:handShift new="#unk"/><tei:date
+            when="1909-01-30">30. I. 09</tei:date></tei:byline><tei:lb/>
+        <tei:note type="editorial" place="inline">UE stamp:</tei:note><tei:lb/>
+        <tei:byline><tei:handShift new="#stamp"/>0621</tei:byline><tei:lb/>
+        <tei:salute rend="indent-10"><tei:handShift new="#HS"/>Sehr geehrter Herr <tei:rs
+            type="person" key="entity-000356">Direktor</tei:rs>!<tei:note xml:id="r0001-fn01"
+            type="editorial" place="foot">Writing of this letter is not recorded in Schenker's
+            diary.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Ich nehme an, daß Sie bereits zu Hause, u. bitte Sie, falls <tei:rs key="entity-001729"
+          type="work">Niloffs <tei:title>Tabelle</tei:title></tei:rs>, die neu redigierte, bereits
+        erschienen, mir davon 2 Exemplare zuschicken zu lassen: eines für mich selbst, u. ein
+        zweites als Geburtstags<tei:foreign xml:lang="fre"><tei:hi rend="lateinschr"
+          >cadeau</tei:hi></tei:foreign> für meinen ehemaligen langjährigen Schüler <tei:hi
+          rend="lateinschr">H. Baron <tei:rs key="entity-000743" type="person">Alphons v.
+            Rothschild</tei:rs></tei:hi>. Des letzteren Geburtstag ist Mitte Februar<tei:note
+          xml:id="r0001-fn02" type="editorial" place="foot">Alphons's birthday was February
+          15.</tei:note> u. da möchte ich wohl noch Zeit gewinnen, das ihm zugedachte Exemplar schön
+        binden zu lassen; besitzt er doch als Erbe des Baron <tei:hi rend="lateinschr"
+          >Nathaniel</tei:hi><tei:note xml:id="r0001-fn03" type="editorial" place="foot">The lineage
+          of Alphons is: Mayer Amschel (1744–1812) — Salomon Mayer (1774–1855) — Anselm Salomon
+          (1803–74) — Solomon Albert (1844–1911) — Alphons Mayer. Nathaniel Mayer (1836–1905) (an
+          uncle?) had no offspring, hence presumably Alphons was his heir.</tei:note> eine der
+        merkwürdigsten u. schönsten Instrumentensammlungen in <tei:rs key="entity-002506"
+          type="place"><tei:country>Österreich</tei:country></tei:rs>.<tei:note xml:id="r0001-fn04"
+          type="editorial" place="foot">For an inventory of Alphons's collection comprising 3,444
+          items in all, see <tei:bibl><tei:author>Sophie Lillie</tei:author>, <tei:title level="m"
+              >Was einmal war: Handbuch der enteigneten Kunstsammlungen Wiens</tei:title> (Vienna:
+            Czernin, 2003)</tei:bibl>. His instruments are listed on pp. 1384‒1409. One wonders
+          whether Schenker was ever able to view the collection, and if so whether it had any impact
+          on his interest in reviving the use of Baroque and Classical instruments in live
+          performance.</tei:note></tei:p>
+
+      <tei:p rend="first">Indem ich Ihnen für Ihre Liebenswürdigkeit im Vorhinein<tei:note
+          xml:id="r0001-fn05" type="editorial" place="foot">"im vorhinein": Austrian
+          usage.</tei:note> aufs herzlichste danke zeichne</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50">I<tei:supplied reason="omission">h</tei:supplied>r
+          hochachtungsvoll ergebener</tei:salute>
+        <tei:signed rend="indent-50">
+          <tei:rs key="entity-000632" type="person"><tei:hi rend="lateinschr">H
+            Schenker</tei:hi></tei:rs>
+        </tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1909-01-29">29. I. 09</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:note type="editorial" place="inline">UE: date stamp with pencil annotation:</tei:note><tei:lb/>
+        <tei:byline>Received: ......<tei:lb/>Answered: <tei:handShift new="#unk"/><tei:date
+            when="1909-01-30">30. I. 09</tei:date></tei:byline><tei:lb/>
+        <tei:note type="editorial" place="inline">UE stamp:</tei:note><tei:lb/>
+        <tei:byline><tei:handShift new="#stamp"/>0621</tei:byline><tei:lb/>
+        <tei:salute rend="indent-10"><tei:handShift new="#HS"/>Dear <tei:rs type="person"
+            key="entity-000356">Director</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"
+          /></tei:salute>
+      </tei:opener>
+
+      <tei:p>I assume that you are back by now, and should like to ask if, in the event that <tei:rs
+          key="entity-001729" type="work">Niloff's <tei:title level="m">Table</tei:title></tei:rs>,
+        the new edition, is already out, you would arrange to have two copies of it sent to me: one
+        for myself, and a second as a birthday present for my erstwhile student of many years'
+        standing, Baron <tei:rs key="entity-000743" type="person">Alphons von Rothschild</tei:rs>.
+        The latter's birthday is mid-February,<tei:ptr corresp="#r0001-fn02" type="footnote"/> and I
+        should like to have plenty of time to have the intended copy elegantly bound. As heir to
+        Baron Nathaniel,<tei:ptr corresp="#r0001-fn03" type="footnote"/> he possesses one of the
+        most remarkable and most beautiful collections of instruments in <tei:rs key="entity-002506"
+          type="place"><tei:country>Austria</tei:country></tei:rs>.<tei:ptr corresp="#r0001-fn04"
+          type="footnote"/></tei:p>
+
+      <tei:p rend="first">In thanking you most cordially in advance<tei:ptr corresp="#r0001-fn05"
+          type="footnote"/> for your kindness, I remain</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50">With kind regards, your devoted</tei:salute>
+        <tei:signed rend="indent-50">
+          <tei:rs key="entity-000632" type="person">H. Schenker</tei:rs>
+        </tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1909-01-29">January 29, 1909</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="1657" sdoID="OJ-15-12_7">OJ 15/12, [7]</sdo:correspondence>
+  </sdo:source>
+  <tei:handNotes>
+   <tei:handNote xml:id="JW" scope="minor">Josef Weinberger's hand</tei:handNote>
+   <tei:handNote xml:id="JWsten" scope="major">stenographer for Josef Weinberger</tei:handNote>
+   <tei:handNote xml:id="printed" scope="major">printed</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>Transcription, 2004, 2016</tei:resp>
+   <tei:resp>Translation, 2004, 20016</tei:resp>
+   <tei:resp>XML Encoding, 2016</tei:resp>
+
+  </tei:respStmt>
+  <tei:respStmt xml:id="BOT">
+   <tei:name>Automated Script</tei:name>
+   <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2010-02-07" who="#IB">revision of XML code</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-006163">WeinbergerCo ~
+    HSchenker</tei:rs>
+   <tei:rs role="correspondence" type="correspondence" key="entity-006164">WeinbergerJ ~
+    HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+   <dc:title>Handwritten letter from Weinberger to Schenker, dated November 17, 1903</dc:title>
+
+   <dcterms:created>1903-11-17T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2016-02-13</dcterms:dateSubmitted>
+   <dc:description>Weinberger asks for a report on the performance of the Syrian Dances, and for the
+    return of the orchestral material.</dc:description>
+   <dc:subject>Aufführung; performance; Erfolg; success; Zeitungskritik; newspaper review;
+    Orchestermaterial; orchestral materials; Stimmen; orchestral parts; Correspondenz;
+    correspondence</dc:subject>
+
+   <marcrel:correspondent key="entity-006149">WeinbergerCo</marcrel:correspondent>
+   <marcrel:correspondent key="entity-000946">WeinbergerJ</marcrel:correspondent>
+   <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+  </sdo:itemDesc>
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:address>
+     <tei:addrLine>
+      <tei:supplied reason="format">engraved letterhead, lettering diagonally and horizontally
+       arranged on a background of foliage with a lyre</tei:supplied>
+     </tei:addrLine>
+     <tei:lb/>
+     <tei:addrLine><tei:handShift new="#printed"/>Josef Weinberger</tei:addrLine>
+     <tei:addrLine>Bühnen-Verlag <tei:supplied>—</tei:supplied>
+      Musikalien-Verlags-Handlung</tei:addrLine>
+     <tei:addrLine>Wien I. Maximilianstr. 11<tei:note xml:id="r0001-fn01" type="editorial"
+       place="foot">The Weinberger company had moved from its Kohlmarkt 8 address to larger premises
+       at Maximilianstraße at the turn of the century, and this became the address also of Universal
+       Edition from its founding in 1901, the two companies sharing the telephone number
+       3364.</tei:note>
+      <tei:supplied>—</tei:supplied> Leipzig Querstrasse N<tei:hi rend="supralinear">o.</tei:hi>
+      13</tei:addrLine>
+     <tei:addrLine>Paris 78, Rue d'Anjou.</tei:addrLine>
+     <tei:addrLine>TELEFON N<tei:hi rend="supralinear">o.</tei:hi> 3364.</tei:addrLine>
+    </tei:address>
+    <tei:dateline rend="indent-50">
+     <tei:placeName>Wien/Leipzig am</tei:placeName>
+     <tei:handShift new="#JWsten"/>
+     <tei:date when="1903-11-17">17. November 1903</tei:date>
+    </tei:dateline><tei:lb/>
+    <tei:address>
+     <tei:addrLine rend="indent-50">
+      <tei:persName>Wolgeboren Herrn Professor D<tei:hi rend="supralinear">r.</tei:hi> H. <tei:hi
+        rend="lateinschr">Schenker</tei:hi></tei:persName>
+     </tei:addrLine>
+     <tei:addrLine rend="indent-80">
+      <tei:hi rend="underline"><tei:hi rend="lateinschr">Wien</tei:hi></tei:hi>
+     </tei:addrLine>
+    </tei:address>
+    <tei:salute rend="indent-50">Sehr geehrter Herr <tei:rs type="person" key="entity-000632"
+      >Professor</tei:rs>!</tei:salute>
+   </tei:opener>
+
+   <tei:p rend="first">Nachdem die Aufführung Ihrer „<tei:rs key="entity-001664" type="work"
+      ><tei:title level="m">Syrischen Tänze</tei:title></tei:rs>“ bei <tei:rs key="entity-000116"
+     type="person"><tei:hi rend="lateinschr">Busoni</tei:hi></tei:rs> bereits stattgefunden hat,
+    möchte ich Sie bitten mir über den Erfolg freundlichst zu berichten und mir eventuell
+    Zeitungskritiken zukommen zu lassen.</tei:p>
+
+   <tei:p rend="first">Da ich den Versuch machen will noch eine anderweitige Aufführung der <tei:rs
+     key="entity-001664" type="work"><tei:title level="m">Tänze</tei:title></tei:rs> zu veranlassen
+    und <tei:hi rend="lateinschr">Herr <tei:rs key="entity-000116" type="person"
+     >Busoni</tei:rs></tei:hi> das <tei:hi rend="lateinschr">Orchestermaterial</tei:hi> derselben
+     <tei:pb n="2"/> nun nicht mehr benötigt, würden Sie mich zu Dank verpflichten, wenn Sie die
+    Stimmen von ihm zurückverbringen und mir baldigst zukommen lassen könnten.</tei:p>
+
+   <tei:p rend="first">Nachdem die seinerzeitige <tei:hi rend="lateinschr">Correspondenz</tei:hi> in
+    dieser Sache ausschließlich durch Sie erfolgte, ist es wol das Richtigste, wenn das <tei:hi
+     rend="lateinschr">Material</tei:hi> von <tei:hi rend="lateinschr">Herrn <tei:rs
+      key="entity-000116" type="person">Busoni</tei:rs></tei:hi> durch Sie zurückverlangt
+    wird.</tei:p>
+
+   <tei:p rend="first">Ihrer gesch. Rückäußerung mit Interesse entgegensehend, zeichne ich</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-40">hochachtungsvoll</tei:salute>
+    <tei:signed rend="indent-300"><tei:handShift new="#JW"/><tei:rs key="entity-000946"
+      type="person">Josef Weinberger</tei:rs></tei:signed>
+   </tei:closer>
+
+  </tei:div>
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:address>
+     <tei:addrLine>
+      <tei:supplied reason="format">engraved letterhead, lettering diagonally and horizontally
+       arranged on a background of foliage with a lyre</tei:supplied>
+     </tei:addrLine>
+     <tei:lb/>
+     <tei:addrLine><tei:handShift new="#printed"/>Josef Weinberger</tei:addrLine>
+     <tei:addrLine>Theatrical Publisher <tei:supplied>—</tei:supplied> Publisher and Hirer of Sheet
+      Music</tei:addrLine>
+     <tei:addrLine>Vienna I, Maximilianstrasse 11<tei:ptr corresp="#r0001-fn01" type="footnote"/>
+      <tei:supplied>—</tei:supplied> Leipzig Querstrasse N<tei:hi rend="supralinear">o.</tei:hi>
+      13</tei:addrLine>
+     <tei:addrLine>Paris 78, Rue d'Anjou.</tei:addrLine>
+     <tei:addrLine>TELEPHONE No. 3364</tei:addrLine>
+    </tei:address>
+    <tei:dateline rend="indent-50">
+     <tei:placeName>Vienna/Leipzig </tei:placeName>
+     <tei:handShift new="#JWsten"/>
+     <tei:date when="1903-11-17">November 17, 1903</tei:date>
+    </tei:dateline><tei:lb/>
+    <tei:address>
+     <tei:addrLine rend="indent-50">
+      <tei:persName>Professor H. Schenker, Esq.</tei:persName>
+     </tei:addrLine>
+     <tei:addrLine rend="indent-80">
+      <tei:hi rend="underline">Vienna</tei:hi>
+     </tei:addrLine>
+    </tei:address>
+    <tei:salute rend="indent-50">Dear <tei:rs type="person" key="entity-000632"
+     >Professor</tei:rs>,</tei:salute>
+   </tei:opener>
+
+   <tei:p rend="first">Now that the performance of your <tei:rs key="entity-001664" type="work"
+      ><tei:title level="m">Syrian Dances</tei:title></tei:rs> by <tei:rs key="entity-000116"
+     type="person">Busoni</tei:rs> has taken place, I should like to ask you very kindly to report
+    to me on how it went and in due course to let me have newspaper reviews.</tei:p>
+
+   <tei:p rend="first">Since I shall be attempting to set up a further performance of the <tei:rs
+     key="entity-001664" type="work"><tei:title level="m">Dances</tei:title></tei:rs>, and Mr.
+     <tei:rs key="entity-000116" type="person">Busoni</tei:rs>
+    <tei:pb n="2"/> now no longer needs the orchestral material for this work, I should be greatly
+    obliged if you could get the parts back from him and have them sent to me at the earliest
+    opportunity.</tei:p>
+
+   <tei:p rend="first">As all correspondence on this matter was effected through you, it seems right
+    and proper that it should be you who reclaims the material from Mr. <tei:rs key="entity-000116"
+     type="person">Busoni</tei:rs>.</tei:p>
+
+   <tei:p rend="first">Looking forward with interest to your esteemed reply, I remain,</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-40">With kind regards,</tei:salute>
+    <tei:signed rend="indent-30"><tei:handShift new="#JW"/><tei:rs key="entity-000946" type="person"
+      >Josef Weinberger</tei:rs></tei:signed>
+   </tei:closer>
+
+  </tei:div>
+ </sdo:record>
+</sdo:recordCollection>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2407" sdoID="WSLB-73">WSLB 73</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+      <tei:handNote xml:id="unk" scope="minor">unknown hand (UE)</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2006, 2020</tei:resp>
+      <tei:resp>Translation, 2006, 2020</tei:resp>
+      <tei:resp>XML Encoding, 2020</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-04" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002700">Hertzka ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002701">UE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002702">UE ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+      <dc:title>Handwritten letter from Schenker to Hertzka (UE), dated December 17, 1910</dc:title>
+
+      <dcterms:created>1910-12-17T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2020-07-08</dcterms:dateSubmitted>
+      <dc:description>Schenker has received gratitude from abroad for his edition of the Chromatic
+        Fantasy &amp; Fugue, and asks for a copy to be sent to Otto Vrieslander. — He accuses the
+        Viennese of hostility and intellectual theft.</dc:description>
+      <dc:subject>Ausland; abroad; Dankbarkeitsbezeugungen; attestations of gratitude; Exemplar;
+        copy; Musiker; musician; Taktik; tactic; stehlen; to steal; lernen; to learn</dc:subject>
+
+      <marcrel:correspondent key="entity-000632">Heinrich Schenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000356">Emil Hertzka</marcrel:recipient>
+      <marcrel:recipient key="entity-002408">Universal Edition</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:byline><tei:note type="editorial" place="inline">UE receipt:</tei:note>
+          <tei:handShift new="#stamp"/><tei:date when="1910-12-17">17. Dez.
+          1910</tei:date></tei:byline><tei:lb/>
+        <tei:byline><tei:note type="editorial" place="inline">UE accession #:</tei:note>
+          <tei:handShift new="#unk"/>0017</tei:byline>
+        <tei:salute rend="indent-10"><tei:handShift new="#HS"/>Sehr geehrter Herr <tei:rs
+            type="person" key="entity-000356">Direktor</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p>Aus dem Ausland kommen mir schmeichelhafte Dankbarkeitsbezeugungen für die „<tei:rs
+          type="work" key="entity-001730"><tei:title><tei:hi rend="lateinschr">chromatische
+              Fantasie</tei:hi></tei:title></tei:rs>“<tei:note xml:id="r0001-fn01" type="editorial"
+          place="foot">"chromatische Fantasie": underlined in crayon, probably by a UE
+          employee.</tei:note> zu. Bei Gelegenheit zeige ich Ihnen die Dingen. Eben darum habe ich
+        eine Bitte: schenken Sie ein Exemplar an einen Musiker <tei:rs type="person"
+          key="entity-000922"><tei:hi rend="lateinschr underline">Otto
+        Vrieslander</tei:hi></tei:rs>, in <tei:hi rend="lateinschr"><tei:hi rend="underline"
+            >Leutstätten</tei:hi> bei <tei:rs type="place" key="entity-002286"><tei:hi
+              rend="underline">München</tei:hi></tei:rs></tei:hi>. Es wird <tei:unclear
+          reason="reading">Zeichen</tei:unclear> tragen.</tei:p>
+
+      <tei:ab><tei:note type="editorial" place="inline">Overwritten large across para. 1:</tei:note>
+        <tei:handShift new="#unk"/>R</tei:ab>
+
+      <tei:p>Hier in <tei:hi rend="lateinschr">Wien</tei:hi> ist man vielfach beleidigt. Ich höre
+        diese Botschaft <tei:hi rend="underline">mit Vergnügen</tei:hi>, denn noch fehlt mir erst
+        der Dank seitens der Aufgebrachten<tei:note xml:id="r0001-fn02" type="editorial"
+          place="foot">In this startling remark, Schenker is not necessarily referring directly to
+          his own private pupils, but to those – in Vienna or Austria – who have benefited from his
+          publications to date.</tei:note> dafür, was sie völlig Neues von mir zum ersten Mal
+        gelernt u. – gestohlen haben. Die ewig alte Taktik: stehlen u. lernen, u. gleichzeitig über
+        denjenigen herfallen, von dem man es hat, nur um die Quelle vor der Öffentlichkeit zu
+        verbergen, aus <tei:pb n="2"/> der man schöpft. Doch es wird ihnen nichts nützen. Ich war,
+        bin u. bleibe der Stärkere.</tei:p>
+
+      <tei:p rend="first">Besten Dank für Ihre Mühe im Vorhernein!</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-30">Mit ergebenen Grüßen</tei:salute>
+        <tei:salute rend="indent-60">I<tei:supplied reason="omission">h</tei:supplied>r </tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:rs key="entity-000632" type="person"><tei:hi rend="lateinschr">H
+            Schenker</tei:hi></tei:rs>
+        </tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1910-12-17">17. Dez. 1910</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:byline><tei:note type="editorial" place="inline">UE receipt:</tei:note>
+          <tei:handShift new="#stamp"/><tei:date when="1910-12-17">17. Dez.
+          1910</tei:date></tei:byline><tei:lb/>
+        <tei:byline><tei:note type="editorial" place="inline">UE accession #:</tei:note>
+          <tei:handShift new="#unk"/>0017</tei:byline>
+        <tei:salute rend="indent-10"><tei:handShift new="#HS"/>Dear <tei:rs type="person"
+            key="entity-000356">Director</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>I have been receiving flattering attestations of gratitude from abroad for the <tei:rs
+          type="work" key="entity-001730"><tei:title level="m">Chromatic Fantasy &amp;
+            Fugue</tei:title></tei:rs>.<tei:ptr corresp="#r0001-fn01" type="footnote"/> When a
+        suitable occasion arises, I will show them to you. For that very reason, I have a request:
+        send a copy to a musician, <tei:rs type="person" key="entity-000922"><tei:hi
+            rend="underline">Otto Vrieslander</tei:hi></tei:rs> in <tei:hi rend="underline"
+          >Leutstätten</tei:hi> near <tei:rs type="place" key="entity-002286"><tei:hi
+            rend="underline">Munich</tei:hi></tei:rs>. It will produce <tei:unclear
+          reason="original_unclear">results</tei:unclear>. </tei:p>
+
+      <tei:ab><tei:note type="editorial" place="inline">Overwritten large across para. 1:</tei:note>
+        <tei:handShift new="#unk"/>R</tei:ab>
+
+      <tei:p>Here in Vienna, you get insulted time and again. I hear this message <tei:hi
+          rend="underline">with pleasure</tei:hi>, for I get no thanks whatsoever from those whom I
+        have reared,<tei:ptr corresp="#r0001-fn02" type="footnote"/> for the totally new things that
+        they have learned first from me and ‒ stolen. The age-old tactic: steal and appropriate, and
+        simultaneously launch an attack on the person from whom you have it, but being careful to
+        conceal from the public the source <tei:pb n="2"/> from which you are working. Yet it will
+        avail them nothing. I was, am, and shall remain the stronger one.</tei:p>
+
+      <tei:p rend="first">Many thanks in advance for your trouble!</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-30">With devoted greetings,</tei:salute>
+        <tei:salute rend="indent-60">Your</tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:rs key="entity-000632" type="person">H. Schenker</tei:rs>
+        </tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1910-12-17">December 17, 1910</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

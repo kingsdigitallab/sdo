@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1351" sdoID="OJ-11-42_6">OJ 11/42, [6]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="MH" scope="major">Maximilian Harden's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WP">
+      <tei:persName>William Pastille</tei:persName>
+      <tei:resp>Transcription, 2006</tei:resp>
+      <tei:resp>Translation, 2006</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2014</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-26" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005539">HardenM ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005540">ZukunftD ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Maximilian Harden to Schenker, dated October 19,
+        1893</dc:title>
+      <dcterms:created>1893-10-19T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2014-12-05</dcterms:dateSubmitted>
+      <dc:description>Harden thanks Schenker for sending an [unidentified] article with a lighter
+        tone than some of Schenker's other work.</dc:description>
+      <dc:subject>Dank; thank you; Artikel; article</dc:subject>
+
+
+
+      <marcrel:correspondent key="entity-000333">Maximilian Harden</marcrel:correspondent>
+      <marcrel:correspondent key="entity-002566">Die Zukunft</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/>Deutsche
+          Reichspost</tei:fw>
+        <tei:fw type="header" rend="center">Postkarte</tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>An: <tei:handShift new="#MH"/>Herrn Dr. <tei:hi rend="lateinschr">H.
+                Schenker</tei:hi></tei:addrLine>
+            <tei:addrLine rend="indent-10"><tei:handShift new="#printed"/>in <tei:handShift
+                new="#MH"/><tei:hi rend="lateinschr">Wien</tei:hi> III</tei:addrLine>
+            <tei:addrLine rend="indent-10"><tei:handShift new="#printed"/>Wohnung <tei:handShift
+                new="#MH"/>Traungasse 1</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| BERLIN S. W. | a | 46 | 20 10 | 93 | 9-10V. ||</tei:fw>
+          <tei:fw type="postmark">|| WIEN 3/1 | f 40 | 21.10.93 | 10-11V ||</tei:fw>
+          <tei:fw type="postmark">|| || WIEN 3/3 | 49 | BESTELLT | 21.10.93, 1N. ||</tei:fw>
+          <tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+        </tei:fw>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>DIE ZUKUNFT.</tei:addrLine>
+          <tei:addrLine>HERAUSGEBER: MAXIMILIAN HARDEN.</tei:addrLine>
+          <tei:addrLine rend="indent-70">BERLIN W. 9, <tei:handShift new="#MH"/><tei:date
+              when="1893-10-19">19. X <tei:handShift new="#printed"/><tei:supplied reason="clarity"
+                >18</tei:supplied>9<tei:handShift new="#MH"/>3</tei:date></tei:addrLine>
+          <tei:addrLine rend="indent-70"><tei:handShift new="#printed"/>27 KÖTHENER
+            STRASSE.</tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:salute><tei:handShift new="#MH"/>Sehr geehrter <tei:rs key="entity-000632"
+            type="person">Herr</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>besten Dank für den sehr schönen Artikel,<tei:note xml:id="r0001-fn01" type="editorial"
+          place="foot">Which article in unclear.</tei:note> der auch nicht so „gedunkelt“ war wie
+        mancher Anderen—nichts für Ungut! </tei:p>
+
+      <tei:p><tei:hi rend="lateinschr">C. G. Naumann</tei:hi> in <tei:rs key="entity-002479"
+          type="place">Leipzig</tei:rs>, <tei:rs key="entity-000631" type="person"
+          >Nietzsche</tei:rs>s Verleger.<tei:note xml:id="r0001-fn02" type="editorial" place="foot"
+          >The reason for this reference is unclear.</tei:note></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">Mit herzlichen Grüßen,</tei:salute>
+        <tei:salute rend="indent-70">Immer Ihr</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs key="entity-000333" type="person">
+          Harden</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/>German Imperial
+          Post</tei:fw>
+        <tei:fw type="header" rend="center">Postcard</tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>To: <tei:handShift new="#MH"/>Dr. H. Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-10"><tei:handShift new="#printed"/>in: <tei:handShift
+                new="#MH"/>Vienna III</tei:addrLine>
+            <tei:addrLine rend="indent-10"><tei:handShift new="#printed"/>Address: <tei:handShift
+                new="#MH"/>Traungasse 1</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| BERLIN S. W. | a | 46 | 20 10 | 93 | 9-10 P.M. ||</tei:fw>
+          <tei:fw type="postmark">|| VIENNA 3/1 | f 40 | 21.10.93 | 10-11 A.M. ||</tei:fw>
+          <tei:fw type="postmark">|| VIENNA 3/3 | 49 | DELIVERED | 21.10.93, 1 P.M. ||</tei:fw>
+          <tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+        </tei:fw>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>DIE ZUKUNFT</tei:addrLine>
+          <tei:addrLine>EDITOR: MAXIMILIAN HARDEN</tei:addrLine>
+          <tei:addrLine rend="indent-70">BERLIN W. 9, <tei:handShift new="#MH"/><tei:date
+              when="1893-10-19">October 19, <tei:handShift new="#printed"/><tei:supplied
+                reason="clarity">18</tei:supplied>9<tei:handShift new="#MH"
+            />3</tei:date></tei:addrLine>
+          <tei:addrLine rend="indent-70"><tei:handShift new="#printed"/>27 KÖTHENER
+            STRASSE</tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:salute><tei:handShift new="#MH"/>Dear <tei:rs key="entity-000632" type="person"
+            >Sir</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>Sincere thanks for the very fine article,<tei:ptr corresp="#r0001-fn01" type="footnote"
+        /> which is also not so "gloomy" as some others ‒ no offense!</tei:p>
+
+      <tei:p>C. G. Naumann in <tei:rs key="entity-002479" type="place">Leipzig</tei:rs>, <tei:rs
+          key="entity-000631" type="person">Nietzsche</tei:rs>'s publisher.<tei:ptr
+          corresp="#r0001-fn02" type="footnote"/></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50">With cordial greetings,</tei:salute>
+        <tei:salute rend="indent-70">Yours ever,</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs key="entity-000333" type="person">
+          Harden</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

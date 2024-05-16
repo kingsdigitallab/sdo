@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1725" sdoID="WSLB-10">WSLB 10</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="unk" scope="minor">unknown hand</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamped</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2004, 2016</tei:resp>
+      <tei:resp>Translation, 2004, 2016</tei:resp>
+      <tei:resp>XML Encoding, 2016</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-01" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002700">Hertzka ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002701">UE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002702">UE ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+      <dc:title>Handwritten letter from Schenker to Hertzka (UE), dated June 26, 1908</dc:title>
+
+      <dcterms:created>1908-06-26T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2016-03-15</dcterms:dateSubmitted>
+      <dc:description>Schenker accepts an offer and asks for a contract for the Instrumentation
+        Table.</dc:description>
+      <dc:subject>Urheberfragen; copyright questions; Auflage; edition; prekär; precarious;
+        Exemplar; copy; Angebot; offer; Revision; Entlohnung; remuneration; Arbeit; work; Betrag;
+        sum</dc:subject>
+
+
+
+
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000356">Hertzka</marcrel:recipient>
+      <marcrel:recipient key="entity-002408">UE</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:note type="editorial" place="inline">UE: date stamp:</tei:note><tei:lb/>
+        <tei:byline><tei:handShift new="#stamp"/>Eingegangen ......<tei:lb/>Beantwortet <tei:note
+            type="editorial" place="inline">in pencil:</tei:note><tei:handShift new="#unk"
+          />30./VI.08. Popper</tei:byline>
+        <tei:salute rend="indent-10"><tei:handShift new="#HS"/>Sehr geehrter Herr <tei:rs
+            type="person" key="entity-000356">Direktor</tei:rs>!<tei:note xml:id="r0001-fn01"
+            type="editorial" place="foot">Writing of this letter is not recorded in Schenker's
+            diary.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Einige Freunde, die in literarischen Urheberfragen versiert sind, u. den Brief der
+          „<tei:rs key="entity-002408" type="organization"><tei:hi rend="lateinschr"
+          >U.Ed.</tei:hi></tei:rs>“ vom J/.1902<tei:note xml:id="r0001-fn02" type="editorial"
+          place="foot"><tei:ref type="correspondence" cRef="OC-52-380">OC 52/380</tei:ref>, July 15,
+          1902.</tei:note> an mich betreffs der „<tei:rs key="entity-001721" type="work"
+              ><tei:title><tei:hi rend="lateinschr">Ornamentik</tei:hi></tei:title></tei:rs>“
+        eingesehen haben, sagen mir soeben, es sei merkwürdig, daß in jenem Brief nichts von
+        Auflagen, von der Höhe der Exemplaren u. dgl. enthalten sei, daß ich aber gleichwohl heute
+        auf Gnade u. Ungnade der „<tei:hi rend="lateinschr">U.E.</tei:hi>“ angewiesen wäre, da ich
+        zustimmend beantwortet habe. In dieser <tei:hi rend="lateinschr">prekären
+        Situation</tei:hi>, in die<tei:del rend="overstrike">s</tei:del> ich nur im Vertrauen auf
+        die Führer der „<tei:hi rend="lateinschr">U.E.</tei:hi>“ von <tei:pb n="2"/> damals, geraten
+        bin, <tei:hi rend="lateinschr">acceptiere</tei:hi> ich Ihr Angebot von gestern<tei:note
+          xml:id="r0001-fn03" type="editorial" place="foot">Evidently a meeting had taken place on
+          June 25 (or possibly a written communication sent and received that has not survived),
+          containing an offer of 150 Florins as the honorarium for Schenker's <tei:rs
+            key="entity-001729" type="work"><tei:title level="m"
+              >Instrumentations-Tabelle</tei:title></tei:rs>.</tei:note> von 150 fl., als
+        zustandegekommen aus <tei:cit>
+          <tei:q>50 fl. <tei:hi rend="lateinschr">Revision</tei:hi> u. <tei:lb/>100 <tei:supplied
+              reason="ditto">fl.</tei:supplied> Entlohnung für die neue Arbeit der 30 Seiten, u.
+            mancher mit <tei:hi rend="lateinschr">Petit<tei:del rend="overstrike"
+              >e</tei:del></tei:hi>druck!</tei:q>
+        </tei:cit>
+      </tei:p>
+
+      <tei:p>Wenn ich noch eine Bitte habe, so ist es diese: Wollen Sie mir obigen Betrag gefälligst
+        vor dem <tei:date when="1908-07-01"><tei:hi rend="lateinschr">1. Juli</tei:hi></tei:date>
+        zuschicken lassen, da ich eben in nächster Woche verreise.<tei:note xml:id="r0001-fn04"
+          type="editorial" place="foot">He left for <tei:rs key="entity-002279" type="place">St.
+            Anton am Arlberg</tei:rs>, Tyrol, between July 1 and July 22 for the summer vacation.
+          Schenker's diary (OJ 1/7, p. 89c) records beneath the entry for June 30: "Sommer in Sankt
+          Anton <tei:supplied>/</tei:supplied> Frau J. K." ("Summer in St. Anton
+            <tei:supplied>/</tei:supplied> Mrs. J<tei:supplied reason="abbreviation"
+            >eanette</tei:supplied> K<tei:supplied reason="abbreviation"
+          >ornfeld</tei:supplied>").</tei:note></tei:p>
+
+      <tei:p><tei:pb n="3"/> Die Erfahung aber nötigt mich <tei:del rend="overstrike"
+        >aber</tei:del>, Sie zu bitten, daß Sie in Angelegenheit der <tei:rs key="entity-001729"
+          type="work"><tei:title><tei:hi rend="lateinschr">Tabelle</tei:hi></tei:title></tei:rs>
+        <tei:hi rend="underline">sobald Sie selbst Klarheit über der Sache gewonnen</tei:hi> haben
+        werden, irgend etwas <tei:hi rend="lateinschr">präziseres</tei:hi> schriftliches<tei:note
+          xml:id="r0001-fn05" type="editorial" place="foot">See <tei:ref type="correspondence"
+            cRef="OC-52-23">OC 52/23</tei:ref>, June 30, 1908, where Hertzka uses identical wording
+          in return.</tei:note> mir zur Verfügung stellen.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">Mit ausgez. Hochachtung</tei:salute>
+        <tei:salute rend="indent-50">Ihr ergb</tei:salute>
+        <tei:signed rend="indent-50">
+          <tei:rs key="entity-000632" type="person"><tei:hi rend="lateinschr">H
+            Schenker</tei:hi></tei:rs>
+        </tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1908-06-26">26. 6. 08</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:note type="editorial" place="inline">UE: date stamp:</tei:note><tei:lb/>
+        <tei:byline><tei:handShift new="#stamp"/>Received: ......<tei:lb/>Answered: <tei:note
+            type="editorial" place="inline">in pencil:</tei:note><tei:handShift new="#unk"/>June 30,
+          1908, Popper</tei:byline>
+        <tei:salute rend="indent-10"><tei:handShift new="#HS"/>Dear <tei:rs type="person"
+            key="entity-000356">Director</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"
+          /></tei:salute>
+      </tei:opener>
+
+      <tei:p>Some friends of mine who are versed in questions of literary copyright and have
+        examined the letter from <tei:rs key="entity-002408" type="organization">UE</tei:rs> to me
+        of 1902<tei:ptr corresp="#r0001-fn02" type="footnote"/> re: <tei:rs key="entity-001721"
+          type="work"><tei:title level="m">Ornamentation</tei:title></tei:rs> have just told me that
+        it is strange that there is nothing in that letter about editions, numbers of copies, and
+        such like, but that instead I am today at the mercy of UE because I have responded by
+        agreeing. In this precarious situation, into which I was drawn, trusting wholly in the
+        directors of UE of <tei:pb n="2"/> that time, I accept your offer of yesterday<tei:ptr
+          corresp="#r0001-fn03" type="footnote"/> of 150 Fl. as comprising: <tei:cit>
+          <tei:q>50 Florins revised edition (<tei:hi rend="italic">Revision</tei:hi>) and
+            <tei:lb/>100 <tei:supplied reason="ditto">Florins</tei:supplied> as remuneration for the
+            new work comprising 30 pages, much of it in small type!</tei:q>
+        </tei:cit>
+      </tei:p>
+
+      <tei:p>If I have one request, it is that you please kindly send me the above payment before
+          <tei:date when="1908-07-01">July 1</tei:date>, since I am on the point of leaving next
+          week.<tei:ptr corresp="#r0001-fn04" type="footnote"/></tei:p>
+
+      <tei:p><tei:pb n="3"/> However, experience makes it necessary for me to ask that with respect
+        to the <tei:rs key="entity-001729" type="work"><tei:title level="m"
+          >Table</tei:title></tei:rs> you provide me with something rather precise in
+          writing,<tei:ptr corresp="#r0001-fn05" type="footnote"/>
+        <tei:hi rend="underline">as soon as you yourself have clarified the matter</tei:hi>.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">With kind regards,</tei:salute>
+        <tei:salute rend="indent-50">Your devoted</tei:salute>
+        <tei:signed rend="indent-50">
+          <tei:rs key="entity-000632" type="person">H. Schenker</tei:rs>
+        </tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1908-06-26">June 26, 1908</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

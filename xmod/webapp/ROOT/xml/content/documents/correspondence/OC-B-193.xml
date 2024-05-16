@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1526" sdoID="OC-B-193">OC B/193</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="WA" scope="major">Wilhelm Altmann's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="stamped" scope="minor">stamp</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="NM">
+      <tei:persName>Nicholas Marston</tei:persName>
+      <tei:resp>Transcription, 2014</tei:resp>
+      <tei:resp>Translation, 2014</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2015</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-26" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005596">AltmannW ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005534">Preussische
+        Staatsbibliothek ~ HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Wilhelm Altmann to Schenker, postmarked August 3,
+        1926</dc:title>
+      <dcterms:created>1926-08-03T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2015-06-16</dcterms:dateSubmitted>
+      <dc:description>Altmann thanks Schenker for Meisterwerk I and describes his summer
+        travels.</dc:description>
+      <dc:subject>Spitze; peak; Anstrengung; exertion</dc:subject>
+
+
+      <marcrel:correspondent key="entity-000013">Wilhelm Altmann</marcrel:correspondent>
+      <marcrel:correspondent key="entity-003292">Preussische
+        Staatsbibliothek</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+            >Postkarte</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>Absender:</tei:addrLine>
+          </tei:address>
+          <tei:fw type="stamp"><tei:note type="editorial" place="inline">oval
+              stamp:</tei:note><tei:handShift new="#stamped"/>Prof. Dr. Wilh. Altmann |
+            Berlin-Friedenau | <tei:handShift new="#WA"/>3. 8. 26 | <tei:handShift new="#stamped"
+            />Sponholzstr. 53/54, Part. 1.</tei:fw><tei:lb/>
+        </tei:fw>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">An: </tei:supplied>
+            <tei:handShift new="#WA"/>Herrn Professor Dr. Heinrich Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-10"><tei:hi rend="underline">Galltür in
+            Tirol</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-10">(Paznauntal)</tei:addrLine>
+          <tei:lb/>
+        </tei:address>
+        <tei:fw type="postmark">|| BERLIN- | 3. 8. 26.8–9 N | FRIEDENAU 1 ||</tei:fw>
+        <tei:salute>Sehr verehrter Herr <tei:rs key="entity-000632" type="person"
+            >Professor</tei:rs>.<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt
+            of this letter is recorded in Schenker's diary at OJ 3/8, p. 2962, August 5, 1926: "Von
+            Prof. Altmann (K.): dankt für das Jahrbuch; habe den hohen Riffler bestiegen!" ("From
+            Professor Altmann (postcard): thanks [me] for the Yearbook; he has climbed the Hoher
+            Riffler!").</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Vielen Dank für die liebenswürdige Zusendung Ihres ,<tei:rs key="entity-001750"
+          type="work"><tei:title>Meisterwerk in der Musik</tei:title></tei:rs>’ mit dem Sie ja beim
+          <tei:rs key="entity-002627" type="organization">Drei Masken Verlag</tei:rs> gelandet sind.
+        Vor einigen Tagen stand ich auf der Spitze des Hohen Rifflers,<tei:note xml:id="r0001-fn02"
+          type="editorial" place="foot">The Hoher Riffler, part of the Zillertal Alps in the Tyrol,
+          stands at 3, 231 metres.</tei:note> bin aber wegen der Schneeverhältnisse nicht nach
+          Kappl<tei:note xml:id="r0001-fn03" type="editorial" place="foot">Kappl: a municipality
+          lying in the Paznaun Valley in the Landeck district of the Tyrol.</tei:note> abgestiegen
+        und hatte auch nicht mehr recht Zeit, um über <tei:milestone unit="folio" n="verso"/>
+          Ischgls<tei:note xml:id="r0001-fn04" type="editorial" place="foot">Ischgl: now a popular
+          skiing town in the Paznaun Valley.</tei:note> nach <tei:rs key="entity-002292"
+          type="place">Galtür</tei:rs> zu wenden. Hoffentlich im nächsten Jahr. Ich war vorwiegend
+        im Stubaithal.<tei:note xml:id="r0001-fn05" type="editorial" place="foot">Stubaital: central
+          valley of the Stubai Alps, running southwest from Schönberg im Stubaital, near
+          Innsbruck.</tei:note> Trotz mancher Anstrengung hat mir die Reise sehr gut getan. Leider
+        sitze ich bereits wieder sehr in der Arbeit. Bitte empfehlen Sie mich bestens Ihrer Frau
+          <tei:rs key="entity-000771" type="person">Gemahlin</tei:rs> und Ihrem Kreis, in dem wohl
+        Herr <tei:rs key="entity-000922" type="person">Vrieslander</tei:rs> nicht fehlt.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">Hoffentlich geht es Ihnen recht gut.</tei:salute>
+        <tei:salute rend="indent-10">Recht herzl. Grüsse</tei:salute>
+        <tei:salute rend="indent-70">Ihr</tei:salute>
+        <tei:signed rend="indent-60"><tei:rs key="entity-000013" type="person">W.
+          Altmann</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+            >Postcard</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>Sender:</tei:addrLine>
+          </tei:address>
+          <tei:fw type="stamp"><tei:note type="editorial" place="inline">oval
+              stamp:</tei:note><tei:handShift new="#stamped"/>Prof. Wilh. Altmann | Berlin-Friedenau
+            | <tei:handShift new="#WA"/>August 3, 1926 | <tei:handShift new="#stamped"
+            />Sponholzstraße 53/54, Ground floor 1</tei:fw><tei:lb/>
+        </tei:fw>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">To: </tei:supplied>
+            <tei:handShift new="#WA"/>Professor Heinrich Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-10"><tei:hi rend="underline">Galtür in the
+            Tyrol</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-10">(Paznaun Valley)</tei:addrLine>
+          <tei:lb/>
+        </tei:address>
+        <tei:fw type="postmark">|| BERLIN- | 3. 8. 26.8–9 PM | FRIEDENAU 1 ||</tei:fw>
+        <tei:salute>Dear <tei:rs key="entity-000632" type="person">Professor</tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>Many thanks for kindly sending your <tei:rs key="entity-001750" type="work"><tei:title
+            level="j">Meisterwerk in der Musik</tei:title></tei:rs>, with which you have to be sure
+        ended up at <tei:rs key="entity-002627" type="organization">Drei Masken Verlag</tei:rs>. A
+        few days ago I stood on the peak of the Hoher Riffler<tei:ptr corresp="#r0001-fn02"
+          type="footnote"/> but because of the snow conditions I did not descend to Kappl,<tei:ptr
+          corresp="#r0001-fn03" type="footnote"/> nor did I still have appropriate time in order to
+        go via <tei:milestone unit="folio" n="verso"/> Ischgls<tei:ptr corresp="#r0001-fn04"
+          type="footnote"/> to <tei:rs key="entity-002292" type="place">Galtür</tei:rs>. Next year,
+        let us hope. I was mainly in the Stubaithal.<tei:ptr corresp="#r0001-fn05" type="footnote"/>
+        Despite many exertions the trip has done me much good. Sadly I am already deep again in
+        work. Please give my best wishes to your <tei:rs key="entity-000771" type="person"
+          >wife</tei:rs> and to your circle, from which Herr <tei:rs key="entity-000922"
+          type="person">Vrieslander</tei:rs> is unlikely to be missing.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">I hope that all goes very well with you.</tei:salute>
+        <tei:salute rend="indent-10">Very cordial greetings</tei:salute>
+        <tei:salute rend="indent-70">Yours</tei:salute>
+        <tei:signed rend="indent-60"><tei:rs key="entity-000013" type="person">W.
+          Altmann</tei:rs></tei:signed>
+      </tei:closer>
+
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

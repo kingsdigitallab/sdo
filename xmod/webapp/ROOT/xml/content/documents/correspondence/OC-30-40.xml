@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2549" sdoID="OC-30-40">OC 30/40</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="TK" scope="sole">Trude Kaff's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2021</tei:resp>
+      <tei:resp>Translation, 2021</tei:resp>
+      <tei:resp>XML Encoding, 2021</tei:resp>
+    </tei:respStmt>
+
+
+    <tei:revisionDesc>
+      <tei:change when="2011-03-05" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008061">Kaff ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">letter</tei:rs>
+      <dc:title>Handwritten letter from Trude Kaff to Schenker, dated December 31, 1932</dc:title>
+
+      <dcterms:created>1932-12-31T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2021-09-03</dcterms:dateSubmitted>
+      <dc:description>Trude Kaff sends New Year greetings to Heinrich Schenker and thanks him for
+        the instruction that he gave her, which has influenced her ever since.</dc:description>
+      <dc:subject>Wünsche; good wishes; Musikunterricht; music instruction; Erinnerung; memory;
+        amortisiert; amortized</dc:subject>
+
+
+      <marcrel:correspondent key="entity-000415">Trude Kaff</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:salute>Geehrter Herr <tei:rs type="person" key="entity-000632">Doktor Schenker</tei:rs>
+          — Mein Verehrter, ehemaliger Meister,<tei:note xml:id="r0001-fn01" type="editorial"
+            place="foot">Receipt of this letter is recorded in Schenker’s diary at January 1, 1933:
+            “Von Frl. Kaff (Br.): gratuliert” (“From Miss Kaff (letter): sends
+            greetings.”</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>das neue Jahr soll mir als Vorwand dienen, Ihnen meine innigsten Wünsche für Ihre
+        Gesundheit, Ihr Wohlergehen &amp; Ihr weiteres Schaffen auszusprechen. Und dann möchte ich
+        Sie endlich wissen lassen d.h. versuchen Ihnen mitzuteilen, wie dankbar ich Ihnen bin,
+          das<tei:supplied reason="omission">s</tei:supplied> ich vor Jahren das Glück hatte Ihre
+        Schülerin zu sein, sagten Sie mir einmal: „Dieser Musikunterricht ist das Beste das Eltern
+        ihren Kindern für’s Leben mitgeben können.“ Wie recht Sie damit hatten weiss ich schon
+        längst. Meine damals so schwer erbettelten &amp; erkämpften Stunden sind nicht nur die
+        besten &amp; glücklichsten meines Lebens gewesen die mir immer eine <tei:pb n="2"/>
+        unvergessliche Erinnerung sein werden, sie sind sogar – geschäftlich ausgedrückt – überhaupt
+        das Einzige in meinem Leben das sich bis dato amortisiert hat. Wenn ich mir so viele Jahre
+        lang den Wunsch versagt habe, Sie verehrten Meister aufzusuchen um Sie wieder einmal zu
+        sprechen &amp; um Ihnen persönlich zu danken, geschah es nur aus Rücksicht für Sie.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">Nehmen Sie die her<tei:supplied reason="omission"
+            >z</tei:supplied>lichsten Grüsse entgegen</tei:salute>
+        <tei:salute rend="indent-40">von Ihrer treu ergebenen</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs key="entity-000415" type="person">Trude
+          Kaff</tei:rs></tei:signed><tei:lb/>
+        <tei:date>31./12 32</tei:date>
+      </tei:closer>
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:salute>Dear Dr. <tei:supplied reason="identity"><tei:rs type="person"
+              key="entity-000632">Schenker</tei:rs></tei:supplied>, my revered former
+            Master,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>Let me take advantage of the New Year to convey my most heartfelt good wishes for your
+        health, your welfare, and your future creative work. And I should also like at last to let
+        you know – that is, to try to communicate to you – how grateful I am to you that I had the
+        good fortune many years ago to be your pupil. You once said to me: “This music instruction
+        is the best legacy that parents can endow their children with for life.” I long since came
+        to appreciate just how right you were in that. My lessons, so keenly pleaded and fought for
+        at the time, have been not only the best and happiest of my life, which will <tei:pb n="2"/>
+        remain an ever unforgettable memory, but they are also – put in commercial terms – the one
+        single thing in my life that has continued to amortize to this very day. If I have for so
+        many years denied myself the wish to visit you, revered Master, in order once again to speak
+        with you and to thank you in person, then it was only out of consideration for you.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">Please accept my most cordial best wishes,</tei:salute>
+        <tei:salute rend="indent-40">from your truly devoted</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs key="entity-000415" type="person">Trude
+          Kaff</tei:rs></tei:signed><tei:lb/>
+        <tei:date>December 31, 1932</tei:date>
+      </tei:closer>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

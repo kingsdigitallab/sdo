@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="1801" sdoID="OJ-11-36_7">OJ 11/36, [7]</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="VH" scope="major">Viktor Hammer's hand</tei:handNote>
+   <tei:handNote xml:id="unk" scope="minor">unknown hand</tei:handNote>
+   <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="HS-SP">
+   <tei:persName>Hedi Siegel &amp; Stephanie Probst</tei:persName>
+   <tei:resp>Transcription, 2016</tei:resp>
+   <tei:resp>Translation, 2016</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>XML Encoding, 2016</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2011-02-12" who="#IB">revision of XML code</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-006186">HammerV ~
+    HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+
+   <dc:title>Handwritten postcard from Hammer to Schenker, postmarked May 30, 1922</dc:title>
+
+   <dcterms:created>1922-05-30T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2016-08-15</dcterms:dateSubmitted>
+   <dc:description>Hammer changes time of Schenker visit.</dc:description>
+   <dc:subject>Jause; teatime; Tee; tee</dc:subject>
+
+
+
+   <marcrel:correspondent key="entity-000327">Viktor Hammer</marcrel:correspondent>
+   <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+  </sdo:itemDesc>
+
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/>
+    <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+      >Postkarte</tei:hi></tei:fw><tei:lb/>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:addrLine>An: <tei:handShift new="#VH"/><tei:sic>H. Herrn</tei:sic> D<tei:hi
+        rend="supralinear">r</tei:hi> Heinrich Schenker</tei:addrLine>
+      <tei:addrLine><tei:handShift new="#printed"/>in <tei:handShift new="#VH"/>Wien
+       III</tei:addrLine>
+      <tei:addrLine>Keilgasse 8.</tei:addrLine>
+     </tei:address><tei:lb/>
+     <tei:fw type="postmark">|| TA3 WIEN <tei:unclear reason="reading">125</tei:unclear> | 30.V.22
+      12 | R/a ||</tei:fw><tei:lb/>
+     <tei:fw><tei:note type="editorial" place="inline">Correction to postmark:
+       </tei:note><tei:handShift new="#unk"/>128</tei:fw><tei:lb/><tei:lb/>
+     <tei:milestone unit="folio" n="verso"/>
+    </tei:fw>
+    <tei:salute><tei:handShift new="#VH"/>Sehr verehrter Herr <tei:rs type="person"
+      key="entity-000632">D<tei:hi rend="supralinear">r</tei:hi></tei:rs>,<tei:note
+      xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this postcard is not recorded in
+      Schenker's diary. "R/a" in the postmark indicates that the item was sent by registered
+      mail.</tei:note></tei:salute>
+   </tei:opener>
+
+   <tei:p>nicht nach de<tei:supplied reason="cut-off">r Jause</tei:supplied><tei:note
+     xml:id="r0001-fn02" type="editorial" place="foot">The top right corner of the postcard is
+     missing. In his postcard of acceptance, Schenker had said: "Nach der Jause nach ½5, erscheinen
+     wir pünktlich." ("We will arrive punctually after teatime, at 4.30.") (<tei:ref
+      type="correspondence" cRef="JOB-94-3_3">JOB 94-3, [3]</tei:ref>, May 29, 1922).</tei:note>
+    sondern zum Tee um ½ 5 bitten wir Sie zu kommen.<tei:note xml:id="r0001-fn03" type="editorial"
+     place="foot">Schenker describes the visit in his diary at OJ 3/3, p. 2434, May 31, 1922: "Bei
+     Hammer zur Jause, von 5–8h; zeigt Bilder, seine Schrift; spricht über die Urlinie – verurteilt
+     meine Polemik, billigt sie aber zugleich." ("At Hammer's for teatime, from 5:00–8:00; he shows
+     [us] pictures, his monograph; talks about the Urlinie – condemns my polemics but simultaneously
+     approves of it.").</tei:note> Wir freuen uns sehr, Handkuss Ihrer <tei:rs key="entity-000771"
+     type="person">Gattin</tei:rs>,</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-40">ich bin Ihr aufrichtig erg.</tei:salute>
+    <tei:signed rend="indent-50"><tei:rs key="entity-000327" type="person">Victor
+     Hammer</tei:rs></tei:signed>
+   </tei:closer>
+
+  </tei:div>
+
+
+  <tei:div type="translation">
+
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/>
+    <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+      >Postcard</tei:hi></tei:fw><tei:lb/>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:addrLine>To: <tei:handShift new="#VH"/>Dr. Heinrich Schenker</tei:addrLine>
+      <tei:addrLine><tei:handShift new="#printed"/>in <tei:handShift new="#VH"/>Vienna
+       III</tei:addrLine>
+      <tei:addrLine>Keilgasse 8</tei:addrLine>
+     </tei:address><tei:lb/>
+     <tei:fw type="postmark">|| TA3 VIENNA <tei:unclear reason="reading">125</tei:unclear> | 30.V.22
+      12 | R/a ||</tei:fw><tei:lb/>
+     <tei:fw><tei:note type="editorial" place="inline">Correction to postmark:
+       </tei:note><tei:handShift new="#unk"/>128</tei:fw><tei:lb/><tei:lb/>
+     <tei:milestone unit="folio" n="verso"/>
+    </tei:fw>
+    <tei:salute><tei:handShift new="#VH"/>Greatly revered Dr. <tei:supplied reason="identity"
+       ><tei:rs type="person" key="entity-000632">Schenker</tei:rs></tei:supplied>,<tei:ptr
+      corresp="#r0001-fn01" type="footnote"/></tei:salute>
+   </tei:opener>
+
+   <tei:p>Please come not after <tei:supplied reason="cut-off">teatime</tei:supplied><tei:ptr
+     corresp="#r0001-fn02" type="footnote"/> but rather for tea at 4:30.<tei:ptr
+     corresp="#r0001-fn03" type="footnote"/> We are very much looking forward. A kiss on the hand of
+    your <tei:rs key="entity-000771" type="person">wife</tei:rs>,</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-40">I am your sincerely devoted</tei:salute>
+    <tei:signed rend="indent-50"><tei:rs key="entity-000327" type="person">Victor
+     Hammer</tei:rs></tei:signed>
+   </tei:closer>
+
+  </tei:div>
+ </sdo:record>
+</sdo:recordCollection>

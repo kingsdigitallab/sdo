@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1368" sdoID="OJ-11-42_24">OJ 11/42, [24]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="MH" scope="major">Maximilian Harden's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WP">
+      <tei:persName>William Pastille</tei:persName>
+      <tei:resp>Transcription, 2006</tei:resp>
+      <tei:resp>Translation, 2006</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2014</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-26" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005539">HardenM ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005540">ZukunftD ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">letter</tei:rs>
+
+      <dc:title>Handwritten letter from Maximilian Harden to Schenker, dated October 29,
+        1895</dc:title>
+      <dcterms:created>1895-10-29T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2014-12-12</dcterms:dateSubmitted>
+      <dc:description>Harden suggests that Schenker make substantial revisions in an unidentified
+        submission.</dc:description>
+      <dc:subject>Vertrauen; trust; Fragen; questions; aphoristisch; aphoristic; Dirigiren;
+        conducting </dc:subject>
+
+
+
+      <marcrel:correspondent key="entity-000333">Maximilian Harden</marcrel:correspondent>
+      <marcrel:correspondent key="entity-002566">Die Zukunft</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>DIE ZUKUNFT</tei:addrLine>
+          <tei:addrLine>HERAUSGEBER:</tei:addrLine>
+          <tei:addrLine>MAXIMILIAN HARDEN</tei:addrLine>
+          <tei:addrLine><tei:note type="editorial" place="inline">decorative
+            rule</tei:note></tei:addrLine>
+          <tei:addrLine rend="indent-40">BERLIN W. 9., den <tei:date when="1895-10-29"
+                ><tei:handShift new="#MH"/>29 10 <tei:handShift new="#printed"/>189<tei:handShift
+                new="#MH"/>5</tei:date></tei:addrLine>
+          <tei:addrLine rend="indent-40"><tei:handShift new="#printed"/><tei:subst>
+              <tei:del rend="overstrike">27 Köthener Str.</tei:del>
+              <tei:add hand="#MH" place="inline"><tei:handShift new="#MH"/>8 Königin Augustastr.
+                8</tei:add>
+            </tei:subst></tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:salute><tei:handShift new="#MH"/>Sehr geehrter <tei:rs key="entity-000632"
+            type="person">Herr</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>gerade, weil ich „Vertrauen zu Ihnen habe,“ möchte ich Sie bitten, diese Fragen weniger
+        aphoristisch zu behandeln u. lieber Ihre Ansicht über das Dirigiren ernstlicher zu
+        begründen.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">In herzlicher Hochactung, mit bestem Dank</tei:salute>
+        <tei:salute rend="indent-70">Ihr erg.</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs key="entity-000333" type="person">
+          Harden</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>DIE ZUKUNFT</tei:addrLine>
+          <tei:addrLine>EDITOR:</tei:addrLine>
+          <tei:addrLine>MAXIMILIAN HARDEN</tei:addrLine>
+          <tei:addrLine><tei:note type="editorial" place="inline">decorative
+            rule</tei:note></tei:addrLine>
+          <tei:addrLine rend="indent-40">BERLIN W. 9, <tei:date when="1895-10-29"><tei:handShift
+                new="#MH"/>October 29, <tei:handShift new="#printed"/>189<tei:handShift new="#MH"
+              />5</tei:date></tei:addrLine>
+          <tei:addrLine rend="indent-40"><tei:handShift new="#printed"/><tei:subst>
+              <tei:del rend="overstrike">27 Köthener Straße</tei:del>
+              <tei:add hand="#MH" place="inline"><tei:handShift new="#MH"/>8 Königin Augustastraße
+                8</tei:add>
+            </tei:subst></tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:salute><tei:handShift new="#MH"/>Dear <tei:rs key="entity-000632" type="person"
+            >Sir</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>It is precisely because "I have confidence in you" that I would like to request that
+        you treat these questions less aphoristically and instead provide more substantial evidence
+        for your standpoint on conducting.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">In sincere regard, with many thanks,</tei:salute>
+        <tei:salute rend="indent-70">Yours truly,</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs key="entity-000333" type="person">
+          Harden</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

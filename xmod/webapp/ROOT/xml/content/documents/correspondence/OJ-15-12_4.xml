@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="1638" sdoID="OJ-15-12_4">OJ 15/12, [4]</sdo:correspondence>
+  </sdo:source>
+  <tei:handNotes>
+   <tei:handNote xml:id="JW" scope="minor">Josef Weinberger's hand</tei:handNote>
+   <tei:handNote xml:id="JWsten" scope="major">stenographer for Josef Weinberger</tei:handNote>
+   <tei:handNote xml:id="printed" scope="major">printed</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>Transcription, 2016</tei:resp>
+   <tei:resp>Translation, 20016</tei:resp>
+   <tei:resp>XML Encoding, 2016</tei:resp>
+
+  </tei:respStmt>
+  <tei:respStmt xml:id="BOT">
+   <tei:name>Automated Script</tei:name>
+   <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2010-02-07" who="#IB">revision of XML code</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-006163">WeinbergerCo ~
+    HSchenker</tei:rs>
+   <tei:rs role="correspondence" type="correspondence" key="entity-006164">WeinbergerJ ~
+    HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+   <dc:title>Handwritten letter from Weinberger to Schenker, dated January 5, 1900</dc:title>
+
+   <dcterms:created>1900-01-05T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2016-02-02</dcterms:dateSubmitted>
+   <dc:description>Requests publicity for his firm in concert program.</dc:description>
+   <dc:subject>Programmen; programs; Bemerkung; note; Verlag; publishing house</dc:subject>
+
+
+
+
+   <marcrel:correspondent key="entity-006149">WeinbergerCo</marcrel:correspondent>
+   <marcrel:correspondent key="entity-000946">WeinbergerJ</marcrel:correspondent>
+   <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+  </sdo:itemDesc>
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:address>
+     <tei:addrLine><tei:handShift new="#printed"/>
+      <tei:supplied reason="format">engraved letterhead, lettering diagonally and horizontally
+       arranged on a background of foliage with a lyre</tei:supplied>
+     </tei:addrLine>
+     <tei:addrLine>Josef Weinberger</tei:addrLine>
+     <tei:addrLine>Bühnen-Verlag <tei:supplied>—</tei:supplied>
+      Musikalien-Verlags-Handlung</tei:addrLine>
+     <tei:addrLine>Wien Kohlmarkt N<tei:hi rend="supralinear">o.</tei:hi> 8
+       <tei:supplied>—</tei:supplied> Leipzig Querstrasse N<tei:hi rend="supralinear">o.</tei:hi>
+      13</tei:addrLine>
+     <tei:addrLine>Paris 78, Rue d'Anjou.</tei:addrLine>
+     <tei:addrLine>TELEFON N<tei:hi rend="supralinear">o.</tei:hi> 3364.</tei:addrLine>
+    </tei:address>
+    <tei:dateline rend="indent-50">
+     <tei:placeName>Wien/Leipzig am</tei:placeName>
+     <tei:handShift new="#JWsten"/>
+     <tei:date when="1900-02-01">5. Jänner 1900</tei:date>
+    </tei:dateline><tei:lb/>
+    <tei:address>
+     <tei:addrLine rend="indent-50">
+      <tei:persName>Wohlgeboren Herrn Prof. Dr. Heinr. <tei:hi rend="lateinschr"
+       >Schenker</tei:hi></tei:persName>
+     </tei:addrLine>
+     <tei:addrLine rend="indent-80">
+      <tei:hi rend="underline sperr">Wien</tei:hi>
+     </tei:addrLine>
+    </tei:address>
+    <tei:salute rend="indent-50">Sehr geehrter Herr <tei:rs type="person" key="entity-000632"
+      >Professor</tei:rs>!</tei:salute>
+   </tei:opener>
+
+   <tei:p rend="first">Sie würden mich dankbar verbinden, wenn Sie die Güte haben wollten zu
+    veranlassen, daß auf den Programmen des Concertos Gärtner zu den “<tei:rs key="entity-001664"
+     type="work"><tei:title>Syrischen Tänzen</tei:title></tei:rs>” die Bemerkung erscheint, daß
+    dieselben soeben in meinem <tei:rs key="entity-006149" type="organization">Verlag</tei:rs>e
+    erschienen sind.<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Schenker’s
+      <tei:title level="m">Syrische Tänze</tei:title> for piano four-hands was first performed by
+     Schenker and Moriz Violin on January 26, 1900 in the Bösendorfer-Saal, Vienna. The concert
+     program for the event exists in OJ 35/5.</tei:note></tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-10">Im Vorhinien verbindlichst dankend</tei:salute>
+    <tei:salute rend="indent-50">hochachtungsvoll ergebener</tei:salute>
+    <tei:signed rend="indent-60"><tei:handShift new="#JW"/>Josef Weinberger</tei:signed>
+   </tei:closer>
+
+  </tei:div>
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:address>
+     <tei:addrLine><tei:handShift new="#printed"/>
+      <tei:supplied reason="format">engraved letterhead, lettering diagonally and horizontally
+       arranged on a background of foliage with a lyre</tei:supplied>
+     </tei:addrLine>
+     <tei:addrLine>Josef Weinberger</tei:addrLine>
+     <tei:addrLine>Theatrical Publisher <tei:supplied>—</tei:supplied> Publisher and Hirer of Sheet
+      Music</tei:addrLine>
+     <tei:addrLine>Vienna, Kohlmarkt N<tei:hi rend="supralinear">o.</tei:hi> 8
+       <tei:supplied>—</tei:supplied> Leipzig Querstrasse N<tei:hi rend="supralinear">o.</tei:hi>
+      13</tei:addrLine>
+     <tei:addrLine>Paris 78, Rue d'Anjou.</tei:addrLine>
+     <tei:addrLine>TELEPHONE N<tei:hi rend="supralinear">o.</tei:hi> 3364.</tei:addrLine>
+    </tei:address>
+    <tei:dateline rend="indent-50">
+     <tei:placeName>Vienna/Leipzig, </tei:placeName>
+     <tei:handShift new="#JWsten"/>
+     <tei:date when="1900-02-01">January 5, 1900</tei:date>
+    </tei:dateline><tei:lb/>
+    <tei:address>
+     <tei:addrLine rend="indent-50">
+      <tei:persName>Prof. Heinr. Schenker, Esq.</tei:persName>
+     </tei:addrLine>
+     <tei:addrLine rend="indent-80">
+      <tei:hi rend="underline sperr">Vienna</tei:hi>
+     </tei:addrLine>
+    </tei:address>
+    <tei:salute rend="indent-50">Dear <tei:rs type="person" key="entity-000632"
+     >Professor</tei:rs>,</tei:salute>
+   </tei:opener>
+
+   <tei:p rend="first">I should be greatly indebted to you if you would be so kind as to arrange for
+    a note to appear on the Programmes of the Concerts Gärtner against the <tei:rs
+     key="entity-001664" type="work"><tei:title level="m">Syrian Dances</tei:title></tei:rs> that
+    these have just been published by my <tei:rs key="entity-006149" type="organization">publishing
+     house</tei:rs>.<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-10">With most grateful thanks in anticipation</tei:salute>
+    <tei:salute rend="indent-50">Respectfully, your devoted</tei:salute>
+    <tei:signed rend="indent-60"><tei:handShift new="#JW"/>Josef Weinberger</tei:signed>
+   </tei:closer>
+
+
+  </tei:div>
+ </sdo:record>
+</sdo:recordCollection>

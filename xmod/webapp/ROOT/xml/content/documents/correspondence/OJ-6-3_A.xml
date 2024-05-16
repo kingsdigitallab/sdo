@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="2829" sdoID="OJ-6-3_A">OJ 6/3, [A]</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="HS" scope="sole">Heinrich Schenker's hand</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>Transcription, 2022</tei:resp>
+   <tei:resp>Translation, 2022</tei:resp>
+   <tei:resp>XML Encoding, 2022</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2011-09-23" who="#IB">XML code revised</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-002719">ViolinM ~
+    HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+   <dc:title>Handwritten letter from Schenker to Moriz Violin, undated [?1897 or 1899]</dc:title>
+
+   <dcterms:created>1897-07-15T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2022-09-10</dcterms:dateSubmitted>
+   <dc:description>Schenker announces that he has completed a string quartet, and hopes to see
+    Violin shortly.</dc:description>
+   <dc:subject/>
+
+   <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+   <marcrel:recipient key="entity-000913">ViolinM</marcrel:recipient>
+  </sdo:itemDesc>
+
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:dateline><tei:note type="editorial" place="inline">undated</tei:note></tei:dateline>
+    <tei:salute><tei:handShift new="#HS"/>Liebe<tei:subst>
+      <tei:del rend="overwritten">s</tei:del>
+      <tei:add place="superimposed">r</tei:add>
+     </tei:subst>
+     <tei:rs type="person" key="entity-000913">Moritz</tei:rs>!</tei:salute>
+   </tei:opener>
+
+   <tei:p>Du dürftest meine Karte die freilich noch in die ersten Hochwassertage fiel, doch erhalten
+    haben? Oder fiel sie in’s Hochwasser?<tei:note xml:id="r0001-fn01" type="editorial" place="foot"
+     >Hochwasser: lit. “high water,” i.e. flooding; Vienna frequently experienced severe flooding of
+     the City from the Danube, notably in July 1897 and September 1899: click on <tei:ref
+      type="external" target="https://ui.adsabs.harvard.edu/abs/2016EGUGA..18.2589N/abstract">"High
+      water."</tei:ref> Hence the ambivalent editorial dating.</tei:note></tei:p>
+
+   <tei:p>Nun theile ich dir mit, dass ich ein Streichquartet fertig gemacht habe.<tei:note
+     xml:id="r0001-fn02" type="editorial" place="foot">All that are known to survive are sixteen
+     sheets of sketches for four string quartet movements, all undated: OJ 23/25 “Aria,” C major; OJ
+     23/26 “Scherzo III, <tei:hi rend="italic">Prestissimo e capriccioso</tei:hi>,” G minor; OJ
+     23/27 “Largo,” A minor; and OJ 23/28 [untitled], C minor; all are in Schenker’s hand. They are
+     catalogued as “C45–48” with musical incipits by <tei:bibl><tei:editor>Benjamin McKay
+       Ayotte</tei:editor>, ed., <tei:title level="m">Heinrich Schenker: a Guide to
+       Research</tei:title> (New York: Routledge, 2004)</tei:bibl>, pp. 36–39. — The third movement
+     is annotated “Marburg an der Lahn” (the only known reference to Marburg in the Schenker papers
+     appears in the schedule of Schenker's tour with Johannes Messchaert on January 9, 1899, but
+     that was Marburg in Styria).</tei:note> Ob ich dich bald sehe, entscheidet sich morgen,
+    spätestens übermorgen. Vielleicht geht es? Es würde dich wiederzusehen sehr freuen </tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-40">Deinen</tei:salute>
+    <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000632">H Schenker</tei:rs>
+    </tei:signed>
+   </tei:closer>
+
+  </tei:div>
+
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:dateline><tei:note type="editorial" place="inline">undated</tei:note></tei:dateline>
+    <tei:salute><tei:handShift new="#HS"/>Dear <tei:rs type="person" key="entity-000913"
+      >Moritz</tei:rs>,</tei:salute>
+   </tei:opener>
+
+   <tei:p>You should surely have received my postcard, which admittedly fell on the first of the
+    high water days? Or did it fall into the high water?<tei:ptr corresp="#r0001-fn01"
+     type="footnote"/></tei:p>
+
+   <tei:p>This is to let you know that I have finished a string quartet.<tei:ptr
+     corresp="#r0001-fn02" type="footnote"/> Whether I will see you will be decided tomorrow, or at
+    latest the day after tomorrow. To see you again would greatly please</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-40">your</tei:salute>
+    <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000632">H. Schenker</tei:rs>
+    </tei:signed>
+   </tei:closer>
+
+  </tei:div>
+ </sdo:record>
+</sdo:recordCollection>

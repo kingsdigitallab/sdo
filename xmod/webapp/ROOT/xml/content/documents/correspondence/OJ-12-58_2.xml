@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2748" sdoID="OJ-12-58_2">OJ 12/58, [2]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="PM" scope="sole">Paul Müller's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2022</tei:resp>
+      <tei:resp>Translation, 2022</tei:resp>
+      <tei:resp>XML Encoding, 2022</tei:resp>
+    </tei:respStmt>
+
+
+    <tei:revisionDesc>
+      <tei:change when="2011-06-09" who="#IB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008183">MüllerP ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008182">MüllerSF ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+      <dc:title>Handwritten letter from Paul Müller to Schenker, dated July 20, 1923</dc:title>
+
+      <dcterms:created>1923-07-20T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2022-05-09</dcterms:dateSubmitted>
+      <dc:description>Paul Müller thanks Schenker for a testimonial for his son, Siegfried
+        Fritz.</dc:description>
+      <dc:subject/>
+
+
+      <marcrel:correspondent key="entity-000617">PMüller</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:salute rend="indent-10"><tei:handShift new="#PM"/>Sehr verehrter Herr <tei:rs
+            type="person" key="entity-000632">Professor</tei:rs>!<tei:note xml:id="r0001-fn01"
+            type="editorial" place="foot">Receipt of this letter is not recorded in Schenker’s diary
+            but is probably covered in the entry regarding Müller’s letter of the previous day,
+              <tei:ref type="correspondence" cRef="OJ-12-58_1">OJ 12/58, [1]</tei:ref>, July 19,
+            1923.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Zu unserer aller Freude traf soeben das gewünschte Zeugnis von Ihnen ein.
+        Wie Sie sich denken können, hat es uns sehr erfreut, und zugleich im Humor meines <tei:rs
+          type="person" key="entity-000618">Sohn</tei:rs>es danke ich Ihnen herzlichst dafür. Wir
+        wollen nun hoffen, daß <tei:supplied reason="clarity">mit</tei:supplied> einer so genügenden
+        Empfehlung auch der Erfolg beschieden ist!</tei:p>
+
+      <tei:p rend="first">Was die von mir gestern geschickte kleine Summe anbelangt, bitte ich Sie
+        recht freundlich, die Angelegenheit als erledigt betrachten zu wollen.</tei:p>
+
+      <tei:p rend="first">Wie Ihnen mein <tei:rs type="person" key="entity-000618">Sohn</tei:rs>
+        bereits schrieb, wäre es wohl möglich, daß er Ihnen dort im Vorbeigehen seinen Dank
+        persönlich abstatten wird.</tei:p>
+
+      <tei:p rend="first">Indem auch ich nochmals herzlichst danke, verbleibe ich mit
+        hochachtungsvollen Grüßen</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Ihr sehr ergebener</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs type="person" key="entity-000617">Prof. Paul
+            Müller</tei:rs></tei:signed><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:rs type="place" key="entity-004164">St. Gallen</tei:rs>, <tei:date
+              when="1923-07-19">20. VII. 23</tei:date>.</tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+    </tei:div>
+
+    <tei:div type="translation">
+      <tei:opener>
+        <tei:salute rend="indent-10"><tei:handShift new="#PM"/>Greatly revered <tei:rs type="person"
+            key="entity-000632">Professor</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"
+          /></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">To our great pleasure, the requested testimonial from you has just
+        arrived. As you can imagine, it has greatly delighted us, and on behalf of my <tei:rs
+          type="person" key="entity-000618">son</tei:rs>, I extend my most heartfelt thanks to you.
+        We now hope that ,with so supportive a recommendation, success is secured!</tei:p>
+
+      <tei:p rend="first">In light of the modest sum that I sent yesterday, I ask you cordially to
+        consider the matter over and done with.</tei:p>
+
+      <tei:p rend="first">As my <tei:rs type="person" key="entity-000618">son</tei:rs> has already
+        written to you, were it indeed possible for him to pay you a visit there en route,
+          <tei:supplied reason="clarity">he would be able to express</tei:supplied> his thanks in
+        person.</tei:p>
+
+      <tei:p rend="first">In thanking you again most cordially, I remain with respectful
+        greetings</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">your very devoted</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs type="person" key="entity-000617">Prof. Paul
+            Müller</tei:rs></tei:signed><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:rs type="place" key="entity-004164">St. Gallen</tei:rs>, <tei:date
+              when="1923-07-19">July 20, 1923</tei:date></tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+
+
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

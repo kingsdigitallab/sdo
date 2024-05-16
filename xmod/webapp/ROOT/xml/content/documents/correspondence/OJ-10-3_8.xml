@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1250" sdoID="OJ-10-3_8">OJ 10/3, [8]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="OED" scope="major">Otto Erich Deutsch's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="DB">
+      <tei:persName>David Bretherton</tei:persName>
+      <tei:resp>Transcription, 2014</tei:resp>
+      <tei:resp>Translation, 2014</tei:resp>
+      <tei:resp>XML Encoding, 2014</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2014-06-10" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Otto Erich Deutsch Deutsch to Schenker, dated February 12,
+        1920</dc:title>
+
+      <dcterms:created>1920-02-12T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2014-06-10</dcterms:dateSubmitted>
+      <dc:description>The Beethoven House will only allow reproduction of the manuscript of the
+        "Moonlight" Sonata in return for a royalty. Deutsch has offered 5% of the retail
+        price.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000163">DeutschH</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+      <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/>Postk<tei:supplied reason="covered"
+          >arte</tei:supplied></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>Absender:</tei:addrLine>
+            <tei:addrLine><tei:handShift new="#stamp"/>Wien, II. Valeriestraße 26, I.
+              4.</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#printed"/>An <tei:handShift new="#OED"/>Herrn
+              Prof.</tei:addrLine>
+            <tei:addrLine rend="indent-15">Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine><tei:handShift new="#printed"/>in <tei:handShift new="#OED"/>Wien
+              III.</tei:addrLine>
+            <tei:addrLine rend="indent-30">Reisnerstr. 38.</tei:addrLine>
+          </tei:address>
+          <tei:lb/><tei:fw type="postmark">|| <tei:gap reason="illegible" unit="chars" extent="few"
+            /> 1<tei:note type="editorial">?</tei:note> 45<tei:note type="editorial">?</tei:note> |
+            13. II. 20 XI<tei:note type="editorial">?</tei:note> | <tei:gap reason="illegible"
+              unit="chars" extent="few"/> ||</tei:fw>
+        </tei:fw>
+        <tei:lb/><tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-50"><tei:rs key="entity-002484" type="place">Wien</tei:rs>,
+            <tei:date when="1920-02-12">12. II. 20</tei:date>.</tei:dateline>
+        <tei:salute rend="indent-10">Sehr geehrter Herr <tei:rs type="person" key="entity-000632"
+            >Doktor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
+            this postcard is recorded in Schenker's diary at OJ 3/1, p. 2215 (February 18, 1920):
+            "Von Otto E. Deutsch (K.): Bonn kalkulire die Tantieme." ("From Otto Erich Deutsch
+            (postcard): Bonn will calculate the royalties.")</tei:note>
+        </tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Vom Vorstand des <tei:rs key="entity-004286" type="place"
+          >Beethoven-Haus</tei:rs>es erhielt ich heute den Bescheid, daß wir das Reproduktionsrecht
+        der M.-S. nur gegen finanzielle Beteiligung erhalten können und bot dem <tei:rs
+          key="entity-004286" type="place">Vereine</tei:rs> im Einvernehmen mit Direktor <tei:rs
+          key="entity-000356" type="person">H.</tei:rs> 5% des Ladenpreises an. Weitere Nachricht
+        folgt.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-55">Ihr ergebener</tei:salute>
+        <tei:signed rend="indent-75"><tei:rs key="entity-000164" type="person">O E
+          Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/>Postcard</tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>sender:</tei:addrLine>
+            <tei:addrLine><tei:handShift new="#stamp"/>Vienna, II. Valeriestraße 26, I.
+              4.</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#printed"/>to <tei:handShift new="#OED"
+              />Prof.</tei:addrLine>
+            <tei:addrLine rend="indent-15">Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine><tei:handShift new="#printed"/>in <tei:handShift new="#OED"/>Vienna
+              III.</tei:addrLine>
+            <tei:addrLine rend="indent-30">Reisnerstrasse 38.</tei:addrLine>
+          </tei:address>
+          <tei:lb/><tei:fw type="postmark">|| <tei:gap reason="illegible" unit="chars" extent="few"
+            /> 1<tei:note type="editorial">?</tei:note> 45<tei:note type="editorial">?</tei:note> |
+            13. II. 20 XI<tei:note type="editorial">?</tei:note> | <tei:gap reason="illegible"
+              unit="chars" extent="few"/> ||</tei:fw>
+        </tei:fw>
+        <tei:lb/><tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-50"><tei:rs key="entity-002484" type="place">Vienna</tei:rs>,
+            <tei:date when="1920-02-12">February 12, 1920</tei:date></tei:dateline>
+        <tei:salute rend="indent-10">Very honored <tei:rs type="person" key="entity-000632"
+            >Doctor</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/>
+        </tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Today I received notification from the Board of the <tei:rs
+          key="entity-004286" type="place">Beethoven House</tei:rs> that we may have reproduction
+        rights for the manuscript only in return for a financial share. With the agreement of
+        Director <tei:rs key="entity-000356" type="person">Hertzka</tei:rs>, I offered the <tei:rs
+          key="entity-004286" type="place">Society</tei:rs> five percent of the retail price. More
+        news to follow.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-55">Yours truly,</tei:salute>
+        <tei:signed rend="indent-75"><tei:rs key="entity-000164" type="person">O E
+          Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

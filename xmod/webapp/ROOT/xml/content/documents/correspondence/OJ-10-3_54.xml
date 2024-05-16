@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2994" sdoID="OJ-10-3_54">OJ 10/3, [54]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="TPhd" scope="major">Hanna Deutsch typist</tei:handNote>
+      <tei:handNote xml:id="HD" scope="minor">Hanna Deutsch's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-19" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008379">DeutschH ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Typewritten postcard from Otto Erich and Hanna Deutsch to Schenker, dated January
+        18, 1927</dc:title>
+
+      <dcterms:created>1927-01-18T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-01-31</dcterms:dateSubmitted>
+      <dc:description>Vrieslander would like to give a lecture on Schenker and Beethoven at the
+        centenary celebrations in Vienna; Deutsch asks Schenker to contact Vrieslander directly
+        about this.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000163">DeutschH</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postk<tei:supplied reason="overstamped"
+              >arte</tei:supplied></tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">Absender:</tei:supplied>
+              <tei:handShift new="#TPhd"/>O. E. Deutsch</tei:addrLine>
+            <tei:addrLine>Wien, II. Böcklinstr. 26.</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied>
+              <tei:handShift new="#TPhd"/>Herrn Professor Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-30">Keilgasse 8.</tei:addrLine>
+            <tei:addrLine rend="indent-40"><tei:hi rend="underline"><tei:hi rend="sperr"
+                  >WIEN</tei:hi> III.</tei:hi></tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:lb/>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-40"><tei:handShift new="TPhd"/><tei:rs key="entity-002484"
+            type="place">Wien</tei:rs>, dem <tei:date when="1927-01-18">18. I.
+          1927</tei:date>.</tei:dateline>
+        <tei:salute>Sehr verehrter Herr <tei:rs type="person" key="entity-000632"
+            >Professor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt
+            of this postcard is recorded in Schenker’s diary for January 19, 1927: “Von Frau Deutsch
+            (K.): gibt Vrieslanders Vorschlag wieder, in Wien einen Beethoven-Schenker-Vortrag zu
+            halten” (“from Mrs. Deutsch (postcard): transmits Vrieslander’s proposal to give a
+            Beethoven-Schenker lecture”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first"><tei:rs type="person" key="entity-000922">Vrieslander</tei:rs> möchte
+        gerne bei der <tei:rs type="person" key="entity-000055"
+          >Beethoven</tei:rs>-Zentenarfeier<tei:note xml:id="r0001-fn02" type="editorial"
+          place="foot">Beethoven died on March 26, 1827.</tei:note> einen Vortrag hier halten über:
+        Schenker und Beethoven. Bitte geben Sie doch <tei:rs type="person" key="entity-000922"
+          >Vrieslander</tei:rs> direkt Nachricht darüber!– </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-30">Herzliche Grüsse Ihr ergebener</tei:salute>
+        <tei:salute rend="indent-30"><tei:handShift new="#HD"/>Ich unterschreibe für meinen <tei:rs
+            type="person" key="entity-000164">Mann</tei:rs></tei:salute>
+        <tei:salute rend="indent-50">Ihre</tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:rs key="entity-000163" type="person">Hanna Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">From:</tei:supplied>
+              <tei:handShift new="#TPhd"/>O. E. Deutsch</tei:addrLine>
+            <tei:addrLine>Vienna II, Böcklinstrasse 26</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied>
+              <tei:handShift new="#TPhd"/>Professor Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-30">Keilgasse 8</tei:addrLine>
+            <tei:addrLine rend="indent-40"><tei:hi rend="underline"><tei:hi rend="sperr"
+                  >VIENNA</tei:hi> III</tei:hi></tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:lb/>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-40"><tei:handShift new="TPhd"/><tei:rs key="entity-002484"
+            type="place">Vienna</tei:rs>, <tei:date when="1927-01-18">January 18,
+          1927</tei:date></tei:dateline>
+        <tei:salute>Much revered <tei:rs type="person" key="entity-000632"
+            >Professor</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first"><tei:rs type="person" key="entity-000922">Vrieslander</tei:rs> would very
+        much like to give a lecture at the <tei:rs type="person" key="entity-000055"
+          >Beethoven</tei:rs> centennial celebrations<tei:ptr corresp="#r0001-fn02" type="footnote"
+        /> here on “Schenker and Beethoven”. Please reply directly to <tei:rs type="person"
+          key="entity-000922">Vrieslander</tei:rs> about this!</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-30">With cordial greetings, your devoted, </tei:salute>
+        <tei:salute rend="indent-30"><tei:handShift new="#HD"/>I am signing on behalf of my <tei:rs
+            type="person" key="entity-000164">husband</tei:rs></tei:salute>
+        <tei:salute rend="indent-50">Your</tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:rs key="entity-000163" type="person">Hanna Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

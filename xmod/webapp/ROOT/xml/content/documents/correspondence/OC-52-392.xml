@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1675" sdoID="OC-52-392">OC 52/392</sdo:correspondence>
+    </sdo:source>
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="sole">Heinrich Schenker's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2004, 2016</tei:resp>
+      <tei:resp>Translation, 2004, 2016</tei:resp>
+      <tei:resp>XML Encoding, 2016</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-02-07" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002702">UE ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002750">Note</tei:rs>
+
+
+
+      <dc:title>Handwritten note by Schenker, dated June 20, 1904</dc:title>
+
+      <dcterms:created>1904-06-20T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2016-02-18</dcterms:dateSubmitted>
+      <dc:description>Schenker notes down contents of OC 52/391.</dc:description>
+      <dc:subject>Doppelplatte; double-plate</dc:subject>
+
+      <marcrel:correspondent key="entity-000632">Heinrich Schenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:note type="editorial" place="inline">holograph note on a quarter-sheet, with part of a
+          printed document on verso.</tei:note><tei:lb/>
+        <tei:dateline><tei:date>20. VI. 1904</tei:date></tei:dateline>
+      </tei:opener>
+
+      <tei:p><tei:hi rend="underline"><tei:rs key="entity-001722" type="work">Händel 4
+            händig</tei:rs></tei:hi><tei:lb/>
+        <tei:hi rend="underline">6 Kr. für die Doppelplatte</tei:hi><tei:lb/> 141 K<tei:note
+          xml:id="r0001-fn01" type="editorial" place="foot">This note was presumably penned in
+          response to <tei:ref type="correspondence" cRef="OC-52-391">OC 52/391</tei:ref>, of the
+          same date. Schenker's calculation corresponds with that in <tei:ref type="correspondence"
+            cRef="OC-52-393">OC 52/393</tei:ref>, June 22, 1904. </tei:note></tei:p>
+
+    </tei:div>
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:note type="editorial" place="inline">holograph note on a quarter-sheet, with part of a
+          printed document on verso.</tei:note><tei:lb/>
+        <tei:dateline><tei:date>June 20, 1904</tei:date></tei:dateline>
+      </tei:opener>
+
+      <tei:p><tei:hi rend="underline"><tei:rs key="entity-001722" type="work">Handel
+            four-hands</tei:rs></tei:hi><tei:lb/>
+        <tei:hi rend="underline">6 Kronen per double-plate</tei:hi><tei:lb/> 141 Kronen<tei:ptr
+          corresp="#r0001-fn01" type="footnote"/></tei:p>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

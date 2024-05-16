@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3103" sdoID="OJ-10-3_120">OJ 10/3, [120]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="OED" scope="major">Otto Erich Deutsch's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-19" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture
+        postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Deutsch to Schenker, dated March 2, 1930</dc:title>
+
+      <dcterms:created>1930-03-02T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-03-24</dcterms:dateSubmitted>
+      <dc:description>Deutsch has come across information suggesting that there may be parts, even a
+        score, of the "Eroica" Symphony with corrections in Beethoven’s hand from the music library
+        of Archduke Rudolph and still located in Olmütz [Olomouc].</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:note type="editorial" place="inline">picture: town square, captioned: “Innsbruck,
+          Tirol”</tei:note><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#OED"/>Deutsch Böcklinstr. 26</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied> Herrn Dr. Heinrich
+            Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-30">Keilgasse 8</tei:addrLine>
+          <tei:addrLine rend="indent-60">Wien III.</tei:addrLine>
+        </tei:address>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-70"><tei:handShift new="#OED"/><tei:date when="1930-03-02">2.
+            III. 30</tei:date></tei:dateline>
+        <tei:salute>Lieber verehrter Herr <tei:rs type="person" key="entity-000632"
+            >Doktor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
+            this postcard is recorded in Schenker’s diary for March 3, 1930: “Von Deutsch (K.):
+            bestätigt meinen Brief, verweist auf eine Notiz über mich aus dem Jahre 28 u. auf eine
+            dort gefundene Anmerkung über rev. Stimmen zur Eroica in der Olmützer Erzbischöflichen
+            Bibliothek” (“From Deutsch (postcard): he acknowledges receipt of my letter, refers to a
+            note about me from the year <tei:supplied>19</tei:supplied>28 and of a remark found
+            there concerning revised parts to the “Eroica” in the Archepiscopal Library in Olmütz”).
+            This summary refers in part to Deutsch’s next postcard <tei:ref type="correspondence"
+              cRef="OJ-10-3_121">OJ 10/3, [121]</tei:ref>, March 5, 1930.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Für Ihren mir sehr wertvollen Brief<tei:note xml:id="r0001-fn02"
+          type="editorial" place="foot">Schenker’s diary records a letter (not surviving) sent on
+          February 28: “An Deutsch (8 Seiten): muß das Jahrbuch ablehnen, zumindest bis zum Herbst
+          vertagen; bin leider zum Leidtragenden des Archivs geworden, da er es mir geschenkt zu
+          haben glaubt, um sich von mir Gegengefälligkeiten holen zu können. Für Bücher u. dgl. hat
+          er keinen Sinn, er ist ein Snob u. Geldexhibitionismus, man spanne ihn in die Haydn-Feier
+          ein” (“To Deutsch (eight pages,): I must give up the <tei:supplied>Photogram
+            Archive</tei:supplied> yearbook, at least delay it until the autumn; I have
+          unfortunately become the bearer of the Archive’s sorrows, since he
+            <tei:supplied>Hoboken</tei:supplied> believes that he has given it to me so that I, for
+          my part, can do favors in return. For books and the like he has no understanding; he is a
+          snob and an exhibitionist with his money, and should be roped into the Haydn
+          celebrations”).</tei:note> kann ich vorläufig nur danken. Ich glaube auch, daß <tei:rs
+          type="person" key="entity-000380">H.</tei:rs> vor <tei:rs type="person"
+          key="entity-000344">Haydn</tei:rs>s Wiedergeburt<tei:note xml:id="r0001-fn03"
+          type="editorial" place="foot">“Haydn’s rebirth”: the bicentennial year of his birth,
+          1932.</tei:note> dem <tei:rs type="organization" key="entity-002452">Archiv</tei:rs> nicht
+        verlorengehen wird, aber er muß das Jb.<tei:note xml:id="r0001-fn04" type="editorial"
+          place="foot">The proposed periodical associated with the Photogram Archive.</tei:note>
+        aufs Tapet bringen. </tei:p>
+
+      <tei:p rend="first">Soeben finde ich bei der mühseligen Übertragung von <tei:rs type="person"
+          key="entity-000636">Nottebohm</tei:rs>s Notizen in seinem Handexemplar des <tei:rs
+          type="person" key="entity-000055">B.</tei:rs>-Katalogs (<tei:rs type="organization"
+          key="entity-002430">G. d. M.</tei:rs>) den Vermerk, daß – nach der Auskunft eines <tei:rs
+          type="place" key="entity-002892">Prag</tei:rs>ers Autographen-Sammlers – in der
+        erzbischöflichen Bibliothek zu <tei:rs type="place" key="entity-007899">Olmütz</tei:rs>
+        revidierte Stimmen, vielleicht auch eine solche Partitur, von der <tei:rs type="composition"
+          key="entity-001263"><tei:title>Eroica</tei:title></tei:rs> waren und dann wohl auch sind.
+        Es muß sich um ein Relikt des Eh. Rudolf handeln, dessen Musiksammlung nur z. T. bei der
+          <tei:rs type="organization" key="entity-002430">Ges. d. Mfr.</tei:rs> erhalten
+          ist.<tei:note xml:id="r0001-fn05" type="editorial" place="foot">Schenker incorporated this
+          information into a footnote to his text-critical essay on the symphony,
+              <tei:bibl><tei:title level="a">Eine von Beethoven revidierte Abschrift und die
+              Originalstimmen von 1806,</tei:title>
+            <tei:rs type="work" key="entity-001752"><tei:title level="j">Das Meisterwerk in der
+                Musik</tei:title></tei:rs>, iii (1930), pp. 85–92</tei:bibl>: “NB. Nach einer
+          Mittelung Edm. Schebeks in Prag an Nottebohm sollten um 1875 revidierte Stimmen und
+          (Partitur?) in der erzbischöflichen Residenz zu Olmütz liegen” (p. 87). (“Note: Around
+          1875, according to a communication from Edmund Schebek in Prague to Nottebohm, there was a
+          revised set of parts (and a score?) in the archepiscopal palace in Olmütz [Olomouc]”).
+          (Eng. transl., p. 60). — There is no mention of this source in the most recent Beethoven
+          thematic catalogue, <tei:bibl><tei:title level="m">Ludwig van Beethoven:
+              Thematisch-bibliographisches Werkverzeichnis</tei:title> (Munich: Henle,
+            2014)</tei:bibl>; there may, however, be a set of parts from the first edition (1806)
+          with corrections in Beethoven’s hand in another Czech collection, in the Nelahozeves
+          Castle near Prague, which had belonged to the symphony’s dedicatee, Prince Franz Joseph
+          Maximilian Lobkowitz.</tei:note> Falls die Nachricht neu und für Sie wichtig, empfehle ich
+          <tei:rs type="person" key="entity-000320">Haas</tei:rs> als Mittler. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">2:2!</tei:salute>
+        <tei:salute rend="indent-80">Ihr ganz ergebener</tei:salute>
+        <tei:signed rend="indent-90">
+          <tei:rs key="entity-000164" type="person">O E Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:note type="editorial" place="inline">picture: town square, captioned: “Innsbruck,
+          Tyrol”</tei:note><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#OED"/>Deutsch, Böcklinstraße 26</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied> Dr. Heinrich
+            Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-30">Keilgasse 8</tei:addrLine>
+          <tei:addrLine rend="indent-60">Vienna III</tei:addrLine>
+        </tei:address>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-70"><tei:handShift new="#OED"/><tei:date when="1930-03-02">March
+            2, 1930</tei:date></tei:dateline>
+        <tei:salute>Dear revered Dr. <tei:supplied reason="identity"><tei:rs type="person"
+              key="entity-000632">Schenker</tei:rs></tei:supplied>,<tei:ptr corresp="#r0001-fn01"
+            type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">For your letter,<tei:ptr corresp="#r0001-fn02" type="footnote"/> which was
+        very valuable to me, I can only thank you at the present moment. I too believe that <tei:rs
+          type="person" key="entity-000380">Hoboken</tei:rs> will not be lost to the <tei:rs
+          type="organization" key="entity-002452">Archive</tei:rs> before <tei:rs type="person"
+          key="entity-000344">Haydn</tei:rs>’s rebirth,<tei:ptr corresp="#r0001-fn03"
+          type="footnote"/> but he must bring up the matter of the yearbook.<tei:ptr
+          corresp="#r0001-fn04" type="footnote"/></tei:p>
+
+      <tei:p rend="first">While tiresomely transcribing <tei:rs type="person" key="entity-000636"
+          >Nottebohm</tei:rs>’s notes in his personal copy of his <tei:rs type="person"
+          key="entity-000055">Beethoven</tei:rs> catalog (in the <tei:rs type="organization"
+          key="entity-002430">Society of the Friends of Music</tei:rs>), I have just found the
+        remark that, according to information of an autograph collector from <tei:rs type="place"
+          key="entity-002892">Prague</tei:rs>, there were parts for the “<tei:rs type="composition"
+          key="entity-001263"><tei:title>Eroica</tei:title></tei:rs>”, perhaps also a score, with
+        revisions in the archepiscopal library in <tei:rs type="place" key="entity-007899"
+          >Olmütz</tei:rs>, and they may still be there. This has to be a relic of the Archbishop
+        Rudolph, whose music collection is preserved only in part at the <tei:rs type="organization"
+          key="entity-002430">Society of the Friends of Music</tei:rs>.<tei:ptr
+          corresp="#r0001-fn05" type="footnote"/> If this information is new, and important for you,
+        I would recommend <tei:rs type="person" key="entity-000320">Haas</tei:rs> as
+        intermediary.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">From the two of us to the two of you,</tei:salute>
+        <tei:salute rend="indent-80">Your wholly devoted</tei:salute>
+        <tei:signed rend="indent-90">
+          <tei:rs key="entity-000164" type="person">O. E. Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

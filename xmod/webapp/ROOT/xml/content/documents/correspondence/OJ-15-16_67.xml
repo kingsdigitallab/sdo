@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+
+    <sdo:source>
+      <sdo:correspondence mfID="2109" sdoID="OJ-15-16_68">OJ 15/16, [68]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HW" scope="major">Hans Weisse's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2008</tei:resp>
+      <tei:resp>Translation, 2008</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2018</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2013-10-01" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002737">Weisse ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002715">Weisse ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+      <dc:title>Handwritten letter from Weisse to Schenker, dated February 17, 1931</dc:title>
+
+      <dcterms:created>1931-02-17T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2018-09-27</dcterms:dateSubmitted>
+      <dc:description>Weisse thanks Schenker for sending him letters from Felix-Eberhard von Cube
+        und Walter Braunfels, and in return sends Schenker a letter from Wilhelm Furtwängler. He
+        repeats a request for information about the source of a Mozart letter that he has been
+        quoting in a lecture to the Viennese Society for Music Pedagogy.</dc:description>
+      <dc:subject>Artikel; article; Zitat; citation; Vortrag; lecture</dc:subject>
+
+
+
+      <marcrel:correspondent key="entity-000951">Weisse</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+      <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:lb/><tei:note type="editorial">printed letterhead:</tei:note>
+        <tei:address>
+          <tei:addrLine rend="indent-10"><tei:handShift new="#printed"/>WIEN</tei:addrLine>
+          <tei:addrLine>XIII., WATTMANNGASSE 5</tei:addrLine>
+        </tei:address>
+        <tei:lb/><tei:dateline rend="indent-70"><tei:handShift new="#HW"/><tei:date
+            when="1932-02-17">17. II. 31</tei:date>.</tei:dateline>
+        <tei:salute>Lieber verehrter <tei:rs key="entity-000632" type="person"
+          >Meister</tei:rs>,[1]</tei:salute>
+      </tei:opener>
+
+      <tei:p>besten </tei:p>
+
+      <tei:p>Als </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">Mit den herzlichsten Grüssen in aller Eile</tei:salute>
+        <tei:salute rend="indent-60">Ihr</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs key="entity-000951" type="person"><tei:hi
+              rend="lateinschr">H</tei:hi></tei:rs>.</tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:lb/><tei:note type="editorial">printed letterhead:</tei:note>
+        <tei:address>
+          <tei:addrLine rend="indent-10"><tei:handShift new="#printed"/>VIENNA</tei:addrLine>
+          <tei:addrLine>XIII, WATTMANNGASSE 5</tei:addrLine>
+        </tei:address>
+        <tei:lb/><tei:dateline rend="indent-70"><tei:handShift new="#HW"/><tei:date
+            when="1932-02-17">February 17, 1931</tei:date></tei:dateline>
+        <tei:salute>Dear, revered <tei:rs key="entity-000632" type="person"
+          >Master</tei:rs>,[1]</tei:salute>
+      </tei:opener>
+
+      <tei:p>Best </tei:p>
+
+      <tei:p>In </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">With most cordial greetings, in great haste,</tei:salute>
+        <tei:salute rend="indent-60">Your</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs key="entity-000951" type="person"
+          >H</tei:rs>.</tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

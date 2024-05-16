@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1267" sdoID="OJ-10-3_25">OJ 10/3, [25]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="TPunk" scope="major">unknown typist</tei:handNote>
+      <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="DB">
+      <tei:persName>David Bretherton</tei:persName>
+      <tei:resp>Transcription, 2014</tei:resp>
+      <tei:resp>Translation, 2014</tei:resp>
+      <tei:resp>XML Encoding, 2014</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2014-07-01" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+      <dc:title>Typewritten letter from Otto Erich Deutsch to Schenker, dated November 15,
+        1921</dc:title>
+
+      <dcterms:created>1921-11-15T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2014-07-01</dcterms:dateSubmitted>
+      <dc:description>Deutsch notes the advance payments for Vrieslander's and Hoboken's copies of
+        the luxury edition of the "Moonlight" Sonata, both of which are to be delivered to
+        Vrieslander.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000163">DeutschH</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+      <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:fw type="header" rend="inline">
+          <tei:note type="editorial">printed letterhead:</tei:note>
+          <tei:handShift new="#printed"/>OTTO ERICH DEUTSCH</tei:fw>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#TPunk"/>II. Böcklinstr. 26</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-55"><tei:rs key="entity-002484" type="place">Wien</tei:rs>,
+            <tei:date when="1921-11-15">15. November 1921</tei:date></tei:dateline>
+        <tei:lb/><tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied> Herrn</tei:addrLine>
+          <tei:addrLine rend="indent-10">Professor Dr. <tei:rs key="entity-000632" type="person"
+              >Heinrich Schenker</tei:rs>,</tei:addrLine>
+          <tei:addrLine rend="indent-60"><tei:hi rend="underline"><tei:rs key="entity-002484"
+                type="place"><tei:hi><!-- spaced out -->WIEN</tei:hi></tei:rs>
+            III.</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-65">Keilgasse 8</tei:addrLine>
+        </tei:address>
+        <tei:salute rend="indent-15">Sehr geehrter Herr <tei:rs type="person" key="entity-000632"
+            >Professor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt
+            of this letter is not recorded in Schenker's diary.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Für Ihre Karte vom <tei:date when="1921-11-12">12. d. M.</tei:date> sage
+        ich Ihnen besten Dank und habe <tei:note type="editorial">corr</tei:note> die beiden
+        Pränumerationen für die Luxusausgabe der <tei:rs key="entity-001754" type="work"
+            ><tei:title>Mondschein-Sonate</tei:title></tei:rs> auf der Liste der <tei:rs
+          key="entity-002462" type="organization">Seidelschen Buchhandlung</tei:rs>
+          vorgemerkt.<tei:note xml:id="r0001-fn02" type="editorial" place="foot">L. W. Seidel &amp;
+          Son, Vienna I, Graben 13, which Deutsch had taken over in November 1919.</tei:note> Beide
+        Exemplare gehen also an Herrn <tei:rs key="entity-000922" type="person"
+            ><tei:sic>Vriesslander</tei:sic></tei:rs>, darunter auch das für Herr<tei:add
+          place="interlinear-above" hand="#OED">n</tei:add>
+        <tei:rs key="entity-000380" type="person">Hoboken</tei:rs> bestimmte. Allerdings nicht durch
+        Nachnahme, weil das ins Ausland jetzt kaum möglich ist.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">Mit dem besten Empfehlungen an Sie un<tei:add
+            place="interlinear-above" hand="#OED">d</tei:add> Ihre Frau <tei:rs key="entity-000771"
+            type="person">Gemahlin</tei:rs>, zeichne ich als</tei:salute>
+        <tei:salute rend="indent-65">Ihr ergebener</tei:salute>
+        <tei:signed rend="indent-65"><tei:rs type="person" key="entity-000164">Otto Erich
+            Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:fw type="header" rend="inline">
+          <tei:note type="editorial">printed letterhead:</tei:note>
+          <tei:handShift new="#printed"/>OTTO ERICH DEUTSCH</tei:fw>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#TPunk"/>II. Böcklinstrasse 26</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-55"><tei:rs key="entity-002484" type="place">Vienna</tei:rs>,
+            <tei:date when="1921-11-15">November 15, 1921</tei:date></tei:dateline>
+        <tei:lb/><tei:address>
+          <tei:addrLine rend="indent-10"><tei:supplied reason="clarity">to:</tei:supplied> Professor
+            Dr. <tei:rs key="entity-000632" type="person">Heinrich Schenker</tei:rs>,</tei:addrLine>
+          <tei:addrLine rend="indent-60"><tei:hi rend="underline"><tei:rs key="entity-002484"
+                type="place"><tei:hi><!-- spaced out -->VIENNA</tei:hi></tei:rs>
+            III</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-65">Keilgasse 8</tei:addrLine>
+        </tei:address>
+        <tei:salute rend="indent-15">Very honored <tei:rs type="person" key="entity-000632"
+            >Professor</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">I thank you for your card of the <tei:date when="1921-11-12">12th of the
+          month</tei:date>, and have flagged the two advance payments for the luxury edition of the
+          <tei:rs key="entity-001754" type="work"><tei:title>"Moonlight" Sonata</tei:title></tei:rs>
+        on the list of <tei:rs key="entity-002462" type="organization">Seidel's Book
+          Dealership</tei:rs>.<tei:ptr corresp="#r0001-fn02" type="footnote"/> Both copies are
+        therefore to go to Mr. <tei:rs key="entity-000922" type="person">Vrieslander</tei:rs>,
+        including the one designated for Mr. <tei:rs key="entity-000380" type="person"
+          >Hoboken</tei:rs>. However, not by cash on delivery, because this is now hardly possible
+        abroad.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">With the best regards to you and your <tei:rs
+            key="entity-000771" type="person">wife</tei:rs>, I sign as</tei:salute>
+        <tei:salute rend="indent-65">Yours truly,</tei:salute>
+        <tei:signed rend="indent-65"><tei:rs type="person" key="entity-000164">Otto Erich
+            Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

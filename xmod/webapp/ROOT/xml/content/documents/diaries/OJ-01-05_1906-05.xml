@@ -1,0 +1,193 @@
+<?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
+   xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+   <!--OJ-01-05_1906-05May, 1906 -  ( Diary Series A box: 01 folder: 05 date: Jan 1, 1906–Dec 31, 1906 pages: 12, 12a, 13, 14, 14v (= 15r), 15v, 16, 17, 18 (= 17v), 19-26, 26a, 26b, 26c, 27-31)
+                 
+             -->
+   <sdo:collectionDesc>
+      <sdo:source>
+         <!--Select an sdoID from the controlled list -->
+         <sdo:diary sdoID="OJ-01-05_1906-05"/>
+      </sdo:source>
+
+      <tei:handNotes>
+         <tei:handNote xml:id="HS-black" scope="major">Heinrich Schenker's hand, in black
+            ink</tei:handNote>
+         <tei:handNote xml:id="HS-pencil" scope="minor">Heinrich Schenker's hand, in
+            pencil</tei:handNote>
+      </tei:handNotes>
+
+      <tei:respStmt xml:id="IB">
+         <tei:persName>Ian Bent</tei:persName>
+         <tei:resp>Transcription, 2017</tei:resp>
+         <tei:resp>Translation, 2017</tei:resp>
+         <tei:resp>XML Encoding, 2017</tei:resp>
+         <tei:resp>Footnotes, 2017</tei:resp>
+      </tei:respStmt>
+      <tei:respStmt xml:id="TL">
+         <tei:persName>Tamara Lopez</tei:persName>
+         <tei:resp>XML Encoding Model</tei:resp>
+      </tei:respStmt>
+      <!-- Add additional change elements below to note major changes to the document -->
+      <tei:revisionDesc>
+         <tei:change when="2012-10-03" who="#IB">Template Generated</tei:change>
+      </tei:revisionDesc>
+   </sdo:collectionDesc>
+
+   <sdo:record ID="r0001">
+      <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
+                         The   contains a series of Dublin Core elements. -->
+      <sdo:itemDesc>
+         <dc:title>Diary entry by Schenker May ?, 1906</dc:title>
+         <dcterms:created>1906-05-20T12:00:00Z</dcterms:created>
+         <dcterms:dateSubmitted>2017-05-22</dcterms:dateSubmitted>
+         <dc:description/>
+         <dc:subject/>
+      </sdo:itemDesc>
+
+      <tei:div type="transcription">
+         <tei:opener>
+            <tei:pb n="13"/>
+            <tei:fw type="header" rend="center"><tei:handShift new="#HS-pencil"/>1906</tei:fw><tei:lb/>
+            <tei:date when="1906-05-20"><tei:handShift new="#HS-black"/><tei:date when="1906-05-20"
+                  >?. 5. </tei:date></tei:date>
+         </tei:opener>
+         <tei:ab type="sub-entry" xml:id="r0001-se01"><tei:rs type="person" key="entity-000743"
+                  ><tei:hi rend="lateinschr">Alph. v. R.</tei:hi></tei:rs> sichert die materielle
+            Förderung des <tei:rs type="work" key="entity-001724">Werk</tei:rs>es zu.</tei:ab>
+      </tei:div>
+
+      <tei:div type="translation">
+         <tei:opener>
+            <tei:pb n="13"/>
+            <tei:fw type="header" rend="center"><tei:handShift new="#HS-pencil"/>1906</tei:fw><tei:lb/>
+            <tei:date when="1906-05-20">
+               <tei:handShift new="#HS-black"/><tei:date when="1906-05-20">May
+               ?</tei:date></tei:date>
+         </tei:opener>
+         <tei:ab corresp="r0001-se01"><tei:rs type="person" key="entity-000743">Alphons von
+               Rothschild</tei:rs> guarantees the financial support of the <tei:rs type="work"
+               key="entity-001724">work</tei:rs>.</tei:ab>
+      </tei:div>
+   </sdo:record>
+
+   <sdo:record ID="r0002">
+      <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
+                         The   contains a series of Dublin Core elements. -->
+      <sdo:itemDesc>
+         <dc:title>Diary entry by Schenker May 22, 1906</dc:title>
+         <dcterms:created>1906-05-22T12:00:00Z</dcterms:created>
+         <dcterms:dateSubmitted>2017-05-22</dcterms:dateSubmitted>
+         <dc:description/>
+         <dc:subject/>
+      </sdo:itemDesc>
+
+      <tei:div type="transcription">
+         <tei:opener>
+            <tei:date when="1906-05-22">22. 5.</tei:date>
+         </tei:opener>
+         <tei:ab type="sub-entry" xml:id="r0002-se01"><tei:handShift new="#HS-pencil"/>Am Abend der
+               <tei:handShift new="#HS-black"/>Auff. der „<tei:title>Wildente</tei:title>“
+               <tei:handShift new="#HS-pencil"/>in Wien, <tei:handShift new="#HS-black"/><tei:rs
+               key="entity-000401" type="person">Ibsen</tei:rs> †.<tei:note xml:id="r0002-fn01"
+               type="editorial" place="foot">Henrik Ibsen in fact died on March 23, 1906. The first
+               performance of <tei:title level="m">Wild Duck</tei:title> was given at the Theater an
+               der Wien on May 23, as reported in the <tei:rs key="entity-002559" type="journal"
+                     ><tei:title level="j">Neue freie Presse</tei:title></tei:rs> on that date, and
+               retrospectively on May 24 in which review it records Ibsen's death. Hence Schenker
+               simply has the date wrong.</tei:note> Irrige Urteile der Presse.</tei:ab>
+      </tei:div>
+
+      <tei:div type="translation">
+         <tei:opener>
+            <tei:date when="1906-05-22">May 22</tei:date>
+         </tei:opener>
+         <tei:ab corresp="r0002-se01">Death of <tei:rs key="entity-000401" type="person"
+               >Ibsen</tei:rs>
+            <tei:handShift new="#HS-pencil"/>on the evening of <tei:handShift new="#HS-black"/>the
+            first performance <tei:handShift new="#HS-pencil"/>in Vienna <tei:handShift
+               new="#HS-black"/>of <tei:title level="m">Wild Duck</tei:title>.<tei:ptr
+               corresp="#r0002-fn01" type="footnote"/> Erroneous judgments by the press.</tei:ab>
+
+      </tei:div>
+   </sdo:record>
+
+   <sdo:record ID="r0003">
+      <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
+                         The   contains a series of Dublin Core elements. -->
+      <sdo:itemDesc>
+         <dc:title>Diary entry by Schenker May 27, 1906</dc:title>
+         <dcterms:created>1906-05-27T12:00:00Z</dcterms:created>
+         <dcterms:dateSubmitted>2017-05-22</dcterms:dateSubmitted>
+         <dc:description/>
+         <dc:subject/>
+      </sdo:itemDesc>
+
+      <tei:div type="transcription">
+         <tei:opener>
+            <tei:date when="1906-05-27">27. 5.</tei:date>
+         </tei:opener>
+         <tei:ab type="sub-entry" xml:id="r0003-se01">„<tei:title>Und Pippa tanzt</tei:title>“ von
+               <tei:rs key="entity-003409" type="person">G. Hauptmann</tei:rs>. Das Weib der
+               <tei:unclear reason="reading">hohen</tei:unclear> Naturkraft des Mannes erliegend,
+            zugleich <tei:handShift new="#HS-pencil"/>aber auch nach <tei:handShift new="#HS-black"
+            />Träumen des Künstlers verlangend.<tei:note xml:id="r0003-fn01" type="editorial"
+               place="foot">Hauptmann's <tei:title level="m">Und Pippa tanzt!</tei:title> was first
+               performed on January 19, 1906 in Berlin; its Vienna first performance took place at
+               the Theater an der Wien on May 25. The <tei:rs key="entity-002559" type="journal"
+                     ><tei:title level="j">Neue freie Presse</tei:title></tei:rs> review for that
+               day stressed the work's "dark symbolism" and the demands it places on its
+               audience.</tei:note></tei:ab>
+      </tei:div>
+
+      <tei:div type="translation">
+         <tei:opener>
+            <tei:date when="1906-05-27">May 27</tei:date>
+         </tei:opener>
+         <tei:ab corresp="r0003-se01"><tei:title level="m">Und Pippa tanzt</tei:title> by <tei:rs
+               key="entity-003409" type="person">Gerhard Hauptmann</tei:rs>. The woman succumbing to
+            the <tei:unclear reason="original_unclear">high</tei:unclear> natural power of the man,
+            but at the same time also <tei:unclear reason="meaning">longing</tei:unclear> for the
+            dreams of the artist.<tei:ptr corresp="#r0003-fn01" type="footnote"/></tei:ab>
+
+      </tei:div>
+   </sdo:record>
+
+   <sdo:record ID="r0004">
+      <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
+                         The   contains a series of Dublin Core elements. -->
+      <sdo:itemDesc>
+         <dc:title>Diary entry by Schenker May 29, 1906</dc:title>
+         <dcterms:created>1906-05-29T12:00:00Z</dcterms:created>
+         <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
+            2017-05-22</dcterms:dateSubmitted>
+         <dc:description/>
+         <dc:subject/>
+      </sdo:itemDesc>
+
+      <tei:div type="transcription">
+         <tei:opener>
+            <tei:date when="1906-05-29">29. 5</tei:date>
+         </tei:opener>
+         <tei:ab type="sub-entry" xml:id="r0004-se01">Korrektur des 1. Th. des <tei:rs type="work"
+               key="entity-001724">Buch</tei:rs>es abgeschlossen.<tei:note xml:id="r0004-fn01"
+               type="editorial" place="foot">Schenker's <tei:rs type="work" key="entity-001724"
+                     ><tei:title level="m">Theory of Harmony</tei:title></tei:rs> is divided into
+               two parts, the first of which is "Theoretischer Teil" (Theoretical Part), pp. 1‒277
+               (Eng. transl., pp. 1‒208).</tei:note></tei:ab>
+      </tei:div>
+
+      <tei:div type="translation">
+         <tei:opener>
+            <tei:date when="1906-05-29">May 29</tei:date>
+         </tei:opener>
+         <tei:ab corresp="r0004-se01">Proofs of Part I of the <tei:rs type="work"
+               key="entity-001724">book</tei:rs> finished.<tei:ptr corresp="#r0004-fn01"
+               type="footnote"/></tei:ab>
+      </tei:div>
+   </sdo:record>
+
+
+</sdo:recordCollection>

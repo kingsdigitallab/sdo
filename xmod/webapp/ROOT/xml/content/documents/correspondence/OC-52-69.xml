@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2438" sdoID="OC-52-69">OC 52/69</sdo:correspondence>
+    </sdo:source>
+    <tei:handNotes>
+      <tei:handNote xml:id="TPue" scope="major">Universal Edition's typist</tei:handNote>
+      <tei:handNote xml:id="EH" scope="minor">Emil Hertzka's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2006, 2020</tei:resp>
+      <tei:resp>Translation, 2006, 2020</tei:resp>
+      <tei:resp>XML Encoding, 2022</tei:resp>
+
+    </tei:respStmt>
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-02-07" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002702">UE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002701">UE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002700">Hertzka ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+      <dc:title>Typewritten letter from Hertzka (UE) to Schenker, dated December 1, 1911</dc:title>
+
+      <dcterms:created>1911-12-01T15:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2022-03-15</dcterms:dateSubmitted>
+      <dc:description>Hertkza encloses a letter from Eugen d'Albert and is having the requested book
+        returned to Schenker.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-002408">Universal Edition</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000356">Emil Hertzka</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>„Universal-Edition“ A.-G.</tei:addrLine>
+          <tei:addrLine>(Jos. Aibl Verlag, G.m.b.H.)</tei:addrLine>
+          <tei:addrLine>Leipzig <tei:supplied reason="spacer">/</tei:supplied> Sternwartestrasse
+            1520.</tei:addrLine>
+          <tei:addrLine><tei:del rend="overstrike">Wien <tei:supplied reason="spacer"
+                >/</tei:supplied> I., Wipplingerstrasse 32.</tei:del></tei:addrLine>
+          <tei:addrLine><tei:handShift new="#stamp"/>Wien <tei:supplied reason="spacer"
+              >/</tei:supplied> I., Reichstratstrasse 8</tei:addrLine>
+          <tei:addrLine><tei:note type="editorial" place="inline"><tei:hi rend="italic"
+                >etc.</tei:hi></tei:note></tei:addrLine>
+        </tei:address>
+        <tei:byline><tei:handShift new="#TPue"/>
+          <tei:persName type="typist">R</tei:persName></tei:byline><tei:lb/>
+        <tei:dateline rend="indent-70"><tei:handShift new="#printed"/>
+          <tei:placeName>Wien</tei:placeName>, <tei:handShift new="#TPue"/><tei:date
+            when="1911-12-01">1. Dez. 1911</tei:date></tei:dateline><tei:lb/>
+        <tei:address>
+          <tei:addrLine rend="ident-20">Wohlgeboren Herrn Prof. Dr. <tei:persName>Heinrich <tei:hi
+                rend="sperr">Schenker</tei:hi></tei:persName></tei:addrLine>
+          <tei:addrLine rend="indent-80">
+            <tei:hi rend="underline sperr">Wien</tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:salute>Sehr geehrter Herr <tei:rs key="entity-000632" type="person"
+          >Doktor</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Besten Dank für die Beilage des Schreibens von <tei:rs type="person"
+          key="entity-000150">d'Albert</tei:rs>, das ich inliegend retourniere.<tei:note
+          xml:id="r0001-fn01" type="editorial" place="foot">= <tei:ref type="correspondence"
+            cRef="OJ-9-6_52">OJ 9/6, [52]</tei:ref>, dated November 27, 1911, of which the
+          postscript reads: "Von Ihrer Ausgabe der <tei:rs type="work" key="entity-001730"
+              ><tei:title>chromatischen Fantasie</tei:title></tei:rs> bin ich <tei:hi
+            rend="underline">entzückt</tei:hi>!" ("I am <tei:hi rend="underline">enchanted</tei:hi>
+          by your edition of the <tei:rs type="work" key="entity-001730"><tei:title level="m"
+              >Chromatic Fantasy</tei:title></tei:rs>").</tei:note> Ich lasse gleichzeitig das Buch
+          <tei:rs type="person" key="entity-003312">Grove</tei:rs>,
+          <tei:title>Beethoven</tei:title><tei:note xml:id="r0001-fn02" type="editorial"
+          place="foot"><tei:bibl><tei:author>Sir George Grove</tei:author>, <tei:title level="m"
+              >Beethoven and His Nine Symphonies</tei:title> (London: Novello, 1896)</tei:bibl>, of
+          which Schenker possessed a copy of the German translation by Max Hehmann (London 1906)
+          (see <tei:bibl><tei:title level="m">Musik und Theater, enthaltend die Bibliothek des Herrn
+              Dr. Heinrich Schenker, Wien</tei:title> (Vienna: Antiquariat Heinrich Hinterberger,
+            n.d.)</tei:bibl>, item 40). In <tei:ref type="correspondence" cRef="WSLB-86">WSLB
+            86</tei:ref>, November 30, 1911, Schenker states that he had lent it to Hertzka as a
+          "model" the previous year, and now requests its return in time for correction of
+          proofs.</tei:note> an Sie zurückgelangen und verbleibe mit verbindlichen Grüssen </tei:p>
+
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Ihr in Hochschätzung</tei:salute>
+        <tei:salute rend="indent-70">ergebener</tei:salute>
+        <tei:signed rend="indent-80"><tei:handShift new="#EH"/><tei:rs key="entity-000356"
+            type="person">Hertzka</tei:rs></tei:signed><tei:lb/><tei:lb/>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p><tei:hi rend="underline">N. S.</tei:hi> Von <tei:rs type="person" key="entity-000150"
+            >d'Albert</tei:rs>s Bemerkung, dass er von Ihrer Ausgabe der "<tei:rs type="work"
+            key="entity-001730"><tei:title>Chromatischen Fantasie</tei:title></tei:rs>" entzückt
+          sei, darf ich wohl für meine Propaganda Gebrauch machen? </tei:p>
+      </tei:postscript>
+
+    </tei:div>
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>Universal Edition &amp; Co.</tei:addrLine>
+          <tei:addrLine>(Jos. Aibl Publisher &amp; Co.)</tei:addrLine>
+          <tei:addrLine>Leipzig <tei:supplied reason="spacer">/</tei:supplied> Sternwartestrasse
+            1520</tei:addrLine>
+          <tei:addrLine><tei:del rend="overstrike">Vienna <tei:supplied reason="spacer"
+                >/</tei:supplied> I, Wipplingerstrasse 32</tei:del></tei:addrLine>
+          <tei:addrLine><tei:handShift new="#stamp"/>Vienna <tei:supplied reason="spacer"
+              >/</tei:supplied> I, Reichstratstrasse 8</tei:addrLine>
+          <tei:addrLine><tei:note type="editorial" place="inline"><tei:hi rend="italic"
+                >etc.</tei:hi></tei:note></tei:addrLine>
+        </tei:address>
+        <tei:byline><tei:handShift new="#TPue"/>
+          <tei:persName type="typist">R</tei:persName></tei:byline><tei:lb/>
+        <tei:dateline rend="indent-70"><tei:handShift new="#printed"/>
+          <tei:placeName>Vienna</tei:placeName>, <tei:handShift new="#TPue"/><tei:date
+            when="1911-12-01">December 1, 1911</tei:date></tei:dateline><tei:lb/>
+        <tei:address>
+          <tei:addrLine rend="ident-20">Prof. <tei:persName>Heinrich <tei:hi rend="sperr"
+                >Schenker</tei:hi></tei:persName>, Esq.</tei:addrLine>
+          <tei:addrLine rend="indent-80">
+            <tei:hi rend="underline sperr">Vienna</tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:salute>Dear Dr. <tei:supplied reason="identity"><tei:rs key="entity-000632"
+              type="person">Schenker</tei:rs></tei:supplied>,</tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Many thanks for enclosing the letter from <tei:rs type="person"
+          key="entity-000150">d'Albert</tei:rs>, which I return herewith.<tei:ptr
+          corresp="#r0001-fn01" type="footnote"/> I am arranging at the same time to have the book
+          <tei:rs type="person" key="entity-003312">Grove</tei:rs>, <tei:title level="m"
+          >Beethoven</tei:title> returned to you<tei:ptr corresp="#r0001-fn02" type="footnote"/> and
+        remain with sincere good wishes,</tei:p>
+
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Kind regards,</tei:salute>
+        <tei:salute rend="indent-70"><tei:supplied reason="clarity">Your</tei:supplied>
+          devoted</tei:salute>
+        <tei:signed rend="indent-80"><tei:handShift new="#EH"/><tei:rs key="entity-000356"
+            type="person">Hertzka</tei:rs></tei:signed><tei:lb/><tei:lb/>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p><tei:hi rend="underline">P. S.</tei:hi> Might I make use of d'<tei:rs type="person"
+            key="entity-000150">Albert</tei:rs>'s remark that he is enchanted by your edition of the
+            <tei:rs type="work" key="entity-001730"><tei:title level="m">Chromatic
+              Fantasy</tei:title></tei:rs> for purposes of my publicity?</tei:p>
+      </tei:postscript>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2385" sdoID="LC-ASC-7-50_15">LC ASC 7/50, [15]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="AS-typ" scope="sole">Arnold Schoenberg as typist</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2020</tei:resp>
+      <tei:resp>XML Encoding, 2020</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2013-07-19" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-007495">ViolinM ~
+        ASchoenberg</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+      <dc:title>Typewritten letter (carbon copy) from Schoenberg to Moriz Violin, dated April 10,
+        1945</dc:title>
+
+      <dcterms:created>1945-04-10T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2020-02-22</dcterms:dateSubmitted>
+      <dc:description>Schoenberg has written to Pierre Monteux on behalf of Moriz
+        Violin.</dc:description>
+      <dc:subject>performance; intrude; desperate; consolation</dc:subject>
+
+
+      <marcrel:correspondent key="entity-entity-000798">ASchoenberg</marcrel:correspondent>
+      <marcrel:recipient key="entity-000913">ViolinM</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:note type="editorial" place="inline">This letter is in English; obvious typing
+          errors have been silently corrected</tei:note><tei:lb/><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#AS-typ"/>Mr. Moriz Violin</tei:addrLine>
+          <tei:addrLine>55 Mason Street</tei:addrLine>
+          <tei:addrLine>Hotel Ambassador</tei:addrLine>
+          <tei:addrLine>San Francisco, Calif.</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-70"><tei:date when="1945-04-10">April 10,
+          1945</tei:date></tei:dateline>
+        <tei:salute>Dear <tei:rs type="person" key="entity-000913">Friend</tei:rs>:<tei:note
+            xml:id="r0001-fn01" type="editorial" place="foot">This letter is written in response to
+              <tei:ref type="correspondence" cRef="LC-ASC-27-45_30">LC ASC 27/45, [30]</tei:ref>,
+            April 5, 1945.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">only to inform you that just now I have written in the sense you asked me
+        to Monteux.<tei:note xml:id="r0001-fn02" type="editorial" place="foot">Pierre Monteux
+          (1875‒1964), internationally renowned conductor; conductor of the San Francisco Orchestra
+          1936‒52.</tei:note></tei:p>
+
+      <tei:p rend="first">I am sure he will invite you, or do you intend to write him? Hotel
+          Fairmont<tei:supplied reason="cut-off">.</tei:supplied></tei:p>
+
+      <tei:p rend="first">I could not write him earlier, bec<tei:supplied reason="cut-off"
+          >ause</tei:supplied> of the performance of my <tei:title>Chamber Symphony</tei:title>
+        <tei:supplied reason="cut-off">so</tei:supplied> I hesitated to intrude upon him.</tei:p>
+
+      <tei:p rend="first">Let me hear whether your talk with him satisfied you. I hope you come
+        really once to Los Angeles. And, please: dont be so desperate. Everything becomes softer
+        after some time. And if you think what other people in Europe had to suffer, Jews, Poles,
+        Russians, men, women and small children, you might find some consolation in the feeling that
+        this has been spared to you.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">Many cordial greetings and best success,</tei:salute>
+        <tei:salute rend="indent-20">yours faithfully</tei:salute><tei:lb/>
+        <tei:note type="editorial" place="inline">unsigned</tei:note>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation"/>
+
+  </sdo:record>
+</sdo:recordCollection>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1249" sdoID="OJ-10-3_7">OJ 10/3, [7]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="OED" scope="major">Otto Erich Deutsch's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="DB">
+      <tei:persName>David Bretherton</tei:persName>
+      <tei:resp>Transcription, 2014</tei:resp>
+      <tei:resp>Translation, 2014</tei:resp>
+      <tei:resp>XML Encoding, 2014</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2014-06-10" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+      <dc:title>Handwritten letter from Otto Erich Deutsch Deutsch to Schenker, dated January 16,
+        1920</dc:title>
+
+      <dcterms:created>1920-01-16T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2014-06-10</dcterms:dateSubmitted>
+      <dc:description>Deutsch will write to the Beethoven House in Bonn to seek permission to
+        reproduce the manuscript of the "Moonlight" Sonata. He suggests using the first edition as
+        the source for the missing opening and closing bars, and asks Schenker to refrain from
+        polemics in his commentary. Copies of the manuscripts of Beethoven's piano sonatas Opp. 28,
+        109, 110 and 111 should not be difficult to obtain, and he has made inquiries regarding the
+        manuscripts of Beethoven's Piano Sonata Op. 106 and Mozart's A minor Rondo K.
+        511.</dc:description>
+      <dc:subject/>
+
+
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000163">DeutschH</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+      <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:fw type="header" rend="inline">
+          <tei:note type="editorial">printed letterhead:</tei:note>
+          <tei:handShift new="#printed"/>OTTO ERICH DEUTSCH</tei:fw>
+        <tei:dateline rend="indent-40"><tei:handShift new="#OED"/><tei:rs key="entity-002484"
+            type="place">Wien</tei:rs>, <tei:date when="1920-01-16"
+          >16.I.20</tei:date>.</tei:dateline>
+        <tei:salute rend="indent-35">Sehr geehrter Herr <tei:rs type="person" key="entity-000632"
+            >Professor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt
+            of this letter is recorded in Schenker's diary at OJ 3/1, p. 2209 (January 19, 1920):
+            "Von O. E. Deutsch (Br.): das Beethovenhaus werde um die Erlaubnis angegangen werden,
+            den Vertrag werde er mir zuschicken." ("From Otto Erich Deutsch (letter): the Beethoven
+            House will be asked for permission, he will send me the
+          contract.")</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Mit besten Dank bestätige ich Ihre Karte vom <tei:date when="1920-01-14"
+          >14.</tei:date> und Ihre Visitenkarte vom <tei:date when="1920-01-15">15. d.
+          Mts.</tei:date>, deren Beilage ich hier zurückstelle. Ich habe heute mit Direktor <tei:rs
+          key="entity-000356" type="person">Hertzka</tei:rs>, der Ihnen schon geantwortet hat,
+        gesprochen und schreibe gleichzeitig an den Vorstand des <tei:rs key="entity-004286"
+          type="place">Beethoven-Haus</tei:rs>es in <tei:rs key="entity-002603" type="place"
+          >Bonn</tei:rs>. <tei:rs key="entity-000356" type="person">Hertzka</tei:rs> beabsichtigt,
+        von dem <tei:rs key="entity-000055" type="person">Beethoven</tei:rs>-Heft mehr als 200,
+          <tei:del rend="overstrike" hand="#OED">bei</tei:del> 500 Exemplare drucken zu lassen,
+        wodurch sich Ihr Honorar ums 1½fache vermehren würde. Wir planen auch, die Hefte mit
+        französischem und englischem Text herauszugeben, neben dem deutschen zur Wahl, was Sie in
+        diesem Falle vielleicht gutheißen werden. Wenn wir in <tei:rs key="entity-002603"
+          type="place">Bonn</tei:rs> kein Glück haben, würden wir Ihre anderen Vorlagen gerne
+        benützen, deren Publikation wir mit Ihrem Einverständnis und Ihrer Mitwirkung auch planen.
+        Die <tei:rs key="entity-004623" type="organization">Berliner Bibliothek</tei:rs> und Herr
+          <tei:rs key="entity-000454" type="person">Koch</tei:rs>,<tei:note xml:id="r0001-fn02"
+          type="editorial" place="foot">Louis Koch (1862‒1932): Frankfurt collector of music
+          autographs and antiquarian dealer, who owned (among other manuscripts) the autograph score
+          of Beethoven's Sonata in A major, Op. 101. The Prussian State Library in Berlin owned the
+          autograph scores of Opp. 110 and 111; the score of Op. 28 was in the collection of the
+          Beethoven House, Bonn, in 1904.</tei:note> in deren Besitz ich die Handschriften von op.
+          <tei:rs key="entity-001214" type="composition">28</tei:rs>, <tei:del rend="overstrike"
+          hand="#OED"><tei:rs key="entity-001216" type="composition">109</tei:rs>,</tei:del>
+        <tei:rs key="entity-001203" type="composition">110</tei:rs> und <tei:rs key="entity-001210"
+          type="composition">111</tei:rs> vermute, wird ebenso wie <tei:rs key="entity-000970"
+          type="person">Frau Wittgenstein</tei:rs><tei:note xml:id="r0001-fn03" type="editorial"
+          place="foot">Leopoldine Wittgenstein (1850–1926): mother of the pianist Paul Wittgenstein
+          and the philosopher Ludwig Wittgenstein. The autograph of Op. 109 was auctioned in the
+          1940s and acquired by the Library of Congress, Washington.</tei:note>
+        <tei:add place="inline" hand="#OED">(<tei:rs key="entity-001216" type="composition"
+            >109</tei:rs>)</tei:add> wohl keine Schwierigkeiten machen. An meinen einstigen
+        Kollegen, Legation<tei:supplied reason="spelling">s</tei:supplied>rat der Ukraine Dr.
+          <tei:rs key="entity-005462" type="person">Wladimir Zaloziecki</tei:rs>, habe ich wegen op.
+          <tei:rs key="entity-001205" type="composition">106</tei:rs> geschrieben. Ebenso an <tei:rs
+          key="entity-002422" type="organization">Peters</tei:rs> in <tei:rs key="entity-002479"
+          type="place">Leipzig</tei:rs>, wegen des <tei:rs key="entity-005461" type="composition"
+          >a-Rondos</tei:rs> von <tei:rs key="entity-000612" type="person">Mozart</tei:rs>, das Herr
+        Dr. <tei:rs key="entity-003510" type="person">Hans Gál</tei:rs> herausgeben soll.</tei:p>
+
+      <tei:p rend="first"><tei:pb n="2"/> Könnte man die fehlenden Takte der <tei:rs
+          key="entity-001212" type="composition"><tei:title>Mondscheinsonate</tei:title></tei:rs>
+        nicht am Anfang und am Schluß, nach der Erstausgabe gesetzt, in Notendruck vor und hinter
+        das Faksimile des Manuskripts auf eigene Blätter stellen? Die Varianten<tei:note
+          xml:id="r0001-fn04" type="editorial" place="foot">By <tei:hi rend="italic"
+            >Varianten</tei:hi>, Deutsch probably means Beethoven's sketches for the sonata, three
+          leaves of which were reproduced in the edition and discussed in Schenker's
+          commentary.</tei:note> müßte man mitreproduzieren. Was Sie über diese Korrektur und den
+        Wert der Handschrift gegenüber allen Ausgaben sagen wollen, ist sehr willkommen. Nur bitte
+        ich Sie, in diesem salonhaften Rahmen sich der Polemik zu enthalten; Ihre nüchternen
+        Feststellungen werden den Sachverständigen ohnedies zeigen, wo die Dummheit früherer
+        Herausgeber zu merken ist.</tei:p>
+
+      <tei:p rend="first">Die Kosten von Neuaufnahmen trüge die <tei:rs key="entity-002408"
+          type="organization">Universal-Edition</tei:rs>.</tei:p>
+
+      <tei:p rend="first">Die <tei:rs key="entity-004071" type="person"
+          >Prieger</tei:rs>-Ausgabe<tei:note xml:id="r0001-fn05" type="editorial" place="foot"
+              ><tei:bibl><tei:title level="m">As dur-Sonate op. 26 von Ludwig van Beethoven:
+              Facsimile</tei:title>, ed. Erich Prieger (Bonn: Friedrich Cohen,
+          1895)</tei:bibl>.</tei:note> soll ebenso wie <tei:rs key="entity-000612" type="person"
+          >Mozart</tei:rs>s <tei:rs key="entity-001642" type="composition"
+            ><tei:title>Requiem</tei:title></tei:rs> (<tei:rs key="entity-005463" type="person"
+          >Schnerich</tei:rs>)<tei:note xml:id="r0001-fn06" type="editorial" place="foot"
+              ><tei:bibl><tei:title level="m">Mozarts Requiem: Nachbildung der Originalhandschrift
+              Cod. 17561 der K. K. Hofbibliothek in Wien in Lichtdruck</tei:title>, ed. Alfred
+            Schnerich (Vienna: Gesellschaft für Graphische Industrie, 1913)</tei:bibl>.</tei:note>
+        nur mit Bewilligung der früheren Editoren neu gedruckt werden.</tei:p>
+
+      <tei:p rend="first">Sie sollen der <tei:rs key="entity-002408" type="organization"
+          >U.-E.</tei:rs> und mir nichts billiger machen, auch wenn Sie den Kommentar in der <tei:rs
+          key="entity-001758" type="work"><tei:title>Kleinen Bibliothek</tei:title></tei:rs> wieder
+        verwenden.</tei:p>
+
+      <tei:p rend="first">Die bibliophilen oder musikophilen Drucke redigiere ich für die <tei:rs
+          key="entity-002408" type="organization">U.-E.</tei:rs> und bezahle die Herausgeber selbst.
+          <tei:hi rend="underline">Sie</tei:hi> erhalten außer 3 Freiexemplaren 8 (acht) Prozent vom
+        Ladenpreis jedes verkauften Exemplars. Ein förmlicher Vertrag folgt noch.</tei:p>
+
+      <tei:p rend="first">Ich erlaube mir, Sie auf <tei:rs key="entity-000435" type="person"
+          >Kinsky</tei:rs>s Katalog der Autographen des <tei:rs key="entity-002411"
+          type="organization">Heyer-Museums</tei:rs> in <tei:rs key="entity-002603" type="place"
+          >Bonn</tei:rs><tei:note xml:id="r0001-fn07" type="editorial" place="foot"><tei:bibl>Georg
+            Kinsky, <tei:title level="m">Musikhistorisches Museum von Wilhelm Heyer in Cöln:
+              Katalog, IV: Musik-Autographen</tei:title> (Cologne: Wilhelm Heyer, and Leipzig:
+            Breitkopf &amp; Härtel, 1916)</tei:bibl>.</tei:note> aufmerksam zu machen (<tei:rs
+          key="entity-002430" type="organization">Ges. d. Musikfr.</tei:rs> und ich haben ein
+        Exemplar z. B.)<tei:subst>
+          <tei:add place="inline" hand="#OED">.</tei:add>
+          <tei:del rend="overstrike" hand="#OED">und – vielleicht überflüssigerweise – auf
+            Müller-Reuter.</tei:del>
+        </tei:subst></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50">Ihr sehr ergebener</tei:salute>
+        <tei:signed rend="indent-55"><tei:rs type="person" key="entity-000164">Otto Erich
+            Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:fw type="header" rend="inline">
+          <tei:note type="editorial">printed letterhead:</tei:note>
+          <tei:handShift new="#printed"/>OTTO ERICH DEUTSCH</tei:fw>
+        <tei:dateline rend="indent-40"><tei:handShift new="#OED"/><tei:rs key="entity-002484"
+            type="place">Vienna</tei:rs>, <tei:date when="1920-01-16">January 16,
+          1920</tei:date></tei:dateline>
+        <tei:salute rend="indent-35">Very honored <tei:rs type="person" key="entity-000632"
+            >Professor</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">I acknowledge with many thanks your postcard of the <tei:date
+          when="1920-01-14">14th</tei:date> and your calling card of the <tei:date when="1920-01-15"
+          >15th of the month</tei:date>, the attachment to which I return herewith. Today I spoke
+        with Director <tei:rs key="entity-000356" type="person">Hertzka</tei:rs>, who has already
+        replied to you, and I am writing concurrently to the Board of the <tei:rs
+          key="entity-004286" type="place">Beethoven House</tei:rs> in <tei:rs key="entity-002603"
+          type="place">Bonn</tei:rs>. <tei:rs key="entity-000356" type="person">Hertzka</tei:rs>
+        plans to have more than 200, <tei:supplied reason="clarity">in fact</tei:supplied>
+        <tei:del rend="overstrike" hand="#OED">near</tei:del> 500 copies of the <tei:rs
+          key="entity-000055" type="person">Beethoven</tei:rs> volume printed, so that your royalty
+        would increase by one-and-a-half times. We are also planning to bring out the volume with
+        French and English texts alongside the German, something which I trust you will endorse. If
+        we have no luck with <tei:rs key="entity-002603" type="place">Bonn</tei:rs> we would like to
+        use your other source material, whose publication we also plan, with your consent and
+        cooperation. The <tei:rs key="entity-004623" type="organization">Berlin Library</tei:rs> and
+        Mr. <tei:rs key="entity-000454" type="person">Koch</tei:rs><tei:ptr corresp="#r0001-fn02"
+          type="footnote"/> (in whose possession, I assume, are the manuscripts of Opp. <tei:rs
+          key="entity-001214" type="composition">28</tei:rs>, <tei:del rend="overstrike" hand="#OED"
+            ><tei:rs key="entity-001216" type="composition">109</tei:rs>,</tei:del>
+        <tei:rs key="entity-001203" type="composition">110</tei:rs>, and <tei:rs key="entity-001210"
+          type="composition">111</tei:rs>) will probably cause no trouble; nor will <tei:rs
+          key="entity-000970" type="person">Mrs. Wittgenstein</tei:rs><tei:ptr corresp="#r0001-fn03"
+          type="footnote"/>
+        <tei:add place="inline" hand="#OED">(Op. <tei:rs key="entity-001216" type="composition"
+            >109</tei:rs>)</tei:add>. I wrote to my former colleague, the Ukrainian Legation
+        Counselor Dr. <tei:rs key="entity-005462" type="person">Vladimir Zaloziecki</tei:rs>,
+        concerning Op. <tei:rs key="entity-001205" type="composition">106</tei:rs>, also to <tei:rs
+          key="entity-002422" type="organization">Peters</tei:rs> in <tei:rs key="entity-002479"
+          type="place">Leipzig</tei:rs> concerning <tei:rs key="entity-000612" type="person"
+          >Mozart</tei:rs>'s <tei:rs key="entity-005461" type="composition">A minor Rondo</tei:rs>,
+        which Dr. <tei:rs key="entity-003510" type="person">Hans Gál</tei:rs> is supposed to bring
+        out.</tei:p>
+
+      <tei:p rend="first"><tei:pb n="2"/> Could we print the measures missing from the beginning and
+        end of the <tei:rs key="entity-001212" type="composition"><tei:title>"Moonlight"
+            Sonata</tei:title></tei:rs>
+        <tei:supplied reason="clarity">autograph</tei:supplied> on separate pages, as they appear in
+        the first edition, in front of and at the end of the manuscript facsimile? The
+          variants<tei:ptr corresp="#r0001-fn04" type="footnote"/> would also have to be reproduced.
+        You are very welcome to say what you want about this correction and the value of the
+        manuscript to all editions. I ask you merely to refrain from polemics in this salon-like
+        situation; your sober observations will be evident to the experts without them, while the
+        foolishness of former editors will be easy to discern.</tei:p>
+
+      <tei:p rend="first">The cost of new photographs will be borne by <tei:rs key="entity-002408"
+          type="organization">Universal Edition</tei:rs>.</tei:p>
+
+      <tei:p rend="first">The <tei:rs key="entity-004071" type="person">Prieger</tei:rs>
+          edition,<tei:ptr corresp="#r0001-fn05" type="footnote"/> like that of <tei:rs
+          key="entity-000612" type="person">Mozart</tei:rs>'s <tei:rs key="entity-001642"
+          type="composition"><tei:title level="m">Requiem</tei:title></tei:rs> (<tei:rs
+          key="entity-005463" type="person">Schnerich</tei:rs>),<tei:ptr corresp="#r0001-fn06"
+          type="footnote"/> may be reprinted only with the permission of the former editors.</tei:p>
+
+      <tei:p rend="first">You should not sell yourself too cheaply to <tei:rs key="entity-002408"
+          type="organization">UE</tei:rs> or to me, even if you reuse the commentary in the <tei:rs
+          key="entity-001758" type="work"><tei:title level="m">Little
+        Library</tei:title></tei:rs>.</tei:p>
+
+      <tei:p rend="first">I edit the bibliographical and musicological publications for <tei:rs
+          key="entity-002408" type="organization">UE</tei:rs>, and I pay the editors myself. In
+        addition to three complimentary copies, <tei:hi rend="underline">you</tei:hi> will receive 8
+        (eight) per cent of the retail price of each copy sold. A formal contract will
+        follow.</tei:p>
+
+      <tei:p rend="first">Allow me to draw your attention to <tei:rs key="entity-000435"
+          type="person">Kinsky</tei:rs>'s catalogue of autograph manuscripts of the <tei:rs
+          key="entity-002411" type="organization">Heyer Museum</tei:rs> in <tei:rs
+          key="entity-002603" type="place">Bonn</tei:rs><tei:ptr corresp="#r0001-fn07"
+          type="footnote"/> (the <tei:rs key="entity-002430" type="organization">Society for the
+          Friends of Music</tei:rs> and I each have a copy of it)<tei:subst>
+          <tei:add place="inline" hand="#OED">.</tei:add>
+          <tei:del rend="overstrike" hand="#OED">and – perhaps unnecessarily – to
+            Müller-Reuter.</tei:del>
+        </tei:subst></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50">Yours very truly,</tei:salute>
+        <tei:signed rend="indent-55"><tei:rs type="person" key="entity-000164">Otto Erich
+            Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

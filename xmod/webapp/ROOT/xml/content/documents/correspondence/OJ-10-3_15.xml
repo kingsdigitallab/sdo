@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1257" sdoID="OJ-10-3_15">OJ 10/3, [15]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="TPunk" scope="major">unknown typist</tei:handNote>
+      <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="DB">
+      <tei:persName>David Bretherton</tei:persName>
+      <tei:resp>Transcription, 2014</tei:resp>
+      <tei:resp>Translation, 2014</tei:resp>
+      <tei:resp>XML Encoding, 2014</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2014-06-19" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+      <dc:title>Typewritten letter from Otto Erich Deutsch to Schenker, dated September 13,
+        1920</dc:title>
+
+      <dcterms:created>1920-09-13T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2014-06-19</dcterms:dateSubmitted>
+      <dc:description>Deutsch asks Schenker to clarify whether bars are missing from the start of
+        the "Moonlight" Sonata manuscript, as well as from the end. Deutsch outlines Universal
+        Edition's intended format for the volume, and ask if Schenker approves of their proposals.
+        Deutsch has written again to Wilhelm Kux requesting a copy of the sketchleaf, and reminds
+        Schenker to examine the sketchleaf of the Sonata that was reproduced in the Musical
+        Times.</dc:description>
+      <dc:subject/>
+
+
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000163">DeutschH</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+      <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:fw type="header" rend="inline">
+          <tei:note type="editorial">printed letterhead:</tei:note>
+          <tei:handShift new="#printed"/>OTTO ERICH DEUTSCH</tei:fw>
+        <tei:salute rend="indent-10"><tei:handShift new="#TPunk"/><tei:hi><!-- spaced out -->Sehr
+            geehrter <tei:lb/>Herr <tei:rs type="person" key="entity-000632"
+            >Professor</tei:rs></tei:hi>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot"
+            >Receipt of this letter is recorded in Schenker's diary at OJ 3/1, p. 2282 (September
+            15, 1920): "Von O. E. Deutsch (Br.): Anfrage wegen Skizzen." ("From Otto Erich Deutsch
+            (letter): inquiry regarding sketches.")</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Ich danke Ihnen bestens für Ihre Karte vom <tei:date when="1920-08-19">19.
+          v. M.</tei:date> und bitte Sie, mir mitzuteilen, ob bei dem Manuskript der <tei:rs
+          key="entity-001212" type="composition">Mondschein-Sonate</tei:rs> ausser den letzten
+        Takten tatsächlich noch 13 Takte am Anfange fehlen. Es scheint, dass der verlorene Umschlag
+        nicht nur den Titel und die Schlusstakte enthielt, sondern auch die erste Seite des
+        Manuskriptes.</tei:p>
+
+      <tei:p rend="first">Die <tei:rs key="entity-002408" type="organization"
+          >Universal-Edition</tei:rs> hat die Absicht, womöglich je 2 Seiten des Manuskriptes auf
+        eine Folioseite untereinander zu reproduzieren, um <tei:del rend="overstrike" hand="#OED"
+          >dem</tei:del> gegenüber <tei:add place="inline" hand="#OED">je</tei:add> eine von Ihnen
+        korrigierte Notensatz-Seite zu stellen. Ich bitte Sie, sich darüber zu äussern, ob Sie mit
+        diesem Vorschlage einverstanden wären.</tei:p>
+
+      <tei:p rend="first"><tei:pb n="2"/> An Herrn Direktor <tei:rs key="entity-000498"
+          type="person">Kux</tei:rs>, der Ihre Grüsse erwidert, schreibe ich gleichzeitig, dass er
+        sein Skizzenblatt fotografieren lassen möchte, wozu er sich schon bereit erklärt
+        hat.</tei:p>
+
+      <tei:p rend="first">Bitte<tei:add place="inline" hand="#OED">,</tei:add> übersehen Sie nicht,
+        das Skizzenblatt in den <tei:rs key="entity-005468" type="journal"
+            ><tei:title>Musical-Times</tei:title></tei:rs> darnach zu prüfen, ob wir auch davon eine
+        Reproduktion anfertigen lassen sollen.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">Mit besten empfehlungen an Sie und Ihre werte <tei:rs
+            key="entity-000771" type="person">Frau</tei:rs></tei:salute>
+        <tei:salute rend="indent-55">Ihr ergebener</tei:salute>
+        <tei:signed rend="indent-75"><tei:rs type="person" key="entity-000164"
+          >Deutsch</tei:rs></tei:signed>
+        <tei:dateline><tei:rs key="entity-002484" type="place">Wien</tei:rs>, am <tei:date
+            when="1920-09-13">13. September 1920</tei:date>.</tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:fw type="header" rend="inline">
+          <tei:note type="editorial">printed letterhead:</tei:note>
+          <tei:handShift new="#printed"/>OTTO ERICH DEUTSCH</tei:fw>
+        <tei:salute rend="indent-10"><tei:handShift new="#TPunk"/><tei:hi><!-- spaced out -->Very
+            honored <tei:lb/><tei:rs type="person" key="entity-000632"
+            >Professor</tei:rs></tei:hi>,<tei:ptr corresp="#r0001-fn01" type="footnote"
+          /></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">I thank you most sincerely for your card of the <tei:date
+          when="1920-08-19">19th of last month</tei:date>, and ask you to let me know whether, in
+        the manuscript of the <tei:rs key="entity-001212" type="composition">"Moonlight"
+          Sonata</tei:rs>, thirteen measures are missing from the beginning, as well as the final
+        measures. It seems that the lost cover contained not only the title and final bars, but also
+        the first page of the autograph.</tei:p>
+
+      <tei:p rend="first"><tei:rs key="entity-002408" type="organization">Universal Edition</tei:rs>
+        is hoping, if possible, to reproduce two pages of the manuscript on each folio page, one
+        underneath the other, and to have opposite them a page of printed music edited by you. I ask
+        you to comment on whether or not you agree with this proposal.</tei:p>
+
+      <tei:p rend="first"><tei:pb n="2"/> At the same time, I am writing to Director <tei:rs
+          key="entity-000498" type="person">Kux</tei:rs>, who returns your greetings, for permission
+        to have his sketchleaf photographed, as he has already agreed.</tei:p>
+
+      <tei:p rend="first">Please do not neglect to examine the sketchleaf in <tei:rs
+          key="entity-005468" type="journal"><tei:title level="j">The Musical
+          Times</tei:title></tei:rs>, so that we can decide whether to make a reproduction of it,
+        too.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">With best regards to you and your good <tei:rs
+            key="entity-000771" type="person">wife</tei:rs></tei:salute>
+        <tei:salute rend="indent-55">Yours truly,</tei:salute>
+        <tei:signed rend="indent-75"><tei:rs type="person" key="entity-000164"
+          >Deutsch</tei:rs></tei:signed>
+        <tei:dateline><tei:rs key="entity-002484" type="place">Vienna</tei:rs>, <tei:date
+            when="1920-09-13">September 13, 1920</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

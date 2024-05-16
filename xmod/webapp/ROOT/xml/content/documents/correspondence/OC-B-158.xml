@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1501" sdoID="OC-B-158">OC B/158</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="WA" scope="minor">Wilhelm Altmann's hand</tei:handNote>
+      <tei:handNote xml:id="unk" scope="major">unknown hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="stamped" scope="minor">stamp</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="NM">
+      <tei:persName>Nicholas Marston</tei:persName>
+      <tei:resp>Transcription, 2014</tei:resp>
+      <tei:resp>Translation, 2014</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2015</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-26" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005596">AltmannW ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005534">Königliche Bibliothek
+        ~ HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005534">Preussische
+        Staatsbibliothek ~ HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Wilhelm Altmann to Schenker, dated September 25,
+        1920</dc:title>
+      <dcterms:created>1920-09-25T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2015-05-28</dcterms:dateSubmitted>
+      <dc:description>Altmann notifies Schenker of the cost of photographic work
+        done.</dc:description>
+      <dc:subject>Übersendung; sending; Einschreibsendung; registering</dc:subject>
+
+
+
+      <marcrel:correspondent key="entity-000013">Wilhelm Altmann</marcrel:correspondent>
+      <marcrel:correspondent key="entity-003292">Königliche Bibliothek zu
+        Berlin</marcrel:correspondent>
+      <marcrel:correspondent key="entity-003292">Preussische
+        Staatsbibliothek</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/>Postkarte</tei:fw>
+        <tei:fw type="header" rend="center">Weltpostverein</tei:fw>
+        <tei:fw type="header" rend="center">Carte postale</tei:fw>
+        <tei:fw type="header" rend="center">Union postale universelle</tei:fw><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An: </tei:supplied>
+              <tei:handShift new="#unk"/>Herrn Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-10"><tei:hi rend="underline">Wien III</tei:hi></tei:addrLine>
+            <tei:addrLine rend="indent-10">Reisnerstr. 38.</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark"><tei:note type="editorial" place="inline">x 3:</tei:note>
+            || BERLIN NW | 25. 9. 20 4-5N | * 7 <tei:unclear reason="reading">c</tei:unclear> *
+            ||</tei:fw><tei:lb/>
+          <tei:fw type="stamp"><tei:note type="editorial" place="inline">oval stamp:</tei:note> ||
+            PR. ST. BIBLIOTHEK BERLIN | 25. SEP. 1920 | *MUSIK-ABTEILUNG* ||</tei:fw><tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#printed"/><tei:del rend="overstrike">KÖNIGLICHE
+                BIBLIOTHEK</tei:del></tei:addrLine>
+            <tei:addrLine><tei:handShift new="#stamped"/>PREUSSISCHE STAATSBIBLIOTHEK</tei:addrLine>
+            <tei:addrLine rend="indent-10">Musik-Abteilung</tei:addrLine>
+            <tei:addrLine rend="indent-60"><tei:handShift new="#printed"/>BERLIN NW7, den
+                <tei:handShift new="#unk"/><tei:date when="1920-09-25">25. 9.
+              1920</tei:date></tei:addrLine>
+            <tei:addrLine rend="indent-60"><tei:handShift new="#printed"/>Unter den Linden
+              38</tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#unk"/>Sehr geehrter Herr <tei:rs key="entity-000632"
+            type="person">Dr.</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot"
+            >Receipt of this postcard is recorded in Schenker's diary at OJ 3/1, p. 2287, September
+            30, 1920: "Lischke nach Berlin zurück. — Von Dr. Altmann (K.): fordert 1. 40 M. Unkosten
+            ein." ("Lischke returned to Berlin. — From Dr. Altmann (postcard): demands 1. 40 Marks
+            for expenses.") The registered item was probably the Lischke edition of Beethoven's
+            piano sonatas, Op. 2 (see <tei:ref type="correspondence" cRef="OC-B-162">OC
+              B/162</tei:ref>, April 19, 1920), the unexpected arrival of which Schenker recorded in
+            the diary on p. 2286, September 27, 1920: "Aus Berlin trifft unerwartet Lischke ein!"
+            ("Lischke arrives unexpectedly from Berlin!") Schenker returned the copy to Berlin on
+            the same day that the present postcard arrived, as the diary entry above makes clear.
+          </tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Für Übersendung der Einschreibsendung <tei:add place="interlinear-above"><tei:handShift
+            new="#WA"/>und diese Karte</tei:add> <tei:handShift new="#unk"/>sind hier M 1, <tei:subst>
+          <tei:del rend="overwritten">1</tei:del>
+          <tei:add place="superimposed"><tei:handShift new="#WA"/>4</tei:add>
+        </tei:subst>0 Unkosten entstanden. </tei:p>
+
+      <tei:p>Dürften wir freundlichst bitten, uns den Betrag zugehen zu lassen? <tei:add
+          place="inline"><tei:handShift new="#WA"/>Deutsche Marken sind
+        willkommen</tei:add>.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-30"><tei:handShift new="#unk"/>In ausgezeichneter Hochachtung</tei:salute>
+        <tei:signed rend="indent-70"><tei:handShift new="#WA"/><tei:rs key="entity-000013"
+            type="person">Altmann</tei:rs></tei:signed>
+        <tei:signed rend="indent-70"><tei:handShift new="#unk"
+        />Direktor</tei:signed><tei:lb/><tei:lb/>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p>S.-Nr. 1215</tei:p>
+      </tei:postscript>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/>Postcard</tei:fw>
+        <tei:fw type="header" rend="center">World postal union</tei:fw>
+        <tei:fw type="header" rend="center">Carte postale</tei:fw>
+        <tei:fw type="header" rend="center">Union postale universelle</tei:fw><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">To: </tei:supplied>
+              <tei:handShift new="#unk"/>Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-10"><tei:hi rend="underline">Vienna
+              III</tei:hi></tei:addrLine>
+            <tei:addrLine rend="indent-10">Reisnerstraße 38</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark"><tei:note type="editorial" place="inline">x 3:</tei:note>
+            || BERLIN NW | 25. 9. 20 4-5 PM | * 7 <tei:unclear reason="reading">c</tei:unclear> *
+            ||</tei:fw><tei:lb/>
+          <tei:fw type="stamp"><tei:note type="editorial" place="inline">oval stamp:</tei:note> ||
+            PRUSSIAN STATE LIBRARY BERLIN | SEPTEMBER 25, 1920 | *MUSIC DEPARTMENT* ||</tei:fw><tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#printed"/><tei:del rend="overstrike">ROYAL
+                LIBRARY</tei:del></tei:addrLine>
+            <tei:addrLine><tei:handShift new="#stamped"/>PRUSSIAN STATE LIBRARY</tei:addrLine>
+            <tei:addrLine rend="indent-10">Music Department</tei:addrLine>
+            <tei:addrLine rend="indent-60"><tei:handShift new="#printed"/>BERLIN NW7, <tei:handShift
+                new="#unk"/><tei:date when="1920-09-25">September 25, 1920</tei:date></tei:addrLine>
+            <tei:addrLine rend="indent-60"><tei:handShift new="#printed"/>Unter den Linden
+              38</tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#unk"/>Dear Dr. <tei:supplied reason="identity"><tei:rs
+              key="entity-000632" type="person">Schenker</tei:rs></tei:supplied>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>We have been charged 1. <tei:subst>
+          <tei:del rend="overwritten">1</tei:del>
+          <tei:add place="superimposed"><tei:handShift new="#WA"/>4</tei:add>
+        </tei:subst>0 Marks for sending the registered package <tei:add place="interlinear-above"
+            ><tei:handShift new="#WA"/>and this card</tei:add>.</tei:p>
+
+      <tei:p><tei:handShift new="#unk"/>Might we very kindly ask you to forward this sum to us?
+          <tei:add place="inline"><tei:handShift new="#WA"/>German stamps are
+        welcome</tei:add>.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-30"><tei:handShift new="#unk"/>With kind regards</tei:salute>
+        <tei:signed rend="indent-70"><tei:handShift new="#WA"/><tei:rs key="entity-000013"
+            type="person">Altmann</tei:rs></tei:signed>
+        <tei:signed rend="indent-70"><tei:handShift new="#unk"
+        />Director</tei:signed><tei:lb/><tei:lb/>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p>Correspondence No. 1215</tei:p>
+      </tei:postscript>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

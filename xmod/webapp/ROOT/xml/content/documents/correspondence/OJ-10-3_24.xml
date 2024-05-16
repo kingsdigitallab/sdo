@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1266" sdoID="OJ-10-3_24">OJ 10/3, [24]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="TPunk" scope="major">unknown typist</tei:handNote>
+      <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="DB">
+      <tei:persName>David Bretherton</tei:persName>
+      <tei:resp>Transcription, 2014</tei:resp>
+      <tei:resp>Translation, 2014</tei:resp>
+      <tei:resp>XML Encoding, 2014</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2014-07-01" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+      <dc:title>Typewritten letter from Otto Erich Deutsch to Schenker, dated September 24,
+        1921</dc:title>
+
+      <dcterms:created>1921-09-24T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2014-07-01</dcterms:dateSubmitted>
+      <dc:description>Deutsch reports that the "Moonlight" Sonata edition is almost finished, but
+        because of translation problems he has asked Dr. Kalmus to show Schenker the latest revision
+        of the English preface. Schenker's photographic reproductions will be returned once a sample
+        print-out of the edition has been prepared and approved. The edition will launch in the
+        autumn, and Schenker's fee will have increased because of the delay.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000163">DeutschH</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+      <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:fw type="header" rend="inline">
+          <tei:note type="editorial">printed letterhead:</tei:note>
+          <tei:handShift new="#printed"/>OTTO ERICH DEUTSCH</tei:fw>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#TPunk"/>II. Böcklinstr. 26</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-50"><tei:rs key="entity-002484" type="place">Wien</tei:rs>,
+            <tei:date when="1921-09-24">24. Sept. 1921</tei:date></tei:dateline>
+        <tei:lb/><tei:address>
+          <tei:addrLine rend="indent-10"><tei:supplied reason="clarity">An:</tei:supplied>
+            Herrn</tei:addrLine>
+          <tei:addrLine rend="indent-20">Dr. <tei:rs key="entity-000632" type="person">Heinrich
+                <tei:hi><!-- spaced out -->Schenker</tei:hi></tei:rs>,</tei:addrLine>
+          <tei:addrLine rend="indent-65"><tei:hi rend="underline"><tei:rs key="entity-002484"
+                type="place"><tei:hi><!-- spaced out -->WIEN</tei:hi></tei:rs>
+            III.</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-65">Keilgasse No. 8</tei:addrLine>
+        </tei:address>
+        <tei:salute rend="indent-15">Sehr geehrter Herr <tei:rs type="person" key="entity-000632"
+            >Doktor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
+            this letter is recorded in Schenker's diary at OJ 3/2, p. 2392 (September 26, 1921):
+            "Von Deutsch (Br.): Aufklärung über die Mondschein-Sonate-Bilder; erhöht das Honorar."
+            ("From Deutsch (letter): explanation about the 'Moonlight' Sonata photographs; raises
+            the fee.")</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Das <tei:rs key="entity-001754" type="work">Beethoven-Heft</tei:rs> ist
+        nun tatsächlich fast fertig, nur die englische Uebersetzung des Vorwortes bedurfte noch
+        einer gründlichen Reinigung wegen der unbeholfenen<tei:add place="inline" hand="#OED"
+          >,</tei:add> starke<tei:subst>
+          <tei:del rend="overwritten" hand="#TPunk">r</tei:del>
+          <tei:add place="superimposed" hand="#TPunk">n</tei:add>
+        </tei:subst> germanisierten Fassung einzelner Wendungen.<tei:note xml:id="r0001-fn02"
+          type="editorial" place="foot">No paragraph-break in source.</tei:note></tei:p>
+
+      <tei:p rend="first">Da ausserdem die Chiffren <tei:add place="interlinear-above" hand="#OED"
+          >für</tei:add> die Tonarten und einzelnen Noten sehr flüchtig und ungenau von der
+        Uebersetzerin niedergeschrieben und in der Korrektur nicht verbessert worden sind, so habe
+        ich Herrn Dr. <tei:rs key="entity-000420" type="person">Kalmus</tei:rs> ersucht, die letzte
+        Revision des englischen Vorwortes auch Ihnen noch einmal zu zeigen. Ihre <tei:subst>
+          <tei:add place="interlinear-above" hand="#OED">photographischen</tei:add>
+          <tei:del rend="overstrike" hand="#OED">Foto-</tei:del>
+        </tei:subst>Abzüge nach dem Manuskript sind bei Dr. <tei:rs key="entity-000420"
+          type="person">Kalmus</tei:rs> und ich bitte Sie, sich noch die kurze Weile zu gedulden,
+        bis die fertigen Faksimiles in einem Probeabdruck so ge <tei:pb n="2"/> ordnet sind, dass
+        wir beruhigt das Imprimatur geben können.<tei:note xml:id="r0001-fn03" type="editorial"
+          place="foot">No paragraph-break in source.</tei:note></tei:p>
+
+      <tei:p rend="first">Das kann vielleicht nächste Woche schon geschehen und Herr Dr. <tei:rs
+          key="entity-000420" type="person">Kalmus</tei:rs> wird Ihnen dann die Bilder sofort
+        zukommen lassen. Die <tei:rs key="entity-001754" type="work">Sonate</tei:rs> soll im Herbst
+        erscheinen, und Sie können versichert sein, dass ihr Erscheinen durch mich um keinen Tag
+        verzögert worden ist. Das Honorar wird sich tatsächlich, da es meiner Erinnerung nach ein
+        prozentuelles ist, durch den Verzug, in Kronen oder in Mark gerechnet, wesentlich erhöht
+        haben.</tei:p>
+
+      <tei:p rend="first">Ich würde mich sehr freuen, Ihre Frau <tei:rs key="entity-000771"
+          type="person">Gemahlin</tei:rs> und Sie bald bei mir oder bei uns begrüssen zu
+        können.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-25">Mit den besten Empfehlungen</tei:salute>
+        <tei:salute rend="indent-60">Ihr ergeben<tei:subst>
+            <tei:del rend="overwritten" hand="#TPunk">r</tei:del>
+            <tei:add place="superimposed" hand="#TPunk">e</tei:add>
+          </tei:subst>r</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000164"
+          >Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:fw type="header" rend="inline">
+          <tei:note type="editorial">printed letterhead:</tei:note>
+          <tei:handShift new="#printed"/>OTTO ERICH DEUTSCH</tei:fw>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#TPunk"/>II. Böcklinstrasse 26</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-50"><tei:rs key="entity-002484" type="place">Vienna</tei:rs>,
+            <tei:date when="1921-09-24">September 24, 1921</tei:date></tei:dateline>
+        <tei:lb/><tei:address>
+          <tei:addrLine rend="indent-20"><tei:supplied reason="clarity">to:</tei:supplied> Dr.
+              <tei:rs key="entity-000632" type="person">Heinrich
+                <tei:hi><!-- spaced out -->Schenker</tei:hi></tei:rs>,</tei:addrLine>
+          <tei:addrLine rend="indent-65"><tei:hi rend="underline"><tei:rs key="entity-002484"
+                type="place"><tei:hi><!-- spaced out -->VIENNA</tei:hi></tei:rs>
+            III</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-65">Keilgasse No. 8</tei:addrLine>
+        </tei:address>
+        <tei:salute rend="indent-15">Very honored <tei:rs type="person" key="entity-000632"
+            >Doctor</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">The <tei:rs key="entity-001754" type="work">Beethoven volume</tei:rs> is
+        in fact now almost ready: only the English translation of the Preface still requires a
+        thorough revision, on account of the awkward<tei:add place="inline" hand="#OED">,</tei:add>
+        severely Germanized wording of certain phrases.<tei:ptr corresp="#r0001-fn02"
+          type="footnote"/></tei:p>
+
+      <tei:p rend="first">Furthermore, since the numbers <tei:add place="interlinear-above"
+          hand="#OED">representing</tei:add> keys and individual tones have been transcribed very
+        hastily and imprecisely, and have not been improved in the revision, I have asked Dr.
+          <tei:rs key="entity-000420" type="person">Kalmus</tei:rs> to show you the latest revision
+        of the English Preface one more time. Your <tei:subst>
+          <tei:add place="interlinear-above" hand="#OED">photographic</tei:add>
+          <tei:del rend="overstrike" hand="#OED">photo-</tei:del>
+        </tei:subst>prints of the manuscript are with Dr. <tei:rs key="entity-000420" type="person"
+          >Kalmus</tei:rs>, and I ask you still to be patient a little while longer until the
+        completed facsimile pages have been <tei:pb n="2"/> so arranged, in a sample print-out, that
+        we may safely give the authorization to publish.<tei:ptr corresp="#r0001-fn03"
+          type="footnote"/></tei:p>
+
+      <tei:p rend="first">This can perhaps be done as early as next week, and Dr. <tei:rs
+          key="entity-000420" type="person">Kalmus</tei:rs> will then allow the images to be sent to
+        you immediately. The <tei:rs key="entity-001754" type="work">sonata</tei:rs> will appear
+        this fall, and you can be assured that its publication will not have not been delayed one
+        day by me. The fee (a percentage, as I recall, calculated in kronen or in marks) will in
+        fact have increased substantially as a result of the delay.</tei:p>
+
+      <tei:p rend="first">I would be very delighted to welcome you and your <tei:rs
+          key="entity-000771" type="person">wife</tei:rs> at my (our) place soon.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-25">With the best regards,</tei:salute>
+        <tei:salute rend="indent-60">Yours truly,</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000164"
+          >Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

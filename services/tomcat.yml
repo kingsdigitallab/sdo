@@ -1,0 +1,16 @@
+services:
+  tomcat:
+    image: tomcat:${TOMCAT_VERSION:-9-jdk11}
+    restart: unless-stopped
+    expose:
+      - ${TOMCAT_PORT:-8080}
+    volumes:
+      - ../xmod:/xmod
+      - ../xmod/webapp:/usr/local/tomcat/webapps
+      - ../xmod/webapp/solr/conf/solr.xml:/usr/local/tomcat/conf/Catalina/localhost/solr.xml
+    environment:
+      CATALINA_OPTS: "${TOMCAT_CATALINA_OPTS:--Xmx2048m}"
+      VIRTUAL_HOST: "${TOMCAT_VIRTUAL_HOST:-${VIRTUAL_HOST:-localhost,127.0.0.1}}"
+      VIRTUAL_PATH: "${TOMCAT_VIRTUAL_PATH:?Tomcat virtual path not set}"
+      VIRTUAL_PROTO: "${TOMCAT_VIRTUAL_PROTO:-${VIRTUAL_PROTO:-http}}"
+      VIRTUAL_PORT: ${TOMCAT_PORT:-8080}

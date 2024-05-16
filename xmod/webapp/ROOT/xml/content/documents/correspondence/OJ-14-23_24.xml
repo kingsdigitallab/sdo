@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2931" sdoID="OJ-14-23_24">OJ 14/23, [24]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="AFS" scope="major">A. F. Seligmann's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2022</tei:resp>
+      <tei:resp>Translation, 2022</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2022</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-09-28" who="#IB">revision of XML code</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002735">Seligmann ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">picture
+        postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Seligmann to Schenker, postmarked March 11,
+        1931</dc:title>
+
+      <dcterms:created>1931-03-11T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2022-11-30</dcterms:dateSubmitted>
+      <dc:description>Seligmann thanks Schenker for sending him the third Meisterwerk yearbook and
+        says he greatly enjoyed learning about Rameau in the opening essay. But, he says, Schenker
+        can hardly be surprised that he is ignored by the Ministry [of Education] if he constantly
+        offends the people who are responsible to the Minister.</dc:description>
+      <dc:subject/>
+
+
+
+      <marcrel:correspondent key="entity-000819">Adalbert Franz Seligmann</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">Heinrich Schenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:lb/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+            >Postkarte</tei:hi></tei:fw><tei:lb/>
+        <tei:note type="editorial" place="inline">photograph of landscape, captioned: Eisenstadt,
+          Burgenland</tei:note><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#AFS"/>HW Herrn D<tei:hi rend="supralinear">r</tei:hi>
+              Heinr. Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-50">Wien III</tei:addrLine>
+            <tei:addrLine rend="indent-50">Keilgasse 8.</tei:addrLine>
+
+            <tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| <tei:gap reason="illegible"/> WIEN 71 | 11. III. 31 2 | * 5f *
+            ||</tei:fw><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#AFS"/>Lieber <tei:rs type="person" key="entity-000632"
+            >freund</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
+            this postcard is recorded in Schenker’s diary for March 12, 1931: “Von Seligmann (K.):
+            bestätigt vorläufig den Empfang des Buches. Findet doch alles begreiflich – lebte ich in
+            Deutschland, wäre mir eine gegnerische Clique gewiß auch nicht erspart geblieben. ”
+            (“From Seligmann (postcard): he confirms, for now, receipt of the book. Finds, however,
+            that everything is understandable – If I lived in Germany, I would also certainly not be
+            spared an opposing clique.”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Ich erhielt bereits das bewußte Exemplar (<tei:rs type="work" key="entity-001752">III.
+          Bd</tei:rs>) <tei:del rend="overstrike">u.</tei:del>, habe schon mit großem Vergnügen den
+        ersten Aufsatz<tei:note xml:id="r0001-fn02" type="editorial" place="foot"
+              ><tei:bibl><tei:author>Heinrich Schenker</tei:author>, <tei:title level="a">Rameau
+              oder Beethoven? Erstarrung oder geistiges Leben in der Musik?</tei:title>
+            <tei:title level="j">Das Meisterwerk in der Musik</tei:title>, vol. III (Munich: Drei
+            Masken Verlag, 1930), pp. 9–24 (Eng. transl., vol. III, Cambridge: Cambridge University
+            Press, 1997), pp. 1–9)</tei:bibl>.</tei:note> durchflogen – ich habe gegenwärtig wieder
+        schrecklich viel zu tun! – <tei:milestone unit="folio" n="verso"/> u. freue ich sehr auf den
+        Moment, wo ich ihn zum zweiten mal vornehmer u. ordentlich durchkauen werde. Die Theorie
+          <tei:rs type="person" key="entity-002972">R.</tei:rs> war mir, wie ich gestehen muß, nicht
+        bekannt gewesen u. was Sie darüber sagen, hat mich natürlich sehr interessiert. Aber, lieber
+        Freund, Sie wundern sich, wenn das <tei:rs type="organization" key="entity-005584"
+          >Minist.</tei:rs> keine Notiz von Ihnen nimmt,<tei:note xml:id="r0001-fn03"
+          type="editorial" place="foot">This relates to a remark made by Schenker in <tei:ref
+            type="correspondence" cRef="WSLB-Hds-94479">WSLB-Hds 94479</tei:ref>, February 26, 1931,
+          which Seligmann has already addressed in <tei:ref type="correspondence" cRef="OJ-14-23_23"
+            >OJ 14/23, [23]</tei:ref>, February 28, 1932.</tei:note> dasselbe <tei:rs
+          type="organization" key="entity-005584">Minist.</tei:rs> das doch von den nämlichen Leuten
+        informiert wird (denn daß ein Minister oder Sektionschef wirklich etwas von seiner Ressort
+        versteht werden Sie doch nicht verleugnen?), denen Sie beständig schallende Ohrfeigen
+        versetzen? Ja, ich weiß nicht, ob Sie, wenn Sie in <tei:rs type="place" key="entity-002482"
+          >Deutschland</tei:rs> lebten, nicht auch durch Ihre lebendige Gegenwart eine Clique
+        erzeugen würde, die sich gegen Sie wendet! </tei:p>
+
+      <tei:closer>
+        <tei:salute>Einstweilen nochmals Dank u. beste Grüße</tei:salute>
+        <tei:salute>– auch Empfehlungen an Ihre <tei:rs type="person" key="entity-000771">Frau
+            Gemahlin</tei:rs>.</tei:salute>
+        <tei:salute rend="indent-30">Stets der alte </tei:salute>
+        <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000819">A. F. S.</tei:rs>
+        </tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:lb/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+            >Postcard</tei:hi></tei:fw><tei:lb/>
+        <tei:note type="editorial" place="inline">photograph of landscape, captioned: Eisenstadt,
+          Burgenland</tei:note><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#AFS"/>Dr. Heinrich Schenker, Esq.</tei:addrLine>
+            <tei:addrLine rend="indent-50">Vienna III</tei:addrLine>
+            <tei:addrLine rend="indent-50">Keilgasse 8</tei:addrLine>
+
+            <tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| <tei:gap reason="illegible"/> VIENNA 71 | 11. III. 31 2 | * 5f
+            * ||</tei:fw><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#AFS"/>Dear <tei:rs type="person" key="entity-000632"
+            >friend</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>I have just received the copy in question (<tei:rs type="work" key="entity-001752">vol.
+          III</tei:rs>) and have already leafed through the first essay<tei:ptr
+          corresp="#r0001-fn02" type="footnote"/> with great pleasure – at present I again have
+        frightfully much to do! – <tei:milestone unit="folio" n="verso"/> and am greatly looking
+        forward to the moment in which I can chew through it for the second time, more graciously
+        and properly. <tei:rs type="person" key="entity-002972">Rameau</tei:rs>’s theory, I must
+        confess, was unknown to me, and what you say about it has, naturally, interested me a great
+        deal. But, dear friend, you are surprised that the <tei:rs type="organization"
+          key="entity-005584">Ministry</tei:rs> takes no interest in you,<tei:ptr
+          corresp="#r0001-fn03" type="footnote"/> the same <tei:rs type="organization"
+          key="entity-005584">Ministry</tei:rs> which is, however, informed by the same people (for
+        you would surely not deny that a minister or head of section understands something about his
+        department?) to whom you persistently deal resounding slaps in the face? Indeed, I do not
+        know whether, if you lived in <tei:rs type="place" key="entity-002482">Germany</tei:rs>, you
+        might not, by your lively presence, generate a clique that would turn against you!</tei:p>
+
+      <tei:closer>
+        <tei:salute>For now, once again my thanks and best greetings</tei:salute>
+        <tei:salute>– and compliments to your <tei:rs type="person" key="entity-000771"
+            >wife</tei:rs>.</tei:salute>
+        <tei:salute rend="indent-30">Ever your old friend</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000819">A. F. S.</tei:rs>
+        </tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

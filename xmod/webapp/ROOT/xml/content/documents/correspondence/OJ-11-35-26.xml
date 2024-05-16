@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="1491" sdoID="OJ-11-35_26">OJ 11/35, 26</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="printed" scope="sole">printed</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="LR">
+   <tei:persName>Lee Rothfarb</tei:persName>
+   <tei:resp>Transcription, 2006</tei:resp>
+   <tei:resp>Translation, 2006</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>Footnote, 2015</tei:resp>
+   <tei:resp>XML Encoding, 2015</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2013-08-28" who="#DB">XML code created</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-005595">HalmH ~
+    HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+   <dc:title>Printed death notice of August Halm, dated February 1, 1929</dc:title>
+
+   <dcterms:created>1929-02-01T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2015-05-20</dcterms:dateSubmitted>
+   <dc:description>Announces death of August Halm.</dc:description>
+   <dc:subject>Krankenhaus; hospital; Peritonitis; Operation; Erleichterung; delivery;
+    death</dc:subject>
+
+
+   <marcrel:correspondent key="entity-005082">Hilda Halm</marcrel:correspondent>
+   <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+  </sdo:itemDesc>
+
+
+  <tei:div type="transcription">
+
+   <tei:p rend="first">Heute starb in Saalfelder Krankenhaus an Peritonitis, nachdem ihm eine
+    Operation noch für kurze Zeit Erleichterung gebracht hatte, unser lieber <tei:cit>
+     <tei:q><tei:rs key="entity-000326" type="person">August Halm</tei:rs></tei:q>
+    <tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this
+     announcement and his response are recorded in Schenker's diary at OJ 4/2, p. 3312, February 3
+     and 8, 1929: "Parte von Frau Halm!" ("Death announcement from Mrs. Halm!") ... "An die Witwe
+     Halm (Br.): Beileid." ("To the widow Halm (letter): condolences.").</tei:note></tei:cit>
+   </tei:p>
+
+   <tei:p rend="first">Wir gedenken ihn am Sonntag, den <tei:date when="1927-02-03">3.
+     Februar</tei:date>, im Wickersdorfer Wald zu bestatten </tei:p>
+
+   <tei:closer>
+    <tei:dateline>Wickersdorf, den <tei:date when="1929-02-01">1. February
+     1929</tei:date></tei:dateline><tei:lb/>
+    <tei:signed rend="indent-50"><tei:rs key="entity-000326" type="person">Hilda Halm, geb.
+      Wyneken</tei:rs></tei:signed>
+    <tei:signed rend="indent-50"><tei:rs key="entity-005592" type="person">Gustav
+     Wyneken</tei:rs></tei:signed>
+   </tei:closer>
+
+  </tei:div>
+
+
+  <tei:div type="translation">
+
+   <tei:p rend="first">Today in the Saalfeld hospital, after an operation that brought relief for a
+    short time, our beloved <tei:cit>
+     <tei:q><tei:rs key="entity-000326" type="person">August Halm</tei:rs></tei:q>
+     <tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:cit>
+   </tei:p>
+
+   <tei:p rend="first">We will inter him on Sunday, <tei:date when="1927-02-03">February
+     3</tei:date>, in the Wickersdorf forest.</tei:p>
+
+   <tei:closer>
+    <tei:dateline rend="indent-10">Wickersdorf, <tei:date when="1929-02-01">February 1,
+      1929</tei:date></tei:dateline><tei:lb/>
+    <tei:signed rend="indent-50"><tei:rs key="entity-000326" type="person">Hilda Halm, geb.
+      Wyneken</tei:rs></tei:signed>
+    <tei:signed rend="indent-50"><tei:rs key="entity-005592" type="person">Gustav
+     Wyneken</tei:rs></tei:signed>
+   </tei:closer>
+
+  </tei:div>
+
+ </sdo:record>
+</sdo:recordCollection>

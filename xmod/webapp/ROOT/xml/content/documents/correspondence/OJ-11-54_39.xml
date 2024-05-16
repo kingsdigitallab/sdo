@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="1873" sdoID="OJ-11-54_39">OJ 11/54, [39]</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="AvH" scope="major">Anthony van Hoboken's hand</tei:handNote>
+   <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="JR-HE">
+   <tei:persName>John Rothgeb &amp; Heribert Esser</tei:persName>
+   <tei:resp>Transcription, 2016</tei:resp>
+   <tei:resp>Translation, 2016</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>XML Encoding, 2016</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2011-03-01" who="#IB">revision of XML code</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-002730">Hoboken ~
+    HSchenker</tei:rs>
+   <tei:rs role="correspondence" type="correspondence" key="entity-002731">Hoboken ~
+    H+JSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+
+   <dc:title>Handwritten postcard from Hoboken to Schenker, dated May 12, 1932</dc:title>
+
+   <dcterms:created>1932-05-12T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2016-11-07</dcterms:dateSubmitted>
+   <dc:description>Hoboken will come to see Schenker on Friday.</dc:description>
+   <dc:subject>besuchen; to visit; Arbeit; work</dc:subject>
+
+
+
+   <marcrel:correspondent key="entity-000380">Hoboken</marcrel:correspondent>
+   <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+   <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+  </sdo:itemDesc>
+
+
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/><tei:lb/>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:addrLine><tei:handShift new="#printed"/>A. VAN HOBOKEN</tei:addrLine>
+      <tei:addrLine>WIEN IV., WIEDNER HAUPTSTRASSE 63</tei:addrLine>
+     </tei:address><tei:lb/>
+     <tei:address>
+      <tei:addrLine><tei:supplied reason="clarity">An: </tei:supplied><tei:handShift new="#AvH"
+       />Herrn D<tei:hi rend="supralinear">r.</tei:hi> Heinrich Schenker</tei:addrLine>
+      <tei:addrLine rend="indent-10">Wien.</tei:addrLine>
+      <tei:addrLine>III, Keilgasse 8, Tür 12</tei:addrLine>
+     </tei:address><tei:lb/>
+     <tei:fw type="postmark">|| 4 WIEN 50 | 12 V 32 <tei:gap reason="illegible" unit="chars"
+      extent="2"/> | * 4d * ||</tei:fw><tei:lb/><tei:lb/>
+     <tei:milestone unit="folio" n="recto"/>
+     <tei:date when="1932-05-12" rend="ident-70">12 Mai 1932</tei:date>
+    </tei:fw>
+    <tei:salute>Verehrter und lieber Herr <tei:rs type="person" key="entity-000632">D<tei:hi
+       rend="supralinear">r.</tei:hi></tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial"
+      place="foot">Schenker's diary at OJ 4/5, p. 3729, May 12, 1932 records a street encounter:
+      "begegnen an der Kärntnerstraße v. Hoboken, will morgen „ohne Arbeit“ kommen!" ("we encounter
+      Hoboken in the Kärntnerstraße; he will come tomorrow 'without work'!"). Receipt of this
+      postcard is then recorded at OJ 4/5, p. 3729, May 13, 1932: "Von v. Hoboken (K.): kommt
+      Freitag." ("From Hoboken (postcard): he is coming on Friday."). However, May 13 was itself a
+      Friday, so there appears to be some confusion here.</tei:note></tei:salute>
+   </tei:opener>
+
+   <tei:p rend="first">Ich bin auf einigen Tagen in <tei:rs key="entity-002484" type="place"
+     >Wien</tei:rs> und möchte Sie gerne besuchen. <tei:date when="1932-05-13">Morgen
+     (Freitag)</tei:date> komme ich dazu zwischen 5 und 6 zu Ihnen, bringe aber keine Arbeit
+     mit.<tei:note xml:id="r0001-fn02" type="editorial" place="foot">The visit itself is not
+     recorded in Schenker's diary (nor for the following Friday).</tei:note></tei:p>
+
+
+
+   <tei:closer>
+    <tei:salute rend="indent-40">Mit bestem Gruss</tei:salute>
+    <tei:salute rend="indent-60">Ihr ergebener</tei:salute>
+    <tei:signed rend="indent-70"><tei:rs key="entity-000380" type="person"
+     >AvHoboken</tei:rs></tei:signed>
+   </tei:closer>
+
+  </tei:div>
+
+
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/><tei:lb/>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:addrLine><tei:handShift new="#printed"/>A. VAN HOBOKEN</tei:addrLine>
+      <tei:addrLine>VIENNA IV, WIEDNER HAUPTSTRASSE 63</tei:addrLine>
+     </tei:address><tei:lb/>
+     <tei:address>
+      <tei:addrLine><tei:supplied reason="clarity">To: </tei:supplied><tei:handShift new="#AvH"/>Dr.
+       Heinrich Schenker</tei:addrLine>
+      <tei:addrLine rend="indent-10">Vienna III</tei:addrLine>
+      <tei:addrLine>Keilgasse 8, Door 12</tei:addrLine>
+     </tei:address><tei:lb/>
+     <tei:fw type="postmark">|| 4 VIENNA 50 | 12 V 32 <tei:gap reason="illegible" unit="chars"
+      extent="2"/> | * 4d * ||</tei:fw><tei:lb/><tei:lb/>
+     <tei:milestone unit="folio" n="recto"/>
+     <tei:date when="1932-05-12" rend="ident-70">May 12,
+      1932</tei:date>
+    </tei:fw>
+    <tei:salute>Dear and revered Dr. <tei:supplied reason="identity"><tei:rs type="person"
+       key="entity-000632">Schenker</tei:rs></tei:supplied>,<tei:ptr corresp="#r0001-fn01"
+      type="footnote"/></tei:salute>
+   </tei:opener>
+
+   <tei:p rend="first">I am in <tei:rs key="entity-002484" type="place">Vienna</tei:rs> for several
+    days and would like very much to visit you. <tei:date when="1932-05-13">Tomorrow
+     (Friday)</tei:date> I will come to you for that purpose between 5 and 6 o'clock, but will bring
+    no work.<tei:ptr corresp="#r0001-fn02" type="footnote"/></tei:p>
+
+
+
+   <tei:closer>
+    <tei:salute rend="indent-40">With best greetings,</tei:salute>
+    <tei:salute rend="indent-60">Your devoted</tei:salute>
+    <tei:signed rend="indent-70"><tei:rs key="entity-000380" type="person">A. v.
+     Hoboken</tei:rs></tei:signed>
+   </tei:closer>
+
+  </tei:div>
+ </sdo:record>
+</sdo:recordCollection>

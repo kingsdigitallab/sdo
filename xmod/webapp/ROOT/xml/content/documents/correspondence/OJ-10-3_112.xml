@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3095" sdoID="OJ-10-3_112">OJ 10/3, [112]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HD" scope="major">Hanna Deutsch's hand</tei:handNote>
+      <tei:handNote xml:id="unkPO" scope="minor">unknown hand (Post Office)</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-19" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture
+        postcard</tei:rs>
+
+      <dc:title>Handwritten picture postcard from Hanna Deutsch to Schenker, dated December 24,
+        1929</dc:title>
+
+      <dcterms:created>1929-12-24T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-03-18</dcterms:dateSubmitted>
+      <dc:description>The Deutsches accept Schenker’s invitation for Friday, December 27, 1929. They
+        thank him for his expression of sympathy over their son’s illness.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000163">DeutschH</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">P<tei:supplied reason="overstamped"
+              >ostkarte</tei:supplied></tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:note type="editorial" place="inline">picture: lakeside town with snow-capped mountains:
+          “Bregenz, Vorarlberg”</tei:note><tei:lb/>
+        <tei:add><tei:handShift new="#HD"/>Rohrpost! <tei:note type="editorial" place="inline"
+            >written over</tei:note>
+          <tei:handShift new="#unkPO"/>128</tei:add><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied>
+            <tei:handShift new="#HD"/> Herrn D<tei:hi rend="supralinear">r.</tei:hi> H.
+            Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-10">Keilgasse 8</tei:addrLine>
+          <tei:addrLine rend="indent-10"><tei:hi rend="underline">Wien III.</tei:hi></tei:addrLine>
+
+        </tei:address>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-40"><tei:handShift new="#HD"/><tei:date when="1929-12-24">24./12.
+            29</tei:date>.</tei:dateline>
+        <tei:salute>Sehr verehrter Herr <tei:rs type="person" key="entity-000632"
+            >Doktor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
+            this postcard is recorded in Schenker’s diary for December 24, 1929: “Von Deutsch
+            (expreß K.): ist bereit Freitag zu kommen” (“From <tei:supplied>Mrs.</tei:supplied>
+            Deutsch: <tei:supplied>they are</tei:supplied> able to come on
+          Friday”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Wir kämen gerne am Freitag, <tei:note type="editorial" place="inline">cued
+          from lower margin:</tei:note> es geht auch Montag noch.<tei:note type="editorial"
+          place="inline">end cue</tei:note> den <tei:date when="1929-12-27">27. ds</tei:date>
+        Nachmittag, wenn es Ihnen passt. Nächste Woche gehe ich mit dem Buben auf 1 Monat nach
+          <tei:rs type="place" key="entity-003337">Küb a. Semmering</tei:rs>. Es geht ihm schon viel
+        besser. Wir danken Ihnen herzlichst für Ihre liebe Teilnahme.<tei:note xml:id="r0001-fn02"
+          type="editorial" place="foot">Schenker’s diary records the writing of a postcard (not
+          surviving) to Deutsch on December 18: “An Deutsch (K.): sind über die Genesung des Jungen
+          erfreut, Wünsche für Weihnachten” (“To Deutsch (postcard): we are delighted that his son
+          has recovered, <tei:supplied>and send</tei:supplied> Christmas greetings”).</tei:note> – </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">Viele schöne Grüsse von Haus zu Haus!</tei:salute>
+        <tei:salute rend="indent-50">Ihre ergebene</tei:salute>
+        <tei:signed rend="indent-70"><tei:handShift new="#HD"/>
+          <tei:rs key="entity-000163" type="person">Hannah Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">P<tei:supplied reason="overstamped"
+              >ostcard</tei:supplied></tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:note type="editorial" place="inline">picture: lakeside town with snow-capped mountains:
+          “Bregenz, Vorarlberg”</tei:note><tei:lb/>
+        <tei:add><tei:handShift new="#HD"/>Pneumatic mail! <tei:note type="editorial" place="inline"
+            >written over</tei:note>
+          <tei:handShift new="#unkPO"/>128</tei:add><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied>
+            <tei:handShift new="#HD"/>Dr. H. Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-10">Keilgasse 8</tei:addrLine>
+          <tei:addrLine rend="indent-10"><tei:hi rend="underline">Vienna III</tei:hi></tei:addrLine>
+
+        </tei:address>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-40"><tei:handShift new="#HD"/><tei:date when="1929-12-24"
+            >December 24, 1929</tei:date></tei:dateline>
+        <tei:salute>Much revered Dr. <tei:supplied><tei:rs type="person" key="entity-000632"
+              >Schenker</tei:rs></tei:supplied>,<tei:ptr corresp="#r0001-fn01" type="footnote"
+          /></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">We would be delighted to come in the afternoon of Friday, the <tei:date
+          when="1929-12-27">27th</tei:date>, <tei:note type="editorial" place="inline">cued from
+          lower margin:</tei:note> Monday is also okay <tei:note type="editorial" place="inline">end
+          cue</tei:note> if that suits you. Next week I am going with my son to <tei:rs type="place"
+          key="entity-003337">Küb on the Semmering</tei:rs>. He is already feeling much better. We
+        thank you most cordially for your kind sympathy.<tei:ptr corresp="#r0001-fn02"
+          type="footnote"/></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">Many greetings from our house to yours!</tei:salute>
+        <tei:salute rend="indent-50">Your devoted</tei:salute>
+        <tei:signed rend="indent-70"><tei:handShift new="#HD"/>
+          <tei:rs key="entity-000163" type="person">Hannah Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

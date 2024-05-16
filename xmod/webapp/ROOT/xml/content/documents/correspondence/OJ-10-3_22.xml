@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1264" sdoID="OJ-10-3_22">OJ 10/3, [22]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="TPunk" scope="major">unknown typist</tei:handNote>
+      <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="DB">
+      <tei:persName>David Bretherton</tei:persName>
+      <tei:resp>Transcription, 2014</tei:resp>
+      <tei:resp>Translation, 2014</tei:resp>
+      <tei:resp>XML Encoding, 2014</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2014-06-19" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+      <dc:title>Typewritten letter from Otto Erich Deutsch to Schenker, dated December 23,
+        1920</dc:title>
+
+      <dcterms:created>1920-12-23T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2014-06-19</dcterms:dateSubmitted>
+      <dc:description>Deutsch confirms receipt of Schenker preface for the "Moonlight" Sonata
+        edition and five photographs of sketchleaves. He will send a formal contract in the next few
+        days.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000163">DeutschH</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+      <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:fw type="header" rend="inline">
+          <tei:note type="editorial">printed letterhead:</tei:note>
+          <tei:handShift new="#printed"/>OTTO ERICH DEUTSCH</tei:fw>
+        <tei:dateline rend="indent-55"><tei:handShift new="#TPunk"/><tei:rs key="entity-002484"
+            type="place">Wien</tei:rs>, am <tei:date when="1920-12-23">23. Dezemb.
+          1920</tei:date></tei:dateline>
+        <tei:address>
+          <tei:addrLine>Herrn</tei:addrLine>
+          <tei:addrLine rend="indent-15">Professor Dr. <tei:rs key="entity-000632" type="person"
+              >Heinrich SCHENKER</tei:rs></tei:addrLine>
+          <tei:addrLine rend="indent-85"><tei:hi rend="underline"><tei:rs key="entity-002484"
+                type="place">Wien</tei:rs></tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:salute>SEHR GEEHRTER HERR <tei:rs type="person" key="entity-000632"
+            >PROFESSOR</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt
+            of this letter is recorded in Schenker's diary at OJ 3/2, p. 2305 (December 24, 1920):
+            "Von Deutsch (Br.): Vertrag werde folgen." ("From Deutsch (letter): contract will
+            follow.")</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Ich bestätige Ihnen mit bestem Dank den Erhalt Ihres Vorwortes zu dem
+          <tei:rs key="entity-000055" type="person">Beethoven</tei:rs><tei:add place="inline"
+          hand="#OED">-</tei:add>Heft samt den fünf Photographien und werde mir erlauben, Ihnen in
+        den nächsten Tagen einen förmlichen Vertrag zu schicken.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">Mit den besten Grüssen</tei:salute>
+        <tei:salute rend="indent-75">Ihr ergebener</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000164">O E
+          Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:fw type="header" rend="inline">
+          <tei:note type="editorial">printed letterhead:</tei:note>
+          <tei:handShift new="#printed"/>OTTO ERICH DEUTSCH</tei:fw>
+        <tei:dateline rend="indent-55"><tei:handShift new="#TPunk"/><tei:rs key="entity-002484"
+            type="place">Vienna</tei:rs>, <tei:date when="1920-12-23">December 23,
+          1920</tei:date></tei:dateline>
+        <tei:address>
+          <tei:addrLine rend="indent-15">Professor Dr. <tei:rs key="entity-000632" type="person"
+              >Heinrich SCHENKER</tei:rs></tei:addrLine>
+          <tei:addrLine rend="indent-85"><tei:hi rend="underline"><tei:rs key="entity-002484"
+                type="place">Vienna</tei:rs></tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:salute>VERY HONORED <tei:rs type="person" key="entity-000632"
+            >PROFESSOR</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">I confirm with thanks the receipt of your Preface to the <tei:rs
+          key="entity-000055" type="person">Beethoven</tei:rs> volume, including the five
+        photographs, and shall send you a formal contract in the next few days.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">With best wishes,</tei:salute>
+        <tei:salute rend="indent-75">Yours truly,</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000164">O E
+          Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+
+    <sdo:source>
+      <sdo:correspondence mfID="2635" sdoID="OJ-9-6_F">OJ 9/6, [F]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="d-A" scope="sole">Eugen d'Albert's hand</tei:handNote>
+    </tei:handNotes>
+
+
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2021</tei:resp>
+      <tei:resp>Translation, 2021</tei:resp>
+      <tei:resp>XML Encoding, 2021</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-11-02" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+
+  </sdo:collectionDesc>
+  <sdo:record ID="r0001">
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008072">d'AlbertE ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-003332">calling card</tei:rs>
+
+
+      <dc:title>Handwritten calling card from Eugen d’Albert to Schenker, undated</dc:title>
+      <dcterms:created>1894-01-02T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2021-12-14</dcterms:dateSubmitted>
+      <dc:description>Eugen d'Albert invites the Schenkers to the the Opera.</dc:description>
+      <dc:subject>Platz; seat; Oper; Opera; Parquet</dc:subject>
+
+      <marcrel:correspondent key="entity-000150">d'AlbertE</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:salute><tei:handShift new="#d-A"/>Lieber Herr <tei:rs type="person" key="entity-000632"
+            >Doctor</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p>Wir haben Plätze f<tei:supplied reason="contraction">ü</tei:supplied>rs Opernhaus heute
+        Abend: Parquet 4 Reihe N<tei:hi rend="supralinear">r</tei:hi> 97 u. 99 und hoffen Sie dort
+        zu <tei:milestone unit="folio" n="verso"/> sehen. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">Herz.</tei:salute>
+        <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000150">Eug.
+            d’Albert</tei:rs>.</tei:signed><tei:lb/>
+      </tei:closer>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:salute><tei:handShift new="#d-A"/>Dear Dr. <tei:supplied><tei:rs type="person"
+              key="entity-000632">Schenker</tei:rs></tei:supplied>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>We have seats for the Opera House this evening: parquet, row 4, seats 97 and 99, and
+        hope to <tei:milestone unit="folio" n="verso"/> see you there.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">Cordially,</tei:salute>
+        <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000150">Eug.
+            d’Albert</tei:rs></tei:signed><tei:lb/>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

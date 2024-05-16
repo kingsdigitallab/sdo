@@ -1,0 +1,83 @@
+<?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
+   xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+   <!--OJ-01-08_1909-06June, 1909 -  ( Diary Series A box: 01 folder: 08 date: Jan 1, 1909–Dec 31, 1909 pages: 95, 95a, 96-97, 97a, 98-100, 100a, 100b (101 omitted), 102-109   )
+                 
+             -->
+   <sdo:collectionDesc>
+      <sdo:source>
+         <!--Select an sdoID from the controlled list -->
+         <sdo:diary sdoID="OJ-01-08_1909-06"/>
+      </sdo:source>
+
+      <tei:handNotes>
+         <tei:handNote xml:id="HS" scope="minor">Heinrich Schenker's hand, in ink</tei:handNote>
+         <tei:handNote xml:id="HSpencil" scope="major">Heinrich Schenker's hand, in
+            pencil</tei:handNote>
+      </tei:handNotes>
+      <!-- Add additional or remove unnecessary statements of responsiblity as needed below -->
+      <tei:respStmt xml:id="IB">
+         <tei:persName>Ian Bent</tei:persName>
+         <tei:resp>Transcription</tei:resp>
+         <tei:resp>Translation</tei:resp>
+         <tei:resp>XML Encoding</tei:resp>
+         <tei:resp>Footnotes</tei:resp>
+      </tei:respStmt>
+      <tei:respStmt xml:id="TL">
+         <tei:persName>Tamara Lopez</tei:persName>
+         <tei:resp>XML Encoding Model</tei:resp>
+      </tei:respStmt>
+      <!-- Add additional change elements below to note major changes to the document -->
+      <tei:revisionDesc>
+         <tei:change when="2012-10-03" who="#IB">Template Generated</tei:change>
+      </tei:revisionDesc>
+   </sdo:collectionDesc>
+
+   <sdo:record ID="r0001">
+      <!--Use the itemDesc to group information about a single record, e.g. a single diary entry, lessonbook entry or piece of correspondence. 
+                         The   contains a series of Dublin Core elements. -->
+      <sdo:itemDesc>
+         <dc:title>Diary entry by Schenker June 6, 1909</dc:title>
+         <dcterms:created>1909-06-06T12:00:00Z</dcterms:created>
+         <dcterms:dateSubmitted>The Date of Electronic Creation Goes Here:
+            2018-04-13</dcterms:dateSubmitted>
+         <dc:description>A summary of the contents of the record (currently unused)</dc:description>
+         <dc:subject>A list of subjects (currently unused)</dc:subject>
+      </sdo:itemDesc>
+
+      <tei:div type="transcription">
+         <tei:opener>
+            <tei:hi rend="bold">Ser. A, </tei:hi><tei:pb n="100"/><tei:hi rend="bold">b</tei:hi><tei:lb/>
+            <tei:dateline><tei:handShift new="#HSpencil"/><tei:date when="1909-06-06">6.
+                  6.</tei:date></tei:dateline>
+         </tei:opener>
+         <tei:ab type="sub-entry" xml:id="r0001-se01">Brief an <tei:rs type="person"
+               key="entity-000707">Prof. Rettich</tei:rs>, s. Blg.<tei:note xml:id="r0001-fn01"
+               type="editorial" place="foot">Schenker was at this time trying urgently to obtain
+               assurance from <tei:rs type="person" key="entity-000743">Baron Alphons
+                  Rothschild</tei:rs> (whose private secretary Rettich was) of financial support in
+               the form of the printing costs of <tei:rs type="work" key="entity-001726"><tei:title
+                     level="m">Kontrapunkt</tei:title> I</tei:rs>. Schenker evidently kept his
+               Rothschild correspondence in some sort of folder (for which the usual term would have
+               been <tei:hi rend="italic">Mappe</tei:hi>, rather than <tei:hi rend="italic"
+                  >Beilage</tei:hi>, as used here).</tei:note></tei:ab>
+      </tei:div>
+
+
+      <tei:div type="translation">
+         <tei:opener>
+            <tei:hi rend="bold">Ser. A, </tei:hi><tei:pb n="100"/><tei:hi rend="bold">b</tei:hi><tei:lb/>
+            <tei:dateline><tei:handShift new="#HSpencil"/><tei:date when="1909-06-06">June
+                  6</tei:date></tei:dateline>
+         </tei:opener>
+         <tei:ab corresp="r0001-se01">Letter to <tei:rs type="person" key="entity-000707">Professor
+               Rettich</tei:rs>, see folder.<tei:ptr corresp="#r0001-fn01" type="footnote"
+            /></tei:ab>
+      </tei:div>
+   </sdo:record>
+
+
+
+</sdo:recordCollection>

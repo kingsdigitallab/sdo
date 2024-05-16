@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="2812" sdoID="OJ-6-3_5">OJ 6/3, [5]</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+   <tei:handNote xml:id="HS-pencil" scope="minor">Heinrich Schenker's hand in pencil</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>Transcription, 2022</tei:resp>
+   <tei:resp>Translation, 2022</tei:resp>
+   <tei:resp>XML Encoding, 2022</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2011-09-23" who="#IB">XML code revised</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-002719">ViolinM ~
+    HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+   <dc:title>Handwritten letter from Schenker to Moriz Violin, dated April 27, 1899</dc:title>
+
+   <dcterms:created>1899-04-27T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2022-09-12</dcterms:dateSubmitted>
+   <dc:description>Ludwig Karpath wishes to take lessons -- theory with Schenker, piano with Violin
+    -- starting May 1.</dc:description>
+   <dc:subject/>
+
+   <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+   <marcrel:recipient key="entity-000913">ViolinM</marcrel:recipient>
+  </sdo:itemDesc>
+
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:dateline rend="indent-70"><tei:handShift new="#HS-pencil"/>27. 4. 1899</tei:dateline>
+    <tei:salute><tei:handShift new="#HS"/><tei:rs type="person" key="entity-000913"
+      >Florizissime</tei:rs>,</tei:salute>
+   </tei:opener>
+
+   <tei:p>Gestern vergass ich dir zu sagen, dass Monsignore <tei:rs type="person"
+     key="entity-000424">Karpath</tei:rs> im Ernste Clavierstunden bis zu primitivster
+    Vervollkommnung (2mal wöchentlich) nehmen will. Von mir sieht er selbst ab, u. will mich blos zu
+    theoretischen Disciplinen anwerben.<tei:note xml:id="r0001-fn01" type="editorial" place="foot"
+     >This is perhaps the first indication that Schenker regarded theory as a separate entity for
+     purposes of teaching, and also that for him it encompassed several “disciplines.”</tei:note>
+    Für Clavier empfahl ich ihm dich, Meister, u. ich glaube, du solltest unter allen Umständen ihn
+    acceptiren, da er dir sehr, sehr <tei:pb n="2"/> nützlich sein könnte, bei <tei:rs type="person"
+     key="entity-000556">Mahler</tei:rs> (Empfehlungen an weitere Dirigenten) beim <tei:rs
+      type="journal" key="entity-002561"><tei:title>N. W. Tagbl.</tei:title></tei:rs> etc. </tei:p>
+
+   <tei:p>Er ist ja ein guter Kerl! </tei:p>
+
+   <tei:p>Also wärest du dabei? Ja, oder nein. </tei:p>
+
+   <tei:p><tei:rs type="person" key="entity-000424">Karp.</tei:rs> möchte <tei:date
+     when="1899-04-27">1 Mai</tei:date> schon anfangen! </tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-50">Dein</tei:salute>
+    <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000632">H Schenker</tei:rs>
+    </tei:signed>
+   </tei:closer>
+
+  </tei:div>
+
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:dateline rend="indent-70"><tei:handShift new="#HS-pencil"/>April 27, 1899</tei:dateline>
+    <tei:salute><tei:handShift new="#HS"/><tei:rs type="person" key="entity-000913"
+      >Florizissime</tei:rs>,</tei:salute>
+   </tei:opener>
+
+   <tei:p>Yesterday I forgot to tell you that “Monsignor” <tei:rs type="person" key="entity-000424"
+     >Karpath</tei:rs> wishes in earnest to take piano lessons in order to attain the most basic
+    standard (twice weekly). He himself defers to me and wishes to enlist me just for theoretical
+     subjects.<tei:ptr corresp="#r0001-fn01" type="footnote"/> For piano, I recommended you to him,
+    Master, and I think that, whatever the circumstances, you should take him on, since {2} he could
+    be very, very <tei:pb n="2"/> useful to you with <tei:rs type="person" key="entity-000556"
+     >Mahler</tei:rs> (recommendations to other conductors) and at the <tei:rs type="journal"
+      key="entity-002561"><tei:title level="j">Neues Wiener Tagblatt</tei:title></tei:rs>,
+    etc.</tei:p>
+
+   <tei:p>He is a really good fellow!</tei:p>
+
+   <tei:p>So, are you on board with this? Yes or No?</tei:p>
+
+   <tei:p><tei:rs type="person" key="entity-000424">Karpath</tei:rs> would like to begin right away
+    on <tei:date when="1899-04-27">May 1</tei:date>.</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-50">Your</tei:salute>
+    <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000632">H. Schenker</tei:rs>
+    </tei:signed>
+   </tei:closer>
+
+  </tei:div>
+ </sdo:record>
+</sdo:recordCollection>

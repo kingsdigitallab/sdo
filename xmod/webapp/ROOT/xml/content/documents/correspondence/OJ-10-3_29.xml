@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1276" sdoID="OJ-10-3_29">OJ 10/3, [29]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="unk" scope="major">unknown hand (Sütterlinschrift)</tei:handNote>
+      <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2014</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="DB">
+      <tei:persName>David Bretherton</tei:persName>
+      <tei:resp>Translation, 2015</tei:resp>
+      <tei:resp>XML Encoding, 2015</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-11" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+      <dc:title>Handwritten letter from Deutsch to Schenker, dated March 20, 1922</dc:title>
+
+      <dcterms:created>1922-03-20T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2015-09-11</dcterms:dateSubmitted>
+      <dc:description>Deutsch writes that the "Moonlight" Sonata facsimile edition is still being
+        printed, and that he cannot make a decision on the production of a second facsimile edition
+        until the new contract has been agreed with Universal Edition. The contract has been delayed
+        by Universal Edition's dispute with Drei Masken. If they have to abandon plans for the
+        facsimile edition of Beethoven's "Spring" Sonata Op. 24 because of the dispute, Deutsch
+        suggests Beethoven's String Quartet Op. 95 as an alternative.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000163">DeutschH</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+      <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:dateline rend="indent-75"><tei:handShift new="#OED"/><tei:date when="1922-03-20">20.
+            III. 1922</tei:date>.</tei:dateline><tei:lb/>
+        <tei:fw type="header" rend="inline">
+          <tei:note type="editorial">printed letterhead:</tei:note>
+          <tei:handShift new="#printed"/>OTTO ERICH DEUTSCH</tei:fw>
+        <tei:address>
+          <tei:addrLine rend="indent-75">WIEN II.</tei:addrLine>
+          <tei:addrLine rend="indent-75">Böcklinstrasse 26</tei:addrLine>
+        </tei:address>
+        <tei:salute rend="indent-20"><tei:handShift new="#unk"/>Lieber Herr <tei:rs type="person"
+            key="entity-000632">Doktor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial"
+            place="foot">Receipt of this letter is recorded in Schenker's diary at OJ 3/3, p. 2422
+            (March 22, 1922): "Von Deutsch (Br.): Schwierigkeiten mit Hertzka verzögern das
+            Erscheinen." ("From Deutsch (letter): difficulties with Hertzka are delaying the
+            release.").</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Für Ihren Brief vom <tei:date when="1922-03-11">11. d. M.</tei:date> sage
+        ich Ihnen meinen herzlichsten Dank. Leider sind wir noch immer am Druck. Es ist mir
+        unmöglich, mich über die Herausgabe einer zweiten Handschrift von <tei:rs
+          key="entity-000055" type="person">Beethoven</tei:rs> zu entscheiden, solange die <tei:rs
+          key="entity-002408" type="organization">Universaledition</tei:rs> den neuen Vertrag, der
+        auch für die Heraus- gabe von Bedeutung ist, nicht erledigt hat. Dies verzögerte sich nun
+        seit zweieinhalb Monaten<tei:supplied reason="clarity">,</tei:supplied> ebenso die
+        Vorauszahlung der Honorarteile. Jedenfalls danke ich Ihnen für Ihre bisherigen Bemühungen.
+        Auch das Einverständnis mit <tei:rs key="entity-000195" type="person">Dr. Einstein</tei:rs>
+        ist durch einen leidigen Konkurrenzstreit der <tei:rs key="entity-002408"
+          type="organization">Universaledition</tei:rs> mit dem <tei:rs key="entity-002627"
+          type="organization">Drei-Masken-Verlage</tei:rs> bisher gestört gewesen, so daß ich
+        bestimmt nicht an<tei:note type="editorial">corr</tei:note> der <tei:rs key="entity-001275"
+          type="composition">Frühlingssonate</tei:rs> rühre, bevor nicht die <tei:rs
+          key="entity-002408" type="organization">Universaledition</tei:rs> dem <tei:rs
+          key="entity-002627" type="organization">Drei-Masken -Verlage</tei:rs> versöhnlich die
+        gebotene Hand gedrückt hat. Es müssen ja nicht immer nur Autoren gedrückt werden.<tei:note
+          xml:id="r0001-fn02" type="editorial" place="foot">No paragraph-break in
+        source.</tei:note></tei:p>
+
+      <tei:p>Herr Dr. <tei:subst>
+          <tei:del rend="overstrike" hand="#OED">Richtera</tei:del>
+          <tei:add place="interlinear-above" hand="#OED"><tei:rs key="entity-000420" type="person"
+              >Kalmus</tei:rs></tei:add>
+        </tei:subst>
+        <tei:handShift new="#unk"/>sagte mir unlängst, daß ich jetzt den neuen Vertrag bekommen soll
+          <tei:note type="editorial">cued from bottom margin:</tei:note>
+        <tei:handShift new="#OED"/>ist geschehen! <tei:note type="editorial">end cue</tei:note>
+        <tei:handShift new="#unk"/>und auch das erste Honorar, was ja immerhin möglich ist,
+        außerdem, daß Herr Direktor <tei:rs key="entity-000356" type="person">Hertzka</tei:rs> jetzt
+        eben in <tei:rs key="entity-002286" type="place">München</tei:rs>
+        <tei:subst>
+          <tei:del rend="overstrike" hand="#OED">ist</tei:del>
+          <tei:add place="interlinear-above" hand="#OED">war</tei:add>
+        </tei:subst>
+        <tei:handShift new="#unk"/>und mit Direktor <tei:rs key="entity-000195" type="person"
+          >Einstein</tei:rs> sprechen wollte. Im übrigen wäre ich natürlich mit Ihrem Vorschlage,
+        den letzten Satz streichen<tei:note type="editorial">corr</tei:note> zu lassen <tei:supplied
+          reason="clarity">einverstanden</tei:supplied>, <tei:pb n="2"/> wenn seine Handschrift
+        nicht zu finden ist.<tei:note xml:id="r0001-fn03" type="editorial" place="foot">The finale
+          is missing from the autograph manuscript of Beethoven's Violin Sonata in F major, Op. 24
+          ("Spring"), which is held in the Austrian National Library in Vienna.</tei:note> Falls die
+        denkbare <tei:rs key="entity-001275" type="composition">Frühlingssonate</tei:rs> wegen
+        Dreistein und Ein-Masken-Verlag nicht erreichbar ist, so täten wir gut daran, uns auf das
+          <tei:rs key="entity-001257" type="composition">Streichquartett opus 95</tei:rs> zu
+        einigen. Herr Dr. <tei:subst>
+          <tei:del rend="overstrike" hand="#OED">Haß</tei:del>
+          <tei:add place="interlinear-above" hand="#OED"><tei:rs key="entity-000320" type="person"
+              >Haas</tei:rs></tei:add>
+        </tei:subst>
+        <tei:handShift new="#unk"/>ist bisher zu mir, so wie zu den meisten Mitmenschen nicht
+          wirsch<tei:note xml:id="r0001-fn04" type="editorial" place="foot"><tei:hi rend="italic"
+            >nicht wirsch</tei:hi>: "unwirsch" means "harsh, unpleasant, brutal"; "wirsch" as its
+          opposite is not used in German, so the expression "nicht wirsch" is an expression made up
+          by Deutsch.</tei:note> gewesen und ich möchte <tei:subst>
+          <tei:del rend="overstrike" hand="#OED">Ihnen</tei:del>
+          <tei:add place="interlinear-above" hand="#OED">ihn</tei:add>
+        </tei:subst> deshalb nur, wenn es nötig ist, aufsuchen.<tei:note xml:id="r0001-fn05"
+          type="editorial" place="foot">No paragraph-break in source.</tei:note></tei:p>
+
+      <tei:closer>
+        <tei:salute>Mit den besten Empfehlungen an Ihre Frau <tei:rs key="entity-000771"
+            type="person">Gemahlin</tei:rs> und schönen Grüßen an Sie</tei:salute>
+        <tei:salute rend="indent-25">Ihr sehr ergebener</tei:salute>
+        <tei:signed rend="indent-60"><tei:handShift new="#OED"/><tei:rs type="person"
+            key="entity-000164">Otto Erich Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:dateline rend="indent-75"><tei:handShift new="#OED"/><tei:date when="1922-03-20">March
+            20, 1922</tei:date></tei:dateline><tei:lb/>
+        <tei:fw type="header" rend="inline">
+          <tei:note type="editorial">printed letterhead:</tei:note>
+          <tei:handShift new="#printed"/>OTTO ERICH DEUTSCH</tei:fw>
+        <tei:address>
+          <tei:addrLine rend="indent-75">VIENNA II</tei:addrLine>
+          <tei:addrLine rend="indent-75">Böcklinstrasse 26</tei:addrLine>
+        </tei:address>
+        <tei:salute rend="indent-20"><tei:handShift new="#unk"/>Dear <tei:rs type="person"
+            key="entity-000632">Dr. <tei:supplied reason="clarity"
+            >Schenker</tei:supplied></tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"
+          /></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">My warmest thanks for your letter of the <tei:date when="1922-03-11">11th
+          of the month</tei:date>. Unfortunately we are still printing. It is impossible for me to
+        decide on the publication of a second <tei:rs key="entity-000055" type="person"
+          >Beethoven</tei:rs> manuscript while <tei:rs key="entity-002408" type="organization"
+          >Universal Edition</tei:rs> has not completed the new contract, which is also important
+        for publication. This has been delayed for two and a half months now, as has the advance of
+        honoraria. In any case, I thank you for your efforts so far. What is more, the agreement
+        with <tei:rs key="entity-000195" type="person">Dr. Einstein</tei:rs> has been impaired up
+        until now because of an unpleasant competition dispute between <tei:rs key="entity-002408"
+          type="organization">Universal Edition</tei:rs> and <tei:rs key="entity-002627"
+          type="organization">Drei Masken</tei:rs>, so I am certainly not going to touch the <tei:rs
+          key="entity-001275" type="composition">"Spring" Sonata</tei:rs>, not before <tei:rs
+          key="entity-002408" type="organization">Universal Edition</tei:rs> has shaken the
+        conciliatory hand offered by <tei:rs key="entity-002627" type="organization">Drei
+          Masken</tei:rs>. It must not be only the authors that have shaken <tei:supplied
+          reason="clarity">hands</tei:supplied>.<tei:ptr corresp="#r0001-fn02" type="footnote"
+        /></tei:p>
+
+      <tei:p>Dr. <tei:subst>
+          <tei:del rend="overstrike" hand="#OED">Richtera</tei:del>
+          <tei:add place="interlinear-above" hand="#OED"><tei:rs key="entity-000420" type="person"
+              >Kalmus</tei:rs></tei:add>
+        </tei:subst>
+        <tei:handShift new="#unk"/>told me recently that I should now get the new contract <tei:note
+          type="editorial">cued from bottom margin:</tei:note> – <tei:handShift new="#OED"/>this has
+        occurred! <tei:note type="editorial">end cue</tei:note>
+        <tei:handShift new="#unk"/>and also the first fee, which is of course quite possible; he
+        also said that Director <tei:rs key="entity-000356" type="person">Hertzka</tei:rs>
+        <tei:subst>
+          <tei:del rend="overstrike" hand="#OED">is</tei:del>
+          <tei:add place="interlinear-above" hand="#OED">was</tei:add>
+        </tei:subst> in <tei:rs key="entity-002286" type="place">Munich</tei:rs>
+        <tei:handShift new="#unk"/>just now and had wanted to talk to Director <tei:rs
+          key="entity-000195" type="person">Einstein</tei:rs>. For the rest, I would of course
+          <tei:supplied reason="clarity">agree</tei:supplied> with your proposal to cut the last
+        movement <tei:pb n="2"/> if the manuscript is not to be found.<tei:ptr corresp="#r0001-fn03"
+          type="footnote"/> If the putative <tei:rs key="entity-001275" type="composition">"Spring"
+          Sonata</tei:rs> is unavailable on account of Dreistein and Ein Masken, we would be well
+        advised to agree on the <tei:rs key="entity-001257" type="composition">String Quartet (Op.
+          95)</tei:rs>. As to most people with whom he comes into contact, Dr. <tei:subst>
+          <tei:del rend="overstrike" hand="#OED">Haß</tei:del>
+          <tei:add place="interlinear-above" hand="#OED"><tei:rs key="entity-000320" type="person"
+              >Haas</tei:rs></tei:add>
+        </tei:subst><tei:handShift new="#unk"/>has up to now been not exactly pleasant<tei:ptr
+          corresp="#r0001-fn04" type="footnote"/> to me, and therefore I would like you to see him
+        only if it is necessary.<tei:ptr corresp="#r0001-fn05" type="footnote"/></tei:p>
+
+      <tei:closer>
+        <tei:salute>With the best regards to your <tei:rs key="entity-000771" type="person"
+            >wife</tei:rs> and warm greetings to you,</tei:salute>
+        <tei:salute rend="indent-25">yours very truly,</tei:salute>
+        <tei:signed rend="indent-60"><tei:handShift new="#OED"/><tei:rs type="person"
+            key="entity-000164">Otto Erich Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

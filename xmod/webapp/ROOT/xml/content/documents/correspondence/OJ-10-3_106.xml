@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3089" sdoID="OJ-10-3_106">OJ 10/3, [106]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="TPoed" scope="major">Otto Erich Deutsch typist</tei:handNote>
+      <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+      <tei:handNote xml:id="unk" scope="minor">unknown hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-19" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture
+        postcard</tei:rs>
+
+      <dc:title>Typewritten picture postcard from Deutsch to Schenker, dated September 18,
+        1929</dc:title>
+
+      <dcterms:created>1929-09-18T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-03-17</dcterms:dateSubmitted>
+      <dc:description>Deutsch asks Schenker to name a convenient time to speak with him in private
+        or, alternatively, for the Schenkers to come to his place some afternoon.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:note type="editorial" place="inline">picture: mountains and valley, captioned:
+          “Panorama v. d. Gaisbergspitze, Salzburg”</tei:note><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">Absender:</tei:supplied><tei:handShift
+              new="#stamp"/>Prof. O. E. DEUTSCH</tei:addrLine>
+          <tei:addrLine>Wien II. Böcklinstrasse 26</tei:addrLine>
+          <tei:addrLine>Telefon Nummer R 45-6-72</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied>
+            <tei:handShift new="#TPoed"/> Herrn Dr. Heinrich Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-30">Keilgasse 8</tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:hi rend="sperr">Wien</tei:hi> III.</tei:addrLine>
+        </tei:address>
+        <tei:lb/>
+        <tei:add><tei:handShift new="#unk"/><tei:note>faint, in pencil:</tei:note>/12</tei:add><tei:lb/>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-40"><tei:handShift new="#TPoed"
+            /><tei:placeName>Wien</tei:placeName>, <tei:date when="1929-09-18">18. Sept.
+            1929</tei:date>.</tei:dateline>
+        <tei:salute>Lieber verehrter Herr <tei:rs type="person" key="entity-000632"
+            >Doktor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
+            this postcard and the writing of a reply are recorded in Schenker’s diary for September
+            19, 1929: “Von Deutsch (K.): ob ein Wiedersehen unter vier Augen erwünscht sei oder ob
+            wir einer Einladung zur Jause folgen können. An Deutsch (K. expreß): lieber an diesem
+            als an dem nächsten Sonntag” (“From Deutsch (postcard): whether a private meeting is
+            desirable, or whether we can accept an invitation for afternoon snack. – To Deutsch
+            (express postcard): preferably this Sunday rather than next”). </tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Gerne möchte ich Sie im September noch sprechen. Wenn das unter vier Augen
+        geschehen soll, so komme ich zu einer Ihnen genehmen Zeit. Sonst aber würden wir uns freuen,
+        wenn Sie mit Ihrer <tei:rs type="person" rend="entity-000771">Frau Gemahlin</tei:rs> den im
+        Frühjahr verschobenen Besuch nun bei uns nachholen wollten, auch das an einem Ihnen
+        passenden Nachmittag, womöglich <tei:hi rend="underline">nicht</tei:hi>
+        <tei:hi rend="underline">Freitag</tei:hi>
+        <tei:add place="interlinear-above"><tei:handShift new="#OED"/>u. <tei:hi rend="underline"
+            >Donnerstag</tei:hi></tei:add>. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-70"><tei:handShift new="#TPoed"/>Mit schönen Grüssen </tei:salute>
+        <tei:salute rend="indent-70">Ihr sehr ergebener</tei:salute>
+        <tei:signed rend="indent-80"><tei:handShift new="#OED"/>
+          <tei:rs key="entity-000164" type="person">O E Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:note type="editorial" place="inline">picture: mountains and valley, captioned:
+          “Panorama of the Gaisbergspitze, Salzburg”</tei:note><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">From:</tei:supplied><tei:handShift
+              new="#stamp"/>Prof. O. E. DEUTSCH</tei:addrLine>
+          <tei:addrLine>Vienna II, Böcklinstrasse 26</tei:addrLine>
+          <tei:addrLine>Telephone number: R 45-6-72</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied>
+            <tei:handShift new="#TPoed"/> Dr. Heinrich Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-30">Keilgasse 8</tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:hi rend="sperr">Vienna</tei:hi> III</tei:addrLine>
+        </tei:address>
+        <tei:lb/>
+        <tei:add><tei:handShift new="#unk"/><tei:note>faint, in pencil:</tei:note>/12</tei:add><tei:lb/>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-40"><tei:handShift new="#TPoed"
+            /><tei:placeName>Vienna</tei:placeName>, <tei:date when="1929-09-18">September 18,
+            1929</tei:date></tei:dateline>
+        <tei:salute>Dear revered Dr. <tei:supplied reason="identity"><tei:rs type="person"
+              key="entity-000632">Schenker</tei:rs></tei:supplied>,<tei:ptr corresp="#r0001-fn01"
+            type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">I would very much like to speak with you in September. If this should be
+        done just between the two of us, then I shall come at a time that is convenient to you.
+        Otherwise, however, we would be delighted if you and your <tei:rs type="person"
+          rend="entity-000771">wife</tei:rs> could make good the visit we postponed from earlier in
+        the year, and that, too, on an afternoon that suits you, if possible <tei:hi
+          rend="underline">avoiding</tei:hi>
+        <tei:hi rend="underline">Friday</tei:hi>
+        <tei:add place="interlinear-above"><tei:handShift new="#OED"/>and <tei:hi rend="underline"
+            >Thursday</tei:hi></tei:add>.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-70"><tei:handShift new="#TPoed"/>With kind greetings,</tei:salute>
+        <tei:salute rend="indent-70">Your very devoted</tei:salute>
+        <tei:signed rend="indent-80"><tei:handShift new="#OED"/>
+          <tei:rs key="entity-000164" type="person">O. E. Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

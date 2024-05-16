@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:marcrel="http://www.loc.gov/loc.terms/relators/" xmlns:sdo="http://www.cch.kcl.ac.uk/schenker"
+  xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="1287" sdoID="OJ-14-21_4">OJ 14/21, [4]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+      <tei:handNote xml:id="unk" scope="minor">unknown hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="DB">
+      <tei:persName>David Bretherton</tei:persName>
+      <tei:resp>Transcription, 2015</tei:resp>
+      <tei:resp>Translation, 2015</tei:resp>
+      <tei:resp>XML Encoding, 2015</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-13" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~ HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005470">Seidel's ~ HSchenker</tei:rs>
+      <tei:rs key="entity-003349" type="corr-item-type" role="corr-item-type">Invoice</tei:rs>
+
+      <dc:title>Invoice from Seidel'sche Buchhandlung to Schenker, dated June 30, 1922</dc:title>
+
+      <dcterms:created>1922-06-30T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2015-09-13</dcterms:dateSubmitted>
+      <dc:description>Invoice from Deutsch's bookshop (Seidel'sche Buchhandlung) for works by Mozart and Brahms, and a
+        book by Hildebrand, which also shows a credit remittance for one copy of Schenker's facsimile edition of
+        Beethoven's "Moonlight" Sonata.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:correspondent key="entity-002462">Seidel's</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:note type="editorial">printed form, with handwritten entries:</tei:note>
+        <tei:lb/><tei:handShift new="#printed"/>D 2850 <tei:lb/>
+        <tei:fw type="header" rend="inline">
+          <tei:del rend="overstrike">Interims-</tei:del>Rechnung </tei:fw>
+        <tei:lb/><tei:address>
+          <tei:addrLine><tei:handShift new="#stamp"/><tei:rs key="entity-002462" type="organization">SEIDELSCHE
+              <tei:lb/>BUCHHANDLUNG</tei:rs></tei:addrLine>
+          <tei:addrLine>WIEN, I. GRABEN 13</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied><tei:handShift new="#printed"
+            />Hochwohlgeboren</tei:addrLine>
+          <tei:addrLine>Herr<tei:add place="inline" hand="unk">n</tei:add>/<tei:del rend="overstrike" hand="unk"
+              >Löbl.</tei:del>
+            <tei:handShift new="#unk"/>Professor D<tei:hi rend="supralinear">r.</tei:hi>
+            <tei:rs key="entity-000632" type="person">Heinrich Schenker</tei:rs>,<tei:note xml:id="r0001-fn01"
+              type="editorial" place="foot">Receipt of this invoice is not recorded in Schenker's
+            diary.</tei:note></tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine rend="indent-50"><tei:handShift new="#printed"/>empfangen von</tei:addrLine>
+          <tei:addrLine>
+            <tei:del rend="overstrike"><tei:rs key="entity-002462" type="organization">L. W. Seidel &amp; Sohn</tei:rs>,
+                <tei:note type="editorial">coat of arms</tei:note> k. u. k. Hofbuchhändler</tei:del>
+          </tei:addrLine>
+          <tei:addrLine rend="indent-45">Wien I, Graben 13.</tei:addrLine>
+          <tei:addrLine rend="indent-10">
+            <tei:del rend="overstrike"><tei:supplied reason="covered">Österr. Scheckkon</tei:supplied>to Nr. 9363. <tei:lb/>
+              <tei:supplied reason="covered">Ungar. "</tei:supplied> " 2774. <tei:lb/>
+              <tei:supplied reason="covered">Bosn.-herz "</tei:supplied> " 7403.</tei:del>
+          </tei:addrLine>
+          <tei:lb/>
+          <tei:note type="editorial">A ten kronen Stemplemarke (revenue stamp) covers the editorially supplied text
+            above, and the title of the first column below.</tei:note>
+          <tei:addrLine>Telephon Nr. 1288.</tei:addrLine>
+        </tei:address>
+        <tei:lb/>Zahlbar und klagbar in Wien I.<tei:lb/>
+        <tei:dateline rend="indent-45"><tei:rs key="entity-002484" type="place">Wien</tei:rs>, den <tei:handShift
+            new="#unk"/>
+          <tei:date when="1922-06-30">30./6. <tei:choice>
+              <tei:sic><tei:handShift new="#printed"/>191<tei:handShift new="#unk"/>22</tei:sic>
+              <tei:corr>1922</tei:corr>
+            </tei:choice></tei:date></tei:dateline></tei:opener>
+      <tei:lb/>
+
+      <tei:ab>
+        <tei:note type="editorial">table, simplified:</tei:note>
+        <tei:table rows="13" cols="4">
+          <tei:row>
+            <tei:cell role="label"><tei:handShift new="#printed"/><tei:supplied reason="covered"
+              >Fol.</tei:supplied></tei:cell>
+            <tei:cell role="label"><tei:note type="editorial">no option indicated:</tei:note> Zur geneigten Ansicht. –
+              Zur Fortsetzung. – Auf Verlangen.</tei:cell>
+            <tei:cell role="label"><tei:add hand="#unk" place="inline">Mark</tei:add></tei:cell>
+            <tei:cell role="label">Kronen</tei:cell>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data"><tei:handShift new="#unk"/><tei:date when="1922-02-15">15./2.</tei:date></tei:cell>
+            <tei:cell role="data"/>
+            <tei:cell role="data"/>
+            <tei:cell role="data"/>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data">1</tei:cell>
+            <tei:cell role="data"><tei:rs key="entity-000027" type="person">Joh. Seb. Bach</tei:rs></tei:cell>
+            <tei:cell role="data">80.—</tei:cell>
+            <tei:cell role="data"/>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data">1</tei:cell>
+            <tei:cell role="data"><tei:rs key="entity-000612" type="person">Mozart</tei:rs></tei:cell>
+            <tei:cell role="data">113.35</tei:cell>
+            <tei:cell role="data"/>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data">1</tei:cell>
+            <tei:cell role="data"><tei:rs key="entity-000094" type="person">Brahms</tei:rs> 3 Lieder</tei:cell>
+            <tei:cell role="data">80.—</tei:cell>
+            <tei:cell role="data"/>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data"><tei:date when="1922-06-07">7. 6.</tei:date></tei:cell>
+            <tei:cell role="data"/>
+            <tei:cell role="data"/>
+            <tei:cell role="data"/>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data">1</tei:cell>
+            <tei:cell role="data"><tei:rs key="entity-000368" type="person">Hildebrand</tei:rs>, <tei:title>Problem d.
+                Form</tei:title><tei:note xml:id="r0001-fn02" type="editorial" place="foot"><tei:bibl>Adolph von
+                  Hildebrand, <tei:title level="m">Das Problem der Form in der bildenden Kunst</tei:title> (Strassburg:
+                  Heitz, 1893).</tei:bibl></tei:note></tei:cell>
+            <tei:cell role="data">72.70</tei:cell>
+            <tei:cell role="data"/>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data"/>
+            <tei:cell role="data">Rechnungspesen</tei:cell>
+            <tei:cell role="data"/>
+            <tei:cell role="data"><tei:del rend="overstrike" hand="#unk">40.—</tei:del><tei:note type="editorial"
+                >?</tei:note></tei:cell>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data"/>
+            <tei:cell role="data"/>
+            <tei:cell role="data">------</tei:cell>
+            <tei:cell role="data">------</tei:cell>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data"/>
+            <tei:cell role="data"/>
+            <tei:cell role="data">346.05</tei:cell>
+            <tei:cell role="data"><tei:del rend="overstrike" hand="#unk">40.—</tei:del><tei:note type="editorial"
+                >?</tei:note></tei:cell>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data"/>
+            <tei:cell role="data">Als <tei:abbr>gefl.<tei:ex>ossene</tei:ex></tei:abbr> Gutschrift f. <tei:rs
+                key="entity-001754" type="work">1 Beethoven, Mondscheinsonate</tei:rs></tei:cell>
+            <tei:cell role="data">45.—</tei:cell>
+            <tei:cell role="data"/>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data"/>
+            <tei:cell role="data"/>
+            <tei:cell role="data">------</tei:cell>
+            <tei:cell role="data">------</tei:cell>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data"/>
+            <tei:cell role="data"/>
+            <tei:cell role="data">M 301.05</tei:cell>
+            <tei:cell role="data"><tei:del rend="overstrike" hand="#unk">M 40.—</tei:del><tei:note type="editorial"
+                >?</tei:note></tei:cell>
+          </tei:row>
+        </tei:table>
+      </tei:ab>
+
+      <tei:ab><tei:note type="editorial">on unused rows of the table:</tei:note>
+        <tei:lb/><tei:handShift new="#stamp"/>Postscheckkonto Karlsruhe 24934 <tei:lb/><tei:handShift new="#unk"
+        />Dankend erhalten <tei:address>
+          <tei:addrLine><tei:handShift new="#stamp"/><tei:rs key="entity-002462" type="organization">SEIDELSCHE
+              <tei:lb/>BUCHHANDLUNG</tei:rs></tei:addrLine>
+          <tei:addrLine>WIEN, I. GRABEN 13</tei:addrLine>
+        </tei:address></tei:ab>
+
+      <tei:ab>
+        <tei:note type="editorial">underneath table, no option indicated:</tei:note>
+        <tei:lb/><tei:handShift new="#printed"/><tei:hi rend="bold">Fehlendes:</tei:hi> – ist momentan vergriffen –
+        sollen wir antiquarisch besorgen – ist noch nicht erschienen – ist reservat – ist bereits im Neudruck – ist
+        bestellt, vorgemerkt und folgt nach Eintreffen – Erscheinen.</tei:ab>
+      <tei:ab><tei:hi rend="bold">Beim Zurücksenden der nicht konvenierenden Bücher bitten wir, diese Nota der Sendung
+          wieder beizulegen.</tei:hi></tei:ab>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:note type="editorial">printed form, with handwritten entries:</tei:note><tei:lb/>
+        <tei:lb/><tei:handShift new="#printed"/>D 2850 <tei:lb/>
+        <tei:fw type="header" rend="inline">
+          <tei:del rend="overstrike">Interim</tei:del> Invoice </tei:fw>
+        <tei:lb/><tei:address>
+          <tei:addrLine><tei:handShift new="#stamp"/><tei:rs key="entity-002462" type="organization">SEIDEL'S
+              <tei:lb/>BOOK DEALERSHIP</tei:rs></tei:addrLine>
+          <tei:addrLine>VIENNA I. GRABEN 13</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">to:</tei:supplied><tei:handShift new="#printed"
+            />High-born</tei:addrLine>
+          <tei:addrLine>Mister/<tei:del rend="overstrike" hand="unk">Laudable</tei:del>
+            <tei:handShift new="#unk"/>Professor Dr. <tei:rs key="entity-000632" type="person">Heinrich
+              Schenker</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine rend="indent-50"><tei:handShift new="#printed"/>received from </tei:addrLine>
+          <tei:addrLine>
+            <tei:del rend="overstrike"><tei:rs key="entity-002462" type="organization">L. W. Seidel &amp; Sohn</tei:rs>,
+                <tei:note type="editorial">coat of arms</tei:note> Imperial and Royal Court Book Dealer</tei:del>
+          </tei:addrLine>
+          <tei:addrLine rend="indent-45">Vienna I, Graben 13.</tei:addrLine>
+          <tei:addrLine rend="indent-10">
+            <tei:del rend="overstrike"><tei:supplied reason="covered">Austrian Checking Acco</tei:supplied>unt No. 9363.
+                <tei:lb/><tei:supplied reason="covered">Hungarian "</tei:supplied> " 2774. <tei:lb/><tei:supplied
+                reason="covered">Bosnian-Herzegovinian "</tei:supplied> " 7403.</tei:del>
+          </tei:addrLine>
+          <tei:lb/>
+          <tei:note type="editorial">A ten kronen Stemplemarke (revenue stamp) covers the editorially supplied text
+            above, and the title of the first column below.</tei:note>
+          <tei:addrLine>Telephone No. 1288.</tei:addrLine>
+        </tei:address>
+        <tei:lb/>Payable and actionable in Vienna I.<tei:lb/>
+        <tei:dateline rend="indent-45"><tei:rs key="entity-002484" type="place">Vienna</tei:rs>, <tei:handShift
+            new="#unk"/>
+          <tei:date when="1922-06-30">June 30, <tei:choice>
+              <tei:sic><tei:handShift new="#printed"/>191<tei:handShift new="#unk"/>22</tei:sic>
+              <tei:corr>1922</tei:corr>
+            </tei:choice></tei:date></tei:dateline></tei:opener>
+      <tei:lb/>
+
+      <tei:ab>
+        <tei:note type="editorial">table, simplified:</tei:note>
+        <tei:table rows="13" cols="4">
+          <tei:row>
+            <tei:cell role="label"><tei:handShift new="#printed"/><tei:supplied reason="covered"
+              >Fol.</tei:supplied></tei:cell>
+            <tei:cell role="label"><tei:note type="editorial">no option indicated:</tei:note> For considered viewing. –
+              For continuation. – Upon demand.</tei:cell>
+            <tei:cell role="label"><tei:add hand="#unk" place="inline">marks</tei:add></tei:cell>
+            <tei:cell role="label">kronen</tei:cell>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data"><tei:handShift new="#unk"/><tei:date when="1922-02-15">Feb. 15.</tei:date></tei:cell>
+            <tei:cell role="data"/>
+            <tei:cell role="data"/>
+            <tei:cell role="data"/>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data">1</tei:cell>
+            <tei:cell role="data"><tei:rs key="entity-000027" type="person">Joh. Seb. Bach</tei:rs></tei:cell>
+            <tei:cell role="data">80.00</tei:cell>
+            <tei:cell role="data"/>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data">1</tei:cell>
+            <tei:cell role="data"><tei:rs key="entity-000612" type="person">Mozart</tei:rs></tei:cell>
+            <tei:cell role="data">113.35</tei:cell>
+            <tei:cell role="data"/>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data">1</tei:cell>
+            <tei:cell role="data"><tei:rs key="entity-000094" type="person">Brahms</tei:rs> 3 Lieder</tei:cell>
+            <tei:cell role="data">80.00</tei:cell>
+            <tei:cell role="data"/>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data"><tei:date when="1922-06-07">Jun. 7.</tei:date></tei:cell>
+            <tei:cell role="data"/>
+            <tei:cell role="data"/>
+            <tei:cell role="data"/>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data">1</tei:cell>
+            <tei:cell role="data"><tei:rs key="entity-000368" type="person">Hildebrand</tei:rs>, <tei:title level="m"
+                >Problem of Form</tei:title><tei:ptr corresp="#r0001-fn02" type="footnote"/></tei:cell>
+            <tei:cell role="data">72.70</tei:cell>
+            <tei:cell role="data"/>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data"/>
+            <tei:cell role="data">Accounting expenses</tei:cell>
+            <tei:cell role="data"/>
+            <tei:cell role="data"><tei:del rend="overstrike" hand="#unk">40.00</tei:del><tei:note type="editorial"
+                >?</tei:note></tei:cell>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data"/>
+            <tei:cell role="data"/>
+            <tei:cell role="data">------</tei:cell>
+            <tei:cell role="data">------</tei:cell>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data"/>
+            <tei:cell role="data"/>
+            <tei:cell role="data">346.05</tei:cell>
+            <tei:cell role="data"><tei:del rend="overstrike" hand="#unk">40.00</tei:del><tei:note type="editorial"
+                >?</tei:note></tei:cell>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data"/>
+            <tei:cell role="data">As ongoing credit for 1 <tei:rs key="entity-001754" type="work">Beethoven, "Moonlight"
+                Sonata</tei:rs></tei:cell>
+            <tei:cell role="data">45.00</tei:cell>
+            <tei:cell role="data"/>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data"/>
+            <tei:cell role="data"/>
+            <tei:cell role="data">------</tei:cell>
+            <tei:cell role="data">------</tei:cell>
+          </tei:row>
+          <tei:row>
+            <tei:cell role="data"/>
+            <tei:cell role="data"/>
+            <tei:cell role="data">M 301.05</tei:cell>
+            <tei:cell role="data"><tei:del rend="overstrike" hand="#unk">M 40.00</tei:del><tei:note type="editorial"
+                >?</tei:note></tei:cell>
+          </tei:row>
+        </tei:table>
+      </tei:ab>
+
+      <tei:ab><tei:note type="editorial">on unused rows of the table:</tei:note>
+        <tei:lb/><tei:handShift new="#stamp"/>Post Office Account Karlsruhe 24934 <tei:lb/><tei:handShift new="#unk"
+        />Gratefully received <tei:address>
+          <tei:addrLine><tei:handShift new="#stamp"/><tei:rs key="entity-002462" type="organization">SEIDEL'S
+              <tei:lb/>BOOK DEALERSHIP </tei:rs></tei:addrLine>
+          <tei:addrLine>VIENNA I. GRABEN 13</tei:addrLine>
+        </tei:address></tei:ab>
+
+      <tei:ab>
+        <tei:note type="editorial">underneath table, no option indicated:</tei:note>
+        <tei:lb/><tei:handShift new="#printed"/><tei:hi rend="bold">Missing: </tei:hi> – is currently out of print – we
+        should procure secondhand – is not yet published – is reserved – is already in reprint – is ordered, reserved,
+        and will follow on arrival – will appear soon. </tei:ab>
+      <tei:ab><tei:hi rend="bold">When returning unsuitable books, please enclose this note with the
+          consignment.</tei:hi></tei:ab>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

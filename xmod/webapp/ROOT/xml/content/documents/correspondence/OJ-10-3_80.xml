@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3042" sdoID="OJ-10-3_80">OJ 10/3, [80]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="TPoed" scope="major">Otto Erich Deutsch typist</tei:handNote>
+      <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+      <tei:handNote xml:id="unk" scope="minor">unknown hand (Post Office)</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-19" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Typewritten postcard from Deutsch to Schenker, dated March 19, 1928</dc:title>
+
+      <dcterms:created>1928-03-19T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-02-22</dcterms:dateSubmitted>
+      <dc:description>Deutsch reports that Eusebius Mandyczewski, the Archivist at the Gesellschaft
+        der Musikfreunde, would like to prepare a revised edition of Schubert’s “Unfinished”
+        Symphony, and asks Schenker if he would be prepared to make his textual notes on the
+        symphony available to him.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Post<tei:supplied reason="overstamped"
+              >karte</tei:supplied></tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#printed"/>Absender: <tei:handShift new="#stamp"/>OTTO
+              ERICH DEUTSCH</tei:addrLine>
+            <tei:addrLine>Wien, II. Böcklinstrasse 26,</tei:addrLine>
+            <tei:addrLine>Telefon-Nummer 42-8-22</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied>
+              <tei:handShift new="#TPoed"/>Herrn Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-40"><tei:hi rend="sperr">Wien</tei:hi> III.</tei:addrLine>
+            <tei:addrLine rend="indent-40">Keilgasse 8</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:add resp="Post Office"><tei:handShift new="#unk"/>128</tei:add><tei:lb/>
+          <tei:add resp="Deutsch"><tei:handShift new="#TPoed"/>Rohrpost</tei:add><tei:lb/>
+        </tei:fw>
+        <tei:lb/>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-30"><tei:handShift new="#TPoed"/><tei:rs key="entity-002484"
+            type="place">Wien</tei:rs>, <tei:date when="1928-03-19">19. März
+          28</tei:date></tei:dateline>
+        <tei:salute>Lieber, verehrter Herr <tei:rs type="person" key="entity-000632"
+            >Doktor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
+            this postcard is recorded in Schenker’s diary for March 19, 1928: “Von O. E. Deutsch
+            (K.): bedauert Richtera nicht persönlich zu kennen; bittet um meine Korrekturen zur
+            Hm-Sinfonie für Mandyczewski” (“From O. E. Deutsch (postcard): he regrets that he does
+            not know Richtera personally; he asks for my corrections to the B minor Symphony for
+            Mandyczewski.”). </tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Sollten Sie mit <tei:rs type="person" key="entity-004819">Prof.
+          Richtera</tei:rs> noch nicht gesprochen haben, so erlaube ich mir zu bemerken dass er
+        Mittwoch nach <tei:rs type="place" key="entity-002501">Berlin</tei:rs> fahren soll, wo die
+        Radio-Gesellschaften gemeinsame <tei:rs type="person" key="entity-000803"
+        >Schubert</tei:rs>feiern beraten. </tei:p>
+
+      <tei:p rend="first"><tei:rs type="person" key="entity-000562">Hofrat Mandyczewski</tei:rs> ist
+        spontan zu dem Entschluss gekommen, den Druck der <tei:rs type="composition"
+          key="entity-001686"><tei:title>h-Sinfonie</tei:title></tei:rs> in der Gesamtausgabe neu zu
+        revidieren (nach <tei:rs type="person" key="entity-000094">Brahms</tei:rs>). Er ersuchte
+        mich um seine Korrekturen, die ich mit einem Exemplar der Gesamtausgabe entliehen <tei:choice>
+          <tei:sic>hatte</tei:sic>
+          <tei:corr>habe</tei:corr>
+        </tei:choice>. Ich erwähnte die Feststellungen (die vorläufigen), die ich durch Hilfe eines
+          Kenners<tei:note xml:id="r0001-fn02" type="editorial" place="foot">That is, Schenker
+          himself, as editor (together with Deutsch) of the “Unfinished” Symphony for the Wiener
+          Philharmonischer Verlag.</tei:note> machen konnte. Er möchte sie gerne sehen. Ich nannte
+        Ihren Namen noch nicht. Wollen Sie mir für ihn auf ein paar Tage die Korrekturen in der
+          <tei:rs type="organization" key="entity-003860">Philharmonischen</tei:rs> Ausgabe leihen?
+        Und darf ich Sie als Spender nennen? </tei:p>
+
+      <tei:p rend="first"><tei:milestone unit="folio" n="recto"/> Es handelt sich <tei:rs
+          type="person" key="entity-000562">Mand.</tei:rs> wohl nicht um einen Neudruck, sondern um
+        Korrekturen für die heurige Festaufführung, meine ich. Er würde wohl nach Ihren Hinweisen
+        und seinen eigenen Notizen, bzw. den Notizen von <tei:rs type="person" key="entity-000094"
+          >Brahms</tei:rs>, das ganze Werk nun durchsehen an der Hand des Manuskriptes. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indelt-70">2:2! </tei:salute>
+        <tei:salute rend="indent-75"><tei:handShift new="#OED"/>Ihr sehr ergebener</tei:salute>
+        <tei:signed rend="indent-80">
+          <tei:rs key="entity-000164" type="person">O E Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Post<tei:supplied reason="overstamped"
+              >card</tei:supplied></tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#printed"/>From: <tei:handShift new="#stamp"/>OTTO
+              ERICH DEUTSCH</tei:addrLine>
+            <tei:addrLine>Vienna II, Böcklinstrasse 26</tei:addrLine>
+            <tei:addrLine>Telephone Number 42-8-22</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied>
+              <tei:handShift new="#TPoed"/>Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-40">Keilgasse 8</tei:addrLine>
+            <tei:addrLine rend="indent-40"><tei:hi rend="sperr">Vienna</tei:hi> III</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:add resp="Post Office"><tei:handShift new="#unk"/>128</tei:add><tei:lb/>
+          <tei:add resp="Deutsch"><tei:handShift new="#TPoed"/>Pneumatic Mail</tei:add><tei:lb/>
+        </tei:fw>
+        <tei:lb/>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-30"><tei:handShift new="#TPoed"/><tei:rs key="entity-002484"
+            type="place">Vienna</tei:rs>, <tei:date when="1928-03-19">March 19,
+          1928</tei:date></tei:dateline>
+        <tei:salute>Dear, revered Dr. <tei:supplied reason="identity"><tei:rs type="person"
+              key="entity-000632">Schenker</tei:rs></tei:supplied>,<tei:ptr corresp="#r0001-fn01"
+            type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">If you have not yet spoken with <tei:rs type="person" key="entity-004819"
+          >Professor Richtera</tei:rs>, then permit me to note that he is supposed to travel on
+        Wednesday to <tei:rs type="place" key="entity-002501">Berlin</tei:rs>, where the radio
+        corporations will be taking counsel on joint <tei:rs type="person" key="entity-000803"
+          >Schubert</tei:rs> celebrations.</tei:p>
+
+      <tei:p rend="first"><tei:rs type="person" key="entity-000562">Privy Councilor
+          Mandyczewski</tei:rs> has spontaneously come to the decision to revise the print of the
+          <tei:rs type="composition" key="entity-001686"><tei:title>B minor
+          Symphony</tei:title></tei:rs> (according to <tei:supplied reason="clarity">notes
+          by</tei:supplied>
+        <tei:rs type="person" key="entity-000094">Brahms</tei:rs>). He asked me for his
+          <tei:supplied reason="clarity">i. e. <tei:rs type="person" key="entity-000094"
+            >Brahms</tei:rs>’s</tei:supplied> corrections, which I have borrowed, together with a
+        copy of the collected edition. I mentioned the findings (the provisional ones), which I was
+        able to make with the assistance of an expert.<tei:ptr corresp="#r0001-fn02" type="footnote"
+        /> He would very much like to see them. I have not yet mentioned your name. Would you like
+        to lend me the corrections in our edition for the <tei:rs type="organization"
+          key="entity-003860">Wiener Philharmonischer Verlag</tei:rs>. And may I name you as the
+        donor? </tei:p>
+
+      <tei:p rend="first"><tei:milestone unit="folio" n="recto"/>
+        <tei:rs type="person" key="entity-000562">Mandyczewski</tei:rs> will probably not be making
+        a new edition; I think that the corrections will instead serve the festival performance this
+        year. He would probably revise the entire work on the basis of your notes, and his own
+        notes, along with the notes made by <tei:rs type="person" key="entity-000094"
+          >Brahms</tei:rs>, with reference to the autograph manuscript.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indelt-70">From the two of us to the two of you! </tei:salute>
+        <tei:salute rend="indent-75"><tei:handShift new="#OED"/>Your very devoted</tei:salute>
+        <tei:signed rend="indent-80">
+          <tei:rs key="entity-000164" type="person">O. E. Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

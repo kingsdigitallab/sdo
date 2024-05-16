@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="974" sdoID="OJ-8-4_49">OJ 8/4, [49]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2013</tei:resp>
+      <tei:resp>Translation, 2013</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="DB">
+      <tei:persName>David Bretherton</tei:persName>
+      <tei:resp>XML Encoding, 2013</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2013-07-03" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002719">ViolinM ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002717">ViolinM+V ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002718">ViolinM+V+F ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+
+      <dc:title>Handwritten postcard from Schenker to Violin, dated March 29, 1927</dc:title>
+
+      <dcterms:created>1927-03-29T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2013-07-03</dcterms:dateSubmitted>
+      <dc:description>In advance of seeing Klenau, Schenker reports on a meeting with Wilhelm
+        Altmann and Ludwig Rottenberg, who believe that only people under 30 years old are likely to
+        be appointed to a post of the sort that Violin is seeking in Frankfurt – a situation that he
+        finds appalling.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000909">ViolinF</marcrel:recipient>
+      <marcrel:recipient key="entity-000913">ViolinM</marcrel:recipient>
+      <marcrel:recipient key="entity-000914">ViolinV</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/>Postkarte</tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine rend="indent-15"><tei:supplied reason="clarity">Absender:</tei:supplied>
+              <tei:handShift new="#HS"/>Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-10">Wien, III., Keilg. 8</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied> H</tei:addrLine>
+            <tei:addrLine>Prof.</tei:addrLine>
+            <tei:addrLine>M. Violin</tei:addrLine>
+            <tei:addrLine rend="indent-10">Hamburg</tei:addrLine>
+            <tei:addrLine rend="indent-30">Immenhof 27/I</tei:addrLine>
+            <tei:addrLine>Deutschland</tei:addrLine>
+          </tei:address>
+          <tei:lb/><tei:fw type="postmark">|| <tei:gap reason="illegible" extent="few characters"/>
+            WIEN <tei:gap reason="illegible" extent="few characters"/> | 29. III. 27 <tei:gap
+              reason="illegible" extent="few characters"/> | <tei:gap reason="illegible"
+              extent="few characters"/> ||</tei:fw>
+          <tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:salute><tei:rs key="entity-000913" type="person">Fl</tei:rs>!<tei:note
+            xml:id="r0001-fn01" type="editorial" place="foot">Writing of this postcard is mentioned
+            in Schenker's diary at OJ 3/9, p. 3052 (March 29, 1927): "An Violin (K.): nach
+            Mitteilungen von Altmann u. Rottenberg ist zu befürchten, daß der Staat ihm die
+            Anstellung wegen vorgerückten Alters verweigern werde." ("To Violin (postcard):
+            according to communications from Altmann and Rottenberg it is feared that the state
+            would be reluctant to offer him the position <tei:supplied reason="clarity">in
+              Frankfurt</tei:supplied> on account of his advanced age.")</tei:note>
+        </tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Noch ehe ich <tei:rs key="entity-000443" type="person">Kl.</tei:rs> bei
+        mir sehe, muß ich dir mitteilen, was mir bei Gelegenheit ihres Besuches bei mir Dir. <tei:rs
+          key="entity-000013" type="person">Altmann</tei:rs> (<tei:rs key="entity-002501"
+          type="place">Berlin</tei:rs>) u. D<tei:hi rend="supralinear">r</tei:hi>. <tei:rs
+          key="entity-000744" type="person">Rottenburg</tei:rs> (<tei:rs key="entity-002495"
+          type="place"><tei:hi rend="underline">Frankf.</tei:hi> a/m</tei:rs>), der <tei:rs
+          key="entity-000373" type="person">Hindemith</tei:rs>’s Schwiegervater ist, gesagt haben.
+          <tei:note type="editorial">cued from left margin:</tei:note> Deinen Namen habe ich
+        verschwiegen. <tei:note type="editorial">end cue</tei:note> Die hornissische
+        Unterrichtsverwaltung läßt nur junge<tei:del rend="overstrike" hand="#HS">n</tei:del>
+        Menschen zu, von denen sie erwartet, daß sie „<tei:quote>Fühlung mit der neuen
+          Jugend</tei:quote>“ hat. Wer über 30 Jahre alt ist, hat wenig Hoffnung. Das ist eine
+          <tei:hi rend="underline">Entartung</tei:hi> der Zeit, dieser blinde Glaube an die Jugend
+        (die blöder ist, als alle vorausgegangenen!), an junge Lehrer, die selber nichts kennen!
+        Vielleicht geht es mit einem Verzicht auf die Pension? Jedenfalls werden Prof. <tei:rs
+          key="entity-000794" type="person"><tei:abbr>Schn.<tei:ex>abel</tei:ex></tei:abbr></tei:rs>
+        u. D<tei:hi rend="supralinear">r</tei:hi>
+        <tei:rs key="entity-003744" type="person"
+          ><tei:abbr>Sim.<tei:ex>on</tei:ex></tei:abbr></tei:rs> viel, viel aufbieten müssen, um
+        hinaus zu helfen. So viel heute in Eile.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent=30">Ich u. <tei:rs key="entity-000771" type="person"
+            >LieLiechen</tei:rs> grüßen dich, die (deinigen auf das herzlichste</tei:salute>
+        <tei:salute rend="indent-60">Dein</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs key="entity-000632" type="person"
+          >H</tei:rs></tei:signed>
+        <tei:dateline><tei:date when="1927-03-29">29.3.27</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/>Postcard</tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine rend="indent-15"><tei:supplied reason="clarity">sender:</tei:supplied>
+              <tei:handShift new="#HS"/>Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-10">Vienna III, Keilgasse 8</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">to:</tei:supplied> Prof.</tei:addrLine>
+            <tei:addrLine>M. Violin</tei:addrLine>
+            <tei:addrLine rend="indent-10">Hamburg</tei:addrLine>
+            <tei:addrLine rend="indent-30">Immenhof 27/I</tei:addrLine>
+            <tei:addrLine>Germany</tei:addrLine>
+          </tei:address>
+          <tei:lb/><tei:fw type="postmark">|| <tei:gap reason="illegible" extent="few characters"/>
+            WIEN <tei:gap reason="illegible" extent="few characters"/> | 29. III. 27 <tei:gap
+              reason="illegible" extent="few characters"/> | <tei:gap reason="illegible"
+              extent="few characters"/> ||</tei:fw>
+          <tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:salute><tei:rs key="entity-000913" type="person">Floriz</tei:rs>!<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/>
+        </tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Even before I see <tei:rs key="entity-000443" type="person"
+          >Klenau</tei:rs> here, I must inform you what Director <tei:rs key="entity-000013"
+          type="person">Altmann</tei:rs> (<tei:rs key="entity-002501" type="place">Berlin</tei:rs>)
+        and Dr. <tei:rs key="entity-000744" type="person">Rottenburg</tei:rs> (<tei:rs
+          key="entity-002495" type="place"><tei:hi rend="underline">Frankfurt</tei:hi> am
+          Main</tei:rs>), who is <tei:rs key="entity-000373" type="person">Hindemith</tei:rs>'s
+        father-in-law, have told me on the occasion of a visit to me. <tei:note type="editorial"
+          >cued from left margin:</tei:note> I did not mention your name. <tei:note type="editorial"
+          >end cue</tei:note> The hornet-like teaching administration accepts only young people,
+        whom they expect to have "<tei:quote>sympathy with the new generation of youth.</tei:quote>"
+        Anyone who is over 30 years of age has little chance. That is a <tei:hi rend="underline"
+          >degenerative condition</tei:hi> of our time, this blind faith in today's youth (who are
+        stupider than all who have gone before!), on young teachers who themselves know nothing!
+        Perhaps this will be tied to a waiver of the pension? In any event, Professor <tei:rs
+          key="entity-000794" type="person">Schnabel</tei:rs> and Dr. <tei:rs key="entity-003744"
+          type="person">Simon</tei:rs> will have to summon all their energies to be of help. So much
+        for today, in haste.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent=30"><tei:rs key="entity-000771" type="person">Lie-Liechen</tei:rs>
+          and I greet you and yours most affectionally,</tei:salute>
+        <tei:salute rend="indent-60">Your</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs key="entity-000632" type="person"
+          >Heinrich</tei:rs></tei:signed>
+        <tei:dateline><tei:date when="1927-03-29">March 29, 1927</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

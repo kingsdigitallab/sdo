@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="2729" sdoID="OC-44-13">OC 44/13</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="CB" scope="major">Carl Bamberger's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2022</tei:resp>
+      <tei:resp>Translation, 2022</tei:resp>
+      <tei:resp>XML Encoding, 2022</tei:resp>
+    </tei:respStmt>
+
+
+    <tei:revisionDesc>
+      <tei:change when="2011-06-09" who="#IB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008175">BambergerC ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="002751">Picture postcard</tei:rs>
+
+      <dc:title>Handwritten picture postcard from Carl Bamberger to Schenker, dated September 12,
+        1934</dc:title>
+
+      <dcterms:created>1934-09-12T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2022-04-13</dcterms:dateSubmitted>
+      <dc:description>Bamberger aks Schenker to listen to a recital on the radio and give his
+        opinion, and inquires whether he may visit Schenker during the week.</dc:description>
+      <dc:subject/>
+
+
+      <marcrel:correspondent key="entity-000034">CBamberger</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+            >Postkarte</tei:hi></tei:fw><tei:lb/>
+        <tei:note type="editorial" place="inline">landscape photograph, captioned: “Pragöß, Grüner
+          See, Steiermark”</tei:note>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied>Absender</tei:supplied>
+              <tei:handShift new="#CB"/>Bamberger</tei:addrLine>
+            <tei:addrLine>Wien V.</tei:addrLine>
+            <tei:addrLine>Schönbrunnerstr. 26</tei:addrLine>
+            <tei:addrLine><tei:hi rend="underline">Tel. B 23–2–10</tei:hi></tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied>An</tei:supplied> Herrn Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-10"><tei:hi rend="underline">Wien
+              III.</tei:hi></tei:addrLine>
+            <tei:addrLine rend="indent-10">Keilgasse 8</tei:addrLine>
+
+            <tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| <tei:gap reason="illegible"/> WIEN 55 | <tei:gap
+              reason="illegible"/> 6 | * 4c * ||</tei:fw>
+          <tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:salute>Sehr verehrter Herr <tei:rs type="person" key="entity-000632"
+            >Doktor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Dating of
+            this otherwise undated postcard is established from the opening of paragraph 1. Receipt
+            of it is recorded in Schenker’s diary for September 13, 1934: “Von Bamberger (K.):
+            bittet mich, im Rundfunk Frl. Hammerschlag anzuhören u. ihn zu empfangen!” (“From
+            Bamberger (postcard): asks me to listen to Miss Hammerschlag on the radio, and to accept
+            a visit from him!”). The <tei:rs type="journal" key="entity-002559"><tei:title level="j"
+                >Neue freie Presse</tei:title></tei:rs> for September 13, p. 17, col. 1, reports:
+            “17.50 Violavorträge: Lotte Hammerschlag (Viola): Hermann Zechner (Klavier). Bach,
+            Sonate C-Dur. Eccles, Sonate G-Moll.” — Lotte Hammerschlag and Bamberger married in
+            1936.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Morgen Donnerstag den 13. 9. um 17<tei:hi rend="supralinear">h</tei:hi> 50
+        spielt <tei:rs type="person" key="entity-006102">Lotte Hammerschlag</tei:rs> im Radio die
+        C-dur Cello-solo-<tei:subst>
+          <tei:del rend="overstrike">Sonate</tei:del>
+          <tei:add place="interlinear-above">Suite</tei:add>
+        </tei:subst> von <tei:rs type="person" key="entity-000027">J. S. Bach</tei:rs> (auf die
+        Bratsche). </tei:p>
+
+      <tei:p rend="first">Da ich <tei:hi rend="underline">mitstudieren</tei:hi> geholfen habe, wäre
+        ich Ihnen sehr dankbar, wenn Sie <tei:hi rend="underline">zuhören</tei:hi>
+        <tei:del rend="overstrike">würden</tei:del> und mir nachher dann Ihr Urteil sagen
+          würden.<tei:note xml:id="r0001-fn02" type="editorial" place="foot">Schenker’s diary gives
+          no indication that Schenker listened to the program.</tei:note></tei:p>
+
+      <tei:p rend="first">Kann ich diese Woche gegen Mittag mal zu Ihnen kommen? Bitte um Anruf,
+        falls möglich. Am besten morgens zwischen 8–9, da ist das Telefon frei.<tei:note
+          xml:id="r0001-fn03" type="editorial" place="foot"> Schenker diary for September 14 reords:
+          “An Bamberger (K.): bitte ihn Sonntag oder Montag um ½12<tei:hi rend="supralinear"
+            >h</tei:hi> (Störung im Telephon).” (“To Bamberger (postcard): I invite him for Sunday
+          or Monday at 11:30 (fault on the telephone line).”). The diary for Monday September 17
+          reports: “Von ¾12–½1<tei:hi rend="supralinear">h</tei:hi> Bamberger; die Firma im Konkurs,
+          er geht nach Odessa.” (“From 11:45 to 12:30, Bamberger; his company in liquidation, he is
+          going to Odessa.”).</tei:note></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50">Alles herzlichst wünscht Sie und Ihre <tei:rs type="person"
+            key="entity-000771">Frau</tei:rs></tei:salute>
+        <tei:salute rend="indent-70">Ihr</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000034">Carl
+            Bamberger</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
+            >Postcard</tei:hi></tei:fw><tei:lb/>
+        <tei:note type="editorial" place="inline">landscape photograph, captioned: “Pragöß, Grüner
+          See, Styria”</tei:note>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied>From:</tei:supplied>
+              <tei:handShift new="#CB"/>Bamberger</tei:addrLine>
+            <tei:addrLine>Vienna V</tei:addrLine>
+            <tei:addrLine>Schönbrunnerstraße 26</tei:addrLine>
+            <tei:addrLine><tei:hi rend="underline">Tel. B 23–2–10</tei:hi></tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied>To:</tei:supplied> Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-10"><tei:hi rend="underline">Vienna
+              III</tei:hi></tei:addrLine>
+            <tei:addrLine rend="indent-10">Keilgasse 8</tei:addrLine>
+
+            <tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| <tei:gap reason="illegible"/> VIENNA 55 | <tei:gap
+              reason="illegible"/> 6 | * 4c * ||</tei:fw>
+          <tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:salute>Greatly revered Dr. <tei:supplied reason="identity"><tei:rs type="person"
+              key="entity-000632">Schenker</tei:rs></tei:supplied>,<tei:ptr corresp="#r0001-fn01"
+            type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Tomorrow, Thursday September 13, at 5:50 p. m., <tei:rs type="person"
+          key="entity-006102">Lotte Hammerschlag</tei:rs> is on the radio playing the <tei:rs
+          type="person" key="entity-000027">J. S. Bach</tei:rs> C major Cello <tei:subst>
+          <tei:del rend="overstrike">Sonata</tei:del>
+          <tei:add place="interlinear-above">Suite</tei:add>
+        </tei:subst> (on viola).</tei:p>
+
+      <tei:p rend="first">Since I have helped <tei:hi rend="underline">with studying</tei:hi> it, I
+        should be very grateful if you would <tei:hi rend="underline">listen</tei:hi> and later give
+        you me your verdict.<tei:ptr corresp="#r0001-fn02" type="footnote"/></tei:p>
+
+      <tei:p rend="first">May I call on you this week sometime around mid-day? Please telephone me
+        if possible. Best between 8 and 9 a.m.; the telephone is free then.<tei:ptr
+          corresp="#r0001-fn03" type="footnote"/></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50">Wishing you and your <tei:rs type="person" key="entity-000771"
+            >wife</tei:rs> well most cordially</tei:salute>
+        <tei:salute rend="indent-70">Your</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000034">Carl
+            Bamberger</tei:rs></tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

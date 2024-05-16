@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="1337" sdoID="OC-B-178">OC B/178</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="AKo" scope="major">Albert Kopfermann's hand</tei:handNote>
+   <tei:handNote xml:id="HS" scope="minor">Heinrich Schenker's hand</tei:handNote>
+   <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+   <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="NM">
+   <tei:persName>Nicholas Marston</tei:persName>
+   <tei:resp>Transcription, 2014</tei:resp>
+   <tei:resp>Translation, 2014</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>XML Encoding, 2014</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="BOT">
+   <tei:name>Automated Script</tei:name>
+   <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2012-09-26" who="#IB">revision of XML code</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-005533">KopfermannA ~
+    HSchenker</tei:rs>
+   <tei:rs role="correspondence" type="correspondence" key="entity-005534">Königliche Bibliothek ~
+    HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">letter</tei:rs>
+
+   <dc:title>Handwritten letter from Albert Kopfermann (Königliche Bibliothek zu Berlin) to
+    Schenker, dated October 21, 1913</dc:title>
+   <dcterms:created>1913-10-21T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2014-11-27</dcterms:dateSubmitted>
+   <dc:description>The Library's photographer has been inundated with work and unable to start on
+    Schenker's order.</dc:description>
+   <dc:subject>Photographin; photographer; Aufnahmen; photographs; Menge; quantity;
+    Bleistiftaufzeichnungen; pencil sketches</dc:subject>
+
+
+
+   <marcrel:correspondent key="entity-000464">Albert Kopfermann</marcrel:correspondent>
+   <marcrel:correspondent key="entity-003292">Königliche Bibliothek zu
+    Berlin</marcrel:correspondent>
+   <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+  </sdo:itemDesc>
+
+
+  <tei:div type="transcription">
+   <tei:opener>
+    <tei:address>
+     <tei:addrLine rend="indent-20"><tei:handShift new="#printed"/>KÖNIGLICHE
+      BIBLIOTHEK</tei:addrLine>
+     <tei:addrLine rend="indent-30"><tei:handShift new="#stamp"/>Musik-Abteilung</tei:addrLine>
+     <tei:addrLine rend="indent-50"><tei:handShift new="#printed"/>Berlin NW7, <tei:date
+       when="1913-10-21"><tei:handShift new="#AKo"/>21. October <tei:handShift new="#printed"
+        />191<tei:handShift new="#AKo"/>3</tei:date></tei:addrLine>
+     <tei:lb/>
+     <tei:addrLine rend="indent-50"><tei:handShift new="#printed"/>Dorotheenstraße
+      81.</tei:addrLine>
+    </tei:address><tei:lb/>
+    <tei:salute><tei:handShift new="#AKo"/>Sehr geehrter Herr <tei:rs key="entity-000632"
+      type="person"><tei:hi rend="lateinschr">Doctor</tei:hi></tei:rs>!<tei:note xml:id="r0001-fn01"
+      type="editorial" place="foot">Receipt of this letter is recorded in Schenker's diary at OJ
+      1/13, p. 452, October 23, 1913: "Sehr liebenswürdige Antwort von Dr Kopfermann mit Zusicherung
+      der Skizzen." ("Very kind reply from Dr. Kopfermann assuring me of the sketches."). Kopfermann
+      was replying to two letters from Schenker, also recorded in the diary, at OJ 1/13, p. 435,
+      October 5, 1913: "Brief an Kopfermann wegen Skizzen zu op. 110 u. 111. Bestellung der.
+      Orig.-Ausg. von op. 106 bei <tei:sic>Liepmanson</tei:sic>." ("Letter to Kopfermann concerning
+      sketches for Op. 110 and 111. First edition of Op. 106 ordered from Liepmannssohn."), and
+      ibid, p. 449, October 20, 1913: "An Direktor Kopfermann[:] Urgierung der
+      Skizzen-Photographien" ("To Director Kopfermann: pressing concerning the sketch
+      photographs").</tei:note></tei:salute>
+   </tei:opener>
+
+   <tei:p rend="first">Verzeihen Sie, daß ich Sie warten lassen mußte und auch obendrein noch gar
+    nicht für die freundlich veranlaßte Zusendung Ihres hoch interessanten und gründlichen „<tei:rs
+     key="entity-001734" type="work"><tei:title>Beethoven Op. 109</tei:title></tei:rs>” bedankt
+    habe! Unsere Photographin war so mit Arbeit überhäuft (<tei:hi rend="underline">früher</tei:hi>
+    bestellter), daß sie unmöglich daran gehen konnte. Heute konnte ich sie nicht zu sprechen
+    bekommen; falls sie <tei:hi rend="underline">mo<tei:supplied reason="misspelling"
+      >r</tei:supplied>gen</tei:hi> nicht anfangen und <tei:hi rend="underline">dabei
+     bleiben</tei:hi> kann, <tei:hi rend="underline">will ich sehen</tei:hi><tei:note
+     xml:id="r0001-fn02" type="editorial" place="foot">Schenker's pencil underlining, and the
+      pencilled remark "wie liebenswürdig!" ("how kind!") in left-hand margin.</tei:note>, daß ich
+    die Aufnahmen für Sie <tei:hi rend="underline">von einem andern hiesigen
+     Photographen</tei:hi><tei:note xml:id="r0001-fn03" type="editorial" place="foot">Schenker's
+     pencil underlining.</tei:note> ausführen <tei:subst>
+     <tei:del rend="overwritten"><tei:unclear reason="reading">kann</tei:unclear></tei:del>
+     <tei:add place="superimposed">lasse</tei:add>
+    </tei:subst>, damit Sie bei <tei:hi rend="underline">der Menge</tei:hi><tei:note
+     xml:id="r0001-fn04" type="editorial" place="foot">Schenker's pencil underlining.</tei:note>
+    <tei:pb n="2"/> derselben nicht zu lange zu warten brauchen. Eventuell schicken wir sie Ihnen
+     <tei:hi rend="underline">successive</tei:hi>. Ob übrigens alle deutlich genug werden, ist
+    abzuwarten; manche der Bleistiftaufzeichnungen <tei:rs key="entity-000055" type="person"
+     >Beethoven</tei:rs>s sind leider sehr verblaßt.</tei:p>
+
+   <tei:p rend="first">Jedenfalls werde ich Ihnen bald wieder berichten, wie die Arbeit
+    fortschreitet.</tei:p>
+
+   <tei:p rend="first">Inzwischen verbleibe ich mit aus- gezeichneter Hochachtung</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-40">Ihr ergebenster</tei:salute>
+    <tei:signed rend="indent-50"><tei:rs key="entity-000464" type="person">
+      <tei:hi rend="lateinschr">Alb. Kopfermann</tei:hi></tei:rs></tei:signed>
+   </tei:closer>
+
+  </tei:div>
+
+
+  <tei:div type="translation">
+   <tei:opener>
+    <tei:address>
+     <tei:addrLine rend="indent-20"><tei:handShift new="#printed"/>ROYAL LIBRARY</tei:addrLine>
+     <tei:addrLine rend="indent-30"><tei:handShift new="#stamp"/>Music Department</tei:addrLine>
+     <tei:addrLine rend="indent-50"><tei:handShift new="#printed"/>Berlin NW7, <tei:date
+       when="1913-10-21"><tei:handShift new="#AKo"/>October 21, <tei:handShift new="#printed"
+        />191<tei:handShift new="#AKo"/>3</tei:date></tei:addrLine>
+     <tei:lb/>
+     <tei:addrLine rend="indent-50"><tei:handShift new="#printed"/>Dorotheenstraße 81</tei:addrLine>
+    </tei:address><tei:lb/>
+    <tei:salute><tei:handShift new="#AKo"/>Dear Dr. <tei:supplied reason="identity"><tei:rs
+       key="entity-000632" type="person">Schenker</tei:rs></tei:supplied>,<tei:ptr
+      corresp="#r0001-fn01" type="footnote"/></tei:salute>
+   </tei:opener>
+
+   <tei:p rend="first">Please forgive me for having had to keep you waiting, let alone also for
+    having not even yet thanked you for kindly arranging despatch of your very interesting and
+    profound <tei:rs key="entity-001734" type="work"><tei:title level="m">Beethoven Op.
+      109</tei:title></tei:rs>! Our photographer was so overwhelmed with work (<tei:hi
+     rend="underline">previous</tei:hi> orders) that it was impossible for her to get started
+     <tei:supplied reason="clarity">on yours</tei:supplied>. I could not get to speak to her today;
+    if she is not able to begin <tei:hi rend="underline">tomorrow</tei:hi> and <tei:hi
+     rend="underline">to keep at it</tei:hi>, <tei:hi rend="underline">I will see to
+     it</tei:hi><tei:ptr corresp="#r0001-fn02" type="footnote"/> that I get the photographs done for
+    you <tei:hi rend="underline">by another local photographer</tei:hi><tei:ptr
+     corresp="#r0001-fn03" type="footnote"/>, so that you do not <tei:pb n="2"/> need to wait too
+    long for them, on account of their <tei:hi rend="underline">quantity</tei:hi><tei:ptr
+     corresp="#r0001-fn04" type="footnote"/>. If need be we can send them to you <tei:hi
+     rend="underline">bit by bit</tei:hi>. Whether everything will be sufficiently clear, though,
+    remains to be seen; many of <tei:rs key="entity-000055" type="person">Beethoven</tei:rs>'s
+    pencil sketches are unfortunately very faded.</tei:p>
+
+   <tei:p rend="first">I will at any rate let you know again soon how the work is
+    progressing.</tei:p>
+
+   <tei:p rend="first">Meanwhile I remain, with kind regards,</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-40">Yours truly,</tei:salute>
+    <tei:signed rend="indent-50"><tei:rs key="entity-000464" type="person"> Albert
+      Kopfermann</tei:rs></tei:signed>
+   </tei:closer>
+
+  </tei:div>
+ </sdo:record>
+</sdo:recordCollection>
