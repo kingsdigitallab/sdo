@@ -8,6 +8,8 @@ services:
       - ../xmod:/xmod
       - ../xmod/webapp:/usr/local/tomcat/webapps
       - ../xmod/webapp/solr/conf/solr.xml:/usr/local/tomcat/conf/Catalina/localhost/solr.xml
+    env_file:
+      - ../compose/.env
     environment:
       CATALINA_OPTS: "${TOMCAT_CATALINA_OPTS:--Xmx2048m}"
       VIRTUAL_HOST: "${TOMCAT_VIRTUAL_HOST:-${VIRTUAL_HOST:-localhost,127.0.0.1}}"

@@ -1,31 +1,44 @@
-FROM python:${PYTHON_VERSION:-3.12-slim}
+FROM node:16-bookworm-slim as node-builder
+
+ARG APP_HOME=/app
+WORKDIR ${APP_HOME}
+
+COPY ../django/package.json ${APP_HOME}
+
+RUN npm install && npm cache clean --force
+
+FROM python:3.9-slim-bookworm
+
+ARG APP_HOME=/app
 
 ENV PYTHONUNBUFFERED 1
 ENV PYTHONDONTWRITEBYTECODE 1
 
 RUN apt-get update \
-  # dependencies for building Python packages
-  && apt-get install -y build-essential \
-  # curl for node
-  # && apt-get install -y curl \
-  # psycopg2 dependencies
-  && apt-get install -y libpq-dev
-# ldap dependencies
-# && apt-get install -y libldap2-dev libsasl2-dev ldap-utils \
-# lxml depedndencies
-# && apt-get install -y libxml2-dev libxslt-dev python-dev \
-# && apt-get install -y python3-lxml \
-# gdal libraries
-# && apt-get install -y binutils libproj-dev gdal-bin
+    # dependencies for building Python packages
+    && apt-get install -y build-essential \
+    # psycopg2 dependencies
+    libpq-dev \
+    # ldap dependencies
+    libldap2-dev libsasl2-dev ldap-utils \
+    # lxml depedndencies
+    libxml2-dev libxslt-dev python3-dev python3-lxml \
+    # gdal libraries
+    binutils libproj-dev gdal-bin \
+    # cleaning up unused files
+    && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
+    && rm -rf /var/lib/apt/lists/*
 
-COPY ../volumes/django/requirements.txt /requirements/
-RUN pip install -U pip \
-  && pip install -r /requirements/requirements.txt
+COPY ../django/requirements.txt /requirements/
+RUN pip install --no-cache-dir -U pip \
+    && pip install --no-cache-dir -r /requirements/requirements.txt
+
+COPY --from=node-builder ${APP_HOME}/node_modules ${APP_HOME}/node_modules
 
 COPY ../services/django/entrypoint /entrypoint
 RUN sed -i 's/\r$//g' /entrypoint
 RUN chmod +x /entrypoint
 
-WORKDIR /app
+WORKDIR ${APP_HOME}
 
 ENTRYPOINT ["/entrypoint"]

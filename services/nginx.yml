@@ -9,6 +9,8 @@ services:
     volumes:
       - ../xmod/webapp/ROOT/_a:/usr/share/nginx/_a:ro
       - ../xmod/webapp/ROOT/images:/usr/share/nginx/images:ro
+      - ../django/media:/usr/share/nginx/media:ro
+      - ../django/static:/usr/share/nginx/static:ro
     environment:
       VIRTUAL_HOST: "${NGINX_VIRTUAL_HOST:-${VIRTUAL_HOST:-localhost,127.0.0.1}}"
       VIRTUAL_PATH: "${NGINX_VIRTUAL_PATH:?nginx virtual path not set}"
