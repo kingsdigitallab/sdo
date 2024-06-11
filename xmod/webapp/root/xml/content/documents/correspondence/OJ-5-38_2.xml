@@ -34,8 +34,10 @@
  <sdo:record ID="r0001">
 
   <sdo:itemDesc>
-   <tei:rs role="correspondence" type="correspondence" key="entity-008423">SchenkerW ~ HSchenker</tei:rs>
-   <tei:rs role="correspondence" type="correspondence" key="entity-008442">SchenkerW ~ H+JSchenker</tei:rs>
+   <tei:rs role="correspondence" type="correspondence" key="entity-008423">SchenkerW ~
+    HSchenker</tei:rs>
+   <tei:rs role="correspondence" type="correspondence" key="entity-008442">SchenkerW ~
+    H+JSchenker</tei:rs>
    <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
 
    <dc:title>Handwritten letter from Heinrich Schenker and Jeanette Kornfeld to Wilhelm and Dodi
@@ -61,8 +63,9 @@
 
    <tei:div type="part_1">
 
-    <tei:opener rend="indent-10">
-     <tei:lb/><tei:handShift new="#HS"/>Meine Lieben! </tei:opener>
+    <tei:opener>
+     <tei:salute rend="indent-10"><tei:handShift new="#HS"/>Meine Lieben!</tei:salute>
+    </tei:opener>
 
     <tei:p>Versprochenermaßen<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Writing of
       this letter is recorded in Schenker's diary at OJ 2/10, p. 835, February 5, 1918: " An Wilhelm
@@ -215,10 +218,11 @@
 
    <tei:div type="part_1">
 
-    <tei:opener rend="indent-10">
-     <tei:lb/><tei:handShift new="#HS"/>My dear <tei:supplied reason="identity"><tei:rs
-       type="person" key="entity-000775">Wilhelm</tei:rs> and <tei:rs type="person"
-       key="entity-000767">Dodi</tei:rs></tei:supplied>, </tei:opener>
+    <tei:opener>
+     <tei:salute rend="indent-10"><tei:handShift new="#HS"/>My dear <tei:supplied reason="identity"
+        ><tei:rs type="person" key="entity-000775">Wilhelm</tei:rs> and <tei:rs type="person"
+        key="entity-000767">Dodi</tei:rs></tei:supplied>,</tei:salute>
+    </tei:opener>
 
     <tei:p>As promised,<tei:ptr corresp="#r0001-fn01" type="footnote"/> I pass on to you today the
      information that was given to me yesterday: the transfer ought not to amount to more that 900
@@ -272,9 +276,11 @@
 
    <tei:div type="part_2">
 
-    <tei:salute rend="indent-10"><tei:pb n="3"/><tei:handShift new="#JS"/>My dear
-       <tei:supplied><tei:rs type="person" key="entity-000775">Wilhelm</tei:rs> and <tei:rs
-       type="person" key="entity-000767">Dodi</tei:rs></tei:supplied>, </tei:salute>
+    <tei:opener>
+     <tei:salute rend="indent-10"><tei:pb n="3"/><tei:handShift new="#JS"/>My dear
+        <tei:supplied><tei:rs type="person" key="entity-000775">Wilhelm</tei:rs> and <tei:rs
+        type="person" key="entity-000767">Dodi</tei:rs></tei:supplied>,</tei:salute>
+    </tei:opener>
 
     <tei:p>The word "farcical" that my dear <tei:rs type="person" key="entity-000632"
       >Heinrich</tei:rs> has used is really the most apt, the most fitting description of our life.
@@ -326,9 +332,8 @@
       type="person" key="entity-000374">Hindenburg</tei:rs> feel!?</tei:p>
 
     <tei:p rend="first">Are the dear children by now completely recovered from their illness, and
-     cheerful and happy as before? I do hope so. How are things going with dear
-     <tei:rs type="person"
-      ref="entity-003491">Tonerl</tei:rs> and his studies?</tei:p>
+     cheerful and happy as before? I do hope so. How are things going with dear <tei:rs
+      type="person" ref="entity-003491">Tonerl</tei:rs> and his studies?</tei:p>
 
     <tei:p rend="first">Send us news of yourselves again, please. We send you cordial hugs and
      kisses,</tei:p>
