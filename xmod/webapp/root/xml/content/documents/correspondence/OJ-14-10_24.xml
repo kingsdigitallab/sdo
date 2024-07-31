@@ -48,8 +48,8 @@
 
       <dcterms:created>1935-07-28T12:00:00Z</dcterms:created>
       <dcterms:dateSubmitted>2024-07-31</dcterms:dateSubmitted>
-      <dc:description>Arnold and Rosa are coming to Jeanette in Hofgastein on July 31 and staying over to the next
-        day.</dc:description>
+      <dc:description>Arnold and Rosa are coming to Jeanette in Hofgastein on July 31 and staying
+        over to the next day.</dc:description>
       <dc:subject/>
 
       <marcrel:correspondent key="entity-000943">Arnold Weil</marcrel:correspondent>
@@ -94,14 +94,16 @@
           <tei:salute>Liebe <tei:rs type="person" key="entity-000771">Lie-lie</tei:rs>!</tei:salute>
         </tei:opener>
 
-        <tei:p>Vorsichtshalber frage ich bei dir an, ob es dir geht wenn wir dich Mittwoch [July 31]
-          v.m. besuchen. Wir werden 2^30^ ankommen &amp; bis Donnerstag [Aug 1) bleiben. </tei:p>
+        <tei:p>Vorsichtshalber frage ich bei dir an, ob es dir geht wenn wir dich <tei:date
+            when="1935-07-31"><tei:hi rend="lateinschr">Mittwoch</tei:hi></tei:date> v.m. besuchen.
+          Wir werden 2<tei:hi rend="supralinear">30</tei:hi> ankommen &amp; bis <tei:date
+            when="1935-08-01"><tei:hi rend="lateinschr">Donnerstag</tei:hi></tei:date> bleiben. </tei:p>
 
         <tei:closer>
           <tei:salute rend="indent-10">Herzliche Grüße</tei:salute>
           <tei:salute rend="indent-50">Dein</tei:salute>
           <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000943"
-            >Arnold</tei:rs></tei:signed><tei:lb/>
+            >Arnold</tei:rs></tei:signed>
         </tei:closer>
       </tei:div>
 
@@ -112,7 +114,7 @@
         <tei:p/>
 
         <tei:closer>
-          <tei:salute rend="indent-10">Herzl. Grüße</tei:salute>
+          <tei:salute rend="indent-10"><tei:handShift new="#RW"/>Herzl. Grüße</tei:salute>
           <tei:salute rend="indent-10">Auf Wiedersehen!</tei:salute>
           <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000944"
             >Rosa</tei:rs></tei:signed>
@@ -126,38 +128,64 @@
 
     <tei:div type="translation">
 
-      <tei:opener>
-        <tei:milestone unit="folio" n="verso"/>
-        <tei:note type="editorial" place="inline">colored drawing of small girl with a duck and toy
-          cart, in landscape, artist: Pauli Ebner, captioned: “Happy Easter!”</tei:note><tei:lb/>
-        <tei:milestone unit="folio" n="recto"/><tei:lb/>
-        <tei:fw type="envelope">
-          <tei:address>
-            <tei:addrLine><tei:supplied>To:</tei:supplied>
-              <tei:handShift new="#RW"/>Mrs. Heinrich Schenker</tei:addrLine>
-            <tei:addrLine>Keilgasse 8</tei:addrLine>
-            <tei:addrLine>Vienna III</tei:addrLine>
-          </tei:address><tei:lb/>
-          <tei:fw type="postmark">|| ÚSTÍ NAD LABEN 2 | 19. IV. 35-20 | * AUSSIG 2 * ||</tei:fw><tei:lb/>
-          <tei:address>
-            <tei:addrLine><tei:rs type="place" key="entity-002248">Aussig</tei:rs>, <tei:date
-                when="1935-04-19">April 19, 1935</tei:date></tei:addrLine>
-          </tei:address>
-        </tei:fw>
-        <tei:salute>My <tei:rs type="person" key="entity-000771">dear</tei:rs>,</tei:salute>
-      </tei:opener>
+      <tei:div type="part_1">
+        <tei:opener>
+          <tei:milestone unit="folio" n="verso"/>
+          <tei:note type="editorial" place="inline">picture: town with snow-capped mountains behind,
+            captioned: “BAD AUSSEE”</tei:note><tei:lb/>
+          <tei:milestone unit="folio" n="recto"/><tei:lb/>
+          <tei:fw type="envelope">
+            <tei:address>
+              <tei:addrLine><tei:note type="editorial" place="inline">in bottom margin:</tei:note>
+                <tei:handShift new="#AW"/>From: Weil, Hotel Elisabeth</tei:addrLine>
+            </tei:address>
+            <tei:address>
+              <tei:addrLine><tei:supplied>To:</tei:supplied> Mrs. Lie-Lie Schenker</tei:addrLine>
+              <tei:addrLine>at: Health Resort Dr. Loebel</tei:addrLine>
+              <tei:addrLine><tei:rs type="place" key="entity-006026"
+                >Hofgastein</tei:rs></tei:addrLine>
+            </tei:address><tei:lb/>
+            <tei:fw type="postmark">|| SALZBURG 2 | 28. VII. 35 21 | * ||</tei:fw>
+            <tei:fw type="stamp"><tei:note type="editorial" place="inline">overstamped in black
+                ink</tei:note>|| USE | THE | MAIL | CARRIAGE! ||</tei:fw>
+            <tei:fw type="stamp"><tei:note type="editorial" place="inline">overstamped in red
+                ink:</tei:note>Max M. Weisz, Vienna VIII, Albertgasse <tei:gap reason="illegible"
+              /></tei:fw><tei:lb/>
+            <tei:address>
+              <tei:addrLine><tei:rs type="place" key="entity-002578">Salzburg</tei:rs>, <tei:date
+                  when="1935-07-28">July 28, 1935</tei:date></tei:addrLine>
+              <tei:addrLine>Hotel Elisabeth</tei:addrLine>
+            </tei:address>
+          </tei:fw>
+          <tei:salute>Dear <tei:rs type="person" key="entity-000771">Lie-lie</tei:rs>,</tei:salute>
+        </tei:opener>
 
-      <tei:p>From us all, please accept our most heartfelt Easter greetings!<tei:ptr
-          corresp="#r0001-fn01" type="footnote"/></tei:p>
+        <tei:p>Just to be safe, let me ask you whether it suits you if we visit you on <tei:date
+            when="1935-07-31">Wednesday</tei:date> afternoon. We will arrive at 2.30 and stay until
+            <tei:date when="1935-08-01">Thursday</tei:date>.</tei:p>
 
-      <tei:p>If Vienna is having beautiful sunny days now, it is truly magnificent there!!</tei:p>
+        <tei:closer>
+          <tei:salute rend="indent-10"><tei:handShift new="#RW"/>Cordial greetings</tei:salute>
+          <tei:salute rend="indent-50">Your</tei:salute>
+          <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000943"
+            >Arnold</tei:rs></tei:signed>
+        </tei:closer>
+      </tei:div>
 
-      <tei:p>Perhaps I may come to visit you some day!</tei:p>
+      <tei:div type="part_2">
 
-      <tei:closer>
-        <tei:salute>Most cordially your</tei:salute>
-        <tei:signed><tei:rs type="person" key="entity-000944">Rosa</tei:rs></tei:signed><tei:lb/>
-      </tei:closer>
+        <tei:opener/>
+
+        <tei:p/>
+
+        <tei:closer>
+          <tei:salute rend="indent-10">Cordial greetings</tei:salute>
+          <tei:salute rend="indent-10">until we meet!</tei:salute>
+          <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000944"
+            >Rosa</tei:rs></tei:signed>
+        </tei:closer>
+
+      </tei:div>
 
     </tei:div>
 
