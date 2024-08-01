@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3498" sdoID="OJ-14-10_31">OJ 14/10, [31]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="AW" scope="sole">Arnold Weil's hand</tei:handNote>
+    </tei:handNotes>
+
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2024</tei:resp>
+      <tei:resp>Translation, 2024</tei:resp>
+      <tei:resp>XML Encoding, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-11" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008458">WeilA ~
+        JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Arnold Weil to Jeanette Schenker, dated February 2,
+        1938</dc:title>
+
+      <dcterms:created>1938-02-02T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2024-08-01</dcterms:dateSubmitted>
+      <dc:description>Arnold Weil acknowledges a postcard and a letter with two inclosures from
+        Jeanette Schenker. – Rosa has not written because she has had to go to her sister Hella, who
+        is ill and whose husband died two days ago.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000943">Arnold Weil</marcrel:correspondent>
+      <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied>Absender:</tei:supplied>
+              <tei:handShift new="#AW"/>Westphalenstr. 25</tei:addrLine>
+            <tei:addrLine>Aussig <tei:date when="1938-02-02">2. Feber 1938</tei:date></tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:supplied>An:</tei:supplied>Wohlgeborene Frau D<tei:hi
+                rend="supralinear">r.</tei:hi> Heinrich Schenker</tei:addrLine>
+            <tei:addrLine>Wien I</tei:addrLine>
+            <tei:addrLine>Reichratsstr. 7 III/19</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark">|| [ÚSTÍ NAD LA]BEM 2 | <tei:gap reason="illegible"/> 20 |
+              <tei:gap reason="illegible"/> | [* AUSS]IG 2 * ||</tei:fw><tei:lb/>
+          <tei:note type="editorial" place="inline">postage stamps have been torn off]</tei:note><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#JS"/>Antw <tei:note type="editorial" place="inline"
+                >indecipherable shorthand</tei:note></tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#AW"/>Liebe <tei:rs type="person" key="entity-000771"
+            >Lie-Lie</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p>Wir erhielten diese Tage deine Karte und szt. den Brief nebst zwei
+          Beitragen<tei:supplied reason="punctuation">.</tei:supplied></tei:p>
+
+      <tei:p rend="first"><tei:rs type="person" key="entity-000944">Rosel</tei:rs>s Stillschweigen
+        entstand dadurch, daß sie stark an <tei:unclear reason="reading">Darhias</tei:unclear>
+        leidet und daß bei mir einige Altersbeschwerden auftreten. </tei:p>
+
+      <tei:p><tei:milestone unit="folio" n="verso"/>
+        <tei:rs type="person" key="entity-000944">Rosel</tei:rs> wollte Dir gestern schreiben, doch
+        mußte sie zu <tei:rs type="person" key="entity-003920">Hella</tei:rs> fahren, die krank ist
+        und von der Nachricht vom vorgestern erfolgten Ableben ihres <tei:rs type="person"
+          key="entity-008436">Mann</tei:rs>es<tei:note xml:id="r0001-fn01" type="editorial"
+          place="foot">Hella’s husband was Emil Hatschek (1883-1938).</tei:note> derart hergenommen
+        ist, daß <tei:rs type="person" key="entity-000944">Rosel</tei:rs> heute wieder bei ihr
+        ist.</tei:p>
+
+      <tei:p>Ich wünsche Dir recht angenehmen Aufenthalt in Gries und bin</tei:p>
+
+      <tei:closer>
+        <tei:salute>mit herzlichsten Grüßen von <tei:rs type="person" key="entity-000944"
+            >Rosel</tei:rs> &amp; von mir</tei:salute>
+        <tei:salute rend="indent-60">Dein</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs type="person" key="entity-000943"
+          >Arnold</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied>From:</tei:supplied>
+              <tei:handShift new="#AW"/>Westphalenstraße 25</tei:addrLine>
+            <tei:addrLine>Aussig <tei:date when="1938-02-02">February 2,
+              1938</tei:date></tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:supplied>To:</tei:supplied>Mrs. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine>Reichratsstraße 7 III/19</tei:addrLine>
+            <tei:addrLine>Vienna I</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark">|| [ÚSTÍ NAD LA]BEM 2 | <tei:gap reason="illegible"/> 20 |
+              <tei:gap reason="illegible"/> | [* AUSS]IG 2 * ||</tei:fw><tei:lb/>
+          <tei:note type="editorial" place="inline">postage stamps have been torn off]</tei:note><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#JS"/>Answered <tei:note type="editorial"
+                place="inline">indecipherable shorthand</tei:note></tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#AW"/>Dear <tei:rs type="person" key="entity-000771"
+            >Lie-Lie</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>We received your postcard today and at the same time your letter along with two
+        inclosures.</tei:p>
+
+      <tei:p rend="first"><tei:rs type="person" key="entity-000944">Rosel</tei:rs>’s silence comes
+        about because she is suffering acutely from <tei:note type="editorial" place="inline"
+          >medical term?</tei:note>, and because in my case various old-age afflictions are
+        affecting <tei:supplied reason="clarity">me</tei:supplied>.</tei:p>
+
+      <tei:p><tei:milestone unit="folio" n="verso"/>
+        <tei:rs type="person" key="entity-000944">Rosel</tei:rs> wanted to write to you yesterday,
+        but she had to go to <tei:rs type="person" key="entity-003920">Hella</tei:rs>, who is
+        unwell, and the news of the death yesterday of her <tei:rs type="person" key="entity-008436"
+          >husband</tei:rs><tei:ptr corresp="#r0001-fn01" type="footnote"/> explains why <tei:rs
+          type="person" key="entity-000944">Rosel</tei:rs> is again with her today.</tei:p>
+
+      <tei:p>I wish you a very pleasant holiday in Gries and remain, </tei:p>
+
+      <tei:closer>
+        <tei:salute>with most cordial greeting from <tei:rs type="person" key="entity-000944"
+            >Rosel</tei:rs> and myself,</tei:salute>
+        <tei:salute rend="indent-60">Your</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs type="person" key="entity-000943"
+          >Arnold</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
