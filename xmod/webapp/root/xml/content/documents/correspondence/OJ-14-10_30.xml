@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3497" sdoID="OJ-14-10_30">OJ 14/10, [30]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="RW" scope="major">Rosa Weil's hand</tei:handNote>
+      <tei:handNote xml:id="AW" scope="minor">Arnold Weil's hand</tei:handNote>
+      <tei:handNote xml:id="JS" scope="minor">Jeanette Schenker's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2024</tei:resp>
+      <tei:resp>Translation, 2024</tei:resp>
+      <tei:resp>XML Encoding, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-11" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008456">WeilR ~
+        JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008458">WeilA ~
+        JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+      <dc:title>Handwritten letter with envelope from Rosa Weil to Jeanette Schenker, dated December
+        23, 1935</dc:title>
+
+      <dcterms:created>1935-12-23T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2024-08-01</dcterms:dateSubmitted>
+      <dc:description>Rosa Weil thanks Jeanette for her letter of sympathy [30.xi.35]; she is
+        pleased that her new accommodation [Cottagegasse 21] suits her; she wishes her well for
+        1936, expressing admiration for her plan to travel to Chile, and wonders how well she and
+        her brother Victor will get on in so greatly changed a world.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000944">Rosa Weil</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000943">Arnold Weil</marcrel:correspondent>
+      <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:div type="part_1">
+        <tei:opener>
+          <tei:fw type="envelope">
+            <tei:note type="editorial" place="inline"><tei:hi rend="bold"
+              >envelope</tei:hi></tei:note><tei:lb/>
+            <tei:milestone unit="folio" n="recto"/><tei:lb/>
+            <tei:address>
+              <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied>
+                <tei:handShift new="#RW"/>Frau D<tei:hi rend="supralinear">r.</tei:hi> Heinrich
+                Schenker</tei:addrLine>
+              <tei:addrLine rend="indent-50">Wien XVII</tei:addrLine>
+              <tei:addrLine rend="indent-50">Cottagegasse 21.</tei:addrLine>
+            </tei:address>
+            <tei:fw type="postmark">|| ÚS[TÍ NAD LABEM 2] | 24. XII. 35 <tei:gap reason="illegible"
+              /> | 3f | * AUSSIG 2 * ||</tei:fw><tei:lb/>
+            <tei:address>
+              <tei:addrLine><tei:handShift new="#JS"/><tei:date when="1935-12-30">30. XII.
+                  35</tei:date></tei:addrLine>
+              <tei:addrLine>Bild Palais</tei:addrLine>
+            </tei:address>
+            <tei:milestone unit="folio" n="verso"/><tei:lb/>
+            <tei:address>
+              <tei:addrLine><tei:supplied>Absender:</tei:supplied>
+                <tei:handShift new="#RW"/>Weil, Westphalenstr. 25.</tei:addrLine>
+              <tei:addrLine rend="indent-20">Ústí n/L</tei:addrLine>
+              <tei:addrLine rend="indent-20">C. S. R.</tei:addrLine>
+            </tei:address>
+          </tei:fw>
+          <tei:note type="editorial" place="inline"><tei:hi rend="bold">letter</tei:hi></tei:note><tei:lb/>
+          <tei:dateline><tei:handShift new="#RW"/><tei:rs type="place" key="entity-002248"
+              >Aussig</tei:rs>, <tei:date when="1935-12-23">23. Dez. 1935</tei:date></tei:dateline><tei:lb/>
+          <tei:salute>Meine liebe <tei:rs type="person" key="entity-000771"
+            >Schwester</tei:rs>!</tei:salute>
+        </tei:opener>
+
+        <tei:p rend="first">Nun ist es mit der Beantwortung Deines so lieben Briefes<tei:note
+            xml:id="r0001-fn01" type="editorial" place="foot">Jeanette’s letter does not survive,
+            but we know from her annotation on the front of the envelope of <tei:ref
+              type="correspondence" cRef="OJ-14-10_29">OJ 14/10, [29]</tei:ref> that she replied to
+            Rosa’s previous letter on November 30, 1935. — The paragraph-breaks before paragraphs 5,
+            6, and 7 are editorial: at these points, Rosa inserted an en-dash and continued without
+            break.</tei:note> wieder so spät geworden und ich wollte Dir schon so lange danken in
+            <tei:rs type="person" key="entity-000943">Arnold</tei:rs>s Namen (für) ebenso wie in
+          meinem für Deine so warme Teilnahme und Deine lieben Worte anläßlich des Heimganges meines
+            Schwagers.<tei:note xml:id="r0001-fn02" type="editorial" place="foot">As reported in
+            Rosa’s letter, Arnold’s brother Emil had died on November 13. (“Heimgang” is a
+            euphemism.)</tei:note></tei:p>
+
+        <tei:p>Es gibt in dieser Zeit genügend Arbeit im Haus; außerdem war <tei:rs type="person"
+            key="entity-000943">Arnold</tei:rs> leider fast eine Woche bettlagerig; er hatte am Bein
+          eine Infektion mit Beinhautentzündung und beinahe Venenentzündung und die Sache muß heute
+          noch behandelt und sorgfältig gepflegt werden, obwohl er längst wieder ins Büro geht. – Es
+          ist nur, damit die Bäume nicht in den Himmel wachsen. –</tei:p>
+
+        <tei:p rend="first"><tei:rs type="person" key="entity-005248">Lene</tei:rs> wird die
+          Weihnachtsfeiertage leider nicht mit uns verbringen, sie ist seit gestern in Ober-Gurgl;
+          der Ski-Sport ist ihre größte Freude und da sie bei ihrem ständigen Aufenthalt in der
+          Krankenhausluft eine Erholung in reiner Gebirgs-Schneeluft immer gut brauchen kann, will
+          ich mich, wie gewöhnlich gerne bescheiden. Was Du vom Undank der Menschen schreibst, ist
+          doch eine alte Geschichte, die sich täglich neu begibt und jeder von uns hat ihn
+          irgendwann und irgendwo in irgendeiner Form erfahren.<tei:note xml:id="r0001-fn03"
+            type="editorial" place="foot">This recalls the stanza in Heinrich Heine’s poem “Ein
+            Jüngling liebt ein Mädchen“: “Es ist eine alte Geschichte, / Doch bleibt es immer neu, /
+            Und wem es just passieret, / Dem bricht das Herz entzwei“.</tei:note></tei:p>
+
+        <tei:p><tei:pb n="2"/> Du bist sehr unternehmungslustig, willst gar nach <tei:rs
+            type="place" key="entity-005845">Chile</tei:rs> reisen!<tei:note xml:id="r0001-fn04"
+            type="editorial" place="foot">Jeanette travelled to Chile April 27 to September 30,
+            1936, writing a travel diary (OJ 35/9) throughout the journey. She did not encounter
+            Victor. </tei:note> Das ist kein Katzensprung und will in jetziger Zeit wohl überlegt
+          sein. <tei:rs type="person" key="entity-000783">Victor</tei:rs> würde sich sicher riesig
+          freuen, nur, ob Ihr Euch heute noch verstehen würdet, ist sehr fraglich; es liegt ein
+          Menschenalter dazwischen, ein Ozean, ein Weltkrieg, der alles umundum gestürzt und
+          verändert hat. Schön muß es schon sein, einmal die alte Welt abschütteln und soviel neues
+          sehen und einmal nur schauen und nie gesehene Dinge kennenlernen.</tei:p>
+
+        <tei:p>In <tei:rs type="person" key="entity-003244">Klara</tei:rs>s Zustand hat sich leider
+          nichts zum besseren gewendet; man hofft immernoch ein Bißchen, weil man Fälle kennt, wo
+          solche Krankheiten nach 5 und mehr Jahren besser wurden. Besuchen kann man sie nicht, weil
+          sie jedesmal Anfälle bekommt. </tei:p>
+
+        <tei:p>Ich freue mich, daß Du es mit der Unterkunft jetzt so gut getroffen hast und
+          beglückwünsche Dich dazu, sowie ich Dir für das kommende Jahr und für immer alles Gute und
+          Schöne wünsche. Ich hoffe, Du kannst die Feiertage angenehm verbringen und hast ein
+          bißchen nette Gesellschaft gefunden.</tei:p>
+
+        <tei:p>Wir werden allein sein, aber <tei:rs type="person" key="entity-000943"
+            >Arnold</tei:rs> braucht die Ruhe und Erholung dringend. Im Feber will er doch endlich
+          ein bißchen ausspannen.</tei:p>
+
+        <tei:closer>
+          <tei:salute rend="indent-10">Für heute sei herzlichst gegrüßt und nochmals
+            bedankt</tei:salute>
+          <tei:salute rend="indent-40">von Deiner Schwester</tei:salute>
+          <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000944"
+            >Rosa</tei:rs>.</tei:signed>
+        </tei:closer>
+
+      </tei:div>
+
+      <tei:div type="part_2">
+        <tei:opener/>
+
+        <tei:p/>
+
+        <tei:closer>
+          <tei:salute><tei:handShift new="#AW"/>Besten Dank, herzliche Grüße</tei:salute>
+          <tei:salute>und angenehme Feiertage</tei:salute>
+          <tei:signed rend="indent-50"><tei:rs type="person" key="entity-000943"
+            >Arnold</tei:rs>.</tei:signed>
+        </tei:closer>
+
+      </tei:div>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:div type="part_1">
+        <tei:opener>
+          <tei:fw type="envelope">
+            <tei:note type="editorial" place="inline"><tei:hi rend="bold"
+              >envelope</tei:hi></tei:note><tei:lb/>
+            <tei:milestone unit="folio" n="recto"/><tei:lb/>
+            <tei:address>
+              <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied>
+                <tei:handShift new="#RW"/>Mrs. Heinrich Schenker</tei:addrLine>
+              <tei:addrLine rend="indent-50">Cottagegasse 21</tei:addrLine>
+              <tei:addrLine rend="indent-50">Vienna XVII</tei:addrLine>
+            </tei:address>
+            <tei:fw type="postmark">|| ÚS[TÍ NAD LABEM 2] | 24. XII. 35 <tei:gap reason="illegible"
+              /> | 3f | * AUSSIG 2 * ||</tei:fw><tei:lb/>
+            <tei:address>
+              <tei:addrLine><tei:handShift new="#JS"/><tei:date when="1935-12-30">December 30,
+                  1935</tei:date></tei:addrLine>
+              <tei:addrLine>Palace picture</tei:addrLine>
+            </tei:address>
+            <tei:milestone unit="folio" n="verso"/><tei:lb/>
+            <tei:address>
+              <tei:addrLine><tei:supplied>From:</tei:supplied>
+                <tei:handShift new="#RW"/>Weil, Westphalenstraße 25</tei:addrLine>
+              <tei:addrLine rend="indent-20">Ústí nad Labem</tei:addrLine>
+              <tei:addrLine rend="indent-20">Czechoslovakia</tei:addrLine>
+            </tei:address>
+          </tei:fw>
+          <tei:note type="editorial" place="inline"><tei:hi rend="bold">letter</tei:hi></tei:note><tei:lb/>
+          <tei:dateline><tei:handShift new="#RW"/><tei:rs type="place" key="entity-002248"
+              >Aussig</tei:rs>, <tei:date when="1935-12-23">December 23,
+            1935</tei:date></tei:dateline><tei:lb/>
+          <tei:salute>My dear <tei:rs type="person" key="entity-000771"
+            >sister</tei:rs>,</tei:salute>
+        </tei:opener>
+
+        <tei:p rend="first">Now it has become so late for me to answer your very dear
+            letter,<tei:ptr corresp="#r0001-fn01" type="footnote"/> and I was wanting to thank you
+          in <tei:rs type="person" key="entity-000943">Arnold</tei:rs>’s name as well as my own for
+          your very warm sympathy and your precious words regarding the passing of my
+            brother-in-law.<tei:ptr corresp="#r0001-fn02" type="footnote"/></tei:p>
+
+        <tei:p>There has been ample work to do in our house in recent days; on top of that, <tei:rs
+            type="person" key="entity-000943">Arnold</tei:rs> was confined to bed for almost a week;
+          he has had an infection in the bone, with shin splints and phlebitis, and the condition
+          needs still today to be attended to and carefully nursed, albeit he has long since
+          returned to his office. – There’s a limit to everything. –</tei:p>
+
+        <tei:p rend="first">Sadly, <tei:rs type="person" key="entity-005248">Lene</tei:rs> will not
+          be spending the Christmas holidays with us. She has been in Ober-Gurgel since yesterday;
+          skiing is her greatest pleasure and since, given her current spell breathing the hospital
+          air she can always make good use of recreation in pure mountain air, I will as usual
+          gladly content myself <tei:supplied reason="clarity">with that thought</tei:supplied>.
+          What you write of the ingratitude of mankind is a familiar tale that grows daily ever new,
+          and every one of us has experienced it sometime, somewhere, in one form or
+            another.<tei:ptr corresp="#r0001-fn03" type="footnote"/></tei:p>
+
+        <tei:p><tei:pb n="2"/> How adventurous of you to want to travel to <tei:rs type="place"
+            key="entity-005845">Chile</tei:rs>!<tei:ptr corresp="#r0001-fn04" type="footnote"/>
+          That’s no stone’s throw <tei:supplied reason="clarity">at the best of
+          times</tei:supplied>, and will be all the more difficult under current conditions. <tei:rs
+            type="person" key="entity-000783">Victor</tei:rs> would be overjoyed, but whether you
+          would get along with one another is very questionable. Between the two of you lie a
+          generation, an ocean, a world war that has changed everything and turned it upside down.
+          It must be lovely for once to cast off the old world and to see so much that is new, and
+          to get to know things never before seen.</tei:p>
+
+        <tei:p>There has sadly been no change for the better in <tei:rs type="person"
+            key="entity-003244">Klara</tei:rs>’s condition. We maintain a glimmer of hope because
+          cases are known in which such illnesses improve after five or more years. No one can visit
+          her, because every time she has attacks.</tei:p>
+
+        <tei:p>I’m pleased to hear that you have found accommodation so well-suited to you, and
+          congratulate you on this as well as wishing you all the very best for the coming year and
+          beyond. I hope that you can pass the holidays in pleasant fashion and have found some
+          congenial company.</tei:p>
+
+        <tei:p>We will be on our own, but <tei:rs type="person" key="entity-000943">Arnold</tei:rs>
+          urgently needs quiet and recuperation. In February he will finally be able to spread his
+          wings a little.</tei:p>
+
+        <tei:closer>
+          <tei:salute rend="indent-10">For today, I send cordial greetings and thanks once
+            again</tei:salute>
+          <tei:salute rend="indent-40">from your sister</tei:salute>
+          <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000944"
+            >Rosa</tei:rs></tei:signed>
+        </tei:closer>
+
+      </tei:div>
+
+      <tei:div type="part_2">
+        <tei:opener/>
+
+        <tei:p/>
+
+        <tei:closer>
+          <tei:salute><tei:handShift new="#AW"/>Many thanks, cordial greetings,</tei:salute>
+          <tei:salute>and pleasant holidays</tei:salute>
+          <tei:signed rend="indent-50"><tei:rs type="person" key="entity-000943"
+            >Arnold</tei:rs></tei:signed>
+        </tei:closer>
+
+      </tei:div>
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
