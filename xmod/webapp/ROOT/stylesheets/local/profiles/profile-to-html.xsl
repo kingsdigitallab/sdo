@@ -21,7 +21,7 @@
       <xsl:otherwise>entity</xsl:otherwise>
     </xsl:choose>
   </xsl:variable>
-  
+
   <!-- the prefix "WSLB" needs to be mapped to the collection identifier WSLB-Mus -->
   <xsl:variable name="filePrefix">
     <xsl:choose>
@@ -208,7 +208,7 @@
       </xsl:when>
       <xsl:when test="$type = 'collection'">
         <xsl:for-each select="$repos-node//tei:div[@xml:id = $filePrefix]">
-          
+
           <xsl:if test="not(./tei:head = $repos-node/tei:div/tei:head)">
             <h2>
               <a>
@@ -369,7 +369,14 @@
     <xsl:variable name="href">
       <xsl:value-of select="$xmp:context-path"/>
       <xsl:text>/documents/</xsl:text>
-      <xsl:value-of select="arr[@name='url']/str"/>
+      <xsl:choose>
+        <xsl:when test="arr[@name='url']">
+            <xsl:value-of select="arr[@name='url']/str"/>
+        </xsl:when>
+        <xsl:otherwise>
+            <xsl:value-of select="str[@name='url']"/>
+        </xsl:otherwise>
+      </xsl:choose>
     </xsl:variable>
 
     <xsl:variable name="doccode">
@@ -403,6 +410,9 @@
               <xsl:when test="arr[@name='title']">
                 <xsl:value-of select="arr[@name='title']/str"/>
               </xsl:when>
+              <xsl:when test="str[@name='title']">
+                <xsl:value-of select="str[@name='title']"/>
+              </xsl:when>
               <xsl:otherwise>
                 <xsl:text>Diary entry by Schenker for </xsl:text>
                 <xsl:value-of select="format-date(xs:date(str[@name='dateShort']), '[D] [MNn] [Y]')"
@@ -414,6 +424,7 @@
         <xsl:if test="arr[@name='author'] and arr[@name='author_key'] = $entity-key">
           [Author]</xsl:if>
       </p>
+
       <xsl:if test="str[@name='description']">
         <p>
           <xsl:value-of select="str[@name='description']"/>
