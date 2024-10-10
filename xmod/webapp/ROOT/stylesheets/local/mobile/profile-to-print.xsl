@@ -1,15 +1,15 @@
-<xsl:stylesheet exclude-result-prefixes="#all" version="2.0" 
+<xsl:stylesheet exclude-result-prefixes="#all" version="2.0"
   xmlns="http://www.w3.org/1999/xhtml"
-  xmlns:tei="http://www.tei-c.org/ns/1.0" 
+  xmlns:tei="http://www.tei-c.org/ns/1.0"
   xmlns:xmg="http://www.cch.kcl.ac.uk/xmod/global/1.0"
-  xmlns:xmp="http://www.cch.kcl.ac.uk/xmod/properties/1.0" 
+  xmlns:xmp="http://www.cch.kcl.ac.uk/xmod/properties/1.0"
   xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0"
-  xmlns:xmv="http://www.cch.kcl.ac.uk/xmod/views/1.0" 
+  xmlns:xmv="http://www.cch.kcl.ac.uk/xmod/views/1.0"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:import href="to-print.xsl" />
-  
+
   <xsl:param name="lang" />
   <xsl:param name="type" />
   <xsl:param name="filename" />
@@ -17,9 +17,12 @@
   <xsl:variable name="entity-key" select="substring-before($filename, '.')" />
 
 
-  <xsl:variable name="correspondence" select="/aggregation/response/result/doc[str[@name='kind']='correspondence']" />
-  <xsl:variable name="diaries" select="/aggregation/response/result/doc[str[@name='kind']='diaries']" />
-  <xsl:variable name="lessonbooks" select="/aggregation/response/result/doc[str[@name='kind']='lessonbooks']" />
+  <xsl:variable name="correspondence"
+    select="/aggregation/response/result/doc[str[@name='kind']='correspondence']" />
+  <xsl:variable name="diaries"
+    select="/aggregation/response/result/doc[str[@name='kind']='diaries']" />
+  <xsl:variable name="lessonbooks"
+    select="/aggregation/response/result/doc[str[@name='kind']='lessonbooks']" />
   <xsl:variable name="other" select="/aggregation/response/result/doc[str[@name='kind']='other']" />
 
   <xsl:template name="xms:pagehead">
@@ -28,7 +31,8 @@
         <h1>
           <xsl:choose>
             <xsl:when test="/*/tei:TEI">
-              <xsl:value-of select="/*/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)]" />
+              <xsl:value-of
+                select="/*/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)]" />
             </xsl:when>
             <xsl:when test="/*/eats/entities/entity[keys/key = $entity-key]/names/name">
               <xsl:value-of select="/*/eats/entities/entity[keys/key = $entity-key]/names/name[1]" />
@@ -103,7 +107,8 @@
       </xsl:otherwise>
     </xsl:choose>
 
-    <xsl:if test="/aggregation/response/result/doc">      
+    <xsl:if
+      test="/aggregation/response/result/doc">
       <div>
         <xsl:call-template name="make-section">
           <xsl:with-param name="name" select="'Correspondence'" />
@@ -145,65 +150,67 @@
             </xsl:for-each>
           </p>
         </div>
-        
-        <xsl:if test="names/name"> 
-        <h3>Names</h3>
+
+        <xsl:if test="names/name">
+          <h3>Names</h3>
         <div>
-          <div class="unorderedList">
-            <div class="t01">
-              <ul>
-                <xsl:for-each select="names/name">
-                  <li>
-                    <xsl:value-of select="." />
-                  </li>
-                </xsl:for-each>
-              </ul>
+            <div class="unorderedList">
+              <div class="t01">
+                <ul>
+                  <xsl:for-each select="names/name">
+                    <li>
+                      <xsl:value-of select="." />
+                    </li>
+                  </xsl:for-each>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-        </xsl:if>  
+        </xsl:if>
 
         <xsl:if test="relationships/relationship">
-        <h3>Relationships</h3>
+          <h3>Relationships</h3>
         <div>
-          <div class="unorderedList">
-            <div class="t01">
-              <ul>
-                <xsl:for-each select="relationships/relationship[@direction = 'direct']">
-                  <xsl:variable name="rel-entity-key" select="keys/key[1]" />
-                  <xsl:variable name="rel-entity-type"
-                    select="/*/eats/entities/entity[keys/key = $rel-entity-key]/types/type[1]" />
+            <div class="unorderedList">
+              <div class="t01">
+                <ul>
+                  <xsl:for-each select="relationships/relationship[@direction = 'direct']">
+                    <xsl:variable name="rel-entity-key" select="keys/key[1]" />
+                  <xsl:variable
+                      name="rel-entity-type"
+                      select="/*/eats/entities/entity[keys/key = $rel-entity-key]/types/type[1]" />
 
                   <li>
-                    <xsl:value-of select="$entity-name" />
-                    <xsl:text> </xsl:text>
-                    <xsl:value-of select="@type" />
-                    <xsl:text> </xsl:text>
-                    <a href="/profiles/{$rel-entity-type}/{$rel-entity-key}.html">
-                      <xsl:value-of select="names/name[1]" />
-                    </a>
-                  </li>
-                </xsl:for-each>
-                <xsl:for-each select="relationships/relationship[@direction = 'inverse']">
-                  <xsl:variable name="rel-entity-key" select="keys/key[1]" />
-                  <xsl:variable name="rel-entity-type"
-                    select="/*/eats/entities/entity[keys/key = $rel-entity-key]/types/type[1]" />
+                      <xsl:value-of select="$entity-name" />
+                      <xsl:text> </xsl:text>
+                      <xsl:value-of select="@type" />
+                      <xsl:text> </xsl:text>
+                      <a href="/profiles/{$rel-entity-type}/{$rel-entity-key}.html">
+                        <xsl:value-of select="names/name[1]" />
+                      </a>
+                    </li>
+                  </xsl:for-each>
+                  <xsl:for-each select="relationships/relationship[@direction = 'inverse']">
+                    <xsl:variable name="rel-entity-key" select="keys/key[1]" />
+                  <xsl:variable
+                      name="rel-entity-type"
+                      select="/*/eats/entities/entity[keys/key = $rel-entity-key]/types/type[1]" />
 
                   <li>
-                    <a href="/profiles/{$rel-entity-type}/{$rel-entity-key}.html">
-                      <xsl:value-of select="names/name[1]" />
-                    </a>
-                    <xsl:text> </xsl:text>
-                    <xsl:value-of select="@type" />
-                    <xsl:text> </xsl:text>
-                    <xsl:value-of select="$entity-name" />
-                  </li>
-                </xsl:for-each>
-              </ul>
+                      <a href="/profiles/{$rel-entity-type}/{$rel-entity-key}.html">
+                        <xsl:value-of select="names/name[1]" />
+                      </a>
+                      <xsl:text> </xsl:text>
+                      <xsl:value-of select="@type" />
+                      <xsl:text> </xsl:text>
+                      <xsl:value-of select="$entity-name" />
+                    </li>
+                  </xsl:for-each>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-       </xsl:if>   
+        </xsl:if>
       </div>
     </xsl:for-each>
   </xsl:template>
@@ -225,32 +232,71 @@
   </xsl:template>
 
   <xsl:template match="doc">
-    
     <xsl:variable name="doc-id"><xsl:value-of select="str[@name='shelfmark']" /></xsl:variable>
-    
-    <xsl:variable name="doc-title">
-        <xsl:choose>
-          <xsl:when test="arr[@name='title']">
-            <xsl:value-of select="arr[@name='title']/str" />
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:text>Diary entry by Schenker for </xsl:text>
-            <xsl:value-of select="format-date(xs:date(str[@name='dateShort']), '[D] [MNn] [Y]')" />
-          </xsl:otherwise>
-        </xsl:choose>      
+
+    <xsl:variable
+      name="doc-title">
+      <xsl:choose>
+        <xsl:when test="arr[@name='title']">
+          <xsl:value-of select="arr[@name='title']/str" />
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:text>Diary entry by Schenker for </xsl:text>
+          <xsl:variable name="dateString" select="str[@name='dateShort']" />
+          <xsl:variable
+            name="year"
+            select="substring($dateString, 1, 4)" />
+          <xsl:variable name="month"
+            select="substring($dateString, 6, 2)" />
+          <xsl:variable name="day"
+            select="substring($dateString, 9, 2)" />
+          <xsl:variable name="isValidDate"
+            select="(number($month) &gt;= 1 and number($month) &lt;= 12) and 
+        (number($day) &gt;= 1 and number($day) &lt;= 
+            (if ($month = '02') then (if (number($year) mod 4 = 0 and (number($year) mod 100 != 0 or number($year) mod 400 = 0)) then 29 else 28)
+             else (if ($month = '04' or $month = '06' or $month = '09' or $month = '11') then 30 else 31)))" />
+
+          <xsl:choose>
+            <xsl:when test="$isValidDate">
+              <xsl:variable name="dateShort" select="xs:date($dateString)" />
+              <xsl:value-of
+                select="format-date($dateShort, '[D] [MNn] [Y]')" />
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:text>No valid date available (</xsl:text>
+              <xsl:value-of select="$dateString" />
+              <xsl:text>)</xsl:text>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:otherwise>
+      </xsl:choose>
     </xsl:variable>
-    
+
     <li>
       <p>
         <xsl:choose>
           <xsl:when test="$type = 'epub'">
-            <a href="{str[@name='fileId']}.html"><xsl:value-of select="normalize-space($doc-id)"/><xsl:text> </xsl:text><strong><xsl:value-of select="normalize-space($doc-title)" /></strong></a>
+            <a href="{str[@name='fileId']}.html">
+              <xsl:value-of select="normalize-space($doc-id)" />
+              <xsl:text> </xsl:text>
+              <strong>
+                <xsl:value-of select="normalize-space($doc-title)" />
+              </strong>
+            </a>
           </xsl:when>
           <xsl:otherwise>
-            <a href="{$xmp:context-path}/documents/{arr[@name='url']/str}"><xsl:value-of select="normalize-space($doc-id)" /><xsl:text> </xsl:text><strong><xsl:value-of select="normalize-space($doc-title)" /></strong></a>    
+            <a href="{$xmp:context-path}/documents/{arr[@name='url']/str}">
+              <xsl:value-of select="normalize-space($doc-id)" />
+              <xsl:text> </xsl:text>
+              <strong>
+                <xsl:value-of select="normalize-space($doc-title)" />
+              </strong>
+            </a>
           </xsl:otherwise>
-          <xsl:if test="arr[@name='author'] and arr[@name='author_key'] = $entity-key"><xsl:text> [Author]</xsl:text></xsl:if>
-      </xsl:choose>
+          <xsl:if test="arr[@name='author'] and arr[@name='author_key'] = $entity-key">
+            <xsl:text> [Author]</xsl:text>
+          </xsl:if>
+        </xsl:choose>
       </p>
       <xsl:if test="str[@name='description']">
         <p>
