@@ -8,12 +8,10 @@ For production settings see
 https://docs.djangoproject.com/en/dev/howto/deployment/checklist/
 """
 
-import environ
-
-import getpass
 import logging
 import os
 
+import environ
 from django_auth_ldap.config import LDAPGroupQuery
 from kdl_ldap.settings import *  # noqa
 
@@ -96,7 +94,7 @@ INSTALLED_APPS += [  # your project apps here
 
 SITE_ID = 1
 
-INTERNAL_IPS = ['0.0.0.0', '127.0.0.1', '::1', '10.0.2.2']
+INTERNAL_IPS = ["0.0.0.0", "127.0.0.1", "::1", "10.0.2.2"]
 
 # https://docs.djangoproject.com/en/dev/topics/i18n/
 LANGUAGE_CODE = "en-gb"
