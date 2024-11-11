@@ -374,7 +374,7 @@
       <xsl:choose>
         <xsl:when test="$previous">
           <a
-            href="{concat($xmg:pathroot, xms:path-separator($previous/arr[@name='url']/str), $previous/arr[@name='url']/str)}"
+            href="{concat($xmg:pathroot, xms:path-separator($previous/str[@name='url']), $previous/str[@name='url'])}"
             >Previous</a>
         </xsl:when>
         <xsl:otherwise>
@@ -385,7 +385,7 @@
       <xsl:choose>
         <xsl:when test="$next">
           <a
-            href="{concat($xmg:pathroot, xms:path-separator($next/arr[@name='url']/str), $next/arr[@name='url']/str)}"
+            href="{concat($xmg:pathroot, xms:path-separator($next/str[@name='url']), $next/str[@name='url'])}"
             >Next</a>
         </xsl:when>
         <xsl:otherwise>
