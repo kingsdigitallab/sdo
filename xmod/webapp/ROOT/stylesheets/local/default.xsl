@@ -462,7 +462,8 @@
                   <xsl:call-template name="xmm:menu"/>
                 </xsl:otherwise>
               </xsl:choose>
-              <xsl:if test="$xmg:printable = true()"> 
+              <!-- 
+              <xsl:if test="$xmg:printable = true()">
                                 <div id="sn" class="tabs">
                   <h3>
                     Downloads
@@ -492,6 +493,7 @@
                         <xsl:text>/</xsl:text><xsl:value-of select="$mobile-path" /><xsl:value-of select="substring-before($filename, '.xml')" /><xsl:text>:.zip</xsl:text>
                       </xsl:attribute>
                       Save Page (All Formats)</a></li> 
+                      -->
                      <!--   
                        KFL - NB. Needs to be changed so these display when javascript is enabled so it can replace the buttons int the page
                      <li><a href="">
@@ -503,14 +505,15 @@
                      <li><a href="">
                        <xsl:attribute name="onclick">$('form#dlDocForm').submit(); return false;</xsl:attribute>
                           Save Selected (All Formats)</a></li> 
-                      -->   
-                    </ul>  
+                      -->  
+              
+                      <!--</ul>  
                     </li>
                   </ul>
                 </div>  
-              </xsl:if>                
+              </xsl:if> -->               
             </td>
-            </xsl:if> 
+            </xsl:if>
             <td id="content">
               <xsl:call-template name="xms:rhcontent"/>
               <div id="mainContent">
