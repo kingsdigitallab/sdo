@@ -235,12 +235,16 @@
       <div>
         <form action="/mobile/docs.zip" method="get" id="dlDocForm" onsubmit="return validate()">
           <!-- KFL - it would look nicer if this was replaced by side menu options (see default.xsl) when script was enabled and this is the no-script option -->
-          <p>Download all selected files as <input type="submit" name="format" value="pdf"/> or
+          
+          <p>Downloads temporarily removed for testing purposes</p>
+          <!-- COMMENTED OUT BY PC , 19 NOV 2024, TO SEE IF THESE DOWNLOAD FUNCTIONS WERE THE CAUSE OF INSTABILITY ISSUES, POSSIBLY BY BEING HIT REPEATEDLY BY BOTS
+              
+            <p>Download all selected files as <input type="submit" name="format" value="pdf"/> or
               <input type="submit" name="format" value="epub"/> or <input type="submit"
               name="format" value="both"/> (check files to select/deselect)<br/>Where appropriate
             save: <input type="radio" name="lang" value="all" checked="checked"/> English and German
             versions <input type="radio" name="lang" value="de"/> German version only <input
-              type="radio" name="lang" value="en"/> English version only </p>
+              type="radio" name="lang" value="en"/> English version only </p>-->
           <!-- <noscript> </noscript>-->
           <xsl:call-template name="make-section">
             <xsl:with-param name="name" select="'Correspondence'"/>
@@ -398,7 +402,9 @@
 
     <li>
       <p>
-        <input type="checkbox" name="{$doccode}" value="1"/>
+        <!-- COMMENTED OUT BY PC , 19 NOV 2024, TO SEE IF THESE DOWNLOAD FUNCTIONS WERE THE CAUSE OF INSTABILITY ISSUES, POSSIBLY BY BEING HIT REPEATEDLY BY BOTS
+          
+          <input type="checkbox" name="{$doccode}" value="1"/>-->
         <a>
           <xsl:attribute name="href">
             <xsl:value-of select="$href"/>

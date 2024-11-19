@@ -29,9 +29,13 @@
           
           <form action="/mobile/docs.zip" method="get" id="dlDocForm" onsubmit="return validate()">
             <!-- KFL - it would look nicer if this was replaced by side menu options (see default.xsl) when script was enabled and this is the no-script option -->
-            <p>Download all selected files as <input type="submit" name="format" value="pdf" /> or <input type="submit" name="format" value="epub" /> or <input type="submit" name="format" value="both" /> (check files to select/deselect)<br />Where appropriate save: 
+            
+            <p>Downloads temporarily removed for testing purposes</p>
+            <!-- COMMENTED OUT BY PC , 19 NOV 2024, TO SEE IF THESE DOWNLOAD FUNCTIONS WERE THE CAUSE OF INSTABILITY ISSUES, POSSIBLY BY BEING HIT REPEATEDLY BY BOTS
+              
+              <p>Download all selected files as <input type="submit" name="format" value="pdf" /> or <input type="submit" name="format" value="epub" /> or <input type="submit" name="format" value="both" /> (check files to select/deselect)<br />Where appropriate save: 
               <input type="radio" name="lang" value="all" checked="checked" /> English and German versions <input type="radio" name="lang" value="de" /> German version only <input type="radio" name="lang" value="en" /> English version only
-            </p> <!-- <noscript> </noscript>-->
+            </p>--> <!-- <noscript> </noscript>-->
             <p>Documents of this type:</p>
           <ul>
             <xsl:apply-templates select="/aggregation/response/result/doc" />

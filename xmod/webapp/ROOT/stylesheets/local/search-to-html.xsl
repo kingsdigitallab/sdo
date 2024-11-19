@@ -291,13 +291,16 @@
       <xsl:otherwise />
     </xsl:choose>     
     
-    <p>Download all selected files as <input type="submit" name="format" value="pdf" /> or <input type="submit" name="format" value="epub" /> or <input type="submit" name="format" value="both" /> (check files to select/deselect)<br />Where appropriate save: 
+    <p>Downloads temporarily removed for testing purposes</p>
+    <!-- COMMENTED OUT BY PC , 19 NOV 2024, TO SEE IF THESE DOWNLOAD FUNCTIONS WERE THE CAUSE OF INSTABILITY ISSUES, POSSIBLY BY BEING HIT REPEATEDLY BY BOTS
+      
+      <p>Download all selected files as <input type="submit" name="format" value="pdf" /> or <input type="submit" name="format" value="epub" /> or <input type="submit" name="format" value="both" /> (check files to select/deselect)<br />Where appropriate save: 
       <xsl:choose>
         <xsl:when test="$lang = 'de'"><input type="radio" name="lang" value="all" /> English and German versions <input type="radio" name="lang" value="de" checked="checked" /> German version only <input type="radio" name="lang" value="en" /> English version only</xsl:when>
         <xsl:when test="$lang = 'en'"><input type="radio" name="lang" value="all" /> English and German <input type="radio" name="lang" value="de" /> German Only <input type="radio" name="lang" value="en" checked="checked" /> English only</xsl:when>
         <xsl:otherwise><input type="radio" name="lang" value="all" checked="checked" /> English and German versions <input type="radio" name="lang" value="de" /> German version only <input type="radio" name="lang" value="en" /> English version only</xsl:otherwise>
       </xsl:choose>
-    </p>   
+    </p>-->   
     
     <xsl:choose>
       <xsl:when test="$number-results = 0">
@@ -313,7 +316,7 @@
                 <xsl:when test="$kind = 'diaries' or $kind = 'correspondence' or $kind = 'lessonbooks' or $kind = 'other'"><xsl:text>../documents/</xsl:text></xsl:when>
                 <xsl:otherwise><xsl:text>../profiles/</xsl:text></xsl:otherwise>
               </xsl:choose>              
-              <xsl:value-of select="arr[@name = 'url']/str" />          
+              <xsl:value-of select="str[@name = 'url']" />          
         </xsl:variable>
         <xsl:variable name="doccode">
           <xsl:for-each select="tokenize($href, '/')">
@@ -327,10 +330,12 @@
         </xsl:variable>
         
         <li>
-          <xsl:choose>
+          <!-- COMMENTED OUT BY PC , 19 NOV 2024, TO SEE IF THESE DOWNLOAD FUNCTIONS WERE THE CAUSE OF INSTABILITY ISSUES, POSSIBLY BY BEING HIT REPEATEDLY BY BOTS
+            
+            <xsl:choose>
             <xsl:when test="contains($print-list, $doccode)"><input type="checkbox" name="{$doccode}" value="1" checked="checked" /></xsl:when>
             <xsl:otherwise><input type="checkbox" name="{$doccode}" value="1" /></xsl:otherwise>
-          </xsl:choose>
+          </xsl:choose>-->
           <a href="{$href}">
             <xsl:value-of select="arr[@name='title']/str" />
             <xsl:if test="$kind = 'diaries'">

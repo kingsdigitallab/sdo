@@ -462,12 +462,16 @@
                   <xsl:call-template name="xmm:menu"/>
                 </xsl:otherwise>
               </xsl:choose>
-              <!-- 
+              
               <xsl:if test="$xmg:printable = true()">
                                 <div id="sn" class="tabs">
+                                  <h4>Downloads temporarily removed for testing purposes</h4>
+                               
+                                  <!-- COMMENTED OUT BY PC , 19 NOV 2024, TO SEE IF THESE DOWNLOAD FUNCTIONS WERE THE CAUSE OF INSTABILITY ISSUES, POSSIBLY BY BEING HIT REPEATEDLY BY BOTS
                   <h3>
                     Downloads
-                  </h3>  
+                  </h3> 
+                                  
                   <ul>
                     <li class="s06">
                       <ul> 
@@ -507,11 +511,12 @@
                           Save Selected (All Formats)</a></li> 
                       -->  
               
-                      <!--</ul>  
+                                  <!-- THIS IS THE SECOND SECTION ON THIS PAGE COMMENTED OUT BY PC , 19 NOV 2024, TO SEE IF THESE DOWNLOAD FUNCTIONS WERE THE CAUSE OF INSTABILITY ISSUES, POSSIBLY BY BEING HIT REPEATEDLY BY BOTS - DID THIS IN TWO SECTIONS BECAUSE THERE WAS AN EXISTING COMMENTED OUT SECTION BY KFL ABOVE
+                        </ul>  
                     </li>
-                  </ul>
+                  </ul> -->
                 </div>  
-              </xsl:if> -->               
+              </xsl:if>            
             </td>
             </xsl:if>
             <td id="content">
