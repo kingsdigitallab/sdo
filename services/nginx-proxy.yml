@@ -6,3 +6,5 @@ services:
       - "${NGINX_PROXY_PORTS:-80:80}"
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
+    env_file:
+      - ../compose/.env
