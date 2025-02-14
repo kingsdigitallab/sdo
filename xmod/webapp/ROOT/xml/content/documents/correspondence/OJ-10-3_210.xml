@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3286" sdoID="OJ-10-3_210">OJ 10/3, [210]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="TPoed" scope="major">Otto Erich Deutsch typist</tei:handNote>
+      <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-19" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Typewritten postcard from Deutsch to Schenker, dated April 27, 1934</dc:title>
+
+      <dcterms:created>1934-04-27T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-09-12</dcterms:dateSubmitted>
+      <dc:description>Deutsch asks Schenker’s advice about describing manuscripts of unfinished
+        symphonic works, with reference to Schubert’s E major and B minor
+        symphonies.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:address>
+          <tei:addrLine>Absender: </tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied>
+            <tei:handShift new="#TPoed"/>Herrn Dr. Heinrich Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-40">Keilgasse 8</tei:addrLine>
+          <tei:addrLine rend="indent-60"><tei:hi rend="sperr">Wien</tei:hi> III.</tei:addrLine>
+        </tei:address>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-40"><tei:handShift new="#TPoed"/>Wien, <tei:date
+            when="1934-04-27">27. April 34</tei:date></tei:dateline>
+        <tei:salute>Lieber <tei:rs type="person" key="entity-000632">Verehrter</tei:rs>!<tei:note
+            xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this postcard and response
+            are recorded in Schenker’s diary for April 28, 1934: “Von Deutsch (K.): zwei Fragen
+            technischer Natur. […] — An Deutsch (teleph.): Auskunft.” (“From Deutsch (postcard): two
+            questions of a technical nature. […] — To Deutsch (by telephone):
+            information.”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Hoffentlich kann ich morgen mittags telefonisch eine Zusammenkunft für die
+        nächsten Tage verabreden. Ich bin etwas bedrängt und fahre <tei:date when="1934-05-03"
+          >Donnerstag</tei:date> auf mehr als zwei Wochen ab. </tei:p>
+
+      <tei:p rend="first">Dringend und also auch telefonisch möchte ich Sie um einen Rat bitten. </tei:p>
+
+      <tei:p rend="first">Kann man die Art von Klavierauszügen mit Angabe einzelner Instrumente der
+        in seinem Kopf schon sichtbaren Partitur: Klavier-Partizell nennen?<tei:note
+          xml:id="r0001-fn02" type="editorial" place="foot">In the left margin sideways, in
+          Deutsch’s hand, “h-Sinf.”, referring to the third movement of Schubert’s <tei:rs
+            type="composition" key="entity-001686">“Unfinished” Symphony</tei:rs>.</tei:note>
+      </tei:p>
+
+      <tei:p rend="first">Und ebenso die unausgeschriebenen Partitur-Skizzen (Entwürfe) mit ganzem
+        System, aber nur mit ausgeschriebener führender und begleitender Stimme:
+          Partiturskelett?<tei:note xml:id="r0001-fn03" type="editorial" place="foot">In the left
+          margin sideways, in Deutsch’s hand, “E-Sinf.”, referring to the draft of a symphony in E
+          major, D. 729.</tei:note>
+      </tei:p>
+
+      <tei:p rend="first">Ihre Meinung ist mir sehr wichtig und nötig. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50"><tei:handShift new="#OED"/>Schönstens und eilendst</tei:salute>
+        <tei:salute rend="indent-70">Ihr</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000164">O E
+          Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:address>
+          <tei:addrLine>From: </tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied>
+            <tei:handShift new="#TPoed"/>Dr. Heinrich Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-40">Keilgasse 8</tei:addrLine>
+          <tei:addrLine rend="indent-60"><tei:hi rend="sperr">Vienna</tei:hi> III</tei:addrLine>
+        </tei:address>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-40"><tei:handShift new="#TPoed"/>Vienna, <tei:date
+            when="1934-04-27">April 27, 1934</tei:date></tei:dateline>
+        <tei:salute>Dear revered <tei:rs type="person" key="entity-000632">friend</tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">I hope that we can speak on the telephone tomorrow at midday to arrange a
+        get-together sometime in the next few days. I am somewhat pressed for time and will be away
+        from <tei:date when="1934-05-03">Thursday</tei:date> for more than two weeks. </tei:p>
+
+      <tei:p rend="first">I would also like to ask you for advice urgently, and thus again by
+        telephone.</tei:p>
+
+      <tei:p rend="first">Can one call the type of piano reduction, with indications of the
+        individual instruments of the score that is already visible in one’s head, a “piano
+          particelle”?<tei:ptr corresp="#r0001-fn02" type="footnote"/></tei:p>
+
+      <tei:p rend="first">And likewise, the incompletely written out score-sketches (drafts) with a
+        full instrumental system but only with the leading and accompanying parts written out: a
+        “skeletal score”?<tei:ptr corresp="#r0001-fn03" type="footnote"/></tei:p>
+
+      <tei:p rend="first">Your opinion is very important to me, and necessary.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50"><tei:handShift new="#OED"/>Best wishes, in greatest haste, </tei:salute>
+        <tei:salute rend="indent-70">Your</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000164">O. E.
+            Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

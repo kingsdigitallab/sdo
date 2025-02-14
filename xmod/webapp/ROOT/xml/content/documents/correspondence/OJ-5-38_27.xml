@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3441" sdoID="OJ-5-38_27">OJ 5/38, [27]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="pr" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="LR">
+      <tei:persName>Lee Rothfarb</tei:persName>
+      <tei:resp>Translation, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-11" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008423">SchenkerW ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Heinrich to Wilhelm Schenker, dated June 1,
+        1927</dc:title>
+
+      <dcterms:created>1927-06-01T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2024-07-09</dcterms:dateSubmitted>
+      <dc:description>Heinrich asks his brother to make a decision about where the three brothers
+        will meet.</dc:description>
+      <dc:subject/>
+      
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000775">Wilhelm Schenker</marcrel:recipient>
+      
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline">
+          <tei:handShift new="#pr"/><tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#pr"/>Absender: <tei:handShift new="#HS"
+              />Schenker</tei:addrLine>
+            <tei:addrLine>Wien III</tei:addrLine>
+            <tei:addrLine>Keilgasse 8</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied>An:</tei:supplied>
+              <tei:handShift new="#HS"/>H. D<tei:hi rend="supralinear">r</tei:hi> Wilhelm
+              Schenker</tei:addrLine>
+            <tei:addrLine>St. Bernhard</tei:addrLine>
+            <tei:addrLine rend="indent-10">b/Horn</tei:addrLine>
+            <tei:addrLine>Nd: Öst:</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark">|| 3/3 WIEN 49 | 1 VI 27 13 | * R * ||</tei:fw>
+          <tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+        </tei:fw>
+        <tei:dateline><tei:handShift new="#HS"/><tei:date when="1927-06-01">1. 6.
+          27</tei:date></tei:dateline>
+        <tei:salute>Mein lieber <tei:rs type="person" key="entity-000775">Wilhelm</tei:rs>!<tei:note
+            xml:id="r0001-fn01" type="editorial" place="foot">Writing of this postcard is recorded
+            in Schenker’s diary for May, 31, 1927: “An Wilhelm (K.): bitte um die letzte
+            Entscheidung” (“To Wilhelm (postcard): I ask him for his final
+          decision”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Wir waren vorigen Sonntag in <tei:rs type="place" key="entity-002394">Baden</tei:rs>.
+        Dort wurde am meisten der Vorschlag begrüßt, den ich auch dir mit nannte, daß wir auf der
+        Rückreise in <tei:rs type="place" key="entity-004104">Reichr.</tei:rs> eintreffen u. daß du
+        um dieselbe Zeit hinkommst. <tei:rs type="person" key="entity-003438">Lisl</tei:rs> übernahm
+        es, dir das Alles zu schreiben. Hat sie es getan? Und was sagst du dazu? Wolltest du es doch
+        anders haben, so <tei:hi rend="underline">sage es mir rechtzeitig</tei:hi>, damit wir uns
+        entsprechend einrichten. <tei:hi rend="underline">Wir sind zu Allem bereit</tei:hi>, wie ich
+        dir schrieb. Also heraus mit der Feder, die Zeit drängt. Am <tei:date when="1927-06-25"
+          >25.</tei:date> sind wir hier fertig. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">Viele Grüße von mir u. <tei:rs type="person"
+            key="entity-000771">Lieliechen</tei:rs></tei:salute>
+        <tei:salute rend="indent-60">dein</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs type="person" key="entity-000632"
+          >Heinrich</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline">
+          <tei:handShift new="#pr"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#pr"/>From: <tei:handShift new="#HS"
+              />Schenker</tei:addrLine>
+            <tei:addrLine>Keilgasse 8</tei:addrLine>
+            <tei:addrLine>Vienna III</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied>To:</tei:supplied>
+              <tei:handShift new="#HS"/>Dr Wilhelm Schenker</tei:addrLine>
+            <tei:addrLine>St. Bernhard</tei:addrLine>
+            <tei:addrLine rend="indent-10">near Horn</tei:addrLine>
+            <tei:addrLine>Lower Austria</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark">|| 3/3 VIENNA 49 | 1 VI 27 13 | * R * ||</tei:fw>
+          <tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+        </tei:fw>
+        <tei:dateline><tei:handShift new="#HS"/><tei:date when="1927-06-01">June 1,
+          1927</tei:date></tei:dateline>
+        <tei:salute>My dear <tei:rs type="person" key="entity-000775">Wilhelm</tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>Last Sunday we were in <tei:rs type="place" key="entity-002394">Baden</tei:rs>. There
+        the suggestion that was most welcomed, which I also mentioned to you, is that we meet in
+          <tei:rs type="place" key="entity-004104">Reichraming</tei:rs> on the way back, and that
+        you come there at the same time. <tei:rs type="person" key="entity-003438">Lisl</tei:rs>
+        took on the task of writing everything to you. Did she do that? And what do you have to say
+        to the plan? If you wanted to do it differently then <tei:hi rend="underline">tell me in
+          good time</tei:hi> so that we can arrange it accordingly. <tei:hi rend="underline">We are
+          amenable to all options</tei:hi> as I am writing to you. So, get out your pen, time is
+        pressing. On the <tei:date when="1927-06-25">25th</tei:date> we are finished here.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">Greetings from me and <tei:rs type="person" key="entity-000771"
+            >Lieliechen</tei:rs></tei:salute>
+        <tei:salute rend="indent-60">Your</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs type="person" key="entity-000632"
+          >Heinrich</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

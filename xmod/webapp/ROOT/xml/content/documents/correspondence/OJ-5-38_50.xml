@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3462" sdoID="OJ-5-38_50">OJ 5/38, [50]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="unc" scope="minor">uncertain</tei:handNote>
+      <tei:handNote xml:id="pr" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="LR">
+      <tei:persName>Lee Rothfarb</tei:persName>
+      <tei:resp>Translation, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-11" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008423">SchenkerW ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture
+        postcard</tei:rs>
+
+      <dc:title>Handwritten picture postcard from Heinrich to Wilhelm Schenker, undated, postmarked
+        October 9, 1928</dc:title>
+
+      <dcterms:created>1928-10-09T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2024-07-14</dcterms:dateSubmitted>
+      <dc:description>Heinrich reports that his blood-sugar level has fallen significantly; he will
+        soon report on the new diet.</dc:description>
+      <dc:subject/>
+      
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000775">Wilhelm Schenker</marcrel:recipient>
+      
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="envelope">
+          <tei:fw type="header" rend="inline">
+            <tei:handShift new="#pr"/><tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
+          <tei:lb/>
+          <tei:note type="editorial" place="inline">small picture: domed church, Art Nouveau rail
+            station, and square, captioned: “Wien – Karlskirche”</tei:note><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:supplied>Absender:</tei:supplied>
+              <tei:handShift new="#HS"/>Schenker</tei:addrLine>
+            <tei:addrLine>Wien, III</tei:addrLine>
+            <tei:addrLine>Keilgasse 8</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied>An:</tei:supplied> H D<tei:hi rend="supralinear">r.</tei:hi>
+              Wilhelm Schenker</tei:addrLine>
+            <tei:addrLine>St. Bernhard</tei:addrLine>
+            <tei:addrLine rend="ident-10">b/Horn</tei:addrLine>
+            <tei:addrLine><tei:hi rend="underline">Nd: Öst.</tei:hi></tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark">|| 3 WIEN 40 | 9 X 28 | * 15–16 * ||</tei:fw><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/><tei:lb/>
+        <tei:add place="inline" rend="indent-50"/><tei:handShift new="#unc"/>Maria Dostler<tei:lb/>
+        <tei:salute><tei:handShift new="#HS"/>Mein lieber <tei:rs type="person" key="entity-000775"
+            >Wilhelm</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Writing of
+            this letter is recorded in Schenker’s diary for October 9, 1928: “An Wilhelm (K.): teile
+            den Stand des Zuckers mit (“To Wilhelm (postcard): I report on the sugar level [in my
+            blood]”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Nach blos 20 Tagen fiel mein Zucker – dank <tei:rs type="person" key="entity-000771"
+          >LieLiechen</tei:rs> – um 1.20, so daß ich blos 0.70 hatte! Seither dürfte er noch mehr
+        zurückgegangen sein.<tei:note xml:id="r0001-fn02" type="editorial" place="foot">This
+          postcard is the promised follow-up to <tei:ref type="correspondence" cRef="OJ-5-38_51">OJ
+            5/38, [51]</tei:ref>, September 22, 1928.</tei:note>
+        <tei:rs type="person" key="entity-000324">Dir. H.</tei:rs> hat mich noch nicht gerufen, ich
+        erwarte täglich die Bestellung, dann folgt die Nachricht über die Diät.</tei:p>
+
+      <tei:closer>
+        <tei:salute>Dir u. der l. Frau <tei:rs type="person" key="entity-008450"
+          >Marie</tei:rs></tei:salute>
+        <tei:salute>von mir u. <tei:rs type="person" key="entity-000771">LieLiechen</tei:rs> beste
+          Grüße</tei:salute>
+        <tei:salute rend="indent-40">Dein </tei:salute>
+        <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000632"
+          >Heinrich</tei:rs></tei:signed>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p><tei:note type="editorial" place="inline">sideways in left margin:</tei:note>
+          <tei:rs type="person" key="entity-000774">Mozio</tei:rs> war schon bei mir. <tei:rs
+            type="person" key="entity-000769">Georg</tei:rs> auch.</tei:p>
+      </tei:postscript>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="envelope">
+          <tei:fw type="header" rend="inline">
+            <tei:handShift new="#pr"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+          <tei:lb/>
+          <tei:note type="editorial" place="inline">small picture: domed church, Art Nouveau rail
+            station, and square, captioned: “Vienna – St. Karl Borromäus Church”</tei:note><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:supplied>From:</tei:supplied>
+              <tei:handShift new="#HS"/>Schenker</tei:addrLine>
+            <tei:addrLine>Keilgasse 8</tei:addrLine>
+            <tei:addrLine>Vienna III</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied>To:</tei:supplied> Dr. Wilhelm Schenker</tei:addrLine>
+            <tei:addrLine>St. Bernhard</tei:addrLine>
+            <tei:addrLine rend="ident-10">near Horn</tei:addrLine>
+            <tei:addrLine><tei:hi rend="underline">Lower Austria</tei:hi></tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark">|| 3 VIENNA 40 | 9 X 28 | * 15–16 * ||</tei:fw><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/><tei:lb/>
+        <tei:add place="inline" rend="indent-50"/><tei:handShift new="#unc"/>Maria Dostler<tei:lb/>
+        <tei:salute><tei:handShift new="#HS"/>My dear <tei:rs type="person" key="entity-000775"
+            >Wilhelm</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>After a mere twenty days, my sugar level fell by 1.20 – thanks to <tei:rs type="person"
+          key="entity-000771">LieLiechen</tei:rs> – so that I was at only 0.70. Since then, it may
+        have dropped even more.<tei:ptr corresp="#r0001-fn02" type="footnote"/>
+        <tei:rs type="person" key="entity-000324">Director Halberstam</tei:rs> has not called me
+        yet, I’m expecting to be summoned any day now. News about the diet will then follow.</tei:p>
+
+      <tei:closer>
+        <tei:salute>To you and your dear wife <tei:rs type="person" key="entity-008450"
+            >Marie</tei:rs></tei:salute>
+        <tei:salute>from me and <tei:rs type="person" key="entity-000771">LieLiechen</tei:rs>, best
+          regards,</tei:salute>
+        <tei:salute rend="indent-40">Your </tei:salute>
+        <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000632"
+          >Heinrich</tei:rs></tei:signed>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p><tei:note type="editorial" place="inline">sideways in left margin:</tei:note>
+          <tei:rs type="person" key="entity-000774">Mozio</tei:rs> was at my place recently. <tei:rs
+            type="person" key="entity-000769">Georg</tei:rs> too.</tei:p>
+      </tei:postscript>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

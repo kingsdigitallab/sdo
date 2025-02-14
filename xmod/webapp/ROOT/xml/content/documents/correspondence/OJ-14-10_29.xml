@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3496" sdoID="OJ-14-10_29">OJ 14/10, [29]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="RW" scope="major">Rosa Weil's hand</tei:handNote>
+      <tei:handNote xml:id="AW" scope="minor">Arnold Weil's hand</tei:handNote>
+      <tei:handNote xml:id="JS" scope="minor">Jeanette Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="unk" scope="minor">unknown hand</tei:handNote>
+      <tei:handNote xml:id="pr" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2024</tei:resp>
+      <tei:resp>Translation, 2024</tei:resp>
+      <tei:resp>XML Encoding, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-11" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008456">WeilR ~
+        JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008458">WeilA ~
+        JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+      <dc:title>Handwritten letter with envelope from Rosa Weil to Jeanette Schenker, dated November
+        27, 1935</dc:title>
+
+      <dcterms:created>1935-11-27T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2024-08-01</dcterms:dateSubmitted>
+      <dc:description>Rosa Weil thanks Jeanette for receiving Lene for an afternoon, and speaks of
+        the great impression the intellectual atmosphere of Jeanette's home made on her, and also
+        for the gift of the [mezzotint of Heinrich]. — She reports the unexpected death of Arnold’s
+        brother.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000944">Rosa Weil</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000943">Arnold Weil</marcrel:correspondent>
+      <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:div type="part_1">
+        <tei:opener>
+          <tei:fw type="envelope">
+            <tei:note type="editorial" place="inline"><tei:hi rend="bold"
+              >envelope</tei:hi></tei:note><tei:lb/>
+            <tei:milestone unit="folio" n="recto"/><tei:lb/>
+            <tei:address>
+              <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied>
+                <tei:handShift new="#RW"/>Frau D<tei:hi rend="supralinear">r.</tei:hi> Heinrich
+                Schenker</tei:addrLine>
+              <tei:addrLine rend="indent-50"><tei:handShift new="#unk"/>Cottagegasse
+                21</tei:addrLine>
+              <tei:addrLine rend="indent-50"><tei:handShift new="#RW"/>Wien <tei:del
+                  rend="overstrike">XIX</tei:del></tei:addrLine>
+              <tei:addrLine rend="indent-50"><tei:handShift new="#RW"/><tei:del rend="overstrike"
+                  >Hasenauerstraße 12.</tei:del></tei:addrLine>
+            </tei:address>
+            <tei:fw type="postmark">|| ÚS[TÍ NAD LABEM 2] | 28. XI. 35 <tei:gap reason="illegible"/>
+              | 3f | * AUSSIG 2 * ||</tei:fw><tei:lb/>
+            <tei:address>
+              <tei:addrLine><tei:handShift new="#JS"/>Antwort</tei:addrLine>
+              <tei:addrLine><tei:date when="1935-11-30">30. XI. 35</tei:date></tei:addrLine>
+            </tei:address>
+            <tei:milestone unit="folio" n="verso"/><tei:lb/>
+            <tei:fw type="header" rend="inline">
+              <tei:handShift new="#pr"/><tei:hi rend="bold underline">R. W.</tei:hi></tei:fw><tei:lb/>
+            <tei:address>
+              <tei:addrLine><tei:supplied>Absender:</tei:supplied>
+                <tei:handShift new="#RW"/>Westphalenová 25.</tei:addrLine>
+              <tei:addrLine rend="indent-20">Ústí n/L</tei:addrLine>
+              <tei:addrLine rend="indent-20">C. S. R.</tei:addrLine>
+            </tei:address>
+          </tei:fw>
+          <tei:note type="editorial" place="inline"><tei:hi rend="bold">letter</tei:hi></tei:note><tei:lb/>
+          <tei:fw type="header" rend="inline">
+            <tei:handShift new="#pr"/><tei:hi rend="bold underline">R. W.</tei:hi></tei:fw><tei:lb/>
+          <tei:dateline><tei:handShift new="#RW"/><tei:rs type="place" key="entity-002248"
+              >Aussig</tei:rs>, <tei:date when="1935-11-27">27. November
+            1935</tei:date>.</tei:dateline><tei:lb/>
+          <tei:salute>Meine liebe <tei:rs type="person" key="entity-000771"
+              >Schwester</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">As the
+              envelope shows, this letter was addressed to Jeanette’s new address as of early
+              October 1935, but this had already to be readdressed, presumably by the current
+              occupants of Hasenauerstraße 12, to Cottagegasse 21. By January 6, 1936, she had moved
+              again, to Vienna I, Reichratsstraße 7 III/19 (<tei:ref type="correspondence"
+                cRef="OJ-11-31_1">OJ 11/31, [1]</tei:ref>, Sophie Guttmann to Jeanette), the address
+              valid through at least February 2, 1938 (<tei:ref type="correspondence"
+                cRef="OJ-14-10_31">OJ 14/10, [31]</tei:ref>).</tei:note></tei:salute>
+        </tei:opener>
+
+        <tei:p rend="first">Ich weiß sehr wohl, daß ich unverzeihlich lange geschwiegen habe und
+          nehme die ganze, große Schuld auf mich; doch schrieb ich Dir ja bereits einmal, daß ich
+          leider noch hie und da mit Depressionen zu tun habe und daß ich in solchen Zeiten
+          überhaupt keine Briefe schreibe, um meine Stimmung nicht auf andere zu übertragen. Der
+          Herbst läßt da viel zu wünschen übrig und der November ist mein schlechtester Monat.
+            <tei:pb n="2"/> Vielleicht kannst Du verstehen und deshalb verzeihen. – </tei:p>
+
+        <tei:p rend="first"><tei:rs type="person" key="entity-005248">Lene</tei:rs> erzählte mir,
+          wie lieb und nett Du sie aufgenommen und bewirtet hast und wie sehr ihr der Nachmittag bei
+          Dir gefallen <tei:add place="interlinear-above">hat</tei:add>; Dein und Deines verewigten
+            <tei:rs type="person" key="entity-000632">Gatten</tei:rs> Lebenswerk hat ihr ganz
+          gewaltig imponiert; — denn nur vor hoher Geistigkeit beugt sie sich bedingungslos; selbst
+          ein seriöser Mensch mit hohen geistigen Bestrebungen und voller Hingebung an ihre geliebte
+          Arbeit. Neulich hörte ich aus dem Munde eines hiesigen, wirklich anerkannten Internisten,
+          bei dem sie im Sommer einen Monat gearbeitet hat, ein Lob, das mich als Mutter stolz und
+          glücklich <tei:pb n="3"/> gemacht hat. Trotzdem bin ich keine verblendete Mutter und sehe
+          auch die Schattenseiten. Sie kam leider recht elend aussehend aus Wien zurück; fünf Kurse
+          außer der täglichen Arbeit an der Klinik, die recht anstrengend und keineswegs
+          gesundheitsfördernd ist. Als gehorsame Mutter will ich sie nicht allzusehr mit Ermahnungen
+          belästigen aber ich hasse und fürchte die Strahlen, mit denen sie jetzt sehr viel zu tun
+          hat. </tei:p>
+
+        <tei:p rend="first">Für das Bild<tei:note xml:id="r0001-fn02" type="editorial" place="foot"
+            >Most likely the mezzotint that <tei:rs type="person" key="entity-000327">Victor
+              Hammer</tei:rs> made of Heinrich in 1925.</tei:note> will ich Dir noch einmal herzlich
+          danken, daß Du gerade diesem meinem Kind geschenkt hast, weiß ich wohl zu schätzen; es hat
+          in meiner schönen Wohnung, in der wir uns (unber<tei:supplied reason="abbreviation"
+            >echenbar</tei:supplied> muß man sagen) so wohl und glücklich fühlen, einen Ehrenplatz
+          bekommen. </tei:p>
+
+        <tei:p><tei:pb n="4"/> Zum Schluß muß ich Dir eine ganz traurige Mitteilung machen. Ing.
+          Emil Weil, der einzige Bruder vom <tei:rs type="person" key="entity-000943"
+            >Arnold</tei:rs> erlag in der Nacht vom <tei:date when="1935-11-12">12.</tei:date> zum
+            <tei:date when="1935-11-13">13. Nov.</tei:date> einem Herzschlag und am <tei:date
+            when="1935-11-15">15. Nov</tei:date>. haben wir ihn in die Erde gebettet. Er stand im
+          64sten Lebensjahre und litt an Verkalkungen, hohem Blutdruck und Kreislaufstörungen; da
+          wollte eben das Herz nichtmehr mit! Trotzdem war er bis 5 Tage vor seinem Tod ein
+          blühender, noch fescher Mann und niemand konnte es fassen. Für <tei:rs type="person"
+            key="entity-000943">Arnold</tei:rs> war das ein harter Schlag und ich habe in diesen
+          Tagen des Schreckens und der Aufregungen sehr um seine Gesundheit gebangt. — Seine Witwe
+          Flora geb. Pachner is<tei:supplied reason="omission">t</tei:supplied> gestern mit ihrer
+          Tochter Anny Pick nach Znaim<tei:note xml:id="r0001-fn03" type="editorial" place="foot"
+            >Znaim: the town of Znojmo in Moravia, 54 km (34 miles) southwest of Brno.</tei:note>
+          gefahren um sich dort in der Nähe ihrer Kinder (sie hat einen 10jährigen Enkelsohn) ein
+          neues Heim zu gründen.</tei:p>
+
+        <tei:p rend="first">Ich hoffe Dich bei voller Gesundheit und bitte Dich, nur recht
+          ausführlich über Dein jetziges Leben zu schreiben.</tei:p>
+
+        <tei:closer>
+          <tei:salute rend="indent-30">Recht innige Grüße</tei:salute>
+          <tei:salute rend="indent-60">von Deiner Schwester</tei:salute>
+          <tei:signed rend="indent-90"><tei:rs type="person" key="entity-000944"
+            >Rosl</tei:rs>.</tei:signed>
+        </tei:closer>
+
+      </tei:div>
+
+      <tei:div type="part_2">
+        <tei:opener/>
+
+        <tei:p/>
+
+        <tei:closer>
+          <tei:salute><tei:note type="editorial" place="inline">top margin, p. 4:</tei:note>
+            <tei:handShift new="#AW"/>Herzliche Grüße</tei:salute>
+          <tei:salute rend="indent-40">Dein</tei:salute>
+          <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000943"
+            >Arnold</tei:rs>.</tei:signed>
+        </tei:closer>
+
+      </tei:div>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:div type="part_1">
+        <tei:opener>
+          <tei:fw type="envelope">
+            <tei:note type="editorial" place="inline"><tei:hi rend="bold"
+              >envelope</tei:hi></tei:note><tei:lb/>
+            <tei:milestone unit="folio" n="recto"/><tei:lb/>
+            <tei:address>
+              <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied>
+                <tei:handShift new="#RW"/>Mrs. Heinrich Schenker</tei:addrLine>
+              <tei:addrLine rend="indent-50"><tei:handShift new="#unk"/>Cottagegasse
+                21</tei:addrLine>
+              <tei:addrLine rend="indent-50"><tei:handShift new="#RW"/>Vienna <tei:del
+                  rend="overstrike">XIX</tei:del></tei:addrLine>
+              <tei:addrLine rend="indent-50"><tei:handShift new="#RW"/><tei:del rend="overstrike"
+                  >Hasenauerstraße 12</tei:del></tei:addrLine>
+            </tei:address>
+            <tei:fw type="postmark">|| ÚS[TÍ NAD LABEM 2] | 28. XI. 35 <tei:gap reason="illegible"/>
+              | 3f | * AUSSIG 2 * ||</tei:fw><tei:lb/>
+            <tei:address>
+              <tei:addrLine><tei:handShift new="#JS"/>Answer<tei:supplied>ed</tei:supplied>
+              </tei:addrLine>
+              <tei:addrLine><tei:date when="1935-11-30">November 30, 1935</tei:date></tei:addrLine>
+            </tei:address>
+            <tei:milestone unit="folio" n="verso"/><tei:lb/>
+            <tei:fw type="header" rend="inline">
+              <tei:handShift new="#pr"/><tei:hi rend="bold underline">R. W.</tei:hi></tei:fw><tei:lb/>
+            <tei:address>
+              <tei:addrLine><tei:supplied>From:</tei:supplied>
+                <tei:handShift new="#RW"/>Westphalenová 25</tei:addrLine>
+              <tei:addrLine rend="indent-20">Ústí nad Labem</tei:addrLine>
+              <tei:addrLine rend="indent-20">Czechoslovakia</tei:addrLine>
+            </tei:address>
+          </tei:fw>
+          <tei:note type="editorial" place="inline"><tei:hi rend="bold">letter</tei:hi></tei:note><tei:lb/>
+          <tei:fw type="header" rend="inline">
+            <tei:handShift new="#pr"/><tei:hi rend="bold underline">R. W.</tei:hi></tei:fw><tei:lb/>
+          <tei:dateline><tei:handShift new="#RW"/><tei:rs type="place" key="entity-002248"
+              >Aussig</tei:rs>, <tei:date when="1935-11-27">November 27,
+            1935</tei:date></tei:dateline><tei:lb/>
+          <tei:salute>My dear <tei:rs type="person" key="entity-000771">sister</tei:rs>!<tei:ptr
+              corresp="#r0001-fn01" type="footnote"/></tei:salute>
+        </tei:opener>
+
+        <tei:p rend="first">I’m conscious of having been silent for an unforgiveable length of time,
+          and I take full blame on myself. But as I’ve written to you previously at least once, I am
+          unfortunately prone to bouts of depression now and again, and that on such occasions I
+          write no letters whatsoever so as not to pass my mood on to others. The Fall leaves much
+          to be desired, and November is my worst month. <tei:pb n="2"/> Perhaps you can understand,
+          and forgive me accordingly. –</tei:p>
+
+        <tei:p rend="first"><tei:rs type="person" key="entity-005248">Lene</tei:rs> told me how kind
+          and gentle you were in welcoming and entertaining her, and how very much pleasure her
+          afternoon at your place afforded her. Your life’s work and that of your immortalized
+            <tei:rs type="person" key="entity-000632">husband</tei:rs> has made a powerful
+          impression upon her. She is drawn unconditionally only to high intellectuality, for she is
+          herself a serious-minded person with high intellectual aspirations and imbued with a
+          single-minded devotion for her beloved work. Recently I heard praise from the mouth of a
+          highly renowned internist here with whom she worked for a month in the summer that made
+          me, as her mother, feel proud and fortunate. <tei:pb n="3"/> Even so, as a mother I am
+          under no illusions; I see also the dark sides. She came back from Vienna looking sadly
+          totally wretched – five courses on top of her daily work at the clinic, which is really
+          strenuous and in no way beneficial to health. As a dutiful mother, I don’t want to pester
+          her with too many warnings, but I hate and fear the X-rays with which she now has very
+          much has to do. </tei:p>
+
+        <tei:p rend="first">I should like to thank you again most heartily for the picture,<tei:ptr
+            corresp="#r0001-fn02" type="footnote"/> and for having bestowed it particularly on this
+          child of mine, which I truly appreciate. It has a place of honor in my lovely house in
+          which we feel ourselves so (incalculably, one must say) fortunate and at ease.</tei:p>
+
+        <tei:p><tei:pb n="4"/> In closing, I have something truly sad that I must tell you. Engineer
+          Emil Weil, the sole brother of <tei:rs type="person" key="entity-000943">Arnold</tei:rs>,
+          suffered a heart attack overnight on <tei:date when="1935-11-13">November
+          12–13</tei:date>, and we laid him to rest on <tei:date when="1935-11-15">November
+            15</tei:date>. He was in his 64th year, and suffered from calcification, high blood
+          pressure, and circulatory disorders. His heart just couldn’t keep going any longer! For
+          all of that, five days before his death he was a blooming, jaunty man, and no one could
+          take the news in. For <tei:rs type="person" key="entity-000943">Arnold</tei:rs> it was a
+          hard blow, and I am very fearful, in these days of shock and commotion, for his health.
+          His widow Flora (<tei:hi rend="italic">née</tei:hi> Pachner) traveled with her daughter
+          Anny Pick to Znaim,<tei:ptr corresp="#r0001-fn03" type="footnote"/> where she will make a
+          home for herself near to her children (she has a 10-year-old grandson).</tei:p>
+
+        <tei:p rend="first">I hope you are in good health, and beg you to write to us in full detail
+          about your present life.</tei:p>
+
+        <tei:closer>
+          <tei:salute rend="indent-30">Fondest greetings</tei:salute>
+          <tei:salute rend="indent-60">from your sister</tei:salute>
+          <tei:signed rend="indent-90"><tei:rs type="person" key="entity-000944"
+            >Rosl</tei:rs></tei:signed>
+        </tei:closer>
+
+      </tei:div>
+
+      <tei:div type="part_2">
+        <tei:opener/>
+
+        <tei:p/>
+
+        <tei:closer>
+          <tei:salute><tei:note type="editorial" place="inline">top margin, p. 4:</tei:note>
+            <tei:handShift new="#AW"/>Cordial greetings,</tei:salute>
+          <tei:salute rend="indent-40">Your</tei:salute>
+          <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000943"
+            >Arnold</tei:rs></tei:signed>
+        </tei:closer>
+
+      </tei:div>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

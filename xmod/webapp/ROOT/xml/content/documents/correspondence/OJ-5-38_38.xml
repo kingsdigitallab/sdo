@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3452" sdoID="OJ-5-38_38">OJ 5/38, [38]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="pr" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="LR">
+      <tei:persName>Lee Rothfarb</tei:persName>
+      <tei:resp>Translation, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-11" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008423">SchenkerW ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture
+        postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Heinrich to Wilhelm Schenker, dated October 5,
+        1927</dc:title>
+
+      <dcterms:created>1927-10-05T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2024-07-11</dcterms:dateSubmitted>
+      <dc:description>Heinrich tell his brother that he has spoken to his locksmith, but a position
+        for Tonerl is not available there at present; he will make further
+        inquiries.</dc:description>
+      <dc:subject/>
+      
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000775">Wilhelm Schenker</marcrel:recipient>
+      
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="envelope">
+          <tei:fw type="header" rend="inline">
+            <tei:handShift new="#pr"/><tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
+          <tei:lb/>
+          <tei:note type="editorial" place="inline">small picture: townscape, captioned: “Innsbruck,
+            Tirol”</tei:note><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:supplied>Absender:</tei:supplied>
+              <tei:handShift new="#HS"/>Schenker</tei:addrLine>
+            <tei:addrLine>Wien, III., Keilgasse 8</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied>An:</tei:supplied> H D<tei:hi rend="supralinear">r.</tei:hi>
+              Wilhelm Schenker</tei:addrLine>
+            <tei:addrLine>St. Bernhard</tei:addrLine>
+            <tei:addrLine rend="ident-10">b/Horn</tei:addrLine>
+            <tei:addrLine>Nd: Öst.</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark">|| 1 <tei:gap reason="illegible"/> 1 | 5 X 27 | 22-23 * | 4e
+            |||</tei:fw><tei:lb/>
+          <tei:note type="editorial" place="inline">For continuation of recto, see
+          below.</tei:note><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:salute><tei:handShift new="#HS"/>Mein lieber <tei:rs type="person" key="entity-000775"
+            >Wilhelm</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Writing of
+            this postcard is not recorded in Schenker’s diary.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Nun haben wir auch unser<tei:supplied reason="syntax">en</tei:supplied> Schlosser
+        erwischt u. befragt. Augenblicklich ist in dieser Schlosserei kein Platz frei, aber er
+        versprach, sich umzutun u. mir vorkommendenfalls sofort Nachricht zu geben. Wir wollen nach
+        Möglichkeit noch weiter fragen. Vielleicht bringt die Besserung der wirtschaftlichen
+        Konjunktur, von der jetzt soviel die Rede ist, eine Gelegenheit auch für den l. <tei:rs
+          type="person" key="entity-003491">Tonerl</tei:rs>.<tei:note xml:id="r0001-fn02"
+          type="editorial" place="foot">For previous discussion of the making of inquiries by
+          Heinrich, in order to secure a job for Tonerl, see <tei:ref type="correspondence"
+            cRef="OJ-5-38_36">OJ 5/38, [36]</tei:ref>, September 18, 1927, and <tei:ref
+            type="correspondence" cRef="OJ-5-38_37">OJ 5/38, [37]</tei:ref>, September 24,
+          1927.</tei:note> –</tei:p>
+
+      <tei:p>Wir sind schon „feste“ bei der Arbeit.</tei:p>
+
+      <tei:p><tei:milestone unit="folio" n="recto"/> Und wie geht es bei Euch? Viele Grüße</tei:p>
+
+      <tei:closer>
+        <tei:salute>dir, der l. Frau <tei:rs type="person" key="entity-008450">Marie</tei:rs>
+        </tei:salute>
+        <tei:salute>u. dem l. <tei:rs type="person" key="entity-003491">Tonerl</tei:rs></tei:salute>
+        <tei:salute rend="indent-10">Die deinen</tei:salute>
+        <tei:signed rend="indent-20"><tei:rs type="person" key="entity-000632">Heinrich</tei:rs> u.
+            <tei:rs type="person" key="entity-000771">LieLie</tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1927-10-05">5. 10. 27</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="envelope">
+          <tei:fw type="header" rend="inline">
+            <tei:handShift new="#pr"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+          <tei:lb/>
+          <tei:note type="editorial" place="inline">small picture: townscape, captioned: “Innsbruck,
+            Tyrol”</tei:note><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:supplied>From:</tei:supplied>
+              <tei:handShift new="#HS"/>Schenker</tei:addrLine>
+            <tei:addrLine> Keilgasse 8, Vienna III</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied>To:</tei:supplied> Dr. Wilhelm Schenker</tei:addrLine>
+            <tei:addrLine>St. Bernhard</tei:addrLine>
+            <tei:addrLine rend="ident-10">near Horn</tei:addrLine>
+            <tei:addrLine>Lower Austria</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark">|| 1 <tei:gap reason="illegible"/> 1 | 5 X 27 | 22-23 * | 4e
+            |||</tei:fw><tei:lb/>
+          <tei:note type="editorial" place="inline">For continuation of recto, see
+          below.</tei:note><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:salute><tei:handShift new="#HS"/>My dear <tei:rs type="person" key="entity-000775"
+            >Wilhelm</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>We now finally got hold of our locksmith and questioned him. At the moment, there is no
+        opening in that locksmith’s shop, but he promised to do some checking and to notify me right
+        away if something comes up. We intend to inquire further as far as possible. Perhaps the
+        improvement in the economy, about which there is currently so much talk, will bring an
+        opportunity for <tei:rs type="person" key="entity-003491">Tonerl</tei:rs>.<tei:ptr
+          corresp="#r0001-fn02" type="footnote"/></tei:p>
+
+      <tei:p>We are already “solidly” at work.</tei:p>
+
+      <tei:p><tei:milestone unit="folio" n="recto"/> And how are things with all of you? Greetings </tei:p>
+
+      <tei:closer>
+        <tei:salute>to you, your dear wife <tei:rs type="person" key="entity-008450">Marie</tei:rs>, </tei:salute>
+        <tei:salute>and to dear <tei:rs type="person" key="entity-003491"
+          >Tonerl</tei:rs></tei:salute>
+        <tei:salute rend="indent-10">Your</tei:salute>
+        <tei:signed rend="indent-20"><tei:rs type="person" key="entity-000632">Heinrich</tei:rs> and
+            <tei:rs type="person" key="entity-000771">LieLie</tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1927-10-05">October 5, 1927</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

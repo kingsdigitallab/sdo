@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3553" sdoID="OJ-5-38_89">OJ 5/38, [89]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="pr" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="LR">
+      <tei:persName>Lee Rothfarb</tei:persName>
+      <tei:resp>Translation, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-11" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008423">SchenkerW ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture
+        postcard</tei:rs>
+
+      <dc:title>Handwritten picture postcard from Heinrich to Wilhelm Schenker, dated June 27,
+        1934</dc:title>
+
+      <dcterms:created>1934-06-27T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2024-11-13</dcterms:dateSubmitted>
+      <dc:description>Heinrich writes a picture postcard to show his elder brother what Böckstein
+        looks like.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000775">Wilhelm Schenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:note type="editorial" place="inline">picture: town in valley with mountain peaks
+          behind, captioned: “Kurort Böckstein 1127m gegen das Anlauftal und Ankogelgruppe 3253m
+          (Salzburg)”</tei:note><tei:lb/>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">Absender:</tei:supplied>
+              <tei:handShift new="#HS"/>D<tei:hi rend="supralinear">r.</tei:hi>
+              Schenker</tei:addrLine>
+            <tei:addrLine><tei:hi rend="underline">Böckstein</tei:hi>,</tei:addrLine>
+            <tei:addrLine>Kurhaus</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied> H D<tei:hi
+                rend="supralinear">r.</tei:hi> Wilhelm Schenker</tei:addrLine>
+            <tei:addrLine rend="ident-10">St. Bernhard b/ Horn</tei:addrLine>
+            <tei:addrLine>Nd: Öst.</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark">|| BÖCKSTEIN | 27.VI.3<tei:gap reason="illegible"/> * a *
+            ||</tei:fw><tei:lb/>
+        </tei:fw>
+        <tei:dateline><tei:date when="1934-06-27">27. 6. 34</tei:date></tei:dateline><tei:lb/>
+        <tei:salute><tei:handShift new="#HS"/>Mein lieber <tei:rs type="person" key="entity-000775"
+            >Wilhelm</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Writing of
+            this postcard is recorded in Schenker’s diary for June 26, 1934: “An Wilhelm
+            (Ansichtsk.): Gruß” (“To Wilhelm (picture postcard):
+          greetings”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Hier unser Plätzchen, wo wir der Erholung nachgehen! Ich vergaß, das Bildchen dem
+        Briefe beizulegen.<tei:note xml:id="r0001-fn02" type="editorial" place="foot">This picture
+          postcard is probably the “little picture” that Schenker mentions on the last page of his
+          letter of June 23 (<tei:ref type="correspondence" cRef="OJ-5-38_88">OJ 5/38,
+            [88]</tei:ref>).</tei:note></tei:p>
+
+      <tei:closer>
+        <tei:salute>Viele Küsse u. Grüße dir u. der l. <tei:rs type="person" key="entity-008450"
+            >Frau Marie</tei:rs></tei:salute>
+        <tei:salute>von mir u. <tei:rs type="person" key="entity-000771"
+          >LieLiechen</tei:rs></tei:salute>
+        <tei:salute rend="indent-70">Dein</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs type="person" key="entity-000632"
+          >Heinrich</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:note type="editorial" place="inline">picture: town in valley with mountain peaks
+          behind, captioned: “Spa town Böckstein 1,127m against the background of the valley and
+          Ankogel Mountain Range 3,253m (Salzburg)”</tei:note><tei:lb/>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">From:</tei:supplied>
+              <tei:handShift new="#HS"/>Dr. Schenker</tei:addrLine>
+            <tei:addrLine><tei:hi rend="underline">Böckstein</tei:hi>,</tei:addrLine>
+            <tei:addrLine>Kurhaus Hotel</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied> Dr. Wilhelm
+              Schenker</tei:addrLine>
+            <tei:addrLine rend="ident-10">St. Bernhard, near Horn</tei:addrLine>
+            <tei:addrLine>Lower Austria</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark">|| BÖCKSTEIN | 27.VI.3<tei:gap reason="illegible"/> * a *
+            ||</tei:fw><tei:lb/>
+        </tei:fw>
+        <tei:dateline><tei:date when="1934-06-27">June 27, 1934</tei:date></tei:dateline><tei:lb/>
+        <tei:salute><tei:handShift new="#HS"/>My dear <tei:rs type="person" key="entity-000775"
+            >Wilhelm</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>Here is our little spot where we are pursuing recuperation! I forgot to enclose the
+        little picture in the letter.<tei:ptr corresp="#r0001-fn02" type="footnote"/></tei:p>
+
+      <tei:closer>
+        <tei:salute>Abundant kisses to you and your <tei:rs type="person" key="entity-008450">wife
+            Marie</tei:rs></tei:salute>
+        <tei:salute>from me and <tei:rs type="person" key="entity-000771"
+          >LieLiechen</tei:rs></tei:salute>
+        <tei:salute rend="indent-70">Your</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs type="person" key="entity-000632"
+          >Heinrich</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

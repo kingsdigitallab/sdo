@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3456" sdoID="OJ-5-38_42">OJ 5/38, [42]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="pr" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="LR">
+      <tei:persName>Lee Rothfarb</tei:persName>
+      <tei:resp>Translation, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-11" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008423">SchenkerW ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture
+        postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Heinrich to Wilhelm Schenker, dated January 27,
+        1928</dc:title>
+
+      <dcterms:created>1928-01-27T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2024-07-12</dcterms:dateSubmitted>
+      <dc:description>Heinrich informs his brother of a radio broadcast by Otto Erich Deutsch about
+        the Photogram Archive, and an essay on the same subject.</dc:description>
+      <dc:subject/>
+      
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000775">Wilhelm Schenker</marcrel:recipient>
+      
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="envelope">
+          <tei:fw type="header" rend="inline">
+            <tei:handShift new="#pr"/><tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
+          <tei:lb/>
+          <tei:note type="editorial" place="inline">small picture: snow-covered peaks, captioned:
+            “Großglockner, Kärnten”</tei:note><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:supplied>Absender:</tei:supplied>
+              <tei:handShift new="#HS"/>Schenker</tei:addrLine>
+            <tei:addrLine>Wien, III</tei:addrLine>
+            <tei:addrLine>Keilgasse 8</tei:addrLine>
+
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied>An:</tei:supplied> H D<tei:hi rend="supralinear">r.</tei:hi>
+              Wilhelm Schenker</tei:addrLine>
+            <tei:addrLine>St. Bernhard</tei:addrLine>
+            <tei:addrLine>b/Horn</tei:addrLine>
+            <tei:addrLine>Nd: Öst.</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark">|| 3/3 WIEN 49 | 27. <tei:gap reason="illegible"/> | * R *
+            ||</tei:fw><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:dateline><tei:handShift new="#HS"/><tei:date when="1928-01-27">27. 1.
+          28</tei:date></tei:dateline><tei:lb/>
+        <tei:salute>Mein lieber <tei:rs type="person" key="entity-000775">Wilhelm</tei:rs>!<tei:note
+            xml:id="r0001-fn01" type="editorial" place="foot">Writing of this postcard is recorded
+            in Schenker’s diary for January 26, 1928: “An Wilhelm (K.): mache ihn auf den Vortrag im
+            Rf. am 4. II. aufmerksam” (“To Wilhelm (postcard): I inform him of the radio broadcast
+            on February 4”). – The diary gives 26th, the postcard itself and postmark give
+            27th.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Am 4. 2 wird im Radio ein Vortrag des H. <tei:rs type="person" key="entity-000164">Otto
+          Erich <tei:hi rend="underline">Deutsch</tei:hi></tei:rs> über unser <tei:rs
+          type="organization" key="entity-002452">Archiv</tei:rs> in der <tei:rs type="organization"
+          key="entity-002686">National-Bibl.</tei:rs> zu hören sein.<tei:note xml:id="r0001-fn02"
+          type="editorial" place="foot"><tei:title level="a">Das Photogrammarchiv musikalischer
+            Meisterhandschriften in der Musiksammlung der Wiener Nationalbibliothek,</tei:title>
+          Austrian radio broadcast on February 4, 1928 at 6:30 p.m.</tei:note> Wenn du die Geduld
+        aufbringst, wirst du gegen das Ende des Vortrags mein Verdienst um die Anregung u.
+        Ausführung preisen hören, freilich in Kürze, wie es sich vor einem sehr großen Publikum
+        scheint, das von <tei:hi rend="underline">diesen Dingen noch nichts weiß</tei:hi>
+        <tei:add place="interlinear-above">u. versteht</tei:add>. In der Radio-Zeitschrift wird
+        außerdem ein Aufsatz vom Dozenten <tei:rs type="person" key="entity-000320">D<tei:hi
+            rend="supralinear">r.</tei:hi> R. Haas</tei:rs> (mit Bildern) ebenfalls derselben Sache
+          gelten.<tei:note xml:id="r0001-fn03" type="editorial" place="foot"
+              ><tei:bibl><tei:author>Robert Haas</tei:author>, <tei:title level="a">Das Archiv für
+              Photogramme musikalischer Meisterhandschriften,</tei:title>
+            <tei:rs type="organization" key="entity-002755"><tei:title level="j"
+                >Radio-Wien</tei:title></tei:rs>, January 30, 1928, p. 659</tei:bibl>.</tei:note>
+        Wie geht es? </tei:p>
+
+      <tei:closer>
+        <tei:salute>Dir u der l. Frau <tei:rs type="person" key="entity-008450"
+          >Marie</tei:rs></tei:salute>
+        <tei:salute>unser Beider beste Grüße</tei:salute>
+        <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000632">Heinrich</tei:rs> u.
+            <tei:rs type="person" key="entity-000771">LieLie</tei:rs></tei:signed><tei:lb/>
+      </tei:closer>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="envelope">
+          <tei:fw type="header" rend="inline">
+            <tei:handShift new="#pr"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+          <tei:lb/>
+          <tei:note type="editorial" place="inline">small picture: snow-covered peaks, captioned:
+            “Großglockner, Carinthia”</tei:note><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:supplied>From:</tei:supplied>
+              <tei:handShift new="#HS"/>Schenker</tei:addrLine>
+            <tei:addrLine>Keilgasse 8</tei:addrLine>
+            <tei:addrLine>Vienna III</tei:addrLine>
+
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied>To:</tei:supplied> Dr. Wilhelm Schenker</tei:addrLine>
+            <tei:addrLine>St. Bernhard</tei:addrLine>
+            <tei:addrLine>near Horn</tei:addrLine>
+            <tei:addrLine>Lower Austria</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark">|| 3/3 VIENNA 49 | 27. <tei:gap reason="illegible"/> | * R *
+            ||</tei:fw><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:dateline><tei:handShift new="#HS"/><tei:date when="1928-01-27">January 27,
+            1928</tei:date></tei:dateline><tei:lb/>
+        <tei:salute>My dear <tei:rs type="person" key="entity-000775">Wilhelm</tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>On February 4, a lecture by <tei:rs type="person" key="entity-000164">Otto Erich
+            <tei:hi rend="underline">Deutsch</tei:hi></tei:rs> will be heard on the radio about our
+          <tei:rs type="organization" key="entity-002452">Archive</tei:rs> in the <tei:rs
+          type="organization" key="entity-002686">National Library</tei:rs>.<tei:ptr
+          corresp="#r0001-fn02" type="footnote"/> If you muster the patience, toward the end of the
+        lecture you will hear my role credited in suggesting and implementing the Archive, of course
+        in brief, as it seems before a very large audience that <tei:hi rend="underline">doesn’t yet
+          know</tei:hi>
+        <tei:add place="interlinear-above">and understand</tei:add>
+        <tei:hi rend="underline">about these things</tei:hi>. Additionally, an essay by university
+        lecturer <tei:rs type="person" key="entity-000320">Dr. R. Haas</tei:rs> in the radio journal
+        (with illustrations) will also be dedicated to the same thing.<tei:ptr corresp="#r0001-fn03"
+          type="footnote"/> How are you? </tei:p>
+
+      <tei:closer>
+        <tei:salute>Best regards</tei:salute>
+        <tei:salute>to you and your dear wife <tei:rs type="person" key="entity-008450"
+            >Marie</tei:rs></tei:salute>
+        <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000632">Heinrich</tei:rs> and
+            <tei:rs type="person" key="entity-000771">LieLie</tei:rs></tei:signed><tei:lb/>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

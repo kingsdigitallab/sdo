@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="3410" sdoID="OJ-5-38_5a">OJ 5/38, [5a]</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+   <tei:handNote xml:id="JS" scope="minor">Jeanette Schenker's hand</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="WMD">
+   <tei:persName>William Drabkin</tei:persName>
+   <tei:resp>Transcription, 2024</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="LR">
+   <tei:persName>Lee Rothfarb</tei:persName>
+   <tei:resp>Translation, 2024</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>XML Encoding, 2024</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="BOT">
+   <tei:name>Automated Script</tei:name>
+   <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2010-03-11" who="#IB">XML code revised</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-008423">SchenkerW ~
+    HSchenker</tei:rs>
+   <tei:rs role="correspondence" type="correspondence" key="entity-008442">SchenkerW ~
+    H+JSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture postcard</tei:rs>
+
+   <dc:title>Handwritten picture postcard from Heinrich &amp; Jeanette to Wilhelm Schenker, dated
+    September 13, [1923]</dc:title>
+
+   <dcterms:created>1923-09-13T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2024-06-10</dcterms:dateSubmitted>
+   <dc:description>Heinrich and Jeanette send Wilhelm greetings from the grave of his
+    mother.</dc:description>
+   <dc:subject/>
+
+   <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+   <marcrel:correspondent key="entity-000771">JSchenker</marcrel:correspondent>
+   <marcrel:recipient key="entity-000775">Wilhelm Schenker</marcrel:recipient>
+  </sdo:itemDesc>
+
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="verso"/>
+    <tei:note type="editorial" place="inline">picture: town beside river, captioned: Waidhofen a. d.
+     Thaya</tei:note><tei:lb/>
+    <tei:milestone unit="folio" n="recto"/>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:addrLine><tei:handShift new="#HS"/>Abs: D<tei:hi rend="supralinear">r.</tei:hi> H.
+       Schenker</tei:addrLine>
+      <tei:addrLine rend="ident-10">Wien, III,</tei:addrLine>
+      <tei:addrLine rend="ident-10">Keilgasse 8</tei:addrLine>
+     </tei:address>
+     <tei:address>
+      <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied> D<tei:hi rend="supralinear"
+        >r.</tei:hi> Wilhelm Schenker</tei:addrLine>
+      <tei:addrLine rend="ident-10">in</tei:addrLine>
+      <tei:addrLine rend="ident-10">St. Bernhard b/ Horn</tei:addrLine>
+      <tei:addrLine>Nd: Öst.</tei:addrLine>
+     </tei:address>
+     <tei:fw type="postmark">|| WAIDHOFEN a. d. THAYA | <tei:gap reason="illegible"/>
+     ||</tei:fw><tei:lb/>
+    </tei:fw>
+    <tei:salute><tei:handShift new="#HS"/>Lieber <tei:rs type="person" key="entity-000775"
+      >Wilhelm</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Schenker’s diary
+      entry for September 13, 1923, records a visit to his mother’s grave, and the writing of
+      postcards to Wilhelm, his sister Sophie, and his younger brother Moriz. He received a postcard
+      from Wilhelm six days later, thanking him for sending greetings from
+     Waidhofen.</tei:note></tei:salute>
+   </tei:opener>
+
+   <tei:p>Sei uns herzlich gegrüßt von <tei:rs type="place" key="entity-002323">Waidhofen</tei:rs>
+    aus, wo wir das Grab der <tei:rs type="person" key="entity-000773">Mutter</tei:rs> besucht
+    haben! Zu dir müssen wir den Weg eigens machen, denn von hier ist die Verbindung <tei:hi
+     rend="underline">unmöglich</tei:hi>.</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-50">Dein</tei:salute>
+    <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000632"
+     >Heinrich</tei:rs></tei:signed><tei:lb/>
+    <tei:salute><tei:handShift new="#JS"/>Schöne Grüße</tei:salute>
+    <tei:signed><tei:handShift new="#JS"/>von <tei:rs type="person" key="entity-000771"
+      >Lie-Lie</tei:rs></tei:signed><tei:lb/>
+    <tei:dateline><tei:handShift new="#HS"/><tei:date when="1923-09-13"><tei:hi rend="underline">13.
+       IX.</tei:hi></tei:date></tei:dateline>
+   </tei:closer>
+
+  </tei:div>
+
+
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="verso"/>
+    <tei:note type="editorial" place="inline">picture: town beside river, captioned: Waidhofen on
+     the Thaya</tei:note><tei:lb/>
+    <tei:milestone unit="folio" n="recto"/>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:addrLine><tei:handShift new="#HS"/>From: Dr. H. Schenker</tei:addrLine>
+      <tei:addrLine rend="ident-10">Keilgasse 8</tei:addrLine>
+      <tei:addrLine rend="ident-10">Vienna III</tei:addrLine>
+     </tei:address>
+     <tei:address>
+      <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied> Dr. Wilhelm
+       Schenker</tei:addrLine>
+      <tei:addrLine rend="ident-10">in</tei:addrLine>
+      <tei:addrLine rend="ident-10">St. Bernhard, near Horn</tei:addrLine>
+      <tei:addrLine>Lower Austria</tei:addrLine>
+     </tei:address>
+     <tei:fw type="postmark">|| WAIDHOFEN a. d. THAYA | <tei:gap reason="illegible"/>
+     ||</tei:fw><tei:lb/>
+    </tei:fw>
+    <tei:salute><tei:handShift new="#HS"/>Dear <tei:rs type="person" key="entity-000775"
+      >Wilhelm</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+   </tei:opener>
+
+   <tei:p>Cordial greetings from <tei:rs type="place" key="entity-002323">Waidhofen</tei:rs>, where
+    we visited <tei:rs type="person" key="entity-000773">Mother</tei:rs>’s grave! We have to make a
+    special trip to you, since the connection from here is impossible.</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-50">Your</tei:salute>
+    <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000632"
+     >Heinrich</tei:rs></tei:signed><tei:lb/>
+    <tei:salute><tei:handShift new="#JS"/>Warm greetings</tei:salute>
+    <tei:signed><tei:handShift new="#JS"/>from <tei:rs type="person" key="entity-000771"
+      >Lie-Lie</tei:rs></tei:signed><tei:lb/>
+    <tei:dateline><tei:handShift new="#HS"/><tei:date when="1923-09-13"><tei:hi rend="underline"
+       >September 13</tei:hi></tei:date></tei:dateline>
+   </tei:closer>
+
+  </tei:div>
+
+ </sdo:record>
+</sdo:recordCollection>

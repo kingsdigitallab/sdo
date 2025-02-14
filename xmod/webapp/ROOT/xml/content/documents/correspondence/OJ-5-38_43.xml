@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3457" sdoID="OJ-5-38_43">OJ 5/38, [43]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="pr" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="LR">
+      <tei:persName>Lee Rothfarb</tei:persName>
+      <tei:resp>Translation, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-11" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008423">SchenkerW ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture
+        postcard</tei:rs>
+
+      <dc:title>Handwritten picture postcard from Heinrich to Wilhelm Schenker, dated and postmarked
+        March 28, 1928</dc:title>
+
+      <dcterms:created>1928-03-28T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2024-07-12</dcterms:dateSubmitted>
+      <dc:description>Heinrich incloses copies of two journal articles about him which have appeared
+        in the past two months.</dc:description>
+      <dc:subject/>
+      
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000775">Wilhelm Schenker</marcrel:recipient>
+      
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="envelope">
+          <tei:fw type="header" rend="inline">
+            <tei:handShift new="#pr"/><tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
+          <tei:lb/>
+          <tei:note type="editorial" place="inline">small picture: monastery overlooking river,
+            captioned: “Melk, Niederösterr.”</tei:note><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:supplied>Absender:</tei:supplied>
+              <tei:handShift new="#HS"/>Schenker</tei:addrLine>
+            <tei:addrLine>Wien, III, Keilgasse 8</tei:addrLine>
+
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied>An:</tei:supplied> H D<tei:hi rend="supralinear">r.</tei:hi>
+              Wilhelm Schenker</tei:addrLine>
+            <tei:addrLine>St. Bernhard</tei:addrLine>
+            <tei:addrLine rend="indent-10">bei Horn</tei:addrLine>
+            <tei:addrLine>Nd: Öst.</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark">|| 10 WIEN 77 | 28. III. 28 11 | * <tei:gap reason="illegible"/> *
+            ||</tei:fw><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:salute><tei:handShift new="#HS"/>Mein lieber <tei:rs type="person" key="entity-000775"
+            >Wilhelm</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Writing of
+            this and other postcards is recorded in Schenker’s diary for March 28, 1928: “an Sophie
+            u. Wilhelm auch Karte zur Erklärung der Sendung” (“to Sophie and Wilhelm, postcards,
+            too, to explain the materials sent”). — The one paragraph-break is
+          editorial.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Gleichzeitig sende ich Dir per Kreuzband 2 verschiedene Aufsätze aus allerjüngster
+        Zeit, die in <tei:rs type="place" key="entity-002501">Berlin</tei:rs> erschienen sind u.
+        eine Würdigung meiner Arbeiten bringen („Das Meisterwerk in der Musik“,<tei:note
+          xml:id="r0001-fn02" type="editorial" place="foot">Probably <tei:bibl><tei:author>Walter
+              Dahms</tei:author>’s review of the <tei:rs type="work" key="entity-001751">second
+                <tei:title level="j">Meisterwerk</tei:title> yearbook</tei:rs> in the <tei:rs
+              type="journal" key="entity-005670"><tei:title level="j">Allgemeine
+                Musik-Zeitung</tei:title></tei:rs>, February 3, 1928</tei:bibl>, a clipping of which
+          is preserved on page 75 of the Schenker Scrapbook (OC 2).</tei:note> „Heinrich
+          Schenker“<tei:note xml:id="r0001-fn03" type="editorial" place="foot">Probably
+          Vrieslander’s profile of Schenker, published in the March 5, 1928 issue of the <tei:title
+            level="j">Deutsche Tonkünstler-Zeitung</tei:title>, a copy of which is preserved on page
+          76 of the Schenker Scrapbook (OC 2). </tei:note>). Wenn du das überschlägst, was technisch
+        ist, wirst du genug finden, was Dir verständlich sein wird. Beide Aufsätze bringen zum
+        Ausdruck, daß ich der erste Musiker der letzten 50 Jahre bin, (wie sich <tei:rs
+          type="person" key="entity-000922">Vriesl.</tei:rs> an anderer Stelle ausgedrückt hat).
+        Kurz, wie die Wiener sagen, höher geht es nimmer. Aber ein solches Buch trug <tei:unclear
+          reason="reading">mir</tei:unclear> bisher 400 S. ein – den Rest muß ich durch Stunden
+        suchen. Es war nie anders, es wird nicht anders. – </tei:p>
+
+      <tei:p>Wie geht es <tei:milestone unit="folio" n="recto"/> Dir?? Wann kommst Du nach Wien? Was
+        macht die l. Frau <tei:rs type="person" key="entity-008450">Marie</tei:rs>? Ich habe schon
+        lange keine Analyse machen lassen, keine Zeit! Bis ich was weiß, schreibe ich. Laßt was
+        hören. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">Von uns Beiden viele Grüße u. Küsse</tei:salute>
+        <tei:salute rend="indent-70">Dein</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000632"
+          >Heinrich</tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1928-03-28">28. 3</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="envelope">
+          <tei:fw type="header" rend="inline">
+            <tei:handShift new="#pr"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+          <tei:lb/>
+          <tei:note type="editorial" place="inline">small picture: monastery overlooking river,
+            captioned: “Melk, Lower Austria”</tei:note><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:supplied>From:</tei:supplied>
+              <tei:handShift new="#HS"/>Schenker</tei:addrLine>
+            <tei:addrLine>Keilgasse 8, Wien III</tei:addrLine>
+
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied>To:</tei:supplied> Dr. Wilhelm Schenker</tei:addrLine>
+            <tei:addrLine>St. Bernhard</tei:addrLine>
+            <tei:addrLine rend="indent-10">near Horn</tei:addrLine>
+            <tei:addrLine>Lower Austria</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark">|| 10 VIENNA 77 | 28. III. 28 11 | * <tei:gap reason="illegible"/>
+            * ||</tei:fw><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:salute><tei:handShift new="#HS"/>My dear <tei:rs type="person" key="entity-000775"
+            >Wilhelm</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>I am simultaneously sending you as printed papers two different, most recent essays,
+        which appeared in <tei:rs type="place" key="entity-002501">Berlin</tei:rs> and include
+        recognition of my works (“The Masterwork in Music”,<tei:ptr corresp="#r0001-fn02"
+          type="footnote"/> “Heinrich Schenker”<tei:ptr corresp="#r0001-fn03" type="footnote"/>). If
+        you skip the technical material, you will find enough that will be understandable to you.
+        Both essays highlight that I am the premier musician of the last fifty years (as <tei:rs
+          type="person" key="entity-000922">Vrieslander</tei:rs> has expressed elsewhere). In short,
+        as the Viennese say, it doesn’t get any higher. However, to date such a book has brought
+          <tei:unclear reason="original_unclear">me</tei:unclear> 400 shillings – I have to drum up
+        the rest through lessons. It was never any different, it will never be different. –</tei:p>
+
+      <tei:p>How are <tei:milestone unit="folio" n="recto"/> you?? When are you coming to Vienna?
+        What is going on with your dear wife, <tei:rs type="person" key="entity-008450"
+          >Marie</tei:rs>? I have long since not had any blood tests done, no time! I’ll write when
+        I know something. Let us hear from you. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">Greetings and kisses from us both</tei:salute>
+        <tei:salute rend="indent-70">Your</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000632"
+          >Heinrich</tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1928-03-28">March 28</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

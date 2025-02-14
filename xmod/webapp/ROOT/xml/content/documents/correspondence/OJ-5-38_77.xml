@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3538" sdoID="OJ-5-38_77">OJ 5/38, [77]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="pr" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="LR">
+      <tei:persName>Lee Rothfarb</tei:persName>
+      <tei:resp>Translation, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-11" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008423">SchenkerW ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture
+        postcard</tei:rs>
+
+      <dc:title>Handwritten picture postcard from Heinrich to Wilhelm Schenker, dated September 21,
+        1931</dc:title>
+
+      <dcterms:created>1931-09-21T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2024-10-13</dcterms:dateSubmitted>
+      <dc:description>Heinrich, with Jeanette's guidance, advises Wilhelm on the preserving of
+        cranberries.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000775">Wilhelm Schenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="envelope">
+          <tei:fw type="header" rend="inline">
+            <tei:handShift new="#pr"/><tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
+          <tei:lb/>
+          <tei:note type="editorial" place="inline">small picture: roofscape with mountains,
+            captioned: “Lofer – Salzburg”</tei:note><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:supplied>Absender:</tei:supplied>
+              <tei:handShift new="#HS"/>Schenker Wien</tei:addrLine>
+            <tei:addrLine>III, Keilgasse 8</tei:addrLine>
+
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied>An:</tei:supplied> H D<tei:hi rend="supralinear">r.</tei:hi>
+              Wilhelm Schenker</tei:addrLine>
+            <tei:addrLine>St. Bernhard bei Horn</tei:addrLine>
+            <tei:addrLine>Nd: Öst.</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark">|| 3 WIEN 40 | 21.IX.31 10 | * 4f * ||</tei:fw><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:dateline><tei:handShift new="#HS"/><tei:date when="1931-09-21">21. 9.
+          31</tei:date></tei:dateline>
+        <tei:salute>Mein lieber <tei:rs type="person" key="entity-000775">Wilhelm</tei:rs>!<tei:note
+            xml:id="r0001-fn01" type="editorial" place="foot">Writing of this postcard is recorded
+            in Schenker’s diary for the previous day, September 20, 1931: “An Wilhelm (K.): über
+            Preißelbeeren” (“To Wilhelm (postcard): concerning
+          cranberries”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>„Bevor die Einsiedezeit vorüber ist, mache ich dich aufmerksam, daß mein <tei:rs
+          type="person" key="entity-000771">LieLiechen</tei:rs> für mich in jedem September <tei:hi
+          rend="underline">5 Kg Preiselbeeren</tei:hi> einkocht u. zw. <tei:hi rend="underline">ohne
+          jeden Zusatz von Zucker</tei:hi> oder Konservierungsmittel. Erst im Bedarfsfall werden die
+        Beeren mit etwas Rotwein oder Wasser ganz kurz aufgekocht u. nach Geschmack mit Saccharin
+        gesüßt. Sie tue mir als Kompott oder als Fülle in eine Naturomelette <tei:hi
+          rend="underline">ausgezeichnete</tei:hi>
+        <tei:hi rend="underline">Dienste</tei:hi>.“ </tei:p>
+
+      <tei:p>Soweit <tei:milestone unit="folio" n="recto"/> meines Lie Liechens Diktat. In meiner
+        eigenen Sprache: mach’ das Rezept u. <tei:add place="interlinear-above">da</tei:add> wirst
+        Du ungeahnte Wonne genießen: Obstgeschmack erfrischendster Art obendrein vollständig
+        unbeschädlich. </tei:p>
+
+      <tei:closer>
+        <tei:salute>Viele Grüße von Euch Beiden</tei:salute>
+        <tei:salute rend="indent-70">Dein</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000632"
+          >Heinrich</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="envelope">
+          <tei:fw type="header" rend="inline">
+            <tei:handShift new="#pr"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+          <tei:lb/>
+          <tei:note type="editorial" place="inline">small picture: roofscape with mountains,
+            captioned: “Lofer – Salzburg”</tei:note><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:supplied>From:</tei:supplied>
+              <tei:handShift new="#HS"/>Schenker</tei:addrLine>
+            <tei:addrLine>Vienna III, Keilgasse 8</tei:addrLine>
+
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied>To:</tei:supplied> Dr. Wilhelm Schenker</tei:addrLine>
+            <tei:addrLine>St. Bernhard near Horn</tei:addrLine>
+            <tei:addrLine>Lower Austria</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark">|| 3 VIENNA 40 | 21.IX.31 10 | * 4f * ||</tei:fw><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:dateline><tei:handShift new="#HS"/><tei:date when="1931-09-21">September 21,
+            1931</tei:date></tei:dateline>
+        <tei:salute>My dear <tei:rs type="person" key="entity-000775">Wilhelm</tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>“Before the preserving season has passed, I am alerting you that my <tei:rs
+          type="person" key="entity-000771">LieLiechen</tei:rs> cooks up <tei:hi rend="underline">5
+          kilograms of cranberries</tei:hi> for me every September, indeed <tei:hi rend="underline"
+          >without any addition of sugar</tei:hi> or preservatives. Only if needed are the berries
+        very briefly boiled with some red wine or water, and sweetened to taste with saccharine. As
+        compote or as addition to a natural omelette, <tei:hi rend="underline">it serves
+          superbly</tei:hi> for me.”</tei:p>
+
+      <tei:p>Thus far <tei:milestone unit="folio" n="recto"/> dictation from my LieLiechen. In my
+        own language: make the recipe and <tei:add place="interlinear-above">there</tei:add> you
+        will enjoy unimagined delight: fruit flavor of the most refreshing kind, and on top of that
+        wholly without harm.</tei:p>
+
+      <tei:closer>
+        <tei:salute>Abundant kisses and greetings from us both</tei:salute>
+        <tei:salute rend="indent-70">Your</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000632"
+          >Heinrich</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

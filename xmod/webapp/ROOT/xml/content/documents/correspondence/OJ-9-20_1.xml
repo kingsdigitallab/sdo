@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="3299" sdoID="OJ-9-20_1">OJ 9/20, [1]</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="BHstenDP" scope="major">B&amp;H stenographer "D.P."</tei:handNote>
+   <tei:handNote xml:id="BH" scope="minor">B&amp;H signatory's hand</tei:handNote>
+   <tei:handNote xml:id="print" scope="minor">printed</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="CH">
+   <tei:persName>Kaleb Koslowski</tei:persName>
+   <tei:resp>Transcription, 2023</tei:resp>
+   <tei:resp>Translation, 2023</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>XML Encoding, 2023</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2010-06-26" who="#IB">XML code revised</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-005545">Breitkopf&amp;Härtel ~
+    HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+   <dc:title>Handwritten letter from Breitkopf &amp; Härtel to Schenker, dated February 20,
+    1894</dc:title>
+
+   <dcterms:created>1894-02-20T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2023-10-04</dcterms:dateSubmitted>
+   <dc:description>At Eugen d'Albert's request, Breitkopf &amp; Härtel are sending copies of two of
+    his compositions for Schenker to review.</dc:description>
+   <dc:subject/>
+
+
+
+   <marcrel:correspondent key="entity-002890">Breitkopf &amp; Härtel</marcrel:correspondent>
+   <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+  </sdo:itemDesc>
+
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:address>
+     <tei:addrLine><tei:handShift new="#print"/>BREITKOPF &amp; HÄRTEL</tei:addrLine>
+     <tei:addrLine><tei:rs type="place" key="entity-002479">Leipzig</tei:rs>, den <tei:date
+       when="1894-02-20"><tei:handShift new="#BHstenDP"/>20. Februar <tei:handShift new="#print"
+        />18<tei:handShift new="#BHstenDP"/>94</tei:date>.</tei:addrLine>
+     <tei:addrLine><tei:handShift new="#print"/>Nürnbergerstr. 36, 38</tei:addrLine>
+    </tei:address>
+    <tei:byline><tei:handShift new="#BHstenDP"/>D.P.</tei:byline><tei:lb/>
+    <tei:salute><tei:handShift new="#BHstenDP"/>Sehr geehrter <tei:rs type="person"
+      key="entity-000632">Herr</tei:rs>,</tei:salute>
+   </tei:opener>
+
+   <tei:p rend="first">Soeben schreibt uns Herr <tei:rs type="person" key="entity-000150"><tei:hi
+      rend="lateinschr">d’Albert</tei:hi></tei:rs>, daß Sie den Klavierauszug seines
+     „<tei:title>Rubin</tei:title>‟ und die Partitur seines Op. 14 „<tei:title>Der Mensch und das
+     Leben</tei:title>‟ einzusehen wünschten. Daraufhin beeilen wir uns Ihnen diese Werke leihweise
+    zu übersenden.<tei:note xml:id="r0001-fn01" type="editorial" place="foot">For d’Albert’s
+     authorization, see <tei:ref type="correspondence" cRef="OJ-9-6_1">OJ 9/6, [1]</tei:ref>,
+     February 19, 1894, d’Albert to Schenker. — Schenker discusses d’Albert on two occasions in
+     1894: <tei:bibl><tei:title level="a">Anton Rubinstein,</tei:title>
+      <tei:title level="j">Neue Revue</tei:title> v/18 (April 18, 1894), 566–67</tei:bibl>;
+       <tei:bibl><tei:title level="a">Eine Lebensskizze–Eugen d’Albert,</tei:title>
+      <tei:title level="j">Die Zukunft</tei:title> 9 (October 1894), 31–36</tei:bibl>;
+       (<tei:bibl><tei:editor>H. Federhofer</tei:editor>, <tei:title level="m">Heinrich Schenker:
+       Essayist und Kritiker</tei:title>, pp. 84, 115–21</tei:bibl>); in the latter article, he
+     discusses <tei:title level="m">Rubin</tei:title> briefly.</tei:note></tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-40">Hochachtungsvoll und ergebenst</tei:salute>
+    <tei:signed rend="indent-45">
+     <tei:handShift new="#BH"/>Breitkopf u Härtel</tei:signed><tei:lb/>
+    <tei:address>
+     <tei:addrLine><tei:handShift new="#BHstenDP"/>Herrn <tei:hi rend="lateinschr">Heinrich
+       Schenker</tei:hi></tei:addrLine>
+     <tei:addrLine><tei:hi rend="lateinschr">Wien</tei:hi> III, Traungasse 1.</tei:addrLine>
+    </tei:address>
+   </tei:closer>
+
+  </tei:div>
+
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:address>
+     <tei:addrLine><tei:handShift new="#print"/>BREITKOPF &amp; HÄRTEL</tei:addrLine>
+     <tei:addrLine><tei:rs type="place" key="entity-002479">Leipzig</tei:rs>, <tei:date
+       when="1894-02-20"><tei:handShift new="#BHstenDP"/>February 20, <tei:handShift new="#print"
+        />18<tei:handShift new="#BHstenDP"/>94</tei:date></tei:addrLine>
+     <tei:addrLine><tei:handShift new="#print"/>Nürnbergerstraße 36, 38</tei:addrLine>
+    </tei:address><tei:lb/>
+    <tei:byline><tei:handShift new="#BHstenDP"/>D.P.</tei:byline><tei:lb/>
+    <tei:salute><tei:handShift new="#BHstenDP"/>Dear <tei:rs type="person" key="entity-000632"
+      >Sir</tei:rs>,</tei:salute>
+   </tei:opener>
+
+   <tei:p>Mr. <tei:rs type="person" key="entity-000150">d’Albert</tei:rs> has recently written to us
+    that you would like to review the piano reduction of his <tei:title level="m">Rubin</tei:title>
+    and the <tei:supplied reason="clarity">full</tei:supplied> score of his Op. 14, <tei:title
+     level="m">Der Mensch und das Leben</tei:title>. We shall hasten to send these works to you on
+     loan.<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-40">Respectfully and most devotedly,</tei:salute>
+    <tei:signed rend="indent-45">
+     <tei:handShift new="#BH"/>Breitkopf &amp; Härtel</tei:signed><tei:lb/>
+    <tei:address>
+     <tei:addrLine><tei:handShift new="#BHstenDP"/>Mr. Heinrich Schenker</tei:addrLine>
+     <tei:addrLine>Vienna III, Traungasse 1</tei:addrLine>
+    </tei:address>
+   </tei:closer>
+
+
+  </tei:div>
+ </sdo:record>
+</sdo:recordCollection>

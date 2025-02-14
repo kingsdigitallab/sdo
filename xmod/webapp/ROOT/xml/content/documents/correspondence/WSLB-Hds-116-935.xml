@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3269" sdoID="WSLB-Hds-119-935">WSLB-Hds 116.935</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamped</tei:handNote>
+    </tei:handNotes>
+
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-19" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Schenker to Deutsch, dated May 7, 1933</dc:title>
+
+      <dcterms:created>1933-05-07T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-08-24</dcterms:dateSubmitted>
+      <dc:description>Schenker is sending Deutsch an article and catalog. -- He answers a question
+        about the Finale of the "Eroica" symphony.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000164">DeutschOE</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline">
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:note type="editorial" place="inline">In top margin, four illegible words in unknown
+            hand</tei:note><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#printed"/>Absender:<tei:handShift new="#stamp"/>Dr.
+              HEINRICH SCHENKER</tei:addrLine>
+            <tei:addrLine>WIEN, III, Keilgasse 8</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied>
+              <tei:handShift new="#HS"/>H Prof. <tei:hi rend="lateinschr">O. E.
+              Deutsch</tei:hi></tei:addrLine>
+            <tei:addrLine>Wien II</tei:addrLine>
+            <tei:addrLine rend="indent-20">Böcklinstr. 26</tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:lb/>
+        <tei:salute><tei:handShift new="#HS"/>Mein lieber Prof. <tei:rs type="person"
+            key="entity-000164">Deutsch</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial"
+            place="foot">Writing of this postcard is recorded in Schenker’s diary for May 7, 1933:
+            “An Deutsch als Drucksache den Aufsatz von Prof. Köhler u. den Fock-Katalog – dann (K.):
+            die Stelle in der Eroica!” (“To Deutsch, the article by Prof. Köhler as printed papers,
+            and the Fock catalog – then (postcard): the passage in the "Eroica"!”). — Before “Wegen”
+            (“Regarding”), Schenker inserts a hyphen then embarks on a new topic; at this point, a
+            paragraph-break has been inserted editorially.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Als Drucksache gehen Ihnen zu: „Köhler“ u. „Katalog“. Irrtümlich habe ich „Schikaneder“
+        für „Schindler“ gelesen, dennoch lege ich den Katalog bei, vielleicht können Sie ihn
+        brauchen.</tei:p>
+
+      <tei:p>Wegen der Stelle in der „<tei:rs type="composition" key="entity-001263"
+            ><tei:title>Eroica</tei:title></tei:rs>“ schlagen Sie im <tei:rs type="work"
+          key="entity-001752">Jb. III (Eroica)</tei:rs> S. 98<tei:note xml:id="r0001-fn02"
+          type="editorial" place="foot"><tei:bibl>Engl. transl. <tei:editor>Alfred
+              Clayton</tei:editor> and <tei:editor>Derrick Puffett</tei:editor> (Cambridge:
+            Cambridge University Press, 1997; New York, Dover Publications, 2014)</tei:bibl>, p.
+          66.</tei:note> unter „Finale“ Z. 2–3 nach, dort finden Sie die Auskunft: die ganze
+        Taktgruppe T. 12–43, steht, bis auf die T. 36 u. 38, im Zeichen des <tei:hi rend="italic"
+          >pizz</tei:hi>! (Also <tei:add place="interlinear-above">ist</tei:add> nichts sonst mit
+        dem <tei:hi rend="italic">arco</tei:hi>.) </tei:p>
+
+      <tei:closer>
+        <tei:salute>Besten Gruß</tei:salute>
+        <tei:salute rend="indent-80">Ihr</tei:salute>
+        <tei:signed rend="indent-50">
+          <tei:rs key="entity-000632" type="person"><tei:hi rend="lateinschr">H
+            Schenker</tei:hi></tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1933-05-07">7. V. 33</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline">
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:note type="editorial" place="inline">In top margin, four illegible words in unknown
+            hand</tei:note><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#printed"/>From:<tei:handShift new="#stamp"/>Dr.
+              HEINRICH SCHENKER</tei:addrLine>
+            <tei:addrLine>VIENNA III, Keilgasse 8</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied>
+              <tei:handShift new="#HS"/>Prof. O. E. Deutsch</tei:addrLine>
+            <tei:addrLine>Vienna II</tei:addrLine>
+            <tei:addrLine rend="indent-20">Böcklinstraße 26</tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:lb/>
+        <tei:salute><tei:handShift new="#HS"/>My dear Prof. <tei:rs type="person"
+            key="entity-000164">Deutsch</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"
+          /></tei:salute>
+      </tei:opener>
+
+      <tei:p>The Köhler <tei:supplied reason="clarity">article</tei:supplied> and catalog are on
+        their way to you as printed matter. In error, I read “Schikaneder” for “Schindler,”
+        nevertheless I enclose the catalogue; perhaps you may have use for it. – Regarding the
+        passage in the “<tei:rs type="composition" key="entity-001263"
+          ><tei:title>Eroica</tei:title></tei:rs>,” look up in <tei:rs type="work"
+          key="entity-001752">Yearbook III (Eroica)</tei:rs>, p. 98<tei:ptr corresp="#r0001-fn02"
+          type="footnote"/> under “Finale” lines 2 and 3. There you will find the information: the
+        whole group bars 12–43 is, except for bars 36 and 38, marked <tei:hi rend="italic"
+          >pizzicato</tei:hi>! (Thus nothing further <tei:add place="interlinear-above">is</tei:add>
+        marked <tei:hi rend="italic">arco</tei:hi>.)</tei:p>
+
+      <tei:closer>
+        <tei:salute>Best greetings</tei:salute>
+        <tei:salute rend="indent-80">Your</tei:salute>
+        <tei:signed rend="indent-50">
+          <tei:rs key="entity-000632" type="person">H. Schenker</tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1933-05-07">May 7, 1933</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

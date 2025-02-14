@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3502" sdoID="OJ-14-10_35">OJ 14/10, [35]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="RW" scope="major">Rosa Weil's hand</tei:handNote>
+      <tei:handNote xml:id="AW" scope="major">Arnold Weil's hand</tei:handNote>
+    </tei:handNotes>
+
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2024</tei:resp>
+      <tei:resp>Translation, 2024</tei:resp>
+      <tei:resp>XML Encoding, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-11" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008456">WeilR ~
+        JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008458">WeilA ~
+        JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture
+        postcard</tei:rs>
+
+      <dc:title>Handwritten picture postcard from Arnold &amp; Rosa Weil to Jeanette Schenker, dated
+        November 27, 1938</dc:title>
+
+      <dcterms:created>1938-11-27T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2024-08-02</dcterms:dateSubmitted>
+      <dc:description>Rosa and Arnold send greetings from Kutná Hora.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000944">Rosa Weil</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000943">Arnold Weil</marcrel:correspondent>
+      <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:div type="part_1">
+        <tei:opener>
+          <tei:milestone unit="folio" n="verso"/>
+          <tei:note type="editorial" place="inline">photograph: Gothic building, captioned: “Kutná
+            Hora s. / Nádvoří Vladislavské”</tei:note><tei:lb/>
+          <tei:milestone unit="folio" n="recto"/><tei:lb/>
+          <tei:fw type="envelope">
+            <tei:address>
+              <tei:addrLine><tei:handShift new="#AW"/>Kutná Hora,</tei:addrLine>
+              <tei:addrLine>Předm. Žižkov 159</tei:addrLine>
+              <tei:addrLine rend="indent-50"><tei:date when="1938-11-27">27./ 11.
+                1938</tei:date></tei:addrLine>
+            </tei:address><tei:lb/>
+            <tei:address>
+              <tei:addrLine><tei:supplied>An:</tei:supplied> Wohlgeboren Frau D<tei:hi
+                  rend="supralinear">r.</tei:hi> Heinrich Schenker</tei:addrLine>
+              <tei:addrLine><tei:hi rend="underline">Wien IV</tei:hi></tei:addrLine>
+              <tei:addrLine>Schwindgasse 4/2</tei:addrLine>
+            </tei:address>
+            <tei:fw type="postmark">|| KUTNÁ [HORA] | 28. XI. 38 <tei:gap reason="illegible"/> | f |
+              * * * |||</tei:fw><tei:lb/>
+            <tei:address>
+              <tei:addrLine><tei:handShift new="#JS"/>Antw Br <tei:date when="1938-12-11">11. XII
+                  38</tei:date></tei:addrLine>
+            </tei:address>
+          </tei:fw>
+          <tei:salute><tei:handShift new="#AW"/>Liebe <tei:rs type="person" key="entity-000771"
+              >Li-Li</tei:rs>!</tei:salute>
+        </tei:opener>
+
+        <tei:p>Beide Karten szt. von dir erhalten. Diese Karte ist nicht aus <tei:hi
+            rend="lateinschr">Nürnberg</tei:hi>, sondern aus <tei:hi rend="lateinschr"
+            >Kuttenberg</tei:hi>, wie die deutsche Bezeichnung unseres Wohnortes szt war.<tei:note
+            xml:id="r0001-fn01" type="editorial" place="foot">Kutná Hora is a town 84km (50 miles)
+            east of Prague, in Bohemia. It became part of Czechoslovakia in 1918, before which, as
+            part of Austria-Hungary, its name was Kuttenberg. (<tei:title level="j"
+              >Wikipedia</tei:title>, 2.viii.2024)</tei:note></tei:p>
+
+        <tei:closer>
+          <tei:salute rend="indent-40">Herzliche Grüße</tei:salute>
+          <tei:salute rend="indent-60">Dein</tei:salute>
+          <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000943"
+            >Arnold</tei:rs></tei:signed><tei:lb/>
+        </tei:closer>
+      </tei:div>
+
+      <tei:div type="part_2">
+        <tei:opener>
+          <tei:salute><tei:handShift new="#RW"/>Liebe <tei:rs type="person" key="entity-000771"
+              >Schwester</tei:rs>!</tei:salute>
+        </tei:opener>
+
+        <tei:p>Dank für Deine Karten, ob ich mich noch zu einem Brief werde aufschwingen können? Es
+          wäre garviel zu erzählen, schreiben soviel <tei:sic>schreiben</tei:sic> kann ich jetzt
+          nicht. Noch halten die Nerven stand!</tei:p>
+
+        <tei:p><tei:note type="editorial" place="inline">in right margin, sideways:</tei:note> Nur
+          gesund bleiben</tei:p>
+
+        <tei:closer>
+          <tei:salute><tei:note type="editorial" place="inline">in left margin, sideways:</tei:note>
+            Innigst</tei:salute>
+          <tei:salute>Deine</tei:salute>
+          <tei:signed><tei:rs type="person" key="entity-000944">Rosa</tei:rs></tei:signed>
+        </tei:closer>
+      </tei:div>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:div type="part_1">
+        <tei:opener>
+          <tei:milestone unit="folio" n="verso"/>
+          <tei:note type="editorial" place="inline">photograph: Gothic building, captioned: “Kutná
+            Hora s. / Vladislavské Courtyard”</tei:note><tei:lb/>
+          <tei:milestone unit="folio" n="recto"/><tei:lb/>
+          <tei:fw type="envelope">
+            <tei:address>
+              <tei:addrLine><tei:handShift new="#AW"/>Kutná Hora,</tei:addrLine>
+              <tei:addrLine>Předm. Žižkov 159</tei:addrLine>
+              <tei:addrLine rend="indent-50"><tei:date when="1938-11-27">November 27,
+                  1938</tei:date></tei:addrLine>
+            </tei:address><tei:lb/>
+            <tei:address>
+              <tei:addrLine><tei:supplied>To:</tei:supplied>Mrs. Heinrich Schenker</tei:addrLine>
+              <tei:addrLine>Schwindgasse 4/2</tei:addrLine>
+              <tei:addrLine><tei:hi rend="underline">Vienna IV</tei:hi></tei:addrLine>
+            </tei:address>
+            <tei:fw type="postmark">|| KUTNÁ [HORA] | 28. XI. 38 <tei:gap reason="illegible"/> | f |
+              * * * |||</tei:fw><tei:lb/>
+            <tei:address>
+              <tei:addrLine><tei:handShift new="#JS"/>Replied by letter, <tei:date when="1938-12-11"
+                  >December 11, 1938</tei:date></tei:addrLine>
+            </tei:address>
+          </tei:fw>
+          <tei:salute><tei:handShift new="#AW"/>Dear <tei:rs type="person" key="entity-000771"
+              >Li-Li</tei:rs>,</tei:salute>
+        </tei:opener>
+
+        <tei:p>Both of your postcards have arrived in good time. This postcard is not from Nuremberg
+          but from Kuttenberg, as our place of residence used to be called in German.<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:p>
+
+        <tei:closer>
+          <tei:salute rend="indent-40">Cordial greetings</tei:salute>
+          <tei:salute rend="indent-60">Your</tei:salute>
+          <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000943"
+            >Arnold</tei:rs></tei:signed><tei:lb/>
+        </tei:closer>
+      </tei:div>
+
+      <tei:div type="part_2">
+        <tei:opener>
+          <tei:salute><tei:handShift new="#RW"/>Dear <tei:rs type="person" key="entity-000771"
+              >sister</tei:rs>,</tei:salute>
+        </tei:opener>
+
+        <tei:p>Thank you for your postcards. Am I still able to bring myself to <tei:supplied
+            reason="clarity">write</tei:supplied> a letter? There would be a great deal to tell; I
+          can’t write so much now. Nerves defy it!</tei:p>
+
+        <tei:p><tei:note type="editorial" place="inline">in right margin, sideways:</tei:note> Just
+          stay well,</tei:p>
+
+        <tei:closer>
+          <tei:salute><tei:note type="editorial" place="inline">in left margin, sideways:</tei:note>
+            Most fondly,</tei:salute>
+          <tei:salute>Your</tei:salute>
+          <tei:signed><tei:rs type="person" key="entity-000944">Rosa</tei:rs></tei:signed>
+        </tei:closer>
+      </tei:div>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

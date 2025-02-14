@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3202" sdoID="OJ-10-3_171">OJ 10/3, [171]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="TPoed" scope="major">Otto Erich Deutsch typist</tei:handNote>
+      <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-19" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Typewritten postcard from Deutsch to Schenker, dated May 31, 1932</dc:title>
+
+      <dcterms:created>1932-05-31T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-08-04</dcterms:dateSubmitted>
+      <dc:description>Deutsch gives Schenker some long-delayed advice on kitchen
+        stoves.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>Absender: <tei:note type="editorial"
+              place="inline">blank</tei:note></tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied>
+            <tei:handShift new="#TPoed"/>Herrn Dr. Heinrich Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-40">Keilgasse 8</tei:addrLine>
+          <tei:addrLine rend="indent-60">Wien III.</tei:addrLine>
+        </tei:address>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:dateline><tei:handShift new="#TPoed"/>Wien, <tei:date when="1932-05-31">31. Mai
+            32</tei:date></tei:dateline>
+        <tei:salute>Lieber <tei:rs type="person" key="entity-000632">Verehrter</tei:rs>!<tei:note
+            xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this postcard is recorded
+            in Schenker’s diary for June 1, 1931: “Von Deutsch (K.): Auskunft über Oefen.” (“From
+            Deutsch (postcard): information about stoves.”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Obzwar ich Ihnen noch manches zu schreiben habe, möchte ich heute nur mein
+        Versprechen wegen des Ofens einlösen. Es ist verspätet, weil mich ein befreundeter Architekt
+        hängen liess. Nun rät er, Swoboda oder an die Gemeinde Wien wenden sollen, die Ihnen Oefen
+        zeigen, in aller Art, Sie betraten, auch einen Heizungsfachmann in die Wohnung schicken.<tei:lb/><tei:address>
+          <tei:addrLine>Swoboda–XVIIII. Theresienstr. 1</tei:addrLine>
+          <tei:addrLine>Wien–VIII. Josefstädterstr. 10–12</tei:addrLine>
+        </tei:address>
+      </tei:p>
+
+
+
+
+      <tei:closer>
+        <tei:salute rend="indent-70">Schönstens empfohlen</tei:salute>
+        <tei:salute rend="indent-70">Ihr sehr ergebener</tei:salute>
+        <tei:signed rend="indent-90"><tei:handShift new="#OED"/><tei:rs type="person"
+            key="entity-000164">O E Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>From: <tei:note type="editorial"
+              place="inline">blank</tei:note></tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied>
+            <tei:handShift new="#TPoed"/>Dr. Heinrich Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-40">Keilgasse 8</tei:addrLine>
+          <tei:addrLine rend="indent-60">Vienna III</tei:addrLine>
+        </tei:address>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:dateline><tei:handShift new="#TPoed"/>Vienna, <tei:date when="1932-05-31">May 31,
+            1932</tei:date></tei:dateline>
+        <tei:salute>Lieber <tei:rs type="person" key="entity-000632">Verehrter</tei:rs>!<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Although I still have much to write to you about, today I should only like
+        to fulfill my promise about the stove. It has been delayed because an architect with whom I
+        am on friendly terms kept me waiting. He now advises me to approach Swoboda or the
+        municipality of Vienna, who will show you ovens of all types, advise you, and also send a
+        heating engineer to your apartment.<tei:lb/><tei:address>
+          <tei:addrLine>Swoboda: Vienna XVIII, Theresienstraße 1</tei:addrLine>
+          <tei:addrLine>Vienna: Vienna VIII. Josefstädterstraße 10–12</tei:addrLine>
+        </tei:address>
+      </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-70">With best regards,</tei:salute>
+        <tei:salute rend="indent-70">Your very devoted</tei:salute>
+        <tei:signed rend="indent-90"><tei:handShift new="#OED"/><tei:rs type="person"
+            key="entity-000164">O. E. Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

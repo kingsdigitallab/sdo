@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3443" sdoID="OJ-5-38_29">OJ 5/38, [29]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamped</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="LR">
+      <tei:persName>Lee Rothfarb</tei:persName>
+      <tei:resp>Translation, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-11" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008423">SchenkerW ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture
+        postcard</tei:rs>
+
+      <dc:title>Handwritten picture postcard from Heinrich to Wilhelm Schenker, dated July 3,
+        1927</dc:title>
+
+      <dcterms:created>1927-07-03T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2024-07-10</dcterms:dateSubmitted>
+      <dc:description>Heinrich sends holiday greetings to his brother.</dc:description>
+      <dc:subject/>
+      
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000775">Wilhelm Schenker</marcrel:recipient>
+      
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:note type="editorial" place="inline">picture: snow-capped mountains, valley with
+          village, captioned: “Galtür mit Balunspitze”</tei:note><tei:lb/>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">Absender:</tei:supplied>
+              <tei:handShift new="#HS"/>Schenker</tei:addrLine>
+            <tei:addrLine>Galtür</tei:addrLine>
+            <tei:addrLine>Tirol</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied>H D<tei:hi
+                rend="supralinear">r.</tei:hi> Wilhelm Schenker</tei:addrLine>
+            <tei:addrLine rend="ident-10">St. Bernhard</tei:addrLine>
+            <tei:addrLine rend="ident-10">(bei Horn)</tei:addrLine>
+            <tei:addrLine>Nd: Öst.</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark">|| GALTÜR | 3 VII 27 | * a * ||</tei:fw><tei:lb/>
+          <tei:fw type="stamp"><tei:handShift rend="#stamp"/>|| Höhenluftkurort | Galtür | Alpenhaus
+            Fluchthorn ||</tei:fw><tei:lb/>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#HS"/>Mein lieber <tei:rs type="person" key="entity-000775"
+            >Wilhelm</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Writing of
+            this postcard is recorded in Schenker’s diary for July 3, 1927: “An Wilhelm
+            (Ansichtsk.): Grüße” (“To Wilhelm (picture postcard):
+          greetings”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Hiemit übersenden <tei:del rend="overstrike">d</tei:del> wir dir die ersten Grüße aus
+          <tei:rs type="place" key="entity-002334">Tirol</tei:rs>. Ein starker Schneefall hat uns
+        hier begrüßt, nun wird es sommerlicher. Wir bedürfen sehr der Erholung namentlich des sehr
+        abgehetzten <tei:rs type="person" key="entity-000771">LieLiechen</tei:rs>. Mir geben
+        neuerdings die Augen zu schaffen. So viel zur Einleitung. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">Viele Küsse von uns Beiden</tei:salute>
+        <tei:salute rend="indent-60">Dein</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs type="person" key="entity-000632"
+          >Heinrich</tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1927-07-03">3. 7. 27</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:note type="editorial" place="inline">picture: snow-capped mountains, valley with
+          village, captioned: “Galtür with Balunspitze”</tei:note><tei:lb/>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">From:</tei:supplied>
+              <tei:handShift new="#HS"/>Schenker</tei:addrLine>
+            <tei:addrLine>Galtür</tei:addrLine>
+            <tei:addrLine>Tyrol</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied>Dr. Wilhelm
+              Schenker</tei:addrLine>
+            <tei:addrLine rend="ident-10">St. Bernhard</tei:addrLine>
+            <tei:addrLine rend="ident-10">(near Horn)</tei:addrLine>
+            <tei:addrLine>Lower Austria</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark">|| GALTÜR | 3 VII 27 | * a * ||</tei:fw><tei:lb/>
+          <tei:fw type="stamp"><tei:handShift rend="#stamp"/>|| Mountain air health resort | Galtür
+            | Alpenhaus Flüchthorn ||</tei:fw><tei:lb/>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#HS"/>My dear <tei:rs type="person" key="entity-000775"
+            >Wilhelm</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>With this postcard, we are sending you the first greetings from the <tei:rs
+          type="place" key="entity-002334">Tyrol</tei:rs>. A heavy snowfall greeted us here. Now it
+        is turning more like summer. We really need the recuperation, especially <tei:rs
+          type="person" key="entity-000771">LieLiechen</tei:rs>, who is completely exhausted.
+        Lately, my eyes are bothering me. This much as an introduction.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">Kisses from us both,</tei:salute>
+        <tei:salute rend="indent-60">Your</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs type="person" key="entity-000632"
+          >Heinrich</tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1927-07-03">July 3, 1927</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

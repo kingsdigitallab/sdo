@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3549" sdoID="OJ-5-38_85">OJ 5/38, [85]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="pr" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="LR">
+      <tei:persName>Lee Rothfarb</tei:persName>
+      <tei:resp>Translation, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-11" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008423">SchenkerW ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture
+        postcard</tei:rs>
+
+      <dc:title>Handwritten picture postcard from Heinrich to Wilhelm Schenker, postmarked September
+        18, 1933</dc:title>
+
+      <dcterms:created>1933-09-18T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2024-11-12</dcterms:dateSubmitted>
+      <dc:description>Heinrich thanks his elder brother for his amusing letter and announces the
+        publication of two articles about him and the forthcoming appearance of a book about his
+        theory.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000775">Wilhelm Schenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:fw type="envelope">
+          <tei:milestone unit="folio" n="recto"/>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">Absender:</tei:supplied>
+              <tei:handShift new="#HS"/>Schenker</tei:addrLine>
+            <tei:addrLine>Wien III</tei:addrLine>
+            <tei:addrLine>Keilgasse 8</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied> H D<tei:hi
+                rend="supralinear">r.</tei:hi> Wilhelm Schenker</tei:addrLine>
+            <tei:addrLine rend="ident-10">St. Bernhard b/ Horn</tei:addrLine>
+            <tei:addrLine>Nd: Öst.</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark">|| 3 WIEN 40 | 18.IX.33 19 | * 4f * ||</tei:fw><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:note type="editorial" place="inline">picture: drawing of a castle, captioned: “SCHLOSS
+          REIGERSBERG”</tei:note><tei:lb/>
+        <tei:dateline rend="indent-50"><tei:date when="1933-09-18">18. 9.
+          33</tei:date></tei:dateline><tei:lb/>
+        <tei:salute><tei:handShift new="#HS"/>Mein lieber <tei:rs type="person" key="entity-000775"
+            >Wilhelm</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Writing of
+            this postcard is recorded in Schenker’s diary for September 18, 1933: “An Wilhelm
+            (Ansichtsk.): Dank für den schönen Brief” (“To Wilhelm (picture postcard): thanks for
+            the lovely letter”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Es drängt mich, dir – fast postwendend – für deinen lieben, so geistreichen als
+        heiteren Brief<tei:note xml:id="r0001-fn02" type="editorial" place="foot">Receipt of this
+          letter (which doesn’t survive) is recorded in the September 14 diary entry. </tei:note> zu
+        danken! Wir haben Tränen gelacht bei deinem meist doch tiefsinnigen Ulken u. Spässen, die
+        dir so natürlich aus der Feder kommen. </tei:p>
+
+      <tei:p><tei:milestone unit="folio" n="recto"/> Soeben erscheinen in <tei:rs type="place"
+          key="entity-002501">Berlin</tei:rs> 2 Leitartikel über mich<tei:note xml:id="r0001-fn03"
+          type="editorial" place="foot"><tei:bibl><tei:author>Oswald Jonas</tei:author>, <tei:title
+              level="a">Heinrich Schenker,</tei:title>
+            <tei:title level="j">Allgemeine Musik-Zeitung</tei:title> 60/36–37 (1933), 425–27,
+            437–38</tei:bibl>; <tei:bibl><tei:author>Willi Reich</tei:author>, <tei:title level="a"
+              >Kant, Schenker und die Nachläufer,</tei:title>
+            <tei:title level="j">23: Eine Wiener Musikzeitschrift</tei:title> 15–16 (October 1934),
+            29–32</tei:bibl>. — Contrary to Heinrich’s statement, the latter was published in
+          Vienna.</tei:note> – der Vergleich mit <tei:rs type="person" key="entity-000421"
+          >Kant</tei:rs> setzt sich immer <tei:add place="interlinear-above">mehr</tei:add> fort –
+        ein ganzes Buch über mich erscheint im Herbst,<tei:note xml:id="r0001-fn04" type="editorial"
+          place="foot"><tei:bibl><tei:author>Oswald Jonas</tei:author>, <tei:title level="m">Das
+              Wesen des musikalischen Kunstwerks: Einführung in die Lehre Heinrich
+              Schenkers</tei:title> (Vienna: Saturn-Verlag, 1934)</tei:bibl>.</tei:note> aber wann
+        nur solche Höchsterhebungen etwas eintragen könnten. Näheres später. </tei:p>
+
+      <tei:closer>
+        <tei:salute>Viele Küsse u. Grüße Euch</tei:salute>
+        <tei:salute rend="indent-10">Beiden von uns beiden</tei:salute>
+        <tei:salute rend="indent-70">Dein</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000632"
+          >Heinrich</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:fw type="envelope">
+          <tei:milestone unit="folio" n="recto"/>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">From:</tei:supplied>
+              <tei:handShift new="#HS"/>Schenker</tei:addrLine>
+            <tei:addrLine>Keilgasse 8</tei:addrLine>
+            <tei:addrLine>Vienna III</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied> Dr. Wilhelm
+              Schenker</tei:addrLine>
+            <tei:addrLine rend="ident-10">St. Bernhard, near Horn</tei:addrLine>
+            <tei:addrLine>Lower Austria</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark">|| 3 VIENNA 40 | 18.IX.33 19 | * 4f * ||</tei:fw><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:note type="editorial" place="inline">picture: drawing of a castle, captioned:
+          “REIGERSBERG PALACE”</tei:note><tei:lb/>
+        <tei:dateline rend="indent-50"><tei:date when="1933-09-18">September 18,
+          1933</tei:date></tei:dateline><tei:lb/>
+        <tei:salute><tei:handShift new="#HS"/>My dear <tei:rs type="person" key="entity-000775"
+            >Wilhelm</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>I am pressed to thank you – almost by return of post – for your kind letter, as
+        stimulating as it was amusing!<tei:ptr corresp="#r0001-fn02" type="footnote"/> We laughed
+        ourselves to tears at your mostly profound joking and jesting which flow so naturally from
+        your pen.</tei:p>
+
+      <tei:p><tei:milestone unit="folio" n="recto"/> Two leading articles about me are appearing
+        just now in <tei:rs type="place" key="entity-002501">Berlin</tei:rs><tei:ptr
+          corresp="#r0001-fn03" type="footnote"/> – the comparison with <tei:rs type="person"
+          key="entity-000421">Kant</tei:rs> continues ever <tei:add place="interlinear-above"
+          >more</tei:add> – an entire book about me will appear in the fall;<tei:ptr
+          corresp="#r0001-fn04" type="footnote"/> if only such highly elevated recognitions could
+        bring in some money. Details later.</tei:p>
+
+      <tei:closer>
+        <tei:salute>Many kisses and greetings to you</tei:salute>
+        <tei:salute rend="indent-10">both from us both.</tei:salute>
+        <tei:salute rend="indent-70">Your</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000632"
+          >Heinrich</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

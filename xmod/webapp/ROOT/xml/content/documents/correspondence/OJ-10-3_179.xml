@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3210" sdoID="OJ-10-3_179">OJ 10/3, [179]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="TPoed" scope="major">Otto Erich Deutsch typist</tei:handNote>
+      <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-19" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Typewritten postcard from Deutsch to Schenker, dated September 8, 1932</dc:title>
+
+      <dcterms:created>1932-09-08T14:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-08-07</dcterms:dateSubmitted>
+      <dc:description>Having received a letter from Hoboken, Deutsch would like to meet Schenker on
+        Sunday, September 11.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postk<tei:supplied reason="overstamped"
+              >arte</tei:supplied></tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>Absender: <tei:handShift new="#TPoed"
+            />Deutsch, Wien II. Böcklinstr. 26</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied> Herrn Dr. Heinrich
+            Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-50">Iglerhof</tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:hi rend="sperr">Igls</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-50">(Tirol)</tei:addrLine>
+        </tei:address>
+        <tei:dateline><tei:handShift new="#TPoed"/>Wien, <tei:date when="1932-09-08">8. September
+            32</tei:date></tei:dateline>
+        <tei:salute>Lieber <tei:rs type="person" key="entity-000632">Verehrter</tei:rs>!<tei:note
+            xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this postcard and
+            Schenker’s response are recorded in Schenker’s diary for September 9, 1932: “Von Deutsch
+            (K.): hat von v. H. einen Brief erhalten, bittet mich Sonntag ins Aspang-Café! — An
+            Deutsch (K.): ankommen erst Montag, bitte Dienstag ½5<tei:hi rend="supralinear"
+              >h</tei:hi>.” (“From Deutsch (postcard): he has received a letter from Hoboken, and
+            asks that we meet on Sunday at the Café Aspang! — To Deutsch (postcard): we don’t arrive
+            until Monday; I invite him for Tuesday at 4:30.”). The Schenkers departed Igls on
+            September 10 arriving Vienna September 12. — Evidently Deutsch wrote the this postcard
+            and <tei:ref type="correspondence" cRef="OJ-10-3_178">OJ 10-3, [178]</tei:ref> at the
+            same time to the two different addresses, because he was unsure when the Schenkers were
+            travelling back to Vienna.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Nach einem eben eingetroffenen Briefe <tei:rs type="person"
+          key="entity-000380">H</tei:rs>s. möchte ich Sie gerne schon am <tei:date when="1932-09-11"
+          >Sonntag – 11 . d.</tei:date><tei:note xml:id="r0001-fn02" type="editorial" place="foot"
+          >Their meeting is recorded in Schenker’s diary for September 13: “Deutsch von ½5–8<tei:hi
+            rend="supralinear">h</tei:hi>! Ganz zerbrochen, beleidigt – ich rate von einem Bruch
+          ab.” (“Deutsch from 4:30 to 8 o’clock! Completely shattered, offended – I advise him
+          against breaking off relations.”).</tei:note> – sprechen. Bitte um eine Berufung nach
+          Aspern.<tei:note xml:id="r0001-fn03" type="editorial" place="foot">“Aspern”: at the time,
+          part of district XXI of Vienna (Floridsdorf); it lies near the site of the Battle of
+          Aspern-Essling (May 1809), in which the Austrian army repelled and nearly defeated the
+          forces of Napoleon.</tei:note></tei:p>
+
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Gute Fahrt!</tei:salute>
+        <tei:salute rend="indent-70">Ihr ganz ergebener</tei:salute>
+        <tei:signed rend="indent-90"><tei:handShift new="#OED"/><tei:rs type="person"
+            key="entity-000164">O E Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postc<tei:supplied reason="overstamped"
+              >ard</tei:supplied></tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>From: <tei:handShift new="#TPoed"/>Deutsch,
+            Vienna II, Böcklinstraße 26</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied> Dr. Heinrich
+            Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-50">Iglerhof</tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:hi rend="sperr">Igls</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-50">(Tyrol)</tei:addrLine>
+        </tei:address>
+        <tei:dateline><tei:handShift new="#TPoed"/>Vienna, <tei:date when="1932-09-08">September 8,
+            1932</tei:date></tei:dateline>
+        <tei:salute>Dear revered <tei:rs type="person" key="entity-000632">friend</tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Having just received a letter from <tei:rs type="person"
+          key="entity-000380">Hoboken</tei:rs>, I would like to speak with you on <tei:date
+          when="1932-09-11">Sunday, the 11th of the month</tei:date>.<tei:ptr corresp="#r0001-fn02"
+          type="footnote"/> Please send a notice of appeal to Aspern.<tei:ptr corresp="#r0001-fn03"
+          type="footnote"/></tei:p>
+
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Have a good journey!</tei:salute>
+        <tei:salute rend="indent-70">Your wholly devoted</tei:salute>
+        <tei:signed rend="indent-90"><tei:handShift new="#OED"/><tei:rs type="person"
+            key="entity-000164">O. E. Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

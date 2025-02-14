@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3483" sdoID="OJ-14-10_16">OJ 14/10, [16] </sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="RW" scope="major">Rosa Weil's hand</tei:handNote>
+      <tei:handNote xml:id="AW" scope="minor">Arnold Weil's hand</tei:handNote>
+      <tei:handNote xml:id="unk" scope="minor">unknown hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2024</tei:resp>
+      <tei:resp>Translation, 2024</tei:resp>
+      <tei:resp>XML Encoding, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-11" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008456">WeilR ~
+        JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008458">WeilA ~
+        JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+      <dc:title>Handwritten letter with envelope from Rosa Weil to Jeanette Schenker, dated January
+        23, 1935</dc:title>
+
+      <dcterms:created>1935-01-23T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2024-07-25</dcterms:dateSubmitted>
+      <dc:description>[Rosa Weill has travelled back from Vienna after Heinrich's funeral.] Rosa
+        thanks Jeanette for having taken such good care of her while in Vienna. She regrets that she
+        arrived too late [for the funeral?]. She expresses admiration at the cultivated atmosphere
+        of Jeanette's world, and offers her condolences on the loss of a "great human being," and
+        invites Jeanette to come and stay with them in Aussig.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000944">Rosa Weil</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000943">Arnold Weil</marcrel:correspondent>
+      <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:div type="part_1">
+        <tei:opener>
+          <tei:fw type="envelope">
+            <tei:note type="editorial" place="inline"><tei:hi rend="bold"
+              >envelope</tei:hi></tei:note><tei:lb/>
+            <tei:milestone unit="folio" n="recto"/><tei:lb/>
+            <tei:address>
+              <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied>
+                <tei:handShift new="#RW"/>Frau D<tei:hi rend="supralinear">r.</tei:hi> Heinrich
+                Schenker</tei:addrLine>
+              <tei:addrLine rend="indent-50">Wien III.</tei:addrLine>
+              <tei:addrLine rend="indent-50">Keilgasse 8. <tei:handShift new="#unk"
+                />12</tei:addrLine>
+            </tei:address>
+            <tei:fw type="postmark">|| Ú[STÍ NAD LABEM 2] | <tei:gap reason="illegible"/> 35 | 3d. |
+              * AUSSIG 2 * ||</tei:fw><tei:lb/>
+            <tei:milestone unit="folio" n="verso"/><tei:lb/>
+            <tei:address>
+              <tei:addrLine><tei:supplied>Absender:</tei:supplied>
+                <tei:handShift new="#RW"/>R. Weil, Westphalenstr. 25.</tei:addrLine>
+              <tei:addrLine rend="indent-50">Aussig a/E.</tei:addrLine>
+              <tei:addrLine rend="indent-50">C. S. R.</tei:addrLine>
+            </tei:address>
+          </tei:fw>
+          <tei:note type="editorial" place="inline"><tei:hi rend="bold">letter</tei:hi></tei:note><tei:lb/>
+          <tei:dateline><tei:handShift new="#RW"/><tei:rs type="place" key="entity-002248"
+              >Aussig</tei:rs>, <tei:date when="1935-01-23">23. I. 1935</tei:date>.</tei:dateline><tei:lb/>
+          <tei:salute>Meine liebe <tei:rs type="person" key="entity-000771"
+              >Schwester</tei:rs><tei:note xml:id="r0001-fn01" type="editorial" place="foot"
+              >Heinrich’s diary is of course at an end now, with his death. — All paragraph-breaks
+              except the last are editorial.</tei:note></tei:salute>
+        </tei:opener>
+
+        <tei:p rend="first">Ich wollte Dir gewiß schreiben, wollte aber auch die wenigen Stunden mit
+            <tei:rs type="person" key="entity-005248">Lene</tei:rs> genießen und am nächsten Tag war
+          gleich Wäsche und allerhand für mich zu tun und zu besorgen, besonders <tei:rs
+            type="person" key="entity-005248">Lene</tei:rs>’s Sachen, die heute früh ganz zeitig der
+          Chauffeur schon wieder nach <tei:rs type="place" key="entity-002892">Prag</tei:rs>;
+          mitgenomment hat. So kam Dein Brief früher und ich war ein bißl beschämt; denn an mir ist
+          es, Dir nochmals für alles liebe und gute zu danken. </tei:p>
+
+        <tei:p>Die Reise<tei:note xml:id="r0001-fn02" type="editorial" place="foot">Evidently, Rosa
+            had travelled to Vienna for Heinrich’s funeral, and the return journey is what is being
+            referred to here.</tei:note> war <tei:pb n="2"/> für mich garkeine Anstrengung, denn so
+          ein gebrechliches Mutterl bin ich ja noch nicht. Du bist mich mit soviel Liebe und Sorge
+          umgeben, wie kannst Du nur sagen, daß ich irgendetwas bei Dir entbehren mußte; zwar wird
+          man bei Zentralheizung mich fließendem Heißwasser etwas verwöhnt, doch bin ich
+          anpassungsfähig und hätte mich in weiteren zwei Tagen vollständig an alles
+            gewöhnt;<tei:note xml:id="r0001-fn03" type="editorial" place="foot">Evidently the
+            Schenker apartment. Keilgasse 8, was not centrally heated and lacked hot water, so Rosa,
+            accustomed to her large, centrally-heated house, felt the cold during her
+            stay.</tei:note> es war mir bei meiner Rückkehr schon zu warm im Hause. Anstatt daß ich
+          Dich ins Bett gebracht und für Dich gesorgt und gekocht hätte, hast Du mich fortwährend
+          bedient; nachher habe ich mir darüber schreck- <tei:pb n="3"/> liche Vorwürfe gemacht. </tei:p>
+
+        <tei:p>Es hat mir bei Dir so gut gefallen, alles atmet Kultur und Pflege und ich habe
+          aufrichtig bedauert, daß ich leider zu spät gekommen bin.<tei:note xml:id="r0001-fn04"
+            type="editorial" place="foot">Heinrich’s diary is of course at an end now, with his
+            death. — All paragraph-breaks except the last are editorial.</tei:note> Ich kann Deinen
+          großen Schmerz voll und ganz nachempfinden und trotzdem ich den lieben <tei:rs
+            type="person" key="entity-000632">Heinrich</tei:rs> leider nicht gekannt habe, weiß ich
+          sehr wohl, was Du verloren hast. Doch ein erhebendes Bewußtsein bleibt Dir für alle Zeit:
+          für und mit diesem großen Menschen gelebt, ihn geliebt zu haben, von ihm geliebt werden zu
+          sein und an seinem großen Lebenswerk mitgearbeitet zu haben. Dieses Bewußtsein <tei:pb
+            n="4"/> muß Dich stolz machen und aufrecht erhalten! Freilich ist die Lücke und Leere
+          groß und ich kann Deine große Trauer und Müdigkeit so gut verstehen. Deshalb mache ich Dir
+          einen aus aufrichtigem Herzen kommenden Vorschlag; komm für einige Zeit zu uns! Wir sind
+          einfache, schlichte Menschen, vielleicht wirst Du Dich gerade deshalb bei uns ausruhen und
+          neue Kraft sammeln! Soweit es in meinen schwachen Kräften steht, möchte ich es Dir recht
+          behaglich machen; wir würden kleine Spaziergänge machen und wenn Du nicht willst, mußt Du
+          keinen Menschen treffen! </tei:p>
+
+        <tei:p><tei:hi rend="underline">Das ist keine Phrase,</tei:hi>
+          <tei:subst>
+            <tei:del rend="overstrike">ich</tei:del>
+            <tei:add place="interlinear-above"><tei:handShift new="#AW"/>wir</tei:add>
+          </tei:subst>
+          <tei:handShift new="#RW"/>meine <tei:add place="interlinear-above"><tei:handShift
+              new="#AW"/>n</tei:add>
+          <tei:handShift new="#RW"/>es ehrlichl! <tei:add place="interlinear-above"><tei:handShift
+              new="#AW"/><tei:rs type="person" key="entity-000943">arnold</tei:rs></tei:add></tei:p>
+
+        <tei:closer>
+          <tei:salute><tei:handShift new="#RW"/>Sei innig beküßt</tei:salute>
+          <tei:salute rend="indent-40">von Deiner Schwester</tei:salute>
+          <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000944"
+            >Rosl</tei:rs>.</tei:signed>
+        </tei:closer>
+
+      </tei:div>
+
+      <tei:div type="part_2">
+        <tei:opener/>
+
+        <tei:p/>
+
+        <tei:closer>
+          <tei:salute><tei:handShift new="#AW"/>herzlichste Grüße</tei:salute>
+          <tei:salute>dein</tei:salute>
+          <tei:signed><tei:rs type="person" key="entity-000943">Arnold</tei:rs></tei:signed>
+        </tei:closer>
+
+        <tei:postscript>
+          <tei:list type="litany" rend="simple">
+            <tei:item><tei:note type="editorial" place="inline">on p.4 in top
+              margin:</tei:note></tei:item>
+            <tei:item><tei:handShift new="#AW"/>Emma : Steinschönau. Alleestraße 310</tei:item>
+            <tei:item>Paul : Karlsbad, Petersberg 630</tei:item>
+            <tei:item>Hans &amp; Hedda Delmonte (although you haven’t asked for it): Berlin,
+              Wilmersdorf, Landauerstraße 3 </tei:item>
+
+          </tei:list>
+        </tei:postscript>
+      </tei:div>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:div type="part_1">
+        <tei:opener>
+          <tei:fw type="envelope">
+            <tei:note type="editorial" place="inline"><tei:hi rend="bold"
+              >envelope</tei:hi></tei:note><tei:lb/>
+            <tei:milestone unit="folio" n="recto"/><tei:lb/>
+            <tei:address>
+              <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied>
+                <tei:handShift new="#RW"/>Mrs. Heinrich Schenker</tei:addrLine>
+              <tei:addrLine rend="indent-50">Vienna III</tei:addrLine>
+              <tei:addrLine rend="indent-50">Keilgasse 8 <tei:handShift new="#unk"
+                />12</tei:addrLine>
+            </tei:address>
+            <tei:fw type="postmark">|| Ú[STÍ NAD LABEM 2] | <tei:gap reason="illegible"/> 35 | 3d. |
+              * AUSSIG 2 * ||</tei:fw><tei:lb/>
+            <tei:milestone unit="folio" n="verso"/><tei:lb/>
+            <tei:address>
+              <tei:addrLine><tei:supplied>From:</tei:supplied>
+                <tei:handShift new="#RW"/>R. Weil, Westphalenstraße 25</tei:addrLine>
+              <tei:addrLine rend="indent-50">Aussig on the Elbe</tei:addrLine>
+              <tei:addrLine rend="indent-50">Czechoslovakia</tei:addrLine>
+            </tei:address>
+          </tei:fw>
+          <tei:note type="editorial" place="inline"><tei:hi rend="bold">letter</tei:hi></tei:note><tei:lb/>
+          <tei:dateline><tei:handShift new="#RW"/><tei:rs type="place" key="entity-002248"
+              >Aussig</tei:rs>, <tei:date when="1935-01-23">January 23,
+            1935</tei:date></tei:dateline><tei:lb/>
+          <tei:salute>My dear <tei:rs type="person" key="entity-000771">sister</tei:rs>,<tei:ptr
+              corresp="#r0001-fn01" type="footnote"/></tei:salute>
+        </tei:opener>
+
+        <tei:p rend="first">I particularly wanted to write to you, but also wanted to enjoy my few
+          hours with <tei:rs type="person" key="entity-005248">Lene</tei:rs>, then the next day
+          there were clothes washing and all kinds of other chores waiting for me to take care of,
+          especially as concerned <tei:rs type="person" key="entity-005248">Lene</tei:rs>, whom the
+          chauffeur has taken back with him to <tei:rs type="place" key="entity-002892"
+            >Prague</tei:rs> very early this morning. So when your letter arrived early on, I felt
+          rather ashamed, for it is I who should once again be thanking you for all the dear, kind
+          things <tei:supplied reason="clarity">you did for me</tei:supplied>.</tei:p>
+
+        <tei:p>The journey<tei:ptr corresp="#r0001-fn02" type="footnote"/> was <tei:pb n="2"/> no
+          strain at all for me – I’m certainly not yet so frail a Mom as all that. You surrounded me
+          with so much love and attention; how can you say that I had to do without with anything
+          whatsoever while with you?! It’s true that, having central heating, I’m somewhat cosseted
+          by running hot water, but I’m adaptable, and would have adjusted completely to everything
+          over the following two days.<tei:ptr corresp="#r0001-fn03" type="footnote"/> On my return,
+          it was too warm in the house. Instead of my having put you to bed, taken care of you, and
+          cooked for you, you constantly served me. I have since then <tei:pb n="3"/> reproached
+          myself terribly for that.</tei:p>
+
+        <tei:p>Being with you was so very pleasing; everything <tei:supplied reason="clarity"
+            >there</tei:supplied> breathes culture and nurture, and I regretted deeply that I
+          arrived too late.<tei:ptr corresp="#r0001-fn04" type="footnote"/> I can sympathize fully
+          with your pain, and despite the fact that I, alas, did not know <tei:rs type="person"
+            key="entity-000632">Heinrich</tei:rs>, I appreciate full well what you have lost. A
+          heightened sensibility will remain with you for evermore: to have lived with and for this
+          great human being, to have loved him and been loved by him, and to have contributed to his
+          great life’s work. This sensibility <tei:pb n="4"/> must make you proud and sustain you!
+          True, the absence, the emptiness is great, and I can so well understand your great sorrow
+          and weariness. On that account, I make you with sincere heart a suggestion: come stay with
+          for a while! We are simple, unpretentious people; perhaps, precisely for that reason, you
+          will rest and gather new strength! I should like, so far as my feeble powers allow, to
+          make you really comfortable. We would take short walks and, if you don’t want to, there
+          would be no obligation for you to meet other people.</tei:p>
+
+        <tei:p><tei:hi rend="underline">Those are no mere words:</tei:hi>
+          <tei:subst>
+            <tei:del rend="overstrike">I</tei:del>
+            <tei:add place="interlinear-above"><tei:handShift new="#AW"/>we</tei:add>
+          </tei:subst>
+          <tei:handShift new="#RW"/>really mean it! <tei:add place="interlinear-above"
+              ><tei:handShift new="#AW"/><tei:rs type="person" key="entity-000943"
+            >Arnold</tei:rs></tei:add></tei:p>
+
+        <tei:closer>
+          <tei:salute><tei:handShift new="#RW"/>Accept heartfelt kisses</tei:salute>
+          <tei:salute rend="indent-40">from you sister</tei:salute>
+          <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000944"
+            >Rosl</tei:rs></tei:signed>
+        </tei:closer>
+
+      </tei:div>
+
+      <tei:div type="part_2">
+        <tei:opener/>
+
+        <tei:p/>
+
+        <tei:closer>
+          <tei:salute><tei:handShift new="#AW"/>Most cordial greetings</tei:salute>
+          <tei:salute>Your</tei:salute>
+          <tei:signed><tei:rs type="person" key="entity-000943">Arnold</tei:rs></tei:signed>
+        </tei:closer>
+
+        <tei:postscript>
+          <tei:list type="litany" rend="simple">
+            <tei:item><tei:note type="editorial" place="inline">on p.4 in top
+              margin:</tei:note></tei:item>
+            <tei:item><tei:handShift new="#AW"/>Emma : Steinschönau, Alleestraße 310</tei:item>
+            <tei:item>Paul : Karlsbad, Petersberg 630</tei:item>
+            <tei:item>Hans &amp; Hedda Delmonte (although you haven’t asked for it): Berlin,
+              Wilmersdorf, Landauerstraße 3 </tei:item>
+
+          </tei:list>
+        </tei:postscript>
+
+      </tei:div>
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3489" sdoID="OJ-14-10_22">OJ 14/10, [22]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="RW" scope="major">Rosa Weil's hand</tei:handNote>
+      <tei:handNote xml:id="JS" scope="minor">Jeanette Schenker's hand</tei:handNote>
+
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2024</tei:resp>
+      <tei:resp>Translation, 2024</tei:resp>
+      <tei:resp>XML Encoding, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-11" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008456">WeilR ~
+        JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-003298">envelope</tei:rs>
+
+      <dc:title>Handwritten envelope from Rosa Weil to Jeanette Schenker, undated [June
+        1935]</dc:title>
+
+      <dcterms:created>1935-06-01T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2024-07-31</dcterms:dateSubmitted>
+      <dc:description/>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000944">Rosa Weil</marcrel:correspondent>
+      <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+
+      <tei:opener>
+        <tei:fw type="envelope">
+          <tei:note type="editorial" place="inline"><tei:hi rend="bold">envelope</tei:hi></tei:note><tei:lb/>
+          <tei:milestone unit="folio" n="recto"/><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied>
+              <tei:handShift new="#RW"/>Frau D<tei:hi rend="supralinear">r.</tei:hi> Heinrich
+                Schenker<tei:note xml:id="r0001-fn01" type="editorial" place="foot">It is possible
+                that this envelope belongs with the letter <tei:ref type="correspondence"
+                  cRef="OJ-14-10_23">OJ 14/10, [23]</tei:ref>, June 15, 1935. The reason for not
+                associating the two is that the letter, which is written on small-format paper, was
+                accompanied by roses, and is unlikely to have been sent through the normal mail as
+                this envelope was.</tei:note></tei:addrLine>
+            <tei:addrLine rend="indent-50">Wien III</tei:addrLine>
+            <tei:addrLine rend="indent-50">Keilgasse 8</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark">|| [ÚSTÍ NAD LABE]M 2 | <tei:gap reason="illegible"/> | 3f | *
+            AUSSIG 2 * ||</tei:fw><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#JS"/>Hofgastein</tei:addrLine>
+            <tei:addrLine><tei:date when="1935-06-24"><tei:unclear reason="reading"
+                >24</tei:unclear>. VI. 1935</tei:date></tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:supplied>Absender:</tei:supplied>
+              <tei:handShift new="#RW"/>R. Weil, Westphalenstr. 25.</tei:addrLine>
+            <tei:addrLine rend="indent-50">Aussig <tei:add place="interlinear-above"
+              >a</tei:add>/E.</tei:addrLine>
+            <tei:addrLine rend="indent-50">C. S. R.</tei:addrLine>
+          </tei:address>
+        </tei:fw>
+      </tei:opener>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:fw type="envelope">
+          <tei:note type="editorial" place="inline"><tei:hi rend="bold">envelope</tei:hi></tei:note><tei:lb/>
+          <tei:milestone unit="folio" n="recto"/><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied>
+              <tei:handShift new="#RW"/>Mrs. Heinrich Schenker<tei:ptr corresp="#r0001-fn01"
+                type="footnote"/></tei:addrLine>
+            <tei:addrLine rend="indent-50">Keilgasse 8</tei:addrLine>
+            <tei:addrLine rend="indent-50">Vienna III</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark">|| [ÚSTÍ NAD LABE]M 2 | <tei:gap reason="illegible"/> | 3f | *
+            AUSSIG 2 * ||</tei:fw><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#JS"/>Hofgastein</tei:addrLine>
+            <tei:addrLine><tei:date when="1935-06-24">June <tei:unclear reason="original_unclear"
+                  >24</tei:unclear>, 1935</tei:date></tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:supplied>From:</tei:supplied>
+              <tei:handShift new="#RW"/>R. Weil, Westphalenstraße 25</tei:addrLine>
+            <tei:addrLine rend="indent-50">Aussig on the Elbe</tei:addrLine>
+            <tei:addrLine rend="indent-50">Czechoslovakia</tei:addrLine>
+          </tei:address>
+        </tei:fw>
+      </tei:opener>
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
