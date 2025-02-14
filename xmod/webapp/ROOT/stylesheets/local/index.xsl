@@ -249,38 +249,36 @@
             <h3>Latest</h3>
             <!-- COPY AND PASTE LINK BELOW TO DIRECT USERS TO THE 'OVERFLOW' PAGE FOR UPDATE NEWS IF APPROPRFIATE -->
             <!-- <a class="int" title="Link to Latest Material" href="/documents/overviews/latest_material.html">More</a> -->
-            <h4>What's new in August 2022?</h4>
+            <h4>What's new in 2023?</h4>
             <ul>
               <li>
-                <b>DIARIES:</b> Schenker’s diaries are at last finished! The final 18 months
-                      (April 1916 to September 1917) are now up on the site, completing the 39-year
-                      run from 1896 to January 1935 in over 4,000 pages. A team of seven people, led
-                      by Marko Deisinger, carried out the work in 14 dedicated years.
-                      Congratulations to those contributors, and thanks to the Austrian Science Fund
-                      for financial support! The result is an indispensable foundation for all
-                      future biographical study of Schenker and his dealings with pupils,
-                      colleagues, friends, foes, and Viennese institutions.</li>
+                <b>CORRESPONDENCE:</b> This has been a bumper year! A rich new offering of
+                correspondence from the earlier period – 1894 to around 1913, featuring
+                Schenker’s closest friend, Moriz Violin, composer-pianist Ferruccio Busoni,
+                bass vocalist Eduard Gärtner, violinist Fritz Wahle, artist and critic
+                Adalbert Seligmann, and publisher Breitkopf &amp; Härtel, yielding a clearer
+                picture of Schenker as successively journalist, composer, and theorist, and
+                his professional aspirations; also the final period, 1927 to 1934, featuring
+                the publishers and printers of The Masterwork in Music, vol. 3 and Five
+                Graphic Music Analyses, and a remarkable epistolary collaboration with the
+                music bibliographer Otto Erich Deutsch.</li>
               <li>
-                <b>LESSONBOOKS:</b> Schenker recorded details of almost every lesson he gave
-                      between 1912 and 1931 in four books, written out by his wife Jeanette. The
-                      all-important first book, covering just January to March 1912, is now on the
-                      site, and gives us a good idea of how Schenker had been teaching piano and
-                      theory in the decade before 1912.</li>
-              <li>
-                <b>CORRESPONDENCE:</b> This year completes all surviving correspondence with
-                      Schenker’s pupils, 64 pupils, 700 items in all. Correspondence with two senior
-                      figures in Schenker’s life, biographer/critic <b>Max Kalbeck</b> and
-                      composer/pianist <b>Eugen d’Albert</b>, illuminates Schenker’s career
-                      aspirations and dealings between the late 1880s and 1914. Correspondence with
-                      engraver/print maker <b>Victor Hammer</b> covers 1925, the year of his
-                      Schenker mezzotint; and that with <b>Moriz Violin</b> and <b>Josef Marx</b>
-                      portrays institutional politics in 1932–34. Schenker’s feisty exchanges with
-                <b>Emil Hertzka</b> of Universal Edition for 1911 feature the production of
-                      the Beethoven Ninth Symphony monograph and the beginnings of the elucidatory
-                      editions of four of Beethoven’s last five piano sonatas.</li>
-              <li>
-                <b>PROFILES:</b> 25 new profiles featuring people, places, and institutions
-                      are now available, and many existing profiles have been revised.</li>
+                <b>LESSONBOOKS:</b> We now have a complete sweep of ten years, from 1912 to
+                1922. The 1912/13 teaching year provides a particularly detailed and
+                comprehensive record of the 708 lessons he gave in that time. Some pupils took
+                lessons only on piano, others took a combination of piano and theory, the most
+                committed taking three hour-long lessons a week, one of which was exclusive to
+                the study of form, and of counterpoint up to four or more voices in all five
+                species. One pupil, Hans Weisse uniquely took lessons in composition and
+                theory. This was the year in which Schenker completed the first volume of his
+                Beethoven’s Last Piano Sonatas, on Op. 109, and its influence on his teaching
+                at the time is clear to see.</li>
+              <li><b>DIARIES:</b> Just a reminder that since 2022 we have had the full range
+                of Schenker’s diaries, from 1896 to 1935, available on the site, offering a
+                rounded picture of Schenker as a professional, social, and family man,
+                revealing his innermost thoughts.</li>
+              <!--<li>
+                      <b>PROFILES:</b> </li>-->
             </ul>
 
             <!--<nav class="local" id="blogPosts">
