@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+
+    <sdo:source>
+      <sdo:correspondence mfID="3578" sdoID="OJ-12-28_3">OJ 12/28, [3]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="WK" scope="major">Wilhelm Kux's hand</tei:handNote>
+      <tei:handNote xml:id="pr" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2025</tei:resp>
+      <tei:resp>Translation, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-11-02" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+
+  </sdo:collectionDesc>
+  <sdo:record ID="r0001">
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008496">KuxW ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-003332">calling card</tei:rs>
+
+
+      <dc:title>Handwritten calling card from Kux to Schenker, dated February 13, 1907[?]</dc:title>
+      <dcterms:created>1907-02-13T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2025-02-14</dcterms:dateSubmitted>
+      <dc:description>Kux asks Schenker to visit him the following day.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000498">Wilhelm Kux</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:dateline>13/2 190<tei:subst>
+            <tei:del rend="overwrittem">5</tei:del>
+            <tei:add place="superimposed">7</tei:add>
+          </tei:subst><tei:note xml:id="r0001-fn01" type="editorial" place="foot">It is unclear
+            whether “5” is overwritten by “7” or <tei:hi rend="italic">vice versa</tei:hi>; thus the
+            date of this item could be February 13, 1905. Neither date can be corroborated. —
+            Receipt of this calling card is not recorded in Schenker’s
+          diary.</tei:note></tei:dateline>
+      </tei:opener>
+
+      <tei:p><tei:handShift new="#pr"/><tei:rs type="person" key="entity-000498">Wilhelm
+        Kux</tei:rs><tei:lb/> Director der Niederösterreichischen Escompte Gesellschaft<tei:lb/>
+        <tei:handShift new="#WK"/>bittet Sie, lieber <tei:rs type="person" key="entity-000632"
+          >Doctor</tei:rs>, ihn morgen im Laufe des Tages behufs kurzer Rücksprache zu
+        besuchen.</tei:p>
+
+      <tei:closer>
+        <tei:salute>Beste Grüße!</tei:salute>
+      </tei:closer>
+      <tei:lb/>
+      <tei:lb/>
+      <tei:milestone unit="folio" n="verso"/>
+      <tei:note type="editorial" place="inline">blank</tei:note>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:dateline>February 13, 190<tei:subst>
+            <tei:del rend="overwrittem">5</tei:del>
+            <tei:add place="superimposed">7</tei:add>
+          </tei:subst><tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:dateline>
+      </tei:opener>
+
+      <tei:p><tei:handShift new="#pr"/><tei:rs type="person" key="entity-000498">Wilhelm
+        Kux</tei:rs><tei:lb/> Director of the Lower Austrian Discount Bank<tei:lb/>
+        <tei:handShift new="#WK"/>requests you, dear <tei:rs type="person" key="entity-000632"
+          >Doctor</tei:rs>, to visit him tomorrow during the day for a brief consultation.</tei:p>
+
+      <tei:closer>
+        <tei:salute>Best greetings! </tei:salute>
+      </tei:closer>
+      <tei:lb/>
+      <tei:lb/>
+      <tei:milestone unit="folio" n="verso"/>
+      <tei:note type="editorial" place="inline">blank</tei:note>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
