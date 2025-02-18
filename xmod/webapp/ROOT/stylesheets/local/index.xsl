@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet exclude-result-prefixes="#all" version="2.0"
-  xmlns="http://www.w3.org/1999/xhtml"
-  xmlns:tei="http://www.tei-c.org/ns/1.0"
-  xmlns:xmg="http://www.cch.kcl.ac.uk/xmod/global/1.0"
+<xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xmg="http://www.cch.kcl.ac.uk/xmod/global/1.0"
   xmlns:xmm="http://www.cch.kcl.ac.uk/xmod/menu/1.0"
   xmlns:xmp="http://www.cch.kcl.ac.uk/xmod/properties/1.0"
   xmlns:xms="http://www.cch.kcl.ac.uk/xmod/spec/1.0"
-  xmlns:xmv="http://www.cch.kcl.ac.uk/xmod/views/1.0"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xmv="http://www.cch.kcl.ac.uk/xmod/views/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <!--
@@ -29,9 +26,11 @@
   <xsl:param name="type" select="''"/>
   <xsl:param name="printable"/>
 
-  <xsl:variable name="xmg:title" select="/*/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)]"/>
+  <xsl:variable name="xmg:title"
+    select="/*/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)]"/>
   <xsl:variable name="xmg:pathroot" select="concat($xmp:context-path, '/', $filedir)"/>
-  <xsl:variable name="xmg:path" select="concat($xmg:pathroot, '/', substring-before($filename, '.'), '.', $fileextension)"/>
+  <xsl:variable name="xmg:path"
+    select="concat($xmg:pathroot, '/', substring-before($filename, '.'), '.', $fileextension)"/>
 
 
   <xsl:template match="/">
@@ -46,14 +45,15 @@
 
         <!-- mobile etc. devices: courtesy of 320+Up: http://stuffandnonsense.co.uk/projects/320andup/ -->
         <!-- For Nokia -->
-        <link rel="shortcut icon" href="{$xmp:assets-path}/hp_assets/images/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="{$xmp:assets-path}/hp_assets/images/apple-touch-icon.png"/>
         <!-- For everything else -->
-        <link rel="shortcut icon" href="{$xmp:assets-path}/hp_assets/images/favicon.ico" />
+        <link rel="shortcut icon" href="{$xmp:assets-path}/hp_assets/images/favicon.ico"/>
 
         <!--iOS. Delete if not required -->
         <meta name="apple-mobile-web-app-capable" content="yes"/>
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-        <link rel="apple-touch-startup-image" href="{$xmp:assets-path}/hp_assets/images/i/splash.png"/>
+        <link rel="apple-touch-startup-image"
+          href="{$xmp:assets-path}/hp_assets/images/i/splash.png"/>
 
         <!--Microsoft. Delete if not required -->
         <meta http-equiv="cleartype" content="on"/>
@@ -148,74 +148,75 @@
                 <ul class="tabControls tpc">
                   <li class="tabControlHeader">
                     <a href="#tab1" class="current">
-                      <img src="{$xmp:assets-path}/hp_assets/images/thumb-letter.jpg" width="80" height="80" alt="" title=""/>
+                      <img src="{$xmp:assets-path}/hp_assets/images/thumb-letter.jpg" width="80"
+                        height="80" alt="" title=""/>
                     </a>
                     <h4>Letter from Schenker to Otto Erich Deutsch, May 15, 1930 (OJ 5/9, [3])</h4>
                   </li>
                   <li class="tabControlHeader">
                     <a href="#tab2">
-                      <img src="{$xmp:assets-path}/hp_assets/images/thumb-diary.jpg" width="80" height="80" alt="" title=""/>
+                      <img src="{$xmp:assets-path}/hp_assets/images/thumb-diary.jpg" width="80"
+                        height="80" alt="" title=""/>
                     </a>
 
                     <h4>Page of Schenker's diary, late January and early February 1907</h4>
                   </li>
                   <li class="tabControlHeader">
                     <a href="#tab3">
-                      <img src="{$xmp:assets-path}/hp_assets/images/thumb-lesson.jpg" width="80" height="80" alt="" title=""/>
+                      <img src="{$xmp:assets-path}/hp_assets/images/thumb-lesson.jpg" width="80"
+                        height="80" alt="" title=""/>
                     </a>
                     <h4>Page of Schenker's lessonbook for 1923/24</h4>
                   </li>
                 </ul>
                 <div class="tabPanes line">
                   <section id="tab1" class="tabPane">Letter <div class="tabTeaser">
-                    <p>This single-page letter - a note rather than a letter, perhaps - offers
+                      <p>This single-page letter - a note rather than a letter, perhaps - offers
                         some opinions and analytical thoughts on materials that O.E. Deutsch had
                         sent him six weeks earlier.</p>
-                    <p>
-                      <a class="tabLink" href="/documents/overviews/correspondence_eg.html">See
+                      <p>
+                        <a class="tabLink" href="/documents/overviews/correspondence_eg.html">See
                           more</a>
-                    </p>
-                  </div>
-                </section>
-                <section id="tab2" class="tabPane">Diary <div class="tabTeaser">
-                  <p>This diary page, p. 33, includes a notorious passage: his outspoken
+                      </p>
+                    </div>
+                  </section>
+                  <section id="tab2" class="tabPane">Diary <div class="tabTeaser">
+                      <p>This diary page, p. 33, includes a notorious passage: his outspoken
                         reaction to Schoenberg's first string quartet.</p>
-                  <p>
-                    <a class="tabLink" href="/documents/overviews/diaries_eg.html">See
-                        more</a>
-                  </p>
-                </div>
-              </section>
-              <section id="tab3" class="tabPane">Lessonbook <div class="tabTeaser">
-                <p>This is p. 14 of the 1923/24 lessonbook. It records part of the series of
+                      <p>
+                        <a class="tabLink" href="/documents/overviews/diaries_eg.html">See more</a>
+                      </p>
+                    </div>
+                  </section>
+                  <section id="tab3" class="tabPane">Lessonbook <div class="tabTeaser">
+                      <p>This is p. 14 of the 1923/24 lessonbook. It records part of the series of
                         lessons of Hans Weisse, covering April 1 to June 3, 1924.</p>
-                <p>
-                  <a class="tabLink" href="/documents/overviews/lessonbooks_eg.html">See
+                      <p>
+                        <a class="tabLink" href="/documents/overviews/lessonbooks_eg.html">See
                           more</a>
-                </p>
+                      </p>
+                    </div>
+                  </section>
+                </div>
+
               </div>
-            </section>
-          </div>
+              <!-- mod tabs ends-->
 
-        </div>
-        <!-- mod tabs ends-->
-
-        <div class="line bottomBoxes">
-          <div class="unit size1of3">
-            <h3>Heinrich Schenker</h3>
-            <p>Viennese musician and teacher Heinrich Schenker (1868-1935), the twentieth
+              <div class="line bottomBoxes">
+                <div class="unit size1of3">
+                  <h3>Heinrich Schenker</h3>
+                  <p>Viennese musician and teacher Heinrich Schenker (1868-1935), the twentieth
                     century's leading theorist of tonal music, produced a series of innovative
                     studies and editions between 1903 and 1935, while exerting a powerful and
                     sustained influence, directly and through his pupils, on the teaching of music
                     from the 1930s onward in the USA, and since the 1970s in Europe and
                     elsewhere.</p>
-            <p>Schenker maintained a vigorous correspondence over nearly half a century, kept
+                  <p>Schenker maintained a vigorous correspondence over nearly half a century, kept
                     a meticulously detailed diary over 40 years, and recorded precise notes on
                     lessons that he gave over a period of twenty years. It is these three
                     collections of personal documents that constitute the core of <em>Schenker
-                      Documents Online</em>.
-            </p>
-            <!-- PREVIOUS VERSION <p>Viennese musician and teacher Heinrich Schenker (1868-1935), the twentieth
+                      Documents Online</em>. </p>
+                  <!-- PREVIOUS VERSION <p>Viennese musician and teacher Heinrich Schenker (1868-1935), the twentieth
                     century's leading theorist of tonal music, produced a series of innovative
                     studies and editions between 1903 and 1935, while exerting a powerful and
                     sustained influence, directly and through his pupils, on the teaching of music
@@ -226,62 +227,61 @@
                     of Schenker's life and work, see "<a class="int" title="Link to Heinrich Schenker" href="/colloquy/heinrich_schenker.html">Heinrich Schenker</a>.")</p> -->
 
 
-          </div>
+                </div>
 
-          <div class="unit size1of3">
-            <h3>Schenker Documents and this Edition</h3>
-            <p>Schenker left behind approximately 130,000 manuscript and typescript leaves
+                <div class="unit size1of3">
+                  <h3>Schenker Documents and this Edition</h3>
+                  <p>Schenker left behind approximately 130,000 manuscript and typescript leaves
                     comprising unpublished works, preparatory materials, and personal documents,
                     preserved in two dedicated archives, numerous libraries, and private possession.
-                    (See "<a class="int" title="Link to Major Collections" href="/colloquy/major_collections.html">Major Collections</a>.") The archived
+                    (See "<a class="int" title="Link to Major Collections"
+                      href="/colloquy/major_collections.html">Major Collections</a>.") The archived
                     papers of several other scholars, among them Guido Adler, Oswald Jonas, Moriz
                     Violin, and Arnold Schoenberg, also preserve correspondence and other documents
                     relating to Schenker and his circle.</p>
-            <p>
-              <em>Schenker Documents Online</em> offers a scholarly edition of this material
+                  <p>
+                    <em>Schenker Documents Online</em> offers a scholarly edition of this material
                     based not on facsimiles but on near-diplomatic transcriptions of the original
                     texts, together with English translations, explanatory footnotes, summaries, and
                     contextual material relating the texts to Schenker's personal development and
                     that of his correspondents.</p>
 
-          </div>
-          <div class="unit size1of3 lastUnit">
-            <h3>Latest</h3>
-            <!-- COPY AND PASTE LINK BELOW TO DIRECT USERS TO THE 'OVERFLOW' PAGE FOR UPDATE NEWS IF APPROPRFIATE -->
-            <!-- <a class="int" title="Link to Latest Material" href="/documents/overviews/latest_material.html">More</a> -->
-            <h4>What's new in 2023?</h4>
-            <ul>
-              <li>
-                <b>CORRESPONDENCE:</b> This has been a bumper year! A rich new offering of
-                correspondence from the earlier period – 1894 to around 1913, featuring
-                Schenker’s closest friend, Moriz Violin, composer-pianist Ferruccio Busoni,
-                bass vocalist Eduard Gärtner, violinist Fritz Wahle, artist and critic
-                Adalbert Seligmann, and publisher Breitkopf &amp; Härtel, yielding a clearer
-                picture of Schenker as successively journalist, composer, and theorist, and
-                his professional aspirations; also the final period, 1927 to 1934, featuring
-                the publishers and printers of The Masterwork in Music, vol. 3 and Five
-                Graphic Music Analyses, and a remarkable epistolary collaboration with the
-                music bibliographer Otto Erich Deutsch.</li>
-              <li>
-                <b>LESSONBOOKS:</b> We now have a complete sweep of ten years, from 1912 to
-                1922. The 1912/13 teaching year provides a particularly detailed and
-                comprehensive record of the 708 lessons he gave in that time. Some pupils took
-                lessons only on piano, others took a combination of piano and theory, the most
-                committed taking three hour-long lessons a week, one of which was exclusive to
-                the study of form, and of counterpoint up to four or more voices in all five
-                species. One pupil, Hans Weisse uniquely took lessons in composition and
-                theory. This was the year in which Schenker completed the first volume of his
-                Beethoven’s Last Piano Sonatas, on Op. 109, and its influence on his teaching
-                at the time is clear to see.</li>
-              <li><b>DIARIES:</b> Just a reminder that since 2022 we have had the full range
-                of Schenker’s diaries, from 1896 to 1935, available on the site, offering a
-                rounded picture of Schenker as a professional, social, and family man,
-                revealing his innermost thoughts.</li>
-              <!--<li>
-                      <b>PROFILES:</b> </li>-->
-            </ul>
+                </div>
+                <div class="unit size1of3 lastUnit">
+                  <h3>Latest 2024</h3>
+                  <!-- COPY AND PASTE LINK BELOW TO DIRECT USERS TO THE 'OVERFLOW' PAGE FOR UPDATE NEWS IF APPROPRFIATE -->
+                  <!-- <a class="int" title="Link to Latest Material" href="/documents/overviews/latest_material.html">More</a> -->
+                  <h4>2024 features Schenker and his Family</h4>
+                  <ul>
+                    <li> Heinrich Schenker had a large extended family, and this is featured in the
+                      newly available material. It comprised his two brothers; his sister’s family
+                      (the Guttmanns); his wife Jeanette, who was one of ten children (the Schiffs);
+                      and the family of Jeanette’s first husband (the Kornfelds). All of these had
+                      children and grandchildren. – Many of them perished in the Holocaust. </li>
+                    <li>
+                      <b>CORRESPONDENCE:</b> Little has been known of these branches of Heinrich’s
+                      family, and yet his diary witnesses how closely he and Jeanette kept to many
+                      of its members through letters, greetings cards, and mutual visits, and how
+                      Heinrich took a close interest in their fortunes. In the belief that his
+                      personality must in part have been conditioned by his family background,
+                        <em>SDO</em> has devoted 2024 to placing all his correspondence with his
+                      extended family on the site. — New to the site also is the correspondence with
+                      John Petrie Dunn, follower of Heinrich’s theory in Edinburgh, and also the
+                      first of two batches of the correspondence with Breitkopf &amp; Härtel,
+                      publisher of several of Heinrich’s compositions.</li>
+                    <!--<li>
+                      <b>LESSONBOOKS:</b> </li>-->
+                    <li><b>DIARY:</b> Our edition of Heinrich’s diary was completed in 2022. This
+                      year we present Jeanette’s fascinating travel diary of her five-month voyage
+                      from Europe to South America in 1936, and her stay in Santiago to spread the
+                      word about her deceased husband’s theory.</li>
+                    <li>
+                      <b>PROFILES:</b> The newly supplied profiles include all of Schenker’s large
+                      family, all the people that Jeanette encountered on her South American voyage
+                      and sojourn, and the many new places and institutions that she visited.</li>
+                  </ul>
 
-            <!--<nav class="local" id="blogPosts">
+                  <!--<nav class="local" id="blogPosts">
                     <h4>From the Blog</h4>
                     <ul>
 
@@ -322,78 +322,84 @@
 
                     </ul>
                   </nav>-->
+                </div>
+                <!-- end column right -->
+
+
+
+
+              </div>
+              <!-- end bottomBoxes -->
+
+
+
+
+
+
+            </div>
+            <!-- left content ends -->
+
+
+
+
           </div>
-          <!-- end column right -->
+          <!-- end ContentSection -->
 
+          <!-- logos -->
 
+          <div class="line logos">
+            <ul class="inline">
+              <li>
+                <a href="http://www.ahrc.ac.uk">
+                  <img src="{$xmp:assets-path}/hp_assets/images/ahrc.png" width="169" height="40"
+                    alt="ahrc logo" title=""/>
+                </a>
+              </li>
+              <li>
+                <a href="http://www.leverhulme.ac.uk/">
+                  <img src="{$xmp:assets-path}/hp_assets/images/leverhulme.png" width="102"
+                    height="60" alt="Leverhulme logo" title=""/>
+                </a>
+              </li>
+              <li>
+                <a href="http://www.kcl.ac.uk/ddh">
+                  <img src="{$xmp:assets-path}/hp_assets/images/ddh.png"
+                    alt="Department of Digital Humanities logo" title=""/>
+                </a>
+              </li>
+              <li>
+                <a href="http://ccnmtl.columbia.edu/">
+                  <img src="{$xmp:assets-path}/hp_assets/images/columbia.png" width="122"
+                    height="55" alt="Columbia logo" title=""/>
+                </a>
+              </li>
+              <li>
+                <a href="http://www.soton.ac.uk/">
+                  <img src="{$xmp:assets-path}/hp_assets/images/southampton_logo.png" width="161"
+                    height="40" alt="Southampton logo" title=""/>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- end logos -->
 
-
-        </div>
-        <!-- end bottomBoxes -->
-
-
-
-
-
-
-      </div>
-      <!-- left content ends -->
-
-
-
-
-    </div>
-    <!-- end ContentSection -->
-
-    <!-- logos -->
-
-    <div class="line logos">
-      <ul class="inline">
-        <li>
-          <a href="http://www.ahrc.ac.uk">
-            <img src="{$xmp:assets-path}/hp_assets/images/ahrc.png" width="169" height="40" alt="ahrc logo" title=""/>
-          </a>
-        </li>
-        <li>
-          <a href="http://www.leverhulme.ac.uk/">
-            <img src="{$xmp:assets-path}/hp_assets/images/leverhulme.png" width="102" height="60" alt="Leverhulme logo" title=""/>
-          </a>
-        </li>
-        <li>
-          <a href="http://www.kcl.ac.uk/ddh">
-            <img src="{$xmp:assets-path}/hp_assets/images/ddh.png" alt="Department of Digital Humanities logo" title=""/>
-          </a>
-        </li>
-        <li>
-          <a href="http://ccnmtl.columbia.edu/">
-            <img src="{$xmp:assets-path}/hp_assets/images/columbia.png" width="122" height="55" alt="Columbia logo" title=""/>
-          </a>
-        </li>
-        <li>
-          <a href="http://www.soton.ac.uk/">
-            <img src="{$xmp:assets-path}/hp_assets/images/southampton_logo.png" width="161" height="40" alt="Southampton logo" title=""/>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <!-- end logos -->
-
-    <footer class="line footerSection">
-      <ul class="inline">
-        <li>&#x00A9;&#x00A0;2012&#x00A0;Schenker Documents Online.</li>
-        <li>In collaboration with the Department of Digital Humanities, King's College
+          <footer class="line footerSection">
+            <ul class="inline">
+              <li>&#x00A9;&#x00A0;2012&#x00A0;Schenker Documents Online.</li>
+              <li>In collaboration with the Department of Digital Humanities, King's College
                 London.</li>
-        <li class="s01">Powered by <a title="xMod home page" href="http://www.cch.kcl.ac.uk/xmod/">
-          <span>xMod</span>
-        </a>
-      </li>
-    </ul>
-  </footer>
-</div>
-<!-- end wrapper -->
+              <li class="s01">Powered by <a title="xMod home page"
+                  href="http://www.cch.kcl.ac.uk/xmod/">
+                  <span>xMod</span>
+                </a>
+              </li>
+            </ul>
+          </footer>
+        </div>
+        <!-- end wrapper -->
 
-<!-- Google Analytics tracking code -->
-<script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        <!-- Google Analytics tracking code -->
+        <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-40132787-1', 'schenkerdocumentsonline.org');
@@ -401,9 +407,10 @@
 
 </script>
 
-<script defer="defer" src="https://kdl.kcl.ac.uk/sla-acpp/js/sla.js" type="text/javascript">&#160;</script>
-</body>
-</html>
-</xsl:template>
+        <script defer="defer" src="https://kdl.kcl.ac.uk/sla-acpp/js/sla.js" type="text/javascript">
+&amp;#160;</script>
+      </body>
+    </html>
+  </xsl:template>
 
 </xsl:stylesheet>
