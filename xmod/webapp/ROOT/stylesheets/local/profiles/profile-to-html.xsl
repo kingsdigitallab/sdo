@@ -420,9 +420,17 @@
                 <xsl:value-of select="str[@name='title']"/>
               </xsl:when>
               <xsl:otherwise>
-                <xsl:text>Diary entry by Schenker for </xsl:text>
-                <xsl:value-of select="format-date(xs:date(str[@name='dateShort']), '[D] [MNn] [Y]')"
-                />
+                <xsl:choose>
+                  <xsl:when test="starts-with(str[@name='dateShort'], '1936')">
+                    <xsl:text>Diary entry by Jeanette Schenker for </xsl:text>
+                    <xsl:value-of select="format-date(xs:date(str[@name='dateShort']), '[D] [MNn] [Y]')"/>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:text>Diary entry by Schenker for </xsl:text>
+                    <xsl:value-of select="format-date(xs:date(str[@name='dateShort']), '[D] [MNn] [Y]')"/>
+                  </xsl:otherwise>
+                </xsl:choose>
+                
               </xsl:otherwise>
             </xsl:choose>
           </strong>
