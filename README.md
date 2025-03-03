@@ -121,19 +121,3 @@ command on servers to ensure the correct context. Replace `$INSTANCE_NAME` with
 the appropriate instance name for your setup.
 
 For local development, you can omit the `-p` flag.
-
-### Accessing Solr Admin
-
-To access the Solr Admin interface, on a local setup, go into the compose
-directory and rename the `docker-compose.override.yml.example` file to
-`docker-compose.override.yml`.
-
-Then, start the services with the following command:
-
-```sh
-docker compose up --build
-```
-
-The Solr Admin interface will be available at [http://localhost:8080/solr/](http://localhost:8080/solr/)
-by default. Note that if you changed the `TOMCAT_PORT` environment variable, you need to
-change the port in the URL.
