@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3249" sdoID="OJ-10-3_189">OJ 10/3, [189]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="TPoed" scope="major">Otto Erich Deutsch typist</tei:handNote>
+      <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-19" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Typewritten postcard from Deutsch to Schenker, dated April 25, 1933</dc:title>
+
+      <dcterms:created>1933-04-25T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-08-23</dcterms:dateSubmitted>
+      <dc:description>Deutsch has seen Schenker’s edition of a Brahms’s manuscript at the Brahms
+        exhibition at the Society of the Friends of Music. He reports that Hoboken is
+        (re)married.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>Absender:</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied>
+            <tei:handShift new="#TPoed"/>Herrn Dr. Heinrich Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-40">Keilgasse 8</tei:addrLine>
+          <tei:addrLine rend="indent-60">Wien III.</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-40"><tei:handShift new="#TPoed"/>Wien, <tei:date
+            when="1933-04-25">25. April 33</tei:date></tei:dateline>
+        <tei:salute>Lieber <tei:rs type="person" key="entity-000632">Verehrter</tei:rs>!<tei:note
+            xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this postcard is recorded
+            in Schenker’s diary for April 26, 1933: “Von Deutsch (K.): v. H. sei verheiratet; habe
+            die Brahms-Studie schon im Schaufenster gesehen; will mich besuchen.” (“From Deutsch
+            (postcard): Hoboken has married; he has already seen the Brahms study in the shop
+            window; he would like to visit me.”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first>">Seit gestern erst bin ich zurück, gut erholt. Am <tei:date
+          when="1933-04-20">Donnerstag</tei:date> war ich nur zu Gast hier. Deshalb kann ich erst
+        heute für Karte und Brief<tei:note xml:id="r0001-fn02" type="editorial" place="foot">There
+          is no record in Schenker’s diary of correspondence with Deutsch between April 2 (when he
+          visited the Schenkers in the evening) and April 23. In a letter written on April 24,
+          Schenker gave an account of a concert given by Carl Bamberger at the Palais
+          Kinsky.</tei:note> herzlichst danken. Die Ausgabe<tei:note xml:id="r0001-fn03"
+          type="editorial" place="foot">Schenker’s facsimile edition, with commentary, <tei:rs
+            type="work" key="entity-003331">Brahms: <tei:title level="m">Oktaven u. Quinten u.
+              A.</tei:title></tei:rs>, which had just been published by Universal
+          Edition.</tei:note> sah ich gestern schon in der Auslage der <tei:rs type="organization"
+          key="entity-002408">UE</tei:rs>, als ich die Brahmsausstellung vorbesichtigte (<tei:rs
+          type="organization" key="entity-002430">Ges. d. Mfr.</tei:rs>). Ich danke im Voraus
+        schönstens für das Widmungsexemplar. <tei:rs type="person" key="entity-000380">AvH</tei:rs>
+        ist verheiratet. Das wissen Sie wohl schon. Ich hoffe sehr, Sie nächster Tage aufsuchen zu
+        können </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">Indessen ganz der Ihre:</tei:salute>
+        <tei:signed rend="indent-90"><tei:handShift new="#OED"/><tei:rs type="person"
+            key="entity-000164">O E Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>From:</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied>
+            <tei:handShift new="#TPoed"/>Dr. Heinrich Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-40">Keilgasse 8</tei:addrLine>
+          <tei:addrLine rend="indent-60">Vienna III</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-40"><tei:handShift new="#TPoed"/>Vienna, <tei:date
+            when="1933-04-25">April 25, 1933</tei:date></tei:dateline>
+        <tei:salute>Dear revered <tei:rs type="person" key="entity-000632">friend</tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first>">I have been back only since yesterday, well recovered. On <tei:date
+          when="1933-04-20">Thursday</tei:date>, I was only a visitor here; for this reason I am
+        able to thank you for your postcard and letter<tei:ptr corresp="#r0001-fn02" type="footnote"
+        /> only today. I had already seen the edition<tei:ptr corresp="#r0001-fn03" type="footnote"
+        /> yesterday, on display at <tei:rs type="organization" key="entity-002408">Universal
+          Edition</tei:rs>, as I previewed the Brahms exhibition (<tei:rs type="organization"
+          key="entity-002430">Society of the Friends of Music</tei:rs>). I thank you in advance most
+        kindly for the dedication copy. <tei:rs type="person" key="entity-000380">Anthony van
+          Hoboken</tei:rs> is married: that is something you probably know already. I very much hope
+        to be able to look you up in the next few days. Until then, </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">Meanwhile, wholly your</tei:salute>
+        <tei:signed rend="indent-90"><tei:handShift new="#OED"/><tei:rs type="person"
+            key="entity-000164">O. E. Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

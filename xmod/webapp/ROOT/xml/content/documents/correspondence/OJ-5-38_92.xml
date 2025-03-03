@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="3556" sdoID="OJ-5-38_92">OJ 5/38, [92]</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+   <tei:handNote xml:id="pr" scope="minor">printed</tei:handNote>
+   <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="WMD">
+   <tei:persName>William Drabkin</tei:persName>
+   <tei:resp>Transcription, 2024</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="LR">
+   <tei:persName>Lee Rothfarb</tei:persName>
+   <tei:resp>Translation, 2024</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>XML Encoding, 2024</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="BOT">
+   <tei:name>Automated Script</tei:name>
+   <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2010-03-11" who="#IB">XML code revised</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-008423">SchenkerW ~
+    HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+   <dc:title>Handwritten postcard from Heinrich to Wilhelm Schenker, dated September 15,
+    1934</dc:title>
+
+   <dcterms:created>1934-09-15T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2024-11-14</dcterms:dateSubmitted>
+   <dc:description>Schenker tells Wilhelm that he has been in touch with their younger brother, who
+    promises to visit him the following week and make a “final settlement” of their financial
+    dispute.</dc:description>
+   <dc:subject/>
+
+   <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+   <marcrel:recipient key="entity-000775">Wilhelm Schenker</marcrel:recipient>
+
+  </sdo:itemDesc>
+
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/><tei:lb/>
+    <tei:fw type="header" rend="inline">
+     <tei:handShift new="#pr"/><tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
+    <tei:lb/>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:addrLine><tei:handShift new="#pr"/>Absender: <tei:handShift new="#stamp"/>Dr. HEINRICH
+       SCHENKER</tei:addrLine>
+      <tei:addrLine>WIEN, III., Keilgasse 8</tei:addrLine>
+     </tei:address>
+     <tei:address>
+      <tei:addrLine><tei:supplied>An:</tei:supplied>
+       <tei:handShift new="#HS"/>H. D<tei:hi rend="supralinear">r</tei:hi> Wilhelm
+       Schenker</tei:addrLine>
+      <tei:addrLine rend="indent-10">St. Bernhard b/ Horn</tei:addrLine>
+      <tei:addrLine>Nd: Öst:</tei:addrLine>
+     </tei:address>
+     <tei:fw type="postmark">|| 3 WIEN 41 | 15.IX.34 19 | * 4f * ||</tei:fw><tei:lb/>
+     <tei:lb/><tei:note type="editorial" place="inline">for continuation of recto, see
+      below</tei:note>
+     <tei:milestone unit="folio" n="verso"/>
+    </tei:fw>
+    <tei:dateline><tei:handShift new="#HS"/><tei:date when="1934-09-15">15. 9.
+     34</tei:date></tei:dateline>
+    <tei:salute>Mein lieber <tei:rs type="person" key="entity-000775">Wilhelm</tei:rs>!<tei:note
+      xml:id="r0001-fn01" type="editorial" place="foot">Writing of this postcard is recorded in
+      Schenker’s diary for September 15, 1934: “An Wilhelm (K.): Dank” (“To Wilhelm (postcard):
+      thanks”).</tei:note></tei:salute>
+   </tei:opener>
+
+   <tei:p>Herzlichsten Dank für deinen l. Bf samt schöne Beilage!<tei:note xml:id="r0001-fn02"
+     type="editorial" place="foot">= <tei:ref type="correspondence" cRef="OC-44-38">OC
+      44/38</tei:ref>: lettercard of September 12.</tei:note> Durch <tei:rs type="person"
+     key="entity-000774">Mozio</tei:rs> selbst erfuhr ich, daß die Versteigerung nicht
+     stattfindet,<tei:note xml:id="r0001-fn03" type="editorial" place="foot">This remark presumably
+     refers to the sale of Mozio’s property in <tei:rs type="place" key="entity-004104"
+      >Reichraming</tei:rs>, in which Heinrich had invested.</tei:note> so daß mir der Weg zum
+    Anwalt u. die Anmeldung erspart wurde. Er versprach uns in nächster Woche zu besuchen u. die
+    „Abrechnung“ zu machen. Wir wollen ja sehen, ich glaube noch nicht daran. Inzwischen haben mich
+    meine vielen Besucher – alle suchen Linderung ihrer Not ausgerechnet bei mir, der doch selber
+    nötig ist! – so stark eingespannt, daß ich schon ärztliche Hilfe in Anspruch nehmen
+     <tei:milestone unit="folio" n="recto"/> mußte. Allmälig beruhige ich mich wieder. Schreibe mir
+    recht bald, ich freue mich deiner Episteln gar sehr, auch <tei:rs type="person"
+     key="entity-000771">LieLiechen</tei:rs>! </tei:p>
+
+   <tei:closer>
+    <tei:salute>Dir u. der l. <tei:rs type="person" key="entity-008450">Frau
+     Marie</tei:rs></tei:salute>
+    <tei:salute>viele Küsse u. Grüße</tei:salute>
+    <tei:salute rend="indent-40">Dein</tei:salute>
+    <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000632"
+     >Heinrich</tei:rs></tei:signed>
+   </tei:closer>
+
+  </tei:div>
+
+
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/><tei:lb/>
+    <tei:fw type="header" rend="inline">
+     <tei:handShift new="#pr"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+    <tei:lb/>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:addrLine><tei:handShift new="#pr"/>From: <tei:handShift new="#stamp"/>Dr. HEINRICH
+       SCHENKER</tei:addrLine>
+      <tei:addrLine>VIENNA III, Keilgasse 8</tei:addrLine>
+     </tei:address>
+     <tei:address>
+      <tei:addrLine><tei:supplied>To:</tei:supplied>
+       <tei:handShift new="#HS"/>Dr. Wilhelm Schenker</tei:addrLine>
+      <tei:addrLine rend="indent-10">St. Bernhard, near Horn</tei:addrLine>
+      <tei:addrLine>Lower Austria</tei:addrLine>
+     </tei:address>
+     <tei:fw type="postmark">|| 3 VIENNA 41 | 15.IX.34 19 | * 4f * ||</tei:fw><tei:lb/>
+     <tei:lb/><tei:note type="editorial" place="inline">for continuation of recto, see
+      below</tei:note>
+     <tei:milestone unit="folio" n="verso"/>
+    </tei:fw>
+    <tei:dateline><tei:handShift new="#HS"/><tei:date when="1934-09-15">September 15,
+      1934</tei:date></tei:dateline>
+    <tei:salute>My dear <tei:rs type="person" key="entity-000775">Wilhelm</tei:rs>,<tei:ptr
+      corresp="#r0001-fn01" type="footnote"/></tei:salute>
+   </tei:opener>
+
+   <tei:p>Most cordial thanks for your first letter, including the lovely enclosure!<tei:ptr
+     corresp="#r0001-fn02" type="footnote"/> I found out through <tei:rs type="person"
+     key="entity-000774">Mozio</tei:rs> himself that the auction will not take place,<tei:ptr
+     corresp="#r0001-fn03" type="footnote"/> saving me the trip to the attorney and reporting to
+    him. He promised to visit us next week and to take care of the “final settlement.” We’ll see; I
+    don’t believe it yet. In the meantime, my many visitors – all seeking relief from their trouble
+    – from me of all people, who himself is in such need – have kept me so busy that I had to call
+    on a doctor’s help. <tei:milestone unit="folio" n="recto"/> I am gradually calming down. Write
+    me very soon. I so much enjoy your epistles, <tei:rs type="person" key="entity-000771"
+     >LieLiechen</tei:rs> too!</tei:p>
+
+   <tei:closer>
+    <tei:salute>To you and your dear <tei:rs type="person" key="entity-008450">wife
+     Marie</tei:rs></tei:salute>
+    <tei:salute>abundant kisses and greetings.</tei:salute>
+    <tei:salute rend="indent-40">Your</tei:salute>
+    <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000632"
+     >Heinrich</tei:rs></tei:signed>
+   </tei:closer>
+
+  </tei:div>
+
+ </sdo:record>
+</sdo:recordCollection>

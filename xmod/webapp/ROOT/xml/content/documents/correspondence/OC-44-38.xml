@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3557" sdoID="OC-44-38">OC 44/38</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="WS" scope="major">Wilhelm Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="pr" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="LR">
+      <tei:persName>Lee Rothfarb</tei:persName>
+      <tei:resp>Translation, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-11" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008423">SchenkerW ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002845">lettercard</tei:rs>
+
+      <dc:title>Handwritten lettercard from Wilhelm to Heinrich &amp; Jeanette Schenker, dated
+        September 12, 1934</dc:title>
+      <dcterms:created>1934-09-12T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2024-11-13</dcterms:dateSubmitted>
+      <dc:description>Wilhelm Schenker recounts a visit from Lisl Richtera (Schenker) and subsequent
+        information about a villa being for sale.</dc:description>
+      <dc:subject/>
+
+
+      <marcrel:correspondent key="entity-000775">Wilhelm Schenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+      <marcrel:recipient key="entity-000771">HJSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#pr"/><tei:hi rend="bold"
+            >Kartenbrief</tei:hi></tei:fw><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>Absender: <tei:handShift new="#stamp"/>Der gesammten
+              Heilkunde</tei:addrLine>
+            <tei:addrLine>D<tei:hi rend="supralinear">R</tei:hi> WILHELM SCHENKER</tei:addrLine>
+            <tei:addrLine rend="indent-40"><tei:handShift new="#WS"/>in St. Bernard bei
+              Horn</tei:addrLine>
+            <tei:addrLine rend="indent-50">Post: Horn</tei:addrLine>
+            <tei:addrLine rend="indent-60">N. O.</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#pr"/>An <tei:handShift new="#WS"/>S<tei:hi
+                rend="supralinear">n</tei:hi> Hochw. Herrn Prof D<tei:hi rend="supralinear"
+                >r.</tei:hi> Heinrich Schenker</tei:addrLine>
+            <tei:addrLine><tei:handShift new="#pr"/>in <tei:handShift new="#WS"/>Wien
+              III</tei:addrLine>
+            <tei:addrLine>Keilgasse 8/12</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark"> || <tei:gap reason="illegible"/> || <tei:gap reason="illegible"/>
+            | * a * ||</tei:fw><tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+          <tei:address>
+            <tei:addrLine rend="indent-80"><tei:handShift new="#WS"/>am <tei:date when="1934-09-12"
+                >12/9 1934</tei:date></tei:addrLine>
+            <tei:addrLine rend="indent-50">St. Bernhard b. H.</tei:addrLine>
+            <tei:addrLine rend="indent-80">Post: Horn</tei:addrLine>
+            <tei:addrLine rend="indent-80">N. O.</tei:addrLine>
+          </tei:address>
+        </tei:fw>
+      </tei:opener>
+
+      <tei:salute rend="indent-50">Meine Lieben!<tei:note xml:id="r0001-fn01" type="editorial"
+          place="foot">Receipt of this lettercard is recorded in Schenker’s diary for September 13,
+          1934: “Von Wilhelm (Kartenbr.): hatte Frau Richtera u. Helga. – Mozio sei guter Laune”
+          (From Wilhelm (lettercard): “From Wilhelm (lettercard): he entertained Mrs. Richtera and
+          Helga – Mozio is in good spirits”).</tei:note></tei:salute>
+
+
+      <tei:p>Karte von <tei:rs type="place" key="entity-002578">Salzburg</tei:rs><tei:note
+          xml:id="r0001-fn02" type="editorial" place="foot"><tei:ref type="correspondence"
+            cRef="OJ-5-38_91">OJ 5/38, [91]</tei:ref>, dated September 5, 1934.</tei:note> erhalten
+        – besten Dank. – Hoffentlich gut und gesund nach Wien schon zurück. – </tei:p>
+
+      <tei:p>Vor einiger Zeit hat mich ganz unverhofft, <tei:rs type="person" key="entity-003438"
+          >Lisl Richtera</tei:rs> samt <tei:rs type="person" key="entity-003067">Tochter
+          (Helga)</tei:rs>, par Auto heimgesucht. – </tei:p>
+
+      <tei:p>Sie war ganz erstaunt, dass das Gut zum <tei:choice>
+          <tei:sic>Verklopfen</tei:sic>
+          <tei:corr>Verkloppen</tei:corr>
+        </tei:choice> ausgeschrieben wurde.<tei:note xml:id="r0001-fn03" type="editorial"
+          place="foot">This remark may refer to a property in <tei:rs type="place"
+            key="entity-004104">Reichraming</tei:rs> owned by Moriz Schenker, in which Heinrich had
+          invested and was having difficulty retrieving his money. </tei:note> Nach einigen Tagen
+        erhielt ich von ihr den Bericht, dass diese Nachricht nicht stimmt. – Möglich, dass <tei:rs
+          type="person" key="entity-000774">Moschko</tei:rs> diese Angelegenheit geordnet hat. –
+        Sollte aber dennoch zum Verkauf kommen, wäre vielleicht für <tei:rs type="person"
+          key="entity-000774">Moschko</tei:rs> besser, da dieses Gut derzeit nur Kosten verursacht,
+        ohne jedweder Erträgnis. </tei:p>
+
+      <tei:p>Er ist<tei:supplied reason="punctuation">,</tei:supplied> wie <tei:rs type="person"
+          key="entity-003438">Lisl</tei:rs> schreibt, bei guter Laune. – Die Hauptsache wäre noch,
+        dass sich ein Käufer findet, was beinahe ausgeschlossen ist. </tei:p>
+
+      <tei:p>Der Villa in <tei:rs type="place" key="entity-002394">Baden</tei:rs> ist Eigentum der
+          <tei:rs type="person" key="entity-003438">Lisl</tei:rs>, ist aber auch bereits mit 20.000
+        S. belastet.<tei:note xml:id="r0001-fn04" type="editorial" place="foot">It is possible that
+          this correlates with “the last few thousand shillings” spoken of by Heinrich in <tei:ref
+            type="correspondence" cRef="OJ-5-38_87">OJ 5/38, [87]</tei:ref>, April 15, 1934. — This
+          paragraph refers to the villa in Baden bei Wien that had been the family home for
+          decades.</tei:note></tei:p>
+
+      <tei:p>Von meinen Kindern habe ich derzeit wenig Nachrichten. Das Wetter hat sich gebessert,
+        und der Regen hat sich zwar jetzt eingestellt, aber zu spät. – Dafür sind wir mit Obst sehr
+        stark gesegnet, und auch sehr billig. </tei:p>
+
+      <tei:closer>
+        <tei:salute>Herzliche Grüsse von <tei:unclear reason="reading"
+          >Sarahlaba</tei:unclear></tei:salute>
+        <tei:salute rend="indent-50">Stets Euer schöner</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs key="entity-000775" type="person"
+          >Wilhelm</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#pr"/><tei:hi rend="bold"
+            >Lettercard</tei:hi></tei:fw><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>From: <tei:handShift new="#stamp"/>DR. WILHELM SCHENKER</tei:addrLine>
+            <tei:addrLine><tei:supplied reason="clarity">Doctor</tei:supplied> of the Entire Science
+              of Medicine</tei:addrLine>
+            <tei:addrLine rend="indent-40"><tei:handShift new="#WS"/>in St. Bernard, near
+              Horn</tei:addrLine>
+            <tei:addrLine rend="indent-50">Post: Horn</tei:addrLine>
+            <tei:addrLine rend="indent-60">Lower Austria</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#pr"/>To: <tei:handShift new="#WS"/>Prof Heinrich
+              Schenker, Esq.</tei:addrLine>
+            <tei:addrLine>Keilgasse 8/12</tei:addrLine>
+            <tei:addrLine>Vienna III</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark"> || <tei:gap reason="illegible"/> || <tei:gap reason="illegible"/>
+            | * a * ||</tei:fw><tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+          <tei:address>
+            <tei:addrLine rend="indent-80"><tei:handShift new="#WS"/><tei:date when="1934-09-12"
+                >September 12, 1934</tei:date></tei:addrLine>
+            <tei:addrLine rend="indent-50">St. Bernhard, near Horm</tei:addrLine>
+            <tei:addrLine rend="indent-80">Post: Horn</tei:addrLine>
+            <tei:addrLine rend="indent-80">Lower Austria</tei:addrLine>
+          </tei:address>
+        </tei:fw>
+      </tei:opener>
+
+      <tei:salute rend="indent-50">My dears,<tei:ptr corresp="#r0001-fn01" type="footnote"
+        /></tei:salute>
+
+
+      <tei:p>Postcard from <tei:rs type="place" key="entity-002578">Salzburg</tei:rs><tei:ptr
+          corresp="#r0001-fn02" type="footnote"/> received – many thanks. – Hopefully <tei:supplied
+          reason="clarity">you are</tei:supplied> already back in Vienna, well and healthy.
+        –</tei:p>
+
+      <tei:p>Some time ago, <tei:rs type="person" key="entity-003438">Lisl Richtera</tei:rs>,
+        together with <tei:rs type="person" key="entity-003067">daughter (Helga)</tei:rs>, visited
+        me by car.</tei:p>
+
+      <tei:p>She was totally surprised that the property was advertised for sale.<tei:ptr
+          corresp="#r0001-fn03" type="footnote"/> After a few days, I received from her the report
+        that the news was incorrect. – It is possible that <tei:rs type="person" key="entity-000774"
+          >Moschko</tei:rs> cooked this up. – However, if it should come to a sale anyway, it would
+        perhaps be better for <tei:rs type="person" key="entity-000774">Moschko</tei:rs> because, at
+        the time, this property only generated expenses, with no proceeds whatsoever.</tei:p>
+
+      <tei:p>As <tei:rs type="person" key="entity-003438">Lisl</tei:rs> writes, he is in a good
+        mood. – The main thing, still, would be that a buyer can be identified, which is practically
+        out of the question.</tei:p>
+
+      <tei:p>The villa in <tei:rs type="place" key="entity-002394">Baden</tei:rs> is under <tei:rs
+          type="person" key="entity-003438">Lisl</tei:rs>’s ownership, but is already burdened with
+        20,000 shillings.<tei:ptr corresp="#r0001-fn04" type="footnote"/></tei:p>
+
+      <tei:p>I have little news just now from my children. The weather has improved, and the rain
+        has now stopped, to be sure, but too late. – Consequently, we are greatly blessed with
+        fruit, and also very inexpensively.</tei:p>
+
+      <tei:closer>
+        <tei:salute>Cordial greetings from <tei:unclear reason="original_unclear"
+            >Sarahlaba</tei:unclear></tei:salute>
+        <tei:salute rend="indent-50">Ever your</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs key="entity-000775" type="person"
+          >Wilhelm</tei:rs></tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

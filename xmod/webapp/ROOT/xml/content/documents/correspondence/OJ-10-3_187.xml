@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3218" sdoID="OJ-10-3_187">OJ 10/3, [187]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="TPoed" scope="major">Otto Erich Deutsch typist</tei:handNote>
+      <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-19" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Typewritten postcard from Deutsch to Schenker, dated October 21, 1932</dc:title>
+
+      <dcterms:created>1932-10-21T14:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-08-09</dcterms:dateSubmitted>
+      <dc:description>Deutsch asks whether Schenker would have time to meet a Mr. [Bruno]
+        Maischhofer from Basel the following day (October 22). He has looked at a copy of “Auf dem
+        Flusse” from Schubert’s Winterreise, and questions the reading of the final note of the
+        voice part in bar 63.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postk<tei:supplied reason="overstamped"
+              >arte</tei:supplied></tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>Absender: <tei:handShift new="#TPoed"
+            />Deutsch, Wien, Böcklinstr. 26</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied> Herrn Dr. Heinrich
+            Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-40">Keilgasse 8</tei:addrLine>
+          <tei:addrLine rend="indent-60">Wien III.</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-40"><tei:handShift new="#TPoed"/>Wien, <tei:date
+            when="1932-10-21">21. Okt. 32</tei:date></tei:dateline>
+        <tei:salute>Lieber <tei:rs type="person" key="entity-000632">Verehrter</tei:rs>!<tei:note
+            xml:id="r0001-fn01" type="editorial" place="foot"> Receipt of this postcard and
+            Schenker’s response are recorded in Schenker’s diary for October 22, 1932: “Von Deutsch
+            (K.): kommt mit Prof. Maischhofer aus Basel. — An Prof. Deutsch (teleph.): bitte um
+              ½6<tei:hi rend="supralinear">h</tei:hi>.” (“From Deutsch (postcard): he is coming with
+            Prof. Maischhofer from Basel. To Prof. Deutsch (telephone call): ask him to come at
+            5:30.”). </tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first>">Ich habe heute mittags zur genannten Stunde (2 Uhr) versucht, Sie
+        telefonisch zu erreichen, aber es meldete sich niemand. So muss ich auf diesem alten Wege
+        fragen, ob Sie Herrn <tei:rs type="person" key="entity-006057">Maischhofer</tei:rs> aus
+          Basel<tei:note xml:id="r0001-fn02" type="editorial" place="foot">Bruno Maischhofer
+          (1895–1973), a German pianist and piano teacher based in Basel and Munich, who
+          occasionally performed with the Basel String Quartet. Schenker’s diary records an early
+          evening meeting with Deutsch and Maischhofer, “a dreary German musician.”</tei:note> noch
+          <tei:date when="1932-10-22">Samstag</tei:date> vor 4 oder nach 5 ein halbes Stündchen
+        empfangen können. Er ist zwischen 4 und 5 und ab 7 Uhr vergeben. Bitte um telefonischen
+        Bescheid. </tei:p>
+
+      <tei:p rend="first">Heute habe ich für <tei:rs type="person" key="entity-000380">H.</tei:rs>
+        die Stelle im Liede „<tei:title>Auf dem Flusse</tei:title>“ nach der Druckvorlage, einer
+        fremden Handschrift mit Korrekturen <tei:rs type="person" key="entity-000803"
+          >Schubert</tei:rs>s, überprüft. Ohne rechten Dank lehnte <tei:rs type="person"
+          key="entity-000380">H.</tei:rs> meine Meinung, dass das D der Singstimme richtig <tei:choice>
+          <tei:sic>Des</tei:sic>
+          <tei:corr>Dis</tei:corr>
+        </tei:choice> heissen müsse und dass der Auflöser also erst am Anfang des nächsten Taktes
+        stehen dürfe (was Schubert also zu korrigieren übersehen hätte), kaltschnautzig ab, wegen
+        der „Linie“. Ich bin begierig auf Ihre Meinung. Das H der Handschrift (Autograph Schuberts)
+        ist wohl falsch.<tei:note xml:id="r0001-fn03" type="editorial" place="foot">The note in
+          question is the last note in bar 63, marked below with an asterisk. In Schubert’s
+          autograph manuscript, this is a b<tei:hi rend="supralinear">1</tei:hi>. In the first
+          edition, which was prepared from a copy containing the composer’s handwritten corrections,
+          it is a d<tei:g type="nat"/><tei:hi rend="supralinear">2</tei:hi>.</tei:note></tei:p>
+
+
+
+      <tei:closer>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:salute rend="indent-20">Mit schönen Grüssen 2:2</tei:salute>
+        <tei:salute rend="indent-40">Ihr ganz ergebener</tei:salute>
+        <tei:signed rend="indent-80"><tei:handShift new="#OED"/><tei:rs type="person"
+            key="entity-000164">O E Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postc<tei:supplied reason="overstamped"
+              >ard</tei:supplied></tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>From: <tei:handShift new="#TPoed"/>Deutsch,
+            Vienna, Böcklinstraße 26</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied> Dr. Heinrich
+            Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-40">Keilgasse 8</tei:addrLine>
+          <tei:addrLine rend="indent-60">Vienna III</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-40"><tei:handShift new="#TPoed"/>Vienna, <tei:date
+            when="1932-10-21">October 21, 1932</tei:date></tei:dateline>
+        <tei:salute>Dear revered <tei:rs type="person" key="entity-000632">friend</tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first>">I tried to reach you by telephone today at the appointed time (2
+        o’clock), but no one replied. So I must take this old path to ask you if you are still able
+        to receive Mr <tei:rs type="person" key="entity-006057">Maischhofer</tei:rs> of
+          Basel<tei:ptr corresp="#r0001-fn02" type="footnote"/> on <tei:date when="1932-10-22"
+          >Saturday</tei:date>, before 4 o’clock or after 5, for half an hour. He is engaged between
+        4 and 5, and from 7 o’clock. Please let me know by telephone.</tei:p>
+
+      <tei:p rend="first">Today I checked the passage in the song “<tei:title>Auf dem
+          Flusse</tei:title>” for <tei:rs type="person" key="entity-000380">Hoboken</tei:rs> against
+        the source that was used for the first edition, a manuscript in a foreign hand with
+        corrections by <tei:rs type="person" key="entity-000803">Schubert</tei:rs>. Without thanking
+        me properly, <tei:rs type="person" key="entity-000380">Hoboken</tei:rs> insolently dismissed
+        my opinion, that the D in the vocal part should be D<tei:g type="sharp"/> and that the
+        natural sign ought to be placed at the beginning of the following bar (which Schubert
+        neglected to correct), on account of the “line”. I am interested in your opinion. The B in
+        the manuscript (Schubert’s autograph) is probably a mistake.<tei:ptr corresp="#r0001-fn03"
+          type="footnote"/></tei:p>
+
+
+
+      <tei:closer>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:salute rend="indent-20">With best greetings from the two of us to the two of
+          you,</tei:salute>
+        <tei:salute rend="indent-40">Your wholly devoted</tei:salute>
+        <tei:signed rend="indent-80"><tei:handShift new="#OED"/><tei:rs type="person"
+            key="entity-000164">O. E. Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

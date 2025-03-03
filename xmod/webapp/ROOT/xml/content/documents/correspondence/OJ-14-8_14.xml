@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3574" sdoID="OJ-14-8_14">OJ 14/8, [14]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="PS" scope="major">Paul Schiff's hand</tei:handNote>
+      <tei:handNote xml:id="AS" scope="minor">Anna Schiff's hand</tei:handNote>
+      <tei:handNote xml:id="unk1" scope="minor">first unknown hand</tei:handNote>
+      <tei:handNote xml:id="unk2" scope="minor">second unknown hand</tei:handNote>
+    </tei:handNotes>
+
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2024</tei:resp>
+      <tei:resp>Translation, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-11" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008461">SchiffP ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008460">SchiffA ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture
+        postcard</tei:rs>
+
+      <dc:title>Handwritten picture postcard from Paul &amp;Anna Schiff to Jeanette Schenker, dated June 25,
+        1927</dc:title>
+
+      <dcterms:created>1927-06-25T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2025-02-13</dcterms:dateSubmitted>
+      <dc:description>Paul, Anna, and Lisa Schiff send greetings from their summer holiday in Frain
+        an der Thaya [now Vranov nad Dyjí in the Czech Republic], not far from the border with Lower
+        Austria, and ask for news of Heinrich and Jeanette.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000782">Paul Schiff</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000781">Anna Schiff</marcrel:correspondent>
+      <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:div type="part_1">
+        <tei:opener>
+          <tei:milestone unit="folio" n="verso"/><tei:lb/>
+          <tei:note type="editorial" place="inline">picture: castle high above a river with
+            waterfall, captioned on recto: “Frain a.d. Thaya. Schloß.”</tei:note><tei:lb/>
+          <tei:milestone unit="folio" n="recto"/><tei:lb/>
+          <tei:fw type="envelope">
+            <tei:address>
+              <tei:addrLine><tei:supplied>An:</tei:supplied>
+                <tei:handShift new="#PS"/>Frau Lie-Lie Schenker</tei:addrLine>
+              <tei:addrLine rend="indent-10"><tei:del rend="overstrike"><tei:hi rend="underline"
+                    >Wien III.,</tei:hi></tei:del></tei:addrLine>
+              <tei:addrLine rend="indent-10"><tei:del rend="overstrike">Keilgasse
+                8</tei:del></tei:addrLine>
+              <tei:addrLine><tei:handShift new="#unk1"/><tei:del rend="overstrike"
+                >Galtür</tei:del></tei:addrLine>
+              <tei:addrLine><tei:handShift new="#unk2"/><tei:note type="editorial" place="inline"
+                  >beside postage stamp:</tei:note>Galtür</tei:addrLine>
+              <tei:addrLine><tei:note type="editorial" place="inline">beside postage
+                  stamp:</tei:note>Tirol</tei:addrLine>
+            </tei:address><tei:lb/>
+            <tei:fw type="postmark">|| VRANOV NAD DYJI | 25.V1 – 27 | a | * FRAIN * ||</tei:fw>
+          </tei:fw><tei:lb/>
+          <tei:dateline rend="indent-50"><tei:handShift new="#PS"/><tei:date when="1927-06-25"
+              >25/VI. 27</tei:date>.</tei:dateline>
+          <tei:salute>Meine Lieben!</tei:salute>
+        </tei:opener>
+
+        <tei:p>Von unserem Sommeraufenthalt, der für mich schon in 2 Tagen zu Ende geht, herzlichste
+          Grüsse. Es wird mich wie <tei:rs type="person" key="entity-000781">Anna</tei:rs> sehr
+          freuen, von Euch mehr zu hören, wobei Euch unsere Verschlossenheit nicht abschrecken soll,
+          zu schreiben.</tei:p>
+
+        <tei:closer>
+          <tei:salute>Wir befinden uns samt <tei:rs type="person" key="entity-007617">Kind</tei:rs>
+            wohlauf</tei:salute>
+          <tei:salute>&amp; grüßen herzl.</tei:salute>
+          <tei:signed><tei:rs type="person" key="entity-000782">Paul</tei:rs>, <tei:rs type="person"
+              key="entity-000781">Anna</tei:rs> &amp; <tei:rs type="person" key="007617"
+              >Lisl</tei:rs></tei:signed>
+        </tei:closer>
+      </tei:div>
+
+      <tei:div type="part_2">
+        <tei:p/>
+        <tei:closer>
+          <tei:salute><tei:handShift new="#AS"/>für Euren Sommeraufenthalt viele gute Wünsche </tei:salute>
+          <tei:signed rend="indent-70"><tei:rs type="person" key="entity-000781"
+            >Anna</tei:rs></tei:signed>
+        </tei:closer>
+      </tei:div>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:div type="part_1">
+        <tei:opener>
+          <tei:milestone unit="folio" n="verso"/><tei:lb/>
+          <tei:note type="editorial" place="inline">picture: castle high above a river with
+            waterfall, captioned on recto: “Frain on the Thaya. Castle.”</tei:note><tei:lb/>
+          <tei:milestone unit="folio" n="recto"/><tei:lb/>
+          <tei:fw type="envelope">
+            <tei:address>
+              <tei:addrLine><tei:supplied>To:</tei:supplied>
+                <tei:handShift new="#PS"/>Mrs. Lie-Lie Schenker</tei:addrLine>
+              <tei:addrLine rend="indent-10"><tei:del rend="overstrike"><tei:hi rend="underline"
+                    >Vienna III</tei:hi></tei:del></tei:addrLine>
+              <tei:addrLine rend="indent-10"><tei:del rend="overstrike">Keilgasse
+                8</tei:del></tei:addrLine>
+              <tei:addrLine><tei:handShift new="#unk1"/><tei:del rend="overstrike"
+                >Galtür</tei:del></tei:addrLine>
+              <tei:addrLine><tei:handShift new="#unk2"/><tei:note type="editorial" place="inline"
+                  >beside postage stamp:</tei:note>Galtür</tei:addrLine>
+              <tei:addrLine><tei:note type="editorial" place="inline">beside postage
+                  stamp:</tei:note>Tyrol</tei:addrLine>
+            </tei:address><tei:lb/>
+            <tei:fw type="postmark">|| VRANOV NAD DYJI | 25.V1 – 27 | a | * FRAIN * ||</tei:fw>
+          </tei:fw><tei:lb/>
+          <tei:dateline rend="indent-50"><tei:handShift new="#PS"/><tei:date when="1927-06-25">June
+              25, 1927</tei:date></tei:dateline>
+          <tei:salute>My dear ones,</tei:salute>
+        </tei:opener>
+
+        <tei:p>From our summer sojourn, which for me ends in two days’ time, most cordial greetings.
+          Anna and I would be very glad to hear more <tei:supplied reason="clarity"
+            >news</tei:supplied> of you – don’t let our reservedness discourage you from
+          writing.</tei:p>
+
+        <tei:closer>
+          <tei:salute>We and our <tei:rs type="person" key="007617">child</tei:rs> are fine
+            and</tei:salute>
+          <tei:salute>send you our cordial greetings.</tei:salute>
+          <tei:signed><tei:rs type="person" key="entity-000782">Paul</tei:rs>, <tei:rs type="person"
+              key="entity-000781">Anna</tei:rs> and <tei:rs type="person" key="007617"
+              >Lisl</tei:rs></tei:signed>
+        </tei:closer>
+      </tei:div>
+
+      <tei:div type="part_2">
+        <tei:p/>
+        <tei:closer>
+          <tei:salute><tei:handShift new="#AS"/>Very best wishes for your summer vacation.</tei:salute>
+          <tei:signed rend="indent-70"><tei:rs type="person" key="entity-000781"
+            >Anna</tei:rs></tei:signed>
+        </tei:closer>
+      </tei:div>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

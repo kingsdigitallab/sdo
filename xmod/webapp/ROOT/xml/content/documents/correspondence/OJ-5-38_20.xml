@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3426" sdoID="OJ-5-38_20">OJ 5/38, [20]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="sole">Heinrich Schenker's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="LR">
+      <tei:persName>Lee Rothfarb</tei:persName>
+      <tei:resp>Translation, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-11" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008423">SchenkerW ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture
+        postcard</tei:rs>
+
+      <dc:title>Handwritten picture postcard from Heinrich to Wilhelm Schenker, dated July 29,
+        1925</dc:title>
+
+      <dcterms:created>1925-07-29T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2024-06-14</dcterms:dateSubmitted>
+      <dc:description>Heinrich asks for news from his brother Wilhelm, and whether he was with his
+        stepson Karli in Vienna.</dc:description>
+      <dc:subject/>
+      
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000775">Wilhelm Schenker</marcrel:recipient>
+      
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:note type="editorial" place="inline">picture: valley with mountain peaks: captioned:
+          “Jamtalhütte – Jamtalfernerspitzen – Dreiländerspitze“</tei:note><tei:lb/><tei:lb/>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">Abs.:</tei:supplied>
+              <tei:handShift new="#HS"/>Schenker,</tei:addrLine>
+            <tei:addrLine>Galtür,</tei:addrLine>
+            <tei:addrLine>Tirol</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied> D<tei:hi
+                rend="supralinear">r.</tei:hi> Wilhelm Schenker</tei:addrLine>
+            <tei:addrLine rend="ident-10">St. Bernhard b. Horn</tei:addrLine>
+            <tei:addrLine rend="ident-10">Nd: Öst.</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark">|| GALTÜR | 29. VII.[2]5 | * a * ||</tei:fw><tei:lb/>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#HS"/>Mein lieber <tei:rs type="person" key="entity-000775"
+            >Wilhelm</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Writing of
+            this postcard is recorded in Schenker’s diary for July 29, 1925: “An Wilhelm
+            (Ansichtsk.): ob er in Wien war?” (“To Wilhelm (picture postcard): was he in
+            Vienna?”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Was thut sich bei Dir? Warst du in Wien mit <tei:rs type="person" key="entity-008438"
+          >Karli</tei:rs>? Lasse ein paar Worte hören! Wir habe alle diese Zeit gebraucht, um zu uns
+        zu kommen, so über<tei:supplied reason="omission">ge</tei:supplied>schnappt waren wir! Nun
+        geht es uns besser. </tei:p>
+
+      <tei:closer>
+        <tei:salute>Viele Grüße u. Küsse von</tei:salute>
+        <tei:signed rend="indent-40"><tei:rs type="person" key="entity-000632">Heinrich</tei:rs> u.
+            <tei:rs type="person" key="entity-000771">Lie-Lie</tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:note type="editorial" place="inline">sideways in upper margin:</tei:note>
+          <tei:date when="1925-07-29">29. VII. 1925</tei:date></tei:dateline>
+      </tei:closer>
+
+
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:note type="editorial" place="inline">picture: valley with mountain peaks: captioned:
+          “Jamtal Cabin – Jamtal distant peaks – Three Countries Peak“</tei:note><tei:lb/><tei:lb/>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">From:</tei:supplied>
+              <tei:handShift new="#HS"/>Schenker</tei:addrLine>
+            <tei:addrLine>Galtür</tei:addrLine>
+            <tei:addrLine>Tyrol</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied> Dr. Wilhelm
+              Schenker</tei:addrLine>
+            <tei:addrLine rend="ident-10">St. Bernhard, near Horn</tei:addrLine>
+            <tei:addrLine rend="ident-10">Lower Austria</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark">|| GALTÜR | 29. VII.[2]5 | * a * ||</tei:fw><tei:lb/>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#HS"/>My deat <tei:rs type="person" key="entity-000775"
+            >Wilhelm</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>What’s going on with you? Were you in Vienna with <tei:rs type="person"
+          key="entity-008438">Karli</tei:rs>? Let’s hear a few words! We have needed this entire
+        time to come around, so haywire were we! We’re doing better now. </tei:p>
+
+      <tei:closer>
+        <tei:salute>Greetings and kisses from</tei:salute>
+        <tei:signed rend="indent-40"><tei:rs type="person" key="entity-000632">Heinrich</tei:rs> and
+            <tei:rs type="person" key="entity-000771">Lie-Lie</tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:note type="editorial" place="inline">sideways in upper margin:</tei:note>
+          <tei:date when="1925-07-29">July 29, 1925</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+
+    <sdo:source>
+      <sdo:correspondence mfID="3321" sdoID="OC-54-228">OC 54/228</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="TPdmvN" scope="major">Typist "N." (DMV)</tei:handNote>
+      <tei:handNote xml:id="AD" scope="minor">August Demblin's hand (DMV)</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamp</tei:handNote>
+    </tei:handNotes>
+
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2011-10-11" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-004414">DMV ~
+        HSchenker</tei:rs>
+      <tei:rs key="entity-004415" type="correspondence" role="correspondence">Demblin ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+      <dc:title>Typewritten letter from August Demblin (DMV) to Schenker, dated July 18,
+        1930</dc:title>
+
+      <dcterms:created>1930-07-18T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-10-13</dcterms:dateSubmitted>
+      <dc:description>Drei Masken Verlag acknowledge the receipt of Schenker’s signed contract for
+        the third Meisterwerk yearbook.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-002627">DMV</marcrel:correspondent>
+      <marcrel:correspondent key="entity-004417">Demblin</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>DREI MASKEN VERLAG AG.</tei:addrLine>
+          <tei:addrLine>MÜNCHEN</tei:addrLine>
+          <tei:addrLine>KAROLINENPLATZ 3</tei:addrLine>
+          <tei:lb/>
+        </tei:address>
+        <tei:byline><tei:handShift new="#TPdmvN"/>Dr.D./N.</tei:byline>
+        <tei:dateline rend="indent-60">
+          <tei:placeName>München</tei:placeName>, den <tei:date when="1930-07-18">18. Juli
+            1930</tei:date></tei:dateline><tei:lb/>
+        <tei:address>
+
+          <tei:addrLine rend="indent-20">Herrn Dr. Heinrich <tei:hi rend="sperr"
+            >Schenker</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-40">
+            <tei:hi rend="underline"><tei:hi rend="sperr">Galtür</tei:hi> /
+            Tirol</tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:lb/>
+        <tei:salute>Sehr geehrter Herr <tei:rs key="entity-000632" type="person"
+            >Doktor</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
+            this letter is recorded in Schenker’s diary for July 19, 1930: “Vom Verlag (Br.):
+            Gegenzeichnung.” (“From the publisher (letter): countersigned contract.”). </tei:note>
+        </tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Mit bestem Dank bestätigen wir Ihnen den Empfang des von Ihnen
+        unterzeichneten Vertrages über <tei:rs type="work" key="entity-001752">„<tei:title>Das
+            Meisterwerk in der Musik</tei:title>“, Band III</tei:rs>.<tei:note xml:id="r0001-fn02"
+          type="editorial" place="foot">Cf. <tei:ref type="correspondence" cRef="OC-54-311">OC
+            54/311</tei:ref>, July 14, 1930, from Otto Erich Deutsch to Schenker.</tei:note> In der
+        Anlage übersenden wir Ihnen das von uns gezeichneten Gegenexemplar. Ihrem Wunsche gemäss
+        werden wir Sie von dem Eingang des Manuskripts telegraphisch verständigen. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50">Mit ausgezeichneter Hochachtung</tei:salute>
+        <tei:signed rend="indent-50"><tei:handShift new="#stamp"/><tei:rs key="entity-002627"
+            type="organization">Drei Masken Verlag A.-G.</tei:rs></tei:signed>
+        <tei:signed rend="indent-50">ppa. <tei:handShift new="#AD"/><tei:rs key="entity-004417"
+            type="person">Demblin</tei:rs>
+          <tei:note type="editorial" place="inline">illegible initials</tei:note></tei:signed>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p>1 Vertrag mit 2 Unterschriften</tei:p>
+      </tei:postscript>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>DREI MASKEN VERLAG &amp; CO.</tei:addrLine>
+          <tei:addrLine>MUNICH</tei:addrLine>
+          <tei:addrLine>KAROLINENPLATZ 3</tei:addrLine>
+          <tei:lb/>
+        </tei:address>
+        <tei:byline><tei:handShift new="#TPdmvN"/>Dr.D./N.</tei:byline>
+        <tei:dateline rend="indent-60">
+          <tei:placeName>Munich</tei:placeName>, <tei:date when="1930-07-18">July 18,
+            1930</tei:date></tei:dateline><tei:lb/>
+        <tei:address>
+
+          <tei:addrLine rend="indent-20">Dr. Heinrich <tei:hi rend="sperr"
+            >Schenker</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-40">
+            <tei:hi rend="underline"><tei:hi rend="sperr">Galtür</tei:hi> /
+            Tyrol</tei:hi></tei:addrLine>
+        </tei:address>
+        <tei:lb/>
+        <tei:salute>Dear Dr. <tei:supplied reason="identity"><tei:rs key="entity-000632"
+              type="person">Schenker</tei:rs></tei:supplied>,<tei:ptr corresp="#r0001-fn01"
+            type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">We confirm, with our best thanks, the receipt of the contract for <tei:rs
+          type="work" key="entity-001752"><tei:title level="m">Das Meisterwerk in der
+            Musik</tei:title>, volume 3</tei:rs>, signed by you.<tei:ptr corresp="#r0001-fn02"
+          type="footnote"/> Enclosed please find the counter-copy, signed by us. In accordance with
+        your wishes, we shall send you a telegram confirming the receipt of the manuscript.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50">Respectfully yours, </tei:salute>
+        <tei:signed rend="indent-50"><tei:handShift new="#stamp"/><tei:rs key="entity-002627"
+            type="organization">Drei Masken Verlag &amp; Co.</tei:rs></tei:signed>
+        <tei:signed rend="indent-50">ppa. <tei:handShift new="#AD"/><tei:rs key="entity-004417"
+            type="person">Demblin</tei:rs>
+          <tei:note type="editorial" place="inline">illegible initials</tei:note></tei:signed>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p>1 contract with 2 signatures</tei:p>
+      </tei:postscript>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3438" sdoID="OJ-5-38_24">OJ 5/38, [24]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="pr" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="LR">
+      <tei:persName>Lee Rothfarb</tei:persName>
+      <tei:resp>Translation, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-11" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008423">SchenkerW ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Heinrich to Wilhelm Schenker, dated February 28,
+        1927</dc:title>
+
+      <dcterms:created>1927-02-28T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2024-07-09</dcterms:dateSubmitted>
+      <dc:description>Heinrich asks his brother why he left [Baden bei Wien] for home
+        suddenly.</dc:description>
+      <dc:subject/>
+      
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000775">Wilhelm Schenker</marcrel:recipient>
+      
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline">
+          <tei:handShift new="#pr"/><tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied>Absender:</tei:supplied>
+              <tei:handShift new="#HS"/>Schenker</tei:addrLine>
+            <tei:addrLine>Wien III</tei:addrLine>
+            <tei:addrLine>Keilgasse 8</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied>An:</tei:supplied>
+              <tei:handShift new="#HS"/>H. D<tei:hi rend="supralinear">r</tei:hi> Wilhelm
+              Schenker</tei:addrLine>
+            <tei:addrLine><tei:handShift new="#pr"/>in <tei:handShift new="#HS"/>St.
+              Bernhard</tei:addrLine>
+            <tei:addrLine rend="indent-10">b Horn</tei:addrLine>
+            <tei:addrLine rend="indent-10">Nd: Öst:</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark">|| 3/3 WIEN 49 | 28 II 27 18 | * R * ||</tei:fw>
+          <tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#HS"/>Mein lieber <tei:rs type="person" key="entity-000775"
+            >Wilhelm</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Writing of
+            this postcard is recorded in Schenker’s diary for February 28, 1927: “An Wilhelm (K.):
+            was ist in Baden geschehen, warum so plötzlich abgereist?” (“To Wilhelm (postcard): what
+            happened in Baden, and why did you decide to leave so
+          suddenly?”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Was war denn los? Es sieht, daß du auch mich zu sehen wünschtest, – plötzlich aber, da
+        wir im Begriffe waren, zur Bahn zu gehen, kam das Telegramm, das deine Abreise meldete.
+        Schade daß wir dich nicht zu sehen bekamen, wir haben uns sehr darauf gefreut. Wie geht es
+        dir? Wir haben Arbeit über Arbeit zu Hause u. müssen sehen, daß wir trotzdem gesund
+        bleiben.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">Viele, viele Küsse von deinem getreuen</tei:salute>
+        <tei:signed rend="indent-40"><tei:rs type="person" key="entity-000632">Heinrich</tei:rs> u.
+            <tei:rs type="person" key="entity-000771">Lielie</tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1927-02-28">2<tei:subst>
+              <tei:del rend="overwritten">7</tei:del>
+              <tei:add place="superimposed">8</tei:add>
+            </tei:subst>. 2. 27</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline">
+          <tei:handShift new="#pr"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied>From:</tei:supplied>
+              <tei:handShift new="#HS"/>Schenker</tei:addrLine>
+            <tei:addrLine>Keilgasse 8</tei:addrLine>
+            <tei:addrLine>Vienna III</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied>To:</tei:supplied>
+              <tei:handShift new="#HS"/>Dr Wilhelm Schenker</tei:addrLine>
+            <tei:addrLine><tei:handShift new="#pr"/>in <tei:handShift new="#HS"/>St.
+              Bernhard</tei:addrLine>
+            <tei:addrLine rend="indent-10">near Horn</tei:addrLine>
+            <tei:addrLine rend="indent-10">Lower Austria</tei:addrLine>
+          </tei:address>
+          <tei:fw type="postmark">|| 3/3 VIENNA 49 | 28 II 27 18 | * R * ||</tei:fw>
+          <tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#HS"/>My dear <tei:rs type="person" key="entity-000775"
+            >Wilhelm</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>What was going on? It appears that you also wanted to see me. Suddenly, however, as we
+        were getting ready to leave for the train station, the telegram arrived reporting your
+        departure. Too bad we didn’t get to see you. We were very much looking forward to it. How
+        are you? At home, we have work piled on top of work and must nevertheless see to it that we
+        remain healthy.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">Many, many kisses from your faithful</tei:salute>
+        <tei:signed rend="indent-40"><tei:rs type="person" key="entity-000632">Heinrich</tei:rs> and
+            <tei:rs type="person" key="entity-000771">Lielie</tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1927-02-28">February 2<tei:subst>
+              <tei:del rend="overwritten">7</tei:del>
+              <tei:add place="superimposed">8</tei:add>
+            </tei:subst>, 1927</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

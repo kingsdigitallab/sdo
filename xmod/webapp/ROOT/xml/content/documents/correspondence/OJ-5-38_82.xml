@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3543" sdoID="OJ-5-38_82">OJ 5/38, [82]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="pr" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="LR">
+      <tei:persName>Lee Rothfarb</tei:persName>
+      <tei:resp>Translation, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-11" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008423">SchenkerW ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture
+        postcard</tei:rs>
+
+      <dc:title>Handwritten picture postcard from Heinrich to Wilhelm Schenker, dated August 12,
+        1932</dc:title>
+
+      <dcterms:created>1932-08-12T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2024-11-11</dcterms:dateSubmitted>
+      <dc:description>Heinrich reports that the results from the medical laboratory are excellent;
+        he will write again concerning Jetty Bednař.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000775">Wilhelm Schenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:note type="editorial" place="inline">picture: buildings, captioned: “3398. Igls. Grand
+          Hotel Igler Hof”</tei:note><tei:lb/><tei:lb/>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">Absender:</tei:supplied> <tei:handShift
+                new="#HS"/>Schenker</tei:addrLine>
+            <tei:addrLine>Igls, Tirol</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied> H D<tei:hi
+                rend="supralinear">r.</tei:hi> Wilhelm Schenker</tei:addrLine>
+            <tei:addrLine rend="ident-10">St. Bernhard b/ Horn</tei:addrLine>
+            <tei:addrLine rend="ident-10">Nd: Öst.</tei:addrLine><tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| IGLS | 13.<tei:gap reason="illegible"/>.32 | * o *
+          ||</tei:fw>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#HS"/>Mein lieber <tei:rs type="person" key="entity-000775"
+            >Wilhelm</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Writing of
+            this postcard is recorded in Schenker’s diary for August 13, 1932: “An Wilhelm
+            (Ansichtsk.): Zucker 0” (“To Wilhelm (picture postcard): sugar
+          0”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Mein neuester Befund lautet: Eiweiß 0, <tei:hi rend="underline">Zucker 0</tei:hi>,
+        Aceton 0. Vor 4 Wochen hatte ich noch 2.09 Zucker, heute 0! (Wie gewonnen, so zerronnen.) –
+        Der Fall <tei:rs type="person" key="entity-000053">Jetty</tei:rs> ist unbegreiflich hart,
+        wir haben keinerlei Mitteilung erhalten. Brief folgt.<tei:note xml:id="r0001-fn02"
+          type="editorial" place="foot">Schenker’s diary entry for August 19 records the writing of
+          a letter to Wilhelm, in which a picture (or photograph) was also
+        enclosed.</tei:note></tei:p>
+
+      <tei:closer>
+        <tei:salute>Mit vielen Küssen u. Grüßen</tei:salute>
+        <tei:salute>an dich u. die l. <tei:rs type="person" key="entity-008450">Frau
+          Marie</tei:rs></tei:salute>
+        <tei:salute>von mir u. <tei:rs type="person" key="entity-000771"
+          >LieLiechen</tei:rs></tei:salute>
+        <tei:salute rend="indent-80">Dein</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs type="person" key="entity-000632"
+          >Heinrich</tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1932-08-12">12. 8. 32</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:note type="editorial" place="inline">picture: buildings, captioned: “3398. Igls. Grand
+          Hotel Igler Hof”</tei:note><tei:lb/><tei:lb/>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">From:</tei:supplied> <tei:handShift
+                new="#HS"/>Schenker</tei:addrLine>
+            <tei:addrLine>Igls, Tyrol</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied> Dr. Wilhelm
+              Schenker</tei:addrLine>
+            <tei:addrLine rend="ident-10">St. Bernhard, near Horn</tei:addrLine>
+            <tei:addrLine rend="ident-10">Lower Austria</tei:addrLine><tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| IGLS | 13.<tei:gap reason="illegible"/>.32 | * o *
+          ||</tei:fw>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#HS"/>My dear <tei:rs type="person" key="entity-000775"
+            >Wilhelm</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>My most recent lab results are: albumen 0, <tei:hi rend="underline">sugar 0</tei:hi>,
+        acetone 0. Four weeks ago, I still had 2.09 sugar, today 0! (Easy come, easy go.) – The
+          <tei:rs type="person" key="entity-000053">Jetty</tei:rs> matter is incomprehensibly
+        difficult. We have received no word of any sort. A letter is forthcoming.<tei:ptr
+          corresp="#r0001-fn02" type="footnote"/></tei:p>
+
+      <tei:closer>
+        <tei:salute>With many kisses and greetings</tei:salute>
+        <tei:salute>to you and your <tei:rs type="person" key="entity-008450">wife
+          Marie</tei:rs></tei:salute>
+        <tei:salute>from me and <tei:rs type="person" key="entity-000771"
+          >LieLiechen</tei:rs></tei:salute>
+        <tei:salute rend="indent-80">Your</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs type="person" key="entity-000632"
+          >Heinrich</tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1932-08-12">August 12, 1932</tei:date></tei:dateline>
+      </tei:closer>
+
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

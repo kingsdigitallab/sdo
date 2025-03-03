@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3565" sdoID="OJ-14-8_2">OJ 14/8, [2]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="AS" scope="sole">Anna Schiff's hand</tei:handNote>
+    </tei:handNotes>
+
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2024</tei:resp>
+      <tei:resp>Translation, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-11" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008460">SchiffA ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture
+        postcard</tei:rs>
+
+      <dc:title>Handwritten picture postcard from Anna Schiff to Jeanette Schenker, dated May 7,
+        1925</dc:title>
+
+      <dcterms:created>1925-05-07T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2025-02-07</dcterms:dateSubmitted>
+      <dc:description>Anna Schiff reports that she has visited her husband Paul (in prison) and that
+        he is well.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000781">Anna Schiff</marcrel:correspondent>
+      <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:note type="editorial" place="inline">hand-painted picture: narrow street,
+          brightly-colored shops, people, captioned: “Budweis: Blick in die Breitegasse – Gustav
+          Brauner.”</tei:note><tei:lb/>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied>An:</tei:supplied>
+              <tei:handShift new="#AS"/>Frau Lie-Lie Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-10">Wien III/1</tei:addrLine>
+            <tei:addrLine rend="indent-10">Keilgasse 8</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark"><tei:note type="editorial" place="inline">postage stamp and
+              postmark torn off</tei:note></tei:fw>
+        </tei:fw><tei:lb/>
+        <tei:dateline rend="indent-60"><tei:handShift new="#AS"/><tei:rs type="place"
+            key="entity-004296">Budweis</tei:rs>
+          <tei:date when="1925-05-07">7/V 1925</tei:date></tei:dateline>
+        <tei:salute>Liebe <tei:rs type="person" key="entity-000771">Lie-lie</tei:rs>!<tei:note
+            xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this postcard is recorded
+            in Schenker’s diary for May 11, 1925: “Von Anna (Ansichtsk.) Gruß aus Budweis bei
+            Gelegenheit ihres Besuches bei Paul” (“From Anna (picture postcard), greetings from
+            Budweis on the occasion of her visiting Paul”). — Here Anna uses the first name that
+            Jenny Kornfeld adopted in her new life with Heinrich.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Dir und Deinem teuren Mann soll ich nach dem heutigen Besuch bei <tei:rs type="person"
+          key="entity-000782">Paul</tei:rs> die herzlichsten Grüße übermitteln. Deinen lieben
+          Brief<tei:note xml:id="r0001-fn02" type="editorial" place="foot">Writing of this letter is
+          not recorded in Schenker’s diary, nor does the letter survive.</tei:note> beantworte ich
+        demnächst. Unser <tei:rs type="person" key="entity-007617">Kindchen</tei:rs> bereitet keinen
+        Mangel. Es hat <tei:note type="editorial" place="inline">illegible words</tei:note> nur
+        Sehnsucht nach dem <tei:rs type="person" key="entity-000782">Vater</tei:rs>. Ihm geht es so
+        ziemlich gut. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">Herzliche Grüße!</tei:salute>
+        <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000781"
+          >Anna</tei:rs></tei:signed>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p>Aufgegeben <tei:rs type="place" key="entity-002892"
+            >Prag</tei:rs>
+          <tei:date when="1925-05-07">7.5.</tei:date></tei:p>
+      </tei:postscript>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:note type="editorial" place="inline">hand-painted picture: narrow street,
+          brightly-colored shops, people, captioned: “Budweis [“České Budějovice]: view of Breite
+          Gasse – Gustav Brauner.”</tei:note><tei:lb/>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied>To:</tei:supplied>
+              <tei:handShift new="#AS"/>Mrs. Lie-Lie Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-10">Vienna III/1</tei:addrLine>
+            <tei:addrLine rend="indent-10">Keilgasse 8</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark"><tei:note type="editorial" place="inline">postage stamp and
+              postmark torn off</tei:note></tei:fw>
+        </tei:fw><tei:lb/>
+        <tei:dateline rend="indent-60"><tei:handShift new="#AS"/><tei:rs type="place"
+            key="entity-004296">Budweis</tei:rs>
+          <tei:date when="1925-05-07">May 7, 1925</tei:date></tei:dateline>
+        <tei:salute>Dear <tei:rs type="person" key="entity-000771">Lie-lie</tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>To you and your dear husband, I am to convey most cordial greetings after today’s visit
+        to <tei:rs type="person" key="entity-000782">Paul</tei:rs>. I shall reply to your kind
+          letter<tei:ptr corresp="#r0001-fn02" type="footnote"/> very soon. Our <tei:rs
+          type="person" key="entity-007617">little child</tei:rs> is no trouble; she just <tei:note
+          type="editorial" place="inline">illegible words</tei:note> yearns for her <tei:rs
+          type="person" key="entity-000782">father</tei:rs>. He is rather well.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-20">Most cordial greetings!</tei:salute>
+        <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000781"
+          >Anna</tei:rs></tei:signed>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p>Dispatched from <tei:rs type="place" key="entity-002892"
+            >Prague</tei:rs>
+          <tei:date when="1925-05-07">May 7</tei:date></tei:p>
+      </tei:postscript>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3198" sdoID="OJ-10-3_167">OJ 10/3, [167]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="TPoed" scope="major">Otto Erich Deutsch typist</tei:handNote>
+      <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-18" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+      <dc:title>Typewritten letter from Deutsch to Schenker, dated April 29, 1932</dc:title>
+
+      <dcterms:created>1932-04-29T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-08-04</dcterms:dateSubmitted>
+      <dc:description>Deutsch has been asked for help in programming a “monster concert,” and thinks
+        that Beethoven’s Wellington’s Victory in its original scoring would be suitable; but he also
+        asks for Schenker’s advice. The translation [of the Foreword] to the Fünf Urlinie-Tafeln
+        will be ready in a week’s time.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>PROF. OTTO ERICH DEUTSCH</tei:addrLine>
+          <tei:addrLine>Tel. R 45–6–72</tei:addrLine>
+          <tei:addrLine rend="indent-80">WIEN II.</tei:addrLine>
+          <tei:addrLine rend="indent-80">Böcklinstraße 26</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-80"><tei:handShift new="#TPoed"/><tei:date when="1932-04-29">29.
+            April 32</tei:date></tei:dateline>
+        <tei:salute>Lieber <tei:rs type="person" key="entity-000632">Verehrter</tei:rs>!<tei:note
+            xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this letter is recorded in
+            Schenker’s diary for April 29, 1932: “Von Deutsch (Br. express): Anfrage wegen eines
+            Programmes für die Serenaden u. das Monstrekonzert im Stadion!” (“From Deutsch (express
+            letter): inquiry about a program for the evening concerts and the monster concert in the
+            Stadium”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Benno Lie-Baruch Leiser bittet mich, ihn diesmal nicht nur bei den
+        Serenaden, auch bei dem Monsterkonzert der 1000 Musiker im Stadion<tei:note
+          xml:id="r0001-fn02" type="editorial" place="foot">A concert given in the Vienna Stadium on
+          September 18, 1932, in which close to 100 organizations and singing schools took
+          part.</tei:note> zu beraten. Ich komme morgen mit ihm zusammen. Mir fiel besser ein:
+          „<tei:title>Wellingtons Sieg oder Die Schlacht bei Vittoria</tei:title>“, die wohl seit
+        langem überhaupt und vielleicht seit den ersten Aufführungen in der Reitschule nie in der
+        Originalbesetzung, mit Kanonen etc. aufgeführt worden ist. Wenn schon monströs, denk ich
+        mir, dann <tei:rs type="person" key="entity-000055">Beethoven</tei:rs>. Auch <tei:rs
+          type="person" key="entity-000064">Berlioz</tei:rs> wäre wohl bei solchen Anlässen der
+        rechte Mann. Aber ich bitte Sie, wenn Ihnen etwas anderes einfällt, mir eine luftige Karte
+        zu schreiben.</tei:p>
+
+      <tei:p rend="first">Die Übersetzung<tei:note xml:id="r0001-fn03" type="editorial" place="foot"
+          >Presumably the Foreword to <tei:rs type="work" key="entity-001755"><tei:title level="m"
+              >Fünf Urlinie-Tafeln</tei:title></tei:rs>, which was published jointly by the Mannes
+          School of Music and Universal Edition, with the Foreword in German and English.</tei:note>
+        bekommen Sie nächste Woche. Frau Gusti Roth, die sie Ihnen schicken wird, verlangt höchstens
+        S 10.– dafür. Hoffentlich ist das nicht zu viel. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50">Mit besten Grüssen</tei:salute>
+        <tei:salute rend="indent-60">Ihr ganz ergebener</tei:salute>
+        <tei:signed rend="indent-80"><tei:handShift new="#OED"/><tei:rs type="person"
+            key="entity-000164">O E Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p><tei:handShift new="#TPoed"/><tei:rs type="person" key="entity-000380"
+            >Hoboken</tei:rs> ist schon in <tei:rs type="place" key="entity-002286"
+          >München</tei:rs>.</tei:p>
+      </tei:postscript>
+
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>PROF. OTTO ERICH DEUTSCH</tei:addrLine>
+          <tei:addrLine>Tel. R 45–6–72</tei:addrLine>
+          <tei:addrLine rend="indent-80">VIENNA II</tei:addrLine>
+          <tei:addrLine rend="indent-80">Böcklinstraße 26</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-80"><tei:handShift new="#TPoed"/><tei:date when="1932-04-29"
+            >April 29, 1932</tei:date></tei:dateline>
+        <tei:salute>Dear revered <tei:rs type="person" key="entity-000632">friend</tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Benno Lie-Baruch Leiser asks me this time to advise him not only about the
+        evening concerts, but also the monster concert of a thousand musicians in the
+          Stadium.<tei:ptr corresp="#r0001-fn02" type="footnote"/> I shall get together with him
+        tomorrow. I rather thought of <tei:title level="m">Wellington’s Victory or the Battle of
+          Victoria</tei:title>, which has not been performed for a long time, and perhaps never in
+        its original orchestration with cannons, etc., since its first performances in the Riding
+        School. If something monstrous is needed, I say to myself, then <tei:rs type="person"
+          key="entity-000055">Beethoven</tei:rs>. <tei:rs type="person" key="entity-000064"
+          >Berlioz</tei:rs>, too, would be the right man on such occasions. But if something else
+        occurs to you, then please send me an express postcard.</tei:p>
+
+      <tei:p rend="first">You will receive the translation<tei:ptr corresp="#r0001-fn03"
+          type="footnote"/> next week. Mrs. Gusti Roth, who will send it to you, will ask for 10
+        shillings at most. I hope that is not too much. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50">With best greetings,</tei:salute>
+        <tei:salute rend="indent-60">Your wholly devoted</tei:salute>
+        <tei:signed rend="indent-80"><tei:handShift new="#OED"/><tei:rs type="person"
+            key="entity-000164">O. E. Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p><tei:handShift new="#TPoed"/><tei:rs type="person" key="entity-000380"
+            >Hoboken</tei:rs> is already in <tei:rs type="place" key="entity-002286"
+            >Munich</tei:rs>.</tei:p>
+      </tei:postscript>
+
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

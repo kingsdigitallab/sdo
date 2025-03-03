@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3363" sdoID="OJ-14-5_12">OJ 14/5, [12]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="TPms" scope="major">Moriz Schenker as typist</tei:handNote>
+      <tei:handNote xml:id="MS" scope="major">Moriz Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+      <tei:resp>XML Encoding, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-21" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence">Schenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-004924">SchenkerM ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+      <dc:title>Typewritten letter from Moriz Schenker to Heinrich Schenker, dated August 6,
+        1920</dc:title>
+
+      <dcterms:created>1920-08-06T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2024-02-10</dcterms:dateSubmitted>
+      <dc:description>Moriz Schenker has sent 2,200 Kronen to Heinrich Schenker and promises a
+        further 10,000 Kr. -- He reports on the poor health of Wilhelm Schenker.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000774">Moriz Schenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+      
+
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>ITALO-WIENER CREDITBANK</tei:addrLine>
+          <tei:addrLine rend="indent-10">DIREKTION</tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:address rend="indent-60">
+          <tei:addrLine>WIEN I.</tei:addrLine>
+          <tei:addrLine>SCHOTTENRING 9.</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-60"><tei:handShift new="#TPms"/><tei:date when="1920-08-06">6.
+            VIII. 1920</tei:date>.</tei:dateline><tei:lb/>
+        <tei:salute rend="indent-10">Lieber <tei:rs type="person" key="entity-000632"
+            >Heinrich</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt
+            of this letter is recorded in Heinrich’s diary for August 9, 1920: “Von Mozio (Br.):
+            sendet die erbetenen 2000 Kronen, dem lieben Wilhelm gehe es schlecht.” (“From Mozio
+            (letter): is sending the requested 2,000 Kronen, dear Wilhelm is doing
+            poorly.”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Ich empfing Deine liebe Karte vom <tei:date when="1920-08-02">2. d.
+          M.</tei:date><tei:note xml:id="r0001-fn02" type="editorial" place="foot">Writing of this
+          non-surviving postcard is recorded in Heinrich’s diary for August 2, 1920, the same day on
+          which he withdrew 7,500 Kronen from the Innsbruck branch of the Austrian Provincial Bank:
+          “An Mozio (Karte): erbitte 2200 u. kündige mit Rückgabe des Schuldscheines die
+          Rückforderung der 10000 Kronen an.” (“To Mozio (postcard): request 2,200 <tei:supplied
+            reason="denomination">Kronen</tei:supplied> and signal through the return of the debt
+          note the demand to return the 10,000 Kronen.”).</tei:note> und habe Dir heute per
+        Geldbrief K 2200.– übersendet. Die restlichen K 10.000.– werde ich Dir bei Deiner Rückkehr
+        zur Verfügung stellen.</tei:p>
+
+      <tei:p rend="first">Ich hoffe Dich und Deine liebe <tei:rs type="person" key="entity-000771"
+          >Frau</tei:rs> wohlauf und begrüsse Dich herzlich als</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Dein ergebener</tei:salute>
+        <tei:signed rend="indent-80"><tei:handShift new="#MS"/><tei:rs type="person"
+            key="entity-000774">Moriz</tei:rs></tei:signed><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#TPms"/>Hochwohlgeboren Herrn Dr. H. <tei:hi
+              rend="underline">Schenker</tei:hi>,</tei:addrLine>
+          <tei:addrLine><tei:hi rend="underline">SEEFELD i. Tirol.</tei:hi></tei:addrLine>
+          <tei:addrLine>Pension Wetterstein.</tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p><tei:handShift new="#MS"/>Dein l. <tei:rs type="person" key="entity-000775"
+            >Wylczyk</tei:rs><tei:note xml:id="r0001-fn03" type="editorial" place="foot">Wilczyk:
+            the Polish form of Wilhelm.</tei:note> geht es leider nicht gut. Wann sehen wir uns
+          wieder? </tei:p>
+      </tei:postscript>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>ITALO-WIENER CREDITBANK</tei:addrLine>
+          <tei:addrLine rend="indent-10">ADMINISTRATION</tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:address rend="indent-60">
+          <tei:addrLine>VIENNA I</tei:addrLine>
+          <tei:addrLine>SCHOTTENRING 9</tei:addrLine>
+        </tei:address>
+        <tei:dateline rend="indent-60"><tei:handShift new="#TPms"/><tei:date when="1920-08-06"
+            >August 6, 1920</tei:date></tei:dateline><tei:lb/>
+        <tei:salute rend="indent-10">Dear <tei:rs type="person" key="entity-000632"
+            >Heinrich</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">I received your postcard of the <tei:date when="1920-08-02">2nd of the
+          month</tei:date>,<tei:ptr corresp="#r0001-fn02" type="footnote"/> and have today
+        dispatched 2,200 Kronen to you by money order. The remaining 10,000 Kronen I will make
+        available to you on your return.</tei:p>
+
+      <tei:p rend="first">I hope you and your <tei:rs type="person" key="entity-000771"
+          >wife</tei:rs> are keeping well and send my cordial greetings as</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Your devoted</tei:salute>
+        <tei:signed rend="indent-80"><tei:handShift new="#MS"/><tei:rs type="person"
+            key="entity-000774">Moriz</tei:rs></tei:signed><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#TPms"/>Dr. H. <tei:hi rend="underline"
+              >Schenker</tei:hi>, Esq.</tei:addrLine>
+          <tei:addrLine><tei:hi rend="underline">SEEFELD in the Tyrol</tei:hi></tei:addrLine>
+          <tei:addrLine>Guesthouse Wetterstein</tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p><tei:handShift new="#MS"/>Your dear <tei:rs type="person" key="entity-000775"
+            >Wylczyk</tei:rs><tei:ptr corresp="#r0001-fn03" type="footnote"/> is unfortunately not
+          doing well. When are we seeing each other again?</tei:p>
+      </tei:postscript>
+
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

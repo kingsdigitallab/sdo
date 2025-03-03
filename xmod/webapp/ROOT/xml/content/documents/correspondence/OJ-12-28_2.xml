@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+
+    <sdo:source>
+      <sdo:correspondence mfID="3577" sdoID="OJ-12-28_2">OJ 12/28, [2]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="WK" scope="major">Wilhelm Kux's hand</tei:handNote>
+      <tei:handNote xml:id="pr" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2025</tei:resp>
+      <tei:resp>Translation, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2012-11-02" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+
+  </sdo:collectionDesc>
+  <sdo:record ID="r0001">
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008496">KuxW ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-003332">calling card</tei:rs>
+
+
+      <dc:title>Handwritten calling card from Kux to Schenker, dated April 13, 1905</dc:title>
+      <dcterms:created>1905-04-13T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2025-02-14</dcterms:dateSubmitted>
+      <dc:description>Kux asks Schenker to visit him at his office in the next few
+        days.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000498">Wilhelm Kux</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:salute><tei:handShift new="#WK"/>Carissimo <tei:rs key="entity-000632" type="person"
+            >Dottore</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p>Wenn Sie an einem der nächsten Tage in der Nähe der Escomptebank kommen, erbittet sich
+        Ihren frdl. Besuch<tei:note xml:id="r0001-fn01" type="editorial" place="foot">The purpose of
+          the requested visit is unknown, and receipt of this calling card is not recorded in
+          Schenker’s diary.</tei:note></tei:p>
+
+      <tei:closer>
+        <tei:salute>Ihr freundschaftlich</tei:salute>
+        <tei:salute rend="indent-70">ergebener</tei:salute>
+        <tei:dateline><tei:date when="1905-04-13">13. 4. 1905</tei:date></tei:dateline>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:signed rend="indent-30"><tei:handShift new="#pr"/><tei:rs type="person"
+            key="enity-000498">Wilhelm Kux</tei:rs></tei:signed>
+        <tei:signed>Director der Niederösterreichischen Escompte Gesellschaft</tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:salute><tei:handShift new="#WK"/>Carissimo <tei:rs key="entity-000632" type="person"
+            >Dottore</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p>If you happen to be in the neighborhood of the Discount Bank during the next few days,
+        your kind visit<tei:ptr corresp="#r0001-fn01" type="footnote"/> is requested by</tei:p>
+
+      <tei:closer>
+        <tei:salute>your cordially</tei:salute>
+        <tei:salute rend="indent-70">devoted</tei:salute>
+        <tei:dateline><tei:date when="1905-04-13">April 13, 1905</tei:date></tei:dateline>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:signed rend="indent-30"><tei:handShift new="#pr"/><tei:rs type="person"
+            key="enity-000498">Wilhelm Kux</tei:rs></tei:signed>
+        <tei:signed>Director of the Lower Austrian Discount Bank</tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

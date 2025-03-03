@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="3303" sdoID="OJ-9-20_5">OJ 9/20, [5]</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="BHstenP" scope="major">B&amp;H stenographer "P."</tei:handNote>
+   <tei:handNote xml:id="BH" scope="minor">B&amp;H signatory's hand</tei:handNote>
+   <tei:handNote xml:id="print" scope="minor">printed</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="CH">
+   <tei:persName>Kaleb Koslowski</tei:persName>
+   <tei:resp>Transcription, 2023</tei:resp>
+   <tei:resp>Translation, 2023</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>XML Encoding, 2023</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2010-06-26" who="#IB">XML code revised</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-005545">Breitkopf&amp;Härtel ~
+    HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+   <dc:title>Handwritten letter from Breitkopf &amp; Härtel to Schenker, dated October 16,
+    1895</dc:title>
+
+   <dcterms:created>1895-10-16T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2023-10-05</dcterms:dateSubmitted>
+   <dc:description>Breitkopf &amp; Härtel return Schenker's Fünf Klavierstücke, Op. 4 with
+    regret.</dc:description>
+   <dc:subject/>
+
+
+
+   <marcrel:correspondent key="entity-002890">Breitkopf &amp; Härtel</marcrel:correspondent>
+   <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+  </sdo:itemDesc>
+
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:address>
+     <tei:addrLine><tei:handShift new="#print"/>BREITKOPF &amp; HÄRTEL</tei:addrLine>
+     <tei:addrLine><tei:rs type="place" key="entity-002479">Leipzig</tei:rs>, den <tei:date
+       when="1895-10-16"><tei:handShift new="#BHstenP"/>16. Oktober <tei:handShift new="#print"
+        />18<tei:handShift new="#BHstenP"/>95</tei:date>.</tei:addrLine>
+     <tei:addrLine><tei:handShift new="#print"/>Nürnberger Strasse 36.</tei:addrLine>
+    </tei:address>
+    <tei:byline><tei:handShift new="#BHstenP"/>P.</tei:byline><tei:lb/>
+    <tei:salute><tei:handShift new="#BHstenP"/>Sehr geehrter <tei:rs type="person"
+      key="entity-000632">Herr</tei:rs>,</tei:salute>
+   </tei:opener>
+
+   <tei:p rend="first">Es war sehr freundlich von Ihnen, daß Sie uns Ihre <tei:rs type="composition"
+     key="entity-004560"><tei:title>5 Klavierstücke</tei:title> Op <tei:choice>
+      <tei:sic>2</tei:sic>
+      <tei:corr>4</tei:corr>
+     </tei:choice></tei:rs> zusandten,<tei:note xml:id="r0001-fn01" type="editorial" place="foot"
+       ><tei:bibl><tei:author>Heinrich Schenker</tei:author>, <tei:rs type="composition"
+       key="entity-004560"><tei:title level="m">Fünf Klavierstücke</tei:title>, Op. 4</tei:rs>
+      (Leipzig: Breitkopf &amp; Härtel, [January] 1898</tei:bibl>).</tei:note> die wir jetzt näher
+    kennengelernt haben. : Ohne Zweifel werden sich manche Liebhaber für dieselben finden. Freilich
+    leicht ist es nicht, neue Klavierkompositionen einzubringen. Für uns selbst kommt dabei nach in
+    Betracht, daß wir eine große Anzahl schon übernommener Werke nach herzustellen und herauszugeben
+    haben. Wir haben es uns deshalb zur Pflicht <tei:pb n="2"/> machen müssen, für einige Zeit von
+    Allem abzusehen, was nicht unabweislich nöthig ist. Wir bedauern lebhaft, daß wir unter solchen
+    Verhältnissen genöthigt sind, auch Ihnen die Handschrift wieder zuzustellen, danken Ihnen aber
+    jedenfalls bestens für das in uns gesetzte Vertrauen. </tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-40">Hochachtungsvoll und ergebenst</tei:salute>
+    <tei:signed rend="indent-40">
+     <tei:handShift new="#BH"/>Breitkopf &amp; Härtel</tei:signed><tei:lb/>
+    <tei:address>
+     <tei:addrLine><tei:handShift new="#BHstenP"/>Herrn D<tei:hi rend="supralinear">r.</tei:hi>
+      <tei:hi rend="lateinschr">H. Schenker</tei:hi>,</tei:addrLine>
+     <tei:addrLine>Musikreferent</tei:addrLine>
+     <tei:addrLine><tei:hi rend="lateinschr">in <tei:hi rend="underline">Wien</tei:hi> III.,
+       Traungasse 1</tei:hi>.</tei:addrLine>
+    </tei:address>
+   </tei:closer>
+
+  </tei:div>
+
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:address>
+     <tei:addrLine><tei:handShift new="#print"/>BREITKOPF &amp; HÄRTEL</tei:addrLine>
+     <tei:addrLine><tei:rs type="place" key="entity-002479">Leipzig</tei:rs>, <tei:date
+       when="1895-10-16"><tei:handShift new="#BHstenP"/>October 16, <tei:handShift new="#print"
+        />18<tei:handShift new="#BHstenP"/>95</tei:date></tei:addrLine>
+     <tei:addrLine><tei:handShift new="#print"/>Nürnberger Strasse 36</tei:addrLine>
+    </tei:address>
+    <tei:byline><tei:handShift new="#BHstenP"/>P.</tei:byline><tei:lb/>
+    <tei:salute><tei:handShift new="#BHstenP"/>Dear <tei:rs type="person" key="entity-000632"
+      >Sir</tei:rs>,</tei:salute>
+   </tei:opener>
+
+   <tei:p rend="first">It was very kind of you to send us your <tei:rs type="composition"
+     key="entity-004560"><tei:title level="m">Fünf Klavierstücke</tei:title> Op. <tei:choice>
+      <tei:sic>2</tei:sic>
+      <tei:corr>4</tei:corr>
+     </tei:choice></tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/> with which we have now
+    become better acquainted. Without a doubt, they will find admirers. Of course, it is not easy to
+    produce new piano compositions. For our part, we must consider that we have already accepted a
+    large number of works to produce and publish. We have found it necessary, therefore, <tei:pb
+     n="2"/> to refrain, for a time, from undertaking anything that is not absolutely necessary. We
+    sincerely regret that under such circumstances, we are compelled to return the manuscript to
+    you; and thank you sincerely, nevertheless, for the trust you have placed in us.</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-40">Respectfully and most devotedly,</tei:salute>
+    <tei:signed rend="indent-40">
+     <tei:handShift new="#BH"/>Breitkopf &amp; Härtel</tei:signed><tei:lb/>
+    <tei:address>
+     <tei:addrLine><tei:handShift new="#BHstenP"/>Dr. H. Schenker</tei:addrLine>
+     <tei:addrLine>Music critic</tei:addrLine>
+     <tei:addrLine><tei:hi rend="underline">Vienna</tei:hi> III, Traungasse 1</tei:addrLine>
+    </tei:address>
+   </tei:closer>
+
+
+
+  </tei:div>
+ </sdo:record>
+</sdo:recordCollection>

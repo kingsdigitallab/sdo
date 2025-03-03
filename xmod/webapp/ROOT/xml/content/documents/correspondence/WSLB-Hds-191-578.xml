@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+    xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+    <sdo:collectionDesc>
+        <sdo:source>
+            <sdo:correspondence mfID="3283" sdoID="WSLB-Hds-191-578">WSLB-Hds 191.578</sdo:correspondence>
+        </sdo:source>
+
+        <tei:handNotes>
+            <tei:handNote xml:id="HS" scope="sole">Heinrich Schenker's hand</tei:handNote>
+        </tei:handNotes>
+
+        <tei:respStmt xml:id="WD">
+            <tei:persName>William Drabkin</tei:persName>
+            <tei:resp>Transcription, 2023</tei:resp>
+            <tei:resp>Translation, 2023</tei:resp>
+        </tei:respStmt>
+
+        <tei:respStmt xml:id="IDB">
+            <tei:persName>Ian Bent</tei:persName>
+            <tei:resp>XML Encoding, 2023</tei:resp>
+        </tei:respStmt>
+
+        <tei:revisionDesc>
+            <tei:change when="2015-09-18" who="#DB">XML code created</tei:change>
+        </tei:revisionDesc>
+    </sdo:collectionDesc>
+    <sdo:record ID="r0001">
+
+        <sdo:itemDesc>
+            <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+                H+JSchenker</tei:rs>
+            <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+                HSchenker</tei:rs>
+            <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+                H+JSchenker</tei:rs>
+            <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+            <dc:title>Handwritten letter from Schenker to Deutsch, dated January 18, 1934</dc:title>
+
+            <dcterms:created>1934-01-18T12:00:00Z</dcterms:created>
+            <dcterms:dateSubmitted>2023-09-11</dcterms:dateSubmitted>
+            <dc:description>Schenker says that the misunderstandings over a slur, marked in red
+                pencil in the manuscript of his completion of the unfinished Schubert song D. 555,
+                have now been resolved. He would also like to meet Hoboken’s
+                architect.</dc:description>
+            <dc:subject/>
+
+
+            <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+            <marcrel:recipient key="entity-000164">DeutschOE</marcrel:recipient>
+        </sdo:itemDesc>
+
+
+        <tei:div type="transcription">
+
+            <tei:opener>
+                <tei:salute><tei:handShift new="#HS"/>Mein lieber <tei:rs key="entity-000164"
+                        type="person">Prof. Deutsch</tei:rs>!<tei:note xml:id="r0001-fn01"
+                        type="editorial" place="foot">Writing of this letter is not recorded in
+                        Schenker’s diary.</tei:note></tei:salute>
+            </tei:opener>
+
+            <tei:p>Alles ist in Ordnung. Der „rote Bogen“, von dem Sie schrieben, war mir nicht in
+                Erinnerung, da mir aber H. Kirchner eine Frage wegen eines Bogens von a<tei:hi
+                    rend="supralinear">1</tei:hi> zu gis<tei:hi rend="supralinear">1</tei:hi>, T.
+                4/5, vorgelegt hat, der unstatthaft war, befürchtete ich, gerade dieser Bogen wäre
+                „rot“ gewesen. <tei:pb n="2"/> Nun ist wirklich alles in Ordnung.</tei:p>
+
+            <tei:p>H. <tei:rs type="person" key="entity-008405"><tei:sic>Schmidt</tei:sic></tei:rs>
+                würde ich gern sehen.</tei:p>
+
+            <tei:closer>
+                <tei:salute rend="indent-10">Mit besten Grüßen</tei:salute>
+                <tei:salute rend="indent-60">Ihr</tei:salute>
+                <tei:signed rend="indent-60"><tei:rs key="entity-000632" type="person"><tei:hi
+                            rend="lateinschr">H Schenker</tei:hi></tei:rs></tei:signed><tei:lb/>
+                <tei:dateline rend="indent-50"><tei:date when="1934-01-18">18. 1.
+                    34</tei:date></tei:dateline>
+            </tei:closer>
+
+
+
+        </tei:div>
+
+        <tei:div type="translation">
+
+            <tei:opener>
+                <tei:salute><tei:handShift new="#HS"/>My dear <tei:rs key="entity-000164"
+                        type="person">Professor Deutsch</tei:rs>!<tei:ptr corresp="#r0001-fn01"
+                        type="footnote"/></tei:salute>
+            </tei:opener>
+
+            <tei:p>Everything is in order, the “red slur” about which you write is something I did
+                not remember; but as Mr. Kirchner asked me a question about a slur from a<tei:hi
+                    rend="supralinear">1</tei:hi> to g<tei:g type="sharp"/><tei:hi
+                    rend="supralinear">1</tei:hi> across measures 4 and 5, which was inadmissible, I
+                feared that this very slur was “red.” <tei:pb n="2"/> Now everything is entirely in
+                order.</tei:p>
+
+            <tei:p>I would very much like to see Mr. <tei:rs type="person" key="entity-008405"
+                    >Schmid</tei:rs>.</tei:p>
+
+            <tei:closer>
+                <tei:salute rend="indent-10">With best greetings,</tei:salute>
+                <tei:salute rend="indent-60">Your</tei:salute>
+                <tei:signed rend="indent-60"><tei:rs key="entity-000632" type="person">H.
+                        Schenker</tei:rs></tei:signed><tei:lb/>
+                <tei:dateline rend="indent-50"><tei:date when="1934-01-18">January 18,
+                        1934</tei:date></tei:dateline>
+            </tei:closer>
+
+        </tei:div>
+    </sdo:record>
+</sdo:recordCollection>

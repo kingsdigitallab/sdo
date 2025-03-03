@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="3508" sdoID="OJ-5-38_55">OJ 5/38, [55]</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+   <tei:handNote xml:id="pr" scope="minor">printed</tei:handNote>
+   <tei:handNote xml:id="unk" scope="minor">unknown hand</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="WMD">
+   <tei:persName>William Drabkin</tei:persName>
+   <tei:resp>Transcription, 2024</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="LR">
+   <tei:persName>Lee Rothfarb</tei:persName>
+   <tei:resp>Translation, 2024</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>XML Encoding, 2024</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="BOT">
+   <tei:name>Automated Script</tei:name>
+   <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2010-03-11" who="#IB">XML code revised</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-008423">SchenkerW ~
+    HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+   <dc:title>Handwritten postcard from Heinrich to Wilhelm Schenker, dated April 13, 1929</dc:title>
+
+   <dcterms:created>1929-04-13T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2024-10-01</dcterms:dateSubmitted>
+   <dc:description>Heinrich asks after his brother, Wilhelm.</dc:description>
+   <dc:subject/>
+
+   <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+   <marcrel:recipient key="entity-000775">Wilhelm Schenker</marcrel:recipient>
+
+  </sdo:itemDesc>
+
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/><tei:lb/>
+    <tei:fw type="header" rend="inline">
+     <tei:handShift new="#pr"/><tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
+    <tei:lb/>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:addrLine><tei:handShift new="#pr"/>Absender: <tei:handShift new="#HS"
+       />Schenker</tei:addrLine>
+      <tei:addrLine>III, Keilgasse 8</tei:addrLine>
+     </tei:address>
+     <tei:address>
+      <tei:addrLine><tei:supplied>An:</tei:supplied>
+       <tei:handShift new="#HS"/>H. D<tei:hi rend="supralinear">r</tei:hi> Wilhelm
+       Schenker</tei:addrLine>
+      <tei:addrLine>St. Bernhard /b Horn</tei:addrLine>
+      <tei:addrLine>Nd: Öst:</tei:addrLine>
+     </tei:address>
+     <tei:fw type="postmark">|| 3 WIEN 40 | 13.IV.29 | 12–13 | * 4f * ||</tei:fw>
+     <tei:lb/><tei:lb/>
+     <tei:milestone unit="folio" n="verso"/>
+    </tei:fw>
+    <tei:salute><tei:handShift new="#HS"/>Mein lieber <tei:rs type="person" key="entity-000775"
+      >Wilhelm</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Writing of this
+      postcard is recorded in Schenker’s diary for April 13, 1929: “An Wilhelm (K.): Erkundigung
+      nach dem Befinden” (“To Wilhelm (postcard): I ask after him”). — On the recto of this postcard
+      are some pencil jottings: “Ludung Aff | Frauen <tei:unclear reason="reading"
+       >Strassenwörter</tei:unclear> 63 | 1855 | RP. | Frauen | 15/4 3/4 13.”
+     </tei:note></tei:salute>
+   </tei:opener>
+
+   <tei:p>Warum hören wir nichts von dir?? Wie geht es dir u. der l. <tei:rs type="person"
+     key="entity-008450">Frau Marie</tei:rs>? Waren die Kinder bei dir? Über unsere Sommerpläne
+    demnächst. Ein paar Zeilen erbittet.</tei:p>
+
+   <tei:closer>
+    <tei:salute>Dich u. die l. <tei:rs type="person" key="entity-008450">Frau Marie</tei:rs> bestens
+     grüßend,</tei:salute>
+    <tei:salute rend="indent-10">dein</tei:salute>
+    <tei:signed rend="indent-30"><tei:rs type="person" key="entity-000632"
+     >Heinrich</tei:rs></tei:signed><tei:lb/>
+    <tei:dateline><tei:date when="1929-04-13">13. 4. 29</tei:date></tei:dateline>
+   </tei:closer>
+
+  </tei:div>
+
+
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/><tei:lb/>
+    <tei:fw type="header" rend="inline">
+     <tei:handShift new="#pr"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+    <tei:lb/>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:addrLine><tei:handShift new="#pr"/>From: <tei:handShift new="#HS"
+       />Schenker</tei:addrLine>
+      <tei:addrLine><tei:supplied>Vienna</tei:supplied> III, Keilgasse 8</tei:addrLine>
+     </tei:address>
+     <tei:address>
+      <tei:addrLine><tei:supplied>To:</tei:supplied>
+       <tei:handShift new="#HS"/>Dr. Wilhelm Schenker</tei:addrLine>
+      <tei:addrLine>St. Bernhard near Horn</tei:addrLine>
+      <tei:addrLine>Lower Austria</tei:addrLine>
+     </tei:address>
+     <tei:fw type="postmark">|| 3 VIENNA 40 | 13.IV.29 | 12–13 | * 4f * ||</tei:fw>
+     <tei:lb/><tei:lb/>
+     <tei:milestone unit="folio" n="verso"/>
+    </tei:fw>
+    <tei:salute><tei:handShift new="#HS"/>My dear <tei:rs type="person" key="entity-000775"
+      >Wilhelm</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+   </tei:opener>
+
+   <tei:p>Why do we hear nothing from you?? How are you and your <tei:rs type="person"
+     key="entity-008450">wife, Marie</tei:rs>? Were the children at your place? Soon, something
+    about our summer plans. Requesting a few lines. </tei:p>
+
+   <tei:closer>
+    <tei:salute>Best greetings to you and your dear <tei:rs type="person" key="entity-008450">wife
+      Marie</tei:rs>.</tei:salute>
+    <tei:salute rend="indent-10">Your</tei:salute>
+    <tei:signed rend="indent-30"><tei:rs type="person" key="entity-000632"
+     >Heinrich</tei:rs></tei:signed><tei:lb/>
+    <tei:dateline><tei:date when="1929-04-13">April 13, 1929</tei:date></tei:dateline>
+   </tei:closer>
+
+
+  </tei:div>
+
+ </sdo:record>
+</sdo:recordCollection>

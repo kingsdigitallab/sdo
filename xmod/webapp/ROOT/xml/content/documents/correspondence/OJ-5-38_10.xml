@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="3414" sdoID="OJ-5-38_10">OJ 5/38, [10]</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+   <tei:handNote xml:id="pr" scope="minor">printed</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="WMD">
+   <tei:persName>William Drabkin</tei:persName>
+   <tei:resp>Transcription, 2024</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="LR">
+   <tei:persName>Lee Rothfarb</tei:persName>
+   <tei:resp>Translation, 2024</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>XML Encoding, 2024</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="BOT">
+   <tei:name>Automated Script</tei:name>
+   <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2010-03-11" who="#IB">XML code revised</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-008423">SchenkerW ~
+    HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+   <dc:title>Handwritten postcard from Heinrich to Wilhelm Schenker, undated [May 12,
+    1924]</dc:title>
+
+   <dcterms:created>1924-05-12T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2024-06-10</dcterms:dateSubmitted>
+   <dc:description>Heinrich enquires after the name of a gardener in Waidhofen an der Thaya who
+    might be able to decorate their mother’s grave </dc:description>
+   <dc:subject/>
+
+   <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+   <marcrel:recipient key="entity-000775">Wilhelm Schenker</marcrel:recipient>
+
+  </sdo:itemDesc>
+
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/><tei:lb/>
+    <tei:fw type="header" rend="inline">
+     <tei:handShift new="#pr"/><tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
+    <tei:lb/>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:addrLine><tei:handShift new="#pr"/>Absender: <tei:handShift new="#HS"/>D<tei:hi
+        rend="supralinear">r</tei:hi> H Schenker</tei:addrLine>
+      <tei:addrLine>Wien, III</tei:addrLine>
+      <tei:addrLine>Keilgasse 8</tei:addrLine>
+     </tei:address>
+     <tei:address>
+      <tei:addrLine><tei:handShift new="#pr"/>An: <tei:handShift new="#HS"/>H. D<tei:hi
+        rend="supralinear">r</tei:hi> Wilhelm Schenker</tei:addrLine>
+      <tei:addrLine><tei:handShift new="#pr"/>in <tei:handShift new="#HS"/>St. Bernhard /b
+       Horn</tei:addrLine>
+      <tei:addrLine>Nd: Öst:</tei:addrLine>
+     </tei:address>
+     <tei:fw type="postmark">|| WIEN 49 | <tei:gap reason="illegible"/>-13 | * 4a * ||</tei:fw>
+     <tei:lb/><tei:lb/>
+     <tei:milestone unit="folio" n="verso"/>
+    </tei:fw>
+    <tei:salute><tei:handShift new="#HS"/>Lieber <tei:rs type="person" key="entity-000775"
+      >Wilhelm</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Writing of this
+      postcard is recorded in Schenker’s diary for May 12, 1924: “An Wilhelm (K.): wie der Gärtner
+      in Waidhofen heißt?” (“To Wilhelm (postcard): what's the name of the gardener in
+      Waidhofen?”).</tei:note></tei:salute>
+   </tei:opener>
+
+   <tei:p>Im vorigen Herbst, als wir das Grab der th. <tei:rs type="person" key="entity-000773"
+     >Mutter</tei:rs> besucht haben, sprachen wir <tei:add place="interlinear-above">in <tei:rs
+      type="place" key="entity-002323">Waidhofen</tei:rs></tei:add> mit einem Gärtner wegen einer
+    Einfassung u. Epheuschmuckes, die im Frühling angebracht werden sollen. Damals war es schon zu
+    spät. Jetzt ist die Zeit gekommen, aber in meinen Notizen finde ich zwei Namen: <tei:hi
+     rend="underline">Hölzl</tei:hi>, <tei:hi rend="underline">Spieß</tei:hi> u. <tei:add
+     place="interlinear-above">nun</tei:add> weiß ich <tei:add place="interlinear-above"
+     >nicht</tei:add>, wer <tei:hi rend="underline">von den Beiden der </tei:hi><tei:hi
+     rend="double-underline">Gärtner</tei:hi><tei:hi rend="underline"> ist</tei:hi>, wer die
+    Einfassung macht. Der Gärtner wohnt nicht weit von <tei:rs type="place" key="entity-002304"
+     >Innsbruck</tei:rs>, man muß zu ihm von der Strasse ein paar Stufen hinuntertreten. Kannst du
+    mir da helfen, damit ich hinausschreiben kann. Bitte, sehr eilig! Vielen Dank. </tei:p>
+
+   <tei:closer>
+    <tei:salute>Auf Wiedersehen</tei:salute>
+    <tei:salute rend="indent-10">Dein</tei:salute>
+    <tei:signed rend="indent-30"><tei:rs type="person" key="entity-000632">Heinrich</tei:rs> u.
+      <tei:rs type="person" key="entity-000771">Lielie</tei:rs></tei:signed><tei:lb/>
+   </tei:closer>
+
+   <tei:postscript>
+    <tei:p>Wie geht es dir?</tei:p>
+   </tei:postscript>
+
+  </tei:div>
+
+
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/><tei:lb/>
+    <tei:fw type="header" rend="inline">
+     <tei:handShift new="#pr"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+    <tei:lb/>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:addrLine><tei:handShift new="#pr"/>From: <tei:handShift new="#HS"/>Dr. H.
+       Schenker</tei:addrLine>
+      <tei:addrLine>Keilgasse 8</tei:addrLine>
+      <tei:addrLine>Vienna III</tei:addrLine>
+     </tei:address>
+     <tei:address>
+      <tei:addrLine><tei:handShift new="#pr"/>To: <tei:handShift new="#HS"/>Dr. Wilhelm
+       Schenker</tei:addrLine>
+      <tei:addrLine><tei:handShift new="#pr"/>in <tei:handShift new="#HS"/>St. Bernhard, near
+       Horn</tei:addrLine>
+      <tei:addrLine>Lower Austria</tei:addrLine>
+     </tei:address>
+     <tei:fw type="postmark">|| VIENNA 49 | <tei:gap reason="illegible"/>-13 | * 4a * ||</tei:fw>
+     <tei:lb/><tei:lb/>
+     <tei:milestone unit="folio" n="verso"/>
+    </tei:fw>
+    <tei:salute><tei:handShift new="#HS"/>Dear <tei:rs type="person" key="entity-000775"
+      >Wilhelm</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+   </tei:opener>
+
+   <tei:p>Last fall, when we visited our dear <tei:rs type="person" key="entity-000773"
+     >Mother</tei:rs>’s grave, we spoke <tei:add place="interlinear-above">in <tei:rs type="place"
+      key="entity-002323">Waidhofen</tei:rs></tei:add> with a gardener about a border and ivy
+    adornment that was to be applied in spring. Back then, it was already too late. Now, the time
+    has come, but in my notes I find two names: <tei:hi rend="underline">Hölzl</tei:hi>, <tei:hi
+     rend="underline">Spieß</tei:hi>, and <tei:add place="interlinear-above">now</tei:add> I do
+     <tei:add place="interlinear-above">not</tei:add> know which <tei:hi rend="underline">of the two
+     is the </tei:hi><tei:hi rend="double-underline">gardener</tei:hi> who will make the border. The
+    gardener lives not far from <tei:rs type="place" key="entity-002304">Innsbruck</tei:rs>, one has
+    to descend a few steps from the street to reach him. Can you help me here so that I can
+    advertise for bids. Please, very quickly, Many thanks.</tei:p>
+
+   <tei:closer>
+    <tei:salute>Good-bye,</tei:salute>
+    <tei:salute rend="indent-10">Your</tei:salute>
+    <tei:signed rend="indent-30"><tei:rs type="person" key="entity-000632">Heinrich</tei:rs> and
+      <tei:rs type="person" key="entity-000771">Lielie</tei:rs></tei:signed><tei:lb/>
+   </tei:closer>
+
+   <tei:postscript>
+    <tei:p>How are you?</tei:p>
+   </tei:postscript>
+
+  </tei:div>
+
+ </sdo:record>
+</sdo:recordCollection>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3318" sdoID="OJ-9-20_20">OJ 9/20, [20]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="BHsten" scope="major">B&amp;H stenographer</tei:handNote>
+      <tei:handNote xml:id="BH" scope="minor">B&amp;H signatory's hand</tei:handNote>
+      <tei:handNote xml:id="print" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="CH">
+      <tei:persName>Kaleb Koslowski</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-06-26" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005545">Breitkopf&amp;Härtel ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+      <dc:title>Handwritten letter from Breitkopf &amp; Härtel to Schenker, June 30, 1899</dc:title>
+
+      <dcterms:created>1899-06-30T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-10-12</dcterms:dateSubmitted>
+      <dc:description>Breitkopf &amp; Härtel submit their invoice for distribution of the Fünf
+        Klavierstücke, Op. 4.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-002890">Breitkopf &amp; Härtel</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:address>
+          <tei:note type="editorial" place="inline">in a decorative printed letterhead:</tei:note>
+          <tei:lb/>
+          <tei:addrLine><tei:handShift new="#print"/><tei:hi rend="bold">Breitkopf &amp;
+              Härtel</tei:hi></tei:addrLine>
+          <tei:addrLine>Leipzig <tei:supplied reason="spacer">—</tei:supplied>
+            Brüssel</tei:addrLine>
+          <tei:addrLine>London <tei:supplied reason="spacer">—</tei:supplied> New
+            York.</tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:rs type="place" key="entity-002479">LEIPZIG</tei:rs>,
+            den <tei:date when="1899-06-30"><tei:handShift new="#BHsten"/>30 Juni <tei:handShift
+                new="#print"/>18<tei:handShift new="#BHsten"/>99</tei:date>.</tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:handShift new="#print"/>Nürnberger Strasse
+            36.</tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:salute><tei:handShift new="#BHsten"/>Sehr geehrter <tei:rs type="person"
+            key="entity-000632">Herr</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>In der Anlage beehren wir uns Ihnen Abrechnung über den Vertrieb Ihres <tei:rs
+          type="composition" key="entity-004560"><tei:hi rend="lateinschr">Op. 4 <tei:title>5
+              Klavierstücke</tei:title></tei:hi></tei:rs> zu überreichen. Den hier noch sich
+        ergebenden Erlös von M. 40,50 übersenden wir Ihnen gleichzeitig.<tei:note
+          xml:id="r0001-fn01" type="editorial" place="foot"><tei:bibl><tei:author>Heinrich
+              Schenker</tei:author>, <tei:rs type="composition" key="entity-004560"><tei:title
+                level="m">Fünf Klavierstücke</tei:title>, Op. 4</tei:rs> (Leipzig: Breitkopf &amp;
+            Härtel, [January] 1898)</tei:bibl>, dedicated to <tei:rs type="person"
+            key="entity-000150">Eugen d’Albert</tei:rs>. Breitkopf &amp; Härtel. For the stock and
+          sales report, see <tei:ref type="correspondence" cRef="OJ-9-20_21">OJ 9/20,
+          [21]</tei:ref>, July 1, 1899.</tei:note></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">Hochachtungsvoll,</tei:salute>
+        <tei:signed rend="indent-50">
+          <tei:handShift new="#BH"/><tei:rs type="organization" key="entity-002890">Breitkopf &amp;
+            Härtel</tei:rs></tei:signed><tei:lb/>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p><tei:handShift new="#BHsten"/><tei:hi rend="underline">M 40.50</tei:hi></tei:p>
+      </tei:postscript>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:address>
+          <tei:note type="editorial" place="inline">in a decorative printed letterhead:</tei:note>
+          <tei:lb/>
+          <tei:addrLine><tei:handShift new="#print"/><tei:hi rend="bold">Breitkopf &amp;
+              Härtel</tei:hi></tei:addrLine>
+          <tei:addrLine>Leipzig <tei:supplied reason="spacer">—</tei:supplied>
+            Brussels</tei:addrLine>
+          <tei:addrLine>London <tei:supplied reason="spacer">—</tei:supplied> New
+            York.</tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:rs type="place" key="entity-002479">LEIPZIG</tei:rs>,
+              <tei:date when="1899-06-30"><tei:handShift new="#BHsten"/>June 30, <tei:handShift
+                new="#print"/>18<tei:handShift new="#BHsten"/>99</tei:date></tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:handShift new="#print"/>Nürnberger Strasse
+            36</tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:salute><tei:handShift new="#BHsten"/>Dear <tei:rs type="person" key="entity-000632"
+            >Sir</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>We are honored to present you with the attached invoice for the distribution of your
+        Op. 4, <tei:rs type="composition" key="entity-004560"><tei:title level="m">Five Piano
+            Pieces</tei:title></tei:rs>. We are sending you at the same time the resulting proceeds
+        of 40.50 Marks.<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">Respectfully, </tei:salute>
+        <tei:signed rend="indent-50">
+          <tei:handShift new="#BH"/><tei:rs type="organization" key="entity-002890">Breitkopf &amp;
+            Härtel</tei:rs></tei:signed><tei:lb/>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p><tei:handShift new="#BHsten"/><tei:hi rend="underline">40.50 Marks</tei:hi></tei:p>
+      </tei:postscript>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

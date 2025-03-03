@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3537" sdoID="OJ-5-38_73">OJ 5/38, [73]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="sole">Heinrich Schenker's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="LR">
+      <tei:persName>Lee Rothfarb</tei:persName>
+      <tei:resp>Translation, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-11" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008423">SchenkerW ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+      <dc:title>Handwritten letter from Heinrich to Wilhelm Schenker, undated [September 4,
+        1931]</dc:title>
+
+      <dcterms:created>1931-09-04T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2024-10-13</dcterms:dateSubmitted>
+      <dc:description>Note enclosing the printed prospectus announcing the opening of the
+        Schenker-Institute in Hamburg, founded by his friend Moriz Violin, in which his former pupil
+        Felix-Eberhard von Cube will also be teaching.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000775">Wilhelm Schenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:note type="editorial" place="inline">unheaded, and without salutation</tei:note>
+      <tei:lb/><tei:lb/>
+
+      <tei:p><tei:handShift new="#HS"/>In <tei:rs type="place" key="entity-002589">Hamburg</tei:rs>
+        wird soeben ein sogenanntes:<tei:note xml:id="r0001-fn01" type="editorial" place="foot"
+          >Although this note is undated and bears no salutation, the diary entry of September 4,
+          1931, mentions the sending of the prospectus of the Schenker Institute to Schenker’s
+          brother Wilhelm and sister Sophie: “An Sophie u. Wilhelm den Prospekt ganz u. ein paar
+          Zeilen” (“To Sophie and Wilhelm, the complete prospectus and a couple of lines”). — For
+          the prospectus itself, see <tei:ref type="other" cRef="OJ-58-4_1">OJ 58/4,
+          [1]</tei:ref>).</tei:note>
+        <tei:cit>
+          <tei:q>„<tei:rs type="organization" key="entity-002455"><tei:hi rend="double-underline"
+                >Schenker-Institut</tei:hi></tei:rs>“</tei:q>
+        </tei:cit></tei:p>
+
+      <tei:p><tei:hi rend="underline">eröffnet</tei:hi>, das geleitet wird von den H. <tei:rs
+          type="person" key="entity-000143">Prof. Felix von Cube</tei:rs> u. <tei:rs type="person"
+          key="entity-000913">Prof. M. Violin</tei:rs>! Gebe Gott, daß die beide Herren u. ihre
+        Helfer mit meinem Aushängeschild recht gute Geschäfte machen mögen! Für keinen Fall aber
+        habe ich irgendwelche Vorteile zu erwarten, es sei denn eben der nun schon in die Augen
+          <tei:pb n="2"/> springende Vorteil der „Ehre“, der aber in solchem Falle nicht gering
+        einzuschätzen ist.</tei:p>
+
+      <tei:closer>
+        <tei:salute>Viele Küsse</tei:salute>
+        <tei:salute rend="indent-40">Euer</tei:salute>
+        <tei:signed rend="indent-50"><tei:rs type="person" key="entity-000632"
+          >Heinrich</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:note type="editorial" place="inline">unheaded, and without salutation</tei:note>
+      <tei:lb/><tei:lb/>
+
+      <tei:p><tei:handShift new="#HS"/>A so-called<tei:ptr corresp="#r0001-fn01" type="footnote"/>
+        <tei:cit>
+          <tei:q>“<tei:rs type="organization" key="entity-002455"><tei:hi rend="double-underline"
+                >Schenker Institute</tei:hi></tei:rs>”</tei:q>
+        </tei:cit></tei:p>
+
+      <tei:p>is just now <tei:hi rend="underline">being opened</tei:hi> in <tei:rs type="place"
+          key="entity-002589">Hamburg</tei:rs>, directed by <tei:rs type="person"
+          key="entity-000143">Professor Felix von Cube</tei:rs> and <tei:rs type="person"
+          key="entity-000913">Professor Moriz Violin</tei:rs>! God grant that the two gentlemen and
+        their assistants may do good business with my sign outside the entrance! In no case,
+        however, do I expect any sort of benefit, except the <tei:pb n="2"/> obvious benefit of the
+        “honor,” which, though, in such a case is not to be underestimated.</tei:p>
+
+      <tei:closer>
+        <tei:salute>Abundant kisses,</tei:salute>
+        <tei:salute rend="indent-40">Your</tei:salute>
+        <tei:signed rend="indent-50"><tei:rs type="person" key="entity-000632"
+          >Heinrich</tei:rs></tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

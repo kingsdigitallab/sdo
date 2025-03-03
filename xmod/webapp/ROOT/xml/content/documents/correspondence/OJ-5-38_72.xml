@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3532" sdoID="OJ-5-38_72">OJ 5/38, [72]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+      <tei:handNote xml:id="pr" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="LR">
+      <tei:persName>Lee Rothfarb</tei:persName>
+      <tei:resp>Translation, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2024</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="BOT">
+      <tei:name>Automated Script</tei:name>
+      <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-03-11" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008423">SchenkerW ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture
+        postcard</tei:rs>
+
+      <dc:title>Handwritten picture postcard from Heinrich to Wilhelm Schenker, dated March 11,
+        1931</dc:title>
+
+      <dcterms:created>1931-03-11T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2024-10-11</dcterms:dateSubmitted>
+      <dc:description>Heinrich reports to Wilhelm that their brother Mozio has raised an objection
+        to his claim that he is entitled to his money. </dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+      <marcrel:recipient key="entity-000775">Wilhelm Schenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="envelope">
+          <tei:fw type="header" rend="inline">
+            <tei:handShift new="#pr"/><tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
+          <tei:lb/>
+          <tei:note type="editorial" place="inline">small picture: lakeside town, captioned:
+            “Bregenz, Vorarlberg”</tei:note><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:supplied>Absender:</tei:supplied>
+              <tei:handShift new="#HS"/>Schenker</tei:addrLine>
+            <tei:addrLine>Wien, III, Keilgasse 8</tei:addrLine>
+
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied>An:</tei:supplied> H D<tei:hi rend="supralinear">r.</tei:hi>
+              Wilhelm Schenker</tei:addrLine>
+            <tei:addrLine>St. Bernhard bei Horn</tei:addrLine>
+            <tei:addrLine>Nd: Öst.</tei:addrLine><tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| <tei:gap reason="illegible"/> WIEN 40 | 11.III.31 19 | <tei:gap
+            reason="illegible"/> ||</tei:fw><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:salute><tei:handShift new="#HS"/>Mein lieber <tei:rs type="person" key="entity-000775"
+            >Wilhelm</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Writing of
+            this picture postcard is recorded in Schenker’s diary for March 11, 1931: “An Wilhelm
+            (K.): am 10. d. M. war der Termin der Klagebeantwortung abgelaufen!” (“To Wilhelm
+            (postcard): the deadline for answering the legal charge expired on the 10th of the
+            month!”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Gestern am <tei:date when="1931-03-10">10. 3.</tei:date> ist die Frist für die
+        „Klagebeantwortung“ in <tei:rs type="place" key="entity-002318">Wiener Neustadt</tei:rs>
+        abgelaufen. Zunächst hat <tei:rs type="person" key="entity-000774">M</tei:rs>’s Vertreter
+        (der Form halber) „Einspruch gegen meine Forderung“ erhoben, nun bin ich neugierig, was er
+        sagen wird, wenn es Ernst wird u. wenn ich jeder Bestätigung im Einzelnen u. im Gesamten von
+          <tei:rs type="person" key="entity-000774">M</tei:rs>’s Hand habe, nebst zahllosen Briefen,
+        die dasselbe <tei:milestone unit="folio" n="recto"/> bestätigen. Du kannst Dir denken, wie
+        auch mein Zucker darunter leidet. </tei:p>
+
+      <tei:p>Wie geht es Dir? Der. l. <tei:rs type="person" key="entity-008450">Frau Marie</tei:rs>? </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">Wir grüßen Beide Euch Beide herzlichst</tei:salute>
+        <tei:salute rend="indent-70">Dein</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000632"
+          >Heinrich</tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1931-03-11">11. 3. 31</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="envelope">
+          <tei:fw type="header" rend="inline">
+            <tei:handShift new="#pr"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+          <tei:lb/>
+          <tei:note type="editorial" place="inline">small picture: lakeside town, captioned:
+            “Bregenz, Vorarlberg”</tei:note><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:supplied>From:</tei:supplied>
+              <tei:handShift new="#HS"/>Schenker</tei:addrLine>
+            <tei:addrLine>Vienna III, Keilgasse 8</tei:addrLine>
+
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied>To:</tei:supplied> Dr. Wilhelm Schenker</tei:addrLine>
+            <tei:addrLine>St. Bernhard near Horn</tei:addrLine>
+            <tei:addrLine>Lower Austria</tei:addrLine><tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| <tei:gap reason="illegible"/> VIENNA 40 | 11.III.31 19 |
+            <tei:gap reason="illegible"/> ||</tei:fw><tei:lb/><tei:lb/>
+        </tei:fw>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:salute><tei:handShift new="#HS"/>My dear <tei:rs type="person" key="entity-000775"
+            >Wilhelm</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>Yesterday, on <tei:date when="1931-03-10">March 10</tei:date>, the deadline for the
+        “reply to the lawsuit” in <tei:rs type="place" key="entity-002318">Vienna Neustadt</tei:rs>
+        expired. Now, <tei:rs type="person" key="entity-000774">Mozio</tei:rs>’s representative (for
+        formal purposes) registered an “objection to my claim.” Now I am curious about what he will
+        say when it gets serious, and when I have every confirmation in detail and as a whole in
+          <tei:rs type="person" key="entity-000774">Mozio</tei:rs>’s writing, alongside of
+        innumerable letters that <tei:milestone unit="folio" n="recto"/> confirm the same. You can
+        imagine how my blood sugar level is suffering under these conditions.</tei:p>
+
+      <tei:p>How are you? Your <tei:rs type="person" key="entity-008450">wife, Marie</tei:rs>? </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">We both send most cordial greetings to you both</tei:salute>
+        <tei:salute rend="indent-70">Your</tei:salute>
+        <tei:signed rend="indent-80"><tei:rs type="person" key="entity-000632"
+          >Heinrich</tei:rs></tei:signed><tei:lb/>
+        <tei:dateline><tei:date when="1931-03-11">March 11, 1931</tei:date></tei:dateline>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

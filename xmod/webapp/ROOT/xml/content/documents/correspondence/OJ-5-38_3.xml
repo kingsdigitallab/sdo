@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="3407" sdoID="OJ-5-38_3">OJ 5/38, [3]</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="HS" scope="major">Heinrich Schenker's hand</tei:handNote>
+   <tei:handNote xml:id="stamp" scope="minor">stamped</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="WMD">
+   <tei:persName>William Drabkin</tei:persName>
+   <tei:resp>Transcription, 2024</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="LR">
+   <tei:persName>Lee Rothfarb</tei:persName>
+   <tei:resp>Translation, 2024</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="IB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>XML Encoding, 2024</tei:resp>
+  </tei:respStmt>
+
+  <tei:respStmt xml:id="BOT">
+   <tei:name>Automated Script</tei:name>
+   <tei:resp>Conversion from MovableType syntax to TEI</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2010-03-11" who="#IB">XML code revised</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-008423">SchenkerW ~
+    HSchenker</tei:rs>
+   <tei:rs role="correspondence" type="correspondence" key="entity-008444">BednarAsnr ~
+    HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture postcard</tei:rs>
+
+   <dc:title>Handwritten picture postcard from Heinrich Schenker to Albin Bednař, snr, dated July 3,
+    1923</dc:title>
+
+   <dcterms:created>1923-07-03T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2024-06-07</dcterms:dateSubmitted>
+   <dc:description>Schenker thanks Albin Bednař for his kind assistance and asks him to send any
+    news he may have of his brother Wilhelm.</dc:description>
+   <dc:subject/>
+   
+   <marcrel:correspondent key="entity-000632">HSchenker</marcrel:correspondent>
+   <marcrel:recipient key="entity-000775">Wilhelm Schenker</marcrel:recipient>
+   <marcrel:recipient key="entity-000050">Albin Bednar</marcrel:recipient>
+  </sdo:itemDesc>
+
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="verso"/><tei:lb/>
+    <tei:note type="editorial" place="inline">Picture: river valley with mountains</tei:note><tei:lb/><tei:lb/>
+    <tei:milestone unit="folio" n="recto"/><tei:lb/>
+    <tei:add><tei:handShift new="#stamp"/>Langesthei in Paznaun.</tei:add><tei:lb/>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:addrLine><tei:handShift new="#HS"/>Abs. D<tei:hi rend="supralinear">r.</tei:hi> H.
+       Schenker</tei:addrLine>
+      <tei:addrLine>dzt. Galtür, (Paznaun.)</tei:addrLine>
+      <tei:addrLine>Tirol</tei:addrLine>
+     </tei:address>
+     <tei:address>
+      <tei:addrLine><tei:supplied reason="clarity">An: </tei:supplied> H Oberinspektor Albin
+       Bednař</tei:addrLine>
+      <tei:addrLine rend="indent-10">Wien, III,</tei:addrLine>
+      <tei:addrLine rend="indent-10">Obergellergasse 10/6</tei:addrLine>
+     </tei:address>
+     <tei:fw type="postmark">|| GALTÜR | <tei:gap reason="illegible"/> | <tei:gap reason="illegible"
+      /> ||</tei:fw><tei:lb/>
+    </tei:fw>
+    <tei:salute><tei:handShift new="#HS"/><tei:rs type="person" key="entity-000051"
+      >Excellenz</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Sending of
+      this postcard is recorded in Schenker’s diary for July 3, 1923: “An den Oberinspektor
+      (Ansichtsk.): danken noch einmal u. erkundigen uns nach den Dingen in St. Bernhard.” (“To the
+      Chief Inspector (picture postcard): we thank him again and ask how things are in St.
+      Bernhard.”). — By this date, Wilhelm Schenker had moved from Kautzen, near Waidhofen, to St.
+      Bernhard, near Horn.</tei:note></tei:salute>
+   </tei:opener>
+
+   <tei:p>Die Reise ist ohne Abenteuer glatt verlaufen. Von hier aus danken wir für Ihre
+    Freundlichkeit noch einmal. Sollten Sie aus <tei:rs type="place" key="entity-004163">St.
+     Bernhard</tei:rs> Neues hören, dann bitten wir um eine Zeile, denn der l. <tei:rs type="person"
+     key="entity-000775">Wilhelm</tei:rs> würde auf eine Anfrage doch nicht antworten. </tei:p>
+
+   <tei:closer>
+    <tei:salute>Beste Grüße Euer Excellenz u. den Ihrigen </tei:salute>
+    <tei:salute rend="indent-40">Ihr</tei:salute>
+    <tei:signed rend="indent-50"><tei:rs type="person" key="entity-000632">H.
+     Schenker</tei:rs></tei:signed><tei:lb/>
+    <tei:dateline><tei:date when="1923-07-03">3. VII. 1923</tei:date></tei:dateline>
+   </tei:closer>
+
+
+
+  </tei:div>
+
+
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="verso"/><tei:lb/>
+    <tei:note type="editorial" place="inline">Picture: river valley with mountains</tei:note><tei:lb/><tei:lb/>
+    <tei:milestone unit="folio" n="recto"/><tei:lb/>
+    <tei:add><tei:handShift new="#stamp"/>Langesthei in Paznaun</tei:add><tei:lb/>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:addrLine><tei:handShift new="#HS"/>From: Dr. H. Schenker</tei:addrLine>
+      <tei:addrLine>currently at Galtür (Paznaun)</tei:addrLine>
+      <tei:addrLine>Tyrol</tei:addrLine>
+     </tei:address>
+     <tei:address>
+      <tei:addrLine><tei:supplied reason="clarity">To: </tei:supplied> Superintendent Albin
+       Bednař</tei:addrLine>
+      <tei:addrLine rend="indent-10">Obergellergasse 10/6</tei:addrLine>
+      <tei:addrLine rend="indent-10">Vienna III</tei:addrLine>
+     </tei:address>
+     <tei:fw type="postmark">|| GALTÜR | <tei:gap reason="illegible"/> | <tei:gap reason="illegible"
+      /> ||</tei:fw><tei:lb/>
+    </tei:fw>
+    <tei:salute><tei:handShift new="#HS"/><tei:rs type="person" key="entity-000051"
+      >Excellency</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+   </tei:opener>
+
+   <tei:p>The trip unfolded smoothly, without adventure. From here, we thank you again for your kind
+    assistance. Should you hear anything new from <tei:rs type="place" key="entity-004163">St.
+     Bernhard</tei:rs>, we request a line, for dear <tei:rs type="person" key="entity-000775"
+     >Wilhelm</tei:rs> certainly would not answer an inquiry.</tei:p>
+
+   <tei:closer>
+    <tei:salute>Best regards to Your Excellency and yours,</tei:salute>
+    <tei:salute rend="indent-40">Your</tei:salute>
+    <tei:signed rend="indent-50"><tei:rs type="person" key="entity-000632">H.
+     Schenker</tei:rs></tei:signed><tei:lb/>
+    <tei:dateline><tei:date when="1923-07-03">July 3, 1923</tei:date></tei:dateline>
+   </tei:closer>
+
+  </tei:div>
+
+ </sdo:record>
+</sdo:recordCollection>

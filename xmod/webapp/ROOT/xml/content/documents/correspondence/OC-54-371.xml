@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3224" sdoID="OC-54-371">OC 54/371</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="TPoed" scope="major">Otto Erich Deutsch typist</tei:handNote>
+      <tei:handNote xml:id="printed" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="OED" scope="minor">Otto Erich Deutsch's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2023</tei:resp>
+      <tei:resp>Translation, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2023</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2015-09-19" who="#DB">XML code created</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002726">DeutschOE ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002712">DeutschOE ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002727">DeutschOE+H ~
+        H+JSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture
+        postcard</tei:rs>
+
+      <dc:title>Typewritten picture postcard from Deutsch to Schenker, dated July 8, 1932</dc:title>
+
+      <dcterms:created>1932-07-08T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2023-08-05</dcterms:dateSubmitted>
+      <dc:description>Deutsch has spotted a printing error in the Foreword to the Fünf
+        Urlinie-Tafeln. -- He advises Schenker to look at a new edition of Chopin’s music, based on
+        the composer’s handwritten revisions, published by Oxford University Press.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-000164">DeutschOE</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+
+    </sdo:itemDesc>
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:note type="editorial" place="inline">picture: chimneys, smoke, hillside, captioned:
+          “Pitten – Niederösterreich”</tei:note><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>Absender: <tei:handShift new="#TPoed"
+            />Deutsch, Wien, Böcklinstr. 26</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">An:</tei:supplied>
+            <tei:handShift new="#TPoed"/>Herrn Dr. Heinrich Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:hi rend="sperr">Igls</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-40">Iglerhof (Tirol)</tei:addrLine>
+        </tei:address>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-30"><tei:handShift new="#TPoed"
+            /><tei:placeName>Wien</tei:placeName>, <tei:date when="1932-07-08">8. Juli
+          32</tei:date></tei:dateline>
+        <tei:salute>Lieber <tei:rs type="person" key="entity-000632">Verehrter</tei:rs>!<tei:note
+            xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this postcard is recorded
+            in Schenker’s diary for July 10, 1932: “Von Deutsch (K.): macht auf einen Druckfehler im
+            Vorwort aufmerksam.” (“From Deutsch (postcard): he alerts me to a printing error in the
+            Foreword.”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Erst heute las ich Ihr Vorwort aufmerksam. Im drittletzten Absatz, Zeile 6
+        von Unten, steht uuten.<tei:note xml:id="r0001-fn02" type="editorial" place="foot">This
+          typographical error was corrected before the work was published.</tei:note> Wenn Sie das
+        Datum <tei:date when="1932-08-30">30. August</tei:date> beibehalten wollen, so würde es sich
+        empfehlen, vorher doch die neue Kritische <tei:rs type="person" key="entity-000129"
+          >Chopin</tei:rs>ausgabe der Oxford-Presse<tei:note xml:id="r0001-fn03" type="editorial"
+          place="foot"><tei:bibl><tei:title level="m">The Oxford Original Edition of Chopin’s
+              Music</tei:title>, ed. <tei:editor>Edouard Ganche</tei:editor> (London: Oxford
+            University Press, 1932</tei:bibl>).</tei:note> einzusehen, die <tei:rs type="person"
+          key="entity-000380">Hoboken</tei:rs> auf Subskription vor zwei Wochen erhalten hat. Sie
+        scheint uns sehr gut zu sein, auf Grund von Korrekturexemplaren von <tei:rs type="person"
+          key="entity-000129">Chopin</tei:rs>s Hand, die eine Schülerin von ihm besass und die der
+        französische Herausgeber erworben hat. <tei:rs key="entity-000380">Hoboken</tei:rs> will
+        Ihnen die Ausgabe zeigen, aber vielleicht ist sie schon für dieses Vorwort nötig. Er hat sie
+        mitgenommen. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Schönstens </tei:salute>
+        <tei:salute rend="indent-70">Ihr ganz ergebener</tei:salute>
+        <tei:signed rend="indent-80"><tei:handShift new="#OED"/><tei:rs type="person"
+            key="entity-000164">O E Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="inline"><tei:note type="editorial" place="inline"
+            >printed:</tei:note>
+          <tei:handShift new="#printed"/><tei:hi rend="bold">Postcard</tei:hi></tei:fw>
+        <tei:lb/>
+        <tei:note type="editorial" place="inline">picture: chimneys, smoke, hillside, captioned:
+          “Pitten – Lower Austria”</tei:note><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#printed"/>From: <tei:handShift new="#TPoed"/>Deutsch,
+            Vienna, Böcklinstraße 26</tei:addrLine>
+        </tei:address>
+        <tei:address>
+          <tei:addrLine><tei:supplied reason="clarity">To:</tei:supplied>
+            <tei:handShift new="#TPoed"/>Dr. Heinrich Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:hi rend="sperr">Igls</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-40">Iglerhof (Tyrol)</tei:addrLine>
+        </tei:address>
+        <tei:milestone unit="folio" n="verso"/>
+        <tei:dateline rend="indent-30"><tei:handShift new="#TPoed"
+            /><tei:placeName>Vienna</tei:placeName>, <tei:date when="1932-07-08">July 8,
+            1932</tei:date></tei:dateline>
+        <tei:salute>Dear revered <tei:rs type="person" key="entity-000632">friend</tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Only today did I read your Foreword carefully. In the third-to-last
+        paragraph, sixth line from the bottom, there is “uuten”.<tei:ptr corresp="#r0001-fn02"
+          type="footnote"/> If you want to retain the date of <tei:date when="1932-08-30">August
+          30</tei:date>, then it would be advisable to have a look at the new critical edition of
+          <tei:rs type="person" key="entity-000129">Chopin</tei:rs> published by Oxford University
+          Press,<tei:ptr corresp="#r0001-fn03" type="footnote"/> which <tei:rs key="entity-000380"
+          >Hoboken</tei:rs> received on subscription two weeks ago. It appears to us to be very
+        good, on the basis of proof copies with corrections in <tei:rs type="person"
+          key="entity-000129">Chopin</tei:rs>’s hand, which a pupil of his owned and which the
+        French editor has acquired. <tei:rs key="entity-000380">Hoboken</tei:rs> will show you the
+        edition, but perhaps it is already necessary for this Foreword. He has taken it with
+        him.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">With best wishes,</tei:salute>
+        <tei:salute rend="indent-70">Your wholly devoted</tei:salute>
+        <tei:signed rend="indent-80"><tei:handShift new="#OED"/><tei:rs type="person"
+            key="entity-000164">O. E. Deutsch</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
