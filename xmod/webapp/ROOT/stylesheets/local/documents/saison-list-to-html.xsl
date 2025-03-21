@@ -19,6 +19,7 @@
       <li><a href="pupil/1918-1919.html">Saison 1918/19</a></li>
       <li><a href="pupil/1919-1920.html">Saison 1919/20</a></li>
       <li><a href="pupil/1920-1921.html">Saison 1920/21</a></li>
+      <li><a href="pupil/1921-1922.html">Saison 1921/22</a></li>
       <li><a href="pupil/1923-1924.html">Saison 1923/24</a></li>
       <li><a href="pupil/1924-1925.html">Saison 1924/25</a></li>
     </ul>
@@ -35,6 +36,7 @@
       <li>Saison 1918/19 - <a href="OC-3-3_1918/r0001.html">Breisach: lessons: 1918/19</a></li>
       <li>Saison 1919/20 - <a href="OC-3-3_1919/r0001.html">Brünauer: lessons; Oct 1919-Jan 1920</a></li>
       <li>Saison 1920/21 - <a href="OC-3-3_1920/r0001.html">Bamberger: lessons; 1920/21</a></li>
+      <li>Saison 1921/22 - <a href="OC-3-3_1921/r0001.html">Bamberger: lessons; 1921/22</a></li>
     </ul>
   </xsl:template>
 </xsl:stylesheet>
