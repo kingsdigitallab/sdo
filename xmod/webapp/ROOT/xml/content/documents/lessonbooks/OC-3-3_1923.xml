@@ -21,9 +21,9 @@
 
         <tei:respStmt xml:id="IB">
             <tei:persName>Ian Bent</tei:persName>
-            <tei:resp>Editing of transcription, 2012</tei:resp>
+            <tei:resp>Editing of transcription, 2025</tei:resp>
             <tei:resp>Footnotes, 2012, 2025</tei:resp>
-            <tei:resp>Translation, 2012, 2025</tei:resp>
+            <tei:resp>Translation, 2025</tei:resp>
             <tei:resp>XML Encoding, 2012, 2025</tei:resp>
         </tei:respStmt>
 
@@ -306,7 +306,7 @@
 
 
             <dcterms:created>1924-06-30T12:00:00Z</dcterms:created>
-            <dcterms:dateSubmitted>0000-00-00</dcterms:dateSubmitted>
+            <dcterms:dateSubmitted>2025-04-11</dcterms:dateSubmitted>
 
             <dc:description/>
             <dc:subject/>
@@ -314,7 +314,13 @@
 
         <tei:div type="transcription">
             <tei:head><tei:hi rend="double-underline"><tei:rs role="pupil" type="person"
-                        key="entity-000107">Brünauer</tei:rs>:</tei:hi>[1]</tei:head>
+                        key="entity-000107">Brünauer</tei:rs>:</tei:hi><tei:note xml:id="r0002-fn01"
+                    type="editorial" place="foot">Brünauer’s lesson notes are written continuously
+                    in the original, with em-dashes separating individual entries. Those for the
+                    autumn of 1923 are entirely undated, and those for January to June 1924 are
+                    dated somewhat inconsistently. For clarity, they have here been divided into
+                    sections by month, with the autumn lessons occupying the first
+                    section.</tei:note></tei:head>
 
             <tei:ab><tei:rs type="composition" key="entity-008371"><tei:hi rend="underline"
                         >Chopin</tei:hi>: <tei:title>Bolero</tei:title></tei:rs>. <tei:milestone
@@ -335,15 +341,20 @@
                 die <tei:term>Urlinie</tei:term>n betrachtet. <tei:milestone unit="section"
                     rend="inline em-dash"/> Das Asdur-Duett <tei:supplied reason="identity">Op. 38,
                     No. 6</tei:supplied> lehne ich ab, da es kein Duett ist – sprechen es nur durch;
-                    N<tei:hi rend="supralinear">o</tei:hi> 38 Adur.[2] <tei:milestone unit="section"
-                    rend="inline em-dash"/> Zu Haydn züruck: Peters I, Sonate N<tei:hi
-                    rend="supralinear">o</tei:hi> 5 Cdur <tei:supplied reason="identity">Hob.
-                    XVI/35</tei:supplied>, s. <tei:rs type="work" key="entity-001743"><tei:choice>
+                    N<tei:hi rend="supralinear">o</tei:hi> 38 Adur.<tei:note xml:id="r0002-fn02"
+                    type="editorial" place="foot">No. 38 is Op. 85, No. 2 in A minor; or possibly
+                    the “Spring Song,” No. 30?</tei:note>
+                <tei:milestone unit="section" rend="inline em-dash"/> Zu Haydn züruck: Peters I,
+                Sonate N<tei:hi rend="supralinear">o</tei:hi> 5 Cdur <tei:supplied reason="identity"
+                    >Hob. XVI/35</tei:supplied>, s. <tei:rs type="work" key="entity-001743"><tei:choice>
                         <tei:sic>3.</tei:sic>
                         <tei:corr>4.</tei:corr>
-                    </tei:choice> Heft <tei:title>Tonwille</tei:title></tei:rs>;[3] Peters III
-                    N<tei:hi rend="supralinear">o</tei:hi> 2 Sonate Cmoll <tei:supplied
-                    reason="identity">Hob. XVI/33</tei:supplied>. </tei:ab>
+                    </tei:choice> Heft <tei:title>Tonwille</tei:title></tei:rs>;<tei:note
+                    xml:id="r0002-fn03" type="editorial" place="foot"><tei:title level="a">Haydn:
+                        Sonate C-dur (U. E. Nr. 1),</tei:title>
+                    <tei:title level="j">Der Tonwille</tei:title> 4 (Vienna: Universal Edition,
+                    1923), 15–18.</tei:note> Peters III N<tei:hi rend="supralinear">o</tei:hi> 2
+                Sonate Cmoll <tei:supplied reason="identity">Hob. XVI/33</tei:supplied>. </tei:ab>
 
             <tei:ab><tei:milestone unit="section" rend="inline em-dash"/>
                 <tei:rs type="composition" key="entity-001496"><tei:hi rend="underline"
@@ -368,7 +379,12 @@
                 u. die <tei:term>Linie</tei:term> zu Papier gebracht. </tei:ab>
 
             <tei:ab><tei:milestone unit="section" rend="inline em-dash"/> Am <tei:date
-                    when="1924-03-18">18.III.24</tei:date> zum erstenmal im Notenheft gebracht![4]
+                    when="1924-03-18">18.III.24</tei:date> zum erstenmal im Notenheft
+                    gebracht!<tei:note xml:id="r0002-fn04" type="editorial" place="foot">Schenker’s
+                    diary for March 18, 1924 mirrors this and the following clause: “Brünauer zum
+                    erstenmal mit einem Notenheft; Polonaisen Cismoll, Cmoll schon eingetragen.”
+                    (“Brünauer for the first time with a music manuscript book; Polonaises in
+                        C<tei:g type="sharp"/> minor and C minor already entered.”).</tei:note>
                 Darin eingetragen <tei:rs type="composition" key="entity-001500"
                         ><tei:title>Polonaise</tei:title> Cismoll</tei:rs> u. <tei:rs
                     type="composition" key="entity-001499">Cmoll</tei:rs>. <tei:milestone
@@ -430,8 +446,17 @@
                 <tei:date when="1924-06-06">6.VI.</tei:date>
                 <tei:rs type="composition" key="entity-001563">Haydn-Sinf. Gdur</tei:rs>, letzter
                 Satz; <tei:rs type="composition" key="entity-001354">Brahms: op. 24</tei:rs>; zeige
-                die Klischees fürs <tei:rs type="work" key="entity-001747">8. Heft</tei:rs>.[5] –
-                    <tei:date when="1924-06-10">10.VI.</tei:date>: <tei:rs type="composition"
+                die Klischees fürs <tei:rs type="work" key="entity-001747">8.
+                    Heft</tei:rs>.<tei:note xml:id="r0002-fn05" type="editorial" place="foot"
+                        ><tei:title level="a">Brahms: Variationen und Fuge über ein Thema von
+                        Händel, op. 24,</tei:title>
+                    <tei:title level="j">Der Tonwille</tei:title> 8/9 (Apr/Sep 1924), 3–46,
+                    published November 18, 1924. — A <tei:hi rend="italic">Klischée</tei:hi> was a
+                    block on which a music example (usually short) was engraved, then embedded in
+                    the type; in the 1924/25 lessonbook the term is applied to a handwritten graph
+                    from which a music example might be extracted.</tei:note>
+                <tei:milestone unit="section" rend="inline em-dash"/>
+                <tei:date when="1924-06-10">10.VI.</tei:date>: <tei:rs type="composition"
                     key="entity-006891"><tei:hi rend="underline">Schubert</tei:hi>:
                         <tei:title>Impromptu</tei:title> Asdur</tei:rs>. <tei:milestone
                     unit="section" rend="inline em-dash"/> In den letzten Stunden <tei:rs
@@ -444,14 +469,15 @@
 
         <tei:div type="translation">
             <tei:head><tei:hi rend="double-underline"><tei:rs role="pupil" type="person"
-                        key="entity-000107">Brünauer</tei:rs>:</tei:hi>[1]</tei:head>
+                        key="entity-000107">Brünauer</tei:rs>:</tei:hi><tei:ptr
+                    corresp="#r0002-fn01" type="footnote"/></tei:head>
 
             <tei:ab><tei:rs type="composition" key="entity-008371"><tei:hi rend="underline"
                         >Chopin</tei:hi>
                     <tei:title level="m">Bolero</tei:title></tei:rs>. <tei:milestone unit="section"
                     rend="inline em-dash"/>
                 <tei:rs type="person" key="entity-000344">Haydn</tei:rs> sonatas, Peters edition
-                vol. II, No. 1 sin G major, No. 2 in E<tei:g type="flat"/> major, vol. I No. 2 in E
+                vol. II, No. 1 in G major, No. 2 in E<tei:g type="flat"/> major, vol. I No. 2 in E
                 minor, <tei:supplied reason="question">No. ? in</tei:supplied> D major; Adagio in A
                 major repeated many time with special affection. <tei:milestone unit="section"
                     rend="inline em-dash"/>
@@ -468,15 +494,17 @@
                     <tei:term>Urlinie</tei:term> considered. <tei:milestone unit="section"
                     rend="inline em-dash"/> I disapprove of the A<tei:g type="flat"/> major Duet
                     <tei:supplied reason="identity">Op. 38, No. 6</tei:supplied> on grounds that it
-                isn’t a duet at all – we just talk it through; No. 38 in A major.[2] <tei:milestone
-                    unit="section" rend="inline em-dash"/> Back to Haydn: Peters edition vol. I,
-                Sonata No. 5 in C major <tei:supplied reason="identity">Hob. XVI/35</tei:supplied>,
-                cf. <tei:rs type="work" key="entity-001743"><tei:choice>
+                isn’t a duet at all – we just talk it through; No. 38 in A major.<tei:ptr
+                    corresp="#r0002-fn02" type="footnote"/>
+                <tei:milestone unit="section" rend="inline em-dash"/> Back to Haydn: Peters edition
+                vol. I, Sonata No. 5 in C major <tei:supplied reason="identity">Hob.
+                    XVI/35</tei:supplied>, cf. <tei:rs type="work" key="entity-001743"><tei:choice>
                         <tei:sic>third</tei:sic>
                         <tei:corr>fourth</tei:corr>
                     </tei:choice> issue of <tei:title level="j">Der
-                Tonwille</tei:title></tei:rs>;[3] Peters edition vol. III, Sonata No. 2 in C minor
-                    <tei:supplied reason="identity">Hob. XVI/33</tei:supplied>. </tei:ab>
+                    Tonwille</tei:title></tei:rs>;<tei:ptr corresp="#r0002-fn04" type="footnote"/>
+                Peters edition vol. III, Sonata No. 2 in C minor <tei:supplied reason="identity"
+                    >Hob. XVI/33</tei:supplied>. </tei:ab>
 
             <tei:ab><tei:milestone unit="section" rend="inline em-dash"/>
                 <tei:rs type="composition" key="entity-001496"><tei:hi rend="underline"
@@ -489,8 +517,9 @@
                 <tei:rs type="composition" key="entity-008499"><tei:hi rend="underline"
                         >Beethoven</tei:hi> Violin Sonata, the last one in G major</tei:rs>, first
                 movement (<tei:date when="1924-01-22">Jan 22</tei:date>). Sundry things from the
-                    <tei:rs type="composition" key="entity-001263">Eroica</tei:rs> (<tei:date
-                    when="1924-01-29">Jan 29</tei:date>). </tei:ab>
+                    <tei:rs type="composition" key="entity-001263"
+                    ><tei:title>Eroica</tei:title></tei:rs> (<tei:date when="1924-01-29">Jan
+                    29</tei:date>). </tei:ab>
 
             <tei:ab><tei:milestone unit="section" rend="inline em-dash"/>
                 <tei:rs type="composition" key="entity-001499">Chopin <tei:title level="m"
@@ -503,8 +532,9 @@
 
             <tei:ab><tei:milestone unit="section" rend="inline em-dash"/> Entered into his music
                 manuscript book for the first time on <tei:date when="1924-03-18">March 18,
-                    1924</tei:date>![4] The <tei:rs type="composition" key="entity-001500"
-                    >Polonaises in C<tei:g type="sharp"/> minor</tei:rs> and <tei:rs
+                    1924</tei:date>!<tei:ptr corresp="#r0002-fn04" type="footnote"/> The <tei:rs
+                    type="composition" key="entity-001500"><tei:title level="m"
+                        >Polonaises</tei:title> in C<tei:g type="sharp"/> minor</tei:rs> and <tei:rs
                     type="composition" key="entity-001499">C minor</tei:rs> inscribed therein.
                     <tei:milestone unit="section" rend="inline em-dash"/> On <tei:date
                     when="1924-03-21">March 21</tei:date> the <tei:term>Urlinie</tei:term> of the
@@ -563,8 +593,9 @@
                 <tei:date when="1924-06-06">June 6</tei:date>: <tei:rs type="composition"
                     key="entity-001563">Haydn Symphony in G major</tei:rs>, last movement; <tei:rs
                     type="composition" key="entity-001354">Brahms Op. 24</tei:rs>; I show the music
-                examples for <tei:rs type="work" key="entity-001747">issue 8</tei:rs>.[5]
-                    <tei:milestone unit="section" rend="inline em-dash"/>
+                examples for <tei:rs type="work" key="entity-001747">issue 8</tei:rs>.<tei:ptr
+                    corresp="#r0002-fn05" type="footnote"/>
+                <tei:milestone unit="section" rend="inline em-dash"/>
                 <tei:date when="1924-06-10">June 10</tei:date>: <tei:rs type="composition"
                     key="entity-006891"><tei:hi rend="underline">Schubert</tei:hi>
                     <tei:title level="m">Impromptu</tei:title> in A<tei:g type="flat"/>
@@ -585,7 +616,7 @@
 
 
             <dcterms:created>1924-06-30T12:00:00Z</dcterms:created>
-            <dcterms:dateSubmitted>2000-00-00</dcterms:dateSubmitted>
+            <dcterms:dateSubmitted>2025-04-13</dcterms:dateSubmitted>
 
             <dc:description/>
             <dc:subject/>
