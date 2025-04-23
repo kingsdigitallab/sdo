@@ -37,13 +37,13 @@
     <sdo:itemDesc>
       <tei:rs role="correspondence" type="correspondence" key="entity-002734">Oppel ~
         HSchenker</tei:rs>
-      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
 
       <dc:title>Handwritten postcard from Oppel to Schenker, postmarked December 29, 1921</dc:title>
 
       <dcterms:created>1921-12-29T12:00:00Z</dcterms:created>
       <dcterms:dateSubmitted>2025-04-23</dcterms:dateSubmitted>
-      <dc:description>Oppel sends Schenker greetings for the new year. He notes the steep rise in
+      <dc:description>Oppel sends Schenker greetings for the New Year. He notes the steep rise in
         the prices of academic books.</dc:description>
       <dc:subject/>
 
@@ -57,46 +57,61 @@
     <tei:div type="transcription">
       <tei:opener>
         <tei:milestone unit="folio" n="recto"/><tei:lb/>
-        <tei:fw type="header" rend="center"><tei:handShift new="#printed"/><tei:hi rend="bold"
-          >Postkarte</tei:hi></tei:fw><tei:lb/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#pr"/><tei:hi rend="bold"
+            >Postkarte</tei:hi></tei:fw><tei:lb/>
         <tei:fw type="envelope">
           <tei:address>
-            <tei:addrLine><tei:handShift new="#pr"/>Ötztaler Ferner, Gepatschhaus</tei:addrLine>
-            <tei:addrLine><tei:handShift new="#stamp"/>Gepatschhaus 1920m / Sektion Frankfurt /
-              D.-Oe. A. V.</tei:addrLine>
+            <tei:addrLine><tei:handShift new="#pr"/>Absender: <tei:handShift new="#RO"/>Kiel,
+              Feldstr. 77<tei:hi rend="supralinear">IV</tei:hi></tei:addrLine>
           </tei:address>
           <tei:address>
-            <tei:addrLine><tei:supplied>An: </tei:supplied><tei:handShift new="#RO"/>Herrn Prof Dr.
-              Heinrich Schenker</tei:addrLine>
-            <tei:addrLine>Galtür/Paznaun</tei:addrLine>
-            <tei:addrLine rend="indent-30">Alpenhaus Fluchthorn</tei:addrLine>
+            <tei:addrLine><tei:supplied>An: </tei:supplied><tei:handShift new="#RO"/>Herrn Prof
+                D<tei:hi rend="supralinear">r.</tei:hi> Heinrich Schenker</tei:addrLine>
+            <tei:addrLine>Wien <tei:del rend="overstrike">III/</tei:del>
+              <tei:handShift new="#unk"/>4</tei:addrLine>
+            <tei:addrLine rend="indent-30"><tei:handShift new="#RO"/><tei:del rend="overstrike"
+                >Reisnerstr 38</tei:del></tei:addrLine>
+            <tei:addrLine><tei:handShift new="#RO"/><tei:sic>Östreich</tei:sic>! <tei:handShift
+                new="#unk"/>Keilg 8</tei:addrLine>
             <tei:lb/>
           </tei:address>
-          <tei:fw type="postmark">|| PR.T.. | 25.<tei:gap reason="illegible"/> | * b * ||</tei:fw>
+          <tei:fw type="postmark">||KIEL | 29 12 21 | 9 3-4N 9 | 1||</tei:fw>
           <tei:lb/>
         </tei:fw>
-        <tei:salute>Mein lieber Herr <tei:rs type="person" key="entity-000632">Professor
-            Schenker</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
-            this postcard does not appear to be recorded in Schenker’s diary. In 1921, the first
-            year in which Heinrich and Jeanette spent their summer holiday in Galtür, July 23 fell
-            on a Sunday; this would have been a suitable rest day for Oppel and his
-          sons.</tei:note></tei:salute>
+        <tei:salute><tei:handShift new="#RO"/>Lieber Herr <tei:rs type="person" key="entity-000632"
+            >Prof. Schenker</tei:rs>,<tei:note xml:id="r0001-fn01" type="editorial" place="foot"
+            >Receipt of this postcard is recorded in Schenker’s diary for December 31, 1921: “Von
+            Dr. Oppel (K.): Neujahrsgruß” (“From Dr. Oppel (postcard): New Year’s
+            greeting”).</tei:note></tei:salute>
       </tei:opener>
 
-      <tei:p>heute <tei:date when="1921-07-23">23/7.</tei:date> hier Ruhetag; gestern
-          Vernagthütte<tei:note xml:id="r0001-fn02" type="editorial" place="foot">Vernagthütte: an
-          Alpine hut in the village of Vent in the Ötz Valley, about 10 miles (15km) southeast of
-          the Gepatschhaus. The Gespatschjoch (3,241 meters above sea level) and Rauhekopfhütte
-          (2,731 meters) are found along the tracks that link these two mountain huts.</tei:note>
-        Gepatschjoch, Rauhekopfhütte, Gep<tei:supplied reason="compression">atsch</tei:supplied>haus
-        sehr anstrengend, gewesen ohne Führer. </tei:p>
+      <tei:p>das alte Jahr soll nicht ohne einen letzten Gruss vorübergehn. Ich hoffe, es geht Ihnen
+        gut. Schade, dass Sie Glas nicht gehört haben, er ist ein sehr bescheidener u. sympathischer
+        Virtuose, u. mehr Musiker, so wie es sich gehört. </tei:p>
+
+      <tei:p>Zu Weihn. <tei:milestone unit="folio" n="verso"/> schenkte man mir <tei:rs
+          type="person" key="entity-000418">Kalbeck</tei:rs>s Brahmsbiographie,<tei:note
+          xml:id="r0001-fn02" type="editorial" place="foot"><tei:bibl><tei:author>Max
+              Kalbeck</tei:author>: <tei:title level="m">Johannes Brahms</tei:title>, 8 vols.
+            (1904–14)</tei:bibl>.</tei:note> sie ist mir zu romanhaft, u. sein hermeneutisches
+        Gerüche unerträglich. – Die Presse werden jetzt auch für uns hier unerschwinglich: <tei:rs
+          type="person" key="entity-005265">Siegf. Karg-Elert</tei:rs>, <tei:note type="editorial"
+          place="inline">words crossed out</tei:note>
+        <tei:title>Grundlagen der Musiktheorie</tei:title><tei:note xml:id="r0001-fn03"
+          type="editorial" place="foot"><tei:bibl><tei:author>Sigfrid Karg-Elert</tei:author>:
+              <tei:title level="m">Die Grundlagen der Musiktheorie</tei:title>, 3 vols.
+            (1920–21)</tei:bibl>.</tei:note> kosten I Teil 18, II<tei:hi rend="supralinear"
+          >1</tei:hi>: 105 M! II<tei:hi rend="supralinear">2</tei:hi> im Druck u. wohl auch 100 M.
+        Wo soll das hinaus? </tei:p>
+
+      <tei:p>Wir kommen unfehlbar auf den Zivilisationsstandpunkt <tei:rs type="place"
+          key="entity-002520">Frankreich</tei:rs>s. Dabei faseln unsre Demokraten immer noch von
+        Volkshochschulen u. dergl. mehr. Überall krasse Unbildung u. Dilletantismus. </tei:p>
 
       <tei:closer>
-        <tei:salute>Mit herzl Gruss Ihnen beiden,</tei:salute>
-        <tei:salute>Ihre treuen </tei:salute>
-        <tei:signed><tei:rs type="person" key="entity-000643">Reinhard Oppel</tei:rs>, <tei:rs
-            type="person" key="entity-000644">Ulrich Oppel</tei:rs><tei:supplied>,</tei:supplied>
-          <tei:rs type="person" key="entity-003957">Walter Oppel</tei:rs></tei:signed>
+        <tei:salute>Mit den herzlichsten Neujahrswünschen u. Grüssen</tei:salute>
+        <tei:salute>bleibe ich Ihr dankbarer</tei:salute>
+        <tei:signed><tei:rs type="person" key="entity-000643">Reinhard Oppel</tei:rs></tei:signed>
       </tei:closer>
 
     </tei:div>
@@ -104,41 +119,53 @@
 
     <tei:div type="translation">
       <tei:opener>
-        <tei:milestone unit="folio" n="verso"/><tei:lb/>
-        <tei:note type="editorial" place="inline"><tei:hi rend="italic">not photographed</tei:hi>:
-          picture of the Gepatschhaus</tei:note>
-        <tei:lb/>
         <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="header" rend="center"><tei:handShift new="#pr"/><tei:hi rend="bold"
+            >Postcard</tei:hi></tei:fw><tei:lb/>
         <tei:fw type="envelope">
           <tei:address>
-            <tei:addrLine><tei:handShift new="#pr"/>Ötztaler Ferner, Gepatschhaus</tei:addrLine>
-            <tei:addrLine><tei:handShift new="#stamp"/>Gepatschhaus 1920m / Frankfurt section /
-              D.-Oe. A. V.</tei:addrLine>
+            <tei:addrLine><tei:handShift new="#pr"/>From: <tei:handShift new="#RO"/>Kiel,
+              Feldstrstraße 77/4</tei:addrLine>
           </tei:address>
           <tei:address>
             <tei:addrLine><tei:supplied>To: </tei:supplied><tei:handShift new="#RO"/>Prof. Heinrich
               Schenker</tei:addrLine>
-            <tei:addrLine>Galtür/Paznaun</tei:addrLine>
-            <tei:addrLine rend="indent-30">Alpenhaus Fluchthorn</tei:addrLine>
+            <tei:addrLine>Vienna <tei:del rend="overstrike">III/</tei:del>
+              <tei:handShift new="#unk"/>4</tei:addrLine>
+            <tei:addrLine rend="indent-30"><tei:handShift new="#RO"/><tei:del rend="overstrike"
+                >Reisnerstraße 38</tei:del></tei:addrLine>
+            <tei:addrLine><tei:handShift new="#RO"/>Austria! <tei:handShift new="#unk"/>Keilgasse
+              8</tei:addrLine>
             <tei:lb/>
           </tei:address>
-          <tei:fw type="postmark">|| PR.T.. | 25.<tei:gap reason="illegible"/> | * b * || </tei:fw>
+          <tei:fw type="postmark">||KIEL | 29 12 21 | 9 3-4N 9 | 1||</tei:fw>
           <tei:lb/>
         </tei:fw>
-        <tei:salute>My dear <tei:rs type="person" key="entity-000632">Professor
+        <tei:salute><tei:handShift new="#RO"/>Dear <tei:rs type="person" key="entity-000632">Prof.
             Schenker</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
       </tei:opener>
 
-      <tei:p>Today, <tei:date when="1921-07-23">July 23</tei:date>, is a rest day; yesterday from
-        the Vernagthütte<tei:ptr corresp="#r0001-fn02" type="footnote"/> via the Gepatschjoch and
-        the Rauhekopfhütte to the Gepatschhaus, very strenuous, done without a guide. </tei:p>
+      <tei:p>The old year should not go by without a final greeting. I hope that you are well. A
+        pity that you did not hear Glas; he is a very modest and agreeable virtuoso, and more a
+        musician, as ought to be the case.</tei:p>
+
+      <tei:p><tei:milestone unit="folio" n="verso"/> I was given <tei:rs type="person"
+          key="entity-000418">Kalbeck</tei:rs>’s biography of Brahms<tei:ptr corresp="#r0001-fn02"
+          type="footnote"/> as a Christmas present; it is too novelistic for me, and its
+        hermeneutical odors are unbearable. – Publications have become prohibitively expensive for
+        us here, too: <tei:rs type="person" key="entity-005265">Sigfrid Karg-Elert</tei:rs>’s
+          <tei:title level="m">Foundations of Music Theory</tei:title><tei:ptr corresp="#r0001-fn03"
+          type="footnote"/> costs: Part I, 18 marks; part II/1, 105 marks(!); Part II/2 is in press
+        and will probably cost over 100 marks. Where will this end?</tei:p>
+
+      <tei:p>We are arriving infallibly at the state of civilization in <tei:rs type="place"
+          key="entity-002520">France</tei:rs>. Our democrats are forever drivelling on about adult
+        education centres and the like. Everywhere, the crudest ignorance and dilletantism.</tei:p>
 
       <tei:closer>
-        <tei:salute>With cordial greetings to you both, </tei:salute>
-        <tei:salute>Your faithful </tei:salute>
-        <tei:signed><tei:rs type="person" key="entity-000643">Reinhard Oppel</tei:rs>, <tei:rs
-            type="person" key="entity-000644">Ulrich Oppel</tei:rs><tei:supplied>,</tei:supplied>
-          <tei:rs type="person" key="entity-003957">Walter Oppel</tei:rs></tei:signed>
+        <tei:salute>With my most cordial New Year’s wishes and greetings,</tei:salute>
+        <tei:salute>I remain your grateful</tei:salute>
+        <tei:signed><tei:rs type="person" key="entity-000643">Reinhard Oppel</tei:rs></tei:signed>
       </tei:closer>
 
 
