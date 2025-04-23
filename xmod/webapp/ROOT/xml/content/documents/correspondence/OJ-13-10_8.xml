@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+
+    <sdo:source>
+      <sdo:correspondence mfID="3584" sdoID="OJ-13-10_8">OJ 13/10, [8]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="RO" scope="major">Reinhard Oppel's hand</tei:handNote>
+      <tei:handNote xml:id="UO" scope="minor">Ulrich Oppel's hand</tei:handNote>
+      <tei:handNote xml:id="WO" scope="minor">Walter Oppel's hand</tei:handNote>
+      <tei:handNote xml:id="pr" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="stamp" scope="minor">stamped</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2025</tei:resp>
+      <tei:resp>Translation, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-04-22" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002734">Oppel ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+      <dc:title>picture postcard from Oppel to Schenker, dated July 23, 1921[?]</dc:title>
+
+      <dcterms:created>1921-07-23T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2025-04-23</dcterms:dateSubmitted>
+      <dc:description>Oppel and his sons send Schenker greetings from a hiking holiday in
+        Austria.</dc:description>
+      <dc:subject/>
+
+
+
+      <marcrel:correspondent key="entity-000643">Reinhard Oppel</marcrel:correspondent>
+      <marcrel:correspondent key="entity-000644">Ulrich Oppel</marcrel:correspondent>
+      <marcrel:correspondent key="entity-003957">Walter Oppel</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+      <tei:opener>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:note type="editorial" place="inline"><tei:hi rend="italic">not photographed</tei:hi>:
+          picture of the Gepatschhaus</tei:note>
+        <tei:lb/>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#pr"/>Ötztaler Ferner, Gepatschhaus</tei:addrLine>
+            <tei:addrLine><tei:handShift new="#stamp"/>Gepatschhaus 1920m / Sektion Frankfurt /
+              D.-Oe. A. V.</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied>An: </tei:supplied><tei:handShift new="#RO"/>Herrn Prof Dr.
+              Heinrich Schenker></tei:addrLine>
+            <tei:addrLine>Galtür/Paznaun</tei:addrLine>
+            <tei:addrLine rend="indent-30">Alpenhaus Fluchthorn</tei:addrLine>
+            <tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| PR.T.. | 25.<tei:gap reason="illegible"/> | * b * || </tei:fw>
+          <tei:lb/>
+        </tei:fw>
+        <tei:salute>Mein lieber Herr <tei:rs type="person" key="entity-000632">Professor
+            Schenker</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
+            this postcard does not appear to be recorded in Schenker’s diary. In 1921, the first
+            year in which Heinrich and Jeanette spent their summer holiday in Galtür, July 23 fell
+            on a Sunday; this would have been a suitable rest day for Oppel and his
+          sons.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>heute <tei:date when="1921-07-23">23/7.</tei:date> hier Ruhetag; gestern
+          Vernagthütte<tei:note xml:id="r0001-fn02" type="editorial" place="foot">Vernagthütte: an
+          Alpine hut in the village of Vent in the Ötz Valley, about 10 miles (15km) southeast of
+          the Gepatschhaus. The Gespatschjoch (3,241 meters above sea level) and Rauhekopfhütte
+          (2,731 meters) are found along the tracks that link these two mountain huts.</tei:note>
+        Gepatschjoch, Rauhekopfhütte, Gep<tei:supplied reason="compression">atsch</tei:supplied>haus
+        sehr anstrengend, gewesen ohne Führer. </tei:p>
+
+      <tei:closer>
+        <tei:salute>Mit herzl Gruss Ihnen beiden,</tei:salute>
+        <tei:salute>Ihre treuen </tei:salute>
+        <tei:signed><tei:rs type="person" key="entity-000643">Reinhard Oppel</tei:rs>, <tei:rs
+            type="person" key="entity-000644">Ulrich Oppel</tei:rs><tei:supplied>,</tei:supplied>
+          <tei:rs type="person" key="entity-003957">Walter Oppel</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+      <tei:opener>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:note type="editorial" place="inline"><tei:hi rend="italic">not photographed</tei:hi>:
+          picture of the Gepatschhaus</tei:note>
+        <tei:lb/>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#pr"/>Ötztaler Ferner, Gepatschhaus</tei:addrLine>
+            <tei:addrLine><tei:handShift new="#stamp"/>Gepatschhaus 1920m / Frankfurt section /
+              D.-Oe. A. V.</tei:addrLine>
+          </tei:address>
+          <tei:address>
+            <tei:addrLine><tei:supplied>To: </tei:supplied><tei:handShift new="#RO"/>Prof. Heinrich
+              Schenker</tei:addrLine>
+            <tei:addrLine>Galtür/Paznaun</tei:addrLine>
+            <tei:addrLine rend="indent-30">Alpenhaus Fluchthorn</tei:addrLine>
+            <tei:lb/>
+          </tei:address>
+          <tei:fw type="postmark">|| PR.T.. | 25.<tei:gap reason="illegible"/> | * b * || </tei:fw>
+          <tei:lb/>
+        </tei:fw>
+        <tei:salute>My dear <tei:rs type="person" key="entity-000632">Professor
+            Schenker</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>Today, <tei:date when="1921-07-23">July 23</tei:date>, is a rest day; yesterday from
+        the Vernagthütte<tei:ptr corresp="#r0001-fn02" type="footnote"/> via the Gepatschjoch and
+        the Rauhekopfhütte to the Gepatschhaus, very strenuous, done without a guide. </tei:p>
+
+      <tei:closer>
+        <tei:salute>With cordial greetings to you both, </tei:salute>
+        <tei:salute>Your faithful </tei:salute>
+        <tei:signed><tei:rs type="person" key="entity-000643">Reinhard Oppel</tei:rs>, <tei:rs
+            type="person" key="entity-000644">Ulrich Oppel</tei:rs><tei:supplied>,</tei:supplied>
+          <tei:rs type="person" key="entity-003957">Walter Oppel</tei:rs></tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>
