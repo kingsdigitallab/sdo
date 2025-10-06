@@ -12,6 +12,7 @@
     <tei:handNotes>
       <tei:handNote xml:id="JF" scope="major">Julius Röntgen's hand</tei:handNote>
       <tei:handNote xml:id="OP" scope="minor">Oscar Posa's hand</tei:handNote>
+      <tei:handNote xml:id="pr" scope="minor">printed</tei:handNote>
     </tei:handNotes>
 
     <tei:respStmt xml:id="KK">
@@ -36,155 +37,71 @@
     <sdo:itemDesc>
       <tei:rs role="correspondence" type="correspondence" key="entity-008521">RoentgenJ ~
         HSchenker</tei:rs>
-      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008539">PosaO ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002845">Lettercard</tei:rs>
 
 
 
-      <dc:title>Handwritten lettercard from Oscar Posa and Julius Röntgen to Schenker, dated June 17, 1901</dc:title>
+      <dc:title>Handwritten lettercard from Julius Röntgen and Oscar Posa to Schenker, dated June
+        17, 1901</dc:title>
 
       <dcterms:created>1901-06-17T12:00:00Z</dcterms:created>
       <dcterms:dateSubmitted>2025-10-06</dcterms:dateSubmitted>
-      <dc:description>Röntgen and Posa send greetings on this lettercard with picture.</dc:description>
+      <dc:description>Röntgen and Posa send greetings on a lettercard with picture.</dc:description>
       <dc:subject/>
 
 
 
-      <marcrel:correspondent key="entity-008632">HSchenker</marcrel:correspondent>
-      <marcrel:recipient key="entity-000724">RöntgenJ</marcrel:recipient>
+      <marcrel:correspondent key="entity-000724">JRoentgen</marcrel:correspondent>
+      <marcrel:correspondent key="entity-005550">OPosa</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
     </sdo:itemDesc>
 
 
     <tei:div type="transcription">
 
       <tei:opener>
-        <tei:dateline rend="indent-30"><tei:handShift new="#JR"/>Amsterdam, <tei:date
-            when="1901-04-22">22 April 1901</tei:date></tei:dateline><tei:lb/>
-        <tei:salute>Verehrtester Herr <tei:rs type="person" key="entity-000632"
-            >Doctor</tei:rs><tei:note xml:id="r0001-fn01" type="editorial" place="foot">This letter
-            is published in English in <tei:bibl><tei:editor>Bent, Ian</tei:editor>,
-                <tei:editor>David Bretherton</tei:editor> and <tei:editor>William
-                Drabkin</tei:editor>, eds, <tei:title level="a">Heinrich Schenker: Selected
-                Correspondence</tei:title> (Woodbridge: Boydell Press, 2014), pp.
-            65–66</tei:bibl>.</tei:note></tei:salute>
+        <tei:fw type="envelope">
+          <tei:milestone unit="folio" n="recto"/><tei:lb/>
+          <tei:fw type="header" rend="center"><tei:hi rend="bold italic"
+            >BRIEFKAART</tei:hi></tei:fw><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#pr"/>AAN <tei:handShift new="#JR"/>Herrn D<tei:hi
+                rend="supralinear">r.</tei:hi>
+              <tei:hi rend="underline">Heinrich Schenker</tei:hi></tei:addrLine>
+            <tei:addrLine><tei:hi rend="underline">Oesterreich</tei:hi>
+              <tei:supplied reason="spacer">—</tei:supplied> Wien III</tei:addrLine>
+            <tei:addrLine>Reisnerstrasse 38</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| AMSTERDAM | 17 [6] 01 | * 12 6V * ||</tei:fw><tei:lb/>
+          <tei:fw type="postmark">|| WIEN 3/3 49 | BESTELLT | 20.6.01 | 7-<tei:gap
+              reason="illegible"/> ||</tei:fw><tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/><tei:lb/>
+          <tei:note type="editorial" place="inline">picture: woman, captioned: “ZUID-BEVELANDSCHE
+            KLEEDERDRACHT.”</tei:note><tei:lb/>
+          <tei:address>
+            <tei:addrLine rend="indent-60">Middelburg<tei:note xml:id="r0001-fn01" type="editorial"
+                place="foot">Middelburg: town in south-west Netherlands, capital of
+                Midden-Zeeland province.</tei:note>
+              <tei:date when="1901-06-17">17/6</tei:date></tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:salute>Lieber <tei:rs type="person" key="entity-000632">Freund</tei:rs>! </tei:salute>
       </tei:opener>
 
-      <tei:p>Endlich ein Wort des Dankes auf Ihre inhaltsreiche Sendung! Halten Sie die Verzögerung
-        nicht für Gleichgültigkeit! Im Gegentheil: Ihre Lieder und vor Allem die
-          <tei:title>Inventionen</tei:title> beschäftigen mich sehr, ich wollte Ihnen aber nicht
-        eher schreiben, ehe ich in ein etwas intimerer Verhältniß zu den Sachen getreten war und das
-        ist mir nicht sogleich gelungen. </tei:p>
+      <tei:p>Ich empfehle diese Dame Ihrer Obhut<tei:supplied reason="omission">.</tei:supplied>
+        Behandeln Sie dieselbe mit <tei:hi rend="underline">Vorsicht</tei:hi>. <tei:note
+          type="editorial" place="inline">cued from right margin sideways:</tei:note> und Rücksicht
+          <tei:unclear reason="reading">LL<tei:hi rend="supralinear">t</tei:hi></tei:unclear>
+        <tei:rs type="person" key="entity-000724">J.R.</tei:rs></tei:p>
 
-      <tei:p>Sie gehen in den <tei:title>Inventionen</tei:title> auf ziemlich verschlungenen Pfaden,
-        auf denen Ihnen zu folgen nicht immer leicht fällt.<tei:note xml:id="r0001-fn02"
-          type="editorial" place="foot"><tei:bibl><tei:author>Heinrich Schenker</tei:author>,
-              <tei:title level="a">Zweistimmige Inventionen</tei:title>, Op. 5 (Leipzig: Breitkopf
-            &amp; Härtel, 1901)</tei:bibl>. The item in F<tei:g type="sharp"/> minor is Op. 5, No.
-          2.</tei:note> Besonders liegt die rein <tei:hi rend="underline">musikalische</tei:hi>
-        Essenz nicht immer <tei:pb n="2"/> vor der Hand, während das Technische ja sogleich
-        intereßirt und imponirt. Am Meisten in dieser Beziehung zieht mich das Fismoll Stück an –
-        bisjetzt aber mehr beim Lesen, als beim Spielen. Klanglich scheint mir Vieles gewagt,
-        obgleich Alles vollkommen logisch ist. Sie können getrost darauf schreiben: “eine deutliche
-        Art darneben einen starken Vorschmack von der Komposition zu überkommen” – wie es <tei:rs
-          type="person" key="entity-000027">Bach</tei:rs> bei den Inventionen gethan hat.<tei:note
-          xml:id="r0001-fn03" type="editorial" place="foot"> Röntgen quotes, apparently to signal
-          his approval of Schenker’s adherence to expectations associated with the genre, and
-          without syntactic coherence, from Bach’s inscription on the title page of the fair copy of
-          his <tei:title level="m">Inventions and Sinfonias</tei:title>, BWV 772-801 (1723). Bach’s
-          inscription reads: “Upright Instruction wherein the lovers of the clavier, and especially
-          those desirous of learning, are shown a clear way not alone to learn to play clearly in
-          two voices but also, after further progress, to deal correctly and well with three <tei:hi
-            rend="italic">obbligato</tei:hi> parts; furthermore, at the same time not alone to have
-          good <tei:hi rend="italic">inventiones</tei:hi> [ideas] but to develop the same well and,
-          above all, to arrive at a singing style in playing and at the same time to acquire a
-          strong foretaste of composition.” (“Auffrichtige Anleitung, Wormit denen Liebhabern des
-            <tei:hi rend="italic">Clavires</tei:hi>, besonders aber denen Lehrbegierigen, eine
-          deütliche Art gezeiget wird, nicht alleine mit 2 Stimmen reine spielen zu lernen, sondern
-          auch bey weiteren <tei:hi rend="italic">progreßen</tei:hi> mit dreyen <tei:hi
-            rend="italic">obligaten Partien</tei:hi> richtig und wohl zu verfahren, anbey auch
-          zugleich gute <tei:hi rend="italic">inventiones</tei:hi> nicht alleine zu bekommen,
-          sondern auch selbige wohl durchzuführen, am allermeisten aber eine <tei:hi rend="italic"
-            >cantable</tei:hi> Art im Spielen zu erlangen, und darneben einen starcken Vorschmack
-          von der Composition zu überkommen.”) (<tei:bibl><tei:title level="m">Bach-Dokumente.
-              Supplement zu Johann Sebastian Bach: Neue Ausgabe sämtlicher Werke</tei:title>, ed.
-              <tei:editor>Werner Neumann</tei:editor> and <tei:editor>Hans-Joachim
-              Schulze</tei:editor>, vol. 1, <tei:title level="m">Schriftstücke von der Hand Johann
-              Sebastian Bachs</tei:title> (Kassel: Bärenreiter, 1963), 220-21</tei:bibl>; facs. and
-          transl. in <tei:bibl><tei:title level="m">The New Bach Reader: A Life of Johann Sebastian
-              Bach in Letters and Documents</tei:title>, ed. <tei:editor>Hans T. David
-            </tei:editor>and <tei:editor>Arthur Mendel</tei:editor>, revised and enlarged by
-              <tei:editor>Christoph Wolff</tei:editor> (New York: W. W. Norton, 1998),
-            97–98</tei:bibl>.) My thanks to Stephen Crist for his help in identifying the source of
-          Röntgen’s quotation.</tei:note> Dagegen scheint mir die “Gemüths-Ergötzung” etwas
-          zurückzutreten.<tei:note xml:id="r0001-fn04" type="editorial" place="foot">
-          “Gemüths-Ergötzung”: This term appears on the title-pages of the first editions of Bach’s
-          four volumes of <tei:title level="m">Clavier-Übungen</tei:title> (I: BWV 825–830 [1731];
-          II: BWV 831, 971 [1735]; III: BWV 552/1, 669–689, 802–805, 552/2 [1739]; IV: BWV 988 [c.
-          1742]). The spelling used by Röntgen, however, is found only in Bach’s second volume,
-          containing the <tei:title level="m">Italian Concerto</tei:title> (BWV 971) that Röntgen
-          was then editing for Universal Edition. The title pages reads: “Second part of the
-          Keyboard Practice, consisting of a Concerto after the Italian Taste and an Overture after
-          the French Manner, for a harpsichord with two manuals. Composed for music lovers, to
-          refresh their spirits, by Johann Sebastian Bach, Capellmeister to His Highness the Prince
-          of Saxe-Weissenfels and <tei:hi rend="italic">Directore Chori Musici Lipsiensis</tei:hi>.
-          Published by Christoph Weigel, Junior.” (“<tei:title>Zweyter Theil der Clavier Ubung
-            bestehend in einem Concerto nach Italiœnischen Gusto und einer Overture nach
-            Französischer Art, vor ein Clavicÿmbel mit zweÿen Manualen. Denen Liebhabern zur
-            Gemüths-Ergötzung verfertiget. von Johann Sebastian Bach</tei:title>. Hochfürstl:
-          Sœchßl: Weißenfelßl: Capellmeistern und Directore Chori Musici Lipsiensis. in Verlegung
-          Christoph Weigel Junioris.”) (<tei:title level="m">Bach-Dokumente</tei:title>, vol. I,
-          235; facs. and transl. in <tei:title level="m">The New Bach Reader</tei:title>, 167–68.)
-          My thanks to Stephen Crist for his help in identifying the source of Röntgen’s
-          quotation.</tei:note>
-      </tei:p>
-
-      <tei:p>Soweit bin ich <tei:hi rend="underline">bisjetzt</tei:hi> mit den
-          <tei:title>Inventionen</tei:title> gekommen, vielleicht ändert sich mein Urtheil aber
-        noch. Ich werde jedenfalls oft zu den Stücken zurückkehren und ich freue <tei:pb n="3"/>
-        mich darauf später mehr mit Ihnen darüber zu reden! </tei:p>
-
-      <tei:p>Mit den Liedern habe ich mich noch nicht viel beschäftigen können, da ich gerade in den
-        letzten Wochen sehr viel Anderes zu thun hatte. Die <tei:rs type="person"
-          key="entity-000027">Bach</tei:rs>-Ausgabe, die ich übernommen habe,<tei:note
-          xml:id="r0001-fn05" type="editorial" place="foot">The identity of the edition to which
-          Röntgen refers is unclear. During this period, Röntgen’s editorial work for Universal
-          Edition was extensive. His editions of Bach’s Little Preludes and Fugues, Two- and
-          Three-Part Inventions, French Suites, English Suites, Partitas, Italian Concerto, D minor
-          Concerto, and <tei:title level="m">Chromatic Fantasy &amp; Fugue</tei:title> all appeared
-          in 1902.</tei:note> beschäftigt mich in freien Stunden ganz und gar (zu dieser Thätigkeit
-        paßten nun Ihre <tei:title>Inventionen</tei:title>
-        <tei:hi rend="underline">sehr</tei:hi> gut<tei:supplied reason="cutoff">)</tei:supplied> und
-        Alles Andere mußte deßhalb zurücktreten. </tei:p>
-
-      <tei:p>“<tei:title>Ausklang</tei:title>” steht mir unter den Liedern obenan.<tei:note
-          xml:id="r0001-fn06" type="editorial" place="foot"
-              ><tei:bibl><tei:author>Schenker</tei:author>, <tei:title level="m">Sechs Lieder für
-              eine Singstimme mit Begleitung des Pianoforte</tei:title>, Op. 3 (Leipzig: Breitkopf
-            &amp; Härtel, [c. 1898]), No. 4</tei:bibl>.</tei:note> Der herrliche Text hat einen
-        unmittelbaren Ausdruck in der Musik gefunden und das Lied muß eine tiefe Wirkung machen. Die
-        anderen Lieder kommen mir zum Theil nicht so natürlich vor (das reizende
-          <tei:title>Wiegenlied</tei:title> ausgenommen!)<tei:supplied reason="omission"
-          >.</tei:supplied><tei:note xml:id="r0001-fn07" type="editorial" place="foot">Schenker,
-            <tei:title level="m">Sechs Lieder</tei:title>, Op. 3, No. 2.</tei:note>
-        <tei:pb n="4"/> Die Texte sind ja aber auch mehr geistreicher Art und interessant haben Sie
-          <tei:hi rend="underline">Alles</tei:hi> illustrirt! Am Wenigsten sagt mir das letzte Lied
-        zu – mir kommt’s hie und da etwas zu schwer für den leichtfertigen Text vor (gis-moll
-          <tei:hi rend="lateinschr">Episode</tei:hi>)<tei:supplied reason="omission"
-          >.</tei:supplied> Doch, wie gesagt, ich muß noch besser eindringen und bitte Sie diese
-        paar Worte nur als vorläufig anzusehen. </tei:p>
-
-      <tei:p><tei:rs type="person" key="entity-000592">Messchaert</tei:rs> kommt dieser Tage nach
-          <tei:rs type="place" key="entity-005779">Amsterdam</tei:rs>. Ich freue mich darauf die
-        Lieder mit ihm durchzumachen und besonders auf den “<tei:title>Ausklang</tei:title>”. </tei:p>
-
-      <tei:p>Und nun nehmen Sie heute mit dieser zu kurzen Antwort auf Ihren so Vieles anregenden
-        Brief vorlieb und nochmals für Alles herzlichen Dank<tei:supplied reason="omission"
-          >.</tei:supplied>
-      </tei:p>
 
       <tei:closer>
-        <tei:salute rend="indent-40">Ihren Sie verehrenden</tei:salute>
-        <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000724">Julius
-            Röntgen</tei:rs>.</tei:signed>
+        <tei:salute><tei:unclear>Herzl</tei:unclear>
+          <tei:unclear>Gruß</tei:unclear></tei:salute>
+        <tei:signed><tei:rs type="person" key="entity-005550">Posa</tei:rs></tei:signed>
+        <tei:signed><tei:rs type="person" key="Julius Röntgen">Julius Röntgen</tei:rs></tei:signed>
       </tei:closer>
 
     </tei:div>
@@ -193,66 +110,44 @@
     <tei:div type="translation">
 
       <tei:opener>
-        <tei:dateline rend="indent-30"><tei:handShift new="#JR"/>Amsterdam, <tei:date
-            when="1901-04-22">Apri 22, 1901</tei:date></tei:dateline><tei:lb/>
-        <tei:salute>Most revered <tei:rs type="person" key="entity-000632">Dr. <tei:supplied
-              reason="identity">Schenker</tei:supplied></tei:rs><tei:ptr corresp="#r0001-fn01"
-            type="footnote"/></tei:salute>
+        <tei:fw type="envelope">
+          <tei:milestone unit="folio" n="recto"/><tei:lb/>
+          <tei:fw type="header" rend="center"><tei:hi rend="bold italic"
+            >LETTERCARD</tei:hi></tei:fw><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#pr"/>TO: <tei:handShift new="#JR"/>Dr. <tei:hi
+                rend="underline">Heinrich Schenker</tei:hi></tei:addrLine>
+            <tei:addrLine><tei:hi rend="underline">Austria</tei:hi>
+              <tei:supplied reason="spacer">—</tei:supplied> Vienna III</tei:addrLine>
+            <tei:addrLine>Reisnerstrasse 38</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| AMSTERDAM | 17 [6] 01 | * 12 6V * ||</tei:fw><tei:lb/>
+          <tei:fw type="postmark">|| VIENNA 3/3 49 | DELIVERED | 20.6.01 | 7-<tei:gap
+              reason="illegible"/> ||</tei:fw><tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/><tei:lb/>
+          <tei:note type="editorial" place="inline">picture: woman, captioned: “COSTUME IN THE STYLE
+            OF SOUTH BEVELAND”</tei:note><tei:lb/>
+          <tei:address>
+            <tei:addrLine rend="indent-60">Middelburg,<tei:ptr corresp="#r0001-fn01" type="footnote"/>
+              <tei:date when="1901-06-17">June 17</tei:date></tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:salute>Dear <tei:rs type="person" key="entity-000632">Friend</tei:rs>, </tei:salute>
       </tei:opener>
 
-      <tei:p>At last a word of thanks for your letter, which was so rich in content! Don’t mistake
-        the delay for indifference! To the contrary: your songs and, above all,
-          <tei:title>Inventions</tei:title> have occupied me intensely; but I did not want to write
-        until I had developed a somewhat more intimate relationship with the material at hand, and
-        that did not come immediately to me.</tei:p>
+      <tei:p>I recommend this woman to your care. Treat her with <tei:hi rend="underline"
+          >caution</tei:hi>
+        <tei:note type="editorial" place="inline">cued from right margin sideways:</tei:note> and
+        consideration <tei:unclear reason="reading">LL<tei:hi rend="supralinear"
+          >t</tei:hi></tei:unclear>
+        <tei:rs type="person" key="entity-000724">J.R.</tei:rs></tei:p>
 
-      <tei:p>In your <tei:title>Inventions</tei:title> you tread upon fairly twisted paths, and it
-        is not always easy to follow you.<tei:ptr corresp="#r0001-fn02" type="footnote"/> In
-        particular, the purely <tei:hi rend="underline">musical</tei:hi> essence is not always
-          <tei:pb n="2"/> readily apparent, even though the technical aspect is immediately
-        interesting and impressive. In this respect, I’m drawn most strongly to the piece in F<tei:g
-          type="sharp"/> minor – but more, thus far, through reading it than through playing it.
-        There is much that sounds quite daring to me, even though everything is entirely logical. On
-        it, you can safely write, as <tei:rs type="person" key="entity-000027">Bach</tei:rs> did on
-        his inventions: “a clear way at the same time to acquire a strong foretaste of
-          composition.”<tei:ptr corresp="#r0001-fn03" type="footnote"/> In contrast, “refreshing of
-        the spirit” seems to take somewhat of a back seat.<tei:ptr corresp="#r0001-fn04"
-          type="footnote"/></tei:p>
-
-      <tei:p>Considering how well I have become acquainted with your
-          <tei:title>Inventions</tei:title>
-        <tei:hi rend="underline">thus far</tei:hi>, it is possible that my opinion will change. In
-        any case, I will return to the works frequently, and I look forward <tei:pb n="3"/> to
-        discussing them with you further in the future!</tei:p>
-
-      <tei:p>I have not yet spent a great deal of time with the Lieder, since I’ve had many other
-        things to do in recent weeks. The <tei:rs type="person" key="entity-000027">Bach</tei:rs>
-        edition I took on<tei:ptr corresp="#r0001-fn05" type="footnote"/> has occupied me during
-        every free hour (for the latter purpose, your <tei:title>Inventions</tei:title> are very
-        well suited!), and everything else had therefore to be pushed back.</tei:p>
-
-      <tei:p>To me, “<tei:title>Ausklang</tei:title>” stands out among the Lieder.<tei:ptr
-          corresp="#r0001-fn06" type="footnote"/> The marvelous text has found immediate expression
-        in the music, and the Lied must make a profound impression. The other Lieder seem a bit less
-        natural to me (with the exception of the delightful
-          “<tei:title>Wiegenlied</tei:title>”!).<tei:ptr corresp="#r0001-fn07" type="footnote"/>
-        <tei:pb n="4"/> But the texts are of a wittier sort, and you have illustrated <tei:hi
-          rend="underline">everything</tei:hi> interestingly! The last Lied is least to my liking –
-        it seems, to me, to be too heavy for the frivolous text in places (the G<tei:g type="sharp"
-        /> minor episode). As I said, however, I must probe them further and ask that you consider
-        these few words as merely provisional.</tei:p>
-
-      <tei:p><tei:rs type="person" key="entity-000592">Messchaert</tei:rs> is coming to <tei:rs
-          type="place" key="entity-005779">Amsterdam</tei:rs> in a day or so. I’m looking forward to
-        playing through the Lieder with him, especially “<tei:title>Ausklang</tei:title>.” </tei:p>
-
-      <tei:p>And now you must make do, for today, with this overly brief reply to your highly
-        stimulating letter, and once again many thanks for everything,</tei:p>
 
       <tei:closer>
-        <tei:salute rend="indent-40">Yours, in great admiration,</tei:salute>
-        <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000724">Julius
-            Röntgen</tei:rs></tei:signed>
+        <tei:salute><tei:unclear>Cordial</tei:unclear>
+          <tei:unclear>greetings</tei:unclear></tei:salute>
+        <tei:signed><tei:rs type="person" key="entity-005550">Posa</tei:rs></tei:signed>
+        <tei:signed><tei:rs type="person" key="Julius Röntgen">Julius Röntgen</tei:rs></tei:signed>
       </tei:closer>
 
     </tei:div>
