@@ -10,7 +10,8 @@
   </sdo:source>
 
   <tei:handNotes>
-   <tei:handNote xml:id="EM" scope="sole">Eusebius Mandyczewski's hand</tei:handNote>
+   <tei:handNote xml:id="EM" scope="major">Eusebius Mandyczewski's hand</tei:handNote>
+   <tei:handNote xml:id="pr" scope="minor">pr</tei:handNote>
   </tei:handNotes>
 
   <tei:respStmt xml:id="IDB">
@@ -35,7 +36,8 @@
 
 
 
-   <dc:title>Handwritten postcard from Mandyczewski to Moriz Violin, dated January 16, 1899</dc:title>
+   <dc:title>Handwritten postcard from Mandyczewski to Moriz Violin, dated January 16,
+    1899</dc:title>
 
    <dcterms:created>1899-01-16T12:00:00Z</dcterms:created>
    <dcterms:dateSubmitted>2025-10-25</dcterms:dateSubmitted>
@@ -53,34 +55,44 @@
 
    <tei:opener>
     <tei:milestone unit="folio" n="recto"/><tei:lb/>
-    <tei:salute><tei:handShift new="#EM"/>Meine Jugend, <tei:rs type="person" key="entity-000632"
-      >Verehrtester</tei:rs>?<tei:note xml:id="r0001-fn01" type="editorial" place="foot">The
-      superlative form of address suggests that the two men had been acquainted for some years. The
-      question-mark implies that Schenker’s previous communication had referred to Mandyczewski’s
-      youth, and quite possibly also the Jahn book.</tei:note></tei:salute>
+    <tei:note type="editorial" place="inline">all in a decorative rule-frame</tei:note><tei:lb/>
+    <tei:fw type="header" rend="center"><tei:handShift new="#pr"/><tei:hi rend="bold"
+      >Correspondenz-Karte</tei:hi></tei:fw>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:addrLine>An: <tei:handShift new="#EM"/>Herrn <tei:hi rend="lateinschr">Moriz
+        Violin</tei:hi></tei:addrLine>
+      <tei:addrLine><tei:hi rend="lateinschr">Tonkünstler</tei:hi></tei:addrLine>
+      <tei:addrLine rend="indent-50"><tei:hi rend="lateinschr">Wien IX</tei:hi></tei:addrLine>
+      <tei:addrLine>Garnisongasse 24</tei:addrLine>
+     </tei:address>
+     <tei:fw type="postmark">|| WIEN 1/1 | 1 | 16. 1. 99 | 8–8N ||</tei:fw><tei:lb/>
+     <tei:fw type="postmark">|| WIEN 9/3 | <tei:gap reason="illegible"/> | 17. 1. 99 | 7–8V
+      ||</tei:fw>
+     <tei:milestone unit="folio" n="verso"/><tei:lb/>
+    </tei:fw>
+    <tei:salute>Lieber Herr <tei:rs type="person" key="entity-000913">Violin</tei:rs>!</tei:salute>
    </tei:opener>
 
-   <tei:p rend="indent-10">Ich wünsche mir doch für heute und auch für das Alter kein Rosenbett, und
-    möchte mit keinem tauschen, der eines hat. <tei:hi rend="underline">die</tei:hi>
-    <tei:hi rend="underline">Dornen</tei:hi>! Denken Sie nur! Und wer sich gar <tei:rs type="person"
-     key="entity-003455">Jahn</tei:rs>s herrliches Buch<tei:note xml:id="r0001-fn02"
-     type="editorial" place="foot">Presumably <tei:bibl><tei:author>Otto Jahn</tei:author>,
-       <tei:title level="m">W. A. Mozart</tei:title> (Leipzig: Breitkopf &amp; Härtel,
-      1856–59)</tei:bibl>, of which Schenker later owned the 3rd edition, ed. H. Deiters (1889);
-     Schenker also owned his <tei:bibl><tei:title level="m">Gesammelte Aufsätze über
-       Musik</tei:title> (ibid, 1866)</tei:bibl>: see <tei:bibl><tei:title level="m">Musik und
-       Theater enthaltend die Bibliothek des Herrn †Dr. Heinrich Schenker, Wien</tei:title> (Vienna,
-      Heinrich Hinterberger, [1936])</tei:bibl>.</tei:note> wirklich zu <tei:hi rend="underline"
-     >Gemüthe</tei:hi> geführt hat, lernt leicht Bescheidenheit. </tei:p>
+
+   <tei:p rend="indent-10">Hätten Sie Lust, dem 27. Januar mit Prof. Baumgärtel[1]
+    Sinigaglia[entity-006126]’s[2] Variationen für Oboe u. Pianoforte im
+    Tonkünstlerverein[entity-004396] zu spielen? Ich bitte Sie, das zu übernehmen; das fest liegt
+    für Sie im Archiv[entity-002430] bereit. </tei:p>
+
+   <tei:p>Ferner: möchten Sie nicht mit Herrn Buxbaum[entity-000119] im Concerte der Frau
+    Bricht-Pyllamann[?] am 4. Febr. die Variationen von Mendelssohn[entity-000589] spielen? Es ist
+    zwar kein Honorar dabei, aber ein nettes Publicum </tei:p>
+
+   <tei:p>Über beides bitte ich so bald als möglich um Antwort, vielleicht gleich morgen, damit ich
+    weiß, woran ich bin </tei:p>
 
    <tei:closer>
-    <tei:salute rend="indent-20">Herzlich dankend und grüßend</tei:salute>
-    <tei:salute rend="indent-60">Ihr</tei:salute>
+    <tei:salute rend="indent-50">Herzlich grüßendst</tei:salute>
     <tei:signed rend="indent-70"><tei:rs type="person" key="entity-000562"
      >Mandyczewski</tei:rs></tei:signed><tei:lb/>
-    <tei:dateline><tei:date when="1898-11-09">9. 11. 98.</tei:date></tei:dateline>
+    <tei:dateline><tei:date when="1899-01-16">16. Jan. 99.</tei:date></tei:dateline>
    </tei:closer>
-
 
   </tei:div>
 
@@ -89,24 +101,41 @@
 
    <tei:opener>
     <tei:milestone unit="folio" n="recto"/><tei:lb/>
-    <tei:salute><tei:handShift new="#EM"/>My youth, <tei:rs type="person" key="entity-000632">Most
-      revered</tei:rs>?<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+    <tei:note type="editorial" place="inline">all in a decorative rule-frame</tei:note><tei:lb/>
+    <tei:fw type="header" rend="center"><tei:handShift new="#pr"/><tei:hi rend="bold"
+      >Postcard</tei:hi></tei:fw>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:addrLine>To: <tei:handShift new="#EM"/>Mr. Moriz Violin</tei:addrLine>
+      <tei:addrLine>Musician</tei:addrLine>
+      <tei:addrLine rend="indent-50">Vienna IX</tei:addrLine>
+      <tei:addrLine>Garnisongasse 24</tei:addrLine>
+     </tei:address>
+     <tei:fw type="postmark">|| VIENNA 1/1 | 1 | 16. 1. 99 | 8–8N ||</tei:fw><tei:lb/>
+     <tei:fw type="postmark">|| VIENNA 9/3 | <tei:gap reason="illegible"/> | 17. 1. 99 | 7–8V
+      ||</tei:fw>
+     <tei:milestone unit="folio" n="verso"/><tei:lb/>
+    </tei:fw>
+    <tei:salute>Dear Mr. <tei:rs type="person" key="entity-000913">Violin</tei:rs>,</tei:salute>
    </tei:opener>
 
-   <tei:p rend="indent-10">I do not wish for myself, for today or for my old age, a bed of roses,
-    and I would not like to change places with anyone who has one. <tei:hi rend="underline"
-     >The</tei:hi>
-    <tei:hi rend="underline">thorns</tei:hi>! Just think of it! And anyone who has ever taken
-     <tei:rs type="person" key="entity-003455">Jahn</tei:rs>’s magnificent book<tei:ptr
-     corresp="#r0001-fn02" type="footnote"/> to <tei:hi rend="underline">heart</tei:hi> will easily
-    learn modesty. </tei:p>
+
+   <tei:p rend="indent-10">Would you be interested in playing Sinigaglia’s[2] Variations for oboe
+    and pianoforte with Prof. Baumgärtel[1] in the Tonkünstlerverein on January 27? I beg you to
+    take it on. It is saved ready for you in the Archive. </tei:p>
+
+   <tei:p>In addition: would you care to play the variations by Mendelssohn in the concert by Mrs
+    Bricht-Pyllamann[?] with Mr. Buxbaum on February 4? There is admittedly no honorarium involved,
+    but there would be a decent audience. </tei:p>
+
+   <tei:p>On both, please let me have an answer as soon as possible, maybe tomorrow, so that I know
+    where I stand.</tei:p>
 
    <tei:closer>
-    <tei:salute rend="indent-20">With cordial thanks and greetings,</tei:salute>
-    <tei:salute rend="indent-60">your</tei:salute>
+    <tei:salute rend="indent-50">With most cordial greetings</tei:salute>
     <tei:signed rend="indent-70"><tei:rs type="person" key="entity-000562"
      >Mandyczewski</tei:rs></tei:signed><tei:lb/>
-    <tei:dateline><tei:date when="1898-11-09">November 9, 1898</tei:date></tei:dateline>
+    <tei:dateline><tei:date when="1899-01-16">January 16, 1899</tei:date></tei:dateline>
    </tei:closer>
 
   </tei:div>
