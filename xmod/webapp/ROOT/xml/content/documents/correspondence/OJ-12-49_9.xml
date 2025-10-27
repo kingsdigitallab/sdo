@@ -6,7 +6,7 @@
  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
  <sdo:collectionDesc>
   <sdo:source>
-   <sdo:correspondence mfID="3831" sdoID="OJ-12-49_9">OJ 12/49, [9]</sdo:correspondence>
+   <sdo:correspondence mfID="3831" sdoID="OJ-12-49_9">OJ 12/49, [9</sdo:correspondence>
   </sdo:source>
 
   <tei:handNotes>
@@ -36,12 +36,12 @@
 
 
 
-   <dc:title>Handwritten postcard from Mandyczewski to Schenker, dated November 6, 1912</dc:title>
+   <dc:title>Handwritten postcard from Mandyczewski to Schenker, dated February 27, 1925</dc:title>
 
-   <dcterms:created>1912-11-06T12:00:00Z</dcterms:created>
+   <dcterms:created>1925-02-27T12:00:00Z</dcterms:created>
    <dcterms:dateSubmitted>2025-10-27</dcterms:dateSubmitted>
-   <dc:description>Mandyczewski informs Schenker that inspecting the autograph manuscript of
-    Beethoven Op. 109 at the Wittgenstein house is now possible.</dc:description>
+   <dc:description>Mandyczewski will make the materials available to Schenker at a modest
+    charge.</dc:description>
    <dc:subject/>
 
 
@@ -55,38 +55,50 @@
 
    <tei:opener>
     <tei:milestone unit="folio" n="recto"/><tei:lb/>
-    <tei:note type="editorial" place="inline">all in a decorative rule-frame</tei:note><tei:lb/>
+    <tei:fw type="header" rend="center"><tei:hi rend="bold">Post<tei:supplied reason="overstamped"
+       >karte</tei:supplied></tei:hi></tei:fw><tei:lb/>
     <tei:fw type="envelope">
      <tei:address>
-      <tei:addrLine><tei:supplied>An:</tei:supplied>
-       <tei:handShift new="#EM"/>Herrn D<tei:hi rend="supralinear">r.</tei:hi>
+      <tei:addrLine><tei:handShift new="#pr"/>An: <tei:handShift new="#EM"/>Herrn D<tei:hi
+        rend="supralinear">r.</tei:hi>
        <tei:hi rend="lateinschr">Heinr. Schenker</tei:hi></tei:addrLine>
-      <tei:addrLine rend="indent-60">Wien III</tei:addrLine>
-      <tei:addrLine>Reisnertr. 38.</tei:addrLine>
+      <tei:addrLine rend="indent-60"><tei:handShift new="#pr"/>in <tei:handShift new="#EM"/><tei:hi
+        rend="lateinschr">Wien</tei:hi> III</tei:addrLine>
+      <tei:addrLine>Keilgasse 8</tei:addrLine>
      </tei:address><tei:lb/>
-     <tei:fw type="postmark">|| 1/1 WIEN 1 | 6. XI. 12 | * 4a * ||</tei:fw><tei:lb/>
+     <tei:fw type="postmark">|| 1/1 WIEN 1 | 27. II <tei:gap reason="illegible"/> | * 4a *
+      ||</tei:fw><tei:lb/>
+     <tei:fw type="postmark">|| 1/1 WIEN 1 | <tei:gap reason="illegible"/> 5 | * <tei:gap
+       reason="illegible"/> * ||</tei:fw><tei:lb/>
      <tei:milestone unit="folio" n="verso"/><tei:lb/>
     </tei:fw>
-    <tei:salute>Verehrter Hr <tei:rs type="person" key="entity-000632">D<tei:hi rend="supralinear"
-       >r.</tei:hi></tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Receipt of
-      this postcard is not recorded in Schenker’s diary.</tei:note></tei:salute>
+    <tei:salute><tei:rs type="person" key="entity-000632">Verehrtester</tei:rs>!<tei:note
+      xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this postcard is recorded in
+      Schenker’s diary for February 28, 1925: “Von Mandyczewski K.): hat mich mißverstanden, hält
+      die Blätter zur Verfügung – als hätte ich sie noch nicht.” (“From Mandyczewski (postcard): has
+      misunderstood me, is willing to provide the leaves – as if I did not have them already.”). –
+      Schenker’s preceding letter to Mandyczewski is recorded in his diary for September 26, 1925:
+      “An Mandyczewski (Br.): bitte um die Erlaubnis, die Brahms-Quintenblätter facsimiliren u.
+      beilegen zu dürfen.” (“To Mandyczewski (letter): I ask for permission to photograph the leaves
+      of the Brahms Fifths <tei:supplied reason="clarity">manuscript</tei:supplied> and include
+      them.”). – This clarifies that the leaves mentioned in Mandyczewski’s postcard are those of
+      Brahms’s manuscript of parallel fifths and octaves in music of the 16th to 19th centuries on
+      which Schenker worked with the help of <tei:rs type="person" key="entity-000643">Reinhard
+       Oppel</tei:rs> between 1929 and 1933, with the eventual publication of <tei:bibl><tei:rs
+        type="work" key="entity-003331"><tei:title level="m">Oktaven und Quinten u. A.</tei:title>
+        (Vienna: Universal Edition, 1933)</tei:rs></tei:bibl>.</tei:note></tei:salute>
    </tei:opener>
 
 
-   <tei:p rend="first">Wann wollen wir zusammen zur Besichtigung der Handschriften zu <tei:rs
-     type="person" key="entity-004688">Wittgenstein</tei:rs> gehen?<tei:note xml:id="r0001-fn02"
-     type="editorial" place="foot">Schenker and Mandyczewski went to the Wittgenstein house on
-     November 12: see <tei:ref type="correspondence" cRef="OJ-12-49_6">OJ 12/49, [6]</tei:ref>,
-     footnote 2.</tei:note> Jetzt wäre es schon möglich.</tei:p>
+   <tei:p rend="first">Es ist selbstverständlich Alles zu Ihren Diensten, ich werde nur um eine
+    bescheidene Benützungsgebühr bitten. Lassen Sie mich etwa 2–3 Tage früher wissen, <tei:hi
+     rend="underline">wann</tei:hi> Sie kommen, damit ich die Blätter bereit legen kann. </tei:p>
 
    <tei:closer>
-    <tei:salute rend="indent-50">Besten Gruß</tei:salute>
-    <tei:salute rend="indent-50">von</tei:salute>
+    <tei:salute rend="indent-40">Bestens grüßend Ihr</tei:salute>
     <tei:signed rend="indent-50"><tei:rs type="person" key="entity-000562"
      >Mandyczewski</tei:rs></tei:signed><tei:lb/>
-    <tei:address>
-     <tei:addrLine><tei:date when="1912-11-06">6/11 912</tei:date></tei:addrLine>
-    </tei:address>
+    <tei:dateline><tei:date when="1925-02-27">27/2 25</tei:date></tei:dateline>
    </tei:closer>
 
   </tei:div>
@@ -96,36 +108,37 @@
 
    <tei:opener>
     <tei:milestone unit="folio" n="recto"/><tei:lb/>
-    <tei:note type="editorial" place="inline">all in a decorative rule-frame</tei:note><tei:lb/>
+    <tei:fw type="header" rend="center"><tei:hi rend="bold">Post<tei:supplied reason="overstamped"
+       >card</tei:supplied></tei:hi></tei:fw><tei:lb/>
     <tei:fw type="envelope">
      <tei:address>
-      <tei:addrLine><tei:supplied>To:</tei:supplied>
-       <tei:handShift new="#EM"/>Dr. Heinrich Schenker</tei:addrLine>
-      <tei:addrLine rend="indent-60">Vienna III</tei:addrLine>
-      <tei:addrLine>Reisnertraße 38</tei:addrLine>
+      <tei:addrLine><tei:handShift new="#pr"/>To: <tei:handShift new="#EM"/>Dr. Heinrich
+       Schenker</tei:addrLine>
+      <tei:addrLine rend="indent-60"><tei:handShift new="#pr"/>in <tei:handShift new="#EM"/>Vienna
+       III</tei:addrLine>
+      <tei:addrLine>Keilgasse 8</tei:addrLine>
      </tei:address><tei:lb/>
-     <tei:fw type="postmark">|| 1/1 VIENNA 1 | 6. XI. 12 | * 4a * ||</tei:fw><tei:lb/>
+     <tei:fw type="postmark">|| 1/1 VIENNA 1 | 27. II <tei:gap reason="illegible"/> | * 4a *
+      ||</tei:fw><tei:lb/>
+     <tei:fw type="postmark">|| 1/1 VIENNA 1 | <tei:gap reason="illegible"/> 5 | * <tei:gap
+       reason="illegible"/> * ||</tei:fw><tei:lb/>
      <tei:milestone unit="folio" n="verso"/><tei:lb/>
     </tei:fw>
-    <tei:salute>Revered <tei:rs type="person" key="entity-000632">Dr. <tei:supplied
-       reason="identity">Schenker</tei:supplied></tei:rs>,<tei:ptr corresp="#r0001-fn01"
+    <tei:salute>Most revered <tei:supplied reason="identity"><tei:rs type="person"
+       key="entity-000632">Dr. Schenker</tei:rs></tei:supplied>,<tei:ptr corresp="#r0001-fn01"
       type="footnote"/></tei:salute>
    </tei:opener>
 
 
-   <tei:p rend="first">When do we want to go together to <tei:supplied>the</tei:supplied>
-    <tei:rs type="person" key="entity-004688">Wittgenstein</tei:rs>
-    <tei:supplied>house</tei:supplied> to examine the manuscripts?<tei:ptr corresp="#r0001-fn02"
-     type="footnote"/> Now it would be possible.</tei:p>
+   <tei:p rend="first">Everything is, needless to say, at your service. I will ask only for a modest
+    fee for usage. Let me know some two to three days ahead of time <tei:hi rend="underline"
+     >when</tei:hi> you will be coming, so that I can have the leaves ready for you.</tei:p>
 
    <tei:closer>
-    <tei:salute rend="indent-50">Best greetings</tei:salute>
-    <tei:salute rend="indent-50">from</tei:salute>
+    <tei:salute rend="indent-40">Best greetings, your</tei:salute>
     <tei:signed rend="indent-50"><tei:rs type="person" key="entity-000562"
      >Mandyczewski</tei:rs></tei:signed><tei:lb/>
-    <tei:address>
-     <tei:addrLine><tei:date when="1912-11-06">November 6, 1912</tei:date></tei:addrLine>
-    </tei:address>
+    <tei:dateline><tei:date when="1925-02-27">February 27, 1925</tei:date></tei:dateline>
    </tei:closer>
 
   </tei:div>
