@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3832" sdoID="OJ-9-20_22">OJ 9/20, [22]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="BHtp" scope="major">B&amp;H typist</tei:handNote>
+      <tei:handNote xml:id="BH" scope="minor">B&amp;H signatory's hand</tei:handNote>
+      <tei:handNote xml:id="print" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="KK">
+      <tei:persName>Kaleb Koslowski</tei:persName>
+      <tei:resp>Transcription, 2025</tei:resp>
+      <tei:resp>Translation, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-06-26" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005545">Breitkopf&amp;Härtel ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+      <dc:title>Typewritten letter from Breitkopf &amp; Härtel to Schenker, dated June 30,
+        1900</dc:title>
+
+      <dcterms:created>1900-06-30T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2025-10-31</dcterms:dateSubmitted>
+      <dc:description>Breitkopf &amp; Härtel submit their sales report for Schenker's Fünf Klavierstücke,
+        Op. 4.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-002890">Breitkopf &amp; Härtel</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:address>
+          <tei:note type="editorial" place="inline">in a decorative printed letterhead:</tei:note>
+          <tei:lb/>
+          <tei:addrLine><tei:handShift new="#print"/><tei:hi rend="bold">Breitkopf &amp;
+              Härtel</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:rs type="place" key="entity-002479">Leipzig</tei:rs>,
+            den <tei:date when="1900-06-30"><tei:handShift new="#BHtp"/>30. Juni
+            1900</tei:date></tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:handShift new="#print"/>Nürnberger Strasse
+            36.</tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:salute><tei:handShift new="#BHtp"/>Sehr geehrter <tei:rs type="person"
+            key="entity-000632">Herr</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>In der Anlage beehren wir uns Ihnen Abrechnung über den Vertrieb Ihrer Werke
+          vorzulegen.<tei:note xml:id="r0001-fn01" type="editorial" place="foot">= <tei:ref
+            type="correspondence" cRef="OJ-9-20_23">OJ 9/20, [23]</tei:ref>. The work in question is
+              <tei:bibl><tei:author>Schenker</tei:author>’s <tei:title level="m">Fünf
+              Klavierstücke</tei:title>, Op. 4 (Leipzig: Breitkopf &amp; Härtel,
+          1898)</tei:bibl>.</tei:note> Den hiernach sich ergebenden Ertrag von M. 27.-- übersenden
+        wir Ihnen gleichzeitig. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">Hochachtungsvoll,</tei:salute>
+        <tei:signed rend="indent-50">
+          <tei:handShift new="#BH"/><tei:rs type="organization" key="entity-002890">Breitkopf &amp;
+            Härtel</tei:rs></tei:signed><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#BHtp"/>Herrn Dr. H. Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-10">Wien III</tei:addrLine>
+          <tei:addrLine rend="indent-10">Richardgasse 11.</tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p><tei:handShift new="#BHtp"/><tei:hi rend="underline">M. 27.‒</tei:hi></tei:p>
+      </tei:postscript>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:address>
+          <tei:note type="editorial" place="inline">in a decorative printed letterhead:</tei:note>
+          <tei:lb/>
+          <tei:addrLine><tei:handShift new="#print"/><tei:hi rend="bold">Breitkopf &amp;
+              Härtel</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:rs type="place" key="entity-002479">Leipzig</tei:rs>,
+              <tei:date when="1900-06-30"><tei:handShift new="#BHtp"/>June 30,
+            1900</tei:date></tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:handShift new="#print"/>Nürnberger Strasse
+            36</tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:salute><tei:handShift new="#BHtp"/>Dear <tei:rs type="person" key="entity-000632"
+            >Sir</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>Enclosed, we have the honor of submitting to you the account of the distribution of
+        your works.<tei:ptr corresp="#r0001-fn01" type="footnote"/> At the same time, we are sending
+        you the resulting proceeds, amounting to 27 marks.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">Respectfully,</tei:salute>
+        <tei:signed rend="indent-50">
+          <tei:handShift new="#BH"/><tei:rs type="organization" key="entity-002890">Breitkopf &amp;
+            Härtel</tei:rs></tei:signed><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#BHtp"/>Dr. H. Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-10">Vienna III</tei:addrLine>
+          <tei:addrLine rend="indent-10">Richardgasse 11</tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p><tei:handShift new="#BHtp"/><tei:hi rend="underline">M. 27.‒</tei:hi></tei:p>
+      </tei:postscript>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
