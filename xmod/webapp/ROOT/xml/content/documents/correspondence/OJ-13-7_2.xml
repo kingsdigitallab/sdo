@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3861" sdoID="OJ-13-7_2">OJ 13/7, [2]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="SO" scope="major">Siegfried Ochs's hand</tei:handNote>
+      <tei:handNote xml:id="print" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="LR">
+      <tei:persName>Lee Rothfarb</tei:persName>
+      <tei:resp>Transcription, 2025</tei:resp>
+      <tei:resp>Translation, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2011-09-15" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008546">OchsS ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+      <dc:title>Handwritten letter from Siegfried Ochs to Schenker, dated June 20, 1903</dc:title>
+
+      <dcterms:created>1903-06-20T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2025-11-14</dcterms:dateSubmitted>
+      <dc:description>Siegfried Ochs returns choral pieces of Schenker's as too short for
+        performance.</dc:description>
+      <dc:subject/>
+
+
+      <marcrel:correspondent key="entity-000638">Siegfried Ochs</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#print"/>BENDLERSTR. 8.</tei:addrLine>
+          <tei:addrLine>BERLIN, W. 10.</tei:addrLine>
+          <tei:addrLine>(SPRECHSTUNDE: 10–12 VORM.)</tei:addrLine>
+        </tei:address>
+        <tei:dateline>DEN <tei:date when="1903-06-20"><tei:handShift new="#SO"/>20. Juni
+              <tei:handShift new="#print"/>1903</tei:date></tei:dateline><tei:lb/>
+        <tei:salute rend="indent-30"><tei:handShift new="#SO"/>Sehr geehrter <tei:rs type="person"
+            key="entity-000632">Herr</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Ihre Chorstücke<tei:note xml:id="r0001-fn01" type="editorial" place="foot"
+          >Schenker wrote three unaccompanied songs for mixed chorus, Op. 7 and four unaccompanied
+          choruses for female voices, Op. 8, none dated; neither opus was published.</tei:note>
+        erlaube ich mir, Ihnen heute wieder zurückzusenden, da ich, so hübsch ich die Compositionen
+        finde, sie nicht zur Aufführung bringen kann. Wir haben für Werke so geringen Umfanges
+        höchst selten auf unseren Programmen Platz.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50">Mit den besten Empfehlungen</tei:salute>
+        <tei:salute rend="indent-70">sehr ergebenst</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs type="person" key="entity-000638">Siegfried
+            Ochs</tei:rs>.</tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#print"/>BENDLERSTRASSE 8</tei:addrLine>
+          <tei:addrLine>BERLIN, W. 10</tei:addrLine>
+          <tei:addrLine>(CONSULTING HOUR: 10–12 A. M.)</tei:addrLine>
+        </tei:address>
+        <tei:dateline><tei:date when="1903-06-20"><tei:handShift new="#SO"/>June 20, <tei:handShift
+              new="#print"/>1903</tei:date></tei:dateline><tei:lb/>
+        <tei:salute rend="indent-30"><tei:handShift new="#SO"/>Dear <tei:rs type="person"
+            key="entity-000632">Sir</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">I am taking the liberty of returning your choral pieces<tei:ptr
+          corresp="#r0001-fn01" type="footnote"/> to you today because, as lovely as I find the
+        compositions, I cannot get them performed. It is most rare that we have room on our programs
+        for works of such small scope.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50">With kindest regards,</tei:salute>
+        <tei:salute rend="indent-70"><tei:supplied>your</tei:supplied> very devoted</tei:salute>
+        <tei:signed rend="indent-70"><tei:rs type="person" key="entity-000638">Siegfried
+            Ochs</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
