@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3860" sdoID="OJ-13-7_1">OJ 13/7, [1]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="SO" scope="sole">Siegfried Ochs's hand</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="LR">
+      <tei:persName>Lee Rothfarb</tei:persName>
+      <tei:resp>Transcription, 2025</tei:resp>
+      <tei:resp>Translation, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2011-09-15" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008546">OchsS ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+      <dc:title>Handwritten letter from Siegfried Ochs to Schenker, dated December 15,
+        1898</dc:title>
+
+      <dcterms:created>1898-12-15T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2025-11-14</dcterms:dateSubmitted>
+      <dc:description>Siegfried Ochs gives his verdict on choral works that Schenker has sent
+        him.</dc:description>
+      <dc:subject/>
+
+
+      <marcrel:correspondent key="entity-000638">Siegfried Ochs</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:dateline><tei:handShift new="#SO"/>Berlin, den <tei:date when="1898-12-15">15. Dezember
+            1898</tei:date></tei:dateline>.<tei:lb/>
+        <tei:salute>Verehrtester <tei:rs type="person" key="entity-000632"
+          >Freund</tei:rs>!</tei:salute>
+      </tei:opener>
+
+      <tei:p>Die Chöre habe ich mehrfach durchgesehen.<tei:note xml:id="r0001-fn01" type="editorial"
+          place="foot">The identity of the choral compositions is unknown (and Schenker’s diary for
+          1898 has no entries for December). It is possible that Schenker sent works of his own,
+          even though Ochs goes on to speak in the third person. Schenker wrote three songs for
+          mixed chorus, Op. 7 and four choruses for female voices, Op. 8, neither dated, and neither
+          published.</tei:note> Ich finde sie durchaus talentvoll, wenn auch nicht gleichmäßig
+        gelungen. Jedenfalls ist der Komponist Einer, der auf vernünftige Weise Besonderes zu sagen
+        versteht; und das will heutzutage, der fast Alles, was man zu sehen bekommt, entweder unter
+        dem Zeichen der Verrückten oder dem der Fratze steht, nicht wenig bedeuten. Haben Sie
+        jedenfalls herzlichsten Dank, daß Sie mir die interessante Bekanntschaft vermittelt haben
+        und empfangen Sie</tei:p>
+
+      <tei:closer>
+        <tei:salute>die besten Grüße</tei:salute>
+        <tei:salute>Ihres sehr ergebensten</tei:salute>
+        <tei:signed><tei:rs type="person" key="entity-000638">Siegfried Ochs</tei:rs>.</tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:dateline><tei:handShift new="#SO"/>Berlin, <tei:date when="1898-12-15">December 15,
+            1898</tei:date></tei:dateline><tei:lb/>
+        <tei:salute>Most revered <tei:rs type="person" key="entity-000632"
+          >friend</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>I have looked through the choral works several times.<tei:ptr corresp="#r0001-fn01"
+          type="footnote"/> I find them to be quite gifted, if not all successful to the same
+        degree. In any case, the composer is one who knows how to say something notable in a
+        reasonable manner; and today, when almost everything we encounter goes under the banner
+        either of the crazies or that of silliness, that means a lot. In any case, most cordial
+        thanks for making me aware of something interesting and accept</tei:p>
+
+      <tei:closer>
+        <tei:salute>my best greetings</tei:salute>
+        <tei:salute>from your most devoted</tei:salute>
+        <tei:signed><tei:rs type="person" key="entity-000638">Siegfried Ochs</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>
