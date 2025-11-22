@@ -6,14 +6,13 @@
   xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
   <sdo:collectionDesc>
     <sdo:source>
-      <sdo:correspondence mfID="3845" sdoID="OJ-9-20_35">OJ 9/20, [35]</sdo:correspondence>
+      <sdo:correspondence mfID="3864" sdoID="OJ-9-20_38">OJ 9/20, [38]</sdo:correspondence>
     </sdo:source>
 
     <tei:handNotes>
-      <tei:handNote xml:id="BHsten1" scope="major">B&amp;H stenographe 1</tei:handNote>
-      <tei:handNote xml:id="BHsten2" scope="major">B&amp;H stenographer 2</tei:handNote>
+      <tei:handNote xml:id="BHsten" scope="major">B&amp;H stenographer</tei:handNote>
       <tei:handNote xml:id="BH" scope="minor">B&amp;H signatory's hand</tei:handNote>
-      <tei:handNote xml:id="print" scope="minor">printed</tei:handNote>
+      <tei:handNote xml:id="pr" scope="minor">printed</tei:handNote>
     </tei:handNotes>
 
     <tei:respStmt xml:id="KK">
@@ -40,13 +39,13 @@
         HSchenker</tei:rs>
       <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
 
-      <dc:title>Handwritten postcard from Breitkopf &amp; Härtel to Schenker, dated August 7,
-        1905</dc:title>
+      <dc:title>Handwritten postcard from Breitkopf &amp; Härtel to Schenker, dated May 29,
+        1912</dc:title>
 
-      <dcterms:created>1905-08-07T12:00:00Z</dcterms:created>
-      <dcterms:dateSubmitted>2025-11-04</dcterms:dateSubmitted>
-      <dc:description>Breitkopf &amp; Härtel acknowledge receipt of Schenker's manuscript [of
-        Harmonielehre].</dc:description>
+      <dcterms:created>1912-05-29T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2025-11-22</dcterms:dateSubmitted>
+      <dc:description>Breitkopf &amp; Härtel have sent Schenker a volume containing Chopin's Piano
+        Concerto Op. 11.</dc:description>
       <dc:subject/>
 
       <marcrel:correspondent key="entity-002890">Breitkopf &amp; Härtel</marcrel:correspondent>
@@ -58,50 +57,42 @@
 
       <tei:opener>
         <tei:milestone unit="folio" n="recto"/>
-        <tei:fw type="header" rend="center"><tei:handShift new="#print"/><tei:hi rend="bold"
-            >Postkarte</tei:hi></tei:fw>
+        <tei:fw type="header" rend="left"><tei:note type="editorial" place="inline">prowling
+            bear, with “<tei:handShift new="#pr"/>B &amp; H”</tei:note> <tei:hi rend="bold">Postkarte</tei:hi></tei:fw>
         <tei:fw type="envelope">
           <tei:address>
-            <tei:addrLine><tei:supplied reason="clarity">An: </tei:supplied>
-              <tei:handShift new="#print"/>Herr<tei:handShift new="#BHsten"/>n H.
+            <tei:addrLine><tei:handShift new="#pr"/>An: Herr<tei:handShift new="#BHsten"/>n <tei:hi
+                rend="lateinschr">D<tei:hi rend="supralinear">r.</tei:hi> H. Schenker</tei:hi>
               Schenker</tei:addrLine>
-            <tei:addrLine>z. Z. <tei:rs type="place" key="entity-002279">St Anton</tei:rs> (<tei:rs
-                type="place" key="entity-002334">Tirol</tei:rs>)</tei:addrLine>
+            <tei:addrLine rend="indent-40"><tei:hi rend="lateinschr">Wien III,</tei:hi></tei:addrLine>
+            <tei:addrLine rend="indent-40"><tei:hi rend="lateinschr">Reisnerstr. 38</tei:hi></tei:addrLine>
           </tei:address><tei:lb/>
-          <tei:fw type="postmark">|| LEIPZIG | -7. 8. 05. 9-10N. | * 13 * ||</tei:fw><tei:lb/><tei:lb/>
+          <tei:fw type="postmark">|| LEIPZIG | 29. 5. 12 8–9N | * 13 * || <tei:note type="editorial"
+              place="inline">four stamps</tei:note></tei:fw><tei:lb/><tei:lb/>
+          
           <tei:milestone unit="folio" n="verso"/>
           <tei:address>
-            <tei:addrLine><tei:note type="editorial" place="inline">device</tei:note>
-              <tei:handShift new="#print"/>Breitkopf &amp; Härtel</tei:addrLine>
-            <tei:addrLine>Leipzig, den <tei:handShift new="#BHsten"/>7. 8. <tei:handShift
-                new="#print"/>19<tei:handShift new="#BHsten"/>05.</tei:addrLine>
-            <tei:addrLine><tei:handShift new="#print"/>Nürnberger Str. 36.</tei:addrLine>
+            <tei:addrLine><tei:handShift new="#pr"/><tei:hi rend="underline">BREITKOPF &amp; HÄRTEL</tei:hi></tei:addrLine>
+            <tei:addrLine rend="intend-50">LEIPZIG, DEN <tei:handShift new="#BHsten"/>29. Mai <tei:handShift new="#pr"
+                />19<tei:handShift new="#BHsten"/>12.</tei:addrLine>
+            <tei:addrLine><tei:handShift new="#pr"/>NÜRNBERGER STR. 36</tei:addrLine>
           </tei:address>
         </tei:fw>
-        <tei:salute><tei:handShift new="#BHsten"/>Sehr geehrter <tei:rs type="person"
+        <tei:salute rend="indent-10"><tei:handShift new="#BHsten"/>Sehr geehrter <tei:rs type="person"
             key="entity-000632">Herr</tei:rs>,</tei:salute>
       </tei:opener>
 
-      <tei:p rend="first">Ihr Manuscript<tei:note xml:id="r0001-fn01" type="editorial" place="foot"
-          >The manuscript of Schenker’s <tei:rs type="work" key="entity-001724"><tei:title level="m"
-              >Harmonielehre</tei:title></tei:rs>, at that stage entitled <tei:title level="m">Neue
-            musikalische Theorien und Phantasien von einem Künstler</tei:title>.</tei:note> haben
-        wir erhalten und werden es diskret behandeln und sorgsam verwahren. Doch bitten wir um etwas
-        Zeit für unsere Erwägungen – gleich Ihnen befinden sich auch so manche andere Leute jetzt
-        auf Reisen!</tei:p>
+      <tei:p rend="first">In </tei:p>
 
       <tei:closer>
         <tei:salute rend="indent-50">Hochachtungsvoll</tei:salute>
-        <tei:signed rend="indent-70">
+        <tei:signed rend="indent-50">
           <tei:handShift new="#BH"/><tei:rs type="organization" key="entity-002890">Breitkopf &amp;
-            Härtel</tei:rs></tei:signed><tei:lb/>
+            Härtel</tei:rs></tei:signed><tei:lb/><tei:lb/>
         <tei:address>
-          <tei:addrLine><tei:handShift new="#BHsten"/>Herrn <tei:hi rend="lateinschr">H.
-              Schenker</tei:hi></tei:addrLine>
-          <tei:addrLine rend="indent-15"><tei:hi rend="lateinschr">z.Z. <tei:rs type="place"
-                key="entity-002279">St. Anton</tei:rs></tei:hi></tei:addrLine>
-          <tei:addrLine rend="indent-30"><tei:hi rend="lateinschr">(<tei:rs type="place"
-                key="entity-002334">Tirol</tei:rs>)</tei:hi></tei:addrLine>
+          <tei:addrLine><tei:handShift new="#BHsten"/>Herrn <tei:hi rend="lateinschr"> D<tei:hi rend="supralinear">r.</tei:hi> H.
+              Schenker</tei:hi>,</tei:addrLine>
+          <tei:addrLine rend="indent-30"><tei:hi rend="lateinschr underline">Wien</tei:hi></tei:addrLine>
         </tei:address>
       </tei:closer>
 
@@ -112,13 +103,12 @@
 
       <tei:opener>
         <tei:milestone unit="folio" n="recto"/>
-        <tei:fw type="header" rend="center"><tei:handShift new="#print"/><tei:hi rend="bold"
+        <tei:fw type="header" rend="center"><tei:handShift new="#pr"/><tei:hi rend="bold"
             >Postcard</tei:hi></tei:fw>
         <tei:fw type="envelope">
           <tei:address>
             <tei:addrLine><tei:supplied reason="clarity">To: </tei:supplied>
-              <tei:handShift new="#print"/>Mr. <tei:handShift new="#BHsten"/>H.
-              Schenker</tei:addrLine>
+              <tei:handShift new="#pr"/>Mr. <tei:handShift new="#BHsten"/>H. Schenker</tei:addrLine>
             <tei:addrLine>currently at: <tei:rs type="place" key="entity-002279">St Anton</tei:rs>
                 (<tei:rs type="place" key="entity-002334">Tirol</tei:rs>)</tei:addrLine>
           </tei:address><tei:lb/>
@@ -126,10 +116,10 @@
           <tei:milestone unit="folio" n="verso"/>
           <tei:address>
             <tei:addrLine><tei:note type="editorial" place="inline">device</tei:note>
-              <tei:handShift new="#print"/>Breitkopf &amp; Härtel</tei:addrLine>
-            <tei:addrLine>Leipzig, <tei:handShift new="#BHsten"/>August 7, <tei:handShift
-                new="#print"/>19<tei:handShift new="#BHsten"/>05</tei:addrLine>
-            <tei:addrLine><tei:handShift new="#print"/>Nürnberger Strasse 36</tei:addrLine>
+              <tei:handShift new="#pr"/>Breitkopf &amp; Härtel</tei:addrLine>
+            <tei:addrLine>Leipzig, <tei:handShift new="#BHsten"/>August 7, <tei:handShift new="#pr"
+                />19<tei:handShift new="#BHsten"/>05</tei:addrLine>
+            <tei:addrLine><tei:handShift new="#pr"/>Nürnberger Strasse 36</tei:addrLine>
           </tei:address>
         </tei:fw>
         <tei:salute><tei:handShift new="#BHsten"/>Dear <tei:rs type="person" key="entity-000632"
