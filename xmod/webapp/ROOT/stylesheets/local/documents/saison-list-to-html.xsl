@@ -34,9 +34,12 @@
       <li>Saison 1916/17 - <a href="OC-3-3_1916/r0001.html">Brünauer: lessons: Oct-Nov 1916</a></li>
       <li>Saison 1917/18 - <a href="OC-3-3_1917/r0001.html">Blum: lessons: 1st semester 1917/18</a></li>
       <li>Saison 1918/19 - <a href="OC-3-3_1918/r0001.html">Breisach: lessons: 1918/19</a></li>
-      <li>Saison 1919/20 - <a href="OC-3-3_1919/r0001.html">Brünauer: lessons; Oct 1919-Jan 1920</a></li>
-      <li>Saison 1920/21 - <a href="OC-3-3_1920/r0001.html">Bamberger: lessons; 1920/21</a></li>
+      <li>Saison 1919/20 - <a href="OC-3-3_1919/r0001.html">Brünauer: lessons: Oct 1919-Jan 1920</a></li>
+      <li>Saison 1920/21 - <a href="OC-3-3_1920/r0001.html">Bamberger: lessons: 1920/21</a></li>
       <li>Saison 1921/22 - <a href="OC-3-3_1921/r0001.html">Bamberger: lessons; 1921/22</a></li>
+      <li>Saison 1922/23 - <a href="OC-3-3_1922/r0001.html">Bamberger: lessons: 1922/23</a></li>
+      <li>Saison 1923/24 - <a href="OC-3-3_1923/r0001.html">Bamberger: lessons: 1923/24</a></li>
+      <li>Saison 1924/25 - <a href="OC-3-3_1924/r0001.html">Brünauer: lessons: 1924/25</a></li>
     </ul>
   </xsl:template>
 </xsl:stylesheet>
