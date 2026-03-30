@@ -248,37 +248,50 @@
 
                 </div>
                 <div class="unit size1of3 lastUnit">
-                  <h3>Latest 2024</h3>
+                  <h3>Latest 2026</h3>
                   <!-- COPY AND PASTE LINK BELOW TO DIRECT USERS TO THE 'OVERFLOW' PAGE FOR UPDATE NEWS IF APPROPRFIATE -->
                   <!-- <a class="int" title="Link to Latest Material" href="/documents/overviews/latest_material.html">More</a> -->
-                  <h4>2024 features Schenker and his Family</h4>
+                  
                   <ul>
-                    <li> Heinrich Schenker had a large extended family, and this is featured in the
-                      newly available material. It comprised his two brothers; his sister’s family
-                      (the Guttmanns); his wife Jeanette, who was one of ten children (the Schiffs);
-                      and the family of Jeanette’s first husband (the Kornfelds). All of these had
-                      children and grandchildren. – Many of them perished in the Holocaust. </li>
+
                     <li>
-                      <b>CORRESPONDENCE:</b> Little has been known of these branches of Heinrich’s
-                      family, and yet his diary witnesses how closely he and Jeanette kept to many
-                      of its members through letters, greetings cards, and mutual visits, and how
-                      Heinrich took a close interest in their fortunes. In the belief that his
-                      personality must in part have been conditioned by his family background,
-                        <em>SDO</em> has devoted 2024 to placing all his correspondence with his
-                      extended family on the site. — New to the site also is the correspondence with
-                      John Petrie Dunn, follower of Heinrich’s theory in Edinburgh, and also the
-                      first of two batches of the correspondence with Breitkopf &amp; Härtel,
-                      publisher of several of Heinrich’s compositions.</li>
+                      <b>CORRESPONDENCE:</b>
+                      <br/><b>Reinhard Oppel</b> was an early disciple of Schenker’s and the first person
+                      to give advertised conservatory and university courses in Schenkerian theory –
+                      even before von Cube and Weisse. His correspondence stretches from 1913 to
+                      1934 and that with Schenker’s widow from 1935 to 1939: 215 letters and
+                      postcards, all but one from Oppel to Schenker. Schenker’s diaries show that
+                      his replies were abundant and substantive – the surviving letter is 11 pages
+                      long. Oppel read all of Schenker’s works as they were published and thoroughly
+                      absorbed his theory and method, passing it on to many of his pupils at the
+                      Kiel and Leipzig Conservatories. He gave much assistance to Schenker on his
+                        <i>Johannes Brahms: Octaves and Fifths</i> (1933), and this features in the
+                      correspondence. <br/><b>Universal Edition</b>: 38 items (bi-directional) from January
+                      to June 1913 deal mainly with the first <i>Elucidatory Edition</i> of Beethoven’s
+                      piano sonata Op. 109, published later that year, and preparatory work for Op.
+                      110, with much sparring between Schenker and Emil Hertzka. <br/><b>Breitkopf
+                      &amp; Härtel</b>: we complete our presentation of this 49-letter two-way
+                      correspondence spanning 1894–1920. This final batch covers 1900–20, which saw
+                      the publication of two of Schenker’s compositions (Opp. 3 and 5) and attempts
+                      to interest the publisher in several of his mid-period writings. <br/><b>Brahms
+                      Circle</b>: this year’s final batch includes correspondence with Eduard Hanslick,
+                      Ignaz Brüll, Julius Röntgen, and Eusebius Mandyczewski, mostly concerning his
+                      own compositions and journalistic writings, and access to autograph
+                      manuscripts of Beethoven and Brahms. </li>
+                    <li>
+                      <b>LESSONBOOKS:</b> Of keenest interest in 1924/25 are Angi Elias’s studies of
+                      the <i>Hammerklavier</i> Sonata Op. 106, in the course of which she produced
+                      her meticulous <i>Urlinie-Tafeln</i> and voice-leading graphs of that work and
+                      several by Bach and Schubert that feature the 8^–1^ linear progression. Though
+                        <i>Op. 106</i> was never published, the graphs can now be consulted on the
+                      disk accompanying Nicholas Marston’s monograph on the
+                      <i>Hammerklavier</i>.</li>
                     <!--<li>
-                      <b>LESSONBOOKS:</b> </li>-->
-                    <li><b>DIARY:</b> Our edition of Heinrich’s diary was completed in 2022. This
-                      year we present Jeanette’s fascinating travel diary of her five-month voyage
-                      from Europe to South America in 1936, and her stay in Santiago to spread the
-                      word about her deceased husband’s theory.</li>
+                      <b>DIARY:</b>
+                    </li>-->
                     <li>
-                      <b>PROFILES:</b> The newly supplied profiles include all of Schenker’s large
-                      family, all the people that Jeanette encountered on her South American voyage
-                      and sojourn, and the many new places and institutions that she visited.</li>
+                      <b>PROFILES:</b> New to the site are profiles of Reinhard Oppel, his family
+                      members, friends, colleagues, and in particular the Leipzig Conservatory.</li>
                   </ul>
 
                   <!--<nav class="local" id="blogPosts">
