@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+
+    <sdo:source>
+      <sdo:correspondence mfID="3688" sdoID="OJ-13-10_37">OJ 13/10, [37]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="RO" scope="major">Reinhard Oppel's hand</tei:handNote>
+      <tei:handNote xml:id="pr" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Transcription, 2025</tei:resp>
+      <tei:resp>Translation, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-04-22" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002734">Oppel ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture
+        postcard</tei:rs>
+
+      <dc:title>Handwritten picture postcard from Oppel to Schenker, dated August 19,
+        1926</dc:title>
+
+      <dcterms:created>1926-08-19T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2025-07-24</dcterms:dateSubmitted>
+      <dc:description>Oppel has not yet received the first Meisterwerk yearbook.</dc:description>
+      <dc:subject/>
+
+
+
+      <marcrel:correspondent key="entity-000643">Reinhard Oppel</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:note type="editorial" place="inline">photograph of church, captioned: "MÜNCHEN,
+          FRAUENKIRCHE”</tei:note><tei:lb/>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied>An: </tei:supplied><tei:handShift new="#RO"/>Herrn Prof
+                D<tei:hi rend="supralinear">r.</tei:hi> H. Schenker</tei:addrLine>
+            <tei:addrLine>Galtür / Tirol </tei:addrLine>
+            <tei:addrLine>Paznauntal</tei:addrLine>
+          </tei:address>
+          <tei:lb/>
+          <tei:fw type="postmark">|| MÜNCHEN | 19 8 26 | 3–4 N | * 2 * ||</tei:fw>
+          <tei:lb/>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#RO"/><tei:date when="1926-08-19">19. VIII 26</tei:date>.
+          Mein lieber Herr <tei:rs type="person" key="entity-000632">Schenker</tei:rs>,<tei:note
+            xml:id="r0001-fn01" type="editorial" place="foot">Receipt of this picture postcard is
+            recorded in Schenker’s diary for August 20, 1926: “Von Oppel (Ansichtsk): Gruß aus
+            München, hat das Jahrbuch noch nicht erhalten” (“From Oppel (picture postcard):
+            greetings from Munich, he has not yet received the Yearbook.”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>vielen Dk f. die Karte aus <tei:rs type="place" key="entity-002334"
+          >Tirol</tei:rs>.<tei:note xml:id="r0001-fn02" type="editorial" place="foot">Writing of
+          this postcard is recorded in Schenker’s diary for August 11, 1926: “An Oppel (Ansichtsk.):
+          wiederhole die Frage: ob das Jahrbuch angekommen?” (“To Oppel (picture postcard): I repeat
+          the question: has the Yearbook arrived?”).</tei:note> Morgen fahre ich n. <tei:rs
+          type="place" key="entity-002757">Kiel</tei:rs> zurück, von da aus mehr. Bei m. Abreise war
+        das <tei:rs type="work" key="entity-001750">Jahrbuch</tei:rs><tei:note xml:id="r0001-fn03"
+          type="editorial" place="foot">The first <tei:title level="j">Meisterwerk</tei:title>
+          yearbook, dated 1925 but not published until June 1926. </tei:note> noch nicht da. Ich war
+        hier bei <tei:rs type="person" key="entity-008510">meinem jüngsten Sohn</tei:rs>, dem es gut
+        geht. </tei:p>
+
+      <tei:closer>
+        <tei:salute>Mit herzl. Gruss Ihnen beiden</tei:salute>
+        <tei:salute rend="indent-30">Ihr tr</tei:salute>
+        <tei:signed rend="indent-50"><tei:rs type="person" key="entity-000643">Reinhard
+            Oppel</tei:rs>.</tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:note type="editorial" place="inline">photograph of church, captioned: "MUNICH,
+          FRAUENKIRCHE”</tei:note><tei:lb/>
+        <tei:milestone unit="folio" n="recto"/><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine><tei:supplied>To: </tei:supplied><tei:handShift new="#RO"/>Prof. H.
+              Schenker</tei:addrLine>
+            <tei:addrLine>Galtür, Tyrol</tei:addrLine>
+            <tei:addrLine>Paznaun Valley</tei:addrLine>
+          </tei:address>
+          <tei:lb/>
+          <tei:fw type="postmark">|| MUNICH | 19 8 26 | 3–4 N | * 2 * ||</tei:fw>
+          <tei:lb/>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#RO"/><tei:date when="1926-08-19">August 19,
+          1926</tei:date>. My dear Mr. <tei:rs type="person" key="entity-000632"
+            >Schenker</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>Many thanks for your postcard from the <tei:rs type="place" key="entity-002334"
+          >Tyrol</tei:rs>.<tei:ptr corresp="#r0001-fn02" type="footnote"/> Tomorrow I am returning
+        to <tei:rs type="place" key="entity-002757">Kiel</tei:rs>, from where I shall write more.
+        When I left, the <tei:rs type="work" key="entity-001750">Yearbook</tei:rs><tei:ptr
+          corresp="#r0001-fn03" type="footnote"/> had not yet arrived. I was here with my <tei:rs
+          type="person" key="entity-008510">youngest son</tei:rs>, who is well. </tei:p>
+
+      <tei:closer>
+        <tei:salute>With a cordial greeting to the two of you,</tei:salute>
+        <tei:salute rend="indent-30">Your faithful</tei:salute>
+        <tei:signed rend="indent-50"><tei:rs type="person" key="entity-000643">Reinhard
+            Oppel</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

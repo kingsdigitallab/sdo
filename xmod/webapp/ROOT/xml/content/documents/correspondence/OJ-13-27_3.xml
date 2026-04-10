@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3813" sdoID="OJ-13-27_3">OJ 13/27, [3]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="JR" scope="major">Julius Röntgen's hand</tei:handNote>
+      <tei:handNote xml:id="OP" scope="minor">Oscar Posa's hand</tei:handNote>
+      <tei:handNote xml:id="pr" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="KK">
+      <tei:persName>Kevin Karnes</tei:persName>
+      <tei:resp>Transcription, 2006</tei:resp>
+      <tei:resp>Translation, 2006</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IDB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2011-09-15" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008521">RoentgenJ ~
+        HSchenker</tei:rs>
+      <tei:rs role="correspondence" type="correspondence" key="entity-008539">PosaO ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002845">Lettercard</tei:rs>
+
+
+
+      <dc:title>Handwritten lettercard from Julius Röntgen and Oscar Posa to Schenker, dated June
+        17, 1901</dc:title>
+
+      <dcterms:created>1901-06-17T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2025-10-06</dcterms:dateSubmitted>
+      <dc:description>Röntgen and Posa send greetings on a lettercard with picture.</dc:description>
+      <dc:subject/>
+
+
+
+      <marcrel:correspondent key="entity-000724">JRoentgen</marcrel:correspondent>
+      <marcrel:correspondent key="entity-005550">OPosa</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:fw type="envelope">
+          <tei:milestone unit="folio" n="recto"/><tei:lb/>
+          <tei:fw type="header" rend="center"><tei:hi rend="bold italic"
+            >BRIEFKAART</tei:hi></tei:fw><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#pr"/>AAN <tei:handShift new="#JR"/>Herrn D<tei:hi
+                rend="supralinear">r.</tei:hi>
+              <tei:hi rend="underline">Heinrich Schenker</tei:hi></tei:addrLine>
+            <tei:addrLine><tei:hi rend="underline">Oesterreich</tei:hi>
+              <tei:supplied reason="spacer">—</tei:supplied> Wien III</tei:addrLine>
+            <tei:addrLine>Reisnerstrasse 38</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| AMSTERDAM | 17 [6] 01 | * 12 6V * ||</tei:fw><tei:lb/>
+          <tei:fw type="postmark">|| WIEN 3/3 49 | BESTELLT | 20.6.01 | 7-<tei:gap
+              reason="illegible"/> ||</tei:fw><tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/><tei:lb/>
+          <tei:note type="editorial" place="inline">picture: woman, captioned: “ZUID-BEVELANDSCHE
+            KLEEDERDRACHT.”</tei:note><tei:lb/>
+          <tei:address>
+            <tei:addrLine rend="indent-60">Middelburg<tei:note xml:id="r0001-fn01" type="editorial"
+                place="foot">Middelburg: town in south-west Netherlands, capital of
+                Midden-Zeeland province.</tei:note>
+              <tei:date when="1901-06-17">17/6</tei:date></tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:salute>Lieber <tei:rs type="person" key="entity-000632">Freund</tei:rs>! </tei:salute>
+      </tei:opener>
+
+      <tei:p>Ich empfehle diese Dame Ihrer Obhut<tei:supplied reason="omission">.</tei:supplied>
+        Behandeln Sie dieselbe mit <tei:hi rend="underline">Vorsicht</tei:hi>. <tei:note
+          type="editorial" place="inline">cued from right margin sideways:</tei:note> und Rücksicht
+          <tei:unclear reason="reading">LL<tei:hi rend="supralinear">t</tei:hi></tei:unclear>
+        <tei:rs type="person" key="entity-000724">J.R.</tei:rs></tei:p>
+
+
+      <tei:closer>
+        <tei:salute><tei:unclear>Herzl</tei:unclear>
+          <tei:unclear>Gruß</tei:unclear></tei:salute>
+        <tei:signed><tei:rs type="person" key="entity-005550">Posa</tei:rs></tei:signed>
+        <tei:signed><tei:rs type="person" key="Julius Röntgen">Julius Röntgen</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:fw type="envelope">
+          <tei:milestone unit="folio" n="recto"/><tei:lb/>
+          <tei:fw type="header" rend="center"><tei:hi rend="bold italic"
+            >LETTERCARD</tei:hi></tei:fw><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#pr"/>TO: <tei:handShift new="#JR"/>Dr. <tei:hi
+                rend="underline">Heinrich Schenker</tei:hi></tei:addrLine>
+            <tei:addrLine><tei:hi rend="underline">Austria</tei:hi>
+              <tei:supplied reason="spacer">—</tei:supplied> Vienna III</tei:addrLine>
+            <tei:addrLine>Reisnerstrasse 38</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| AMSTERDAM | 17 [6] 01 | * 12 6V * ||</tei:fw><tei:lb/>
+          <tei:fw type="postmark">|| VIENNA 3/3 49 | DELIVERED | 20.6.01 | 7-<tei:gap
+              reason="illegible"/> ||</tei:fw><tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/><tei:lb/>
+          <tei:note type="editorial" place="inline">picture: woman, captioned: “COSTUME IN THE STYLE
+            OF SOUTH BEVELAND”</tei:note><tei:lb/>
+          <tei:address>
+            <tei:addrLine rend="indent-60">Middelburg,<tei:ptr corresp="#r0001-fn01" type="footnote"/>
+              <tei:date when="1901-06-17">June 17</tei:date></tei:addrLine>
+          </tei:address>
+        </tei:fw>
+        <tei:salute>Dear <tei:rs type="person" key="entity-000632">Friend</tei:rs>, </tei:salute>
+      </tei:opener>
+
+      <tei:p>I recommend this woman to your care. Treat her with <tei:hi rend="underline"
+          >caution</tei:hi>
+        <tei:note type="editorial" place="inline">cued from right margin sideways:</tei:note> and
+        consideration <tei:unclear reason="reading">LL<tei:hi rend="supralinear"
+          >t</tei:hi></tei:unclear>
+        <tei:rs type="person" key="entity-000724">J.R.</tei:rs></tei:p>
+
+
+      <tei:closer>
+        <tei:salute><tei:unclear>Cordial</tei:unclear>
+          <tei:unclear>greetings</tei:unclear></tei:salute>
+        <tei:signed><tei:rs type="person" key="entity-005550">Posa</tei:rs></tei:signed>
+        <tei:signed><tei:rs type="person" key="Julius Röntgen">Julius Röntgen</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="3709" sdoID="OJ-70-9_1">OJ 70/9, [1]</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="IB" scope="major">Ignaz Brüll's hand</tei:handNote>
+   <tei:handNote xml:id="pr" scope="minor">printed</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="IDB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>Transcription, 2025</tei:resp>
+   <tei:resp>Translation, 2025</tei:resp>
+   <tei:resp>XML Encoding, 2025</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2011-09-15" who="#IB">XML code revised</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-008519">BrüllI ~ MViolin</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+
+
+   <dc:title>Handwritten postcard from Ignaz Brüll to Moriz Violin, dated January 30,
+    1897</dc:title>
+
+   <dcterms:created>1897-01-30T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2025-08-05</dcterms:dateSubmitted>
+   <dc:description>Ignaz Brüll sends Moriz Violin some published pieces for clarinet and piano to
+    consider.</dc:description>
+   <dc:subject/>
+
+
+
+   <marcrel:correspondent key="entity-000105">BrüllI</marcrel:correspondent>
+   <marcrel:recipient key="entity-000913">MViolin</marcrel:recipient>
+  </sdo:itemDesc>
+
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/><tei:lb/>
+    <tei:fw type="header" rend="center"><tei:handShift new="#pr"/><tei:hi rend="bold"
+      >Korrespondenz-Karte.</tei:hi></tei:fw>
+    <tei:fw type="header" rend="center"><tei:hi rend="bold">(Antwor.)</tei:hi></tei:fw><tei:lb/>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:addrLine><tei:supplied>An: </tei:supplied><tei:handShift new="#IB"/>Herrn Moritz
+       Violin</tei:addrLine>
+      <tei:addrLine>Tonkünstler</tei:addrLine>
+      <tei:addrLine><tei:hi rend="lateinschr">Wien</tei:hi></tei:addrLine>
+      <tei:addrLine>IX. <tei:hi rend="lateinschr">Garnisongasse</tei:hi> 24</tei:addrLine>
+     </tei:address>
+     <tei:lb/>
+     <tei:fw type="postmark">|| WIEN 1/1 | a 6 a | 30. 1. 97 | 11-12 V ||</tei:fw>
+     <tei:fw type="postmark">|| WIEN 9/3 | 72 | BESTELLT | 30. 1. 97. | I . N ||</tei:fw>
+     <tei:lb/>
+    </tei:fw>
+    <tei:milestone unit="folio" n="verso"/><tei:lb/>
+    <tei:salute><tei:handShift new="#IB"/>Lieber Herr <tei:rs type="person" key="entity-000913"
+       ><tei:hi rend="lateinschr">Violin</tei:hi></tei:rs>!</tei:salute>
+   </tei:opener>
+
+   <tei:p>Ich sende Ihnen gleichzeitig 3 hübsche Mazurken für Cl. u. Viol. von <tei:hi
+     rend="lateinschr">Statkowski</tei:hi>,<tei:note xml:id="r0001-fn01" type="editorial"
+     place="foot">Roman Statkowski (1859–1925), Polish composer of operas, chamber music, and songs.
+     His worklist includes Three Mazurkas, Op. 8, for violin and piano, and Three Mazurkas, Op. 2,
+     and Four Mazurkas, Opp. 22–24, for solo piano.</tei:note> die ich <tei:rs type="person"
+     key="entity-000172"><tei:hi rend="lateinschr">Door</tei:hi></tei:rs> nicht übergeben hatte, da
+    sie verlegt waren. Wählen Sie freundlichst von allen Stücken so viel oder so wenig, als Ihnen
+    beliebt. Für Ihre collegiale Liebenswürdigkeit bin ich Ihnen sehr verbunden. </tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-40">Herzl. Gruß!</tei:salute>
+    <tei:salute rend="indent-70">Ihr</tei:salute>
+    <tei:signed rend="indent-70">
+     <tei:rs type="person" key="entity-000105">Ignaz Brüll</tei:rs>
+    </tei:signed><tei:lb/>
+    <tei:address>
+     <tei:addrLine>Wien <tei:date when="1897-01-30">30/I 97</tei:date></tei:addrLine>
+     <tei:addrLine>IX. Liechtensteinstr. 4</tei:addrLine>
+    </tei:address>
+   </tei:closer>
+
+
+  </tei:div>
+
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/><tei:lb/>
+    <tei:fw type="header" rend="center"><tei:handShift new="#pr"/><tei:hi rend="bold"
+      >Postcard</tei:hi></tei:fw>
+    <tei:fw type="header" rend="center"><tei:hi rend="bold">(reply)</tei:hi></tei:fw><tei:lb/>
+    <tei:fw type="envelope">
+     <tei:address>
+      <tei:addrLine><tei:supplied>To: </tei:supplied><tei:handShift new="#IB"/>Mr. Moritz
+       Violin</tei:addrLine>
+      <tei:addrLine>Musician</tei:addrLine>
+      <tei:addrLine>Vienna IX</tei:addrLine>
+      <tei:addrLine>Garnisongasse 24</tei:addrLine>
+     </tei:address>
+     <tei:lb/>
+     <tei:fw type="postmark">|| VIENNA 1/1 | a 6 a | 30. 1. 97 | 11-12 V ||</tei:fw>
+     <tei:fw type="postmark">|| VIENNA 9/3 | 72 | DELIVERED | 30. 1. 97. | I . N ||</tei:fw>
+     <tei:lb/>
+    </tei:fw>
+    <tei:milestone unit="folio" n="verso"/><tei:lb/>
+    <tei:salute><tei:handShift new="#IB"/>Dear Mr. <tei:rs type="person" key="entity-000913"
+      >Violin</tei:rs>,</tei:salute>
+   </tei:opener>
+
+   <tei:p>I am sending you by the same post three pretty mazurkas for clarinet and violin by
+     Statkowski<tei:ptr corresp="#r0001-fn01" type="footnote"/> that I had not entrusted to <tei:rs
+     type="person" key="entity-000172">Door</tei:rs> since they were <tei:supplied reason="clarity"
+     >already</tei:supplied> published. Please choose from all the pieces as many or as few as you
+    like. I am much obliged to you for your collegial kindness.</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-40">Cordial greetings!</tei:salute>
+    <tei:salute rend="indent-70">Your</tei:salute>
+    <tei:signed rend="indent-70">
+     <tei:rs type="person" key="entity-000105">Ignaz Brüll</tei:rs>
+    </tei:signed><tei:lb/>
+    <tei:address>
+     <tei:addrLine><tei:date when="1897-01-30">January 30, 1897</tei:date></tei:addrLine>
+     <tei:addrLine>Vienna IX, Liechtensteinstraße 4</tei:addrLine>
+    </tei:address>
+   </tei:closer>
+
+
+  </tei:div>
+ </sdo:record>
+</sdo:recordCollection>

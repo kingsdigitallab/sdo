@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="3828" sdoID="OJ-12-49_6a">OJ 12/49, [6a]</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="EM" scope="sole">Eusebius Mandyczewski's hand</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="IDB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>Transcription, 2025</tei:resp>
+   <tei:resp>Translation, 2025</tei:resp>
+   <tei:resp>XML Encoding, 2025</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2011-09-15" who="#IB">XML code revised</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-005513">Mandyczewski ~
+    HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002750">Note</tei:rs>
+
+
+
+   <dc:title>Handwritten notelet from Mandyczewski to Schenker, undated [November c.13,
+    1912]</dc:title>
+
+   <dcterms:created>1912-11-13T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2025-10-27</dcterms:dateSubmitted>
+   <dc:description>Mandyczewski suggests Schenker write to Paul Wittgenstein that they will visit
+    again the following Tuesday.</dc:description>
+   <dc:subject/>
+
+
+
+   <marcrel:correspondent key="entity-000562">EMandyczewski</marcrel:correspondent>
+   <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+  </sdo:itemDesc>
+
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/><tei:lb/>
+    <tei:salute><tei:handShift new="#EM"/><tei:rs type="person" key="entity-000632"
+      >Verehrtester</tei:rs>!<tei:note xml:id="r0001-fn01" type="editorial" place="foot">The only
+      occasions in which Schenker’s diary tells us that he visited the Wittgenstein home with
+      Mandyczewski are November 12 and 19, 1912, both of which were Tuesdays. (The only other visit
+      recorded is on Friday December 6, 1912, but then Schenker went alone.) The proposed visit
+      must, then, be that of the 19th.</tei:note></tei:salute>
+   </tei:opener>
+
+   <tei:p rend="indent-10">Es wäre ja sehr nett, wenn Sie ein paar Zeilen an Hr. <tei:rs
+     type="person" key="entity-000971">Paul Wittgenstein</tei:rs> schrieben und gleich hiezu sagten,
+    daß wir beide, wie verabredet, am Dienstag <tei:hi rend="underline">½ 4</tei:hi> Uhr von seiner
+    Güte wieder Gebrauch machen wollen. </tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-50">Herzlich, aber eiligt</tei:salute>
+    <tei:salute rend="indent-45">Ihr</tei:salute>
+    <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000562"
+     >Mandyczewski</tei:rs></tei:signed>
+   </tei:closer>
+
+
+  </tei:div>
+
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:milestone unit="folio" n="recto"/><tei:lb/>
+    <tei:salute><tei:handShift new="#EM"/><tei:rs type="person" key="entity-000632">Most highly
+      revered <tei:supplied reason="identiy">Dr. Schenker</tei:supplied></tei:rs>,<tei:ptr
+      corresp="#r0001-fn01" type="footnote"/></tei:salute>
+   </tei:opener>
+
+   <tei:p rend="indent-10">It would be a very good thing if you were to drop Mr. <tei:rs
+     type="person" key="entity-000971">Paul Wittgenstein</tei:rs> a line, and in the process say
+    that the two of us would like to prevail upon his kindness again, as arranged, on Tuesday at
+     <tei:hi rend="underline">3.30</tei:hi> p.m.</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-50">Cordially, but in haste,</tei:salute>
+    <tei:salute rend="indent-45">Your</tei:salute>
+    <tei:signed rend="indent-60"><tei:rs type="person" key="entity-000562"
+     >Mandyczewski</tei:rs></tei:signed>
+   </tei:closer>
+
+  </tei:div>
+ </sdo:record>
+</sdo:recordCollection>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3868" sdoID="OC-B-211">OC B/211</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="BHtp" scope="major">B&amp;H typist</tei:handNote>
+      <tei:handNote xml:id="BH" scope="minor">B&amp;H signatory's hand</tei:handNote>
+      <tei:handNote xml:id="pr" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="KK">
+      <tei:persName>Kaleb Koslowski</tei:persName>
+      <tei:resp>Transcription, 2025</tei:resp>
+      <tei:resp>Translation, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-06-26" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005545">Breitkopf&amp;Härtel ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002745">Postcard</tei:rs>
+
+      <dc:title>Handwritten postcard from Breitkopf &amp; Härtel to Schenker, dated November 25,
+        1915</dc:title>
+
+      <dcterms:created>1915-11-25T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2025-11-21</dcterms:dateSubmitted>
+      <dc:description>Breitkopf &amp; Härtel will respond shortly re: photographic reproductions of
+        [the autograph manuscript of] the Chopin Etudes [Op. 25].</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-002890">Breitkopf &amp; Härtel</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="header" rend="left"><tei:note type="editorial" place="inline">emblem: prowling
+            bear, with “<tei:handShift new="#pr"/>B &amp; H”</tei:note>
+          <tei:hi rend="bold">POSTKARTE</tei:hi></tei:fw>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>An: Herr<tei:handShift new="BHtp"/>n Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-40"><tei:handShift new="#pr"/>in <tei:handShift new="#BHtp"
+              />Wien III</tei:addrLine>
+            <tei:addrLine rend="indent-50"><tei:handShift new="#pr"/>Wohnung <tei:handShift
+                new="#BHtp"/>Reisnerstrasse 38.</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| | LEIPZIG | 25. 11. 15 | 9–10 N | * 13 d ||</tei:fw><tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#pr"/><tei:hi rend="underline">BREITKOPF &amp;
+                HÄRTEL</tei:hi></tei:addrLine>
+            <tei:addrLine rend="indent-70">LEIPZIG, DEN <tei:handShift new="BHtp"/><tei:date
+                when="1915-11-25">25./XI.1915</tei:date></tei:addrLine>
+            <tei:addrLine rend="indent-70"><tei:handShift new="#pr"/>NÜRNBERGER STR.
+              36.</tei:addrLine>
+          </tei:address><tei:lb/>
+        </tei:fw>
+        <tei:byline><tei:note type="editorial" place="inline">initialled in top-left
+            corner:</tei:note><tei:hi rend="italic">M. V.</tei:hi></tei:byline><tei:lb/>
+        <tei:salute><tei:handShift new="BHtp"/>Sehr geehrter Herr <tei:rs type="person"
+            key="entity-000632">Doktor</tei:rs>,<tei:note xml:id="r0001-fn01" type="editorial"
+            place="foot">Receipt of this postcard is probably that recorded in Schenker’s diary for
+            December 9, 1915: “Von Breitkopf u. Härtel Karte, die vor dem Brief geschrieben, aber
+            verspätet angelangt ist.” (“From Breitkopf &amp; Härtel, postcard, which was written
+            before their letter but was delayed.”). – The letter referred to is presumably <tei:ref
+              type="correspondence" cRef="OC-B-212">OC B/212</tei:ref>. —Schenker had written a
+            letter on November 15 (diary): “Brief an Breitkopf u. Härtel mit Einforderung der
+            Entscheidung“ (letter to Breitkopf &amp; Härtel demanding a
+          decision”).</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Leider war es uns noch nicht möglich, uns auf Ihre Anfrage wegen der
+        photographischen Aufnahmen von <tei:rs type="composition" key="entity-004724">Chopins
+          Etüden</tei:rs> zu äussern. Wir bitten Sie, sich noch 1–2 Tage zu gedulden.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Hochachtungsvoll</tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:handShift new="#BH"/><tei:rs type="organization" key="entity-002890">Breitkopf &amp;
+            Härtel</tei:rs></tei:signed>
+        <tei:address>
+          <tei:lb/>
+          <tei:lb/>
+          <tei:addrLine><tei:handShift new="#BHtp"/>Herrn Dr. Heinrich Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-10"><tei:hi rend="underline">Wien III</tei:hi></tei:addrLine>
+          <tei:addrLine>Reisnerstrasse 38.</tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p><tei:note type="editorial" place="inline">initialled in bottom-right
+            corner:</tei:note><tei:hi rend="italic">M. V.</tei:hi></tei:p>
+      </tei:postscript>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="recto"/>
+        <tei:fw type="header" rend="left"><tei:note type="editorial" place="inline">emblem: prowling
+            bear, with “<tei:handShift new="#pr"/>B &amp; H”</tei:note>
+          <tei:hi rend="bold">POSTCARD</tei:hi></tei:fw>
+        <tei:fw type="envelope">
+          <tei:address>
+            <tei:addrLine>To: <tei:handShift new="BHtp"/>Dr. Heinrich Schenker</tei:addrLine>
+            <tei:addrLine rend="indent-40"><tei:handShift new="#pr"/>in: <tei:handShift new="#BHtp"
+              />Vienna III</tei:addrLine>
+            <tei:addrLine rend="indent-50"><tei:handShift new="#pr"/>Building: <tei:handShift
+                new="#BHtp"/>Reisnerstrasse 38</tei:addrLine>
+          </tei:address><tei:lb/>
+          <tei:fw type="postmark">|| LEIPZIG | 25. 11. 15 | 9–10 N | * 13 d ||</tei:fw><tei:lb/><tei:lb/>
+          <tei:milestone unit="folio" n="verso"/>
+          <tei:address>
+            <tei:addrLine><tei:handShift new="#pr"/><tei:hi rend="underline">BREITKOPF &amp;
+                HÄRTEL</tei:hi></tei:addrLine>
+            <tei:addrLine rend="indent-70">LEIPZIG, <tei:handShift new="BHtp"/><tei:date
+                when="1915-11-25">November 25, 1915</tei:date></tei:addrLine>
+            <tei:addrLine rend="indent-70"><tei:handShift new="#pr"/>NÜRNBERGER STRASSE
+              36</tei:addrLine>
+          </tei:address><tei:lb/>
+        </tei:fw>
+        <tei:byline><tei:note type="editorial" place="inline">initialled in top-left
+            corner:</tei:note><tei:hi rend="italic">M. V.</tei:hi></tei:byline><tei:lb/>
+        <tei:salute><tei:handShift new="BHtp"/>Dear <tei:rs type="person" key="entity-000632">Dr.
+              <tei:supplied rend="identity">Schenker</tei:supplied></tei:rs>,<tei:ptr
+            corresp="#r0001-fn01" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Unfortunately, it has not yet been possible for us to respond to your
+        inquiry about the photographic reproductions of <tei:rs type="composition"
+          key="entity-004724">Chopin’s Etudes</tei:rs>. We kindly ask for your patience for another
+        one to two days. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Respectfully,</tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:handShift new="#BH"/><tei:rs type="organization" key="entity-002890">Breitkopf &amp;
+            Härtel</tei:rs></tei:signed>
+        <tei:address>
+          <tei:lb/>
+          <tei:lb/>
+          <tei:addrLine><tei:handShift new="#BHtp"/>Dr. Heinrich Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-10"><tei:hi rend="underline">Vienna III</tei:hi></tei:addrLine>
+          <tei:addrLine>Reisnerstrasse 38</tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p><tei:note type="editorial" place="inline">initialled in bottom-right
+            corner:</tei:note><tei:hi rend="italic">M. V.</tei:hi></tei:p>
+      </tei:postscript>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3846" sdoID="OJ-9-20_36">OJ 9/20, [36]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="BHsten" scope="major">B&amp;H stenographer</tei:handNote>
+      <tei:handNote xml:id="BH" scope="minor">B&amp;H signatory's hand</tei:handNote>
+      <tei:handNote xml:id="print" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="KK">
+      <tei:persName>Kaleb Koslowski</tei:persName>
+      <tei:resp>Transcription, 2025</tei:resp>
+      <tei:resp>Translation, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-06-26" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005545">Breitkopf&amp;Härtel ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+      <dc:title>Handwritten letter from Breitkopf &amp; Härtel to Schenker, dated September 6,
+        1905</dc:title>
+
+      <dcterms:created>1905-09-06T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2025-11-04</dcterms:dateSubmitted>
+      <dc:description>Breitkopf &amp; Härtel announce that they are unable to undertake publication
+        of Schenker's manuscript [Harmonielehre] because of similarities with the works of [Hugo]
+        Riemann.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-002890">Breitkopf &amp; Härtel</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:address>
+          <tei:note type="editorial" place="inline">in a decorative printed letterhead:</tei:note>
+          <tei:lb/>
+          <tei:addrLine><tei:handShift new="#print"/><tei:hi rend="bold">BREITKOPF &amp; HÄRTEL
+              LEIPZIG</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:rs type="place" key="entity-002479">LEIPZIG</tei:rs>,
+            DEN <tei:handShift new="#BHsten"/><tei:date when="1905-09-06">6. Sept.
+            05</tei:date></tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:handShift new="#print"/>NÜRNBERGER STR.
+            36</tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:salute rend="indent-20"><tei:handShift new="#BHsten"/>Sehr geehrter <tei:rs
+            type="person" key="entity-000632">Herr</tei:rs>!<tei:note xml:id="r0001-fn01"
+            type="editorial" place="foot">A typed transcript of the body of this letter by Oswald
+            Jonas is preserved as OJ 59/9, [1], item 5.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p>Wir haben uns ausführlich mit Ihrem Manuskripte<tei:note xml:id="r0001-fn02"
+          type="editorial" place="foot">The manuscript of Schenker’s <tei:rs type="work"
+            key="entity-001724"><tei:title level="m">Harmonielehre</tei:title></tei:rs>, probably at
+          that stage entitled <tei:title level="m">Neue musikalische Theorien und Phantasien von
+            einem Künstler</tei:title>.</tei:note> beschäftigt und sehr viel Beachtenswertes und
+        Interessantes darin gefunden. Doch glauben wir, daß die von <tei:rs type="person"
+          key="entity-000712"><tei:hi rend="lateinschr">Riemann</tei:hi></tei:rs> im gleichen Sinne
+        veröffentlichten Arbeiten einen sicheren Erfolg des Werkes in Frage stellen. Wir haben uns
+        deshalb leider nicht entschließen können, dasselbe für unseren Verlag zu erwerben. Die
+        Handschrift stellen wir Ihnen gleichzeitig mit verbindlichem Danke wieder zur Verfügung. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">In vorzüglicher Hochachtung</tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:handShift new="#BH"/><tei:rs type="organization" key="entity-002890">Breitkopf &amp;
+            Härtel</tei:rs></tei:signed><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#BHsten"/>Herrn <tei:hi rend="lateinschr">Heinrich
+              Schenker</tei:hi></tei:addrLine>
+          <tei:addrLine><tei:hi rend="lateinschr"><tei:rs type="place" key="entity-002279">St.
+                Anton</tei:rs></tei:hi> (<tei:hi rend="lateinschr"><tei:rs type="place"
+                key="entity-002334">Tirol</tei:rs></tei:hi>)</tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:address>
+          <tei:note type="editorial" place="inline">in a decorative printed letterhead:</tei:note>
+          <tei:lb/>
+          <tei:addrLine><tei:handShift new="#print"/><tei:hi rend="bold">BREITKOPF &amp; HÄRTEL
+              LEIPZIG</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:rs type="place" key="entity-002479">LEIPZIG</tei:rs>,
+              <tei:handShift new="#BHsten"/><tei:date when="1905-09-06">September 6,
+            1905</tei:date></tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:handShift new="#print"/>NÜRNBERGER STRASSE
+            36</tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:salute rend="indent-20"><tei:handShift new="#BHsten"/>Dear <tei:rs type="person"
+            key="entity-000632">Sir</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"
+          /></tei:salute>
+      </tei:opener>
+
+      <tei:p>We have thoroughly examined your manuscript<tei:ptr corresp="#r0001-fn02"
+          type="footnote"/> and have found much that is noteworthy and interesting. However, we
+        believe that the works published by <tei:rs type="person" key="entity-000712"
+          >Riemann</tei:rs> along the same lines cast doubts on the likely success of your work. We
+        are, therefore, regrettably unable to take the work up for our publishing house. We are
+        returning the manuscript to you with our sincere thanks.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-40">With the utmost respect,</tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:handShift new="#BH"/><tei:rs type="organization" key="entity-002890">Breitkopf &amp;
+            Härtel</tei:rs></tei:signed><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#BHsten"/>Mr. Heinrich Schenker</tei:addrLine>
+          <tei:addrLine><tei:rs type="place" key="entity-002279">St. Anton</tei:rs> (<tei:rs
+              type="place" key="entity-002334">Tirol</tei:rs>)</tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

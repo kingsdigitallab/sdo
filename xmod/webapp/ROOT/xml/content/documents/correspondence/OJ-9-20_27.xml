@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3837" sdoID="OJ-9-20_27">OJ 9/20, [27]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="BHsten" scope="major">B&amp;H stenographer</tei:handNote>
+      <tei:handNote xml:id="BH" scope="minor">B&amp;H signatory's hand</tei:handNote>
+      <tei:handNote xml:id="print" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="KK">
+      <tei:persName>Kaleb Koslowski</tei:persName>
+      <tei:resp>Transcription, 2025</tei:resp>
+      <tei:resp>Translation, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-06-26" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005545">Breitkopf&amp;Härtel ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+      <dc:title>Handwritten letter from Breitkopf &amp; Härtel to Schenker, dated June 30,
+        1902</dc:title>
+
+      <dcterms:created>1902-06-30T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2025-11-02</dcterms:dateSubmitted>
+      <dc:description>Breitkopf &amp; Härtel submit their sales report for Schenker's Sechs Lieder,
+        Op. 3 and Zweistimmige Inventionen, Op. 5.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-002890">Breitkopf &amp; Härtel</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:address>
+          <tei:note type="editorial" place="inline">in a decorative printed letterhead:</tei:note>
+          <tei:lb/>
+          <tei:addrLine><tei:handShift new="#print"/><tei:hi rend="bold">BREITKOPF &amp;
+              HÄRTEL</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:rs type="place" key="entity-002479">LEIPZIG</tei:rs>,
+            DEN <tei:handShift new="#BHsten"/><tei:date when="1902-06-30">30. Juni
+            1902</tei:date></tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:handShift new="#print"/>NÜRNBERGER STR.
+            36.</tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#BHsten"/>Herrn Dr. Heinr. <tei:hi rend="lateinschr"
+              >Schenker</tei:hi> in <tei:hi rend="lateinschr">Wien</tei:hi> III</tei:addrLine>
+          <tei:addrLine rend="indent-60"><tei:hi rend="lateinschr">Richardgasse</tei:hi>
+            11</tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:salute rend="indent-20"><tei:handShift new="#BHsten"/>Sehr geehrter <tei:rs
+            type="person" key="entity-000632">Herr</tei:rs>.</tei:salute>
+      </tei:opener>
+
+      <tei:p>In der Anlage beehren wir uns Ihnen Abrechnung über den Vertrieb Ihrer Werke<tei:note
+          xml:id="r0001-fn01" type="editorial" place="foot">= <tei:ref type="correspondence"
+            cRef="OJ-9-20_28">OJ 9/20, [28]</tei:ref>. The works in question are Schenker’s
+            <tei:title level="m">Sechs Lieder</tei:title>, Op. 3 and <tei:title level="m"
+            >Zweistimmige Inventionen</tei:title>, Op. 5 (both Leipzig: Breitkopf &amp; Härtel, 1898,
+          1901).</tei:note> vorzulegen. Den hiernach sich ergebenden Ertrag von M. 37.50. haben wir
+        Ihrem Conto gutgeschrieben. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Hochachtungsvoll.</tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:handShift new="#BH"/><tei:rs type="organization" key="entity-002890">Breitkopf &amp;
+            Härtel</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:address>
+          <tei:note type="editorial" place="inline">in a decorative printed letterhead:</tei:note>
+          <tei:lb/>
+          <tei:addrLine><tei:handShift new="#print"/><tei:hi rend="bold">BREITKOPF &amp;
+              HÄRTEL</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:rs type="place" key="entity-002479">LEIPZIG</tei:rs>,
+              <tei:handShift new="#BHsten"/><tei:date when="1902-06-30">June 30,
+            1902</tei:date></tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:handShift new="#print"/>NÜRNBERGER STRASSE
+            36</tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#BHsten"/>Dr. Heinrich Schenker in Vienna
+            III</tei:addrLine>
+          <tei:addrLine rend="indent-60">Richardgasse 11</tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:salute rend="indent-20"><tei:handShift new="#BHsten"/>Dear <tei:rs type="person"
+            key="entity-000632">Sir</tei:rs>,</tei:salute>
+      </tei:opener>
+
+      <tei:p>Enclosed, we have the honor of submitting the settlement for the distribution of your
+          works,<tei:ptr corresp="#r0001-fn01" type="footnote"/> and the resulting amount of 37.50
+        marks has been credited to your account.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Respectfully,</tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:handShift new="#BH"/><tei:rs type="organization" key="entity-002890">Breitkopf &amp;
+            Härtel</tei:rs></tei:signed>
+      </tei:closer>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

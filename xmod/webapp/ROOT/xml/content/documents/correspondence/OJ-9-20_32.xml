@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3842" sdoID="OJ-9-20_32">OJ 9/20, [32]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="BHsten" scope="major">B&amp;H stenographer</tei:handNote>
+      <tei:handNote xml:id="BH" scope="minor">B&amp;H signatory's hand</tei:handNote>
+      <tei:handNote xml:id="print" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="KK">
+      <tei:persName>Kaleb Koslowski</tei:persName>
+      <tei:resp>Transcription, 2025</tei:resp>
+      <tei:resp>Translation, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-06-26" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005545">Breitkopf&amp;Härtel ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+      <dc:title>Handwritten letter from Breitkopf &amp; Härtel to Schenker, dated June 26,
+        1905</dc:title>
+
+      <dcterms:created>1905-06-26T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2025-11-03</dcterms:dateSubmitted>
+      <dc:description>Schenker has approached Breitkopf &amp; Härtel about publishing a new work
+        [Harmonielehre], and they agree to assess the manuscript of it if he will submit
+        it.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-002890">Breitkopf &amp; Härtel</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:address>
+          <tei:note type="editorial" place="inline">in a decorative printed letterhead:</tei:note>
+          <tei:lb/>
+          <tei:addrLine><tei:handShift new="#print"/><tei:hi rend="bold">BREITKOPF &amp;
+              HÄRTEL LEIPZIG</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:rs type="place" key="entity-002479">LEIPZIG</tei:rs>,
+            DEN <tei:handShift new="#BHsten"/><tei:date when="1905-06-26">26. VI.
+            05</tei:date></tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:handShift new="#print"/>NÜRNBERGER STR.
+            36.</tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:salute rend="indent-20"><tei:handShift new="#BHsten"/>Sehr geehrter <tei:rs
+            type="person" key="entity-000632">Herr</tei:rs>.<tei:note xml:id="r0001-fn01"
+            type="editorial" place="foot">A typed transcript of the body of this letter by Oswald
+            Jonas is preserved as OJ 59/9, [1], item 4.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Im Besitze Ihres w. Schreibens vom <tei:date when="1905-06-23">23.
+          dss.</tei:date><tei:note xml:id="r0001-fn02" type="editorial" place="foot">The letter in
+            question is not known to survive (Schenker’s diary has no entries for June 1905).
+          Schenker evidently gave his initial title for the work.</tei:note> teilen wir Ihnen mit,
+        daß wir im Prinzip mit Ihren Darlegungen einverstanden sind, nur möchten wir Sie bitten uns
+        zuvor das Manuskript zu Ihren „<tei:title>Neuen musikalischen Theorien und Fantasien von
+          einem Künstler</tei:title>“<tei:note xml:id="r0001-fn03" type="editorial" place="foot"
+          >Schenker has offered the manuscript of what he later entitled <tei:rs type="work"
+            key="entity-001724"><tei:title level="m">Harmonielehre</tei:title></tei:rs>, the first
+          volume of his series <tei:rs type="work" key="entity-001723"><tei:title level="m">Neue
+              musikalische Theorien und Fantasien</tei:title></tei:rs>.</tei:note> einmal
+        einzusenden, schon wegen der genaueren Berechnung halber. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50">Hochachtungsvoll</tei:salute>
+        <tei:signed rend="indent-50">
+          <tei:handShift new="#BH"/><tei:rs type="organization" key="entity-002890">Breitkopf &amp;
+            Härtel</tei:rs></tei:signed><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#BHsten"/>Herrn <tei:hi rend="lateinschr">H.
+              Schenker</tei:hi></tei:addrLine>
+          <tei:addrLine><tei:hi rend="lateinschr">Wien</tei:hi> III</tei:addrLine>
+          <tei:addrLine rend="indent-60"><tei:hi rend="lateinschr">Reisnerstr</tei:hi>
+            38.</tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:address>
+          <tei:note type="editorial" place="inline">in a decorative printed letterhead:</tei:note>
+          <tei:lb/>
+          <tei:addrLine><tei:handShift new="#print"/><tei:hi rend="bold">BREITKOPF &amp;
+            HÄRTEL LEIPZIG</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:rs type="place" key="entity-002479">LEIPZIG</tei:rs>,
+              <tei:handShift new="#BHsten"/><tei:date when="1905-06-26">June 26,
+            1905</tei:date></tei:addrLine>
+          <tei:addrLine rend="indent-50"><tei:handShift new="#print"/>NÜRNBERGER STRASSE
+            36</tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:salute rend="indent-20"><tei:handShift new="#BHsten"/>Dear <tei:rs type="person"
+            key="entity-000632">Sir</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"
+          /></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">We acknowledge receipt of your esteemed letter from the <tei:date
+          when="1905-06-23">23rd of this month</tei:date>,<tei:ptr corresp="#r0001-fn02"
+          type="footnote"/> and we are, in principle, in agreement with your statements. However, we
+        would kindly ask you to send us the manuscript of your <tei:title level="m">New Musical
+          Theories and Fantasies by an Artist</tei:title><tei:ptr corresp="#r0001-fn03"
+          type="footnote"/> beforehand, so that we may make more accurate calculations.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-50">Respectfully,</tei:salute>
+        <tei:signed rend="indent-50">
+          <tei:handShift new="#BH"/><tei:rs type="organization" key="entity-002890">Breitkopf &amp;
+            Härtel</tei:rs></tei:signed><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#BHsten"/>Mr. H. Schenker</tei:addrLine>
+          <tei:addrLine>Vienna III</tei:addrLine>
+          <tei:addrLine rend="indent-60">Reisnerstrasse 38</tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

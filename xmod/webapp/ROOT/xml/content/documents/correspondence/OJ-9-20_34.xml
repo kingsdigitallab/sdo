@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+    <sdo:source>
+      <sdo:correspondence mfID="3844" sdoID="OJ-9-20_34">OJ 9/20, [34]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="BHsten" scope="major">B&amp;H stenographer</tei:handNote>
+      <tei:handNote xml:id="BH" scope="minor">B&amp;H signatory's hand</tei:handNote>
+      <tei:handNote xml:id="print" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="KK">
+      <tei:persName>Kaleb Koslowski</tei:persName>
+      <tei:resp>Transcription, 2025</tei:resp>
+      <tei:resp>Translation, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-06-26" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-005545">Breitkopf&amp;Härtel ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+      <dc:title>Handwritten letter from Breitkopf &amp; Härtel to Schenker, dated July 11,
+        1905</dc:title>
+
+      <dcterms:created>1905-07-11T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2025-11-04</dcterms:dateSubmitted>
+      <dc:description>Breitkopf &amp; Härtel insist that they must have the manuscript [of
+        Harmonielehre] before they can consider publication, and reiterate their promise of
+        confidentiality.</dc:description>
+      <dc:subject/>
+
+      <marcrel:correspondent key="entity-002890">Breitkopf &amp; Härtel</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:address>
+          <tei:note type="editorial" place="inline">in a decorative printed letterhead:</tei:note>
+          <tei:lb/>
+          <tei:addrLine><tei:handShift new="#print"/><tei:hi rend="bold">BREITKOPF &amp; HÄRTEL
+              LEIPZIG</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-60"><tei:rs type="place" key="entity-002479">LEIPZIG</tei:rs>,
+            DEN <tei:handShift new="#BHsten"/><tei:date when="1905-06-30">11. VII.
+            05</tei:date>.</tei:addrLine>
+          <tei:addrLine rend="indent-60"><tei:handShift new="#print"/>NÜRNBERGER STR.
+            36.</tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:salute rend="indent-20"><tei:handShift new="#BHsten"/>Sehr geehrter <tei:rs
+            type="person" key="entity-000632">Herr</tei:rs>,<tei:note xml:id="r0001-fn01"
+            type="editorial" place="foot">This letter is transcribed in
+                <tei:bibl><tei:author>Federhofer</tei:author>, <tei:title level="m">Heinrich
+                Schenker nach Tagebüchern und Briefen …</tei:title> (Hildesheim: Georg Olms,
+              1985)</tei:bibl>, p. 22; a typed transcript of the body of the letter by Oswald Jonas
+            is preserved as OJ 59/9, [1], item 5.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">Wir erhielten Ihren w. Brief vom <tei:date when="1905-07-05">5.
+          dss.</tei:date> und geben Ihnen daraufhin die Versicherung, daß weder Herr <tei:rs
+          type="person" key="entity-000712"><tei:hi rend="lateinschr">Prof.
+          Riemann</tei:hi></tei:rs> noch Herr <tei:rs type="person" key="entity-000562"><tei:hi
+            rend="lateinschr">Dr. Mandyczewski</tei:hi></tei:rs> Ihr Werk<tei:note
+          xml:id="r0001-fn02" type="editorial" place="foot">Schenker approached Breitkopf in
+          mid-June about publication of his <tei:rs type="work" key="entity-001724"><tei:title
+              level="m">Harmonielehre</tei:title></tei:rs>, and has now made specific stipulations
+          over confidentiality before agreeing to submit the work for inspection. Receipt of the
+          volume is acknowledged in <tei:ref type="correspondence" cRef="OJ-9-20_35">OJ 9/20,
+            [35]</tei:ref>, August 7.</tei:note> vor dem Erscheinen zu Gesicht bekommt. </tei:p>
+
+      <tei:p rend="first">In die uns übersandten Rezensionen<tei:note xml:id="r0001-fn03"
+          type="editorial" place="foot">Presumably reviews of the first edition of his <tei:rs
+            type="work" key="entity-001721"><tei:title level="m">Beitrag zur
+            Ornamentik</tei:title></tei:rs>, of which five are preserved in his scrapbook, OJ
+          2/pp.4–5.</tei:note> haben wir Einsicht genommen und senden Sie Ihnen mit Dank zurück. </tei:p>
+
+      <tei:p rend="first">Die einzuschaltenden Zitate möchten wir Sie bitten, doch auszuschreiben,
+        da das Aufsuchen dem <tei:pb n="2"/> Setzer doch Schwierigkeiten bereiten würde. </tei:p>
+
+      <tei:p rend="first">Wir sehen der Zusendung des Manuskriptes entgegen und zeichnen</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Hochachtungsvoll</tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:handShift new="#BH"/><tei:rs type="organization" key="entity-002890">Breitkopf &amp;
+            Härtel</tei:rs></tei:signed><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#BHsten"/>Herrn <tei:hi rend="lateinschr">H.
+              Schenker</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-20"><tei:hi rend="underline"><tei:hi rend="lateinschr"
+                >Wien</tei:hi> III</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-20"><tei:hi rend="lateinschr">Reisnerstr</tei:hi>
+            38.</tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p>/5 Anlagen</tei:p>
+      </tei:postscript>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:address>
+          <tei:note type="editorial" place="inline">in a decorative printed letterhead:</tei:note>
+          <tei:lb/>
+          <tei:addrLine><tei:handShift new="#print"/><tei:hi rend="bold">BREITKOPF &amp; HÄRTEL
+              LEIPZIG</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-60"><tei:rs type="place" key="entity-002479">LEIPZIG</tei:rs>,
+              <tei:handShift new="#BHsten"/><tei:date when="1905-06-30">July 11,
+            1905</tei:date></tei:addrLine>
+          <tei:addrLine rend="indent-60"><tei:handShift new="#print"/>NÜRNBERGER STRASSE
+            36</tei:addrLine>
+        </tei:address><tei:lb/>
+        <tei:salute rend="indent-20"><tei:handShift new="#BHsten"/>Dear <tei:rs type="person"
+            key="entity-000632">Sir</tei:rs>,<tei:ptr corresp="#r0001-fn01" type="footnote"
+          /></tei:salute>
+      </tei:opener>
+
+      <tei:p rend="first">We have received your kind letter from the <tei:date when="1905-07-05">5th
+          of this month</tei:date> and, in response, assure you that neither <tei:rs type="person"
+          key="entity-000712">Professor Riemann</tei:rs> nor <tei:rs type="person"
+          key="entity-000562">Dr. Mandyczewski</tei:rs> will see your work<tei:ptr
+          corresp="#r0001-fn02" type="footnote"/> before its publication.</tei:p>
+
+      <tei:p rend="first">We have examined the reviews<tei:ptr corresp="#r0001-fn03" type="footnote"
+        /> you sent us and return them to you with our thanks.</tei:p>
+
+      <tei:p rend="first">As for the quotations to be inserted, we kindly ask you to write them out
+        in full, since looking them up would present the <tei:pb n="2"/> typesetter with real
+        difficulties.</tei:p>
+
+      <tei:p rend="first">We look forward to receiving the manuscript and remain, </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-60">Respectfully,</tei:salute>
+        <tei:signed rend="indent-60">
+          <tei:handShift new="#BH"/><tei:rs type="organization" key="entity-002890">Breitkopf &amp;
+            Härtel</tei:rs></tei:signed><tei:lb/>
+        <tei:address>
+          <tei:addrLine><tei:handShift new="#BHsten"/>Mr. H. Schenker</tei:addrLine>
+          <tei:addrLine rend="indent-20"><tei:hi rend="underline">Vienna III</tei:hi></tei:addrLine>
+          <tei:addrLine rend="indent-20">Reisnerstrasse 38</tei:addrLine>
+        </tei:address>
+      </tei:closer>
+
+      <tei:postscript>
+        <tei:p>5 enclosures</tei:p>
+      </tei:postscript>
+
+
+    </tei:div>
+  </sdo:record>
+</sdo:recordCollection>

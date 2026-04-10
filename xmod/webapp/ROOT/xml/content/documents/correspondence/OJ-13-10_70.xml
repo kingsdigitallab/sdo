@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+  xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+  <sdo:collectionDesc>
+
+    <sdo:source>
+      <sdo:correspondence mfID="3742" sdoID="OJ-13-10_70">OJ 13/10, [70]</sdo:correspondence>
+    </sdo:source>
+
+    <tei:handNotes>
+      <tei:handNote xml:id="RO" scope="major">Reinhard Oppel's hand</tei:handNote>
+      <tei:handNote xml:id="UO" scope="minor">Ulrich Oppel's hand</tei:handNote>
+      <tei:handNote xml:id="WO" scope="minor">Walter Oppel's hand</tei:handNote>
+      <tei:handNote xml:id="HRO" scope="minor">Hans Reinhard Oppel's hand</tei:handNote>
+      <tei:handNote xml:id="pr" scope="minor">printed</tei:handNote>
+    </tei:handNotes>
+
+    <tei:respStmt xml:id="TLJ-KO">
+      <tei:persName>Timothy L. Jackson, ed. Kurt Oppel</tei:persName>
+      <tei:resp>Transcription, 2010</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="WMD">
+      <tei:persName>William Drabkin</tei:persName>
+      <tei:resp>Translation, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:respStmt xml:id="IB">
+      <tei:persName>Ian Bent</tei:persName>
+      <tei:resp>XML Encoding, 2025</tei:resp>
+    </tei:respStmt>
+
+    <tei:revisionDesc>
+      <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+      <tei:change when="2010-04-22" who="#IB">XML code revised</tei:change>
+    </tei:revisionDesc>
+  </sdo:collectionDesc>
+
+  <sdo:record ID="r0001">
+    <sdo:itemDesc>
+      <tei:rs role="correspondence" type="correspondence" key="entity-002734">Oppel ~
+        HSchenker</tei:rs>
+      <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002751">Picture
+        postcard</tei:rs>
+
+      <dc:title>Handwritten picture postcard from Oppel to Schenker, undated [late December
+        1928?]</dc:title>
+
+      <dcterms:created>1928-12-25T12:00:00Z</dcterms:created>
+      <dcterms:dateSubmitted>2025-08-16</dcterms:dateSubmitted>
+      <dc:description>Oppel sends Christmas greetings to the Schenkers.</dc:description>
+      <dc:subject/>
+
+
+
+      <marcrel:correspondent key="entity-000643">Reinhard Oppel</marcrel:correspondent>
+      <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+      <marcrel:recipient key="entity-000771">JSchenker</marcrel:recipient>
+    </sdo:itemDesc>
+
+
+    <tei:div type="transcription">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:note type="editorial" place="inline">picture: harbor with town, captioned on recto: “Im
+            Laboer<tei:note xml:id="r0001-fn01" type="editorial" place="foot">Laboer: a town near
+            the entrance to Kiel Harbor, about 6 miles north of the city.</tei:note> Hafen.
+          (248)“</tei:note><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:milestone unit="folio" n="recto"/><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:supplied>An: </tei:supplied><tei:handShift new="#RO"/>Herrn Prof
+                D<tei:hi rend="supralinear">r</tei:hi> Heinrich Schenker</tei:addrLine>
+            <tei:addrLine>Wien III / Östreich</tei:addrLine>
+            <tei:addrLine>Keilgasse 8</tei:addrLine>
+          </tei:address>
+          <tei:lb/>
+          <tei:fw type="postmark"><tei:note type="editorial" place="inline"
+            >illegible</tei:note></tei:fw>
+          <tei:lb/>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#RO"/>Mein lieber Herr <tei:rs type="person"
+            key="entity-000632">Prof Schenker</tei:rs>,<tei:note xml:id="r0001-fn02"
+            type="editorial" place="foot">Schenker’s diary for December 27 records receipt of a
+            picture postcard from Oppel with greetings but without mentioning the other signatories.
+            This may be the item, hence the suggested editorial dating, which is reinforced by the
+            mention of Galtür (visited that summer) and the fact that a letter does indeed follow,
+              <tei:ref type="correspondence" cRef="OJ-13-10_71">OJ 13/10, [71]</tei:ref>, December
+            29, 1928.</tei:note></tei:salute>
+      </tei:opener>
+
+      <tei:p><tei:rs type="person" key="entity-000771">Ihrer lieben Frau</tei:rs> u. Ihnen unsre
+        herzlichsten Weihnachtswünsche u. Grüsse. Brief folgt. Hier Nebel, Regen u. halber Schnee.
+          <tei:rs type="place" key="entity-002292">Galtür</tei:rs> wäre mich jetzt lieber. </tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">Ihr treuer</tei:salute>
+        <tei:signed rend="indent-50"><tei:rs type="person" key="entity-000643">Reinhard
+            Oppel</tei:rs>.</tei:signed>
+        <tei:signed><tei:handShift new="#UO"/><tei:rs type="person" key="entity-000644"
+            >Ulrich</tei:rs>, <tei:handShift new="#WO"/><tei:rs type="person" key="entity-003957"
+            >Walter</tei:rs>, <tei:handShift new="#HRO"/><tei:rs type="person" key="entity-008510"
+            >Hans Reinhard</tei:rs>.</tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+
+    <tei:div type="translation">
+
+      <tei:opener>
+        <tei:milestone unit="folio" n="verso"/><tei:lb/>
+        <tei:note type="editorial" place="inline">picture: harbor with town, captioned on recto: “Im
+            Laboer<tei:ptr corresp="#r0001-fn01" type="footnote"/> Harbor. (248)“</tei:note><tei:lb/>
+        <tei:fw type="envelope">
+          <tei:milestone unit="folio" n="recto"/><tei:lb/>
+          <tei:address>
+            <tei:addrLine><tei:supplied>To: </tei:supplied><tei:handShift new="#RO"/>Prof. Heinrich
+              Schenker</tei:addrLine>
+            <tei:addrLine>Vienna III, Austria</tei:addrLine>
+            <tei:addrLine>Keilgasse 8</tei:addrLine>
+          </tei:address>
+          <tei:lb/>
+          <tei:fw type="postmark"><tei:note type="editorial" place="inline"
+            >illegible</tei:note></tei:fw>
+          <tei:lb/>
+        </tei:fw>
+        <tei:salute><tei:handShift new="#RO"/>My dear <tei:rs type="person" key="entity-000632"
+            >Prof. Schenker</tei:rs>,<tei:ptr corresp="#r0001-fn02" type="footnote"/></tei:salute>
+      </tei:opener>
+
+      <tei:p>To <tei:rs type="person" key="entity-000771">your dear wife</tei:rs> and you, our most
+        cordial Christmas wishes and greetings. Letter to follow. Here we have fog, rain, and wet
+        snow. <tei:rs type="place" key="entity-002292">Galtür</tei:rs> would suit me better
+        now.</tei:p>
+
+      <tei:closer>
+        <tei:salute rend="indent-10">Your faithful</tei:salute>
+        <tei:signed rend="indent-50"><tei:rs type="person" key="entity-000643">Reinhard
+            Oppel</tei:rs></tei:signed>
+        <tei:signed><tei:handShift new="#UO"/><tei:rs type="person" key="entity-000644"
+            >Ulrich</tei:rs>, <tei:handShift new="#WO"/><tei:rs type="person" key="entity-003957"
+            >Walter</tei:rs>, <tei:handShift new="#HRO"/><tei:rs type="person" key="entity-008510"
+            >Hans Reinhard</tei:rs></tei:signed>
+      </tei:closer>
+
+    </tei:div>
+
+  </sdo:record>
+</sdo:recordCollection>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../../../../schema/local/sdo_oxygen.css" type="text/css"?>
+<sdo:recordCollection xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/" xmlns:marcrel="http://www.loc.gov/loc.terms/relators/"
+ xmlns:sdo="http://www.cch.kcl.ac.uk/schenker" xmlns:tei="http://www.tei-c.org/ns/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cch.kcl.ac.uk/schenker ../../../../schema/local/schenker.xsd">
+ <sdo:collectionDesc>
+  <sdo:source>
+   <sdo:correspondence mfID="3707" sdoID="OJ-9-23_1">OJ 9/23, [1]</sdo:correspondence>
+  </sdo:source>
+
+  <tei:handNotes>
+   <tei:handNote xml:id="IB" scope="sole">Ignaz Brüll's hand</tei:handNote>
+  </tei:handNotes>
+
+  <tei:respStmt xml:id="IDB">
+   <tei:persName>Ian Bent</tei:persName>
+   <tei:resp>Transcription, 2025</tei:resp>
+   <tei:resp>Translation, 2025</tei:resp>
+   <tei:resp>XML Encoding, 2025</tei:resp>
+  </tei:respStmt>
+
+  <tei:revisionDesc>
+   <tei:change when="2010-01-21" who="#BOT">Template Generated</tei:change>
+   <tei:change when="2011-09-15" who="#IB">XML code revised</tei:change>
+  </tei:revisionDesc>
+ </sdo:collectionDesc>
+
+ <sdo:record ID="r0001">
+
+  <sdo:itemDesc>
+   <tei:rs role="correspondence" type="correspondence" key="entity-008517">BrüllI ~
+    HSchenker</tei:rs>
+   <tei:rs role="corr-item-type" type="corr-item-type" key="entity-002744">Letter</tei:rs>
+
+
+
+   <dc:title>Handwritten letter from Brüll to Schenker, dated January 13, 1891</dc:title>
+
+   <dcterms:created>1891-01-13T12:00:00Z</dcterms:created>
+   <dcterms:dateSubmitted>2025-08-05</dcterms:dateSubmitted>
+   <dc:description>Ignaz Brüll acknowledges receipt of an essay by Schenker and shares Schenker's
+    views.</dc:description>
+   <dc:subject/>
+
+
+
+   <marcrel:correspondent key="entity-000105">BrüllI</marcrel:correspondent>
+   <marcrel:recipient key="entity-000632">HSchenker</marcrel:recipient>
+  </sdo:itemDesc>
+
+
+  <tei:div type="transcription">
+
+   <tei:opener>
+    <tei:salute>Sehr geehrter Herr <tei:rs type="person" key="entity-000632"
+     >Doctor</tei:rs>!</tei:salute>
+   </tei:opener>
+
+   <tei:p>Für Ihre freundliche Zusendung bin ich Ihnen sehr verbunden. Ihr <tei:hi rend="lateinschr"
+     >essay</tei:hi> ist ausgezeichnet. Er ist mir aus der Seele herausgeschrieben, begründet u.
+    sagt nur meine Meinung soviel besser, als ich es könnte.<tei:note xml:id="r0001-fn01"
+     type="editorial" place="foot">The essay concerned cannot be identified. The only surviving
+     piece of prose by Schenker from 1891 is his <tei:title level="a">Kritik: Johannes Brahms. Fünf
+      Lieder für eine Singstimme mit Pianoforte, Op. 107,</tei:title>
+     <tei:title level="j">Musikalisches Wochenblatt</tei:title>, year 22; but that was not published
+     until November 1.</tei:note></tei:p>
+
+   <tei:p>Ich freue mich sehr auf Ihre <tei:hi rend="lateinschr">Nova</tei:hi>.</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-10">Ihnen freundschaftlich ergeben</tei:salute>
+    <tei:signed rend="indent-40">
+     <tei:rs type="person" key="entity-000105">Ignaz Brüll</tei:rs>
+    </tei:signed><tei:lb/>
+    <tei:dateline>13/I 91</tei:dateline>
+   </tei:closer>
+
+
+  </tei:div>
+
+
+  <tei:div type="translation">
+
+   <tei:opener>
+    <tei:salute>Dear <tei:rs type="person" key="entity-000632">Dr.
+       <tei:supplied>Schenker</tei:supplied></tei:rs>,</tei:salute>
+   </tei:opener>
+
+   <tei:p>I am much obliged to you for your friendly missive. Your essay is excellent. To me, it is
+    written right from the heart, it substantiates and states just my opinion, only so much better
+    than I could have done it.<tei:ptr corresp="#r0001-fn01" type="footnote"/></tei:p>
+
+   <tei:p>I look forward greatly to new works of yours.</tei:p>
+
+   <tei:closer>
+    <tei:salute rend="indent-10">Your amiably devoted</tei:salute>
+    <tei:signed rend="indent-40">
+     <tei:rs type="person" key="entity-000105">Ignaz Brüll</tei:rs>
+    </tei:signed><tei:lb/>
+    <tei:dateline>January 13, 1891</tei:dateline>
+   </tei:closer>
+
+  </tei:div>
+ </sdo:record>
+</sdo:recordCollection>
