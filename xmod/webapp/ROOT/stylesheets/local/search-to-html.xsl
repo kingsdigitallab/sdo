@@ -291,7 +291,7 @@
       <xsl:otherwise />
     </xsl:choose>     
     
-    <p>Downloads temporarily removed for testing purposes</p>
+    <!--<p>Downloads temporarily removed for testing purposes</p>-->
     <!-- COMMENTED OUT BY PC , 19 NOV 2024, TO SEE IF THESE DOWNLOAD FUNCTIONS WERE THE CAUSE OF INSTABILITY ISSUES, POSSIBLY BY BEING HIT REPEATEDLY BY BOTS
       
       <p>Download all selected files as <input type="submit" name="format" value="pdf" /> or <input type="submit" name="format" value="epub" /> or <input type="submit" name="format" value="both" /> (check files to select/deselect)<br />Where appropriate save: 

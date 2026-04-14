@@ -465,7 +465,7 @@
               
               <xsl:if test="$xmg:printable = true()">
                                 <div id="sn" class="tabs">
-                                  <h4>Downloads temporarily removed for testing purposes</h4>
+                                  <!--<h4>Downloads temporarily removed for testing purposes</h4>-->
                                
                                   <!-- COMMENTED OUT BY PC , 19 NOV 2024, TO SEE IF THESE DOWNLOAD FUNCTIONS WERE THE CAUSE OF INSTABILITY ISSUES, POSSIBLY BY BEING HIT REPEATEDLY BY BOTS
                   <h3>
