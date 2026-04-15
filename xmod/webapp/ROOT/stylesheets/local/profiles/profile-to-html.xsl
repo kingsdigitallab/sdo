@@ -236,7 +236,7 @@
         <form action="/mobile/docs.zip" method="get" id="dlDocForm" onsubmit="return validate()">
           <!-- KFL - it would look nicer if this was replaced by side menu options (see default.xsl) when script was enabled and this is the no-script option -->
           
-          <p>Downloads temporarily removed for testing purposes</p>
+          <!--<p>Downloads temporarily removed for testing purposes</p>-->
           <!-- COMMENTED OUT BY PC , 19 NOV 2024, TO SEE IF THESE DOWNLOAD FUNCTIONS WERE THE CAUSE OF INSTABILITY ISSUES, POSSIBLY BY BEING HIT REPEATEDLY BY BOTS
               
             <p>Download all selected files as <input type="submit" name="format" value="pdf"/> or
