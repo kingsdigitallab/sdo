@@ -653,14 +653,8 @@
       <map:match pattern="profiles/*/index/*">
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.xml"/>
-          <!-- FOR NORMAL OPERATION USE THIS LINE BELOW -->
           <map:part src="xml/content/profiles/indices/{1}.xml"/>
-          <!-- FOR GENERATING NEW PROFILE INDEXES FOR A CONTENT UPDATE, COMMENT OUT LINE ABOVE AND UNCOMMENT THE LINE BELOW-->
-          <!--<map:part element="eats" src="cocoon://_internal/eats/entities.xml"/>-->
-      </map:aggregate>
-        <!-- FOR GENERATING NEW PROFILE INDEXES FOR A CONTENT UPDATE, UNCOMMENT THE LINE BELOW -->
-        <!--<map:serialize type="xml"/>-->
-        <!-- FOR GENERATING NEW PROFILE INDEXES FOR A CONTENT UPDATE, COMMENT OUT THE MAP:TRANSFORM AND MAP:SERIALIZE BELOW -->     
+      </map:aggregate>     
          <map:transform src="stylesheets/local/profiles/index-to-html.xsl">
           <map:parameter name="filedir" value="profiles/{1}"/>
           <map:parameter name="filename" value="{1}"/>
