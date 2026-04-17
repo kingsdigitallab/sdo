@@ -20,6 +20,7 @@
       <li><a href="pupil/1919-1920.html">Saison 1919/20</a></li>
       <li><a href="pupil/1920-1921.html">Saison 1920/21</a></li>
       <li><a href="pupil/1921-1922.html">Saison 1921/22</a></li>
+      <li><a href="pupil/1922-1923.html">Saison 1922/23</a></li>
       <li><a href="pupil/1923-1924.html">Saison 1923/24</a></li>
       <li><a href="pupil/1924-1925.html">Saison 1924/25</a></li>
     </ul>
